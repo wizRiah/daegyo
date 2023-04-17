@@ -759,12 +759,122 @@
             <tbody>
                 <tr>
                   <td>
-                    <q-img class="icon-flie" src="../../images/icon_file_excel.png" :ratio="1" />
-                    <span class="in-block txt-1 text-subtitle4">포트폴리오</span>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_excel.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">포트폴리오</span>
+                    </div>
                   </td>
                   <td>
                       <div class="row wrap justify-start">
-                        <q-btn flat class="q-underline text-subtitle3" label="강남엄마_제휴종료에 따른 사이트 수정 포트폴리오.xlsx" />
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="강남엄마_제휴종료에 따른 사이트 수정 포트폴리오.xlsx" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_samsung.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">포트폴리오</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="http://www.naver.com" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">-</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_zip.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">자격증</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="자격증파일_홍길동.zip" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_acrobat.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">기획안</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="자기소개서.zip" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_hancom.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">경력기술서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="경력기술서_홍길동_20221212.hwp" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_acrobat.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">경력기술서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="경력기술서_홍길동_20221212.pdf" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_flie_word.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">추천서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="서울대학교_컴퓨터공학박사_홍길동님_20221212.doc" />
                       </div>
                   </td>
                   <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
