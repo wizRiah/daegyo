@@ -1,2 +1,2 @@
-# daego
+# daegyo
 대교
