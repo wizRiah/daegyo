@@ -62,7 +62,7 @@
 
     </div>
 
-    <div class="my-resumebox flex">
+    <div class="my-resumebox">
       <div class="contxt" style="width:500px; height:240px;">
         <p>지금 이력서를 등록하시면 <span class="text-teal-6">훈장마을</span>의 학원 채용공고에 지원하실<br>
         수 있습니다. <span class="text-grey-7">작성하실 이력서를 선택하여 등록해 주시고,<br>
@@ -88,10 +88,24 @@
     </div>
 
     <!-- 등록된 이력서가 없는 경우 -->
-    <p class="">내 이력서 - <span>총 0건</span></p>
-    <div class="">
-      <strong class="text-subtitle1">등록된 이력서가 없습니다.</strong>
-      <p class="text-subtitle4">지금 이력서를 등록하시면 <span>2,000개</span>의 학원공고에 지원하실 수 있습니다.<br>이력서 등록 버튼을 클릭하시고 채용공고에 지원하세요.</p>
+    <div class="resume-count">
+      <p class="count-tit text-subtitle2">내 이력서 - <span class="sum">총 0건</span></p>
+      <div class="bg-white text-center cont-inner none flex justify-center column">
+        <strong class="text-subtitle1 text-bold">등록된 이력서가 없습니다.</strong>
+        <p class="text-subtitle4">지금 이력서를 등록하시면 <span class="count">2,000개</span>의 학원공고에 지원하실 수 있습니다.<br>이력서 등록 버튼을 클릭하시고 채용공고에 지원하세요.</p>
+      </div>
+    </div>
+
+    <!-- 등록된 이력서가 있는 경우 -->
+    <div class="resume-count">
+      <p class="count-tit text-subtitle2">내 이력서 - <span class="sum">총 4건</span></p>
+      <div class="bg-white text-center cont-inner flex justify-center column">
+        <strong>인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!</strong>
+        <span>파일</span>
+        <ul>
+          <li></li>
+        </ul>
+      </div>
     </div>
 
 
