@@ -21,14 +21,15 @@
       </ul>
     </div>
 
-    <div class="my_subtxtbox">
-      <q-banner rounded>
-        <q-img src="/images/img_resume_hold.png" style="width:112px; height:95x;"></q-img>
-        <strong class="text-subtitle1">현재 강사님의 이력서는 <b class="resume_state">비공개 중</b> 입니다.</strong>
-        <p class="text-subtitle4">연락처 공개가 부담스러우시다고요?</p>
-        <p class="text-subtitle4">1. 안심번호를 사용하시면 실제 휴대폰 번호가 공개되지 않고 이력서를 공개할 수 있습니다.</p>
-        <p class="text-subtitle4">2. 이력서 작성 시 면접제의를 받겠다고 하면 연락처가 비공개 되고, 요청 받은 학원에 대해서만 공개 선택할 수 있습니다.</p>
-      </q-banner>
+    <strong class="text-h2">이력서 공개 상태</strong>
+    <div class="my_subtxtbox flex justify-between items-center">
+      <q-img src="images/img_resume_hold.png" style="width:112px; height:95px;"></q-img>
+      <ul>
+        <li class="title text-subtitle1">현재 강사님의 이력서는 <b class="resume_state">비공개 중</b> 입니다.</li>
+        <li class="text-subtitle4 text-black">연락처 공개가 부담스러우시다고요?</li>
+        <li class="text-subtitle4">1. 안심번호를 사용하시면 실제 휴대폰 번호가 공개되지 않고 이력서를 공개할 수 있습니다.</li>
+        <li class="text-subtitle4">2. 이력서 작성 시 면접제의를 받겠다고 하면 연락처가 비공개 되고, 요청 받은 학원에 대해서만 공개 선택할 수 있습니다.</li>
+      </ul>
     </div>
 
 
