@@ -9,7 +9,7 @@
     </ul>
 
     <!-- 타이틀 -->
-    <div class="my_txtbox">
+    <div class="my-txtbox">
       <strong class="text-h1">이력서 등록</strong>
         <ul class="text-subtitle4">
           <li>훈장마을의 이력서는 총3개의 Type으로 구성되어 있어, 강사님이 원하는 Type으로 선택하신 후 이력서를 작성할 수 있습니다.</li>
