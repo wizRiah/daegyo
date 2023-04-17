@@ -249,7 +249,7 @@
 
       <q-img class="absolute-top" style="height: 125px;">
         <div class="absolute-bottom bg-transparent text-center flex justify-center items-center" style="height: 125px;">
-          <img src="images/top_logo.png" />
+          <img src="/images/top_logo.png" />
         </div>
       </q-img>
     </q-drawer>

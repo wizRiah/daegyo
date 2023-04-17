@@ -25,7 +25,7 @@ caption,legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-s
 *+html table {border-collapse:collapse}
 
 /* common */
-.q-img__image {max-width:100%; max-height:100%;}
+.q-icon > img {width:auto; height:auto;}
 .q-underline {text-decoration:underline;}
 
 /* style */
@@ -227,63 +227,85 @@ section.guideSection > div > label {flex-grow:1;}
 
 
 // 4. table
-.q-table {
+// 테이블 유형 1
+.tbl-basic-1 {background-color:transparent; border-top:1px solid $borderColor-basic-1;
   thead {
-      th {font-size:13px; color:$color-black-4; text-align:center; border-top:1px solid $borderColor-basic-1; background-color:$color-neutral-2;}
+      th {font-size:13px; color:$color-black-4; text-align:center; background-color:$color-neutral-2; box-sizing:border-box;}
   }
   tbody {
       tr {
           &:last-child td {border-style:solid; border-bottom-width:1px;}
-          td {color:$color-black-2; border-bottom-color:$borderColor-basic-4; text-align:center; word-break:break-all;
-              span[class *= "txt"] {display:block;}
-              .txt-1 {color:$color-black-2;}
-              .txt-2 {color:$color-black-3;}
-              .txt-3 {color:$color-black-5;}
-              .txt-bold-1 {font-weight:700; color:$color-black-1; + span {margin-top:7px;}}
-              .txt-bold-2 {font-weight:700; color:$color-black-2;}
-
-              .tbl-tit {text-align:left;
-                  .stit {color:$color-black-3;}
-                  .mtit {font-weight:700; color:$color-black-1;}
-                  .q-btn.like {color:$color-orange; margin-left:10px;}
-                  .q-btn.scrap {color:$color-grey-1; margin-left:10px;}
-                  .q-btn {+ .sub-list {margin-top:7px;}}
-              }
-              .tbl-txt {
-                  span {display:block;}
-                  + .sub-list {margin-top:4px;}
-              }
-              .sub-list {text-align:left; color:$color-black-3; overflow:hidden;
-                  dt {float:left; text-align:left; color:$color-black-3;
-                      &:after {content:':'; margin-left:4px; margin-right:4px;}
-                  }
-                  dd {color:$color-black-2;}
-              }
-              .sub-list.point {dt{color:$color-blue-3;}}
-          }
+          td {font-size:14px; padding:25px 10px; color:$color-black-2; border-bottom-color:$borderColor-basic-4; text-align:center; word-break:break-all; box-sizing:border-box;}
       }
   }
 }
-.tbl-basic-1 {background-color:transparent;
-  td {padding:25px 10px;}
+// 리스트 유형 1
+.tbl-list-1 {border-top:1px solid $borderColor-basic-1; border-bottom:1px solid $borderColor-basic-4;
+    .q-item {padding:25px 10px;
+    &:hover {background-color:rgba(0,0,0,0.04);}
+    &:not(:first-child) {border-top:1px solid $borderColor-basic-4;}
+    .txt-bold-1 {font-weight:700; color:$color-black-1;}
+  }
+  .txt-center {justify-content:center;}
 }
-.tbl-basic-2 {background-color:transparent;
-  td {padding:35px;}
-}
-.tbl-th-none {
-  tr {&:first-child td {border-top:1px solid $borderColor-basic-1;}}
-}
+
+// 테이블 thead 흰색
 .tbl-th-white {
   thead {
       th {background-color:white;}
   }
   tbody {
-      td {color:$color-black-3;}
+      td {font-size:13px; color:$color-black-3;}
   }
 }
+
+// 테이블 hover 시 행 배경색 변화 없음
 .tbl-no-hover {
-  td {&::before {display:none;}}
+  td {&::before {display: none;}}
 }
+
+// 체크박스 있는 cell width 값
+.tbl-check {
+  th {&:first-child {width:44px; padding:25px 10px;}}
+  td {&:first-child {width:44px; padding:25px 10px;}}
+}
+
+// 테이블 공통 텍스트 설정
+.tbl-text {
+  span[class *= "txt"] {display:block;}
+  .txt-1 {color:$color-black-2;}
+  .txt-2 {color:$color-black-3;}
+  .txt-3 {color:$color-black-5;}
+  .txt-bold-1 {font-weight:700; color:$color-black-1; + span {margin-top:7px;}}
+  .txt-bold-2 {font-weight:700; color:$color-black-2;}
+
+  .tbl-tit {text-align:left;
+      .stit {color:$color-black-3;}
+      .mtit {font-weight:700; color:$color-black-1;}
+      .q-rating .q-rating__icon-container[aria-checked *= "false"] {color:$color-grey-1;}
+      .q-rating.like .q-rating__icon-container[aria-checked *= "true"] {color:$color-orange;}
+      .q-rating.scrap .q-rating__icon-container[aria-checked *= "true"] {color:$yellow-8;}
+      .q-rating {margin-left:10px;
+        + .tbl-sub-list-1 {margin-top:7px;}
+        .q-rating__icon {text-shadow:none;}
+        .q-rating__icon--hovered {transform:scale(1);}
+      }
+  }
+
+  .tbl-txt {
+      span {display:block; + .tbl-sub-list-1 {margin-top:4px;}}
+      + .tbl-sub-list-1 {margin-top:4px;}
+  }
+}
+
+// 정의형 목록 (용어:설명)
+.tbl-sub-list-1 {text-align:left; color:$color-black-3; overflow:hidden;
+  dt {float:left; text-align:left; color:$color-black-3;
+      &::after {content:':'; margin-left:4px; margin-right:4px;}
+  }
+  dd {color:$color-black-2;}
+}
+.tbl-sub-list-1.point {dt{color:$color-blue-3;}}
 
 
 
