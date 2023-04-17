@@ -636,13 +636,18 @@
                     <dd>경영악화</dd>
 
                     <dt>수업역량</dt>
-                    <dd>수학</dd>
+                    <dd>- 유아 (전 연령) <i class="txt-2">/ 수업 최대 인원</i> : 10명 이내</dd>
+                    <dd>- 초등 (1학년~4학년) <i class="txt-2">/ 수업 최대 인원</i> : 11명~20명 내외</dd>
+                    <dd>- 중등 (2학년~3학년) <i class="txt-2">/ 수업 최대 인원</i> : 10명 이내</dd>
                   </dl>
                 </td>
               </tr>
             <tr>
                 <td>
-
+                  <dl class="tbl-sub-list-2 dt-wide">
+                    <dt>담당업무 및 경력기술</dt>
+                    <dd>강의 준비 및 강의실 청소, 학원수업준비 등</dd>
+                  </dl>
                 </td>
               </tr>
             </tbody>
