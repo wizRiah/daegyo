@@ -1,0 +1,366 @@
+/* reset */
+* {font-family:'Pretendard';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none;}
+th img, td img, input, label {vertical-align:middle}
+img {image-rendering:-webkit-optimize-contrast;transform:translateZ(0);backface-visibility:hidden;}
+dl,ul,ol,menu {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input,select,textarea,button {vertical-align:middle;font-size:100%}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body{-webkit-text-size-adjust:none}
+input[type="text"],input[type="password"],input[type="submit"], textarea {-webkit-appearance:none;-webkit-border-radius:0;}
+input:checked[type="checkbox"] {-webkit-appearance:checkbox;}
+button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"] {-webkit-appearance:button;-webkit-border-radius:0}
+body,th,td,input,select,textarea,button {color:#000}
+a {color:#000;text-decoration:none;cursor:pointer}
+a:active, a:hover {text-decoration:none}
+address,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+body,th,td,input,select,textarea,button {/* font-size:13px; *//*line-height:1.25em;*/}
+caption,legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-size:1px;line-height:0}
+.blind {clip:rect(0,0,0,0); overflow:hidden; display:block; width:1px; height:1px;margin:-1px;padding:0;border:0; font-size:1px; line-height:0; text-indent:-9999px}
+* html table {border-collapse:collapse}
+*+html table {border-collapse:collapse}
+
+/* common */
+.q-img__image {max-width:100%; max-height:100%;}
+.q-underline {text-decoration:underline;}
+
+/* style */
+$color-teal:#43a986;
+$color-cyan:#26b2c8;
+$color-grey-1:#c3cad4;
+$color-grey-2:#8c9197;
+$color-grey-3:#62666b;
+$color-neutral-1:#f2f2f2;
+$color-neutral-2:#ebeff5;
+$color-neutral-3:#f5f7fa;
+$color-neutral-4:#ebf4ff;
+$color-orange:#ff6000;
+
+$color-blue-1:#369BFF;
+$color-blue-2:#0080FF;
+$color-blue-3:#61A6FF;
+$color-blue-4:#0E97FF;
+$color-blue-grey:#31516a;
+
+$color-black-1:#151515;
+$color-black-2:#333333;
+$color-black-3:#7E7E7E;
+$color-black-4:#9A9A9A;
+$color-black-5:#BCBCBC;
+
+$borderColor-basic-1:#62666B;
+$borderColor-basic-2:#CCD1D7;
+$borderColor-basic-3:#E0E6EF;
+$borderColor-basic-4:#D4DAE2;
+
+.text-h1 {font-size:32px; letter-spacing:-1px; font-weight:700; line-height:1.2em;}
+.text-h2 {font-size:26px; letter-spacing:-1px; font-weight:700; line-height:1.2em;}
+.text-h3 {font-size:22px; letter-spacing:-1px; font-weight:700; line-height:1.2em;}
+.text-h4 {font-size:20px; letter-spacing:0; font-weight:700; line-height:1.2em;}
+.text-subtitle1 {font-size:18px; letter-spacing:0; line-height:26px;}
+.text-subtitle2 {font-size:16px; letter-spacing:0; line-height:24px;}
+.text-subtitle3 {font-size:15px; letter-spacing:0; line-height:24px;}
+.text-subtitle4 {font-size:14px;letter-spacing:0;line-height:22px;}
+.text-subtitle5 {font-size:13px;letter-spacing:0;line-height:20px;}
+.text-subtitle6 {font-size:12px;letter-spacing:0;line-height:16px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//** component style
+
+section.guideSection > div {display:flex; width:100%; justify-content:space-between;}
+section.guideSection > div > label {flex-grow:1;}
+
+// 1. input - text (기본골조가 됨)
+.basicInput {background-color:#fff;}
+.basicInput:not(.q-field--dense) .q-field__control {height:54px; min-height:54px;}
+.basicInput .q-field__control-container {position:relative;}
+.basicInput .q-field__control {padding:0 9px 0 15px;}
+.basicInput .q-field__control:before {border-color:$borderColor-basic-2;}
+.basicInput .q-field__label {font-size:16px; color:$color-black-5; letter-spacing:-0.5px; padding:0 2px; height:calc(100% + 5px); top:-5px; line-height:65px; transition:all 0.36s cubic-bezier(0.4, 0, 0.2, 1); z-index:1;}
+.basicInput .q-field__label>div .necessary {position:absolute; right:8px; top:7px; color:$color-orange; line-height:55px; transition:all 0.36s cubic-bezier(0.4, 0, 0.2, 1);}
+.basicInput .q-field__native {padding-top:0 !important; padding-bottom:0 !important;}
+.basicInput:hover:before {border-color:$color-black-2;}
+.basicInput .q-field__marginal {height:54px;}
+.basicInput .q-field__marginal .input_unit {font-size:16px; padding:0 15px;}
+.basicInput .q-field__marginal .input_unit.certified {color:$color-blue-3;}
+.basicInput .q-field__marginal .input_unit.uncertified {color:$color-orange;}
+.basicInput .q-field__marginal .q-icon {margin:0 8px;}
+
+  //사이즈별
+  //작은것 46
+  .basicInput.q-field--dense .q-field__control {height:46px; min-height:46px;}
+  .basicInput.q-field--dense .q-field__label {font-size:14px; line-height:56px;}
+  .basicInput.q-field--dense.q-field--focused .q-field__label {font-size:11px;}
+  .basicInput.q-field--dense .q-field__label > div .necessary {line-height:46px;}
+  .basicInput.q-field--dense .q-field__marginal {height:46px;}
+  .basicInput.q-field--dense .q-field__marginal .input_unit {font-size:14px;}
+  .basicInput.q-field--dense .q-field__control {padding-right:5px;}
+  //큰것 (특이사이즈)
+  .basicInput.basicInput_Big {box-shadow:0px 5px 10px #0000001A;}
+  .basicInput.basicInput_Big .q-field__control {height:78px; min-height:78px; padding:0 20px;}
+  .basicInput.basicInput_Big .q-field__control:before {border-width:2px;}
+  .basicInput.basicInput_Big .q-field__label {font-size:18px; line-height:90px; padding:0 10px;}
+  .basicInput.basicInput_Big .q-field__label > div .necessary {line-height:78px;}
+  .basicInput.basicInput_Big .q-field__native {font-size:18px; padding-left:12px;}
+  .basicInput.basicInput_Big .q-field__bottom {left:auto; right:20px; align-items:flex-end; padding:0; width:60px; transform:translateY(-50%); top:50%; bottom:auto; margin-top:-5px;}
+  .basicInput.basicInput_Big .q-field__bottom .q-field__counter {position:absolute;}
+  .basicInput.basicInput_Big.q-field--with-bottom {padding-bottom:0;}
+  .basicInput.basicInput_Big.q-field--with-bottom .q-field__native {width:calc(100% - 70px);}
+
+  // 활성시 변경모습 디자인
+  .basicInput.q-field--float .q-field__label {transform:scale(1); z-index:1; line-height:15px;}
+  .basicInput .q-field__label>div {padding-right:15px;}
+  .basicInput .q-field__label>div:before {content:""; position:absolute; left:0; top:5px; display:inline-block; width:0; height:10px; background:#fff; transition:width 0.7s cubic-bezier(0.4, 0, 0.2, 1);  z-index:-1;}
+  .basicInput.q-field--focused .q-field__control:after {border:2px solid $borderColor-basic-1;}
+  .basicInput.q-field--focused .q-field__label {font-size:12px; color:$color-black-2; top:-7px; height:20px;}
+  .basicInput.q-field--focused .q-field__label>div:before {width:100%; top:7px;}
+  .basicInput.q-field--focused .q-field__label > div .necessary {line-height:5px;}
+
+  // 비활성 readonly
+  .basicInput.q-field--readonly {background:$color-neutral-1;}
+  .basicInput.q-field--readonly .q-field__label {background:transparent;}
+  .basicInput.q-field--readonly .q-field__control:before {border-style:solid; border-color:$borderColor-basic-2;}
+  .basicInput.q-field--readonly .q-field__marginal .input_unit {font-size:14px;}
+  .basicInput.q-field--readonly.q-field--float .q-field__label > div:before {background:$color-neutral-1;}
+
+  // 오류시 .error--text
+  .basicInput.error--text .q-field__control:before,
+  .basicInput.error--text .q-field__control:after {border:2px solid $color-orange !important;}
+  .basicInput.error--text .q-field__marginal {color:$color-orange;}
+
+  // 값 채워졌을때 .q-field--float
+  .basicInput.q-field--float .q-field__label {font-size:13px; color:$color-black-2; top:-7px; height:20px;}
+  .basicInput.q-field--float .q-field__label > div .necessary {line-height:5px;}
+  .basicInput.q-field--float .q-field__label>div:before {content:""; position:absolute; left:0; top:7px; display:inline-block; height:10px; background:#fff; z-index:-1; width:100%; }
+
+
+
+// 2. select
+.basicInput.q-field--auto-height.q-field--labeled .q-field__control-container {padding-top:0; font-size:14.5px; padding-left:2px;}
+.basicInput.q-select.error--text .q-field__marginal {color:$color-orange;}
+  //select option부분 디자인
+  .q-menu[role=listbox].q-position-engine {border:2px solid $borderColor-basic-1;}
+  .q-menu[role=listbox].q-position-engine .q-item {min-height:35px;}
+  .q-menu[role=listbox].q-position-engine .q-item.q-manual-focusable--focused {background:$color-neutral-3;}
+  .q-menu[role=listbox].q-position-engine .q-manual-focusable--focused > .q-focus-helper {opacity:0;}
+  .q-menu[role=listbox].q-position-engine .q-item .q-item__label {font-size:15px; color:$color-black-2;}
+  .q-menu[role=listbox].q-position-engine .q-item:first-child {margin-top:10px;}
+  .q-menu[role=listbox].q-position-engine .q-item:last-child {margin-bottom:10px;}
+
+
+
+
+
+
+
+
+
+// 3. button
+// 크기별 세팅
+.q-btn {box-sizing:border-box;}
+.q-btn.buttonBasic {color:#fff; min-width:90px; height:38px; border-radius:4px; font-size:14px; line-height:16px; background-color:$color-grey-3; text-align:center; letter-spacing:0px; padding:0 20px; font-weight:400; box-sizing:border-box;}
+.q-btn.button02 {height:42px;}
+.q-btn.button02.onlyIconbtn {padding:0 7px; color:#fff; min-width:42px;}
+.q-btn.button03 {min-width:70px;height:34px;}
+.q-btn.button03.onlyIconbtn {padding:0 7px; color:#fff; min-width:38px;}
+.q-btn.buttonBig {min-width:200px;height:54px;border-radius:2px;font-size:16px;line-height:19px;font-weight:bold;}
+
+  // 컬러별 버튼
+  .q-btn.buttonBasic.color-cyan {background-color:$color-cyan;}
+  .q-btn.buttonBasic.color-teal {background-color:$color-teal;}
+  .q-btn.buttonBasic.color-orange {background-color:$color-orange;}
+  .q-btn.onlyIconbtn.color-grey-1 {background-color:$color-grey-1;}
+
+  //더보기 버튼 (morePlusBtn)
+  .q-btn.morePlusBtn {color:$color-black-3 !important;}
+  .q-btn.morePlusBtn:hover {text-decoration:none !important;}
+  .q-btn.morePlusBtn:hover > .q-focus-helper {background:none !important;}
+  .q-btn.morePlusBtn .q-icon {color:$color-grey-1; margin-left:6px; font-size:18px; width:18px; height:18px; border:2px solid $color-grey-1; border-radius:100%;}
+
+  //텍스트만 있는 버튼
+  .q-btn.no-outline.q-btn--flat {color:$color-blue-4; padding:0 5px;}
+  .q-btn.q-underline:hover {font-weight:500; text-decoration:underline;}
+
+  //아이콘만 있는 버튼
+  .q-btn.onlyIconbtn {padding:0; margin-right:5px;}
+  .q-btn.onlyIconbtn:before {box-shadow:none;}
+
+  //물음표버튼 - 팝업
+  .helpPopBtn.q-icon {font-size:11px; border:1px solid $color-grey-1; background:#fff; border-radius:100%; width:20px; height:20px; line-height:18px; box-sizing:border-box;}
+  .popupBox {border:2px solid $borderColor-basic-1; padding:30px; box-shadow:0px 5px 10px #0000001A; border-radius:4px; overflow:hidden;}
+  .q-menu[role=menu] {box-shadow:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 4. table
+.q-table {
+  thead {
+      th {font-size:13px; color:$color-black-4; text-align:center; border-top:1px solid $borderColor-basic-1; background-color:$color-neutral-2;}
+  }
+  tbody {
+      tr {
+          &:last-child td {border-style:solid; border-bottom-width:1px;}
+          td {color:$color-black-2; border-bottom-color:$borderColor-basic-4; text-align:center; word-break:break-all;
+              span[class *= "txt"] {display:block;}
+              .txt-1 {color:$color-black-2;}
+              .txt-2 {color:$color-black-3;}
+              .txt-3 {color:$color-black-5;}
+              .txt-bold-1 {font-weight:700; color:$color-black-1; + span {margin-top:7px;}}
+              .txt-bold-2 {font-weight:700; color:$color-black-2;}
+
+              .tbl-tit {text-align:left;
+                  .stit {color:$color-black-3;}
+                  .mtit {font-weight:700; color:$color-black-1;}
+                  .q-btn.like {color:$color-orange; margin-left:10px;}
+                  .q-btn.scrap {color:$color-grey-1; margin-left:10px;}
+                  .q-btn {+ .sub-list {margin-top:7px;}}
+              }
+              .tbl-txt {
+                  span {display:block;}
+                  + .sub-list {margin-top:4px;}
+              }
+              .sub-list {text-align:left; color:$color-black-3; overflow:hidden;
+                  dt {float:left; text-align:left; color:$color-black-3;
+                      &:after {content:':'; margin-left:4px; margin-right:4px;}
+                  }
+                  dd {color:$color-black-2;}
+              }
+              .sub-list.point {dt{color:$color-blue-3;}}
+          }
+      }
+  }
+}
+.tbl-basic-1 {background-color:transparent;
+  td {padding:25px 10px;}
+}
+.tbl-basic-2 {background-color:transparent;
+  td {padding:35px;}
+}
+.tbl-th-none {
+  tr {&:first-child td {border-top:1px solid $borderColor-basic-1;}}
+}
+.tbl-th-white {
+  thead {
+      th {background-color:white;}
+  }
+  tbody {
+      td {color:$color-black-3;}
+  }
+}
+.tbl-no-hover {
+  td {&::before {display:none;}}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 5. checkbox
+  //네모체크형
+  .q-checkbox.checkbox01 .q-checkbox__inner {font-size:48px;}
+  .q-checkbox.checkbox01 .q-checkbox__bg {border:1px solid $borderColor-basic-2; border-radius:4px;}
+  .q-checkbox.checkbox01 .q-checkbox__inner--truthy {color:$color-cyan;}
+  .q-checkbox.checkbox01 .q-checkbox__inner--truthy .q-checkbox__bg {border:none;}
+  .q-checkbox.checkbox01 .q-checkbox__inner--truthy path {d:path("M 5.73 10.91 L 11.1 17.28 L 21.79 4.59"); stroke-width:2.12px; stroke-dasharray:20.78334;}
+  //원형체크형
+  .q-checkbox.checkbox02 .q-checkbox__icon {font-size:28px;}
+  .q-checkbox.checkbox02 .q-checkbox__inner--truthy {color:$color-blue-3;}
+  .q-checkbox.checkbox02 .q-checkbox__inner--falsy {color:$color-grey-1;}
+
+
+
+// 6. radio button
+.q-radio .q-radio__inner {font-size:48px; color:$borderColor-basic-4;}
+.q-radio .q-radio__inner--truthy {color:$color-cyan;}
+
+
+
+// 7. switch
+.q-toggle .q-toggle__inner {width: 48px; min-width: 48px; height: 28px; padding:0;}
+.q-toggle .q-toggle__track {height: 28px; width: 48px; border: 1px solid $borderColor-basic-2; background: $color-grey-1; border-radius: 14px; opacity: 1; box-sizing: border-box;}
+.q-toggle .q-toggle__thumb {top: 4px; left: 4px; width: 20px; height: 20px;}
+.q-toggle .q-toggle__inner--truthy .q-toggle__thumb {left: auto; right: 4px;}
+.q-toggle .q-toggle__inner--truthy .q-toggle__thumb:after {background: #ffffff;}
+.q-toggle .q-toggle__inner--truthy .q-toggle__track {opacity: 1; background: $color-blue-3; border: $color-blue-3;}
+.q-toggle .q-toggle__thumb:after {box-shadow: none;}
+
+
+
+// 8. pagination
+.q-pagination .q-pagination__content {--q-pagination-gutter-parent:-4px; --q-pagination-gutter-child:4px;}
+.q-pagination .q-pagination__content > .q-btn {padding:6px 8px !important;}
+  /* 활성화 안됬을 때 폰트 컬러 */
+  .q-pagination .q-btn--outline {color:$color-black-3 !important; font-weight:400 !important;}
+  /* 활성화 안됬을 때 border 컬러 */
+  .q-pagination .q-btn--outline:before {border-color:$borderColor-basic-2;}
+  .q-pagination .q-pagination__middle > .q-btn {min-width:34px !important;min-height:34px !important;background:$color-cyan;font-weight:700;border-radius:2px;}
+  .q-pagination .q-btn:before {box-shadow:none !important;}
+  .q-pagination .q-btn .q-icon {color:$color-grey-2;}
+
+
+
+
+
+// 9. slide group
+.q-carousel {background-color:transparent;}
+.q-carousel .q-panel {box-sizing:border-box;}
+.q-carousel .q-carousel__arrow .q-icon {color:$color-grey-2;}
+.q-carousel .q-img {border-radius:10px;}
+
+
+
+
+
+
+
+
