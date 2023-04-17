@@ -631,42 +631,6 @@
       <section class="q-mb-xl">
           <h7 class="text-h7" style="margin-bottom:10px; display:block;">④ Q-markup-table : List Type</h7>
 
-          <!--
-            <q-markup-table class="tbl-basic-2 tbl-th-none tbl-check" separator="horizontal" flat square>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="q-pa-md">
-                                <q-checkbox class="checkbox01" v-model="checkbox01" />
-                            </div>
-                        </td>
-                        <td>
-                            <div class="tbl-txt text-left">
-                                <span class="txt-bold-1 text-subtitle1">서울아카데미에서 수학학원</span>
-                                <span class="txt-1 text-subtitle5">인천 계양구 계산새로33번길 26</span>
-                                <dl class="tbl-sub-list-1">
-                                    <dt>Tel</dt>
-                                    <dd>02-123-4567</dd>
-                                </dl>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="tbl-txt">
-                                <span class="txt-1 text-subtitle4">채용 진행중</span>
-                                <span class="txt-2">건</span>
-                            </div>
-                        </td>
-                        <td>
-                            <dl class="tbl-sub-list-1 point">
-                                <dt>공개요청</dt>
-                                <dd>2022.05.09</dd>
-                            </dl>
-                        </td>
-                    </tr>
-                </tbody>
-            </q-markup-table>
-            -->
-
             <q-list class="tbl-list-1 tbl-text">
                 <q-item>
                     <q-item-section avatar>
@@ -691,35 +655,6 @@
 
                     <q-item-section side>
                         <dl class="tbl-sub-list-1 point">
-                            <dt>공개요청</dt>
-                            <dd>2023.04.14</dd>
-                        </dl>
-                    </q-item-section>
-                </q-item>
-
-                <q-item>
-                    <q-item-section avatar>
-                        <q-checkbox class="checkbox01" v-model="checkbox01" />
-                    </q-item-section>
-
-                    <q-item-section>
-                        <q-item-label lines="1">
-                            <span class="">서울아카데미 수학학원</span>
-                            <span class="">경기도 김포시 김포한강2로</span>
-                            <dl class="tbl-sub-list-1">
-                                <dt>Tel</dt>
-                                <dd>02-123-4567</dd>
-                            </dl>
-                        </q-item-label>
-                    </q-item-section>
-
-                    <q-item-section side class="txt-center">
-                        <span class="">채용 진행중</span>
-                        <span class="q-btn__content text-center col items-center q-anchor--skip justify-center row">이력서보기</span><span class="">건</span>
-                    </q-item-section>
-
-                    <q-item-section side class="txt-center">
-                        <dl class="tbl-sub-list-1">
                             <dt>공개요청</dt>
                             <dd>2023.04.14</dd>
                         </dl>
