@@ -229,9 +229,10 @@ section.guideSection > div > label {flex-grow:1;}
 // 4. table
 // 테이블 유형 1
 .tbl-basic-1 {background-color:transparent; border-top:1px solid $borderColor-basic-1;
-  thead {tr th {font-size:13px; color:$color-black-4; text-align:center; background-color:$color-neutral-2; box-sizing:border-box;}}
+  thead {tr th {font-size:13px; color:$color-black-4; text-align:center; border-left-width:0; background-color:$color-neutral-2; box-sizing:border-box; &:not(:last-child) {border-right-width:1px;}}}
   tbody {tr {&:last-child td {border-style:solid; border-bottom-width:1px;}
-          td {font-size:14px; padding:25px 10px; color:$color-black-2; border-bottom-color:$borderColor-basic-4; text-align:center; word-break:break-all; box-sizing:border-box;
+          td {font-size:14px; padding:25px 10px; color:$color-black-2; border-left-width:0; border-bottom-color:$borderColor-basic-4; text-align:center; word-break:break-all; box-sizing:border-box;
+            &:not(:last-child) {border-right-width:1px;}
             .hg-100 {height:100%;}
             .q-btn.no-outline.q-btn--flat {min-width:auto; min-height:auto;}
             .q-btn.q-btn--round {min-width:auto; min-height:auto;}
@@ -239,7 +240,7 @@ section.guideSection > div > label {flex-grow:1;}
             //삭제 버튼
             .q-btn.btn-del {min-width:22px; height:22px; background-color:$color-grey-1; font-size:8px !important; color:$color-neutral-3;
               .q-icon {font-size:initial;}
-            }
+            } 
           }
       }
   }
@@ -272,19 +273,23 @@ section.guideSection > div > label {flex-grow:1;}
 // 파일아이콘 있는 cell width 값
 .tbl-file {th, td {&:first-child {width:130px; padding:25px 10px;}}}
 
+// 이미지 - 파일아이콘
+.icon-flie {width:22px; height:22px; + span {margin-left:8px;}}
+
 // 테이블 상단 영역 (ex. 총 몇건)
-.tbl-tit-area-1 {margin-top:36px; padding:0 10px 15px;}
-.tbl-tit-area-2 {margin-top:54px; padding:0 0 22px;
-  span[class *= "text-h"] + span {margin-left:15px;}
-}
+.tbl-tit-area-1 {margin-top:36px; padding:0 10px 15px;} 
+.tbl-tit-area-2 {margin-top:54px; padding:0 0 22px; 
+  span[rowspan] + span {margin-left:15px;}
+} 
 
 // 테이블 공통 텍스트 설정
 .tbl-text {
   &:not([class *= "tbl-tit-area"]) span[class *= "txt"] {display:block;}
+  i {font-style:normal;}
   .in-block {display:inline-block !important;}
   .txt-1 {color:$color-black-2;}
   .txt-2 {color:$color-black-3;}
-  .txt-3 {color:$color-black-5;}
+  .txt-3 {color:$color-black-5;} 
   .txt-bold-1 {font-weight:700; color:$color-black-1; + span {margin-top:7px;}}
   .txt-bold-2 {font-weight:700; color:$color-black-2;}
   .txt-point-1 {color:$color-blue-3;}
@@ -308,30 +313,24 @@ section.guideSection > div > label {flex-grow:1;}
   }
 }
 
-// 정의형 목록 dl dt dd (용어:설명) - 마커 없음
+// 텍스트 - 정의형 목록 dl dt dd (마커 없음)
 .tbl-sub-list-1 {text-align:left; color:$color-black-3; overflow:hidden;
   dt {float:left; color:$color-black-3;
       &::after {content:':'; margin-left:4px; margin-right:4px;}
   }
   dd {color:$color-black-2;}
 }
-// 정의형 목록 dl dt dd (용어:설명) - 마커 있음 (작은 점)
+// 텍스트 - 정의형 목록 dl dt dd (마커 있음 : 작은 점)
 .tbl-sub-list-2 {display:flex; flex-flow:row wrap; text-align:left; word-wrap:break-word; word-break:keep-all;
-  dt {flex-shrink:0; position:relative; width:96px; padding-left:8px; font-size:13px; color:$color-black-4;
+  dt, dd {&:not(:nth-child(-n+2)) {margin-top:8px;}}
+  dt {flex-shrink:0; position:relative; width:96px; padding-left:8px; font-size:13px; color:$color-black-4; 
     &::before {position:absolute; top:calc(50% - 2px); left:0; content:''; width:2px; height:2px; background-color:$color-black-4; border-radius:50%;}
   }
-  dd {flex-grow:1; width:calc(100% - 96px); font-size:15px; color:$color-black-2;}
+  dd {width:calc(100% - 96px); margin-left:auto; font-size:15px; color:$color-black-2;}
 }
-// 리스트형 목록 ul li - 마커 있음 (하이픈)
-.tbl-sub-list-3 li {position:relative; word-wrap:break-word; word-break:keep-all;
-  &::before {content:'-';}
-}
+// 용어 dt 영역 100%
+.tbl-sub-list-2.dt-wide {dt, dd {width:100%;} dd {padding-left:8px; margin-top:5px;}}
 
-
-
-
-// 이미지
-.icon-flie {width:22px; height:22px; + span {margin-left:8px;}}
 
 
 
