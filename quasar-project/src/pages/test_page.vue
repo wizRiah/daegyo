@@ -461,249 +461,429 @@
         05. 테이블
       -->
       <section class="q-mb-xl">
-        <div class="text-h4">테이블</div>
-        <q-separator class="q-my-md" />
+          <div class="text-h4">테이블</div>
+          <q-separator class="q-my-md" />
 
-        <h7 class="text-h7" style="margin-bottom:10px; display:block;">① Q-markup-table : 기본</h7>
+          <h7 class="text-h7" style="margin-bottom:10px; display:block;">① Q-markup-table : 기본</h7>
 
-        <q-markup-table class="tbl-basic-1 tbl-text tbl-check" separator="horizontal" flat square>
-                <thead>
-                    <tr>
-                        <th>
-                            <q-checkbox class="checkbox01" v-model="checkbox01" />
-                        </th>
-                        <th>근무지</th>
-                        <th>학원명 / 공고제목 / 과목 / 스크랩일</th>
-                        <th>급여</th>
-                        <th>지원자격</th>
-                        <th>마감일 / 등록일</th>
-                        <th>접수방법</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <q-checkbox class="checkbox01" v-model="checkbox01" />
-                        </td>
-                        <td>
-                            <span class="text-subtitle5">경기 오산시</span>
-                        </td>
-                        <td>
-                            <div class="tbl-tit">
-                                <p>
-                                    <span class="stit text-subtitle2">서울아카데미 수학학원</span>
-                                    <q-rating class="like" v-model="model1" max="1" size="25px" icon="favorite_border" icon-selected="favorite" icon-half="favorite" no-dimming />
-                                </p>
-                                <q-btn class="mtit text-subtitle1" label="강동구 서울아카데미에서 수학 선생님을 모십니다." padding="none" flat unelevated></q-btn>
-                                <q-rating class="scrap" v-model="model2" max="1" size="28px" icon="star_border" icon-selected="star" icon-half="star" no-dimming />
-                                <dl class="tbl-sub-list-1">
-                                    <dt>과목</dt>
-                                    <dd>수학</dd>
-                                    <dt>스크랩</dt>
-                                    <dd>2023.05.11 13:00</dd>
-                                </dl>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="txt-2">월급</span>
-                            <span class="txt-1">200만원~300만원</span>
-                        </td>
-                        <td>
-                            <span class="txt-1">경력무관</span>
-                            <span class="txt-2">대학교 (4년)</span>
-                        </td>
-                        <td>
-                            <span class="txt-1">채용시 마감</span>
-                            <span class="txt-2">2022-05-12</span>
-                        </td>
-                        <td><q-btn class="buttonBasic color-teal" label="온라인 지원" unelevated></q-btn></td>
-                    </tr>
+          <q-markup-table class="tbl-basic-1 tbl-text tbl-check" separator="horizontal" flat square>
+              <thead>
+                  <tr>
+                      <th>
+                          <q-checkbox class="checkbox01" v-model="checkbox01" />
+                      </th>
+                      <th>근무지</th>
+                      <th>학원명 / 공고제목 / 과목 / 스크랩일</th>
+                      <th>급여</th>
+                      <th>지원자격</th>
+                      <th>마감일 / 등록일</th>
+                      <th>접수방법</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <q-checkbox class="checkbox01" v-model="checkbox01" />
+                      </td>
+                      <td>
+                          <span class="text-subtitle5">경기 오산시</span>
+                      </td>
+                      <td>
+                          <div class="tbl-tit">
+                              <p>
+                                  <span class="stit text-subtitle2">서울아카데미 수학학원</span>
+                                  <q-rating class="like" v-model="model1" max="1" size="25px" icon="favorite_border" icon-selected="favorite" icon-half="favorite" no-dimming />
+                              </p>
+                              <q-btn class="mtit text-subtitle1" label="강동구 서울아카데미에서 수학 선생님을 모십니다." padding="none" flat unelevated></q-btn>
+                              <q-rating class="scrap" v-model="model2" max="1" size="28px" icon="star_border" icon-selected="star" icon-half="star" no-dimming />
+                              <dl class="tbl-sub-list-1">
+                                  <dt>과목</dt>
+                                  <dd>수학</dd>
+                                  <dt>스크랩</dt>
+                                  <dd>2023.05.11 13:00</dd>
+                              </dl>
+                          </div>
+                      </td>
+                      <td>
+                          <span class="txt-2">월급</span>
+                          <span class="txt-1">200만원~300만원</span>
+                      </td>
+                      <td>
+                          <span class="txt-1">경력무관</span>
+                          <span class="txt-2">대학교 (4년)</span>
+                      </td>
+                      <td>
+                          <span class="txt-1">채용시 마감</span>
+                          <span class="txt-2">2022-05-12</span>
+                      </td>
+                      <td><q-btn class="buttonBasic color-teal" label="온라인 지원" unelevated></q-btn></td>
+                  </tr>
 
-                    <tr>
-                        <td>
-                            <q-checkbox class="checkbox01" v-model="checkbox01" />
-                        </td>
-                        <td>
-                            <span class="text-subtitle5">경기 오산시</span>
-                        </td>
-                        <td>
-                            <div class="tbl-tit">
-                                <p>
-                                    <span class="stit text-subtitle2">서울아카데미 수학학원</span>
-                                    <q-rating class="like" v-model="model1" max="1" size="25px" icon="favorite_border" icon-selected="favorite" icon-half="favorite" no-dimming />
-                                </p>
-                                <q-btn class="mtit text-subtitle1" label="강동구 서울아카데미에서 수학 선생님을 모십니다." padding="none" flat unelevated></q-btn>
-                                <q-rating class="scrap" v-model="model2" max="1" size="28px" icon="star_border" icon-selected="star" icon-half="star" no-dimming />
-                                <dl class="tbl-sub-list-1">
-                                    <dt>과목</dt>
-                                    <dd>수학</dd>
-                                    <dt>스크랩</dt>
-                                    <dd>2023.05.11 13:00</dd>
-                                </dl>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="txt-2">월급</span>
-                            <span class="txt-1">200만원~300만원</span>
-                        </td>
-                        <td>
-                            <span class="txt-1">경력무관</span>
-                            <span class="txt-2">대학교 (4년)</span>
-                        </td>
-                        <td>
-                            <span class="txt-1">채용시 마감</span>
-                            <span class="txt-2">2022-05-12</span>
-                        </td>
-                        <td><q-btn class="buttonBasic color-teal" label="온라인 지원" unelevated></q-btn></td>
-                    </tr>
-                </tbody>
-            </q-markup-table>
+                  <tr>
+                      <td>
+                          <q-checkbox class="checkbox01" v-model="checkbox01" />
+                      </td>
+                      <td>
+                          <span class="text-subtitle5">경기 오산시</span>
+                      </td>
+                      <td>
+                          <div class="tbl-tit">
+                              <p>
+                                  <span class="stit text-subtitle2">서울아카데미 수학학원</span>
+                                  <q-rating class="like" v-model="model1" max="1" size="25px" icon="favorite_border" icon-selected="favorite" icon-half="favorite" no-dimming />
+                              </p>
+                              <q-btn class="mtit text-subtitle1" label="강동구 서울아카데미에서 수학 선생님을 모십니다." padding="none" flat unelevated></q-btn>
+                              <q-rating class="scrap" v-model="model2" max="1" size="28px" icon="star_border" icon-selected="star" icon-half="star" no-dimming />
+                              <dl class="tbl-sub-list-1">
+                                  <dt>과목</dt>
+                                  <dd>수학</dd>
+                                  <dt>스크랩</dt>
+                                  <dd>2023.05.11 13:00</dd>
+                              </dl>
+                          </div>
+                      </td>
+                      <td>
+                          <span class="txt-2">월급</span>
+                          <span class="txt-1">200만원~300만원</span>
+                      </td>
+                      <td>
+                          <span class="txt-1">경력무관</span>
+                          <span class="txt-2">대학교 (4년)</span>
+                      </td>
+                      <td>
+                          <span class="txt-1">채용시 마감</span>
+                          <span class="txt-2">2022-05-12</span>
+                      </td>
+                      <td><q-btn class="buttonBasic color-teal" label="온라인 지원" unelevated></q-btn></td>
+                  </tr>
+              </tbody>
+          </q-markup-table>
       </section>
 
       <section class="q-mb-xl">
           <h7 class="text-h7" style="margin-bottom:10px; display:block;">② Q-markup-table : thead 흰색</h7>
 
           <q-markup-table class="tbl-basic-1 tbl-text tbl-th-white tbl-no-hover" separator="cell" flat square>
-                <thead>
-                    <tr>
-                        <th>재학기간</th>
-                        <th>학력(구분)</th>
-                        <th>학교명(소재지)</th>
-                        <th>전공</th>
-                        <th>학점</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span class="text-subtitle3">2007.03 ~ 2011.02</span>
-                        </td>
-                        <td>
-                            <span class="txt-bold-2 text-subtitle3">대학교(4년)</span>
-                            <span class="txt-2">졸업예정</span>
-                        </td>
-                        <td>
-                            <span class="txt-bold-2 text-subtitle3">서울디지털대학교</span>
-                            <span class="txt-2">(서울)</span>
-                        </td>
-                        <td>
-                            <span class="txt-1 text-subtitle3">전산정보처리</span>
-                            <span class="txt-2">(복수전공 : 경영학과)</span>
-                        </td>
-                        <td>
-                            <span class="txt-1 text-subtitle3">3 / 4.5</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </q-markup-table>
+            <thead>
+                <tr>
+                    <th>재학기간</th>
+                    <th>학력(구분)</th>
+                    <th>학교명(소재지)</th>
+                    <th>전공</th>
+                    <th>학점</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="text-subtitle3">2007.03 ~ 2011.02</span>
+                    </td>
+                    <td>
+                        <span class="txt-bold-2 text-subtitle3">대학교(4년)</span>
+                        <span class="txt-2">졸업예정</span>
+                    </td>
+                    <td>
+                        <span class="txt-bold-2 text-subtitle3">서울디지털대학교</span>
+                        <span class="txt-2">(서울)</span>
+                    </td>
+                    <td>
+                        <span class="txt-1 text-subtitle3">전산정보처리</span>
+                        <span class="txt-2">(복수전공 : 경영학과)</span>
+                    </td>
+                    <td>
+                        <span class="txt-1 text-subtitle3">3 / 4.5</span>
+                    </td>
+                </tr>
+            </tbody>
+          </q-markup-table>
       </section>
 
       <section class="q-mb-xl">
           <h7 class="text-h7" style="margin-bottom:10px; display:block;">③ Q-markup-table : thead 흰색 + List</h7>
 
+          <div class="tbl-tit-area-2 tbl-text">
+            <span class="text-h2">학력사항</span>
+            <span class="text-subtitle2">최종학력 - 대학교 <em class="txt-point-1">4년 졸업예정</em></span>
+          </div>
           <q-markup-table class="tbl-basic-1 tbl-text tbl-th-white tbl-no-hover" separator="cell" flat square>
-                <thead>
-                    <tr>
-                        <th>학원명 / 근무기간</th>
-                        <th>근무내용</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="2">
-                            <span class="txt-bold-1 text-subtitle1">훈장마을 구로지점</span>
-                            <span class="">2007.05 ~ 재직중</span>
-                            <span class="">(1년 3개월)</span>
-                        </td>
-                        <td>
+            <thead>
+              <tr>
+                <th>학원명 / 근무기간</th>
+                <th>근무내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">
+                  <div class="hg-100 text-left">
+                    <span class="txt-bold-1 text-subtitle1">훈장마을 구로지점</span>
+                    <span class="">2007.05 ~ 재직중</span>
+                    <span class="">(1년 3개월)</span>
+                  </div>
+                </td>
+                <td>
+                  <dl class="tbl-sub-list-2">
+                    <dt>근무형태</dt>
+                    <dd>파트, 단기 알바</dd>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                    <dt>과목</dt>
+                    <dd>수학</dd>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </q-markup-table>
+                    <dt>급여</dt>
+                    <dd>연봉 3,100만원</dd>
+
+                    <dt>퇴사사유</dt>
+                    <dd>경영악화</dd>
+
+                    <dt>수업역량</dt>
+                    <dd>수학</dd>
+                  </dl>
+                </td>
+              </tr>
+            <tr>
+                <td>
+
+                </td>
+              </tr>
+            </tbody>
+          </q-markup-table>
       </section>
 
       <section class="q-mb-xl">
           <h7 class="text-h7" style="margin-bottom:10px; display:block;">④ Q-markup-table : List Type</h7>
 
-            <q-list class="tbl-list-1 tbl-text">
-                <q-item>
-                    <q-item-section avatar>
-                        <q-checkbox class="checkbox01" v-model="checkbox01" />
-                    </q-item-section>
+          <div class="tbl-tit-area-1 tbl-text text-subtitle2">
+            <span class="txt-2">내 이력서 열람학원 - </span>
+            <span class="txt-1">총 3건</span>
+          </div>
+          <q-list class="tbl-list-1 tbl-text">
+              <q-item>
+                  <q-item-section avatar>
+                      <q-checkbox class="checkbox01" v-model="checkbox01" />
+                  </q-item-section>
 
-                    <q-item-section>
-                        <q-item-label lines="1" class="tbl-txt">
-                            <span class="txt-bold-1 text-subtitle1">서울아카데미 수학학원</span>
-                            <span class="txt-1">경기도 김포시 김포한강2로</span>
-                            <dl class="tbl-sub-list-1">
-                                <dt>Tel</dt>
-                                <dd>02-123-4567</dd>
-                            </dl>
-                        </q-item-label>
-                    </q-item-section>
+                  <q-item-section>
+                      <q-item-label lines="1" class="tbl-txt">
+                          <span class="txt-bold-1 text-subtitle1">서울아카데미 수학학원</span>
+                          <span class="txt-1">경기도 김포시 김포한강2로</span>
+                          <dl class="tbl-sub-list-1">
+                              <dt>Tel</dt>
+                              <dd>02-123-4567</dd>
+                          </dl>
+                      </q-item-label>
+                  </q-item-section>
 
-                    <q-item-section side class="text-center">
-                        <span class="">채용 진행중</span>
-                        <span class=""><q-btn flat class="q-underline no-padding vertical-middle">5</q-btn> 건</span>
-                    </q-item-section>
+                  <q-item-section side class="text-center">
+                      <span class="txt-1">채용 진행중</span>
+                      <span class="txt-2"><q-btn flat class="q-underline no-padding">5</q-btn>&nbsp;건</span>
+                  </q-item-section>
 
-                    <q-item-section side>
-                        <dl class="tbl-sub-list-1 point">
-                            <dt>공개요청</dt>
-                            <dd>2023.04.14</dd>
-                        </dl>
-                    </q-item-section>
-                </q-item>
-            </q-list>
+                  <q-item-section side class="text-center">
+                      <span class="txt-point-1 text-subtitle4">연락처 열람</span>
+                      <span class="txt-2 text-subtitle5">2022.11.18</span>
+                  </q-item-section>
+              </q-item>
+
+              <q-item>
+                  <q-item-section avatar>
+                      <q-checkbox class="checkbox01" v-model="checkbox01" />
+                  </q-item-section>
+
+                  <q-item-section>
+                      <q-item-label lines="1" class="tbl-txt">
+                          <span class="txt-bold-1 text-subtitle1">서울아카데미 수학학원</span>
+                          <span class="txt-1">경기도 김포시 김포한강2로</span>
+                          <dl class="tbl-sub-list-1">
+                              <dt>Tel</dt>
+                              <dd>02-123-4567</dd>
+                          </dl>
+                      </q-item-label>
+                  </q-item-section>
+
+                  <q-item-section side class="text-center">
+                  </q-item-section>
+
+                  <q-item-section side class="text-center">
+                      <span class="txt-point-1 text-subtitle4">이력서 스크랩</span>
+                      <span class="txt-2 text-subtitle5">2022.11.18</span>
+                  </q-item-section>
+              </q-item>
+
+              <q-item>
+                  <q-item-section avatar>
+                      <q-checkbox class="checkbox01" v-model="checkbox01" />
+                  </q-item-section>
+
+                  <q-item-section>
+                      <q-item-label lines="1" class="tbl-txt">
+                          <span class="txt-bold-1 text-subtitle1">서울아카데미 수학학원</span>
+                          <span class="txt-1">서울시 양천구 목동동로 387 (목동, 광장2종합상가) 2층, 5층</span>
+                          <dl class="tbl-sub-list-1">
+                              <dt>Tel</dt>
+                              <dd>02-123-4567</dd>
+                          </dl>
+                      </q-item-label>
+                  </q-item-section>
+
+                  <q-item-section side class="text-center">
+                      <span class="txt-1">채용 진행중</span>
+                      <span class="txt-2"><q-btn flat class="q-underline no-padding">5</q-btn>&nbsp;건</span>
+                  </q-item-section>
+
+                  <q-item-section side class="text-center">
+                      <span class="txt-point-1 text-subtitle4">-</span>
+                      <span class="txt-2 text-subtitle5">2022.11.18</span>
+                  </q-item-section>
+              </q-item>
+          </q-list>
       </section>
 
       <section class="q-mb-xl">
           <h7 class="text-h7" style="margin-bottom:10px; display:block;">⑤ Q-markup-table : File</h7>
 
-          <q-markup-table class="tbl-basic-1 tbl-th-none" separator="horizontal" flat square>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span class="txt-1 text-subtitle4">포트폴리오</span>
-                        </td>
-                        <td>
-                            <q-btn flat class="" label="강남엄마_제휴종료에 따른 사이트 수정 포트폴리오.xlsx" />
-                        </td>
-                        <td><span class="txt-2">11.1KB</span></td>
-                        <td><span class="txt-3">2022.05.06</span></td>
-                        <td>
-                            <q-btn flat round class="" icon="close" />
-                        </td>
-                    </tr>
-                </tbody>
-            </q-markup-table>
-      </section>
+          <div class="tbl-tit-area-1 tbl-text text-subtitle2">
+            <span class="txt-2">첨부된 파일 - </span>
+            <span class="txt-1">총 7건</span>
+          </div>
 
-      <section class="q-mb-xl">
-          <h7 class="text-h7" style="margin-bottom:10px; display:block;">⑥ Q-markup-table : File</h7>
-
-          <q-markup-table class="tbl-basic-1 tbl-th-none" separator="horizontal" flat square>
-              <tbody>
-                  <tr>
-                      <td>
-                          <span class="txt-1 text-subtitle4">포트폴리오</span>
-                      </td>
-                      <td>
-                          <q-btn flat class="" label="강남엄마_제휴종료에 따른 사이트 수정 포트폴리오.xlsx" />
-                      </td>
-                      <td><span class="txt-2">11.1KB</span></td>
-                      <td><span class="txt-3">2022.05.06</span></td>
-                      <td>
-                          <q-btn flat round class="" icon="close" />
-                      </td>
-                  </tr>
-              </tbody>
+          <q-markup-table class="tbl-basic-1 tbl-th-none tbl-file tbl-text" separator="horizontal" flat square>
+            <thead>
+              <tr>
+                <th>파일구분</th>
+                <th>파일명</th>
+                <th>파일용량</th>
+                <th>등록일</th>
+                <th>삭제</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_excel.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">포트폴리오</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="강남엄마_제휴종료에 따른 사이트 수정 포트폴리오.xlsx" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_samsung.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">포트폴리오</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="http://www.naver.com" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">-</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_zip.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">자격증</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="자격증파일_홍길동.zip" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_acrobat.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">기획안</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="자기소개서.zip" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_hancom.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">경력기술서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="경력기술서_홍길동_20221212.hwp" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_file_acrobat.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">경력기술서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="경력기술서_홍길동_20221212.pdf" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="row wrap justify-start">
+                      <q-img class="icon-flie" src="../../images/icon_flie_word.png" :ratio="1" />
+                      <span class="in-block txt-1 text-subtitle4">추천서</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="row wrap justify-start">
+                        <q-btn flat no-caps class="q-underline text-subtitle3" label="서울대학교_컴퓨터공학박사_홍길동님_20221212.doc" />
+                      </div>
+                  </td>
+                  <td><span class="txt-2 text-subtitle5">11.1KB</span></td>
+                  <td><span class="txt-3 text-subtitle5">2022.05.06</span></td>
+                  <td>
+                      <q-btn round unelevated class="btn-del" icon="close" />
+                  </td>
+                </tr>
+            </tbody>
           </q-markup-table>
       </section>
 
