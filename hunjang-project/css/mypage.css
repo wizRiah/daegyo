@@ -1,0 +1,74 @@
+@charset "utf-8";
+@import 'styleGuide.scss';
+
+//로케이션바
+.container-inner .location li {font-size: 13px; color:#bcbcbc; letter-spacing: -1px;}
+.container-inner .location li:first-child {line-height:15px;}
+.container-inner .location li + li {position:relative;}
+.container-inner .location li + li:before {content:'\e5e1'; height: 15px; line-height: 18px; margin-right:5px; padding-left:5px; font-size: 12px; color:#bcbcbc;}
+.container-inner .location li.active {color:#333;}
+
+
+// 공통
+.my_txtbox {margin-bottom: 50px;}
+.my_txtbox ul li {position: relative; color:$color-black-3;}
+.my_txtbox ul li:after {content:'';}
+.my_txtbox .text-h1 {display:block; margin-bottom:35px;}
+.my_txtbox .text-subtitle4 li {position: relative; padding-left:10px;}
+.my_txtbox .text-subtitle4 li:after {content:''; position: absolute; top:10px; left:0; width:2px; height:2px; background:#7e7e7e; border-radius: 50%;}
+
+
+// 이력서 등록
+.resumebox {}
+.resumebox .resumbtn {position:relative; width:340px; height:380px; padding:40px; border-radius: 15px; background-color: #fff;}
+.resumebox .resumbtn:hover {background-color: $color-cyan; color:#fff; transition: all ease-out 0.3s;}
+.resumebox .resumbtn:hover .img {opacity: 0; right: auto;  -webkit-animation: imgAni 0.4s 0s forwards; animation: imgAni 0.4s 0s forwards;}
+.resumebox .resumbtn .img-on {position: absolute; opacity: 0; right: -10px;}
+.resumebox .resumbtn:hover .img-on {bottom: -60px; -webkit-animation: imgAni-on 0.3s 0.25s forwards; animation: imgAni-on 0.3s 0.25s forwards;}
+
+@keyframes imgAni {
+  0% {
+    opacity: 0;
+      left: -10px;
+  }
+  100% {
+    opacity: 1;
+    left: 40px;
+  }
+}
+
+@keyframes imgAni-on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    right: 30px;
+  }
+}
+
+.resumebox .resumbtn:hover .ico_arrow,
+.resumebox .resumbtn:hover .ico_arrow:before {border-color:#fff;}
+.resumebox .resumbtn:hover .ico_arrow:after {background:#fff;}
+
+.resumebox .resumbtn .text-h1 {}
+.resumebox .resumbtn .text-subtitle4 {margin-top: 20px;}
+.resumebox .resumbtn .text-subtitle4:hover {color:#fff;}
+.resumebox .resumbtn img {position: absolute; bottom:20px; right:40px;}
+
+.resumebox .resumbtn .ico_arrow {position:relative; margin-top:30px; width:42px; height:42px; text-indent:-9999px; border-radius: 50%; border:2px solid #CCD1D7;}
+.resumebox .resumbtn .ico_arrow:before {content:''; width:12px; height:12px; position:absolute; left:50%; top:50%; border-left:2px solid #CCD1D7; border-top:2px solid #CCD1D7; transform:translate(-50%,-50%) rotate(135deg);}
+.resumebox .resumbtn .ico_arrow:after {content:''; width:18px; height:2px; position:absolute; right:12px; top:50%; transform:translateY(-50%); background:#CCD1D7}
+
+
+// 공통
+.my_subtxtbox {margin-top:25px; padding:50px; background:$color-neutral-2!important; border-radius: 15px; border-color:$borderColor-basic-3; border-width:1px; border-style:solid;}
+.my_subtxtbox ul {width:calc(100% - 145px);}
+.my_subtxtbox ul .title {margin-bottom:20px; color:$color-black-1; font-weight: bold;}
+.my_subtxtbox ul .text-subtitle4 {color:$color-black-3;}
+.my_subtxtbox ul .resume_state {color:$color-blue-3;}
+
+// 이력서 관리
+
+
+

@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import 'styleGuide.scss';
+
+// ===================== header ===================== //
+.header {background: $color-teal; box-shadow: none;}
+
+.q-header .q-toolbar {height: 85px; padding:0 32px;}
+.q-header .q-toolbar > .q-btn {padding: 8px;}
+.q-header .q-layout__shadow:after {box-shadow: none;}
+
+.my-box {width:170px; margin-top: 10px; color:#7e7e7e;}
+.my-box .q-item {min-height: 35px;}
+.my-box .btn-logout {display: flex; align-items: center; justify-content: center; width: 90%; height: 36px; margin: 10px auto; background: $color-grey-1; border-radius: 4px; font-size: 14px; color:#fff; font-weight: 300;}
+.my-box .btn-logout::before {box-shadow: none;}
+.my-box .btn-logout .q-icon {margin-right:5px; font-size:18px;}
+.my-box .q-item__label {font-size: 14px;}
+
+.q-position-engine[role="menu"] {top:63px!important; margin-left: 10px!important;}
+.q-menu[role="menu"] {border:1px solid #666a6f; border-radius: 6px;}
+
+.myicon-dropdown {margin-left:8px; font-size: 14px; color:#fff!important; text-decoration: none!important;}
+.myicon-dropdown i {width:18px; height:18px; border:1px solid #eee; border-radius: 50%;}
+.myicon-dropdown i:after {content:'\e5cf'; position: absolute; width:13px; height:13px; font-size: 18px; background-color:#43a986; border-radius: 50%;}
+
+// .q-btn--outline:before {border: 1px solid #ccd1d7;}
+
+body.desktop .q-focusable:focus > .q-focus-helper,
+body.desktop .q-manual-focusable--focused > .q-focus-helper,
+body.desktop .q-hoverable:hover > .q-focus-helper {background-color: #bbb;}
+
+/* ===================== LNB ===================== */
+
+aside .q-list--padding {padding:0;}
+aside .lnb_wrap > .q-item--active:nth-child(1) .q-item__section--side > .q-icon::before {background-position-x: -24px;}
+aside .lnb_wrap > .q-item--active:nth-child(3) .q-item__section--side > .q-icon::before {background-position-x: -24px;}
+aside .lnb_wrap > .q-item:nth-child(2) .q-item__section--side > .q-icon::before {background-position-y: -24px;}
+aside .lnb_wrap > .q-item:nth-child(3) .q-item__section--side > .q-icon::before {background-position-y: -48px;}
+aside .lnb_wrap > .q-item:nth-child(4) .q-item__section--side > .q-icon::before {background-position-y: -72px;}
+aside .lnb_wrap > .q-item:nth-child(5) .q-item__section--side > .q-icon::before {background-position-y: -96px;}
+aside .lnb_wrap > .q-item:nth-child(6) .q-item__section--side > .q-icon::before {background-position-y: -120px;}
+aside .lnb_wrap > .q-item:nth-child(7) .q-item__section--side > .q-icon::before {background-position-y: -144px;}
+aside .lnb_wrap > .q-item:nth-child(8) .q-item__section--side > .q-icon::before {background-position-y: -168px;}
+aside .lnb_wrap > .q-item:nth-child(9) .q-item__section--side > .q-icon::before {background-position-y: -192px;}
+aside .lnb_wrap > .q-item:nth-child(10) .q-item__section--side > .q-icon::before {background-position-y: -216px;}
+aside .lnb_wrap > .q-item:nth-child(11) .q-item__section--side > .q-icon::before {background-position-y: -240px;}
+aside .lnb_wrap > .q-item:nth-child(12) .q-item__section--side > .q-icon::before {background-position-y: -264px;}
+aside .lnb_wrap > .q-item:nth-child(13) .q-item__section--side > .q-icon::before {background-position-y: -288px;}
+aside .lnb_wrap > .q-item:nth-child(14) .q-item__section--side > .q-icon::before {background-position-y: -312px;}
+
+aside .lnb_wrap > .q-item--active {background: #ebf4ff; border-radius: 90px;}
+aside .lnb_wrap > .q-item {min-height: 44px; width: 90%; margin: 5px auto; border-radius: 90px;}
+aside .lnb_wrap .q-item--active  a {color:#61A6FF}
+aside .lnb_wrap a {font-size:15px; color:#8B8B8B}
+
+aside .lnb_wrap .q-item__section--side > .q-icon::before {content: ''; position: absolute; left: 5px; top: 50%; width: 24px; height: 24px; margin: -14px 0 0 0; background-image: url('../public/images/lnb_icons.png');}
+aside .lnb_wrap .q-item__section--avatar {min-width:40px;}
+
+
+/* ===================== container ===================== */
+
+.q-page-container {width:100%; padding-top:85px; padding-left:270px; background-color: #f5f7fa;}
+.q-page-container > .container-inner {width:100%; max-width: 1080px; height:100vh; margin:0 auto; padding:60px 0 170px;}
