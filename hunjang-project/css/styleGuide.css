@@ -134,7 +134,7 @@ button
 .h-button-l.h-btn-sqre  {width:54px;}
 
 /* 컬려별 */
-.h-button-nobg {background:transparent; color:var(--black-2); transition:background ease 1.5s;}
+.h-button-nobg {background:transparent !important; color:var(--black-2); transition:background ease 1.5s;}
 .h-button-nobg:focus:before {-webkit-animation: hbtnFX02 1s 1 ease; -o-animation: hbtnFX02 1s 1 ease; animation: hbtnFX02 1s 1 ease; background:rgba(136,136,136,0.2);}
 .h-button-white {background:#fff; color:var(--black-2); border:1px solid var(--border-basic-4);}
 .h-button-grey {background: var(--border-basic-1);}
@@ -205,13 +205,11 @@ button
 
 
 
-
-
 /***** 테이블 상단 텍스트 *****/
 .h-tit-box-1 {display:flex; margin-bottom:22px;}
-.h-tit-box-1 :is([class *= "h-tit"]) + :is(p, span) {margin-left:15px;}
-.h-tit-box-1 :is([class *= "h-tit"]) + :is(.h-button-more) {height:auto; line-height:normal; padding:0; margin:0 0 0 20px; transition:none; overflow:initial;}
-    .h-tit-box-1 :is([class *= "h-tit"]) + .h-button-more:focus:before {display:none;}
+.h-tit-box-1 .h-tit-26 + :is(p, span) {margin-left:15px;}
+.h-tit-box-1 .h-tit-26 + .h-button-more {padding:0; margin:0 0 0 20px; transition:none; overflow:initial;}
+    .h-tit-box-1 .h-tit-26 + .h-button-more:focus:before {display:none;}
 
 /***** 테이블 유형 1 (기본) *****/
 .h-tbl-basic-1 {border-top:1px solid var(--border-basic-1); font-size:var(--text-subtitle4); text-align:center;}
@@ -221,20 +219,29 @@ button
 .h-tbl-basic-1 tbody tr td {padding:25px 10px; color:var(--black-3); border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;}
 .h-tbl-basic-1 tbody tr td :is(span, strong):not(.i-block):not(.h-list-1 *) {display:block;}
 .h-tbl-basic-1 tbody tr td a {display:inline-block;}
-.h-tbl-basic-1:not(.th-white) tbody tr td :is(span, strong):not([class *= "m"]) {margin:2px 0;}
+.h-tbl-basic-1:not(.th-white) tbody tr td :is(span, strong):not([class *= "m"]) {margin-top:2px; margin-bottom:2px;}
 .h-tbl-basic-1 tbody tr td strong:not([class *= "txt"]) {font-weight:var(--text-medium); color:var(--black-2);}
 .h-tbl-basic-1 .txt-l {text-align:left;}
 .h-tbl-basic-1 .vert-t {vertical-align:top;}
     /* 테이블 hover 시 tr 색 변경 없음 */
     .hover-bg-none tbody tr:hover td {background-color:transparent;}
 
-/* 테이블 thead 흰색 + 세로 구분 선 있는 유형 */
+/***** 테이블 thead 흰색 + 세로 구분 선 있는 유형 *****/
 .th-white thead tr th {background:#fff;}
 .th-white :is(th, td) {border-color:var(--border-basic-4);}
 .th-white :is(th:not(:last-child), td:not(:last-child)) {border-right:1px solid var(--border-basic-4);}
 .th-white tbody tr :is(th, td) {padding:20px;}
 .th-white tbody tr td strong {color:var(--black-2);}
 .th-white tbody tr td span {font-size:var(--text-subtitle5);}
+
+/***** 테이블 file *****/
+.h-tbl-file tbody tr td {padding:20px;}
+.h-tbl-file .h-file-name {font-size:var(--text-subtitle3);}
+.h-tbl-file .h-file-name:focus:before {display:none;}
+
+/***** 테이블 아이콘 *****/
+.h-file-icon {width:22px; height:22px;}
+.h-file-icon + span {display:inline-block; margin-left:10px; font-size:var(--text-subtitle4); color:var(--black-2);}
 
 /***** 텍스트 박스 *****/
 .h-box-wd500 {width:500px; box-sizing:border-box;}
@@ -280,3 +287,9 @@ button
 
 /***** 간격 *****/
 .mt3-mb6 {margin-top:3px; margin-bottom:6px;}
+
+
+
+
+
+
