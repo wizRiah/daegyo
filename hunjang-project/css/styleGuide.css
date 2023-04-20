@@ -182,7 +182,7 @@ button
 */
 .h-checkbox {display: inline-block;vertical-align: middle;-webkit-user-select: none !important;user-select: none !important;margin: 3px;/* z-index: 0; */} 
 .h-checkbox input,
-.h-checkbox label>input { display:none; } 
+.h-checkbox label>input {/* display:none; */width: 1px;height: 1px;text-indent: -999px;overflow: hidden;opacity: 0;position: absolute;} 
 .h-checkbox input[type="checkbox"] + label,
 .h-checkbox label>input[type="checkbox"] + .spanLabel {cursor:pointer;position: relative;z-index: 1;} 
 
@@ -195,6 +195,9 @@ button
     /* label:before에 체크 된 상태 CSS */ 
     .h-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
     .h-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--cyan); border-color:transparent; font-weight: 400; } 
+    /*포커싱되었을때*/
+    .h-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
+    .h-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before {border-color:var(--cyan);}
     /*hover*/
     .h-checkbox.checkbox01 input[type="checkbox"] + label:after,
     .h-checkbox label>input[type="checkbox"] + .spanLabel:after {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 7px;left: 10px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
@@ -203,12 +206,16 @@ button
     .h-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
     .h-checkbox label>input[type="checkbox"]:checked  + .spanLabel:after {background: var(--cyan);opacity: 0.2;}
 
+
 /* checkbox02 */
     /* label에 체크하기 전 상태 CSS */
     .h-checkbox.checkbox02 i { vertical-align: middle; margin: -3px 5px 0 0; } 
     .h-checkbox.checkbox02 input[type="checkbox"] + label { text-align: center; transition: color 0.5s; -webkit-transition: color 0.5s; color: var(--grey-2); } 
     /* label에 체크 된 상태 CSS */ 
     .h-checkbox.checkbox02 input[type="checkbox"]:checked + label {color:var(--blue-3); } 
+    /*포커싱되었을때*/
+    .h-checkbox.checkbox02 input[type="checkbox"]:focus + label i,
+    .h-checkbox.checkbox02.notxt input[type="checkbox"]:focus + label {outline:auto;}
     /*hover*/
     .h-checkbox.checkbox02 input[type="checkbox"] + label:after {content:""; display: inline-block;width: 4px;height: 4px;position: absolute;top: 7px;left: 10px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
     .h-checkbox.checkbox02 input[type="checkbox"] + label:hover:after {transform: scale(9);transform-origin: center;opacity: 0.2;}
@@ -232,12 +239,12 @@ button
 /*
 라디오버튼
 */
+[class^="h-radio"] input[type="radio"] {/* display:none; */width: 1px;height: 1px;text-indent: -999px;overflow: hidden;opacity: 0;position: absolute;}
 
 /* 01 기본형 */
-.h-radio-01 input[type="radio"] {display:none;}
 .h-radio-01 input[type="radio"] + label {display:inline-block;font-size:var(--text-subtitle4);margin: 0 20px 0 0;box-sizing:border-box;position:relative;z-index: 0;}
 .h-radio-01 input[type="radio"] + label:hover {cursor:pointer;}
-.h-radio-01 input[type="radio"] + label .rchk {display: inline-block;width:24px;height:24px;border-radius:100%;background:#fff;border:1px solid #CCD1D7;box-sizing: border-box;vertical-align: middle;margin:0 10px;transition: border 0.5s;position: relative;}
+.h-radio-01 input[type="radio"] + label .rchk {display: inline-block;width:24px;height:24px;border-radius:100%;background:#fff;border:1px solid var(--border-basic-2);box-sizing: border-box;vertical-align: middle;margin:0 10px;transition: border 0.5s;position: relative;}
 .h-radio-01 input[type="radio"] + label .rchk:before {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 9px;left: 9px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
 .h-radio-01 input[type="radio"] + label .rchk:after {content:"";display: inline-block;width: 2px;height: 2px;position: absolute;top: 10px;left: 10px;border-radius:100%;opacity: 0;transition: transform 0.2s, opacity 0.1s;background: var(--cyan);}
 .h-radio-01 input[type="radio"] + label:hover .rchk:before {transform: scale(12);transform-origin: center;opacity: 0.1;}
@@ -246,9 +253,9 @@ button
 .h-radio-01 input[type="radio"]:checked + label .rchk:after {transform: scale(6); transform-origin: center;opacity: 1;}
 .h-radio-01 input[type="radio"]:checked + label .rchk:before {background:var(--cyan);opacity: 0.1;}
 .h-radio-01 input[type="radio"]:disabled + label {}
+.h-radio-01 input[type="radio"]:focus + label .rchk {border-color:var(--cyan);}
 
 /* 02 버튼형 */
-.h-radio-02 input[type="radio"] {display:none;}
 .h-radio-02 input[type="radio"] + label { display:inline-block; height:46px; line-height:44px; border:1px solid var(--border-basic-2); border-left-width: 0; font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s;}
 .h-radio-02 input[type="radio"] + label:before {content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--cyan); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out;}
@@ -258,8 +265,22 @@ button
 .h-radio-02 input[type="radio"] + label:hover {cursor:pointer;}
 .h-radio-02 input[type="radio"]:checked + label {background:var(--cyan); color:#fff; border-color:var(--cyan);}
 .h-radio-02 input[type="radio"]:disabled + label {background:var(--border-basic-4);}
+.h-radio-02 input[type="radio"]:focus + label {border-color:var(--cyan);}
 .h-radio-02 input[type="radio"] + label:first-of-type {margin-left:0;border-radius:4px 0 0 4px;border-left-width: 1px;}
 .h-radio-02 input[type="radio"] + label:last-of-type {border-radius:0 4px 4px 0;}
+
+/* switch */
+.h-switch {display: inline-block;z-index: 0;}
+.h-switch input[type="checkbox"] {position: absolute; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.h-switch .h-switchBtn-box {position: relative;cursor: pointer;display: inline-block;width: 48px;height: 28px;background: #D1D7DF;border: 1px solid var(--border-basic-2); border-radius: 14px;transition: 0.2s;box-sizing: border-box;z-index: 0;}
+.h-switch .h-switchBtn-box:hover {background: #D1D7DF;}
+.h-switch .h-switchBtn-box .h-switchBtn {position: absolute;top: 3px;left: 3px;display: inline-block;width: 20px;height: 20px;border-radius: 20px;background: #fff;transition: 0.2s;box-sizing: border-box;/* z-index: -1; */}
+.h-switch input[type="checkbox"]:checked+.h-switchBtn-box {background:var(--blue-3); border: 1px solid var(--blue-3);}
+.h-switch input[type="checkbox"]:checked+.h-switchBtn-box:hover {background:var(--blue-3);}
+.h-switch input[type="checkbox"]:checked+.h-switchBtn-box .h-switchBtn {left: 23px;background: #fff; box-shadow: 1px 2px 3px #00000020;}
+.h-switch .h-switchBtn-box .h-switchBtn:before {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 8px;left: 7px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s, left 0.2s;background: var(--grey-2);}
+.h-switch .h-switchBtn-box:hover .h-switchBtn:before {transform: scale(10);transform-origin: center;opacity: 0.3;left: 9px;}
+.h-switch input[type="checkbox"]:focus + .h-switchBtn-box .h-switchBtn {border:1px solid var(--blue-3);}
 
 
 
