@@ -221,6 +221,20 @@ button
 라디오버튼
 */
 
+/* 01 기본형 */
+.h-radio-01 input[type="radio"] {display:none;}
+.h-radio-01 input[type="radio"] + label {display:inline-block;font-size:var(--text-subtitle4);margin: 0 20px 0 0;box-sizing:border-box;position:relative;z-index: 0;}
+.h-radio-01 input[type="radio"] + label:hover {cursor:pointer;}
+.h-radio-01 input[type="radio"] + label .rchk {display: inline-block;width:24px;height:24px;border-radius:100%;background:#fff;border:1px solid #CCD1D7;box-sizing: border-box;vertical-align: middle;margin:0 10px;transition: border 0.5s;position: relative;}
+.h-radio-01 input[type="radio"] + label .rchk:before {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 9px;left: 9px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
+.h-radio-01 input[type="radio"] + label .rchk:after {content:"";display: inline-block;width: 2px;height: 2px;position: absolute;top: 10px;left: 10px;border-radius:100%;opacity: 0;transition: transform 0.2s, opacity 0.1s;background: var(--cyan);}
+.h-radio-01 input[type="radio"] + label:hover .rchk:before {transform: scale(12);transform-origin: center;opacity: 0.1;}
+.h-radio-01 input[type="radio"]:checked + label {}
+.h-radio-01 input[type="radio"]:checked + label .rchk {border-color:var(--cyan);}
+.h-radio-01 input[type="radio"]:checked + label .rchk:after {transform: scale(6); transform-origin: center;opacity: 1;}
+.h-radio-01 input[type="radio"]:checked + label .rchk:before {background:var(--cyan);opacity: 0.1;}
+.h-radio-01 input[type="radio"]:disabled + label {}
+
 /* 02 버튼형 */
 .h-radio-02 input[type="radio"] {display:none;}
 .h-radio-02 input[type="radio"] + label { display:inline-block; height:46px; line-height:44px; border:1px solid var(--border-basic-2); border-left-width: 0; font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s;}
