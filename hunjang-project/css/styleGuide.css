@@ -92,3 +92,83 @@ input::placeholder { color:#BCBCBC; }
  text-rendering: optimizeLegibility; /* Support for Firefox. */
  -moz-osx-font-smoothing: grayscale; /* Support for IE. */
  font-feature-settings: 'liga'; } 
+
+
+
+
+
+
+
+
+ /* 
+button 
+*/
+[class^="h-button"] {position: relative; overflow: hidden; display: inline-block; vertical-align: middle;
+    margin:0 5px; padding:0 20px; cursor: pointer; border-radius:4px; background: var(--border-basic-1); color: #fff;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+    -webkit-transition-property: color; transition-property: color;
+    -webkit-transition-duration: 0.3s; transition-duration: 0.3s;}
+
+[class^="h-button"]:before {content:""; position:absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; opacity:0;}
+[class^="h-button"]:focus:before {opacity:0.2; -webkit-animation: hbtnFX01 1s 1 ease; -o-animation: hbtnFX01 1s 1 ease; animation: hbtnFX01 1s 1 ease;}
+[class^="h-button"] span:first-child:nth-last-child(2) {margin-right:7px;}
+[class^="h-button"] span:last-child:nth-last-child(1) {margin-left:7px;}
+[class^="h-button"] img {vertical-align:middle;}
+
+
+/* 사이즈별 */
+.h-button-xxs {height:30px; line-height:30px; font-size:var(--text-subtitle6); padding:0 13px;}
+.h-button-xs {height:36px; line-height:36px; font-size:var(--text-subtitle4);}
+.h-button-s  {height:38px; line-height:38px; font-size:var(--text-subtitle4);}
+.h-button-m  {height:42px; line-height:42px; font-size:var(--text-subtitle4);}
+.h-button-l  {height:54px; line-height:54px; font-size:var(--text-subtitle2); font-weight:var(--text-medium);}
+
+/* 사이즈별 : 아이콘만 있는 경우 */
+.h-btn-sqre {padding:0; text-align:center;}
+.h-button-xs.h-btn-sqre {width:36px;}
+.h-button-s.h-btn-sqre  {width:38px;}
+.h-button-m.h-btn-sqre  {width:42px;}
+.h-button-l.h-btn-sqre  {width:54px;}
+
+/* 컬려별 */
+.h-button-nobg {background:transparent; color:var(--black-2); transition:background ease 1.5s;}
+.h-button-nobg:focus:before {-webkit-animation: hbtnFX02 1s 1 ease; -o-animation: hbtnFX02 1s 1 ease; animation: hbtnFX02 1s 1 ease; background:rgba(136,136,136,0.2);}
+.h-button-white {background:#fff; color:var(--black-2); border:1px solid var(--border-basic-4);}
+.h-button-grey {background: var(--border-basic-1);}
+.h-button-grey1 {background: var(--grey-1);}
+.h-button-teal {background: var(--teal);}
+.h-button-cyan {background: var(--cyan);}
+.h-button-orange {background: var(--orange);}
+
+/* 특수디자인 */
+.h-button-txt {font-size:var(--text-subtitle4); color:var(--blue-4); padding:0 10px;}
+.h-button-underline {text-decoration:underline !important; font-weight:var(--text-medium);}
+.h-button-more {font-size:var(--text-subtitle4); color:var(--black-3); transition:color 0.5s;}
+.h-button-more:after {content:"+"; color:var(--grey-1); margin-left:6px; font-size:23px; width:22px; height:22px; line-height: 15px; border: 2px solid var(--grey-1); border-radius: 100%; display: inline-block; text-align: center; vertical-align: middle; margin-top: -3px; box-sizing: border-box; font-weight: 300; transition:all 0.5s;}
+.h-button-more:hover,
+.h-button-more:hover:after {color:var(--black-2); border-color:var(--black-2);}
+.h-button-refresh {font-size:var(--text-subtitle6);}
+.h-button-refresh i {transition:transform 0.5s;}
+.h-button-refresh:hover i {transform:rotate(180deg);}
+
+.h-button-icon {color:#8c9197;padding: 0;width: 40px;height: 40px;text-align: center;line-height: 40px;font-size: 20px;background: #fff;border-radius: 100%;}
+.h-button-del {}
+.h-button-menu {font-size: 17px;}
+.h-button-icon:hover {background:#eef0f3;}
+.h-button-icon:before {box-shadow:0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);}
+
+@keyframes hbtnFX01 {
+    0% {transform:scale(0); background:var(--neutral-1);}
+    1% {border-radius:100%;}
+    90% {transform:scale(2);}
+    100% {transform:scale(2);}
+}
+@keyframes hbtnFX02 {
+    0% {transform:scale(0); background:var(--black-4);}
+    1% {border-radius:100%;}
+    90% {transform:scale(2);}
+    100% {transform:scale(2);}
+}
