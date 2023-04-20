@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/styleGuide.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
     html {background: #efefef;}
     .guide_container {position: relative; background: #efefef;}
@@ -92,26 +93,213 @@
               </label>
             </div>
 
-            <div class="h-checkbox checkbox02">
-              <input type="checkbox" name="checkForm" id="check03">
-              <label class="material-icons" for="check03">task_alt</label>
-            </div>
+            <div class="h-checkbox checkbox02 notxt">
+                <input type="checkbox" name="checkForm" id="check03">
+                <label class="material-icons" for="check03">task_alt</label>
+              </div>
 
           </div>
           <br>
 
           <h4>radio button</h4>
           <div class="guide_item">
+            <!-- 라디오버튼 01 -->
+            <div class="h-radio-01">
+                <input type="radio" id="hcheck01_1" name="hradio01" checked/>
+                <label for="hcheck01_1"><span class="rchk"></span>Line</label>
+
+                <input type="radio" id="hcheck01_2" name="hradio01">
+                <label for="hcheck01_2"><span class="rchk"></span>Rectangle</label>
+
+                <input type="radio" id="hcheck01_3" name="hradio01">
+                <label for="hcheck01_3"><span class="rchk"></span>Ellipse</label>
+
+                <input type="radio" id="hcheck01_4" name="hradio01">
+                <label for="hcheck01_4"><span class="rchk"></span></label>
+            </div>
+            <br>
+
+            <!-- 라디오버튼 02 -->
+            <div class="h-radio-02">
+                <input type="radio" id="hcheck02_1" name="hcheck02">
+                <label for="hcheck02_1">일주일</label>
+
+                <input type="radio" id="hcheck02_2" name="hcheck02">
+                <label for="hcheck02_2">1개월</label>
+
+                <input type="radio" id="hcheck02_3" name="hcheck02">
+                <label for="hcheck02_3">2개월</label>
+
+                <input type="radio" id="hcheck02_4" name="hcheck02">
+                <label for="hcheck02_4">3개월</label>
+
+                <input type="radio" id="hcheck02_5" name="hcheck02">
+                <label for="hcheck02_5">6개월</label>
+
+                <input type="radio" id="hcheck02_6" name="hcheck02">
+                <label for="hcheck02_6">1년</label>
+            </div>
+
           </div>
           <br>
 
           <h4>switch</h4>
           <div class="guide_item">
+            <!-- 텍스트 없는것 X -->
+            <div class="h-switch">
+                <input type="checkbox" id="switch" name="switch1">
+                <label for="switch" class="h-switchBtn-box">
+                    <span class="h-switchBtn"></span>
+                </label>
+            </div>
+            <br>
+
+            <!-- 텍스트 있는것 O -->
+            <div class="h-switch">
+                <input type="checkbox" id="switch2" name="switch2" checked>
+                <span class="h-switchlabel">이력서 공개중</span>
+                <label for="switch2" class="h-switchBtn-box">
+                    <span class="h-switchBtn"></span>
+                </label>
+            </div>
+
           </div>
           <br>
 
           <h4>pagination</h4>
           <div class="guide_item">
+            pagination01
+            <!-- 버튼 클릭시 클래스 h-btn-outline 추가 -->
+            <div class="h-pagination flex no-wrap items-center" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button" aria-label="1"
+                    aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="2" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="3" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="4" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="5" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="6" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                  aria-label="2" aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+            <br>
+            pagination02
+            <div class="h-pagination flex no-wrap items-center" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button" aria-label="1"
+                    aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="2" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="3" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="4" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="5" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                    aria-label="6" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button"
+                  aria-label="2" aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="-1" type="button"
+                  aria-label="0" aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
           </div>
           <br>
 
@@ -123,6 +311,7 @@
             <a href="#" class="h-button-xs">설정하기(36-xs)</a>
             <a href="#" class="h-button-s">설정하기(38-s)</a>
             <a href="#" class="h-button-m">설정하기(42-m)</a>
+            <a href="#" class="h-button-ml">설정하기(46-ml)</a>
             <a href="#" class="h-button-l">설정하기(54-l)</a>
             <br><br>
 
@@ -182,19 +371,18 @@
                 <!-- text 정렬 : flex-start, flex-center, flex-end -->
             <div class="h-tit-box-1 flex-end">
                 <p class="i-block h-tit-26">추천 채용정보</p>
-                <a href="#" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+                <a href="#" class="h-button-more h-button-nobg">더보기</a>
             </div>
             <!-- /테이블 상단 텍스트 -->
 
             <!-- 테이블 유형 1 (기본) -->
-                <!-- 클래스 hover-bg-none 추가 : 테이블 hover 시 tr 색 변경 없음 -->
             <table class="h-tbl-basic-1">
                 <thead>
                     <tr>
                         <th>
                             <div class="h-checkbox checkbox01">
-                                <input type="checkbox" name="checkForm" id="check01">
-                                <label for="check01"></label>
+                                <input type="checkbox" name="checkForm" id="check_all">
+                                <label for="check_all"></label>
                             </div>
                         </th>
                         <th>근무지</th>
@@ -209,8 +397,8 @@
                     <tr>
                         <td>
                             <div class="h-checkbox checkbox01">
-                                <input type="checkbox" name="checkForm" id="check01">
-                                <label for="check01"></label>
+                                <input type="checkbox" name="checkForm" id="sel_01">
+                                <label for="sel_01"></label>
                             </div>
                         </td>
                         <td>
@@ -254,8 +442,8 @@
                     <tr>
                         <td>
                             <div class="h-checkbox checkbox01">
-                                <input type="checkbox" name="checkForm" id="check01">
-                                <label for="check01"></label>
+                                <input type="checkbox" name="checkForm" id="sel_02">
+                                <label for="sel_02"></label>
                             </div>
                         </td>
                         <td>
@@ -303,6 +491,149 @@
 
 
             <br><br><br>
+
+
+
+            <!-- 테이블 상단 텍스트 -->
+                <!-- text 정렬 : flex-start, flex-center, flex-end -->
+            <div class="h-tit-box-1 flex-end">
+                <span class="i-block h-tit-16 h-txt-3">로그인 기록 &nbsp;- &nbsp;</span>
+                <span class="h-txt-2">총 84건</a>
+            </div>
+            <!-- /테이블 상단 텍스트 -->
+
+            <!-- 테이블 - 파일 -->
+            <table class="h-tbl-basic-1 h-tbl-file">
+                <thead>
+                    <tr>
+                        <th>파일구분</th>
+                        <th>파일명</th>
+                        <th>파일용량</th>
+                        <th>등록일</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody class="text-subtitle5">
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_excel.png" alt="">
+                                <span>포트폴리오</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">강남엄마_제 휴종료에 따른 사이트 수정 포트폴리오.xlsx</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">2022.04.14</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_samsung.png" alt="">
+                                <span>포트폴리오</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">http://www.naver.com</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">2022.04.14</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_zip.png" alt="">
+                                <span>자격증</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">자격증파일_홍길동.zip</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">2022.04.14</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_ppt.png" alt="">
+                                <span>기획안</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">자격증파일_홍길동.zip</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">2022.04.14</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_hancom.png" alt="">
+                                <span>경력기술서</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">경력기술서_홍길동_20221212.hwp</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">2022.04.14</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_file_acrobat.png" alt="">
+                                <span>경력기술서</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">경력기술서_홍길동_20221212.pdf</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">6.8MB</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-l">
+                            <div class="flex inline flex-center">
+                                <img class="h-file-icon" src="images/icon_flie_word.png" alt="">
+                                <span>추천서</span>
+                            </div>
+                        </td>
+                        <td class="txt-l">
+                            <a href="#" class="h-button-txt h-button-nobg h-button-underline h-file-name">서울대학교_컴퓨터공학박사_홍길동님_20221212.doc</a>
+                        </td>
+                        <td>9.2MB</td>
+                        <td><span class="h-txt-6">6.8MB</span></td>
+                        <td>
+                            <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /테이블 - 파일 -->
+
+
+
+            <br><br><br>
+
 
 
             <!-- 테이블 상단 텍스트 -->
@@ -370,6 +701,7 @@
             <br><br><br>
 
 
+
             <!-- 테이블 상단 텍스트 -->
                 <!-- text 정렬 : flex-start, flex-center, flex-end -->
             <div class="h-tit-box-1 flex-end">
@@ -432,6 +764,8 @@
                 </tbody>
             </table>
             <!-- /테이블 thead 흰색 + 세로 구분 선 있는 유형 -->
+
+
 
         </div>
       </div>
