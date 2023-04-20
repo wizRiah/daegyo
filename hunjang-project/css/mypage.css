@@ -60,18 +60,28 @@
 .resumebox .resumbtn .ico_arrow:before {content:''; width:12px; height:12px; position:absolute; left:50%; top:50%; border-left:2px solid #CCD1D7; border-top:2px solid #CCD1D7; transform:translate(-50%,-50%) rotate(135deg);}
 .resumebox .resumbtn .ico_arrow:after {content:''; width:18px; height:2px; position:absolute; right:12px; top:50%; transform:translateY(-50%); background:#CCD1D7}
 
+/* 이력서 공개 상태 일때 */
+.my-subtxtbox .resume-form {background-color: var(--neutral-2)!important;border: none;}
+.my-subtxtbox .resume-form .resume-qlink {display: flex;margin-top: 35px;}
+.my-subtxtbox .resume-form .resume-qlink li a {display: flex;padding: 20px 25px;border-radius: 90px;font-size: var(--text-subtitle4);background-color: #fff;}
+.my-subtxtbox .resume-form .resume-qlink li + li {margin-left:5px;}
+.my-subtxtbox .resume-form .resume-qlink li a .number{margin-left:10px; color:var(--blue-3); font-weight: 500;}
+.my-subtxtbox .resume-form .resume-qlink li a:hover,
+.my-subtxtbox .resume-form .resume-qlink li a:hover .number {background-color:var(--cyan); color:#fff; transition: all ease-out 0.3s;}
 
-/* 공통 */
-.my-subtxtbox {display:flex; justify-content: center; align-items: center; margin-top:25px; padding:50px; background-color:var(--neutral-2)!important; border:1px solid var(--border-basic-3); border-radius: 15px;  border-width:1px;}
-.my-subtxtbox ul {width:calc(100% - 145px);}
-.my-subtxtbox ul .title {margin-bottom:20px; color:var(--black-1); font-weight: bold;}
-.my-subtxtbox ul .text-subtitle4 {color:var(--black-3);}
-.my-subtxtbox ul .resume_state {color:var(--black-3);}
+
+/* 이력서 비공개 상태 일때 */
+.my-subtxtbox {margin-top:25px;/*padding:50px;*/background-color:var(--neutral-2)!important;border:1px solid var(--border-basic-3);border-radius: 15px;}
+.my-subtxtbox.off .resume-form {display:flex;justify-content: space-between;align-items: center; flex-direction: initial;}
+.my-subtxtbox.off .resume-form ul {width:calc(100% - 145px);}
+.my-subtxtbox.off .resume-form ul .title {margin-bottom:20px; color:var(--black-1); font-weight: bold;}
+.my-subtxtbox.off .resume-form ul .text-subtitle4 {color:var(--black-3);}
+.my-subtxtbox.off .resume-form ul .resume_state {color:var(--black-3);}
 
 
 /* 이력서 관리 */
-.my-resumebox {position: relative; margin-bottom:60px;}
-.my-resumebox .contxt {padding:60px 40px; width:500px; height:240px; border-radius: 15px; background: url("../images/img_resume_regInfo.png") no-repeat 125px 180px #fff !important; word-break: break-all;}
+.my-resumebox {position: relative; padding-bottom:60px; margin-bottom:60px;}
+.my-resumebox .contxt {padding: 40px;width:500px;height: 160px;border-radius: 15px;background: url("../images/img_resume_regInfo.png") no-repeat 125px 180px #fff !important;word-break: break-all;}
 .my-resumebox .contxt-btns {overflow: hidden; position:absolute; top:30px; right:0; height: 100%; border-radius: 15px; height:270px;}
 .my-resumebox .contxt-btns button {position: relative; width:215px;}
 .my-resumebox .contxt-btns button:first-child {background-color:var(--teal);}
@@ -80,13 +90,39 @@
 .my-resumebox .contxt-btns button + button:before {content:''; position:absolute; width:1px; height:190px; right: 0; top: 50%; transform: translateY(-50%); background:#68c9d9;}
 
 .my-resumebox .contxt-btns button p {color:#FFFFFFCC;}
-.my-resumebox .contxt-btns strong {display: block; margin:32px 0 10px; font-weight:bold;}
+.my-resumebox .contxt-btns button strong {display: block; margin:32px 0 10px; font-weight:bold; color:#fff;}
 
-.resume-count {padding-top:60px;}
-.resume-count .count-tit {margin-bottom:15px; color:var(--black-3); font-weight: normal;}
-.resume-count .count-tit .sum {color:#333;}
-.resume-count .cont-inner {display:flex; justify-content: center; flex-direction: column; padding:40px; border-radius: 15px; border:1px solid var(--basic-3); text-align: center; background-color: #fff;}
-.resume-count .cont-inner.none {height: 295px;}
-.resume-count .cont-inner.none strong {margin-bottom: 10px;}
-.resume-count .cont-inner.none p {color:var(--black-2); font-weight: 400;}
-.resume-count .cont-inner.none p .count {color:var(--blue-3);}
+/* 검색결과 수 */
+.count-tit {margin-bottom:15px; color:var(--black-3); font-weight: normal;}
+.count-tit .sum {color:#333;}
+
+.resume-form {position: relative;display:flex;justify-content: center;flex-direction: column;border-radius: 15px;border:1px solid var(--border-basic-3); background-color: #fff; padding: 40px;}
+.resume-form .date {font-size: var(--text-subtitle6);}
+.resume-form .date span {color:var(--black-3);}
+.resume-form .title {margin-top: 18px;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;padding-right: 60px;}
+.resume-form .title .blt-basic-txt {padding:4px 10px; border-radius:13px; background-color:#C3CAD4; color:#fff; font-size: var(--text-subtitle6); vertical-align: 3px;}
+.resume-form + .resume-form {margin-top:20px}
+.resume-form.none {height: 295px; text-align: center;}
+.resume-form.none strong {margin-bottom: 10px;}
+.resume-form.none p {color:var(--black-2); font-weight: 400;}
+.resume-form.none p .count {color:var(--blue-3);}
+
+.resume-list {margin-top: 13px;font-size: var(--text-subtitle4);}
+.resume-list li {position: relative; float: left; padding-left:10px; margin-right:25px; line-height:24px;}
+.resume-list li span {color:var(--black-3);}
+.resume-list li:after {content:'';position: absolute;top: 10px;left:0;width:2px;height:2px;background-color:var(--black-3);}
+.resume-list li:nth-child(2n) {float: none;}
+.resume-list .h-button-txt {padding: 0; height: auto; line-height: inherit; padding:0; font-size: var(--text-subtitle4); font-weight: 400; vertical-align: top;}
+
+.resume-mngr-btn {margin:20px 0 10px; text-align:right;}
+.resume-mngr-btn .link {margin-right:20px;padding: 0 5px;font-size: 13px;font-weight: 400;}
+.resume-mngr-btn .h-button-s {margin:0;}
+
+/* 토글 버튼 */
+.more_toggle {position: absolute;right: 40px;bottom: 35px;width:40px;height:40px;border-radius:50%;background:var(--neutral-3);}
+.more_toggle.on {display: flex;background-color:var(--neutral-3);border-radius: 38px;padding: 13px 30px;align-items: baseline;width: max-content;justify-content: space-evenly;flex-direction: row;}
+.more_toggle.on li {text-align:center;}
+.more_toggle.on li a {display: inline-block;}
+.more_toggle.on li a .txt {display:block;margin-top: 4px;font-size:var(--text-subtitle6); color:var(--black-3);}
+.more_toggle.on li + li {margin-left:17px;}
+.more_toggle.on li.point a .txt {color:#333;}
