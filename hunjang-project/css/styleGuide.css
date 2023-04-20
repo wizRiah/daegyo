@@ -172,3 +172,32 @@ button
     90% {transform:scale(2);}
     100% {transform:scale(2);}
 }
+
+
+
+
+/* 체크박스 */
+.h-checkbox { display: inline-block; vertical-align: middle; -webkit-user-select: none !important; user-select: none !important; margin: 3px;} 
+.h-checkbox input,
+.h-checkbox label>input { display:none; } 
+.h-checkbox input[type="checkbox"] + label,
+.h-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; } 
+
+/* checkbox01 */
+/* label:before에 체크하기 전 상태 CSS */
+.h-checkbox.checkbox01 input[type="checkbox"] + label:before,
+.h-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 24px; height: 24px; line-height: 24px; font-size: 24px; margin: -4px 10px 0 0; text-align: center; border-radius: 4px; border: 1px solid var(--border-basic-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; } 
+.h-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before{ margin: -4px 0 0 0;}
+
+/* label:before에 체크 된 상태 CSS */ 
+.h-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
+.h-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--cyan); border-color:transparent; font-weight: 400; } 
+
+
+/* checkbox02 */
+/* label에 체크하기 전 상태 CSS */
+.h-checkbox.checkbox02 i { vertical-align: middle; margin: -3px 5px 0 0; } 
+.h-checkbox.checkbox02 input[type="checkbox"] + label { text-align: center; transition: color 0.5s; -webkit-transition: color 0.5s; color: var(--grey-2); } 
+ 
+/* label에 체크 된 상태 CSS */ 
+.h-checkbox.checkbox02 input[type="checkbox"]:checked + label { color: var(--blue-3); } 
