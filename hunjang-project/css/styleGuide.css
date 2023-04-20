@@ -1,52 +1,54 @@
 @charset "utf-8";
+
+
 :root {
-        /* Color */
-        --teal: #43a986;
-        --cyan: #26b2c8;
-        --orange: #ff6000;
-        --blue-1: #369BFF;
-        --blue-2: #0080FF;
-        --blue-3: #61A6FF;
-        --blue-4: #0E97FF;
-        --blue-grey: #31516a;
-        --grey-1: #c3cad4;
-        --grey-2: #8c9197;
-        --grey-3: #62666b;
-        --neutral-1: #f2f2f2;
-        --neutral-2: #ebeff5;
-        --neutral-3: #f5f7fa;
-        --neutral-4: #ebf4ff;
-        --black-1: #151515;
-        --black-2: #333333;
-        --black-3: #7E7E7E;
-        --black-4: #8B8B8B;
-        --black-5: #9A9A9A;
-        --black-6: #BCBCBC;
-        --border-basic-1: #62666B;
-        --border-basic-2: #CCD1D7;
-        --border-basic-3: #E0E6EF;
-        --border-basic-4: #D4DAE2;
-        /* Font */
-        --text-light: 300;
-        --text-regular: 400;
-        --text-medium: 500;
-        --text-bold: 700;
-        --text-extrabold: 800;
-        --text-h1: 32px;
-        --text-h2: 26px;
-        --text-h3: 22px;
-        --text-h4: 20px;
-        --text-subtitle1: 18px;
-        --text-subtitle2: 16px;
-        --text-subtitle3: 15px;
-        --text-subtitle4: 14px;
-        --text-subtitle5: 13px;
-        --text-subtitle6: 12px;
-        --letter-spacing-0: 0;
-        --letter-spacing-065: -0.65px;
-        --letter-spacing-1: -1px;
-        --letter-spacing-2: -2px;
-    }
+    /* Color */
+    --teal: #43a986;
+    --cyan: #26b2c8;
+    --orange: #ff6000;
+    --blue-1: #369BFF;
+    --blue-2: #0080FF;
+    --blue-3: #61A6FF;
+    --blue-4: #0E97FF;
+    --blue-grey: #31516a;
+    --grey-1: #c3cad4;
+    --grey-2: #8c9197;
+    --grey-3: #62666b;
+    --neutral-1: #f2f2f2;
+    --neutral-2: #ebeff5;
+    --neutral-3: #f5f7fa;
+    --neutral-4: #ebf4ff;
+    --black-1: #151515;
+    --black-2: #333333;
+    --black-3: #7E7E7E;
+    --black-4: #8B8B8B;
+    --black-5: #9A9A9A;
+    --black-6: #BCBCBC;
+    --border-basic-1: #62666B;
+    --border-basic-2: #CCD1D7;
+    --border-basic-3: #E0E6EF;
+    --border-basic-4: #D4DAE2;
+    /* Font */
+    --text-light: 300;
+    --text-regular: 400;
+    --text-medium: 500;
+    --text-bold: 700;
+    --text-extrabold: 800;
+    --text-h1: 32px;
+    --text-h2: 26px;
+    --text-h3: 22px;
+    --text-h4: 20px;
+    --text-subtitle1: 18px;
+    --text-subtitle2: 16px;
+    --text-subtitle3: 15px;
+    --text-subtitle4: 14px;
+    --text-subtitle5: 13px;
+    --text-subtitle6: 12px;
+    --letter-spacing-0: 0;
+    --letter-spacing-065: -0.65px;
+    --letter-spacing-1: -1px;
+    --letter-spacing-2: -2px;
+}
 
 
 .text-h1 { font-size:var(--text-h1); letter-spacing:var(--letter-spacing-1); font-weight:var(--text-bold); line-height:1.2em; } 
@@ -70,14 +72,23 @@ input::placeholder { color:#BCBCBC; }
 .slt-type-basic select { padding:15px; border-radius: 4px; border: 1px solid #CCD1D7; } 
 
 /* display */
-.blcok {display:block;}
-.i-blcok {display:inline-block;}
+.blcok { display:block; } 
+.i-blcok { display:inline-block; } 
 
 /* flex */
 .flex { display: flex; } 
 .flex.inline { display:inline-flex; } 
 .no-wrap { flex-wrap:nowrap; } 
-.flex-start, .items-start { align-items:flex-start !important; }
+.flex-start, .items-start { align-items:flex-start !important; } 
 .flex-center, .items-center { align-items:center !important; } 
-.flex-end, .items-end { align-items:flex-end !important; }
+.flex-end, .items-end { align-items:flex-end !important; } 
 .flex-set { display:flex; flex-flow:row wrap; justify-content:center; align-items:center; } 
+
+
+/* googl material icons */
+.material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; /* Preferred icon size */
+ display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr; /* Support for all WebKit browsers. */
+ -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */
+ text-rendering: optimizeLegibility; /* Support for Firefox. */
+ -moz-osx-font-smoothing: grayscale; /* Support for IE. */
+ font-feature-settings: 'liga'; } 
