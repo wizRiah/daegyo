@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import 'styleGuide.css';
+/* @import 'styleGuide.css'; */
 @import 'mapage_osoo.css';
 
 /* 로케이션바 */
@@ -147,28 +147,30 @@
 .tab-menu li a .number {font-family: ''; font-size: var(--text-h1);}
 .tab-menu li.active {background-color: var(--cyan);}
 .tab-menu li.active a {color:#fff;}
-
 .tab-menu li.active :hover {color:#fff;}
 .tab-menu li:hover {border:1px solid var(--cyan); transition: all ease-out 0.3s;}
 .tab-menu li:hover a {color:var(--cyan); transition: all ease-out 0.3s;}
 
-select {-moz-appearance: none; -webkit-appearance: none; appearance: none; min-width:140px;height:46px;padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px;font-size: var(--text-subtitle4);background: url('../images/icon_select_arrow.png') no-repeat right 18px center #fff;}
-select option:disabled {display: none;}
-input {height:46px; padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px!important;font-size: var(--text-subtitle4); box-sizing: border-box;}
-.date-picker input {width:200px;}
-.wd100 {width:100%;}
-.flex-1 {flex:1;}
 
-
-.basic-serchbox {margin-top: 30px;}
+.basic-serchbox {margin-top: 30px; padding:40px; border-radius:15px; background:var(--neutral-2);}
+.basic-serchbox input {height:46px; padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px!important;font-size: var(--text-subtitle4); box-sizing: border-box;}
 .basic-serchbox .h-radio-02 {display:inline-block; margin-left:10px; background-color: #fff;}
+.basic-serchbox .h-btn-search {margin-right: 0;min-width:50px;text-align:center;}
+.basic-serchbox .h-btn-refresh {width:38px;}
 .basic-serchbox .col {display: flex; align-items: center;}
 .basic-serchbox .col + .col {margin-top:10px;}
 .basic-serchbox .col select {margin-right:10px;}
-.basic-serchbox {padding:40px; border-radius:15px; background:var(--neutral-2);}
-.basic-serchbox .h-btn-search {margin-right: 0;min-width:50px;text-align:center;}
 
-.sprt-btn-del {width:60px; background-color:var(--grey-1);}
-.sprt-btn-cancle {width:60px; background-color:var(--grey-3);}
+.applicant-col a {margin-left:0; margin-right:20px;}
 
-.basic-serchbox .h-btn-refresh {width:38px;}
+.sprt-btn-del {width:60px; background-color:var(--grey-1); font-weight: 300;}
+.sprt-btn-cancle {width:60px; background-color:var(--grey-3); font-weight: 300;}
+
+/* 임시 */
+.date-picker input {width:200px;}
+
+/* 공통추가 */
+select {-moz-appearance: none; -webkit-appearance: none; appearance: none; min-width:140px;height:46px;padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px;font-size: var(--text-subtitle4);background: url('../images/icon_select_arrow.png') no-repeat right 18px center #fff;}
+select option:disabled {display: none;}
+.wd100 {width:100%;}
+.flex-1 {flex:1;}
