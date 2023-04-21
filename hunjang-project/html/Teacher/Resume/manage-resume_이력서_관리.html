@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="../../../css/styleGuide.css">
   <link rel="stylesheet" href="../../../css/mypage.css">
   <link rel="stylesheet" href="../../../css/layout.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -19,48 +21,22 @@
     <header>
       <div class="header-inner">
         <ul class="myicon-wrap">
-          <li>
-            <a href="#">
-              <img src="../../../images/icon_home.png" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../../../images/icon_star.png" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../../../images/icon_heart.png" alt="">
-            </a>
-          </li>
+          <li><a href="#"><img src="../../../images/icon_home.png" alt=""></a></li>
+          <li><a href="#"><img src="../../../images/icon_star.png" alt=""></a></li>
+          <li><a href="#"><img src="../../../images/icon_heart.png" alt=""></a></li>
         </ul>
         <div class="mypage-dropdown">
           <a href="#" class="name">홍길동님</a>
           <!-- 토글 -->
           <div class="toggle">
             <ul>
-              <li>
-                <a href="#">이력서 등록</a>
-              </li>
-              <li>
-                <a href="#">이력서 관리</a>
-              </li>
-              <li>
-                <a href="#">지원 현황</a>
-              </li>
-              <li>
-                <a href="#">메일 수신설정</a>
-              </li>
-              <li>
-                <a href="#">비밀번호 변경</a>
-              </li>
-              <li>
-                <a href="#">개인정보 수정</a>
-              </li>
-              <li>
-                <a href="#">로그인 관리</a>
-              </li>
+              <li><a href="#">이력서 등록</a></li>
+              <li><a href="#">이력서 관리</a></li>
+              <li><a href="#">지원 현황</a></li>
+              <li><a href="#">메일 수신설정</a></li>
+              <li><a href="#">비밀번호 변경</a></li>
+              <li><a href="#">개인정보 수정</a></li>
+              <li><a href="#">로그인 관리</a></li>
             </ul>
             <button class="btn-log">로그아웃</button>
           </div>
@@ -77,48 +53,20 @@
         <a href="#"><img src="../../../images/top_logo.png" alt=""></a>
       </div>
       <ul>
-        <li>
-          <a href="#">강사서비스 홈</a>
-        </li>
-        <li>
-          <a href="#">이력서 등록</a>
-        </li>
-        <li class="active">
-          <a href="#">이력서 관리</a>
-        </li>
-        <li>
-          <a href="#">지원현황</a>
-        </li>
-        <li>
-          <a href="#">취업활동증명서</a>
-        </li>
-        <li>
-          <a href="#">추천 채용정보</a>
-        </li>
-        <li>
-          <a href="#">이력서 매칭 정보</a>
-        </li>
-        <li>
-          <a href="#">스크랩 공고</a>
-        </li>
-        <li>
-          <a href="#">관심학원</a>
-        </li>
-        <li>
-          <a href="#">내 이력서 열람학원</a>
-        </li>
-        <li>
-          <a href="#">연락처 공개요청 학원</a>
-        </li>
-        <li>
-          <a href="#">파일관리</a>
-        </li>
-        <li>
-          <a href="#">로그인 관리</a>
-        </li>
-        <li>
-          <a href="#">알림 수신 설정</a>
-        </li>
+        <li><a href="#">강사서비스 홈</a></li>
+        <li><a href="#">이력서 등록</a></li>
+        <li class="active"><a href="#">이력서 관리</a></li>
+        <li><a href="#">지원현황</a></li>
+        <li><a href="#">취업활동증명서</a></li>
+        <li><a href="#">추천 채용정보</a></li>
+        <li><a href="#">이력서 매칭 정보</a></li>
+        <li><a href="#">스크랩 공고</a></li>
+        <li><a href="#">관심학원</a></li>
+        <li><a href="#">내 이력서 열람학원</a></li>
+        <li><a href="#">연락처 공개요청 학원</a></li>
+        <li><a href="#">파일관리</a></li>
+        <li><a href="#">로그인 관리</a></li>
+        <li><a href="#">알림 수신 설정</a></li>
 
       </ul>
     </aside>
@@ -126,8 +74,10 @@
 
     <!-- container -->
     <div class="container">
+
       <!-- 컨텐츠 -->
       <div class="content">
+
         <!-- location -->
         <ul class="location">
           <li class="material-icons">
@@ -156,7 +106,18 @@
         <!-- 이력서 공개 상태 일때 -->
         <div class="my-subtxtbox">
           <div class="resume-form">
-            <p class="date"><span>수정일 :</span> 2022.05.12</p>
+            <div class="h-switch">
+              <input type="checkbox" id="switch2" name="switch2" checked="">
+              <span class="h-switchlabel">이력서 공개중</span>
+              <label for="switch2" class="h-switchBtn-box">
+                <span class="h-switchBtn"></span>
+              </label>
+            </div>
+            <p class="date">
+              <span class="point">수정일 : </span> 2022.05.12
+              <a href="#" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i class="fa fa-refresh" aria-hidden="true"></i><span>오늘 날짜로 업데이트</span></a>
+            </p>
+            
             <div style="display:none;">토글</div>
             <div class="title">
               <strong class="text-h4">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!</strong>
@@ -174,8 +135,11 @@
               <li><a href="#">지원현황<span class="number">123</span></a></li>
               <li><a href="#">스크랩 공고<span class="number">123</span></a></li>
             </ul>
+
             <!-- 스르륵 펼쳐지는 모션 -->
-            <button class="more_toggle"></button>
+            <button class="more_toggle">
+              <a href="" class="h-button-icon h-button-nobg h-button-menu "><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+            </button>
           </div>
         </div>
 
@@ -185,7 +149,7 @@
           <div class="resume-form">
             <img src="../../../images/img_resume_hold.png" style="width:112px; height:95px;">
             <ul>
-              <li class="title text-subtitle1">현재 강사님의 이력서는 <b class="resume-state">비공개 중</b> 입니다.</li>
+              <li class="title text-subtitle1">현재 강사님의 이력서는 <b class="resume-state"> 비공개 중</b> 입니다.</li>
               <li class="text-subtitle4" style="color:#000;">연락처 공개가 부담스러우시다고요?</li>
               <li class="text-subtitle4">1. 안심번호를 사용하시면 실제 휴대폰 번호가 공개되지 않고 이력서를 공개할 수 있습니다.</li>
               <li class="text-subtitle4">2. 이력서 작성 시 면접제의를 받겠다고 하면 연락처가 비공개 되고, 요청 받은 학원에 대해서만 공개 선택할 수 있습니다.</li>
@@ -200,8 +164,10 @@
           <a href="#" class="h-button-s h-button-teal">이력서 작성하기</a>
         </div>
 
+        <!-- 등록된 이력서가 없는 경우 -->
         <div class="my-resumebox">
           <div class="contxt text-subtitle4">
+            <p class="name"><span class="point">홍길동</span> 강사님,</p>
             <p>지금 이력서를 등록하시면 <span style="color:#43a986;">훈장마을</span>의 학원 채용공고에 지원하실<br>
               수 있습니다. <span style="color:#7e7e7e;">작성하실 이력서를 선택하여 등록해 주시고,<br>
                 채용공고에 지원하세요.</span></p>
@@ -226,7 +192,7 @@
         </div>
 
 
-        <!-- 등록된 이력서가 없는 경우 -->
+        <!-- 등록된 이력서가 없는 경우 결과 -->
         <p class="count-tit text-subtitle2">내 이력서 - <span class="sum">총 0건</span></p>
         <div class="resume-count">
           <div class="resume-form none">
@@ -237,12 +203,20 @@
 
         <br><br>
 
-        <!-- 등록된 이력서가 있는 경우 -->
+        <!-- 등록된 이력서가 있는 경우 결과 -->
         <p class="count-tit text-subtitle2">내 이력서 - <span class="sum">총 4건</span></p>
+
         <div class="resume-count-result">
 
           <div class="resume-form">
-            <p class="date"><span>수정일 :</span> 2022.05.12</p>
+            <div class="h-switch">
+              <input type="checkbox" id="switch2" name="switch2" checked="">
+              <span class="h-switchlabel">이력서 공개중</span>
+              <label for="switch2" class="h-switchBtn-box">
+                <span class="h-switchBtn"></span>
+              </label>
+            </div>
+            <p class="date"><span class="point">수정일 : </span> 2022.05.12</p>
             <div style="display:none;">토글</div>
             <div class="title">
               <strong class="text-h4">무엇이든 배우는 자세로 어떤 일이든 가리지 않고 최선을 다해 최고의 결과물을 만들어 내는 사람이 되도록 하겠습니다. 텍스트가 점점 더 길어집니다. 텍스트가 점점 더 길어집니다.</strong>
@@ -290,7 +264,14 @@
           </div>
 
           <div class="resume-form">
-            <p class="date"><span>수정일 :</span> 2022.05.12</p>
+            <div class="h-switch">
+              <input type="checkbox" id="switch2" name="switch2" checked="">
+              <span class="h-switchlabel">이력서 공개중</span>
+              <label for="switch2" class="h-switchBtn-box">
+                <span class="h-switchBtn"></span>
+              </label>
+            </div>
+            <p class="date"><span class="point">수정일 : </span> 2022.05.12</p>
             <div style="display:none;">토글</div>
             <div class="title">
               <strong class="text-h4">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!</strong>
@@ -303,8 +284,9 @@
               <li><span>희망근무지 : </span>서울 > 강남구, 관악구 <a href="#" class="h-button-txt h-button-nobg h-button-xs">[조건수정]</a></li>
             </ul>
             <!-- 스르륵 펼쳐지는 모션 -->
+            
             <button class="more_toggle">
-
+              <a href="" class="h-button-icon h-button-nobg h-button-menu "><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
             </button>
           </div>
 

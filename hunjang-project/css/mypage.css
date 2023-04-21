@@ -70,18 +70,25 @@
 .my-subtxtbox .resume-form .resume-qlink li a:hover .number {background-color:var(--cyan); color:#fff; transition: all ease-out 0.3s;}
 
 
-/* 이력서 비공개 상태 일때 */
+/* 이력서가 등록되지 않은 경우 */
 .my-subtxtbox {margin-top:25px;/*padding:50px;*/background-color:var(--neutral-2)!important;border:1px solid var(--border-basic-3);border-radius: 15px;}
 .my-subtxtbox.off .resume-form {display:flex;justify-content: space-between;align-items: center; flex-direction: initial;}
 .my-subtxtbox.off .resume-form ul {width:calc(100% - 145px);}
 .my-subtxtbox.off .resume-form ul .title {margin-bottom:20px; color:var(--black-1); font-weight: bold;}
+.my-subtxtbox.off .resume-form ul .title .resume-state {margin:0 5px; color:var(--blue-3);}
 .my-subtxtbox.off .resume-form ul .text-subtitle4 {color:var(--black-3);}
 .my-subtxtbox.off .resume-form ul .resume_state {color:var(--black-3);}
+
+
+.resume-form .h-switch {position: absolute; top: 40px; right: 40px;}
+/* .resume-form .h-switch .h-switchlabel {color:var(--black-5)!important;} */
 
 
 /* 이력서 관리 */
 .my-resumebox {position: relative; padding-bottom:60px; margin-bottom:60px;}
 .my-resumebox .contxt {padding: 40px;width:500px;height: 160px;border-radius: 15px;background: url("../images/img_resume_regInfo.png") no-repeat 125px 180px #fff !important;word-break: break-all;}
+.my-resumebox .contxt .name {margin-bottom:15px;font-size: var(--text-h4); color:var(--black-1);}
+.my-resumebox .contxt .name .point {color:var(--blue-3); font-weight:600;}
 .my-resumebox .contxt-btns {overflow: hidden; position:absolute; top:30px; right:0; height: 100%; border-radius: 15px; height:270px;}
 .my-resumebox .contxt-btns button {position: relative; width:215px;}
 .my-resumebox .contxt-btns button:first-child {background-color:var(--teal);}
@@ -97,10 +104,11 @@
 .count-tit .sum {color:#333;}
 
 .resume-form {position: relative;display:flex;justify-content: center;flex-direction: column;border-radius: 15px;border:1px solid var(--border-basic-3); background-color: #fff; padding: 40px;}
-.resume-form .date {font-size: var(--text-subtitle6);}
-.resume-form .date span {color:var(--black-3);}
-.resume-form .title {margin-top: 18px;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;padding-right: 60px;}
-.resume-form .title .blt-basic-txt {padding:4px 10px; border-radius:13px; background-color:#C3CAD4; color:#fff; font-size: var(--text-subtitle6); vertical-align: 3px;}
+.resume-form .date {display: flex;font-size: var(--text-subtitle6);align-items: center;}
+.resume-form .date .point {margin-right:3px; color:var(--black-3);}
+.resume-form .title {display: inline-flex;align-items:center;margin-top: 15px;}
+.resume-form .title .text-h4 {overflow: hidden;text-overflow:ellipsis;white-space:nowrap;max-width: 80%;margin-right: 10px;}
+.resume-form .title .blt-basic-txt {padding:4px 10px;border-radius:13px;background-color:#C3CAD4;color:#fff;font-size: var(--text-subtitle6);vertical-align: 3px;word-break: keep-all;}
 .resume-form + .resume-form {margin-top:20px}
 .resume-form.none {height: 295px; text-align: center;}
 .resume-form.none strong {margin-bottom: 10px;}
@@ -119,10 +127,15 @@
 .resume-mngr-btn .h-button-s {margin:0;}
 
 /* 토글 버튼 */
-.more_toggle {position: absolute;right: 40px;bottom: 35px;width:40px;height:40px;border-radius:50%;background:var(--neutral-3);}
+.more_toggle {position: absolute;right: 40px;bottom: 35px;width:40px;height:40px;border-radius:50%; background-color:var(--neutral-3);}
+.more_toggle .h-button-menu {margin:0;}
 .more_toggle.on {display: flex;background-color:var(--neutral-3);border-radius: 38px;padding: 13px 30px;align-items: baseline;width: max-content;justify-content: space-evenly;flex-direction: row;}
 .more_toggle.on li {text-align:center;}
 .more_toggle.on li a {display: inline-block;}
 .more_toggle.on li a .txt {display:block;margin-top: 4px;font-size:var(--text-subtitle6); color:var(--black-3);}
 .more_toggle.on li + li {margin-left:17px;}
 .more_toggle.on li.point a .txt {color:#333;}
+
+
+
+
