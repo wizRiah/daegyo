@@ -338,12 +338,10 @@ button
 .h-tbl-basic-1 tbody tr:hover td {background-color:var(--neutral-2);}
 .h-tbl-basic-1 tbody tr th {padding:25px 10px; border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;} 
 .h-tbl-basic-1 tbody tr td {padding:25px 10px; color:var(--black-3); border-bottom:1px solid var(--border-basic-3); word-break:break-all; box-sizing:border-box;}
-/* .h-tbl-basic-1 tbody tr td :is(span, strong):not(.i-block):not(.h-list-1 *) {display:block;} */
-.h-tbl-basic-1 tbody tr td a {display:inline-block;}
-/* .h-tbl-basic-1:not(.th-white) tbody tr td :is(span, strong):not([class *= "m"]) {margin-top:2px; margin-bottom:2px;} */
-.h-tbl-basic-1 tbody tr td strong:not([class *= "txt"]) {font-weight:var(--text-medium); color:var(--black-2);}
 .h-tbl-basic-1 .txt-l {text-align:left;}
 .h-tbl-basic-1 .vert-t {vertical-align:top;}
+.h-tbl-basic-1 tbody tr td .td-bold {font-weight:var(--text-medium); color:var(--black-2);}
+.h-tbl-basic-1 tbody tr td .td-normal {font-weight:var(--text-regular);}
     /* 테이블 hover 시 tr 색 변경 없음 */
     .hover-bg-none tbody tr:hover td {background-color:transparent;}
     /* 테이블 앞 checkbox 있는 경우 width 값 */
@@ -354,8 +352,8 @@ button
 .th-white :is(th, td) {border-color:var(--border-basic-4);}
 .th-white :is(th:not(:last-child), td:not(:last-child)) {border-right:1px solid var(--border-basic-4);}
 .th-white tbody tr :is(th, td) {padding:20px;}
-.th-white tbody tr td strong {color:var(--black-2);}
-.th-white tbody tr td span {font-size:var(--text-subtitle5);}
+.th-white tbody tr td .td-bold {color:var(--black-2); font-weight:var(--text-bold);}
+.th-white tbody tr td .td-normal {font-size:var(--text-subtitle5);}
 
 /***** 테이블 file *****/
 .h-tbl-file thead tr th,
