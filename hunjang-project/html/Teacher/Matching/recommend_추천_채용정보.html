@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>추천채용정보</title>
+  <title>추천 채용정보</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
@@ -57,8 +57,8 @@
         <li><a href="#">이력서 등록</a></li>
         <li><a href="#">이력서 관리</a></li>
         <li><a href="#">지원현황</a></li>
-        <li><a href="#">취업활동증명서</a></li>
-        <li class="active"><a href="#">추천 채용정보</a></li>
+        <li class="active"><a href="#">취업활동증명서</a></li>
+        <li><a href="#">추천 채용정보</a></li>
         <li><a href="#">이력서 매칭 정보</a></li>
         <li><a href="#">스크랩 공고</a></li>
         <li><a href="#">관심학원</a></li>
@@ -89,256 +89,142 @@
 
         <!-- 타이틀 -->
         <div class="my-txtbox">
-          <strong class="text-h1">추천 채용정보</strong>
+          <strong class="text-h1">지원현황</strong>
           <ul class="text-subtitle4">
-            <li>채용정보를 설정하여 나만을 위한 채용정보를 확인할 수 있습니다.</li>
-            <li>추천 채용정보는 최대 3개까지 등록할 수 있으며, 설정된 조건에 따라 채용정보를 확인할 수 있습니다.</li>
+            <li>최근 1년 이내의 지원내역을 확인하실 수 있습니다.</li>
+            <li>지원 후 이력서의 내용을 수정해도 지원이력서에서는 반영되지 않습니다.</li>
+            <li>채용정보에서 홈페이지 링크를 클릭하면, 홈페이지 지원으로 자동 저장되며, 채용담당자에게는 회원님의 정보가 보이지 않습니다.</li>
+            <li>채용공고 마감 후 90일, 지원 후 120일이 지나면 지원학원은 지원이력서를 열람할 수 없습니다.</li>
+            <li>모바일에서 지원한 현황도 함께 확인할 수 있습니다.</li>
           </ul>
         </div>
 
-        <!-- 추천 채용정보 설정된 조건이 없을 때 -->
-        <div class="my-subtxtbox off">
-          <div class="resume-form">
-            <img src="../../../images/img_resume_option.png" style="width:112px; height:95px;">
-            <ul>
-              <li class="title text-subtitle1">현재 등록된 추천 채용정보 조건이 없습니다.</li>
-              <li class="text-subtitle4">추천 채용정보 조건을 추가하시면 선택한 조건에 맞는 채용정보를 확인하실 수 있습니다.</li>
-              <li class="text-subtitle4">추천 채용정보를 설정하시고 원하시는 채용정보를 확인해보세요.</li>
-              <li><a href="#" class="h-button-s btn-add">추천 채용정보 조건 추가하기</a></li>
-            </ul>
+        <!-- 탭 -->
+        <div>
+          <ul class="tab-menu">
+            <li class="active">
+              <a href="">
+                <p class="txt">입사지원 완료</p>
+                <p class="number">15</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="txt">이력서 열람</p>
+                <p class="number">0</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="txt">이력서 미열람</p>
+                <p class="number">0</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="txt">입사지원 취소</p>
+                <p class="number">0</p>
+              </a>
+            </li>
+          </ul>
 
+          <div class="tab-content">
+            <div class="basic-serchbox">
+              <div class="col">
+                <span class="date-picker"><input type="text"> ~ <input type="text"></span>
+                <div class="h-radio-02">
+                  <input type="radio" id="hcheck02_1" name="hcheck02" checked>
+                  <label for="hcheck02_1">1주일</label>
+
+                  <input type="radio" id="hcheck02_2" name="hcheck02">
+                  <label for="hcheck02_2">1개월</label>
+
+                  <input type="radio" id="hcheck02_3" name="hcheck02">
+                  <label for="hcheck02_3">2개월</label>
+
+                  <input type="radio" id="hcheck02_4" name="hcheck02">
+                  <label for="hcheck02_4">3개월</label>
+
+                  <input type="radio" id="hcheck02_5" name="hcheck02">
+                  <label for="hcheck02_5">6개월</label>
+
+                  <input type="radio" id="hcheck02_6" name="hcheck02">
+                  <label for="hcheck02_6">1년</label>
+                </div>
+              </div>
+              <div class="col">
+                <select name="" id="">
+                  <option value="" disabled selected>진행여부</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                <select name="" id="">
+                  <option value="" disabled selected>열람여부</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                <select name="" id="">
+                  <option value="" disabled selected>지원상태</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                <input type="text" class="flex-1" placeholder="학원명 또는 공고제목을 입력해 주세요.">
+                <a href="#" class="h-button-s h-btn-search">검색</a>
+                <a href="#" class="h-button-s h-button-grey1 h-btn-sqre"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- <div>tab cont2</div>
+                <div>tab cont3</div> -->
           </div>
         </div>
 
+        <br><br>
 
-        <div class="basic-serchbox flex">
-          <div class="row flex flex-column sett-btn-box">
-            <a href="#" class="h-button-l h-button-radius active">설정조건 1</a>
-            <a href="#" class="h-button-l h-button-radius">설정조건 2</a>
-            <!-- <a href="#" class="h-button-l h-button-radius">설정조건 3</a> -->
-            <a href="#" class="h-button-more h-button-l">조건 추가</a>
-          </div>
-          <div class="row">
-            <ul class="depth-box">
-              <li>
-                <span class="tit">근무지역</span>
-                <ul class="depth1">서울
-                  <li>강남구</li>
-                  <li>용산구</li>
-                  <li>서초구</li>
-                </ul>
-                <ul class="depth1">인천
-                  <li>전지역</li>
-                </ul>
-              </li>
+        <!-- 등록된 이력서가 있는 경우 결과 -->
+        <p class="count-tit text-subtitle2">지원현황 - <span class="sum">총 4건</span></p>
 
-              <li>
-                <span class="tit">과목(모집분야)</span>
-                <ul class="depth1">과목1
-                  <li>영어</li>
-                </ul>
-                <ul class="depth1">과목2
-                  <li>수학</li>
-                </ul>
-              </li>
-
-              <li>
-                <span class="tit">급여조건</span>
-                <p class="depth1">협의 후 결정</p>
-              </li>
-
-              <li>
-                <span class="tit">학력사항</span>
-                <p class="depth1">대학교(2,3년)</p>
-                <p class="depth1">대학교(4학년)</p>
-              </li>
-
-              <li>
-                <span class="tit">경력사항</span>
-                <p class="depth1">경력무관</p>
-              </li>
-
-              <li>
-                <span class="tit">모집구분</span>
-                <p class="depth1">단기</p>
-                <p class="depth1">파트</p>
-                <p class="depth1">전임</p>
-              </li>
-
-              <li>
-                <span class="tit">수강대상</span>
-                <p class="depth1">유아</p>
-                <p class="depth1">초등</p>
-                <p class="depth1">중등</p>
-                <p class="depth1">고등</p>
-                <p class="depth1">기타</p>
-              </li>
-
-
-            </ul>
-          </div>
-          <div class="sett-btn-inner">
-            <a href="#" class="h-button-s">설정조건 수정</a>
-            <a href="#" class="h-button-s h-button-grey1">설정조건 삭제</a>
-          </div>
-        </div>
-
-
-        <div class="flex justify-between flex-end mb15">
-          <p class="count-tit text-subtitle2 flex-set">추천 채용정보 -<span class="sum">총 30건</span></p>
-          <div>
-            <a href="#" class="h-button-ml">선택한 공고 한번에 지원하기</a>
-            <select name="" id="">
-              <option value="" disabled="" selected="">리스트 수</option>
-              <option value="">20개씩 보기</option>
-              <option value="">40개씩 보기</option>
-              <option value="">60개씩 보기</option>
-              <option value="">80개씩 보기</option>
-              <option value="">100개씩 보기</option>
-            </select>
-          </div>
-        </div>
-
-
-        <!-- 온라인 지원내역 (훈장마을 이력서)이 있는 경우 -->
-        <table class="h-tbl-basic-1 check-use">
-          <colgroup>
-            <col style="width:5%">
-            <col style="width:12%">
-            <col style="width:32%">
-            <col style="width:15%">
-            <col style="width:12%">
-            <col style="width:12%">
-            <col style="width:12%">
-          </colgroup>
+        <table class="h-tbl-basic-1">
           <thead>
             <tr>
-              <th>
-                <div class="h-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="check_all">
-                  <label for="check_all"></label>
-                </div>
-              </th>
-              <th>근무지</th>
-              <th>학원명 / 공고제목 / 과목</th>
-              <th>급여</th>
-              <th>지원자격</th>
-              <th>마감일 / 등록일</th>
-              <th>접수방법</th>
+              <th>지원일</th>
+              <th>지원내역</th>
+              <th>공고 진행상태</th>
+              <th>이력서 열람</th>
+              <th>취소 / 삭제</th>
             </tr>
           </thead>
           <tbody class="text-subtitle4">
             <tr>
               <td>
-                <div class="h-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="sel_01">
-                  <label for="sel_01"></label>
-                </div>
-              </td>
-              <td>
-                <span class="h-txt-2 text-subtitle5">서울 강남구, 경기도 오산시 외1</span>
+                <span class="text-subtitle5 h-txt-pit">지원완료</span>
+                <span class="h-txt-3 text-subtitle5">2022.11.18</span>
               </td>
               <td class="txt-l">
-                <div class="h-job-info">
-                  <div class="academy-wrap">
-                    <p class="academy">
-                      <span class="txt-ellipsis text-subtitle2">서울아카데미 수학학원</span>
+                <p class="h-box-wd500 flex flex-center">
+                  <span class="txt-nowrap-1 i-block text-subtitle2">서울아카데미 수학학원</span>
+                </p>
 
-                      <!-- 버튼 좋아요 -->
-                      <input type="checkbox" class="btn-tgl btn-like" id="btn-like1">
-                      <label for="btn-like1" onclick=""></label>
-                    </p>
-                  </div>
-
-                  <div class="academy-wrap">
-                    <p class="academy mt3-mb6">
-                      <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
-
-                      <!-- 버튼 스크랩 -->
-                      <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">
-                      <label for="btn-scrap1" onclick="">스크랩</label>
-                    </p>
-                  </div>
-
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></span>
+                <p class="h-box-wd500 flex flex-start mt3-mb6">
+                  <a href="#" class="txt-nowrap-1 i-block h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
+                </p>
+                <div class="flex items-center applicant-col">
+                  <a href="#" class="h-button-xxs h-button-white h-button-nobg"><span>지원이력서</span><img src="../../../images/btn_grey_arrow.svg"></a>
+                  <p class="text-subtitle5"><span class="txt">지원자 수 :</span> 10명</p>
                 </div>
               </td>
+              <td>채용마감</td>
+              <td>미열람</td>
               <td>
-                <p>월급</p>
-                <p class="h-txt-2">200만원~300만원</p>
-              </td>
-              <td>
-                <p class="h-txt-2">경력무관</p>
-                <span>대학교(4년)</span>
-              </td>
-              <td>
-                <p class="h-txt-2">채용시 마감</p>
-                <span>11.12 등록</span>
-              </td>
-              <td>
-                <a href="#" class="h-button-m h-button-teal">즉시지원</a>
+                <a href="#" class="h-button-m sprt-btn-cancle">지원취소</a>
               </td>
             </tr>
 
           </tbody>
         </table>
 
-
-        <div class="h-pagination flex-set" aria-disabled="false" role="navigation">
-          <div class="h-pagination-content flex no-wrap items-center">
-
-            <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
-              <span class="h-btn-content items-center flex">
-                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
-              </span>
-            </button>
-            <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
-              <span class="h-btn-content items-center flex">
-                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
-              </span>
-            </button>
-
-            <div class="h-pagination-middle flex justify-center">
-              <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
-                <span class="h-btn-content items-center flex">
-                  <span class="block">1</span>
-                </span>
-              </button>
-              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
-                <span class="h-btn-content items-center flex">
-                  <span class="block">2</span>
-                </span>
-              </button>
-              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
-                <span class="h-btn-content items-center flex">
-                  <span class="block">3</span>
-                </span>
-              </button>
-              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
-                <span class="h-btn-content items-center flex">
-                  <span class="block">4</span>
-                </span>
-              </button>
-              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
-                <span class="h-btn-content items-center flex">
-                  <span class="block">5</span>
-                </span>
-              </button>
-            </div>
-
-            <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
-              <span class="h-btn-content items-center flex">
-                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
-              </span>
-            </button>
-            <button class="h-btn non-selectable h-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
-              <span class="h-btn-content items-center flex">
-                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
-              </span>
-            </button>
-
-          </div>
-        </div>
 
 
       </div>

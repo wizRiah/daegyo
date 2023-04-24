@@ -76,11 +76,10 @@
 .my-subtxtbox {margin-top:25px;/*padding:50px;*/background-color:var(--neutral-2)!important;border:1px solid var(--border-basic-3);border-radius: 15px;}
 .my-subtxtbox.off .resume-form {display:flex;justify-content: space-between;align-items: center; flex-direction: initial;}
 .my-subtxtbox.off .resume-form ul {width:calc(100% - 145px);}
-.my-subtxtbox.off .resume-form ul .title {margin-bottom: 10px;color:var(--black-1);font-weight: bold;}
+.my-subtxtbox.off .resume-form ul .title {margin-bottom: 15px;color:var(--black-1);font-weight: bold;}
 .my-subtxtbox.off .resume-form ul .title .resume-state {margin:0 5px; color:var(--blue-3);}
 .my-subtxtbox.off .resume-form ul .text-subtitle4 {color:var(--black-3);}
 .my-subtxtbox.off .resume-form ul .resume_state {color:var(--black-3);}
-.my-subtxtbox.off .resume-form ul .btn-add {margin-top:15px; margin-left:0;}
 
 
 .resume-form .h-switch {position: absolute; top: 40px; right: 40px;}
@@ -103,9 +102,8 @@
 .my-resumebox .contxt-btns button strong {display: block; margin:32px 0 10px; font-weight:bold; color:#fff;}
 
 /* 검색결과 수 */
-.count-tit {color:var(--black-3); font-weight: normal;}
-.count-tit .sum {margin-left:3px; color:#333;}
-/* .count-tit + a, .count-tit + button, .count-tit + div {margin-bottom:0!important;} */
+.count-tit {margin-bottom:15px; color:var(--black-3); font-weight: normal;}
+.count-tit .sum {color:#333;}
 
 .resume-form {position: relative;display:flex;justify-content: center;flex-direction: column;border-radius: 15px;border:1px solid var(--border-basic-3); background-color: #fff; padding: 40px;}
 .resume-form .date {display: flex;font-size: var(--text-subtitle6);align-items: center;}
@@ -165,7 +163,7 @@
 .tab-menu li:hover a {color:var(--cyan); transition: all ease-out 0.3s;}
 
 
-.basic-serchbox {position:relative; margin-top: 30px; margin-bottom:70px; padding:40px; border-radius:15px; background:var(--neutral-2);}
+.basic-serchbox {margin-top: 30px; margin-bottom:70px; padding:40px; border-radius:15px; background:var(--neutral-2);}
 .basic-serchbox input {height:46px; padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px!important;font-size: var(--text-subtitle4); box-sizing: border-box;}
 .basic-serchbox .h-radio-02 {display:inline-block; margin-left:10px; background-color: #fff;}
 .basic-serchbox .h-btn-search {margin-right: 0;min-width:50px;text-align:center;}
@@ -179,32 +177,7 @@
 .sprt-btn-del {width:60px; background-color:var(--grey-1); font-weight: 300;}
 .sprt-btn-cancle {width:60px; background-color:var(--grey-3); font-weight: 300;}
 
-/* 추천채용정보 */
-.depth-box {font-size:var(--text-subtitle4);}
-.depth-box > li > .tit {width:107px; color:var(--black-3);}
-.depth-box > li {position:relative; display: flex; padding-left:6px;}
-.depth-box > li:after {content:''; position:absolute; width:2px; height:2px; top:8px; left:0; background-color:var(--black-3);}
-.depth-box > li + li {margin-top:15px;}
-.depth-box ul.depth1 {display: flex;}
-.depth-box ul.depth1 > li:first-child:before {content:'>'; padding:0 5px; color:var( --black-6);}
-.depth-box ul.depth1 > li + li:before {content:','; padding:0 2px; color:var(--black-2);}
-.depth-box .depth1 + .depth1:before {content:'/'; padding:0 5px; color:var( --black-6);}
 
-
-.basic-serchbox .sett-btn-box {position:relative; margin-right:66px;}
-.basic-serchbox .sett-btn-box:after {content:''; position:absolute; top:0; right:-30px; width:1px; height:198px; background:var(--border-basic-4);}
-.basic-serchbox .sett-btn-box > a {width: 90px;padding: 0 25px;background: url('../images/sett_arrow_grey.png') no-repeat #fff 80% 50%;color:var(--black-2);font-weight: 500; font-size: var(--text-subtitle4);}
-.basic-serchbox .sett-btn-box > a + a {margin-top:10px;}
-.basic-serchbox .sett-btn-box > a.active {background: url('../images/sett_arrow_white.png') no-repeat var(--cyan) 80% 50%!important;color:#fff;}
-
-.basic-serchbox .sett-btn-box .h-button-more {background-image:none;display: flex;justify-content: flex-end;align-items: center;flex-direction: row-reverse;position: absolute;bottom: 0;height: 45px;}
-.basic-serchbox .sett-btn-box .h-button-more:after {position: relative;right: 6px;top: 2px;}
-
-.basic-serchbox .sett-btn-inner {position: absolute;bottom: 40px;right: 35px;display: flex;flex-direction: column;}
-.basic-serchbox .sett-btn-inner a + a {margin-top: 5px;}
-
-/* 설정조건 3개 초과되면 조건추가 버튼 삭제 */
-.basic-serchbox .sett-btn-box > a:nth-child(n+4) {display: none;}
 
 /* 임시 */
 .date-picker input {width:200px;}
@@ -214,7 +187,6 @@ select {-moz-appearance: none; -webkit-appearance: none; appearance: none; min-w
 select option:disabled {display: none;}
 .wd100 {width:100%;}
 .flex-1 {flex:1;}
-.flex-column {flex-direction: column;}
 
 .mr10 {margin-right: 10px;}
 .ml10 {margin-left: 10px;}
@@ -224,7 +196,4 @@ select option:disabled {display: none;}
 
 .justify-between {justify-content:space-between;}
 
-/* 블럭UI */
 .lottie-bg {background-color:rgba(33, 33, 33, 0.46); position: fixed; top:0; left:0; width:100%; height:100%; display: flex; justify-content: center; align-items:center; z-index:100;}
-
-
