@@ -182,7 +182,7 @@ button
 .h-button-refresh {font-size:var(--text-subtitle6);}
 .h-button-refresh i {transition:transform 0.5s;}
 .h-button-refresh:hover i {transform:rotate(180deg);}
-.h-button-radius {border-radius:90px;}
+.h-button-radius {border-radius:90px; padding-left:30px; padding-right:30px;}
 
 .h-button-icon {color:#8c9197;padding: 0;width: 40px;height: 40px;text-align: center;line-height: 40px;font-size: 20px;background: #fff;border-radius: 100%;}
 .h-button-del {}
@@ -343,10 +343,11 @@ button
 
 /***** 테이블 유형 1 (기본) *****/
 .h-tbl-basic-1 {border-top:1px solid var(--border-basic-1); font-size:var(--text-subtitle4); text-align:center; line-height:22px;}
+.h-tbl-basic-1 :is(th, td, p, strong, span) {word-wrap:break-word; word-break:keep-all;}
 .h-tbl-basic-1 thead tr th {background-color:var(--neutral-2); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-5); padding:22px 5px; border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
 .h-tbl-basic-1 tbody tr:hover td {background-color:var(--neutral-2);}
 .h-tbl-basic-1 tbody tr th {padding:25px 10px; border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;} 
-.h-tbl-basic-1 tbody tr td {padding:25px 10px; color:var(--black-3); border-bottom:1px solid var(--border-basic-3); word-break:break-all; box-sizing:border-box;}
+.h-tbl-basic-1 tbody tr td {padding:25px 10px; color:var(--black-3); border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;}
 .h-tbl-basic-1 .txt-l {text-align:left;}
 .h-tbl-basic-1 .vert-t {vertical-align:top;}
 .h-tbl-basic-1 tbody tr td .td-bold {font-weight:var(--text-medium); color:var(--black-2);}
