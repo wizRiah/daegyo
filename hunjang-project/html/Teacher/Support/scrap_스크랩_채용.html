@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>관심학원_채용정보</title>
+  <title>스크랩_채용</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
@@ -101,10 +101,10 @@
         <li>
           <a href="#">이력서 매칭 정보</a>
         </li>
-        <li>
+        <li class="active">
           <a href="#">스크랩 공고</a>
         </li>
-        <li class="active">
+        <li>
           <a href="#">관심학원</a>
         </li>
         <li>
@@ -139,60 +139,60 @@
             <img src="../../../images/icon_house_black.png" style="width:14px; height:15px;">
           </li>
           <li class="material-icons">강사 서비스</li>
-          <li class="material-icons active">관심학원</li>
+          <li class="material-icons active">스크랩채용</li>
         </ul>
 
 
         <!-- title -->
         <div class="my-txtbox">
-          <strong class="text-h1">관심학원</strong>
+          <strong class="text-h1">스크랩채용</strong>
           <ul class="text-subtitle4">
-            <li>관심학원은 최대 100개까지 등록하실 수 있습니다. </li>
-            <li>관심학원으로 등록되면 이후 학원이 채용정보 등록 시 실시간 알림을 받을 수 있습니다.</li>
-            <li>관심학원은 채용공고 학원명 우측에 하트 ♡를 클릭하시면 쉽게 저장이 가능합니다.</li>
+            <li>최대 6개월간, 개수 제한 없이 스크랩 채용에 저장됩니다.</li>
+            <li>스크랩 채용의 마감일이 도래할 경우 알림 메시지와 e-메일을 보내 드립니다.</li>
+            <li>스크랩 채용 목록에서 공고를 일괄 선택 후 한번에 지원할 수 있습니다.</li>
           </ul>
         </div>
 
 
         <!-- 중간 버튼 영역 -->
-        <div class="flex flex-between h-subtxtbox-01">
+        <div class="h-subtxtbox-01 h-search-wrap">
           
-            <div class="flex h-tab-wrap">
-                <a href="#" class="h-button-l h-button-white h-border-none h-button-radius">
-                    <p class="i-block text-subtitle4 h-txt-medium">
-                      관심학원 목록 <span class="text-subtitle4 h-txt-bold h-txt-pit font-fam-suit">59</span>
-                    </p>
-                </a>
+          <div class="h-date-box">
+            <div class="h-radio-02">
+              <input type="radio" id="hcheck02_1" name="hcheck02">
+              <label for="hcheck02_1">일주일</label>
 
-                <a href="#" class="h-button-l h-button-cyan h-border-none h-button-radius">
-                  <p class="i-block text-subtitle4 h-txt-medium">
-                    관심학원 채용정보 <span class="text-subtitle4 h-txt-bold font-fam-suit">135</span>
-                  </p>
-                </a>
-            </div>
+              <input type="radio" id="hcheck02_2" name="hcheck02">
+              <label for="hcheck02_2">1개월</label>
 
-            <div class="flex flex-center h-app-wrap">
-              <span class="app-txt i-block text-subtitle5 h-txt-3 h-txt-r">관심학원 학원정보를 실시간으로<br>알림 받고 싶다면?</span>
-              <a href="#" class="h-button-ml">
-                <span class="imgbox"><img src="../../../images/icon_IOS.png"></span>
-                <span class="txtbox">IOS App 설치</span>
-              </a>
-              <a href="#" class="h-button-ml">
-                <span class="imgbox"><img src="../../../images/icon_AOS.png"></span>
-                <span class="txtbox">AOS App 설치</span>
-              </a>
+              <input type="radio" id="hcheck02_3" name="hcheck02">
+              <label for="hcheck02_3">2개월</label>
+
+              <input type="radio" id="hcheck02_4" name="hcheck02">
+              <label for="hcheck02_4">3개월</label>
             </div>
+          </div>
+
+          <div class="h-search-box">
+            <a href="#" class="h-button-s">검색</a>
+            <a href="#" class="h-button-s h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined vert-m">cached</i></a>
+          </div>
 
         </div>
 
 
-        <!-- Table 상단 영역 -->
+        <!-- Table 상단 버튼 영역 -->
         <div class="h-tit-box-1 flex-end flex-between">
+          <div class="flex inline">
             <a href="#" class="h-button-ml h-button-grey">선택한 공고 한번에 지원하기</a>
+            <a href="#" class="h-button-ml h-button-grey">스크랩 취소</a>
+            <a href="#" class="h-button-ml h-button-grey">지원한 공고 제외</a>
+          </div>
 
-            <div class="flex inline">
-               <!-- 셀렉트박스 : 등록일 순 / 20개씩 보기 들어갈 영역 -->
-            </div>
+          <div class="flex inline">
+            <!-- 셀렉트박스 : 등록일 순 / 20개씩 보기 들어갈 영역 -->
+            <a href="#" class="h-button-s h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined vert-m">cached</i></a>
+          </div>
         </div>
 
 
@@ -249,14 +249,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">
-                          <label for="btn-scrap1" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -300,14 +297,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">[송파/강동] 중등부, 고등부 과학 선생님 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
-                          <label for="btn-scrap2" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">과학계열</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">과학계열</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -351,14 +345,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">초/중/고 수학/과학, 수경/과경,유투엠+올림피아드학원 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap3">
-                          <label for="btn-scrap3" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -402,14 +393,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">무결수학학원 채용공고 (중등부 : 월급제 350+a, 비율제)</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap4">
-                          <label for="btn-scrap4" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -453,14 +441,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">[서울/경기] 전체 파인만 수학/과학/입시 강사 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap5">
-                          <label for="btn-scrap5" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열, 자기주도/학습코칭, 국어, 상담직</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열, 자기주도/학습코칭, 국어, 상담직</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -504,14 +489,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap6">
-                          <label for="btn-scrap6" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -555,14 +537,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">[송파/강동] 중등부, 고등부 과학 선생님 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap7">
-                          <label for="btn-scrap7" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">과학계열</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -606,14 +585,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">초/중/고 수학/과학, 수경/과경,유투엠+올림피아드학원 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap8">
-                          <label for="btn-scrap8" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -657,14 +633,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">무결수학학원 채용공고 (중등부 : 월급제 350+a, 비율제)</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap9">
-                          <label for="btn-scrap9" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>
@@ -708,14 +681,11 @@
                   <div class="academy-wrap">
                       <p class="academy mt3-mb6">
                           <a href="#" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">[서울/경기] 전체 파인만 수학/과학/입시 강사 채용</a>
-
-                          <!-- 버튼 스크랩 -->
-                          <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap10">
-                          <label for="btn-scrap10" onclick="">스크랩</label>
                       </p>
                   </div>
 
-                  <span class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열, 자기주도/학습코칭, 국어, 상담직</em></span>
+                  <p class="text-subtitle5">과목 : <em class="h-txt-2">수학, 과학계열, 자기주도/학습코칭, 국어, 상담직</em></p>
+                  <p class="text-subtitle5">스크랩 : <em class="h-txt-2">2022.05.06 21:00</em></p>
                 </div>
               </td>
               <td>

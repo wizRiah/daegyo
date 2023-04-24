@@ -17,6 +17,9 @@
 .my-txtbox .text-h1 {display:block; margin-bottom:35px;}
 .my-txtbox .text-subtitle4 li {position: relative; padding-left:10px; color:#7E7E7E;}
 .my-txtbox .text-subtitle4 li:after {content:''; position: absolute; top:10px; left:0; width:2px; height:2px; background:#7e7e7e; border-radius: 50%;}
+.my-txtbox .text-subtitle4 li.em:after{background-color:var( --orange);}
+.my-txtbox .text-subtitle4 li.em{color:var( --orange);}
+
 
 
 /* 이력서 등록 */
@@ -179,6 +182,47 @@
 
 
 
+
+/* ==================================== 이력서 매칭정보 =============================== */
+.btnboxR {float:right; text-align:right;}
+.my-subtxtbox .resume-form.resume-match {padding: 20px 30px 40px 40px;}
+.my-subtxtbox .resume-form.resume-match .btnboxR:first-child {position: absolute; right: 20px; top: 20px;}
+.my-subtxtbox .resume-form.resume-match .btnboxR:first-child .h-button-radius {padding:0 15px;}
+.resume-list.wd70 {width:calc(100% - 140px)}
+.resume-list.wd70 + .btnboxR {width: 140px;position: absolute;right: 20px;bottom: 20px;}
+.resume-list.wd70 + .btnboxR .h-button-radius {padding:0 22px;}
+
+.my-resume-matching {width:100%; clear:both;}
+.my-resume-matching .topBox {margin-bottom: 15px;width: 100%;display: flex;justify-content: space-between;align-items: baseline;}
+.my-resume-matching .topBox .count-tit {margin-bottom: 0;}
+.my-resume-matching .topBox .btnboxR {}
+.my-resume-matching .topBox .btnboxR>*:last-child {margin-right:0;}
+
+.my-resume-matching .h-tbl-basic-1 tbody tr td strong {display: block;}
+.my-resume-matching .h-tbl-basic-1 tbody tr td span {display: block;}
+
+
+
+/* ==================================== 이메일 수신 설정 =============================== */
+.emailReceiveForm {flex-direction:row;}
+.emailReceiveForm .email-leftBox {width: 55%;}
+.emailReceiveForm .email-leftBox .title {width: 100%;}
+.emailReceiveForm .email-leftBox .resume-list {margin-bottom: 25px; display: block; float: left;}
+.emailReceiveForm .email-leftBox .resume-list li {width:100%;}
+.emailReceiveForm .email-leftBox .email-switchBox {width: 100%; clear: both; float: left;}
+.email-switchBox li {display: inline-block; position: relative; margin-right: 20px;}
+.email-switchBox li:last-child {margin-right:0;}
+
+.emailReceiveForm .email-leftBox .email-switchBox li .h-switch {position: relative; top: auto; right: auto;}
+.emailReceiveForm .email-rightBox {width:45%; padding-top: 15px;}
+.emailReceiveForm .email-rightBox .rcmmd-email {font-size:var(--text-subtitle4);color:var(--black-6);width: 100%;text-align: center;height: 120px;line-height: 110px;margin-top: 15px;}
+.emailReceiveForm .email-rightBox .rcmmd-email img {max-width:100%; max-height:100%;}
+
+
+
+
+
+
 /* 임시 */
 .date-picker input {width:200px;}
 
@@ -193,7 +237,12 @@ select option:disabled {display: none;}
 .mr5 {margin-right:5px;}
 .ml5 {margin-left:5px;}
 .mb15 {margin-bottom:15px;}
+.mb20 {margin-bottom:20px;}
 
 .justify-between {justify-content:space-between;}
 
 .lottie-bg {background-color:rgba(33, 33, 33, 0.46); position: fixed; top:0; left:0; width:100%; height:100%; display: flex; justify-content: center; align-items:center; z-index:100;}
+
+
+/* 표 내에 건수 */
+.h-button-underline.h-ud-em{padding: 0;line-height: 21px;height: 21px;vertical-align: top;font-weight: var(--text-bold);font-size: var(--text-h4);margin: 0;}
