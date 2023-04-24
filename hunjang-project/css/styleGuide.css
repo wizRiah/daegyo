@@ -325,12 +325,13 @@ button
 
 
 /***** 테이블 상단 텍스트 *****/
-.h-tit-box-1 {display:flex; margin-top:20px; margin-bottom:20px;}
+.h-tit-box-1 {display:flex; margin-top:20px; margin-bottom:20px; box-sizing:border-box;}
 .h-tit-box-1 .h-tit-26 + :is(p, span) {margin-left:15px;}
 .h-tit-box-1 .h-tit-26 + .h-button-more {padding:0; margin:0 0 0 20px; transition:none; overflow:initial;}
     .h-tit-box-1 .h-tit-26 + .h-button-more:focus:before {display:none;}
 .h-tit-box-1 .vert-m {vertical-align:middle;}
 .h-tit-box-1 .material-symbols-outlined {font-size:var(--text-h3); font-weight:200;}
+.h-tit-box-1 [class^="h-button"]:first-child {margin-left:0;}
 
 /***** 테이블 유형 1 (기본) *****/
 .h-tbl-basic-1 {border-top:1px solid var(--border-basic-1); font-size:var(--text-subtitle4); text-align:center; line-height:22px;}
