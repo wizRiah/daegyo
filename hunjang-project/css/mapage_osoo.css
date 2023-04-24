@@ -1,12 +1,15 @@
 @charset "utf-8";
 
 /*  공통 box */
-.h-subtxtbox-01 {padding:40px; margin-bottom:50px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+.h-over-hidden {overflow:hidden;}
+.h-subtxtbox-01 {padding:40px; margin-bottom:75px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+.h-subtxtbox-01 .h-radio-02 {background:#fff;}
 
 /* 관심학원 - 탭 버튼 */
 .h-tab-wrap [class^="h-button"] {position:relative; margin:0;}
 .h-tab-wrap [class^="h-button"] + [class^="h-button"] {margin-left:5px;}
 .h-tab-wrap [class^="h-button"]:hover {background-color:var(--cyan);}
+.h-tab-wrap .h-button-cyan :is(*),
 .h-tab-wrap [class^="h-button"]:hover :is(*) {color:#fff;}
 
 /* 관심학원 - App 설치 */
@@ -16,3 +19,11 @@
 .h-app-wrap [class^="h-button"] .imgbox {width:auto; height:auto; max-width:22px; max-height:22px; vertical-align:middle; overflow:hidden; margin-right:10px !important;} 
 .h-app-wrap [class^="h-button"] .imgbox img {max-width:100%; max-height:100%;}
 .h-app-wrap [class^="h-button"] .txtbox {margin-left:0 !important; vertical-align:middle;}
+
+/* 스크랩채용 - 검색 */
+.h-search-wrap :is(.h-date-box, .h-search-box) {display:flex; width:100%;}
+.h-search-wrap .h-date-box + .h-search-box {margin-top:12px;}
+
+/* 내 이력서 열람학원 */
+.my-txtbox .text-h1 + .h-subtxtbox-01 {margin-bottom:30px;}
+.my-txtbox .text-h1 + .h-subtxtbox-01 + ul {margin-bottom:20px;}
