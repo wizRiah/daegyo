@@ -266,6 +266,22 @@ button
     .h-checkbox.checkbox02 input[type="checkbox"]:checked + label:after {background:var(--blue-3);opacity: 0.15;}
     .h-checkbox.checkbox02.notxt input[type="checkbox"] + label:after {top: 10px; left: 11px;}
 
+/* checkbox03 */
+    /* label에 체크하기 전 상태 CSS */
+    .h-checkbox.checkbox03 input[type="checkbox"] + label {text-align: center;transition: color 0.5s;-webkit-transition: color 0.5s;color: var(--grey-2);font-size: 14px;position: relative;} 
+    .h-checkbox.checkbox03 input[type="checkbox"] + label:before {content:"";width:18px;height:18px;border-radius:100%;display:inline-block;margin-right: 5px;border: 2px solid #C3CAD4;vertical-align: middle;box-sizing: border-box;margin-top: -3px;}
+    /* label에 체크 된 상태 CSS */ 
+    .h-checkbox.checkbox03 input[type="checkbox"]:checked + label {color:var(--blue-3); } 
+    .h-checkbox.checkbox03 input[type="checkbox"]:checked + label:before {background:var(--blue-3);border-color: var(--blue-3);}
+    .h-checkbox.checkbox03 input[type="checkbox"]:checked + label:after {content:"";position: absolute;left: 4px;top: 3.5px;display: inline-block;width: 8px;height: 4px;border: 2px solid #fff;border-width: 0 0 2px 2px;transform: rotate(-45deg);z-index: 1;opacity: 1;border-radius: 0;background: transparent;}
+    /*포커싱되었을때*/
+    .h-checkbox.checkbox03.notxt input[type="checkbox"]:focus + label {color:var(--blue-2);}
+    /*hover*/
+    .h-checkbox.checkbox03 input[type="checkbox"] + label:after {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 6px;left: 7px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
+    .h-checkbox.checkbox03 input[type="checkbox"] + label:hover:after {transform: scale(8);transform-origin: center;opacity: 0.2;}
+    .h-checkbox.checkbox03 input[type="checkbox"]:checked + label:hover:after {transform: rotate(-45deg); opacity: 1; z-index: 1; border-radius: 0; background: transparent; transition:none;}
+
+
 
 
 
