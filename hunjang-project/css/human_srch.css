@@ -22,11 +22,16 @@
 
 
 /*검색바 탭 클릭하면 보여지도록 세팅*/
-.human_mainSrchBox .human_mainSrchBox_dpt2Wrap .srchBoxWrap {display:none;border:2px solid #62666B;box-sizing:border-box;margin-top:-2px;box-shadow: 0px 5px 10px #0000001A;}
+.human_mainSrchBox .human_mainSrchBox_dpt2Wrap .srchBoxWrap {display: block;height: 0;overflow: hidden; box-sizing:border-box;margin-top:-2px;box-shadow: 0px 5px 10px #0000001A;transition: height 0.5s;}
 .human_mainSrchBox #srch_region:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_region, 
 .human_mainSrchBox #srch_subject:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_subject, 
-.human_mainSrchBox #srch_detail:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_detail {display:block;}
-.human_mainSrchBox .human_mainSrchBox_dpt2Wrap {width:100%;z-index: 1;}
+.human_mainSrchBox #srch_detail:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_detail {border-top: 2px solid #62666B;}
+.human_mainSrchBox #srch_region:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_region   {border-top:none;height: 195px;}
+.human_mainSrchBox #srch_subject:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_subject {height: 199px;}
+.human_mainSrchBox #srch_detail:checked ~ .human_mainSrchBox_dpt2Wrap .srchBox_detail   {height: 494px; margin-top:0;}
+.human_mainSrchBox .human_mainSrchBox_dpt2Wrap {width: 100%; height: 0px; z-index: 1; border: 2px solid #62666B; margin-top: -2px; box-sizing: border-box; overflow: hidden; visibility: collapse; margin-bottom: -2px;}
+.human_mainSrchBox>input[type="checkbox"]:checked ~ .human_mainSrchBox_dpt2Wrap {height: auto; visibility: visible; margin-bottom: 0;}
+
 
 
 /*검색 공통*/
@@ -56,8 +61,8 @@
 .human_mainSrchBox_dpt2Wrap .srchBox_subject .subjectList .subject_dpt2 li {width: calc(100% / 4);}
 
 /*03_상세조건*/
-.human_mainSrchBox_dpt2Wrap .srchBox_detail {width: 100%;padding: 25px 43px;}
-.human_mainSrchBox_dpt2Wrap .srchBox_detail>ul {}
+.human_mainSrchBox_dpt2Wrap .srchBox_detail {}
+.human_mainSrchBox_dpt2Wrap .srchBox_detail>ul {padding: 25px 43px;}
 .human_mainSrchBox_dpt2Wrap .srchBox_detail>ul>li {width: 100%;background: transparent !important;align-items: center;padding: 0 0 5px;}
 .human_mainSrchBox_dpt2Wrap .srchBox_detail>ul>li>strong {width: 135px;color: #7E7E7E;font-size: 14px;font-weight: 500;line-height: 44px;}
 .human_mainSrchBox_dpt2Wrap .srchBox_detail>ul>li>strong:before {content:"\b7";margin-right: 5px;}
@@ -76,7 +81,7 @@
 
 
 /* 00_검색조건설정박스  */
-.srchBox_default {width: 100%;display: flex;background: #EBEFF5;padding: 25px 25px 25px 30px;border: 1px solid #CCD1D7;border-top: none;box-sizing: border-box;z-index: 1;}
+.srchBox_default {width:100%; display:flex; background: #EBEFF5;padding: 25px 25px 25px 30px;border: 1px solid #CCD1D7;border-top: none;box-sizing: border-box;z-index: 1;}
 .srchBox_default .mysrchBox {width: calc(100% - 180px);padding-right: 20px;box-sizing: border-box;}
 .srchBox_default .mysrchBox .first_message {font-size: 14px; color: #9a9a9a;}
 
@@ -87,7 +92,7 @@
 
     /* 내가 선택한 키워드들 */
     .my_selectSrch {}
-    .my_selectSrch>li {width:100%;background: transparent !important;padding: 0 !important;}
+    .my_selectSrch>li {width:100%;background: transparent !important; padding:0 !important; display:flex;}
     .my_selectSrch>li strong:before {content:"\b7";color:#9A9A9A;display: inline-block;vertical-align: middle;margin: 0 3px 0 0;line-height: 150%;}
     .my_selectSrch>li>strong {width: 105px;color:#9A9A9A;font-size:14px;padding: 5px 0 4px;font-weight: 500;}
     .my_selectSrch>li>ul {width: calc(100% - 105px);}
