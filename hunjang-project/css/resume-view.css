@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* ==================================== Layout ==================================== */
+.h-resume-wrap {height:100vh;}
+.h-resume-wrap header {float:left; width:100%;}
+.h-resume-wrap .container {left:0; width:calc(100% - 250px);}
+.h-resume-wrap .col {display:flex; flex-flow:column nowrap; text-align:center;}
+
+/* right menu */
+.h-resume-wrap .r-side {display:flex; flex-flow:column nowrap; float:right; width:250px; height:calc(100% - 85px); padding:20px; box-sizing:border-box;}
+.h-resume-wrap .r-side [class^="h-button"] {width:100%; margin-left:0; margin-right:0;}
+.h-resume-wrap .r-side [class^="h-button"]:not(:first-child) {margin-top:10px;}
+
+.h-resume-wrap .r-side .modify-date {width:100%; height:54px; font-size:var(--text-subtitle4); color:var(--black-3); border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
+.h-resume-wrap .r-side .modify-date strong {font-weight:var( --text-medium); color:var(--black-2);}
+
+.h-resume-wrap .r-side .h-resume-item {position:relative;}
+.h-resume-wrap .r-side .h-resume-item:before {position:absolute; top:10px; left:4px; content:''; width:1px; height:calc(100% - 20px); background-color:var(--border-basic-4);}
+.h-resume-wrap .r-side .h-resume-item li {position:relative; display:flex; flex-flow:row wrap; align-items:center;}
+.h-resume-wrap .r-side .h-resume-item li::before {content:''; width:9px; height:9px; margin-top:-1px; margin-right:15px; background:#fff; border:1px solid var(--border-basic-4); border-radius:50%; box-sizing:border-box; transition:all ease-out 0.3s;}
+.h-resume-wrap .r-side .h-resume-item li:not(:first-child) {margin-top:11px;}
+.h-resume-wrap .r-side .h-resume-item li a {color:var(--black-5); transition:all ease-out 0.3s;}
+.h-resume-wrap .r-side .h-resume-item li:hover a {color:var(--black-3);}
+.h-resume-wrap .r-side .h-resume-item li:hover::before {background-color:var(--black-4); border-color:var(--black-4);}
+.h-resume-wrap .r-side .h-resume-item li.active::before {background-color:var(--blue-3); border-color:var(--blue-3);}
+.h-resume-wrap .r-side .h-resume-item li.active a {color:var(--blue-3); font-weight:var(--text-medium);}
+
+
+/* contents */
+.h-resume-wrap .h-resume-tit {padding:30px 10px; border-top:1px solid var(--grey-3); box-sizing:border-box;}
+
+/* ==================================== 인적사항 ==================================== */
+/* box */
+.h-resume-wrap .h-subbox-wide {position:relative;}
+.h-resume-wrap .h-subbox-wide,
+.h-resume-wrap .h-subbox-list li {padding:30px; background-color:#fff; border:1px solid var(--border-basic-4); border-radius:10px; box-sizing:border-box;}
+.h-resume-wrap .h-subbox-list {display:flex; flex-flow:row wrap;}
+.h-resume-wrap .h-subbox-list.item-4 li {flex:1 1 20%;}
+.h-resume-wrap .h-subbox-list.item-4 li:not(:nth-child(4n+1)) {margin-left:20px;}
+.h-resume-wrap .h-subbox-list.item-4 li:nth-child(n+5) {margin-top:20px;}
+
+/* 이력서 사진 */
+.h-resume-wrap .h-photo {position:relative; width:110px; height:133px; border-radius:4px; overflow:hidden;}
+.h-resume-wrap .h-photo::before {position:absolute; top:0; left:0; content:''; width:100%; height:100%; background-color:var(--neutral-3); border:1px solid var(--border-basic-3); border-radius:4px; box-sizing:border-box; font-family:'Material Icons Outlined'; /* content:'familiar_face_and_zone'; */}
+.h-resume-wrap .h-photo::after {position:absolute; content:'이력서 사진'; font-size:var(--text-subtitle5); color:var(--black-5);}
+.h-resume-wrap .h-photo img {position:absolute; z-index:1; top:-999px; bottom:-999px; left:-999px; right:-999px; width:100%; max-width:100%; height:auto; margin:auto;}
+
+/* 이름, 나이, 성별 */
+.h-resume-wrap .h-personal-info {font-size:var(--text-subtitle4); color:var(--black-2);}
+.h-resume-wrap .h-personal-info .name {font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1);}
+
+/* 핸드폰, 이메일, 주소 */
+.h-resume-wrap .h-personal-info-list li:not(:first-child) {margin-top:15px;}
+.h-resume-wrap .h-personal-info-list li .tit {display:inline-block; width:34px; margin-right:30px; font-size:var(--text-subtitle5); color:var(--black-5);}
+.h-resume-wrap .h-personal-info-list li .txt {display:inline-block; font-size:var(--text-subtitle3); font-weight:var(--text-regular); color:var(--black-2);}
+
+/* 지원 상태 */
+.h-resume-wrap .h-status-wrap {display:inline-flex; flex-flow:row wrap; position:absolute; top:20px; right:20px;}
+.h-resume-wrap .h-status-wrap :is(.status, .score) {height:90px; border-radius:4px;}
+.h-resume-wrap .h-status-wrap .status {width:90px; text-align:center; font-size:var(--text-subtitle5); color:var(--black-2); background-color:var(--neutral-3);}
+.h-resume-wrap .h-status-wrap .status i {position:relative; z-index:1; font-size:34px;}
+.h-resume-wrap .h-status-wrap .status i::before {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:-1; content:''; width:28px; height:28px; border-radius:50%; background-color:#00B71E;}
+.h-resume-wrap .h-status-wrap .status span {margin-top:4px;}
+.h-resume-wrap .h-status-wrap .score {padding-left:18px; padding-right:18px; background-color:var(--cyan); font-size:var(--text-subtitle6); color:#fff;}
+.h-resume-wrap .h-status-wrap .score .num {font-size:var(--text-h2); font-weight:var(--text-bold);}
+.h-resume-wrap .h-status-wrap .score .num + span {font-size:var(--text-subtitle4);}
+
+/* 학력사항, 경력사항, 희망급여, 희망근무지/근무형태 */
+.h-resume-wrap .h-subbox-list .h-list-tit {display:inline-block; padding-bottom:6px; font-size:var(--text-subtitle5); color:var(--black-5); border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
+.h-resume-wrap .h-subbox-list .h-list-txt {color:var(--black-2);}
+.h-resume-wrap .h-subbox-list .h-list-txt strong {font-size:var(--text-subtitle1); font-weight:var(--text-bold); color:var(--black-2);}
+.h-resume-wrap .h-subbox-list .h-list-txt span {font-size:var(--text-subtitle5); color:var(--black-3);}
+.h-resume-wrap .h-subbox-list .h-list-txt .region {border:1px solid blue;}
+.h-resume-wrap .h-subbox-list .h-list-txt .region p {width:100%; border:1px solid red;}
+
+/* 시강(영상) */
+.h-resume-wrap .h-linebox {display:flex; flex-flow:row wrap; justify-content:center; padding:30px; border-top:1px solid var(--grey-3); border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
+.h-resume-wrap .h-video-list li {flex:0 1 30%; overflow:hidden;}
+.h-resume-wrap .h-video-list li:not(:nth-child(3n+1)) {margin-left:20px;}
+.h-resume-wrap .h-video-list li:nth-child(n+4) {margin-top:20px;}
+.h-resume-wrap .h-video-list li video {width:auto; max-width:100%;}
+    .h-resume-wrap .h-video-list li video::-webkit-media-controls {/* Webkit */border:1px solid red;}
+    .h-resume-wrap .h-video-list li video::-moz-media-controls {/* Firefox */border:1px solid red;}
+    .h-resume-wrap .h-video-list li video::-ms-media-controls {/* IE */border:1px solid red;}
+
+/* 어학능력, 컴퓨터 활용능력, 희망 근무조건, 근무일시, 희망급여 */
+.h-resume-wrap :is(.h-item-list, .h-region-list, .h-item-slash) {display:flex; flex-flow:row wrap; align-items:center;}
+.h-resume-wrap .h-item-list li {color:var(--black-2);}
+.h-resume-wrap :is(.h-item-list, .h-item) span {color:var(--black-3); font-weight:var(--text-regular);}
+.h-resume-wrap :is(.h-item-list, .h-item) span::after {display:inline-block; content:':'; margin:0 5px; color:var(--black-3);}
+
+.h-resume-wrap .h-slash li:not(:last-child)::after,
+.h-resume-wrap .h-item-slash span:not(:last-child)::after {display:inline-block; content:'/'; margin:0 8px;}
+.h-resume-wrap .h-slash li:not(:last-child)::after {color:var(--black-3);}
+.h-resume-wrap .h-item-slash span:not(:last-child)::after {color:var(--black-6);}
+.h-resume-wrap .h-comma li:not(:last-child)::after {display:inline-block; content:','; margin-right:4px;}
+
+/* 희망 근무지 */
+.h-resume-wrap .h-region-list li:not(:last-child)::after {display:inline-block; content:','; margin-right:8px; color:var(--blue-4);}
+.h-resume-wrap .h-region-list li a {display:inline-block; height:auto; line-height:normal; padding:0; margin:0; font-size:var(--text-subtitle3);}
+.h-resume-wrap .h-region-list li a span {display:inline-block; margin:0 !important; text-decoration:underline !important;}
+.h-resume-wrap .h-region-list li a span:not(:last-child)::after {display:inline-block; content:'\00a0>\00a0'; text-decoration:underline !important;}
+
+/* 근무형태 */
+.h-resume-wrap .h-type-list {display:flex; flex-flow:column wrap;}
+.h-resume-wrap .h-type-list li {position:relative; display:flex; flex-flow:row wrap; align-items:center; padding-left:8px; font-size:var(--text-subtitle3); font-weight:var(--text-bold); color:var(--black-2);}
+.h-resume-wrap .h-type-list li::before {position:absolute; top:11px; left:0; content:''; width:2px; height:2px; border-radius:50%; background-color:var(--black-2);}
+.h-resume-wrap .h-type-list li p {font-weight:var(--text-regular); margin-left:5px;}
+.h-resume-wrap .h-type-list li p:before {content:'(';}
+.h-resume-wrap .h-type-list li p:after {content:')';}
+.h-resume-wrap .h-type-list li span:not(:last-child)::after {display:inline-block; content:'/'; margin:0 8px; color:var(--black-6);}
+
+/* 개인과외 근무조건 */
+.h-resume-wrap .h-item-list + .h-item::before {display:inline-block; content:'/'; margin:0 8px; color:var(--black-6);}
+
+/* 취업 우대사항 */
+.h-resume-wrap .h-tbl-strong td {color:var(--black-2);}
+
+/* 자기소개서 */
+.h-resume-wrap .intro-wrap + .intro-wrap {margin-top:50px;}
+.h-resume-wrap .intro-wrap .tit + .txt-box {margin-top:15px; word-wrap:break-word; word-break:keep-all;}
+ 
+/* 간격 */
+.h-resume-wrap .r-side .modify-date + .h-resume-item,
+.h-resume-wrap .r-side .h-resume-item-wrap + .btn-wrap {margin-top:15px;}
+.h-resume-wrap .h-subbox-wide + .h-subbox-list {margin-top:20px;}
+.h-resume-wrap .h-photo + .h-personal-info {margin-left:30px;}
+.h-resume-wrap .h-personal-info p + p {margin-top:5px;}
+.h-resume-wrap .h-personal-info .name + p {margin-top:10px;}
+.h-resume-wrap .h-personal-info + .h-personal-info-list {padding-left:30px; margin-left:40px; border-left:1px solid var(--border-basic-4); box-sizing:border-box;} 
+.h-resume-wrap .h-status-wrap .status + .score {margin-left:5px;}
+.h-resume-wrap .h-subbox-list .h-list-tit + .h-list-txt {margin-top:40px;}
+.h-resume-wrap .h-subbox-list .h-list-txt strong + span {margin-top:8px;}
+.h-resume-wrap .h-tit-box-1 {margin-top:60px;}
+.h-resume-wrap .h-tbl-basic-1 + .h-tbl-basic-1 {margin-top:30px;}

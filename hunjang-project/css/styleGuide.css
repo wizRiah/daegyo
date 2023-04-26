@@ -93,6 +93,8 @@ input::placeholder { color:#BCBCBC; }
 .h-border-none { border:none !important; }
 
 /* display */
+.wd100 {width:100%;}
+
 .block { display:block; }
 .i-block { display:inline-block; }
 
@@ -114,6 +116,19 @@ input::placeholder { color:#BCBCBC; }
 /* form */
 select + select,
 select + [class^="h-button"] {margin-left:10px;}
+
+/* 간격 */
+.mt3-mb6 {margin-top:3px; margin-bottom:6px;}
+.mr10 {margin-right:10px;}
+.ml10 {margin-left:10px;}
+.mt10 {margin-top:10px;}
+.mr5 {margin-right:5px;}
+.ml5 {margin-left:5px;}
+.mb15 {margin-bottom:15px;}
+.mt15 {margin-top:15px;}
+.mb20 {margin-bottom:20px;}
+.mt20 {margin-top:20px;}
+.mt70 {margin-top:70px;}
 
 
 /* googl material icons */
@@ -378,7 +393,7 @@ button
 /***** 테이블 유형 1 (기본) *****/
 .h-tbl-basic-1 {border-top:1px solid var(--border-basic-1); font-size:var(--text-subtitle4); text-align:center; line-height:22px;}
 .h-tbl-basic-1 :is(th, td, p, strong, span) {word-wrap:break-word; word-break:keep-all;}
-.h-tbl-basic-1 thead tr th {background-color:var(--neutral-2); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-5); padding:22px 5px; border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
+.h-tbl-basic-1 thead tr th {background-color:var(--neutral-2); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-5); padding:18px 5px; border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
 .h-tbl-basic-1 tbody tr:hover td {background-color:var(--neutral-2);}
 .h-tbl-basic-1 tbody tr th {padding:25px 10px; border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;} 
 .h-tbl-basic-1 tbody tr td {padding:25px 10px; color:var(--black-3); border-bottom:1px solid var(--border-basic-3); box-sizing:border-box;}
@@ -394,6 +409,9 @@ button
     .hover-bg-none tbody tr:hover td {background-color:transparent;}
     /* 테이블 앞 checkbox 있는 경우 width 값 */
     .check-use :is(th:first-child, td:first-child) {width:44px;}
+    /* tbody th - 흰 배경색 */
+    .tbody-th-white tr th {background:#fff; font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-5); text-align:left;}
+    .tbody-th-white tr td {text-align:left;}
 
 /***** 테이블 thead 흰색 + 세로 구분 선 있는 유형 *****/
 .th-white thead tr th {background:#fff;}
@@ -450,7 +468,6 @@ button
     .btn-scrap[type="checkbox"]:checked + label:before {background-image:url(../images/btn-scrap-active.png);}
 
 /***** 간격 *****/
-.mt3-mb6 {margin-top:3px; margin-bottom:6px;}
 .h-tbl-basic-1 + .h-pagination {margin-top:40px;}
 
 
