@@ -81,13 +81,20 @@
 
 .txt-ellipsis {width:100%; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 
+/* input */
+input[type="text"] {width:100%; height:45px;padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px;box-sizing: border-box; font-size: var(--text-subtitle4);}
+input[type="text"]:disabled {background:#f2f2f2;}
 input::placeholder { color:#BCBCBC; } 
 .inp-type-basic input { padding:15px; border-radius: 4px; border: 1px solid #CCD1D7; } 
 .inp-type-basic input:focus { outline: none !important; border-color: #62666B; transition: all ease 0.5s; } 
 .inp-type-basic { position: relative; } 
 .inp-type-basic .inp-tit { position: absolute; top: -5px; left: 13px; padding: 0 5px; font-size: 12px; background:#fff; } 
 
-.slt-type-basic select { padding:15px; border-radius: 4px; border: 1px solid #CCD1D7; } 
+/* select */
+/* .slt-type-basic select { padding:15px; border-radius: 4px; border: 1px solid #CCD1D7; }  */
+select {-moz-appearance: none; -webkit-appearance: none; appearance: none; min-width:140px;height:46px;padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px;font-size: var(--text-subtitle4);background: url('../images/icon_select_arrow.png') no-repeat right 18px center #fff;}
+select option:disabled {display: none;}
+
 
 /* border */
 .h-border-none { border:none !important; }
@@ -112,6 +119,9 @@ input::placeholder { color:#BCBCBC; }
 .flex-end, .items-end { align-items:flex-end !important; } 
 .flex-set { display:flex; flex-flow:row wrap; justify-content:center; align-items:center; } 
 .flex-between { justify-content:space-between; }
+.flex-1 {flex:1;}
+.flex-column {flex-direction: column;}
+
 
 /* form */
 select + select,
@@ -323,14 +333,14 @@ button
 
 /* 02 버튼형 */
 .h-radio-02 {display: flex;}
-.h-radio-02 input[type="radio"] + label {display:inline-block;height:46px;line-height:44px;border:1px solid var(--border-basic-2);border-right-width: 0;font-size:var(--text-subtitle4);margin:0;padding:0 19px;/* margin-left:-5px; */box-sizing:border-box;min-width:70px;text-align:center;position:relative;overflow:hidden;transition: all 0.5s;}
+.h-radio-02 input[type="radio"] + label {display:inline-block;height:45px;line-height:44px;border:1px solid var(--border-basic-2);border-right-width: 0;font-size:var(--text-subtitle4);margin:0;padding:0 19px;/* margin-left:-5px; */box-sizing:border-box;min-width:70px;text-align:center;position:relative;overflow:hidden;transition: all 0.5s;}
 .h-radio-02 input[type="radio"] + label:before {content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s;
                                                 transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out;}
 .h-radio-02 input[type="radio"] + label:hover:before ,
 .h-radio-02 input[type="radio"] + label:focus:before ,
 .h-radio-02 input[type="radio"] + label:checked:before {-webkit-transform: scale(2);transform: scale(2);}
 .h-radio-02 input[type="radio"] + label:hover {cursor:pointer;}
-.h-radio-02 input[type="radio"]:checked + label {border-color: var(--blue-3);}
+.h-radio-02 input[type="radio"]:checked + label {border-color: var(--blue-3); color: var(--blue-3); font-weight: 500;}
 .h-radio-02 input[type="radio"]:checked + label +input + label {border-left-color:var(--blue-3);}
 .h-radio-02 input[type="radio"]:disabled + label {background:var(--border-basic-4);}
 .h-radio-02 input[type="radio"]:focus + label {border-color:var(--blue-3);}
@@ -431,6 +441,10 @@ button
 /***** 테이블 아이콘 *****/
 .h-file-icon {width:22px; height:22px;}
 .h-file-icon + span {display:inline-block; margin-left:10px; font-size:var(--text-subtitle4); color:var(--black-2);}
+
+/***** 테이블내에 내역이 없을 경우 공통 *****/
+.tblsrch-result-none {padding:100px 0!important;}
+.tblsrch-result-none a {margin-top: 20px; font-weight: 300;}
 
 /***** 텍스트 박스 *****/
 .h-box-wd500 {width:500px; box-sizing:border-box;}
@@ -556,3 +570,12 @@ button
     50% {margin-top:17px;}
     100% {margin-top:0;}
 }
+
+/* 블럭UI */
+.lottie-bg {background-color:rgba(33, 33, 33, 0.80); position: fixed; top:0; left:0; width:100%; height:100%; display: flex; justify-content: center; align-items:center; z-index:100;}
+
+/* 표 내에 건수 */
+.h-button-underline.h-ud-em{padding: 0;line-height: 21px;height: 21px;vertical-align: top;font-weight: var(--text-bold);font-size: var(--text-h4);margin: 0;}
+
+/* 임시 데이터피커 */
+.date-picker input {width:200px!important;}
