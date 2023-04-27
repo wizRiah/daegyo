@@ -32,6 +32,9 @@
     .guide_description {padding: 20px; background: #cfd6e4; color: #333;}
     .guide_description ul {margin-left: 20px}
     .guide_description li {list-style: square;}
+
+    .guide_page_only {display: flex; flex-direction: row; flex-wrap: wrap;}
+    .guide_page_only>div {width:30%; margin-right:1%; margin-bottom: 10px;}
   </style>
 </head>
 
@@ -52,15 +55,121 @@
 
           <h3 class="guide_tit_s">컴포넌트</h3>
 
-          <h4>input text</h4>
-          <div class="guide_item inp-type-basic">
-            <!-- <span class="inp-tit">주소</span>
-            <input type="text" placeholder="주소"> -->
+          <h4>input text (label 너비는 각 페이지의 디자인에 맞춰서 쓰시오)</h4><br>
+          <div class="guide_page_only">
+            <div>
+                      <!-- 01_기본형 -->
+                      <!-- 
+                          텍스트박스 제목이 없는 경우에는 h-field-wrap
+                          텍스트 박스 왼쪽으로 제목이 나와있는 경우에는 h-field-wrap을 한번 제목이랑 함께 감싸준 h-textfield
+                          (02_버튼있는 유형으로 보면 더 쉽게 이해가능)
+                      -->
+                      <div class="h-textfield">
+                        <label for="txtNm">이름<span class="necessary">필수</span></label>
+                        <input type="text" id="txtNm" class="h-txtfield-basic" />
+                      </div>
+            </div>
+            <div>
+                      <input type="text" id="txtNm" class="h-txtfield-basic" placeholder="이름"/>
+            </div>
 
-            <input type="text" placeholder="검색어를 입력하세요.">
-          </div> 
-          
+            <div>
+                      <input type="text" id="txtNm" class="h-txtfield-basic" disabled placeholder="이름"/>
+            </div>
+
+            
+            <div>
+                      <!-- 02_버튼 있는 유형 -->
+                      <div class="h-textfield">
+                        <label for="txtNm">이름<span class="necessary">필수</span></label>
+                        <div class="h-field-wrap">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" />
+                          <a href="#" class="h-button-s">설정하기</a>
+                        </div>
+                      </div>
+
+            </div>
+            <div>
+                      <div class="h-field-wrap">
+                        <input type="text" id="txtNm" class="h-txtfield-inner"  placeholder="이름"/>
+                        <a href="#" class="h-button-s">설정하기</a>
+                      </div>
+            </div>
+            <div></div>
+
+
+            <div>
+                      <!-- 03_달력형 -->
+                      <div class="h-textfield">
+                        <label for="txtNm">일정</label>
+                        <div class="h-field-wrap calendar">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" readonly />
+                          <a href="#" class="h-btn-calndar" title="날짜 선택"></a>
+                        </div>
+                      </div>
+
+            </div>
+            
+            <div>
+                      <div class="h-field-wrap calendar">
+                        <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM" readonly />
+                        <a href="#" class="h-btn-calndar" title="날짜 선택"></a>
+                      </div>
+            </div>
+            <div></div>
+
+
+
+
+            <div>
+                        <!-- 04_단위-텍스트포함유형 -->
+                        <div class="h-field-wrap">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="희망급여(숫자만)"/>
+                          <span class="include_txt">만원</span>
+                        </div>
+            </div>
+
+            <div>
+                        <div class="h-field-wrap">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="인증번호 입력"/>
+                          <span class="include_txt txtcolor-blue">인증성공</span>
+                        </div>
+            </div>
+
+            <div>
+                        <div class="h-field-wrap">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="인증번호 입력"/>
+                          <span class="include_txt txtcolor-orange">인증실패</span>
+                        </div>
+            </div>
+          </div>
+
+
+                    <!-- 유난히 큰 유형 -->
+                    <div class="h-field-wrap titleSize">
+                      <input type="text" id="txtNm" class="h-txtfield-inner"  placeholder="이름"/>
+                      <a href="#" class="h-btn-x" title="내용지우기"></a>
+                    </div>
+
           <br>
+
+                    <!-- 타이핑 넘버 노출형 -->
+                    <div class="h-field-wrap titleSize typenm">
+                      <input type="text" id="txtNm" class="h-txtfield-inner"  placeholder="이름"/>
+                      <div class="typngNm">
+                          (
+                            <span>00</span>
+                            / 100자
+                          )
+                      </div>
+                    </div>
+
+
+
+
+
+
+      <br><br> 
 
           <h4>select</h4>
           <div class="guide_item">
