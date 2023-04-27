@@ -1,14 +1,15 @@
 @charset "utf-8";
 
 /* 팝업 */
-.pop-container .support-inpbox ul {padding:20px; border-radius: 4px; background-color:var(--neutral-3);}
-.pop-container .support-inpbox ul li {font-size: var(--text-subtitle4);}
-.pop-container .support-inpbox ul li + li {margin-top: 10px;}
-.pop-container .support-inpbox ul li .etc {margin-top:10px;margin-left: 40px;}
+.pop-container .basic-serchbox .h-radio-01 {padding:20px; border-radius: 4px; background-color:var(--neutral-3);}
+.pop-container .basic-serchbox .h-radio-01 li {font-size: var(--text-subtitle4);}
+.pop-container .basic-serchbox .h-radio-01 li + li {margin-top: 10px;}
+.pop-container .basic-serchbox .h-radio-01 li .etc {margin-top:10px;margin-left: 40px;}
+.pop-container .basic-serchbox > .h-radio-01 {padding:0;}
 
 /* 팝업 공통 */
-/* .pop-container ul.top-list-box {margin-bottom: 30px;} */
 .pop-container ul.top-list-box + .pop-title {margin-top:30px;} 
+.pop-container ul.top-list-box + .basic-serchbox {margin-top:30px;}
 .pop-container ul.top-list-box li {position: relative; padding-left:12px; color:var(--black-3);}
 .pop-container ul.top-list-box li .h-button-underline {padding:0; margin:0; height: auto; line-height: inherit; font-size: var(--text-subtitle5);}
 .pop-container ul.top-list-box li:before {content:'';position: absolute;top: 8px;left: 4px;width:2px;height:2px;background-color:var(--black-3);}
@@ -19,9 +20,13 @@
 .pop-container .col-guide li {display: flex;width:250px;/* height: 200px; */padding: 25px 0;border-radius:10px;background-color:var(--neutral-3);text-align: center;align-items: center;justify-content: flex-start;flex-wrap: nowrap;flex-direction: column; font-weight: 400;}
 .pop-container .col-guide li img {height:70px;margin: 18px 0;}
 
+
+/* .pop-container .srch-box {padding:20px; background-color:var(--neutral-3); border-radius: 4px;} */
+.pop-container > .basic-serchbox {padding:20px; margin-bottom:0; margin-top:0; border-radius: 10px; background-color: var(--neutral-3);}
+
 /* 인풋 txt 안에 버튼 */
-.pop-container .inp-inner-btn {padding:20px; background-color:var(--neutral-3); border-radius: 4px;}
-.pop-container .inp-inner-btn a {position:absolute; right:20px;}
+.pop-container .inp-inner-btn {position:relative;}
+.pop-container .inp-inner-btn a {position:absolute; right: 0; top: -10px; transform: translateY(50%);}
 .pop-container .inp-inner-btn input {padding:0 80px 0 20px;}
 
 /* 테이블 헤더는 고정이고 바디만 스크롤되는 스타일 */
@@ -34,5 +39,41 @@
 .pop-container .h-tbl-basic-1 thead tr th {padding: 15px 5px; background-color:var(--neutral-3);}
 .pop-container .h-tbl-basic-1 tbody tr td {padding:15px 10px;}
 .pop-container .h-tbl-basic-1 {border-bottom:1px solid var(--grey-3);}
+.pop-container .h-tbl-basic-1 + .h-pagination {margin-top:20px;}
 .pop-container .h-job-info .academy-wrap + p + p {margin-top:0;}
+
+
+/* 공통 */
+.ml20 {margin-left:20px;}
+.pl10 {padding-left:10px;}
+.pr10 {padding-right:10px;}
+.pop-container .h-radio-02.bg-type input[type="radio"]:checked + label {background-color:var(--cyan); border-color: var(--cyan); color:#fff;}
+.pop-container .h-radio-02.bg-type input[type="radio"] + label {/*margin-left:0;*/ width: 100px;}
+.pop-container .h-radio-02.bg-type input[type="radio"]:checked + label +input + label {border-left-color: var(--cyan);}
+.pop-container .textarea textarea {display:block; padding:20px; margin-top:10px; height:80px; box-sizing: border-box; resize: none; border:1px solid var(--border-basic-2); border-radius: 4px; overflow-y:scroll; font-size: var(--text-subtitle4);}
+.pop-container .textarea::placeholder {font-size: var(--text-subtitle4); color:var(--black-6);}
+
+/* arrow btn */
+.pop-arrow-btn {padding-right:30px; background:url('../images/icon_pop_arrow.png') no-repeat 99% 50%;}
+
+/* 공통 입사지원 팝업 #1 */
+.pop-container .resume-top-tit {margin-bottom:10px;}
+.basic-serchbox + .resume-top-tit {margin-top:30px;}
+.pop-container .resume-top-btn a {font-size:var(--text-subtitle4);}
+
+.pop-container .basic-serchbox .file-type li a {padding:0; margin:0; font-weight:var(--text-regular); /*font-size: var(--text-subtitle4);*/}
+.pop-container .basic-serchbox .file-type li a .fa-trash-o:before {color:var(--grey-1);}
+.pop-container .basic-serchbox .file-type li {display: flex;justify-content: space-between;}
+.pop-container .basic-serchbox .user-info li {display: flex; align-items: center; font-size: var(--text-subtitle4); color:var(--black-3);}
+
+
+/* 이력서 보기 텍스트 링크 */
+.pop-container .basic-serchbox .resume-qlink {font-size:var(--text-subtitle5);}
+
+.user-info .phone-number input {width:150px;}
+.user-info .email input {width:230px;}
+.user-info li label {min-width:37px;}
+
+/* 최하단 버튼 */
+.h-button-l {width:200px;}
 
