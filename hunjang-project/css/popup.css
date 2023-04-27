@@ -44,6 +44,8 @@
 
 
 /* 공통 */
+.mt5 {margin-top:5px;}
+.mb5 {margin-bottom:5px;}
 .ml20 {margin-left:20px;}
 .pl10 {padding-left:10px;}
 .pr10 {padding-right:10px;}
@@ -55,20 +57,36 @@
 
 /* arrow btn */
 .pop-arrow-btn {padding-right:30px; background:url('../images/icon_pop_arrow.png') no-repeat 99% 50%;}
+.pop-container .resume-list-item {position: absolute;top: 30px;left:0;width:100%;background:#fff;z-index: 1;border:2px solid var(--grey-3);border-radius: 4px;box-sizing: border-box;}
+.pop-container .resume-list-item .basic-serchbox {width:100%; padding:15px;border-radius: 0;margin: 0; background:transparent;}
+.pop-container .resume-list-item ul li {display: flex;align-items: center;padding-left: 20px; cursor: pointer;}
+.pop-container .resume-list-item ul li .h-checkbox {margin:0;}
+.pop-container .resume-list-item ul li:hover {background-color: var(--neutral-3); transition: all ease-out 0.3s;}
+
+/* 블릿 */
+.resume-list-item .basic-serchbox .blt-basic-txt {
+    padding: 4px 10px;
+    border-radius: 13px;
+    background-color: #C3CAD4;
+    color: #fff;
+    font-size: var(--text-subtitle6);
+    vertical-align: 3px;
+    word-break: keep-all;}
+
 
 /* 공통 입사지원 팝업 #1 */
-.pop-container .resume-top-tit {margin-bottom:10px;}
-.basic-serchbox + .resume-top-tit {margin-top:30px;}
+.pop-container .resume-top-tit {position:relative; margin-bottom:10px;}
 .pop-container .resume-top-btn a {font-size:var(--text-subtitle4);}
-
+.pop-container .basic-serchbox + .resume-top-tit {margin-top:30px;}
 .pop-container .basic-serchbox .file-type li a {padding:0; margin:0; font-weight:var(--text-regular); /*font-size: var(--text-subtitle4);*/}
 .pop-container .basic-serchbox .file-type li a .fa-trash-o:before {color:var(--grey-1);}
 .pop-container .basic-serchbox .file-type li {display: flex;justify-content: space-between;}
 .pop-container .basic-serchbox .user-info li {display: flex; align-items: center; font-size: var(--text-subtitle4); color:var(--black-3);}
 
 
+
 /* 이력서 보기 텍스트 링크 */
-.pop-container .basic-serchbox .resume-qlink {font-size:var(--text-subtitle5);}
+.pop-container .basic-serchbox .resume-qlink {margin-left: 0; font-size:var(--text-subtitle5);}
 
 .user-info .phone-number input {width:150px;}
 .user-info .email input {width:230px;}
