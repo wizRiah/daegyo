@@ -1,13 +1,22 @@
 @charset "utf-8";
 
 /* ==================================== Layout ==================================== */
-.h-resume-wrap {height:100vh;}
-.h-resume-wrap header {float:left; width:100%;}
-.h-resume-wrap .container {left:0; width:calc(100% - 250px);}
+body{-ms-overflow-style:none; }
+body::-webkit-scrollbar { display:none; }
+
+/* 스크롤바의 너비 */
+.h-resume-wrap *::-webkit-scrollbar {width: 8px;}
+/* 스크롤바의 색상 */
+.h-resume-wrap *::-webkit-scrollbar-thumb {background: #e1e1e1;}
+
+.h-resume-wrap {display:flex; flex-flow:row wrap; height:100%;}
+.h-resume-wrap header {position:fixed; z-index:10; order:1; width:100%;}
+.h-resume-wrap .container {order:2; top:85px; left:0; width:calc(100% - 250px); height:calc(100vh - 85px); overflow-y:scroll;}
+.h-resume-wrap .content {box-sizing:border-box;}
 .h-resume-wrap .col {display:flex; flex-flow:column nowrap; text-align:center;}
 
 /* right menu */
-.h-resume-wrap .r-side {display:flex; flex-flow:column nowrap; float:right; width:250px; height:calc(100% - 85px); padding:20px; box-sizing:border-box;}
+.h-resume-wrap .r-side {position:fixed; top:85px; right:0; order:3; display:flex; flex-flow:column nowrap; width:250px; height:calc(100vh - 85px); padding:20px; overflow-y:auto; box-sizing:border-box;}
 .h-resume-wrap .r-side [class^="h-button"] {width:100%; margin-left:0; margin-right:0;}
 .h-resume-wrap .r-side [class^="h-button"]:not(:first-child) {margin-top:10px;}
 
