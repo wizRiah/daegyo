@@ -42,7 +42,7 @@ body::-webkit-scrollbar { display:none; }
 .h-resume-wrap .h-subbox-list.item-4 li {flex:1 1 20%;}
 .h-resume-wrap .h-subbox-list.item-4 li:not(:nth-child(4n+1)) {margin-left:20px;}
 .h-resume-wrap .h-subbox-list.item-4 li:nth-child(n+5) {margin-top:20px;}
-.h-resume-wrap .h-linebox {display:flex; flex-flow:column wrap; justify-content:center; padding:30px; border-top:1px solid var(--grey-3); border-bottom:1px solid var(--border-basic-4); box-sizing:border-box;}
+.h-resume-wrap .h-linebox {display:flex; flex-flow:column wrap; justify-content:center; padding:30px; border-top:1px solid var(--grey-3); border-bottom:1px solid var(--border-basic-4); word-wrap:break-word; word-break:keep-all; box-sizing:border-box;}
 
 /* 이력서 사진 */
 .h-resume-wrap .h-photo {position:relative; width:110px; height:133px; border-radius:4px; overflow:hidden;}
@@ -115,7 +115,7 @@ body::-webkit-scrollbar { display:none; }
 .h-resume-wrap .h-type-list li span:not(:last-child)::after {display:inline-block; content:'/'; margin:0 8px; color:var(--black-6);}
 
 /* 개인과외 근무조건 */
-.h-resume-wrap .h-item-list + .h-item::before {display:inline-block; content:'/'; margin:0 8px; color:var(--black-6);}
+.h-resume-wrap .h-item-list.h-slash + .h-item::before {display:inline-block; content:'/'; margin:0 8px; color:var(--black-6);}
 
 /* 취업 우대사항 */
 .h-resume-wrap .h-tbl-strong td {color:var(--black-2);}
