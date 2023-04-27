@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../../../css/mypage.css">
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/resume-view.css">
-  <link rel="stylesheet" href="../../../css/table.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -219,6 +218,7 @@
           <li>
             <div class="h-list-tit">희망근무지 &#47; 근무형태</div>
             <div class="h-list-txt text-subtitle3">
+              <!-- 희망근무지 최대 2줄로 표기 / 2줄 넘어가면 ".. 외"로 처리 함 -->
               <div class="region">
                 <p>서울 &gt; 구로구, 강남구</p>
                 <p>인천 &gt; 서구, 연수구, 부평구 서구, 연수구, 부평구 서구, 연수구, 부평구 서구, 연수구, 부평구</p>
@@ -390,16 +390,49 @@
         <div class="h-tit-box-1 flex-end">
           <p class="i-block h-tit-26">시강(영상)</p>
         </div>
-        <ul class="h-linebox h-video-list">
-          <li>
-            <video>
-              <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.mp4" type="video/mp4" poster="error.png"></source>
-              <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.ogg" type="video/ogg" poster="error.png"></source>
-              <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.webm" type="video/webm" poster="error.png"></source>
-              강의 영상
-            </video>
-          </li>
-        </ul>
+        <div class="h-linebox">
+          <ul class="h-video-list">
+            <li class="flex-set">
+              <!-- 버튼 클릭하면 사라짐 / 영상 재생 완료 후 다시 버튼이 보임 -->
+              <!-- 버튼 사라지고 viedo 뒤에 controls autoplay 추가되어야 함 -->
+              <button href="#" class="h-button-m h-btn-sqre h-button-video"><i class="material-symbols-outlined vert-m">play_circle</i></button>
+              <video>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.mp4" type="video/mp4" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.ogg" type="video/ogg" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.webm" type="video/webm" poster="video-error.png"></source>
+                강의 영상
+              </video>
+            </li>
+            <li class="flex-set">
+              <!-- 버튼 사라진 경우 -->
+              <button href="#" class="h-button-m h-btn-sqre h-button-video" style="display:none;"><i class="material-symbols-outlined vert-m">play_circle</i></button>
+              <video controls autoplay>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.mp4" type="video/mp4" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.ogg" type="video/ogg" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.webm" type="video/webm" poster="video-error.png"></source>
+                강의 영상
+              </video>
+            </li>
+            <li class="flex-set">
+              <button href="#" class="h-button-m h-btn-sqre h-button-video"><i class="material-symbols-outlined vert-m">play_circle</i></button>
+              <video>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.mp4" type="video/mp4" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.ogg" type="video/ogg" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.webm" type="video/webm" poster="video-error.png"></source>
+                강의 영상
+              </video>
+            </li>
+            <li class="flex-set">
+              <button href="#" class="h-button-m h-btn-sqre h-button-video"><i class="material-symbols-outlined vert-m">play_circle</i></button>
+              <video>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.mp4" type="video/mp4" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.ogg" type="video/ogg" poster="video-error.png"></source>
+                <source src="https://joy1.videvo.net/videvo_files/video/free/video0477/large_watermarked/_import_624e7938234465.78808694_preview.webm" type="video/webm" poster="video-error.png"></source>
+                강의 영상
+              </video>
+            </li>
+          </ul>
+        </div>
 
 
         <!-- 자격증 -->
@@ -550,6 +583,9 @@
             </tr>
           </tbody>
         </table>
+
+        <!-- 컴퓨터 활용능력 - IT / 디자인 능력 입력 값 없을 때 -->
+        <!-- width값이 다르게 지정되어 있으니 thead 부분 확인해주세요!!! -->
         <table class="h-tbl-basic-1 th-white hover-bg-none">
           <thead>
             <tr>
