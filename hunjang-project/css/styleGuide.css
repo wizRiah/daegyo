@@ -634,7 +634,7 @@ input[type="text"]::placeholder {color:var(--black-6); font-size:var(--text-subt
 .h-field-wrap .include_txt.txtcolor-orange {color:var(--orange); font-size:var(--text-subtitle4);}
 
 /*유난히 큰 유형 */
-.h-field-wrap.titleSize {height: 78px; border: 2px solid var(--border-basic-1); align-items: stretch;}
+.h-field-wrap.titleSize {height: 78px; border: 2px solid var(--border-basic-1); align-items: stretch;  box-shadow:0px 5px 10px #0000001A;}
 .h-field-wrap.titleSize .h-txtfield-inner {height: 78px; font-size:var(--text-subtitle1);}
 .h-field-wrap.titleSize .h-txtfield-inner::placeholder {font-size:var(--text-subtitle1);}
 .h-field-wrap.titleSize .h-btn-x {padding: 0 20px;overflow: hidden;position: relative;display: flex;align-items: center;}
@@ -643,3 +643,38 @@ input[type="text"]::placeholder {color:var(--black-6); font-size:var(--text-subt
 .h-field-wrap.titleSize.typenm {align-items:center; }
 .h-field-wrap .typngNm {font-size:var(--text-subtitle6); color:var(--black-6); padding:0 28px; flex-shrink: 0;}
 .h-field-wrap .typngNm span {color:var(--black-2);}
+
+
+
+
+
+/*
+TAB
+*/
+/*공통 기능세팅*/
+[class^="h-tab-Contents"] {display:flex; flex-direction:row; flex-wrap:wrap;}
+[class^="h-tab-Contents"]>input[type="radio"] {display:none; width:1px; height:1px; position:absolute; text-indent:-999px; overflow:hidden;}
+[class^="h-tab-Contents"]>input[type="radio"] + label {}
+[class^="h-tab-Contents"]>input[type="radio"] + label:hover {cursor:pointer;}
+[class^="h-tab-Contents"]>input[type="radio"]:checked + label {}
+[class^="h-tab-Contents"]>.tabCo-Wrap {width:100%;position: relative;z-index: 0;}
+[class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox {display:none;}
+[class^="h-tab-Contents"]>input[type="radio"]:first-of-type:checked ~ .tabCo-Wrap>.tabCo-CommonBox:first-child,
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(2):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(2) {display:block;}
+
+
+/*ver.01 버튼버전 */
+.h-tab-Contents-01 {justify-content: flex-start;}
+.h-tab-Contents-01>input[type="radio"] + label {width:200px; height:54px; line-height:52px; text-align:center; font-size:var(--text-subtitle1); color:var(--black-6); border:1px solid var(--border-basic-3); box-sizing:border-box; margin-left:-1px;}
+.h-tab-Contents-01>input[type="radio"]:checked + label {background:var(--cyan); color: #fff;border-color: var(--cyan);}
+.h-tab-Contents-01>input[type="radio"]:checked + label:first-of-type {margin-left:0;}
+.h-tab-Contents-01>.tabCo-Wrap {border-top:1px solid var(--border-basic-3);}
+
+
+
+/*ver.02 책갈피버전 */
+.h-tab-Contents-02 {justify-content: center;align-items: flex-start;}
+.h-tab-Contents-02>input[type="radio"] + label {width: 280px; height: 53px; line-height: 55px; text-align: center; font-size:var(--text-subtitle3); color:var(--black-6); background:var(--neutral-1); border: 1px solid var(--border-basic-2); border-bottom-color: #606060; z-index: 1;}
+.h-tab-Contents-02>input[type="radio"]:checked + label {border: 1px solid #606060;border-bottom: none;color:var(--black-2);background: #fff;border-bottom-color: #fff;height: 54px;}
+.h-tab-Contents-02>.tabCo-Wrap {margin-top: -1px;background: #fff;}
+.h-tab-Contents-02>.tabCo-Wrap:before {content:"";width: 100%;display: inline-block;border-top: 1px solid #606060;position: absolute;z-index: -1;margin-top: 0px;}
