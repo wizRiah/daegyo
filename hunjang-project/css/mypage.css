@@ -1,6 +1,4 @@
 @charset "utf-8";
-/* @import 'styleGuide.css'; */
-@import 'mapage_osoo.css';
 
 /* 로케이션바 */
 .hunjang-wrap .content .location {display: flex; justify-content: flex-end; align-items: center;}
@@ -20,6 +18,9 @@
 .my-txtbox .text-subtitle4 li.em:after{background-color:var( --orange);}
 .my-txtbox .text-subtitle4 li.em{color:var( --orange);}
 
+.h-over-hidden {overflow:hidden;}
+.h-subtxtbox-01 {padding:40px; margin-bottom:75px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+.h-subtxtbox-01 .h-radio-02 {background:#fff;}
 
 
 /* 이력서 등록 */
@@ -270,5 +271,31 @@
 .emailReceiveForm .email-rightBox {width:45%; padding-top: 15px;}
 .emailReceiveForm .email-rightBox .rcmmd-email {font-size:var(--text-subtitle4);color:var(--black-6);width: 100%;text-align: center;height: 120px;line-height: 110px;margin-top: 15px;}
 .emailReceiveForm .email-rightBox .rcmmd-email img {max-width:100%; max-height:100%;}
+
+
+/* ==================================== 관심학원 =============================== */
+/* 탭 버튼 */
+.h-tab-wrap [class^="h-button"] {position:relative; margin:0; transition:all ease-out 0.3s;}
+.h-tab-wrap [class^="h-button"] + [class^="h-button"] {margin-left:5px;}
+.h-tab-wrap [class^="h-button"]:hover {background-color:var(--cyan);}
+.h-tab-wrap .h-button-cyan :is(*),
+.h-tab-wrap [class^="h-button"]:hover :is(*) {color:#fff;}
+
+/* App 설치 */
+.h-app-wrap {padding-left:40px; border-left:1px solid var(--border-basic-4); box-sizing:border-box;}
+.h-app-wrap .app-txt {margin-right:20px;}
+.h-app-wrap [class^="h-button"] {font-size:var(--text-subtitle5); line-height:normal;}
+.h-app-wrap [class^="h-button"] .imgbox {width:auto; height:auto; max-width:22px; max-height:22px; vertical-align:middle; overflow:hidden; margin-right:10px !important;} 
+.h-app-wrap [class^="h-button"] .imgbox img {max-width:100%; max-height:100%;}
+.h-app-wrap [class^="h-button"] .txtbox {margin-left:0 !important; vertical-align:middle;}
+
+/* 스크랩채용 - 검색 */
+.h-search-wrap :is(.h-date-box, .h-search-box) {display:flex; width:100%;}
+.h-search-wrap .h-date-box + .h-search-box {margin-top:12px;}
+
+/* 내 이력서 열람학원 */
+.my-txtbox .text-h1 + .h-subtxtbox-01 {margin-bottom:30px;}
+.my-txtbox .text-h1 + .h-subtxtbox-01 + ul {margin-bottom:20px;}
+
 
 
