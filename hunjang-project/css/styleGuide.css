@@ -665,28 +665,40 @@ TAB
 */
 /*공통 기능세팅*/
 [class^="h-tab-Contents"] {display:flex; flex-direction:row; flex-wrap:wrap;}
-[class^="h-tab-Contents"]>input[type="radio"] {display:none; width:1px; height:1px; position:absolute; text-indent:-999px; overflow:hidden;}
-[class^="h-tab-Contents"]>input[type="radio"] + label {}
-[class^="h-tab-Contents"]>input[type="radio"] + label:hover {cursor:pointer;}
+[class^="h-tab-Contents"]>input[type="radio"] {width:1px;height:1px;position:absolute;text-indent:-999px;overflow:hidden;}
+[class^="h-tab-Contents"]>input[type="radio"]:focus,
+[class^="h-tab-Contents"]>input[type="radio"]:active {outline:none;}
+[class^="h-tab-Contents"]>input[type="radio"] + label {position:relative; overflow:hidden;}
 [class^="h-tab-Contents"]>input[type="radio"]:checked + label {}
 [class^="h-tab-Contents"]>.tabCo-Wrap {width:100%;position: relative;z-index: 0;}
 [class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox {display:none;}
 [class^="h-tab-Contents"]>input[type="radio"]:first-of-type:checked ~ .tabCo-Wrap>.tabCo-CommonBox:first-child,
-[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(2):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(2) {display:block;}
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(2):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(2),
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(3):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(3),
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(4):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(4),
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(5):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(5),
+[class^="h-tab-Contents"]>input[type="radio"]:nth-of-type(6):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(6) {display:block;}
+/*hover*/
+[class^="h-tab-Contents"]>input[type="radio"] + label:before {content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--cyan); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s;
+                                                            transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out;}
+[class^="h-tab-Contents"]>input[type="radio"] + label:hover {cursor:pointer;}
+[class^="h-tab-Contents"]>input[type="radio"] + label:hover:before,
+[class^="h-tab-Contents"]>input[type="radio"]:focus + label:before {-webkit-transform:scale(2);transform: scale(2);}
 
 
 /*ver.01 버튼버전 */
 .h-tab-Contents-01 {justify-content: flex-start;}
-.h-tab-Contents-01>input[type="radio"] + label {width:200px; height:54px; line-height:52px; text-align:center; font-size:var(--text-subtitle1); color:var(--black-6); border:1px solid var(--border-basic-3); box-sizing:border-box; margin-left:-1px;}
-.h-tab-Contents-01>input[type="radio"]:checked + label {background:var(--cyan); color: #fff;border-color: var(--cyan);}
+.h-tab-Contents-01>input[type="radio"] + label {width:200px;height:54px;line-height:52px;text-align:center;font-size:var(--text-subtitle1);color:var(--black-6);border:1px solid var(--border-basic-3);box-sizing:border-box;margin-left:-1px;}
+.h-tab-Contents-01>input[type="radio"]:checked + label {background:var(--cyan); color: #fff;border-color:var(--cyan);}
 .h-tab-Contents-01>input[type="radio"]:checked + label:first-of-type {margin-left:0;}
-.h-tab-Contents-01>.tabCo-Wrap {border-top:1px solid var(--border-basic-3);}
-
-
+.h-tab-Contents-01>.tabCo-Wrap {border-top:1px solid var(--border-basic-3);margin-top: -1px;}
+.h-tab-Contents-01>input[type="radio"]:focus + label:before {background:var(--grey-3);}
 
 /*ver.02 책갈피버전 */
 .h-tab-Contents-02 {justify-content: center;align-items: flex-start;}
-.h-tab-Contents-02>input[type="radio"] + label {width: 280px; height: 53px; line-height: 55px; text-align: center; font-size:var(--text-subtitle3); color:var(--black-6); background:var(--neutral-1); border: 1px solid var(--border-basic-2); border-bottom-color: #606060; z-index: 1;}
+.h-tab-Contents-02>input[type="radio"] + label {width: 278px;height: 53px;line-height: 55px;text-align: center;font-size:var(--text-subtitle3);color:var(--black-6);background:var(--neutral-1);border: 1px solid var(--border-basic-2);border-bottom-color: #606060;z-index: 1;border-left-width: 0;}
 .h-tab-Contents-02>input[type="radio"]:checked + label {border: 1px solid #606060;border-bottom: none;color:var(--black-2);background: #fff;border-bottom-color: #fff;height: 54px;}
 .h-tab-Contents-02>.tabCo-Wrap {margin-top: -1px;background: #fff;}
 .h-tab-Contents-02>.tabCo-Wrap:before {content:"";width: 100%;display: inline-block;border-top: 1px solid #606060;position: absolute;z-index: -1;margin-top: 0px;}
+.h-tab-Contents-02>input[type="radio"]:first-child + label {border-left-width:1px;}
+.h-tab-Contents-02>input[type="radio"] + label:before {background:var(--grey-1);}
