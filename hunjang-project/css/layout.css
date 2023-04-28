@@ -2,26 +2,28 @@
 @import 'styleGuide.css';
 
 /* 헤더 */
-.hunjang-wrap header {float: right;width:calc(100% - 270px);height:85px;background:#43A986F2;}
-.hunjang-wrap header .header-inner {display: flex;justify-content: flex-end; align-items: center; height: 100%; padding:0 40px;}
-.hunjang-wrap header .header-inner .myicon-wrap {display: flex;margin-right: 30px;flex-wrap: wrap;}
+.hunjang-wrap header {position:fixed; right:0; top:0; z-index:1; width:calc(100% - 270px); height:85px; background:#43A986F2; box-sizing:border-box;}
+.hunjang-wrap header .header-inner {display:flex; justify-content:flex-end; align-items:center; height:100%; padding:0 40px;}
+.hunjang-wrap header .header-inner .myicon-wrap {display:flex; flex-flow:row wrap; margin-right:30px;}
 .hunjang-wrap header .header-inner .myicon-wrap  li + li {margin-left:25px;}
-.hunjang-wrap header .header-inner .mypage-dropdown {position: relative;z-index: 1;}
-.hunjang-wrap header .header-inner .mypage-dropdown:after {content:'';position: absolute;top:0;right:0;width:20px;height:20px;background:url('../images/icon_mypage_arrow.png');cursor: pointer;}
-.hunjang-wrap header .header-inner .mypage-dropdown .name {font-size: 14px;color:#fff;padding-right: 30px;}
-.hunjang-wrap header .header-inner .mypage-dropdown .toggle {position: absolute;top: 30px;right: -10px;width:170px;border:1px solid #62666B;border-radius: 6px;background: #fff;text-align: center;box-sizing: border-box;}
-.hunjang-wrap header .header-inner .mypage-dropdown .toggle ul {margin: 10px 0;text-align: left;}
-.hunjang-wrap header .header-inner .mypage-dropdown .toggle ul li a {display: block; padding: 10px 10px 10px 20px; font-size: 14px; color:#7E7E7E;}
+.hunjang-wrap header .header-inner .mypage-dropdown {position:relative; z-index:2;}
+.hunjang-wrap header .header-inner .mypage-dropdown:after {content:''; position:absolute; top:0; right:0; width:20px; height:20px; background:url('../images/icon_mypage_arrow.png') no-repeat; cursor:pointer;}
+.hunjang-wrap header .header-inner .mypage-dropdown .name {font-size:var(--text-subtitle4); color:#fff; padding-right:30px;}
+.hunjang-wrap header .header-inner .mypage-dropdown .toggle {position:absolute; top:30px; right:-10px; width:170px; border:1px solid var(--grey-3); border-radius:6px; background:#fff; text-align:center; box-sizing: border-box;}
+.hunjang-wrap header .header-inner .mypage-dropdown .toggle ul {margin:10px 0; text-align:left;}
+.hunjang-wrap header .header-inner .mypage-dropdown .toggle ul li a {display:block; padding:10px 10px 10px 20px; font-size:var(--text-subtitle4); color:var(--black-3);}
 .hunjang-wrap header .header-inner .mypage-dropdown .toggle ul li:hover {background: #f5f7fa; transition: all 0.2s ease;}
-.hunjang-wrap header .header-inner .mypage-dropdown .toggle .btn-log {width:150px;padding: 10px 0;margin-bottom: 10px;font-size: 14px;background: #c3cad4;border-radius: 4px;color:#fff;}
+.hunjang-wrap header .header-inner .mypage-dropdown .toggle .btn-log {width:150px; padding:10px 0; margin-bottom:10px; font-size:var(--text-subtitle4); color:#fff; background:var(--grey-1); border-radius:4px;}
 
 /* lnb */
-.hunjang-wrap aside {position: fixed; left:0; top:0; width:270px; height:100%;}
-.hunjang-wrap aside .top_logo {display: flex; justify-content: center; align-items: center; height:125px;}
-.hunjang-wrap aside ul {overflow-y: auto; height: calc(100% - 125px);}
-.hunjang-wrap aside ul li {position: relative;/*padding: 13px 20px 13px 60px;*/margin: 5px 15px;border-radius: 4px;font-size: 15px; color:#8B8B8B;}
-.hunjang-wrap aside ul li:hover {background:#f5f7fa; transition: all 0.2s ease;}
-.hunjang-wrap aside ul li:before {content: '';position: absolute;left: 20px;top: 50%;width: 24px;height: 24px;margin: -14px 0 0 0;background-image: url('../images/lnb_icons.png');}
+.hunjang-wrap aside {position:fixed; left:0; top:0; width:270px; height:100%;}
+.hunjang-wrap aside .top_logo {display:flex; justify-content:center; align-items:center; height:125px;}
+.hunjang-wrap aside .top_logo img {width:auto; max-width:80%;}
+.hunjang-wrap aside ul {overflow-y:auto; height:calc(100% - 125px); padding-left:20px; padding-right:20px; box-sizing:border-box;}
+.hunjang-wrap aside ul li {position:relative; border-radius:24px; font-size:var(--text-subtitle2); color:var(--black-4);}
+.hunjang-wrap aside ul li:not(:first-child) {margin-top:4px;}
+.hunjang-wrap aside ul li:hover {background:var(--neutral-3); transition:all 0.2s ease;}
+.hunjang-wrap aside ul li:before {content:''; position:absolute; top:50%; left:20px; width:24px; height:24px; margin:-14px 0 0 0; background-image:url('../images/lnb_icons.png');}
 .hunjang-wrap aside ul li.active::before {background-position-x: -24px;}
 .hunjang-wrap aside ul li:nth-child(2)::before {background-position-y: -24px;}
 .hunjang-wrap aside ul li:nth-child(3)::before {background-position-y: -48px;}
@@ -36,27 +38,22 @@
 .hunjang-wrap aside ul li:nth-child(12)::before {background-position-y: -264px;}
 .hunjang-wrap aside ul li:nth-child(13)::before {background-position-y: -288px;}
 .hunjang-wrap aside ul li:nth-child(14)::before {background-position-y: -312px;}
-.hunjang-wrap aside ul li.active {background: #EBF4FF;}
-.hunjang-wrap aside ul li.active a {color:#61A6FF;}
-.hunjang-wrap aside ul li a {display: block; padding: 13px 20px 13px 60px;}
-
-/* 스크롤바의 너비 */
-.hunjang-wrap aside ul::-webkit-scrollbar {width: 8px;}
-/* 스크롤바의 색상 */
-.hunjang-wrap aside ul::-webkit-scrollbar-thumb {background: #e1e1e1;}
+.hunjang-wrap aside ul li.active {background-color:var(--neutral-4);}
+.hunjang-wrap aside ul li.active a {font-weight:var(--text-medium); color:var(--blue-3);}
+.hunjang-wrap aside ul li a {display:block; padding:13px 20px 13px 60px;}
 
 /* 푸터 */
-.hunjang-wrap footer {margin-top:170px; padding:45px 0; font-size: 13px; border-top:1px solid #e0e6ef; color:#7E7E7E;}
-.hunjang-wrap footer ul li a {color:#7E7E7E;}
-.hunjang-wrap footer .quick-menu {display: flex;justify-content: center;}
+.hunjang-wrap footer {margin-top:170px; padding:45px 0; font-size:var(--text-subtitle5); color:var(--black-3); border-top:1px solid var(--border-basic-3);}
+.hunjang-wrap footer ul li a {color:var(--black-3);}
+.hunjang-wrap footer .quick-menu {display:flex; justify-content:center;}
 .hunjang-wrap footer .quick-menu li + li,
-.hunjang-wrap footer .office-info li + li {position: relative;margin-left: 40px;}
+.hunjang-wrap footer .office-info li + li {position:relative; margin-left: 40px;}
 .hunjang-wrap footer .quick-menu li + li:before,
-.hunjang-wrap footer .office-info li + li:before {content:'';position: absolute;width:1px;height:13px;background:#c3cad4;margin-left: -20px;}
-.hunjang-wrap footer .office-info {display: flex;justify-content: center; margin:15px 0;}
-.hunjang-wrap footer .office-info .tit {color:#333; font-weight: 500;}
-.hunjang-wrap footer .copyr {text-align: center; color:#BCBCBC;}
+.hunjang-wrap footer .office-info li + li:before {content:''; position:absolute; width:1px; height:13px; background:var(--grey-1); margin-left:-20px;}
+.hunjang-wrap footer .office-info {display:flex; justify-content:center; margin:15px 0;}
+.hunjang-wrap footer .office-info .tit {color:var(--black-2); font-weight:var(--text-medium);}
+.hunjang-wrap footer .copyr {text-align:center; color:var(--black-6);}
 
 /* 컨텐츠 영역 */
-.hunjang-wrap .container {position: relative;top: 85px;left: 270px;width: calc(100% - 270px);background: #F5F7FA;}
-.hunjang-wrap .content {max-width: 1080px;/*height: 100vh;*/margin: 0 auto;padding-top:90px;}
+.hunjang-wrap .container {position:relative; top:85px; left:270px; width:calc(100% - 270px); background:var(--neutral-3);}
+.hunjang-wrap .content {max-width:1080px; margin:0 auto; padding-top:90px;}
