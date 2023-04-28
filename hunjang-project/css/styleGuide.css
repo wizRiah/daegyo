@@ -599,7 +599,16 @@ input[type="text"]::placeholder {color:var(--black-6); font-size:var(--text-subt
 .h-field-wrap.calendar a.h-btn-calndar:before {content:"";width: 22px;height: 22px; display: inline-block; background: url(../images/btn_calendar.svg) no-repeat;background-position: center;}
 .h-field-wrap.calendar a.h-btn-calndar:focus {outline:auto;}
 
-/*04_단위-텍스트포함유형*/
+/*04_일정묶음*/
+.h-date-wrap {display:inline-flex; flex-flow:row wrap; align-items:center; vertical-align:middle;}
+.h-date-wrap + * {margin-left:10px;}
+.h-date-wrap + .h-radio-02 input[type="radio"] + label {height:46px;}
+.h-date-wrap .calendar {width:200px; height:46px; background:#fff; box-sizing:border-box;}
+.h-date-wrap .calendar:not(:only-child):first-child {margin-right:5px;}
+.h-date-wrap .calendar:not(:only-child):last-child {margin-left:5px;}
+.h-date-wrap .calendar .h-txtfield-inner {height:100%; font-size:var(--text-subtitle4);}
+
+/*05_단위-텍스트포함유형*/
 .h-field-wrap .include_txt {font-size:var(--text-subtitle3);color:var(--black-2);padding: 0 17px;flex-shrink: 0;}
 .h-field-wrap .include_txt.txtcolor-blue   {color:var(--blue-3); font-size:var(--text-subtitle4);}
 .h-field-wrap .include_txt.txtcolor-orange {color:var(--orange); font-size:var(--text-subtitle4);}
