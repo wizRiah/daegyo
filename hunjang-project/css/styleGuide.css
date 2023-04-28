@@ -310,6 +310,21 @@ button
     .h-checkbox.checkbox03 input[type="checkbox"] + label:hover:after {transform: scale(8);transform-origin: center;opacity: 0.2;}
     .h-checkbox.checkbox03 input[type="checkbox"]:checked + label:hover:after {transform: rotate(-45deg); opacity: 1; z-index: 1; border-radius: 0; background: transparent; transition:none;}
 
+    /* checkbox04 */
+    /* label에 체크하기 전 상태 CSS */
+    .h-checkbox.checkbox04 input[type="checkbox"] + label {text-align: center;transition: color 0.5s;-webkit-transition: color 0.5s;color: var(--grey-2);font-size: 14px;position: relative;} 
+    .h-checkbox.checkbox04 input[type="checkbox"] + label:before {content:"";width:18px;height:18px;border-radius:100%;display:inline-block;margin-right: 5px;border: 2px solid #C3CAD4;vertical-align: middle;box-sizing: border-box;margin-top: -3px;}
+    /* label에 체크 된 상태 CSS */ 
+    .h-checkbox.checkbox04 input[type="checkbox"]:checked + label {color:var(--blue-3); } 
+    .h-checkbox.checkbox04 input[type="checkbox"]:checked + label:before {border-color: var(--blue-3);}
+    .h-checkbox.checkbox04 input[type="checkbox"]:checked + label:after {content:"";position: absolute;left: 4px;top: 3.5px;display: inline-block;width: 8px;height: 4px;border: 2px solid var(--blue-3);border-width: 0 0 2px 2px;transform: rotate(-45deg);z-index: 1;opacity: 1;border-radius: 0;background-color: transparent;}
+    /*포커싱되었을때*/
+    .h-checkbox.checkbox04.notxt input[type="checkbox"]:focus + label {color:var(--blue-2);}
+    /*hover*/
+    .h-checkbox.checkbox04 input[type="checkbox"] + label:after {content:"";display: inline-block;width: 4px;height: 4px;position: absolute;top: 6px;left: 7px;border-radius: 100%;opacity: 0;z-index: -1;transition: transform 0.2s, opacity 0.1s;background: var(--grey-1);}
+    .h-checkbox.checkbox04 input[type="checkbox"] + label:hover:after {transform: scale(8);transform-origin: center;opacity: 0.2;}
+    .h-checkbox.checkbox04 input[type="checkbox"]:checked + label:hover:after {transform: rotate(-45deg); opacity: 1; z-index: 1; border-radius: 0; background: transparent; transition:none;}
+
 
 
 
@@ -535,7 +550,7 @@ button
  .h-popup.popup-03 .pop-header .subTitle01 { position: relative; font-size: var(--text-subtitle2); padding-top: 20px; margin-bottom: 8px; line-height: 21px; text-overflow: clip; -webkit-line-clamp: 1; -webkit-box-orient: vertical; display: -webkit-inline-box; overflow: hidden; width: 100%; } 
  .h-popup.popup-03 .pop-header .subTitle01:before { content: ''; width: 100%; height: 1px; background: var(--grey-3); position: absolute; left: 0; top: 0; } 
  .h-popup.popup-03 .pop-header .subTitle02 { line-height: 20px; text-overflow: clip; -webkit-line-clamp: 1; -webkit-box-orient: vertical; display: -webkit-inline-box; overflow: hidden; width: 100%; } 
- .h-popup.popup-03 .pop-container { padding: 20px 40px; } 
+ .h-popup.popup-03 .pop-container { /*padding: 20px 40px;*/ padding:30px 40px 40px; } 
  .h-popup.popup-03 .pop-body { height: calc(100% - 190px); } 
  .h-popup-b-g a{margin-bottom: 8px;}
 
