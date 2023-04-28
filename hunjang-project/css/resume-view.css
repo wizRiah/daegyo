@@ -45,7 +45,7 @@ body::-webkit-scrollbar { display:none; }
 .h-resume-wrap .h-linebox {display:flex; flex-flow:column wrap; justify-content:center; padding:30px; border-top:1px solid var(--grey-3); border-bottom:1px solid var(--border-basic-4); word-wrap:break-word; word-break:keep-all; box-sizing:border-box;}
 
 
-/* ==================================== 일반이력서 보기 ==================================== */
+/* ==================================== 이력서 보기 ==================================== */
 /* 이력서 사진 */
 .h-resume-wrap .h-photo {position:relative; width:110px; height:133px; border-radius:4px; overflow:hidden;}
 .h-resume-wrap .h-photo::before {position:absolute; top:0; left:0; content:''; width:100%; height:100%; background-color:var(--neutral-3); border:1px solid var(--border-basic-3); border-radius:4px; box-sizing:border-box; font-family:'Material Icons Outlined'; /* content:'familiar_face_and_zone'; */}
@@ -104,6 +104,7 @@ body::-webkit-scrollbar { display:none; }
 /* 희망 근무지 */
 .h-resume-wrap .h-region-list li:not(:last-child)::after {display:inline-block; content:','; margin-right:8px; color:var(--blue-4);}
 .h-resume-wrap .h-region-list li a {display:inline-block; height:auto; line-height:normal; padding:0; margin:0; font-size:var(--text-subtitle3);}
+.h-resume-wrap .h-region-list li a:before {display:none;}
 .h-resume-wrap .h-region-list li a span {display:inline-block; margin:0 !important; text-decoration:underline !important;}
 .h-resume-wrap .h-region-list li a span:not(:last-child)::after {display:inline-block; content:'\00a0>\00a0'; text-decoration:underline !important;}
 
@@ -126,12 +127,14 @@ body::-webkit-scrollbar { display:none; }
 .h-resume-wrap .intro-wrap + .intro-wrap {margin-top:50px;}
 .h-resume-wrap .intro-wrap .tit + .txt-box {margin-top:15px; word-wrap:break-word; word-break:keep-all;}
  
-
-/* ==================================== 파일이력서 보기 ==================================== */
-/* 이력서 파일 미리보기 */
-.h-resume-wrap .h-file-view-wrap {padding:40px; background-color:#fff;}
-.h-resume-wrap .h-file-view-wrap .view-box {display:flex; flex-flow:row wrap; justify-content:center; align-items:flex-start; height:400px; padding:25px; background-color:var(--neutral-3); overflow-y:auto; box-sizing:border-box;}
-.h-resume-wrap .h-file-view-wrap .view-box * {width:auto; max-width:75%;}
+/* 이력서 파일 미리보기, 이력서 링크 (URL) */
+.h-resume-wrap .h-add-view-wrap {padding:40px; background-color:#fff;}
+.h-resume-wrap .h-add-view-wrap :is(.view-box, .link-box) {display:flex; flex-flow:row wrap; background-color:var(--neutral-3); box-sizing:border-box;}
+    .h-resume-wrap .h-add-view-wrap .view-box {justify-content:center; align-items:flex-start; height:400px; padding:25px; overflow-y:auto;}
+    .h-resume-wrap .h-add-view-wrap .view-box * {width:auto; max-width:75%;} 
+    .h-resume-wrap .h-add-view-wrap .link-box {align-items:center; padding:18px 18px 18px 30px;}
+    .h-resume-wrap .h-add-view-wrap .link-box .h-button-underline {height:auto; line-height:normal; padding:0; margin:0; font-size:var(--text-subtitle1);}
+    .h-resume-wrap .h-add-view-wrap .link-box .h-button-underline:before {display:none;}
 
 
 /* 간격 */
