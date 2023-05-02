@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 /* ==================================== Layout ==================================== */
-body{-ms-overflow-style:none; }
-body::-webkit-scrollbar { display:none; }
-
 .h-resume-wrap {display:flex; flex-flow:row wrap; height:100%;}
 .h-resume-wrap header {position:fixed; z-index:10; order:1; width:100%;}
 .h-resume-wrap .container {order:2; top:85px; left:0; width:calc(100% - 250px); height:calc(100vh - 85px); overflow-y:scroll;}
@@ -184,3 +181,30 @@ body::-webkit-scrollbar { display:none; }
 .h-resume-wrap .h-tit-box-1 {margin-top:60px;}
 .h-resume-wrap .h-tbl-basic-1 + .h-tbl-basic-1 {margin-top:30px;}
 .h-resume-wrap .r-side .h-register .h-register-tit + .h-register-cate {margin-top:15px;}
+
+
+
+/* ==================================== Window Popup ==================================== */
+.h-winpop-wrap {padding:20px 0; box-sizing:border-box;}
+.h-winpop-wrap.bg-white {background-color:#fff;} 
+.h-winpop-wrap.bg-neutral-3 {background-color:var(--neutral-3);}
+
+.h-winpop-wrap .h-winpop-header {max-width:1100px; margin-left:auto; margin-right:auto; padding:0 20px; box-sizing:border-box;}
+.h-winpop-wrap .h-winpop-header .h-tit-box-1 {margin-top:0;}
+.h-winpop-wrap .h-winpop-header .h-tit-box-1 [class^="h-button"] {margin:0;}
+.h-winpop-wrap .h-winpop-header .h-subbox-basic {padding:30px; margin-bottom:30px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+
+.h-bullet-list {display:flex; flex-flow:row wrap; align-items:center;}
+.h-bullet-list li {position:relative; padding-left:6px; font-size:var(--text-subtitle4); font-weight:var(--text-medium); color:var(--black-2);}
+.h-bullet-list li:not(:first-child) {margin-left:20px;}
+.h-bullet-list li::before {position:absolute; top:8px; left:0; content:''; width:2px; height:2px; border-radius:50%; background-color:var(--black-3);}
+.h-bullet-list li .tit {font-weight:var(--text-regular); color:var(--black-3);}
+.h-bullet-list li .tit::after {content:':'; margin-left:5px; margin-right:5px;}
+
+.h-winpop-wrap .h-resume-wrap .container {top:0; width:100%; max-width:1100px; height:100vh; padding:0 20px 20px; margin-left:auto; margin-right:auto; box-sizing:border-box;}
+.h-winpop-wrap .hunjang-wrap .content {padding-top:0;}
+
+
+@media print {
+	.no-print {display:none;}
+}
