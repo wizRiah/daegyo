@@ -206,5 +206,11 @@
 
 
 @media print {
+    /* 프린트 영역 노출 안됨 */
 	.no-print {display:none;}
+
+    /* 배경색 포함 프린트 */
+    .status, .h-emoticon::before,
+    .h-resume-wrap .h-status-wrap .score,
+    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
 }
