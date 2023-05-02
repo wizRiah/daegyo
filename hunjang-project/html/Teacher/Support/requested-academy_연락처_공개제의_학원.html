@@ -84,14 +84,14 @@
             <img src="../../../images/icon_house_black.png" style="width:14px; height:15px;">
           </li>
           <li class="material-icons">강사 서비스</li>
-          <li class="material-icons active">연락처 공개요청 학원</li>
+          <li class="material-icons active">연락처 공개제의 학원</li>
         </ul>
 
         <!-- 타이틀 -->
         <div class="my-txtbox">
-          <strong class="text-h1">연락처 공개요청 학원</strong>
+          <strong class="text-h1">연락처 공개제의 학원</strong>
           <ul class="text-subtitle4">
-            <li>인재정보에서 면접제의를 위해 연락처 공개를 요청한 학원 정보가 표기됩니다.</li>
+            <li>인재정보에서 면접제의를 위해 연락처 공개를 제의한 학원 정보가 표기됩니다.</li>
             <li>목록의 수락 버튼을 클릭하시면, 해당 학원에게만 연락처가 공개되어 유선면담 또는 면접제의가 가능해 집니다.</li>
             <li>요청이 왔으나 공개를 희망하지 않는 경우 거절 버튼을 클릭하시면 연락처 공개가 거절되고 이후 수정을 할 수 없습니다.</li>
             <li>연락처 공개요청 학원 중 이력서를 공개하고 싶지 않은 학원을 열람제한 설정하시면, 해당 학원에 이력서가 공개되지 않습니다.</li>
@@ -102,21 +102,25 @@
 
 
         <br><br>
-
+       
         <div class="flex flex-between mb15">
           <div class="flex" style="margin-right: auto;">
             <a href="#" class="h-button-ml h-button-teal h-button-add" style="margin-left: 0;">이력서 열람제한 설정
                 <span class="material-symbols-outlined">add_circle</span>
             </a>
-            <a href="#" class="h-button-ml">이력서 열람제한 해제</a>
+            <a href="#" class="h-button-ml">선택삭제</a>
           </div>
           <div class="flex flex-center">
-            <select>
-              <option value="" selected="">전체</option>
-              <option value="">수락</option>
-              <option value="">거절</option>
-              <option value="">미응답</option>
-            </select>
+            <div class="h-radio-02 mr10">
+              <input type="radio" id="hcheck02_1" name="hcheck02" checked="">
+              <label for="hcheck02_1">전체</label>
+              <input type="radio" id="hcheck02_2" name="hcheck02">
+              <label for="hcheck02_2">수락</label>
+              <input type="radio" id="hcheck02_3" name="hcheck02">
+              <label for="hcheck02_3">거절</label>
+              <input type="radio" id="hcheck02_4" name="hcheck02">
+              <label for="hcheck02_4">제안보기</label>
+          </div>
             <select >
               <option value="" selected="">20개씩 보기</option>
               <option value="">40개씩 보기</option>
@@ -150,10 +154,10 @@
                   <label for="check_all"></label>
                 </div>
               </th>
-              <th>요청일</th>
-              <th>학원명 / 주소 / 연락처</th>
-              <th>진행중인 공고</th>
+              <th>제안일</th>
+              <th>학원명 / 채용제목</th>
               <th>요청상태</th>
+              <th>응답일</th>
             </tr>
           </thead>
           <tbody class="text-subtitle4">
@@ -177,26 +181,20 @@
                   </div>
 
                   <div class="academy-wrap">
-                    <p class="academy txt-ellipsis h-txt-1 h-txt-regular text-subtitle5 h-txt-2"
-                      style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
+                    <p class="academy txt-ellipsis h-txt-regular text-subtitle3 h-txt-3" style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
                   </div>
 
-                  <span class="text-subtitle5">Tel :<em class="h-txt-2"> 02 123-4567 </em></span>
+                  
                 </div>
               </td>
               <td>
 
-                <p class="td-nomarl">
-                  <a href="#" class="h-button-txt text-h4 h-button-nobg h-button-underline h-button-xs h-ud-em">5</a>건
-                </p>
+                <a href="javascript:void(0);" class="h-button-ml h-button-white">제안보기</a>
               </td>
               <td>
+                <p class="text-subtitle5">2022.11.18</p>
 
-                <div class="button-group flex inline">
-                  <a href="#" class="h-button-m h-button-grey1 ac on">수락</a>
-                  <a href="#" class="h-button-m h-button-grey1 rf">거절</a>
-                </div>
-              </td>
+              <p class="text-subtitle5 h-txt-orange">D-5</p></td>
 
             </tr>
             <tr>
@@ -219,33 +217,27 @@
                   </div>
 
                   <div class="academy-wrap">
-                    <p class="academy txt-ellipsis h-txt-1 h-txt-regular text-subtitle5 h-txt-2"
-                      style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
+                    <p class="academy txt-ellipsis h-txt-regular text-subtitle3 h-txt-3" style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
                   </div>
 
-                  <span class="text-subtitle5">Tel :<em class="h-txt-2"> 02 123-4567 </em></span>
+                  
                 </div>
               </td>
               <td>
 
-                <p class="td-nomarl">
-                  <a href="#" class="h-button-txt text-h4 h-button-nobg h-button-underline h-button-xs h-ud-em">3</a>건
-                </p>
-              </td>
+                <p class="text-subtitle4 h-txt-2 h-txt-medium">수락</p>
+              <p class="text-subtitle5">2022.11.18</p></td>
               <td>
+                <p class="text-subtitle5">2022.11.18</p>
 
-                <div class="button-group flex inline">
-                  <a href="#" class="h-button-m h-button-grey1 ac on">수락</a>
-                  <a href="#" class="h-button-m h-button-grey1 rf">거절</a>
-                </div>
-              </td>
+              <p class="text-subtitle5 h-txt-orange">자동거절</p></td>
 
             </tr>
             <tr>
               <td>
                 <div class="h-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="sel_03">
-                  <label for="sel_03"></label>
+                  <input type="checkbox" name="checkForm" id="sel_02">
+                  <label for="sel_02"></label>
                 </div>
               </td>
               <td>
@@ -261,26 +253,20 @@
                   </div>
 
                   <div class="academy-wrap">
-                    <p class="academy txt-ellipsis h-txt-1 h-txt-regular text-subtitle5 h-txt-2"
-                      style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
+                    <p class="academy txt-ellipsis h-txt-regular text-subtitle3 h-txt-3" style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
                   </div>
 
-                  <span class="text-subtitle5">Tel :<em class="h-txt-2"> 02 123-4567 </em></span>
+                  
                 </div>
               </td>
               <td>
 
-                <p class="td-nomarl">
-                  <a href="#" class="h-button-txt text-h4 h-button-nobg h-button-underline h-button-xs h-ud-em">5</a>건
-                </p>
-              </td>
+                <p class="text-subtitle4 h-txt-6 h-txt-medium">거절</p>
+              <p class="text-subtitle5">2022.11.18</p></td>
               <td>
+                <p class="text-subtitle5">2022.11.18</p>
 
-                <div class="button-group flex inline">
-                  <a href="#" class="h-button-m h-button-grey1 ac on">수락</a>
-                  <a href="#" class="h-button-m h-button-grey1 rf">거절</a>
-                </div>
-              </td>
+              <p class="text-subtitle5 h-txt-orange">D-5</p></td>
 
             </tr>
             <tr>
@@ -303,25 +289,19 @@
                   </div>
 
                   <div class="academy-wrap">
-                    <p class="academy txt-ellipsis h-txt-1 h-txt-regular text-subtitle5 h-txt-2"
-                      style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
+                    <p class="academy txt-ellipsis h-txt-regular text-subtitle3 h-txt-3" style="margin: 7px 0 4px;">경기도 김포시 김포한강2로</p>
                   </div>
 
-                  <span class="text-subtitle5">Tel :<em class="h-txt-2"> 02 123-4567 </em></span>
+                  
                 </div>
               </td>
               <td>
 
-                <p class="td-nomarl">
-                  <a href="#" class="h-button-txt text-h4 h-button-nobg h-button-underline h-button-xs h-ud-em"></a>
-                </p>
-              </td>
+                <p class="text-subtitle4 h-txt-6 h-txt-medium">거절</p>
+              <p class="text-subtitle5">2022.11.18</p></td>
               <td>
+                <p class="text-subtitle5">2022.11.18</p>
 
-                <div class="button-group flex inline">
-                  <a href="#" class="h-button-m h-button-grey1 ac">수락</a>
-                  <a href="#" class="h-button-m h-button-grey1 rf on">거절</a>
-                </div>
               </td>
             </tr>
           </tbody>
