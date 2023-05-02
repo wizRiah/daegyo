@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>(공통)입사지원팝업#3</title>
+  <title>(공통)입사지원팝업#5</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
@@ -22,49 +22,30 @@
       <div class="h-popup popup-03 ui-draggable" style="width: 620px; height: fit-content; overflow-y: auto;">
         <div class="pop-header">
           <p class="pop-title text-h2">입사지원</p>
-
-          <p class="h-txt-2 text-subtitle2 top-result h-txt-c">
-            입사지원 하시려는 공고 <span class="h-txt-pit h-txt-medium">4건</span> 중<br>
-            지원분야 선택이 필요한 공고가 <span class="h-txt-orange h-txt-medium">3건</span> 있습니다.
-          </p>
-
-          <ul class="academy-list">
-            <li>
-              <p class="subTitle01 h-txt-3">서울아카데미 수학학원</p>
-              <select name="" id="" class="wd100">
-                <option value="" disabled="" selected="">모집과목 선택</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </li>
-
-            <li>
-              <p class="subTitle01 h-txt-3">훈장마을 구로디지털단지 1호점</p>
-              <select name="" id="" class="wd100">
-                <option value="" disabled="" selected="">모집과목 선택</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </li>
-
-            <li>
-              <p class="subTitle01 h-txt-3">뉴파인 동탄특목관학원</p>
-              <select name="" id="" class="wd100">
-                <option value="" disabled="" selected="">모집과목 선택</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </li>
-
-
-          </ul>
+          <p class="subTitle01 h-txt-3">서울아카데미 수학학원</p>
+          <p class="subTitle02 h-txt-1 h-tit-18 h-txt-bold">훈장마을 영어, 국어, 사회, 음악 강사 상반기 공개채용</p>
+          <select name="" id="" class="wd100 mt15">
+            <option value="" disabled="" selected="">모집과목 선택</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
         </div>
 
         <div class="pop-body">
           <div class="pop-container">
+
+            <!-- 지원이력서 없는 경우-->
+            <div class="resume-top-tit flex flex-between flex-center">
+              <p class="text-subtitle1 h-txt-bold">지원 이력서</p>
+              <!-- <button class="text-subtitle4 pop-arrow-btn">총 <span class="h-txt-pit h-txt-bold">0</span>개의 이력서</button> -->
+            </div>
+
+            <div class="basic-serchbox text-subtitle4 h-txt-c">
+              <p class="mb10">작성된 이력서가 없습니다. 이력서 등록 후 입사지원해 주세요.</p>
+              <a href="javascript:void(0);" class="h-button-xms">이력서 작성하기</a>
+            </div>
+            <!-- // -->
 
             <!-- 지원이력서 있는 경우 -->
             <div class="resume-top-tit flex flex-between flex-center">
@@ -139,7 +120,8 @@
             </div>
             <!-- // -->
 
-            <!-- 자사 이력서 -->
+
+            <!-- 자사 이력서 없을 경우-->
             <div class="resume-top-tit flex flex-between flex-center">
               <p class="text-subtitle1 h-txt-bold">자사 이력서</p>
               <div class="resume-top-btn">
@@ -148,25 +130,16 @@
               </div>
             </div>
 
-            <div class="basic-serchbox">
-              <ul class="file-type">
-                <li>
-                  <a href="#" class="h-button-txt h-button-nobg h-button-underline">자사양식이력서_홍길동.hwp</a>
-                  <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="h-button-txt h-button-nobg h-button-underline">훈장마을_자사양식이력서_홍길동_20221122.hwp</a>
-                  <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                </li>
-              </ul>
+            <div class="basic-serchbox text-subtitle4 h-txt-c">
+              <p>작성하신 자사 이력서를 첨부 후 지원해 주세요.</p>
             </div>
             <!-- // -->
 
-            <!-- 연락처 -->
+            <!-- 연락처 수정할 경우 -->
             <div class="resume-top-tit flex flex-between flex-center">
               <p class="text-subtitle1 h-txt-bold">연락처</p>
               <div class="resume-top-btn">
-                <a href="javascript:void(0);" class="h-button-xms m0">연락처 수정</a>
+                <a href="javascript:void(0);" class="h-button-xms h-button-cyan m0">수정 완료</a>
               </div>
             </div>
 
@@ -184,7 +157,7 @@
             </div>
             <!-- // -->
 
-            <!-- 첨부파일 -->
+            <!-- 첨부파일 없을 경우-->
             <div class="resume-top-tit flex flex-between flex-center">
               <p class="text-subtitle1 h-txt-bold">첨부 파일</p>
               <div class="resume-top-btn">
@@ -192,23 +165,11 @@
               </div>
             </div>
 
-            <div class="basic-serchbox">
-              <ul class="file-type">
-                <li>
-                  <a href="#" class="h-button-txt h-button-nobg h-button-underline">포트폴리오파일.zip</a>
-                  <div class="file-byte">
-                    <span class="h-txt-3 text-subtitle6">999.4KB</span>
-                    <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                  </div>
-                </li>
-                <li>
-                  <a href="#" class="h-button-txt h-button-nobg h-button-underline">경력을 증명할 수 있는 문서파일_2022.04.14.docx</a>
-                  <div class="file-byte">
-                    <span class="h-txt-3 text-subtitle6">999.4KB</span>
-                    <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                  </div>
-                </li>
-              </ul>
+            <div class="basic-serchbox text-subtitle4 h-txt-c">
+              <p>
+                파일추가 버튼 클릭 시 파일 브라우저가 실행됩니다.
+                <br><span class="h-txt-3">(첨부파일 5개, 파일당 5MB 이하만 첨부 가능)</span>
+              </p>
             </div>
 
             <ul class="text-subtitle5 h-txt-3 mt15">
