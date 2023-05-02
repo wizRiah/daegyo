@@ -19,7 +19,7 @@
 .my-txtbox .text-subtitle4 li.em{color:var( --orange);}
 
 .h-over-hidden {overflow:hidden;}
-.h-subtxtbox-01 {padding:40px; margin-bottom:75px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+.h-subtxtbox-01 {padding:40px; margin-bottom:70px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
 .h-subtxtbox-01 .h-radio-02 {background:#fff;}
 
 
@@ -275,10 +275,13 @@
 
 /* ==================================== 관심학원 =============================== */
 /* 탭 버튼 */
-.h-tab-wrap [class^="h-button"] {position:relative; margin:0; transition:all ease-out 0.3s;}
-.h-tab-wrap [class^="h-button"] + [class^="h-button"] {margin-left:5px;}
+.h-tab-wrap [class^="h-button"] {position:relative; background-color:#fff; color:var(--black-2); transition:all ease-out 0.3s;}
+.h-tab-wrap [class^="h-button"]:first-child {margin-left:0;}
+.h-tab-wrap [class^="h-button"]:last-child {margin-right:0;}
+.h-tab-wrap .active {cursor:default;}
+.h-tab-wrap .active,
 .h-tab-wrap [class^="h-button"]:hover {background-color:var(--cyan);}
-.h-tab-wrap .h-button-cyan :is(*),
+.h-tab-wrap .active :is(*),
 .h-tab-wrap [class^="h-button"]:hover :is(*) {color:#fff;}
 
 /* App 설치 */
@@ -296,6 +299,7 @@
 /* 내 이력서 열람학원 */
 .my-txtbox .text-h1 + .h-subtxtbox-01 {margin-bottom:30px;}
 .my-txtbox .text-h1 + .h-subtxtbox-01 + ul {margin-bottom:20px;}
-
-
+.my-txtbox ~ .h-tbl-basic-1 .h-job-check-wrap {margin-left:20px;}
+.my-txtbox ~ .h-tbl-basic-1 .h-job-check-wrap .h-job-info {min-width:800px;}
+.my-txtbox ~ .h-tbl-basic-1 .check-read {display:flex; flex-flow:row wrap; justify-content:center; align-items:center; padding-left:10px; padding-right:10px; font-weight:var(--text-medium); font-size:var(--text-subtitle6); color:#fff; text-align:center; background-color:var(--grey-1); border-radius:13px; box-sizing:border-box;}
 

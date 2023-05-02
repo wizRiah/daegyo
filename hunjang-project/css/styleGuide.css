@@ -85,6 +85,7 @@
 /* input */
 input[type="text"] {width:100%; height:45px;padding:0 20px;border:1px solid var(--border-basic-2);border-radius: 4px;box-sizing: border-box; font-size: var(--text-subtitle4);}
 input[type="text"]:disabled {background:var(--neutral-1);}
+.h-field-wrap input[type="text"]:disabled + .include_txt {background:var(--neutral-1); height:52px; line-height:50px;}
 input::placeholder { color:var(--black-6); } 
 .inp-type-basic input { padding:15px; border-radius: 4px; border: 1px solid var(--border-basic-2); } 
 .inp-type-basic input:focus { outline: none !important; border-color: var(--border-basic-1); transition: all ease 0.5s; } 
@@ -671,3 +672,12 @@ TAB
 .h-tab-Contents-02>.tabCo-Wrap:before {content:"";width: 100%;display: inline-block;border-top: 1px solid #606060;position: absolute;z-index: -1;margin-top: 0px;}
 .h-tab-Contents-02>input[type="radio"]:first-child + label {border-left-width:1px;}
 .h-tab-Contents-02>input[type="radio"] + label:before {background:var(--grey-1);}
+
+
+/* 상태 이모티콘 */
+.h-emoticon {position:relative; z-index:1; font-size:34px !important;}
+.h-emoticon::before {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:-1; content:''; width:28px; height:28px; border-radius:50%;}
+    .h-emoticon.type01::before {background-color:#00B71E;}
+    .h-emoticon.type02::before {background-color:#B1D322;}
+    .h-emoticon.type03::before {background-color:#FFEA02;}
+    .h-emoticon.type04::before {background-color:#FF9100;}
