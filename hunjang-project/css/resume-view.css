@@ -110,7 +110,7 @@
 
 /* 시강(영상) */
 .h-resume-wrap .h-video-list {display:inline-flex; flex-flow:row wrap; align-content:flex-start; margin-left:auto; margin-right:auto; width:940px;}
-.h-resume-wrap .h-video-list li {position:relative; align-items:center; flex:0 1 300px; height:168px; overflow:hidden;}
+.h-resume-wrap .h-video-list li {position:relative; align-items:center; flex:0 1 300px; height:168px; box-sizing:border-box; overflow:hidden;}
 .h-resume-wrap .h-video-list li:not(:nth-child(3n+1)) {margin-left:20px;}
 .h-resume-wrap .h-video-list li:nth-child(n+4) {margin-top:20px; align-content:flex-start;}
 .h-resume-wrap .h-video-list li .h-button-video {position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; padding:0; margin:0; border-radius:0; background-color:#00000080; box-sizing:border-box; transition:background-color ease-out 0.3s;}
@@ -214,3 +214,4 @@
     .h-resume-wrap .h-status-wrap .score,
     .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
 }
+@page {size:auto; margin:10mm;}
