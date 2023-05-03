@@ -37,19 +37,24 @@
               <li>3. 사진을 새로 등록 또는 변경하면 작성한 이력서에서도 사진이 변경됩니다.</li>
             </ul>
             <div class="h-img-preview flex items-start">
-              <div class="before"><strong class="text-subtitle3 h-txt-2 h-txt-medium h-txt-c block"
-                  style="padding-bottom: 10px;">원본사진</strong>
-                <div class="preview on">
-                  <img id="imgView01" style="object-fit: contain;"
-                  src="../../../images/sprite_gnb_icons.f5fae357.png">
-                </div>
+              <div class="before">
+                <strong class="text-subtitle3 h-txt-2 h-txt-medium h-txt-c block" style="padding-bottom: 10px;">원본사진</strong>
                 <!-- 클래스 "on" 추가 시(이미지 등록 후), 도움말 삭제됌.-->
+                <div class="preview">
+                  <!-- <img id="imgView01" src="../../../images/resume_test.jpg"> -->
+                  <input type="file" id="file01" name="file01" title="첨부된 이미지" onchange="('file01', 'imgView01');" style="display:none;">
+                </div>
               </div>
+
               <div class="arrow flex flex-center flex-1">
                 <span class="material-symbols-outlined">arrow_forward_ios</span>
               </div>
-              <div class="after"><strong class="text-subtitle3 h-txt-2 h-txt-medium h-txt-c block" style="padding-bottom: 10px;">이력서용 사진</strong>
-                <div class="preview"></div>
+              <div class="after">
+                <strong class="text-subtitle3 h-txt-2 h-txt-medium h-txt-c block" style="padding-bottom: 10px;">이력서용 사진</strong>
+                <div class="preview">
+                  <!-- <img id="imgView02" src="../../../images/resume_test.jpg"> -->
+                  <input type="file" id="file02" name="file02" title="첨부된 이미지" onchange="('file02', 'imgView02');" style="display:none;">
+                </div>
               </div>
             </div>
             <div class="basic-serchbox">
@@ -61,7 +66,7 @@
               </div>
               <ul class="text-subtitle5 h-txt-3 wd100 mt10">
                 <li>사진파일은 10MB 미만의 jpg, gif 파일만 업로드 가능합니다.</li>
-                <li>사진 크기는 100 x 133 픽셀이 가장 선명하게 표기됩니다.</li>
+                <li>사진 크기는 110 x 133 픽셀이 가장 선명하게 표기됩니다.</li>
               </ul>
             </div>
             <div class="flex flex-set mt20">
