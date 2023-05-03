@@ -238,6 +238,12 @@ button
 .button-group a.on.ac{ background-color:var(--cyan); }
 
 
+/* 원형 버튼 */
+.h-button-circle-20 {position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%;}
+[class^="h-button-circle"]::after {display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; font-family:'Material Icons'; font-style:normal; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box;}
+[class^="h-button-circle"].edit::after {content:'edit'; font-size:12px;}
+[class^="h-button-circle"].remove::after {content:'close'; font-size:16px;}
+
 
 
 @keyframes hbtnFX01 {
@@ -592,6 +598,8 @@ input[type="text"]::placeholder {color:var(--black-6); font-size:var(--text-subt
 .h-txtfield-basic {height: 54px !important;padding: 0 19px !important;border: 1px solid var(--border-basic-2) !important;border-radius:4px !important;box-sizing: border-box;}
 .h-txtfield-basic:disabled {background-color:var(--neutral-1);}
 .h-txtfield-basic:disabled::placeholder {color:var(--black-2);}
+textarea.h-txtfield-basic {height:100px !important; padding:15px 20px !important; box-sizing:border-box;}
+textarea.h-txtfield-basic::placeholder {color:#BCBCBC;}
 
 /*02_버튼 있는 유형*/
 .h-field-wrap {height:54px;border:1px solid var(--border-basic-2); border-radius:4px;box-sizing: border-box;display: inline-block;overflow: hidden;position: relative;display: flex;flex-wrap: nowrap;align-items: center;width: 100%;}
@@ -672,7 +680,7 @@ TAB
 .h-tab-Contents-02>input[type="radio"] + label {width: 278px;height: 53px;line-height: 55px;text-align: center;font-size:var(--text-subtitle3);color:var(--black-6);background:var(--neutral-1);border: 1px solid var(--border-basic-2);border-bottom-color: #606060;z-index: 1;border-left-width: 0;}
 .h-tab-Contents-02>input[type="radio"]:checked + label {border: 1px solid #606060;border-bottom: none;color:var(--black-2);background: #fff;border-bottom-color: #fff;height: 54px;}
 .h-tab-Contents-02>.tabCo-Wrap {margin-top: -1px;background: #fff;}
-.h-tab-Contents-02>.tabCo-Wrap:before {content:"";width: 100%;display: inline-block;border-top: 1px solid #606060;position: absolute;z-index: -1;margin-top: 0px;}
+.h-tab-Contents-02>.tabCo-Wrap:before {content:"";width: 100%;display: inline-block;border-top: 1px solid #606060;position: absolute;z-index:1;margin-top: 0px;}
 .h-tab-Contents-02>input[type="radio"]:first-child + label {border-left-width:1px;}
 .h-tab-Contents-02>input[type="radio"] + label:before {background:var(--grey-1);}
 
