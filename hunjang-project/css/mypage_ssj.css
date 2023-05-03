@@ -57,14 +57,49 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 
 
 
+/* 타이틀입력부분 */
+.resume-reg-title {position:relative;}
+.resume-reg-title .h-field-wrap.titleSize.typenm.on + .my-resume-list {display:block;}
+.resume-reg-title .h-field-wrap.titleSize .h-txtfield-inner:focus {outline:none;}
+.resume-reg-title .my-resume-listBtn {position:relative;width:28px;height:28px;display:inline-block;border: 2px solid var(--grey-2);border-radius: 100%;box-sizing: border-box;margin: 3px 0 0 10px;}
+.resume-reg-title .my-resume-listBtn:before {content:"";width: 7px;height: 7px;display:inline-block;transform: rotate(225deg);border: 2px solid var(--grey-2); border-width: 2px 0 0 2px;margin: 0px 0 2px 1px;transition: transform 0.5s, margin 0.5s;}
+.resume-reg-title .my-resume-listBtn.on:before {transform:rotate(45deg);margin: 7px 0 0 0px;}
+.resume-reg-title .my-resume-list {display:none; position: absolute; top:81px; left: 0; width:100%; height:250px;overflow-y: scroll;background:#fff;border:2px solid var(--grey-3); border-radius:4px;box-shadow:0px 5px 10px #0000001A;box-sizing: border-box;z-index: 1;}
+.resume-reg-title .my-resume-list ul {padding-top: 10px;}
+.resume-reg-title .my-resume-list ul li {font-size: 18px;padding: 9px 28px 10px;transition:background 0.5s;}
+.resume-reg-title .my-resume-list ul li:before {content:"\b7";display: inline-block;}
+.resume-reg-title .my-resume-list ul li:hover {background:var(--neutral-3);}
+.resume-reg-title .my-resume-list ul li .rsmTit {display: inline-block;max-width: 95%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;vertical-align: middle;}
+.resume-reg-title .my-resume-list::-webkit-scrollbar { width:8px;}
+.resume-reg-title .my-resume-list::-webkit-scrollbar-track { background:transparent; }
+.resume-reg-title .my-resume-list::-webkit-scrollbar-thumb { background:#E1E1E1;}
+
 
 /*기본정보 - myInfo*/
 .resume-registForm .resume-reg-basicBox.myInfo {}
 .resume-registForm .resume-reg-basicBox.myInfo .infoLyot {width: 100%; display: flex; flex-wrap: wrap;}
-.resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue {width: 180px; flex-shrink: 0;}
-.resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList {width: calc(100% - 180px);}
-.resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li {padding: 0 15px 0 40px;}
-.resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:first-child .h-field-wrap, .resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:last-child .h-field-wrap {width: 400px !important;}
+    /*좌측사진*/
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue {width:180px;flex-shrink:0;text-align: center;display: flex;flex-direction: column;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile {}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage {height: 133px;border-radius: 4px;background: #fff;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button {width: 100%;height: 100%;font-size: 13px;color: #BCBCBC;border-radius: 4px;background: #fff;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button:before {content:"+";color: #8C9197;font-size: 23px;width: 22px;height: 22px;line-height: 15px;border: 2px solid #8C9197;border-radius: 100%;display: inline-block;text-align: center;vertical-align: middle;box-sizing: border-box;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button span {width:100%;display: block;margin-top: 5px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage {height:133px;border-radius:4px;position: relative;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgbox {width: 100%; height: 100%; overflow: hidden; border-radius: 4px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgbox img {width: 100%;height: auto;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgmodify {font-size:13px;height:30px;width:100%;background: #00000080;position: absolute;bottom: 0;left: 0;color: #fff;border-radius: 0 0 4px 4px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete {overflow: hidden; position: absolute; display: flex; right: -10px; top: -10px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete:before {content: "close"; font-family: 'Material Icons'; display: inline-block; width: 20px; height: 20px; line-height: 19px; background-color: #c3cad3; text-indent: 0; text-align: center; color: #fff; border-radius: 100%; font-size: 15px; padding: 0.5px 0 0 0px; box-sizing: border-box; font-weight: 600; transition:all 0.5s;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete:hover:before {background:#7E7E7E;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile-Info {padding:20px 0 0;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile-Info strong {font-size:16px; color:#333;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile-Info p {font-size:13px;color:#7E7E7E;margin-top: 5px;}
+    /*우측입력*/
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList {width: calc(100% - 180px);}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li {padding: 0 15px 0 40px;}
+    .resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:first-child .h-field-wrap, .resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:last-child .h-field-wrap {width: 400px !important;}
+
 
 
 
@@ -96,7 +131,7 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 
 
 
-    
+
 
 
 /*경력사항 - career*/
@@ -154,12 +189,6 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .h-resume-video-wrap .h-resume-video-list li.video-none {background-color:var(--neutral-3);}
     .h-resume-video-wrap .h-resume-video-list li.video-none [class^="h-button"] {flex-flow:column wrap; width:100%; height:100%; line-height:normal; font-size:var(--text-subtitle5); margin:0; border:0;}
     .h-resume-video-wrap .h-resume-video-list li.video-none [class^="h-button"] i {color:var(--grey-1); margin-bottom:3px;}
-    /* 원형 버튼 */
-    .h-button-circle-20 {position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%;}
-    .h-button-circle-20 + [class^="h-button"] {margin-left:2px;}
-    [class^="h-button-circle"]::after {display:inline-block; font-family:'Material Icons'; font-style:normal; font-size:24px; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box; border:1px solid red;}
-    [class^="h-button-circle"].edit::after {content:'add_circle_outline';}
-    [class^="h-button-circle"].remove::after {content:'add_close_outline';}
 
 
 
