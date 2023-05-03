@@ -186,13 +186,20 @@
 
 /* ==================================== Window Popup ==================================== */
 .h-winpop-wrap {padding:20px 0; box-sizing:border-box;}
-.h-winpop-wrap.bg-white {background-color:#fff;} 
 .h-winpop-wrap.bg-neutral-3 {background-color:var(--neutral-3);}
+.h-winpop-wrap.bg-white,
+.h-winpop-wrap.bg-white .h-resume-wrap .container {background-color:#fff;} 
 
 .h-winpop-wrap .h-winpop-header {max-width:1100px; margin-left:auto; margin-right:auto; padding:0 20px; box-sizing:border-box;}
 .h-winpop-wrap .h-winpop-header .h-tit-box-1 {margin-top:0;}
 .h-winpop-wrap .h-winpop-header .h-tit-box-1 [class^="h-button"] {margin:0;}
 .h-winpop-wrap .h-winpop-header .h-subbox-basic {padding:30px; margin-bottom:30px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
+
+.h-winpop-wrap.bg-white .h-winpop-header {padding:0 40px;}
+.h-winpop-wrap.bg-white .h-winpop-header .h-tit-box-1 {margin-bottom:30px;}
+.h-winpop-wrap.bg-white .h-resume-wrap .h-resume-tit {padding-top:50px; border-top:0;}
+.h-winpop-wrap .h-tab-Contents-02 {max-width:1100px; margin-left:auto; margin-right:auto; padding:0 20px; box-sizing:border-box;}
+.h-winpop-wrap.bg-white .h-tab-Contents-02>.tabCo-Wrap {margin-left:20px; margin-right:20px; box-sizing:border-box;}
 
 .h-bullet-list {display:flex; flex-flow:row wrap; align-items:center;}
 .h-bullet-list li {position:relative; padding-left:6px; font-size:var(--text-subtitle4); font-weight:var(--text-medium); color:var(--black-2);}
@@ -203,6 +210,7 @@
 
 .h-winpop-wrap .h-resume-wrap .container {top:0; width:100%; max-width:1100px; height:100%; padding:0 20px 20px; margin-left:auto; margin-right:auto; overflow-y:hidden; box-sizing:border-box;}
 .h-winpop-wrap .hunjang-wrap .content {padding-top:0;}
+.h-winpop-wrap.bg-white .h-resume-wrap .container {padding:0 0 20px;}
 
 
 @media print {
@@ -215,3 +223,52 @@
     .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
 }
 @page {size:auto; margin:10mm;}
+
+
+/* Pop Uploading */
+.h-pop-uploading-wrap {position:absolute; top:0; left:0; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; width:100%; height:100%; background-color:#FFFFFFE6; box-sizing:border-box;}
+.h-pop-uploading-wrap .h-progress-wrap {display:inline-flex;}
+.h-pop-uploading-wrap .h-progress-wrap .h-progress {flex-flow:column wrap; width:300px;}
+.h-pop-uploading-wrap .h-progress-wrap .h-progress .h-progress-bar-inner {width:100%; height:10px; border-radius:5px; margin:0;}
+.h-pop-uploading-wrap .h-progress-wrap .h-progress .h-progress-bar-inner .h-progress-bar {background-color:var(--blue-3);}
+
+/* Pop 시강(영상) 보기 */
+.h-popup-wrap .h-video-wrap {position:relative; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; height:410px; box-sizing:border-box; overflow:hidden;}
+.h-popup-wrap .h-video-wrap .h-button-video {position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; padding:0; margin:0; border-radius:0; background-color:#00000080; box-sizing:border-box; transition:background-color ease-out 0.3s;}
+.h-popup-wrap .h-video-wrap:hover .h-button-video {background-color:#00000090;}
+.h-popup-wrap .h-video-wrap .h-button-video i {font-size:50px;}
+.h-popup-wrap .h-video-wrap video {width:auto; max-width:100%;}
+
+/* 이력서등록 - 시강(영상) */
+.h-resume-video-wrap .h-resume-video-cont {word-wrap:break-word; word-break:keep-all; box-sizing:border-box;}
+.h-resume-video-wrap .h-resume-video-cont + .h-resume-video-cont {margin-left:48px;}
+.h-resume-video-wrap .h-resume-video-tit {font-weight:var(--text-bold); font-size:var(--text-subtitle1); color:var(--black-2);}
+.h-resume-video-wrap .h-resume-video-tit i {color:var(--grey-2);}
+.h-resume-video-wrap .h-resume-video-tit span {display:inline-block; margin-left:10px; font-size:var(--text-subtitle5); color:var(--black-3); font-weight:var(--text-regular);}
+.h-resume-video-wrap .h-resume-video-txt {min-width:362px; color:var(--black-3);}
+.h-resume-video-wrap .h-resume-video-tit + .h-resume-video-txt,
+.h-resume-video-wrap .h-resume-video-tit + .h-resume-video-list,
+.h-resume-video-wrap .h-resume-video-txt p + p {margin-top:15px;}
+    /* 시강파일 */
+    .h-resume-video-wrap .h-resume-video-list {display:inline-flex;}
+    .h-resume-video-wrap .h-resume-video-list li {position:relative; align-items:center; flex:0 1 240px; height:134px; box-sizing:border-box; overflow:hidden;}
+    .h-resume-video-wrap .h-resume-video-list li:not(.video-none)::before {position:absolute; top:0; left:0; z-index:1; content:''; width:100%; height:100%; background-color:#00000080; transition:background-color ease-out 0.3s;}
+    .h-resume-video-wrap .h-resume-video-list li:hover::before {background-color:#00000090;}
+    .h-resume-video-wrap .h-resume-video-list li:not(:nth-child(odd)) {margin-left:10px;}
+    .h-resume-video-wrap .h-resume-video-list li .h-button-video {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:1; width:auto; height:auto; padding:0; margin:0; background-color:transparent; border-radius:0; box-sizing:border-box;}
+    .h-resume-video-wrap .h-resume-video-list li .h-button-video::before {display:none;}
+    .h-resume-video-wrap .h-resume-video-list li .h-button-video i {font-size:50px;}
+    .h-resume-video-wrap .h-resume-video-list li video {width:auto; max-width:100%;}
+    /* 수정, 삭제 버튼 */
+    .h-resume-video-wrap .h-resume-video-list li .h-video-btn-wrap {position:absolute; top:8px; right:8px; z-index:3;}
+    /* 시강파일 없는 경우 */
+    .h-resume-video-wrap .h-resume-video-list li.video-none {background-color:var(--neutral-3);}
+    .h-resume-video-wrap .h-resume-video-list li.video-none [class^="h-button"] {flex-flow:column wrap; width:100%; height:100%; line-height:normal; font-size:var(--text-subtitle5); margin:0; border:0;}
+    .h-resume-video-wrap .h-resume-video-list li.video-none [class^="h-button"] i {color:var(--grey-1); margin-bottom:3px;}
+    /* 원형 버튼 */
+    .h-button-circle-20 {position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%;}
+    .h-button-circle-20 + [class^="h-button"] {margin-left:2px;}
+    [class^="h-button-circle"]::after {display:inline-block; font-family:'Material Icons'; font-style:normal; font-size:24px; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box; border:1px solid red;}
+    [class^="h-button-circle"].edit::after {content:'add_circle_outline';}
+    [class^="h-button-circle"].remove::after {content:'add_close_outline';}
+
