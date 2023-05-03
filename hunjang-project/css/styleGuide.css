@@ -238,6 +238,12 @@ button
 .button-group a.on.ac{ background-color:var(--cyan); }
 
 
+/* 원형 버튼 */
+.h-button-circle-20 {position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%;}
+[class^="h-button-circle"]::after {display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; font-family:'Material Icons'; font-style:normal; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box;}
+[class^="h-button-circle"].edit::after {content:'edit'; font-size:12px;}
+[class^="h-button-circle"].remove::after {content:'close'; font-size:16px;}
+
 
 
 @keyframes hbtnFX01 {
