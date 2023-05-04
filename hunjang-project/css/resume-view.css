@@ -6,7 +6,7 @@
 .h-resume-wrap header .h-logo_wrap {position:absolute; left:40px; width:100px;}
 .h-resume-wrap header .h-logo_wrap img {max-width:100%;}
 .h-resume-wrap .container {order:2; top:85px; left:0; width:calc(100% - 250px); height:calc(100vh - 85px); overflow-y:scroll;}
-.h-resume-wrap .content {width:1000px; box-sizing:border-box;}
+.h-resume-wrap .content:not(.resume-registForm) {width:1000px; box-sizing:border-box;}
 .h-resume-wrap .col {display:flex; flex-flow:column nowrap; text-align:center;}
 
 
@@ -193,7 +193,7 @@
 
 .h-winpop-wrap .h-winpop-header {max-width:1000px; margin-left:auto; margin-right:auto; box-sizing:border-box;}
 .h-winpop-wrap .h-winpop-header .h-tit-box-1 {margin-top:0;}
-.h-winpop-wrap .h-winpop-header .h-tit-box-1 [class^="h-button"] {margin:0;}
+.h-winpop-wrap .h-winpop-header .h-tit-box-1 [class^="h-button"] {width:200px; margin:0;}
 .h-winpop-wrap .h-winpop-header .h-subbox-basic {padding:30px; margin-bottom:30px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
 
 .h-winpop-wrap.bg-white .h-winpop-header {padding:0 40px;}
@@ -304,6 +304,13 @@
 
 
 @media print {
+    html, body {width:210mm; height:297mm; page-break-inside:avoid; page-break-after:auto;}
+    table {page-break-inside:auto;}
+    tr    {page-break-inside:avoid; page-break-after:auto;}
+    thead {display:table-header-group;}
+    tfoot {display:table-footer-group;}
+    .h-winpop-wrap .hunjang-wrap .content {page-break-inside:avoid; page-break-after:auto;}
+
     /* 프린트 영역 노출 안됨 */
 	.no-print {display:none;}
 
