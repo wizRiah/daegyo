@@ -194,11 +194,13 @@
 .depth-box > li {position:relative; display: flex; padding-left:6px;}
 .depth-box > li:after {content:''; position:absolute; width:2px; height:2px; top:8px; left:0; background-color:var(--black-3);}
 .depth-box > li + li {margin-top:15px;}
-.depth-box ul.depth1 {display: flex;}
+.depth-box ul.depth1 {display: flex; flex-wrap: wrap;}
 .depth-box ul.depth1 > li:first-child:before {content:'>'; padding:0 5px; color:var( --black-6);}
 .depth-box ul.depth1 > li + li:before {content:','; padding:0 2px; color:var(--black-2);}
 .depth-box .depth1 + .depth1:before {content:'/'; padding:0 5px; color:var( --black-6);}
 
+.depth-box .depth-tit {float:left;}
+.depth-box .depth-tit:after {content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px;}
 .basic-serchbox .sett-btn-box {position:relative; margin-right:66px;}
 .basic-serchbox .sett-btn-box:after {content:''; position:absolute; top:0; right:-30px; width:1px; height:198px; background:var(--border-basic-4);}
 .basic-serchbox .sett-btn-box > a {display: flex; justify-content: space-between; width: 140px;padding: 0 25px;background: url('../images/sett_arrow_grey.png') no-repeat #fff 80% 50%;color:var(--black-2);font-weight: 500;font-size: var(--text-subtitle4);}
@@ -288,7 +290,7 @@
 .h-app-wrap {padding-left:40px; border-left:1px solid var(--border-basic-4); box-sizing:border-box;}
 .h-app-wrap .app-txt {margin-right:20px;}
 .h-app-wrap [class^="h-button"] {font-size:var(--text-subtitle5); line-height:normal;}
-.h-app-wrap [class^="h-button"] .imgbox {width:auto; height:auto; max-width:22px; max-height:22px; vertical-align:middle; overflow:hidden; margin-right:10px !important;} 
+.h-app-wrap [class^="h-button"] .imgbox {width:auto; height:auto; max-width:22px; max-height:22px; vertical-align:middle; overflow:hidden; margin-right:10px !important;}
 .h-app-wrap [class^="h-button"] .imgbox img {max-width:100%; max-height:100%;}
 .h-app-wrap [class^="h-button"] .txtbox {margin-left:0 !important; vertical-align:middle;}
 
@@ -302,4 +304,3 @@
 .my-txtbox ~ .h-tbl-basic-1 .h-job-check-wrap {margin-left:20px;}
 .my-txtbox ~ .h-tbl-basic-1 .h-job-check-wrap .h-job-info {min-width:800px;}
 .my-txtbox ~ .h-tbl-basic-1 .check-read {display:flex; flex-flow:row wrap; justify-content:center; align-items:center; padding-left:10px; padding-right:10px; font-weight:var(--text-medium); font-size:var(--text-subtitle6); color:#fff; text-align:center; background-color:var(--grey-1); border-radius:13px; box-sizing:border-box;}
-
