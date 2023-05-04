@@ -1,6 +1,7 @@
-@charset "utf-8"; /***** 팝업 공통*****/
+@charset "utf-8"; 
+/***** 팝업 공통*****/
  .h-popup-wrap { display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; } 
- .h-popup { height: fit-content; top: 10%; white-space: normal; display: block; word-wrap: break-word; min-height: 300px; border-radius: 15px; position: relative; margin: 0 auto; flex: 0 0 auto; z-index: 1001; max-height: 95%; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; padding: 40px; background-color: #fff; box-sizing: border-box; max-height: 790px!important; } 
+ .h-popup {/* height: fit-content;  */ top: 10%; white-space: normal; display: block; word-wrap: break-word; min-height: 300px; border-radius: 15px; position: relative; margin: 0 auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; padding: 40px; background-color: #fff; box-sizing: border-box; max-height: calc(100vh - 150px); } 
  .h-popup .pop-header { width: 100%; text-align: left; box-sizing: border-box; padding-bottom: 20px; } 
  .h-popup .pop-body { height: calc(100% - 47px); box-sizing: border-box; position: relative; overflow: hidden; } 
  .h-popup .pop-container { width: 100%; height: 100%; box-sizing: border-box; position: relative; word-wrap: break-word; overflow-y: auto; } 
@@ -211,5 +212,18 @@
 .h-resume-q .h-edit-sample .h-title-area .letter-count { align-items: center; align-self: flex-end; } 
 .h-resume-q .h-edit-sample .h-title-area .letter-count .l-item { position: relative; padding-right: 10px; } 
 .h-resume-q .h-edit-sample .h-title-area .letter-count .l-item::before { content: ""; position: absolute; right: 0; top: 50%; width: 1px; height: 14px; margin: -7px 0 0 0; background: var(--border-basic-4); } 
-.h-resume-q .h-edit-sample .h-edit-area { border: 1px solid var(--black-2); border-radius: 4px; } 
+.h-resume-q .h-edit-sample .h-edit-area { border: 1px solid var(--black-2); border-radius: 4px; box-sizing: border-box; position: relative; z-index: 2; overflow: hidden; } 
 .h-resume-q .h-edit-sample .h-edit-area .h-none { align-items: center; justify-content: center; min-height: 200px; text-align: center; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-edit-title { padding: 20px 20px 15px; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li { display: flex; border-top: 1px solid var(--border-basic-4); font-size: var(--text-subtitle2); color: var(--black-2); line-height: 26px; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list .h-edit-text { flex: 1; min-height: 80px; padding: 20px; box-sizing: border-box; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list .h-controls { flex-direction: column; align-items: center; flex: 0 0 59px; border-left: 1px solid var(--border-basic-4); box-sizing: border-box; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list .h-controls .h-btn-mod { position: relative; width: 100%; text-align: center; height: 40px; align-items: center; justify-content: center; font-size: var(--text-subtitle6); border-bottom: 1px solid var(--border-basic-4); box-sizing: border-box; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list .h-controls .h-btn-del { color: var(--black-5); } 
+
+/* 수정모드 : 클래스 "mod" 활성화 시 */
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li.mod .h-edit-text { background-color:var(--neutral-2); padding:0; height:120px; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li.mod .h-edit-text .h-text-field_slot { position: relative; display: flex!important; flex-direction: column; flex-wrap: wrap; min-width: 0; width: 100%; height: 100%; box-sizing: border-box; align-items: center; padding: 10px; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li.mod .h-edit-text .h-text-field_slot textarea { color: var(--black-2); flex: 1 1 auto; line-height: 22px; max-width: 100%; min-height: 60px; resize: none; border-style: none; background-color: transparent; padding: 10px; align-self: stretch; box-sizing: border-box; font-size:var(--text-subtitle4); } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li.mod .h-controls .h-controls-df { display:none; } 
+.h-resume-q .h-edit-sample .h-sample-edit-cont .h-sample-list li.mod .h-controls .h-controls-mod { display:block!important; } 
