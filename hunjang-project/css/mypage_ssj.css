@@ -59,6 +59,8 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 
 /* 타이틀입력부분 */
 .resume-reg-title {position:relative;}
+.resume-reg-title .h-field-wrap.titleSize.typenm label {padding: 0 0px 0 30px; width: 120px; font-size: 15px; color: #9A9A9A;}
+.resume-reg-title .h-field-wrap.titleSize.typenm .h-txtfield-inner {}
 .resume-reg-title .h-field-wrap.titleSize.typenm.on + .my-resume-list {display:block;}
 .resume-reg-title .h-field-wrap.titleSize .h-txtfield-inner:focus {outline:none;}
 .resume-reg-title .my-resume-listBtn {position:relative;width:28px;height:28px;display:inline-block;border: 2px solid var(--grey-2);border-radius: 100%;box-sizing: border-box;margin: 3px 0 0 10px;}
@@ -283,12 +285,26 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList {}
 .resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li>ul>li select:not(:only-child) {margin-right: 10px;}
 .resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li>ul>li:last-child .h-field-wrap {width: 300px; margin-right: 10px;}
-.resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li>ul>li:last-child .h-checkbox {}
+.resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li .innerbox-blue {margin-bottom: 18px;}
+.resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li .innerbox-blue>ul>li {padding:0;}
+.resume-registForm .resume-reg-basicBox.desired ul.desired_conditionList>li .innerbox-blue .labelArea {width: 85px;}
 
 
 /*취업우대사항  - preferential */
 .resume-registForm .resume-reg-basicBox.preferential {}
-.resume-registForm .resume-reg-basicBox.preferential .innerbox-blue {margin-top: 20px;justify-content: space-between;display: flex;align-items: center;padding: 22px 30px;}
+.resume-registForm .resume-reg-basicBox.preferential .innerbox-blue {margin-top: 20px; justify-content: space-between; display: flex; align-items: center; padding: 22px 30px;}
+.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li>ul>li {min-height: 46px;}
+
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList {width: 100%;display: none;flex-direction: row;flex-wrap: wrap;box-sizing: border-box;padding:5px 0 40px 116px;border-bottom: 1px solid #62666B;margin-bottom: 5px;}
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList.on {display: flex;}
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList>li {width: auto; min-height:46px;}
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList>li:last-child:not(:only-child) {width: 535px;}
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList input[type="text"] {width:450px;}
+.resume-registForm .resume-reg-basicBox.preferential .resume-regList>li:first-child .hiddenList input[type="text"] {width:600px;}
+.resume-registForm .resume-reg-basicBox.preferential .resume-regList>li:last-child .hiddenList {border-bottom: none; padding-bottom: 0;}
+.resume-registForm .resume-reg-basicBox.preferential input[type="text"],
+.resume-registForm .resume-reg-basicBox.preferential select {height:46px !important;}
+
 
 
 /*공개여부설정 - disclosure*/

@@ -64,8 +64,9 @@
 
 
           <div class="resume-reg-title">
-            <div class="h-field-wrap titleSize typenm">
-              <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="이름">
+            <div class="h-field-wrap titleSize typenm "> <!-- 여기에 on이 추가되면 제목리스트가 보여짐 -->
+              <label>이력서 제목<span class="necessary">필수</span></label>
+              <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="이력서 제목을 입력하세요. (본인의 강점을 제목에 요약해 보세요.)">
               <div class="typngNm">
                   (
                     <span>00</span>
@@ -1185,7 +1186,7 @@
                     <!-- 수정/삭제 버튼 -->
                     <div class="h-video-btn-wrap">
                       <a href="javascript:void(0);" class="h-button-circle-20 edit h-button-blue"></a>
-                      <a href="javascript:void(0);" class="h-button-circle-20 remove"></a>
+                      <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
                     </div>
   
                     <!-- 재생 버튼 -->
@@ -1831,7 +1832,103 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="innerbox-blue">
+                    <ul class="resume-regList">
+                      <li>
+                          <div class="labelArea">파트ㆍ알바</div>
+                          <ul>
+                            <li>
+                              <select class="input-wd-160">
+                                <option>1개월~3개월</option>
+                              </select>
+                            </li>
+                            <li>
+                              <select class="input-wd-160">
+                                <option>시간선택</option>
+                              </select>
+                            </li>
+                            <li>~</li>
+                            <li>
+                              <select class="input-wd-160">
+                                <option>시간선택</option>
+                              </select>
+                            </li>
+                          </ul>
+                      </li>
+                      <li>
+                        <div class="labelArea">단기</div>
+                        <ul>
+                          <li>
+                            <select class="input-wd-160">
+                              <option>1개월~3개월</option>
+                            </select>
+                          </li>
+                        </ul>
+                    </li>
+                    </ul>
+                  </div>
               </li>
+
+              <!-- 직원취업용 -->
+              <li>
+                <div class="labelArea">근무형태<span class="necessary">필수</span></div>
+                <ul>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="desiredSel012" id="desiredSel01_5">
+                      <label for="desiredSel01_5">정규직</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="desiredSel012" id="desiredSel01_6">
+                      <label for="desiredSel01_6">계약직</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="desiredSel012" id="desiredSel01_7" checked/>
+                      <label for="desiredSel01_7">아르바이트</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="desiredSel012" id="desiredSel01_8" checked/>
+                      <label for="desiredSel01_8">인턴</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="desiredSel012" id="desiredSel01_9">
+                      <label for="desiredSel01_9">근무형태 무관</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="innerbox-blue">
+                  <ul class="resume-regList">
+                    <li>
+                        <div class="labelArea">아르바이트</div>
+                        <ul>
+                          <li>
+                            <select class="input-wd-160">
+                              <option>1개월~3개월</option>
+                            </select>
+                          </li>
+                        </ul>
+                    </li>
+                    <li>
+                      <div class="labelArea">인턴</div>
+                      <ul>
+                        <li>
+                          <select class="input-wd-160">
+                            <option>1개월~3개월</option>
+                          </select>
+                        </li>
+                      </ul>
+                  </li>
+                  </ul>
+                </div>
+            </li>
               <li>
                   <div class="labelArea">근무일시</div>
                   <ul>
@@ -1930,6 +2027,9 @@
               <span>취업 우대사항</span>
             </h2>
 
+            <!-- 개발팁 !
+              '대상' 선택시 hiddenList에 on 클래스가 들어가면 보여지도록 스타일시트작업을 해두었음.  -->
+
             <ul class="resume-regList">
               <li>
                   <div class="labelArea">국가 보훈대상</div>
@@ -1945,6 +2045,11 @@
                         <input type="radio" id="veteran_n" name="veteran">
                         <label for="veteran_n"><span class="rchk"></span>대상</label>
                       </div>
+                    </li>
+                  </ul>
+                  <ul class="hiddenList on">
+                    <li>
+                      <input type="text" class="h-txtfield-basic" placeholder="대상사유 입력 (선택입력)">
                     </li>
                   </ul>
               </li>
@@ -1964,6 +2069,45 @@
                     </div>
                   </li>
                 </ul>
+                <ul class="hiddenList on">
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect1">
+                      <label for="supportfundSelect1">중증장애인</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect2">
+                      <label for="supportfundSelect2">경증장애인</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect3">
+                      <label for="supportfundSelect3">여성가장</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect4">
+                      <label for="supportfundSelect4">고령자</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect5">
+                      <label for="supportfundSelect5">경력단절여성(임신, 출산, 육아)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="supportfundSelect" id="supportfundSelect6">
+                      <label for="supportfundSelect6">기타</label>
+                    </div>
+                    <input type="text" id="txtNm" class="h-txtfield-basic" disabled="" placeholder="직접입력">
+                  </li>
+                </ul>
               </li>
               <li>
                 <div class="labelArea">병역여부</div>
@@ -1981,6 +2125,27 @@
                     </div>
                   </li>
                 </ul>
+                <ul class="hiddenList on">
+                  <li>
+                    <div class="h-radio-01">
+                      <input type="radio" id="militarySelect1" name="militarySelect">
+                      <label for="militarySelect1"><span class="rchk"></span>군필</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-radio-01">
+                      <input type="radio" id="militarySelect2" name="militarySelect">
+                      <label for="militarySelect2"><span class="rchk"></span>미필</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="h-radio-01">
+                      <input type="radio" id="militarySelect3" name="militarySelect">
+                      <label for="militarySelect3"><span class="rchk"></span>면제</label>
+                    </div>
+                    <input type="text" id="txtNm" class="h-txtfield-basic" disabled="" placeholder="선택입력">
+                  </li>
+                </ul>
               </li>
               <li>
                 <div class="labelArea">장애여부</div>
@@ -1996,6 +2161,14 @@
                       <input type="radio" id="disorder_n" name="disorder">
                       <label for="disorder_n"><span class="rchk"></span>대상</label>
                     </div>
+                  </li>
+                </ul>
+                <ul class="hiddenList on">
+                  <li>
+                    <select class="input-wd-160 mr10">
+                      <option>장애등급</option>
+                    </select>
+                    <input type="text" id="txtNm" class="h-txtfield-basic" placeholder="장애내용 (선택입력)">
                   </li>
                 </ul>
               </li>

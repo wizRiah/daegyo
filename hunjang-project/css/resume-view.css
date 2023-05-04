@@ -213,17 +213,9 @@
 .h-winpop-wrap .hunjang-wrap .content {padding-top:0;}
 .h-winpop-wrap.bg-white .h-resume-wrap .container {padding:0 0 20px;}
 
-
-@media print {
-    /* 프린트 영역 노출 안됨 */
-	.no-print {display:none;}
-
-    /* 배경색 포함 프린트 */
-    .status, .h-emoticon::before,
-    .h-resume-wrap .h-status-wrap .score,
-    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
-}
-@page {size:auto; margin:10mm;}
+/* Mobile 미리보기 */
+.h-view-mobile-wrap {width:390px; height:600px; padding:18px 20px; margin:50px auto 0; background-color:var(--neutral-3); border-style:solid; border-color:#707070; border-width:8px 8px 0 8px; border-radius:30px 30px 0 0; box-sizing:border-box;}
+.h-winpop-wrap .h-view-mobile-wrap .h-resume-wrap .container {overflow-y:auto;}
 
 
 
@@ -299,3 +291,25 @@
 .resume-regList-col-2 > li:nth-child(odd) .labelArea {margin-right:50px;}
 .resume-regList-col-2 > li:nth-child(even) .labelArea {margin-right:20px;}
 .resume-regList-col-2 > li select {min-width:200px;}
+
+/* ==================================== 링크이력서 작성 ==================================== */
+.h-resume-link .h-field-64 {box-shadow:none !important;}
+.h-resume-link .h-field-64 {height:64px; padding-right:20px; border:2px solid var(--grey-3) !important; box-sizing:border-box;}
+.h-resume-link .h-field-64 .h-txtfield-inner {height:100%; font-size:var(--text-subtitle1);}
+.h-resume-link .h-field-64 .h-txtfield-inner::placeholder {font-size:var(--text-subtitle1); color:var(--black-2);}
+.h-resume-link .h-field-64 .h-btn-x:before {width:24px; height:24px; font-size:var(--text-subtitle1); background-color:var(--grey-2); border-radius:50%;}
+.h-resume-link textarea {width:100%; height:100px; font-size:var(--text-subtitle3); resize:none;}
+.h-txt-warn[style *= "none"] + .link-text {margin-top:20px;}
+.h-txt-warn[style *= "block"] + .link-text {margin-top:10px;}
+
+
+@media print {
+    /* 프린트 영역 노출 안됨 */
+	.no-print {display:none;}
+
+    /* 배경색 포함 프린트 */
+    .status, .h-emoticon::before,
+    .h-resume-wrap .h-status-wrap .score,
+    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
+}
+@page {size:auto; margin:10mm;}
