@@ -27,11 +27,11 @@
 .resume-registForm .resume-reg-basicBox>h2 .text-subtitle5 {font-weight:400;color:#9A9A9A;border-bottom: none !important;margin-left: 15px;}
 .resume-registForm .resume-reg-basicBox .innerbox-blue {width: 100%;padding: 30px;background: #F5F7FA;border-radius: 10px;box-sizing: border-box;}
 .resume-regList {display: flex; flex-direction: column; justify-content: space-between;}
-.resume-regList>li {display: flex; flex-direction: row; width: 100%; padding: 0 15px 0 10px; box-sizing: border-box; align-items: center; margin-bottom: 12px; flex-wrap: wrap;}
+.resume-regList>li {display: flex;flex-direction: row;width: 100%;padding: 0 15px 0 10px;box-sizing: border-box;align-items: center;margin-bottom: 12px;flex-wrap: wrap;}
 .resume-regList>li:last-child {margin-bottom: 0;}
 .resume-regList>li .labelArea {width: 115px; padding-right: 0; color: var(--black-5); font-size: var(--text-subtitle3);}
 .resume-regList>li .formArea .labelArea {width: 86px; text-align: right; padding-right: 20px; line-height: 52px;}
-.resume-regList>li .formArea, .resume-regList>li>.labelArea+input[type="text"], .resume-regList>li .labelArea+.h-field-wrap, .resume-regList>li .labelArea+ul, .resume-regList>li .labelArea+textarea {width: calc(100% - 115px);display: flex;align-items:center;}
+.resume-regList>li .formArea, .resume-regList>li>.labelArea+input[type="text"], .resume-regList>li .labelArea+.h-field-wrap, .resume-regList>li .labelArea+ul, .resume-regList>li .labelArea+textarea {width: calc(100% - 115px);display: flex;align-items:center;flex-wrap: wrap;}
 
 .resume-regList>li .input-wd-120 {width: 120px; min-width: 120px;}
 .resume-regList>li .input-wd-135 {width: 135px; min-width: 135px;}
@@ -49,7 +49,7 @@
 ul.resume-regList>li>ul {width: 100%; display: flex; flex-direction: row; justify-content: flex-start;}
 ul.resume-regList>li>ul>li {margin-right: 10px; min-height: 54px; display: flex; align-items: center; justify-content: flex-start;}
 ul.resume-regList>li>ul>li .h-checkbox {margin: 0;}
-ul.resume-regList>li>ul>li .h-checkbox.checkbox01 input[type="checkbox"] + label {margin-right: 20px;}
+ul.resume-regList>li>ul>li .h-checkbox.checkbox01 input[type="checkbox"] + label {margin-right: 20px; font-size:15px;}
 
 ul.resume-regList.addRegList>li:first-child {border-top: 1px solid #62666B; margin:40px 0 20px;}
 ul.resume-regList.addRegList>li:first-child {padding: 0 0 7px;overflow: hidden;position: relative;display: flex;align-items: center;text-indent: -9999px;justify-content: flex-end;width: 100%;margin-bottom: 0;}
@@ -130,7 +130,7 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .academic_block ul.resume-regList>li.majorUl {align-items: flex-start;}
     .academic_block ul.resume-regList>li.majorUl .labelArea {padding-top: 18px;}
     .academic_block ul.resume-regList>li.majorUl>ul {flex-direction: column;align-items: flex-start;}
-    .academic_block ul.resume-regList>li.majorUl>ul>li {margin-bottom: 10px;}
+    .academic_block ul.resume-regList>li.majorUl>ul>li:not(:first-child) {margin-top: 10px;}
 
 
 
@@ -148,15 +148,25 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .resume-registForm .resume-reg-basicBox.career [class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox:first-child p:last-child span {color: #7E7E7E;}
     /*경력*/
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap {padding-top: 40px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li .input-wd-510 {width:520px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li>.h-field-wrap {}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li>.h-field-wrap .h-txtfield-inner {width: calc(100% - 100px);}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2 {align-items: flex-start;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>.labelArea {padding-top: 18px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul> {}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child {width:100%;margin: 12px 0 18px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child .labelArea {width: auto; margin-right: 20px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child input[type="text"] {width:449px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue {margin-bottom:20px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue select {height:46px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li {padding: 0;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li .labelArea {width: 85px;}
-    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul {width: calc(100% - 95px); justify-content: space-between;}
-    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:first-child {width: 80%; display: flex; flex-direction: row;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul {width: calc(100% - 85px);justify-content: space-between;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:first-child {width: 68%;display: flex;flex-direction: row;margin-right: 0;min-height: 46px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:first-child ul {width: 100%; display: flex; flex-direction: row; align-items: center;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:first-child ul>li:first-child {margin-right: 30px; width: 103px;}
-    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:last-child {width: 219px;}
-    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li:last-child>ul>li:first-child {padding-left: 133px;width: 61%;margin-right: 0 !important;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li>ul>li:last-child {width: 210px;margin-right: 0;min-height: 46px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li:last-child>ul>li:first-child {padding-left: 133px;width: 50%;margin-right: 0 !important;}
     
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>.resume-regList>li:last-child {align-items: flex-start;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>.resume-regList>li:last-child .labelArea {padding-top: 18px;}
@@ -202,8 +212,10 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.license .resume-regList>li.labelBlock2 {width: 34%;}
 .resume-registForm .resume-reg-basicBox.license .resume-regList>li.labelBlock2-1 {width: 55%;margin-left: 15px;}
 .resume-registForm .resume-reg-basicBox.license .resume-regList>li.labelBlock2-1 .labelArea {width: auto; padding-right: 30px;}
-.resume-registForm .resume-reg-basicBox.license .resume-regList>li:first-child input[type="text"] {width:450px;}
+.resume-registForm .resume-reg-basicBox.license .resume-regList>li:first-child input[type="text"],
+.resume-registForm .resume-reg-basicBox.license .resume-regList.addRegList>li:nth-child(2) input[type="text"] {width:450px;}
 .resume-registForm .resume-reg-basicBox.license .resume-regList>li.labelBlock2-1 input[type="text"] {width:350px;}
+.resume-registForm .resume-reg-basicBox.license .addRegList + .btnArea {padding-top: 10px;}
 .resume-registForm .resume-reg-basicBox.license .addRegList + .btnArea .h-button-teal {width: 155px;}
 
 
@@ -212,10 +224,14 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 /*수상/수료/대외활동 - activity */
 .resume-registForm .resume-reg-basicBox.activity {}
 .resume-registForm .resume-reg-basicBox.activity .resume-regList {flex-direction: row; flex-wrap: wrap; justify-content: flex-start;}
-.resume-registForm .resume-reg-basicBox.activity .resume-regList>li:first-child input[type="text"] {width:460px;}
-.resume-registForm .resume-reg-basicBox.activity .resume-regList>li:nth-child(2) input[type="text"] {width:280px;}
+.resume-registForm .resume-reg-basicBox.activity .resume-regList>li:first-child input[type="text"],
+.resume-registForm .resume-reg-basicBox.activity .resume-regList.addRegList>li:nth-child(2) input[type="text"]{width:460px;}
+.resume-registForm .resume-reg-basicBox.activity .resume-regList:not(.addRegList)>li:nth-child(2) input[type="text"],
+.resume-registForm .resume-reg-basicBox.activity .resume-regList.addRegList>li:nth-child(3) input[type="text"]{width:280px;}
 .resume-registForm .resume-reg-basicBox.activity .resume-regList>li:last-child input[type="text"] {width:715px;}
 .resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 {width: 47%;}
+.resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 + .labelBlock2 {width: 52% !important;}
+.resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 + .labelBlock2 ul {width: 86%;}
 .resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 + .labelBlock2 .labelArea {width: auto; padding-right: 30px; margin-left: 2px;}
 .resume-registForm .resume-reg-basicBox.activity .addRegList + .btnArea {margin-top:20px;}
 
@@ -231,7 +247,7 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.skill_language .resume-regList>li.labelBlock3-2 {width: 29%;padding: 0 !important;}
 .resume-registForm .resume-reg-basicBox.skill_language .resume-regList>li.labelBlock2:last-child .labelArea {width: calc(100% - 283px);text-align: right;padding-right: 20px;}
 .resume-registForm .resume-reg-basicBox.skill_language .resume-regList>li.labelBlock3:not(:nth-child(4)) .labelArea {width: calc(100% - 192px);text-align: right;padding-right: 20px;}
-.resume-registForm .resume-reg-basicBox.skill_language .resume-regList.addRegList>li:first-child {padding-bottom: 0 !important;}
+.resume-registForm .resume-reg-basicBox.skill_language .resume-regList.addRegList>li:first-child {padding-bottom: 0 !important;margin-top: 30px;margin-bottom: -10px;}
 .resume-registForm .resume-reg-basicBox.skill_language .resume-regList>li select:not(.input-wd-160) {width:200px;}
 .resume-registForm .resume-reg-basicBox.skill_language .addRegList + .btnArea {padding-top: 10px;}
 
@@ -293,11 +309,13 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 
 /*취업우대사항  - preferential */
 .resume-registForm .resume-reg-basicBox.preferential {}
+.resume-registForm .resume-reg-basicBox.preferential >h2.h2-line {margin-bottom: 15px;}
 .resume-registForm .resume-reg-basicBox.preferential .innerbox-blue {margin-top: 20px; justify-content: space-between; display: flex; align-items: center; padding: 22px 30px;}
+.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li {margin-bottom: 3px;}
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li>ul>li {min-height: 46px;}
-
+.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(2) .hiddenList, .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(3) .hiddenList {margin-top: 0; padding-top: 3px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList {width: 100%;display: none;flex-direction: row;flex-wrap: wrap;box-sizing: border-box;padding:5px 0 40px 116px;border-bottom: 1px solid #62666B;margin-bottom: 5px;}
-.resume-registForm .resume-reg-basicBox.preferential .hiddenList.on {display: flex;}
+.resume-registForm .resume-reg-basicBox.preferential .hiddenList.on {display: flex;margin-top: 7px;margin-bottom: 15px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList>li {width: auto; min-height:46px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList>li:last-child:not(:only-child) {width: 535px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList input[type="text"] {width:450px;}
