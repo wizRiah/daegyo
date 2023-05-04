@@ -110,14 +110,14 @@
 .h-resume-wrap .h-subbox-list .h-list-txt .region {display:-webkit-box; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
 
 /* 시강(영상) */
-.h-resume-wrap .h-video-list {display:inline-flex; flex-flow:row wrap; align-content:flex-start; margin-left:auto; margin-right:auto; width:940px;}
+.h-resume-wrap .h-video-list {display:flex; flex-flow:row wrap; align-content:flex-start;}
 .h-resume-wrap .h-video-list li {position:relative; align-items:center; flex:0 1 300px; height:168px; box-sizing:border-box; overflow:hidden;}
 .h-resume-wrap .h-video-list li:not(:nth-child(3n+1)) {margin-left:20px;}
 .h-resume-wrap .h-video-list li:nth-child(n+4) {margin-top:20px; align-content:flex-start;}
 .h-resume-wrap .h-video-list li .h-button-video {position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; padding:0; margin:0; border-radius:0; background-color:#00000080; box-sizing:border-box; transition:background-color ease-out 0.3s;}
 .h-resume-wrap .h-video-list li:hover .h-button-video {background-color:#00000090;}
 .h-resume-wrap .h-video-list li .h-button-video i {font-size:50px;}
-.h-resume-wrap .h-video-list li video {width:300px; max-width:100%;}
+.h-resume-wrap .h-video-list li video {width:auto; max-width:100%;}
 
 /* 어학능력, 컴퓨터 활용능력, 희망 근무조건, 근무일시, 희망급여 */
 .h-resume-wrap :is(.h-item-list, .h-region-list, .h-item-slash) {display:flex; flex-flow:row wrap; align-items:center;}
@@ -310,12 +310,8 @@
     thead {display:table-header-group;}
     tfoot {display:table-footer-group;}
 
-    .h-winpop-wrap .hunjang-wrap .content {width:210mm; page-break-inside:avoid; page-break-after:auto;}
-    .h-resume-wrap .h-video-list {page-break-inside:avoid; page-break-after:auto;}
-    .h-resume-wrap .h-video-list li {page-break-inside:avoid; page-break-after:auto; border:1px solid red;}
-    .h-resume-wrap .h-video-list li video::-webkit-media-controls, 
-    .h-resume-wrap .h-video-list li video::-moz-media-controls, 
-    .h-resume-wrap .h-video-list li video::-ms-media-controls {display:none;}
+    .h-winpop-wrap .hunjang-wrap .content {width:100%;}
+    .h-resume-wrap .h-video-list li {flex:0 1 30%; height:auto; border:1px solid var(--border-basic-3);}
 
     /* 프린트 영역 노출 안됨 */
 	.no-print {display:none;}
