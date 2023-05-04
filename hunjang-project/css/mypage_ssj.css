@@ -25,7 +25,7 @@
 .resume-registForm .resume-reg-basicBox>h2.h2-line span:first-of-type:not(.necessary) {border-bottom: 1px solid #62666B;}
 .resume-registForm .resume-reg-basicBox>h2 .necessary {font-size: 20px;}
 .resume-registForm .resume-reg-basicBox>h2 .text-subtitle5 {font-weight:400;color:#9A9A9A;border-bottom: none !important;margin-left: 15px;}
-.resume-registForm .resume-reg-basicBox .innerbox-blue {width: 100%; padding: 30px; background: #F5F7FA; border-radius: 10px; box-sizing: border-box;}
+.resume-registForm .resume-reg-basicBox .innerbox-blue {width: 100%;padding: 30px;background: #F5F7FA;border-radius: 10px;box-sizing: border-box;}
 .resume-regList {display: flex; flex-direction: column; justify-content: space-between;}
 .resume-regList>li {display: flex; flex-direction: row; width: 100%; padding: 0 15px 0 10px; box-sizing: border-box; align-items: center; margin-bottom: 12px; flex-wrap: wrap;}
 .resume-regList>li:last-child {margin-bottom: 0;}
@@ -33,6 +33,7 @@
 .resume-regList>li .formArea .labelArea {width: 86px; text-align: right; padding-right: 20px; line-height: 52px;}
 .resume-regList>li .formArea, .resume-regList>li>.labelArea+input[type="text"], .resume-regList>li .labelArea+.h-field-wrap, .resume-regList>li .labelArea+ul, .resume-regList>li .labelArea+textarea {width: calc(100% - 115px);display: flex;align-items:center;}
 
+.resume-regList>li .input-wd-120 {width: 120px; min-width: 120px;}
 .resume-regList>li .input-wd-135 {width: 135px; min-width: 135px;}
 .resume-regList>li .input-wd-160 {width: 160px !important;min-width: 160px;}
 .resume-regList>li .input-wd-300 {width: 300px; min-width: 300px;}
@@ -309,11 +310,36 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 
 /*공개여부설정 - disclosure*/
 .resume-registForm .resume-reg-basicBox.disclosure {}
-.resume-registForm .resume-reg-basicBox.disclosure .block3 {display: flex; justify-content: space-between;}
-.resume-registForm .resume-reg-basicBox.disclosure .block3>div {margin-right: 20px;}
-.resume-registForm .resume-reg-basicBox.disclosure .block3>div:last-child {margin-right: 0;}
-.resume-registForm .resume-reg-basicBox.disclosure .block3 .detailInfo {margin-top: 15px;}
-.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="checkbox"] + label {color: #333333; font-weight: 800;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3 {display:flex; justify-content:space-between;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3>div:last-child {width: 260px;margin-right: 0;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3 .h-checkbox {width: 300px;height: 210px;justify-content: flex-start;display: flex;margin: 0;margin-right: 20px;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3 .detailInfo {margin-top: 15px;font-weight: 400;}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label {color: #333333;font-weight: 800;width: 100%;text-align: left;position: relative;padding: 30px;background: #F5F7FA;border-radius: 10px;transition: background 0.5s;}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:hover,
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"]:checked + label {background: #61A6FF; color: #fff; cursor:pointer}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:hover .detailInfo,
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"]:checked + label .detailInfo {color:#DFECFF;}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:hover .detailInfo strong,
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"]:checked + label .detailInfo strong {color:#fff;}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:after {top: 37px; left: 40px;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3>div label:before {content:"";width:72px;height:96px;display: inline-block;position: absolute;right: -10px;bottom: -25px;background-position: right bottom;opacity: 0;transition: all 0.3s;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3>div:first-child label:before  {background:url(../images/resume-disclosure01.svg) no-repeat;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3>div:nth-child(2) label:before {background:url(../images/resume-disclosure02.svg) no-repeat;background-position: right bottom;}
+.resume-registForm .resume-reg-basicBox.disclosure .block3>div:last-child label:before   {background:url(../images/resume-disclosure03.svg) no-repeat;background-position: right bottom;}
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:hover:before,
+.resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"]:checked + label:before {opacity: 1; right: 20px;}
+    /*공개여부 선택히 보여지는 것들 */
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList {margin-top:50px;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList h2.h2-line {border-bottom: 1px solid #E0E6EF;margin-bottom: 30px;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList h2.h2-line span {border-bottom: 1px solid #62666B; padding-bottom: 20px;display: inline-block; display: inline-flex; align-items: center;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .smallGuide {margin-bottom:20px;}
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .smallGuide li:not(.mintBox) {font-size: 13px; color: #9A9A9A; margin: 0 0 5px;}
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .smallGuide li.mintBox {background: #26B2C8; font-size: 13px; color: #fff; margin-top: 14px; padding: 4px 10px; width: auto; display: inline-block;}
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList {}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList li {}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList li .formArea {}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList li .formArea input[type="text"] {width:350px;height: 54px;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList .h-txt-orange {font-size:12px; margin-left:11px;}  
 
 
 /*과외 이력서 활용 동의 - agreement*/
@@ -322,4 +348,36 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.agreement .detailInfo ul {margin-top: 5px;}
 .resume-registForm .resume-reg-basicBox.agreement .detailInfo ul>li {color: #7E7E7E;}
 .resume-registForm .resume-reg-basicBox.agreement .innerbox-blue>ul {margin-top: 20px; display: flex; justify-content: flex-start;}
-.resume-registForm .resume-reg-basicBox.agreement .innerbox-blue>ul>li {margin-right: 30px; font-weight: 600;}
+.resume-registForm .resume-reg-basicBox.agreement .innerbox-blue>ul>li .h-checkbox.checkbox02 label {margin-right: 30px; font-weight: 600;}
+    /* 과외 이력서로 동시 활용 선택시 보여지는 것들 */
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList {margin-top:50px;} 
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList h2.h2-line {border-bottom: 1px solid #E0E6EF;margin-bottom: 30px;}  
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList h2.h2-line span {border-bottom: 1px solid #62666B; padding-bottom: 20px;display: inline-block; display: inline-flex; align-items: center;}  
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .smallGuide {margin-bottom:30px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .smallGuide li {font-size:13px; color: #9A9A9A; margin: 0 0 5px;}
+    
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue {}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList {margin-top:0;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li.privateLesson_subjectList {align-items: flex-start;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li.privateLesson_subjectList .labelArea {padding-top: 6px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li:first-child {padding-bottom:7px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li:nth-child(3) input[type="text"] {width:650px;margin-bottom: 11px;margin-top: 4px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li .labelArea {width: 156px;font-size: 14px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li .labelArea .small {font-size:12px;color:#BCBCBC;margin-left: 5px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li .h-txt-pit {font-size:14px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul {width: calc(100% - 156px);flex-wrap: wrap;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li {min-height: 36px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li:nth-child(10) {width:200px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li label {font-size:14px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li>ul {display: flex; padding-left: 10px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li .h-field-wrap {height: 46px;}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue .resume-regList>li>ul>li>ul>li {}
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue select, 
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList .innerbox-blue input[type="text"] {height: 46px !important;}
+
+
+
+
+
+
+

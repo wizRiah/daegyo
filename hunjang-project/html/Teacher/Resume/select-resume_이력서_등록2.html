@@ -430,7 +430,7 @@
 
                   <div class="btnArea">
                     <button type="button" class="h-button-ml h-button-teal h-button-add mr10"><i class="material-symbols-outlined vert-m mr5">add_circle</i>대학교(2,3년) 추가</button>
-                    <a href="javascript:void(0);" class="h-button-m h-button-white h-ccbtn-del"><span class="material-symbols-outlined">
+                    <a href="javascript:void(0);" class="h-button-ml h-button-white h-ccbtn-del"><span class="material-symbols-outlined">
                       close
                       </span>삭제</a>
                   </div>
@@ -2202,45 +2202,91 @@
             <h2 class="text-h2"><span>공개여부 설정<span class="necessary">필수</span></span></h2>
 
             <div class="block3">
-              <div class="innerbox-blue">
-                    <div class="h-checkbox checkbox02">
-                      <input type="checkbox" name="disclosure_Set" id="disclosure_01">
-                      <label for="disclosure_01">
-                        <i class="material-icons">task_alt</i>
-                        연락처 공개
-                      </label>
-                    </div>
-                    <div class="detailInfo text-subtitle4">
-                      이력서와 연락처가 공개됩니다. <br>학원에 입사제안을 받을 수 있고, <strong><br>제안을 수락하면 바로 면접이<br>진행됩니다.</strong>
-                    </div>
+              <div class="h-checkbox checkbox02">
+                <input type="radio" name="disclosure_Set1" id="disclosure_01">
+                <label for="disclosure_01">
+                  <div><i class="material-icons">task_alt</i>연락처 공개</div>
+                  <div class="detailInfo text-subtitle4">
+                    이력서와 연락처가 공개됩니다. <br>학원에 입사제안을 받을 수 있고, <strong><br>제안을 수락하면 바로 면접이<br>진행됩니다.</strong>
+                  </div>
+                </label>
               </div>
 
-              <div class="innerbox-blue">
-                    <div class="h-checkbox checkbox02">
-                      <input type="checkbox" name="disclosure_Set" id="disclosure_02">
-                      <label for="disclosure_02">
-                        <i class="material-icons">task_alt</i>
-                        연락처만 비공개
-                      </label>
-                    </div>
-                    <div class="detailInfo text-subtitle4">
-                      <strong>개인정보를 제외한 이력서가 공개됩니다.</strong><br> 학원에게 입사제안을 받을 수 있고<br>수락하면 학원에게 연락처가<br>공개됩니다.
-                    </div>
+              <div class="h-checkbox checkbox02">
+                <input type="radio" name="disclosure_Set1" id="disclosure_02">
+                <label for="disclosure_02">
+                  <div><i class="material-icons">task_alt</i>연락처만 비공개</div>
+                  <div class="detailInfo text-subtitle4">
+                    <strong>개인정보를 제외한 이력서가 공개됩니다.</strong><br> 학원에게 입사제안을 받을 수 있고<br>수락하면 학원에게 연락처가<br>공개됩니다.
+                  </div>
+                </label>
               </div>
 
-              <div class="innerbox-blue">
-                    <div class="h-checkbox checkbox02">
-                      <input type="checkbox" name="disclosure_Set" id="disclosure_03">
-                      <label for="disclosure_03">
-                        <i class="material-icons">task_alt</i>
-                        모든 정보 비공개
-                      </label>
-                    </div>
-                    <div class="detailInfo text-subtitle4">
-                      입사지원한 기업에게만 내 이력서가 공개됩니다.
-                    </div>
+              <div class="h-checkbox checkbox02">
+                <input type="radio" name="disclosure_Set1" id="disclosure_03">
+                <label for="disclosure_03">
+                  <div><i class="material-icons">task_alt</i>모든 정보 비공개</div>
+                  <div class="detailInfo text-subtitle4">
+                    입사지원한 기업에게만 내 이력서가 공개됩니다.
+                  </div>
+                </label>
               </div>
             </div>
+
+
+            <!-- 공개여부 선택히 보여지는 것들 -->
+            <!-- 01) '연락처 공개 '선택시 -->
+            <div class="hiddenList resume-open-call">
+              <h2 class="text-h2 h2-line"><span>공개 연락처</span></h2>
+              <ul class="smallGuide">
+                <li>ㆍ이력서에 공개한 휴대폰 번호, 이메일로 직접 면접제의를 받을 수 있습니다.</li>
+              </ul>
+              <ul class="resume-regList">
+                <li>
+                    <div class="labelArea">휴대폰</div>
+                    <div class="formArea">
+                        <input type="text" class="h-txtfield-basic" value="010-1234-5678" disabled="">
+                        <span class="h-txt-orange">* 필수공개 입니다.</span>
+                    </div>
+                </li>
+                <li>
+                  <div class="labelArea">이메일</div>
+                  <div class="formArea">
+                      <input type="text" class="h-txtfield-basic" value="takdi78@naver.com" disabled="">
+                      <span class="h-txt-orange">* 필수공개 입니다.</span>
+                  </div>
+              </li>
+              </ul>
+            </div>
+
+            <!-- 02) '연락처만 비공개 '선택시 -->
+            <div class="hiddenList resume-close-callonly">
+              <h2 class="text-h2 h2-line"><span>공개 연락처</span></h2>
+              <ul class="smallGuide">
+                <li>ㆍ연락처만 비공개는 연락처를 공개하지 않고 제안을 받을 수 있습니다.</li>
+                <li>ㆍ받은 제안 중 취업을 희망하는 학원을 선택하여 연락처를 공개할 수 있습니다.</li>
+                <li>ㆍ응답기간내에 답변하지 않으시면 자동으로 거절됩니다.</li>
+                <li class="mintBox">연락처 비공개 (제안 받고 수락하면 공개)</li>
+              </ul>
+              <ul class="resume-regList">
+                <li>
+                    <div class="labelArea">휴대폰</div>
+                    <div class="formArea">
+                        <input type="text" class="h-txtfield-basic" value="010-1234-5678" disabled="">
+                        <span class="h-txt-orange">* 연락처 공개를 제안 받고 수락할 경우에만 공개됩니다.</span>
+                    </div>
+                </li>
+                <li>
+                  <div class="labelArea">이메일</div>
+                  <div class="formArea">
+                      <input type="text" class="h-txtfield-basic" value="takdi78@naver.com" disabled="">
+                      <span class="h-txt-orange">* 연락처 공개를 제안 받고 수락할 경우에만 공개됩니다.</span>
+                  </div>
+              </li>
+              </ul>
+            </div>
+
+
           </div>
 
 
@@ -2274,7 +2320,7 @@
                 <ul>
                   <li>
                     <div class="h-checkbox checkbox02">
-                      <input type="checkbox" name="disclosure_Set" id="disclosure_02" checked/>
+                      <input type="checkbox" name="disclosure_Set2" id="disclosure_02" checked/>
                       <label for="disclosure_02">
                         <i class="material-icons">task_alt</i>
                         강사 취업 이력서로만 활용
@@ -2283,7 +2329,7 @@
                   </li>
                   <li>
                     <div class="h-checkbox checkbox02">
-                      <input type="checkbox" name="disclosure_Set" id="disclosure_02">
+                      <input type="radio" name="disclosure_Set2" id="disclosure_02">
                       <label for="disclosure_02">
                         <i class="material-icons">task_alt</i>
                         강사 취업 이력서로만 활용
@@ -2292,7 +2338,298 @@
                   </li>
                 </ul>
             </div>
+
+            <!-- '과외 이력서로 동시 활용' 선택시 보여지는 것들 -->
+            <div class="hiddenList">
+              <h2 class="text-h2 h2-line"><span>과외 근무 조건 추가</span></h2>
+              <ul class="smallGuide">
+                <li>ㆍ과외 이력서 부가정보는 훈장마을 학부모 회원으로 가입한 회원에게만 공개되고, 학원에는 공개되지 않습니다. </li>
+                <li>ㆍ동의하지 않은 이력서는 표기되지 않고, 과외 이력서 부가정보 설정을 한 이력서만 공개됩니다.</li>
+              </ul>
+              <div class="innerbox-blue">
+                <ul class="resume-regList">
+                  <li>
+                      <div class="labelArea">과외학생 희망 성별</div>
+                      <ul>
+                        <li>
+                          <select class="input-wd-160"><option>선택</option></select>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox01">
+                            <input type="checkbox" name="privateLesson_gender" id="privateLesson_gender1">
+                            <label for="privateLesson_gender1">성별무관</label>
+                          </div>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">과외 가능 학생<span class="small">(최대 2개)</span></div>
+                    <ul>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_student" id="privateLesson_student1">
+                          <label for="privateLesson_student1">초등학생</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_student" id="privateLesson_student2">
+                          <label for="privateLesson_student2">중학생</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_student" id="privateLesson_student3">
+                          <label for="privateLesson_student3">고등학생</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_student" id="privateLesson_student4">
+                          <label for="privateLesson_student4">대입 재수생</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_student" id="privateLesson_student5">
+                          <label for="privateLesson_student5">학생무관</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="privateLesson_subjectList">
+                    <div class="labelArea">과외 가능 과목<span class="small">(최대 6개)</span></div>
+                    <ul>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject1">
+                          <label for="privateLesson_subject1">국어</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject2">
+                          <label for="privateLesson_subject2">영어</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject3">
+                          <label for="privateLesson_subject3">수학</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject4">
+                          <label for="privateLesson_subject4">논술</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject5">
+                          <label for="privateLesson_subject5">과학탐구</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject6">
+                          <label for="privateLesson_subject6">사회탐구</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject7">
+                          <label for="privateLesson_subject7">영어회화</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject8">
+                          <label for="privateLesson_subject8">TOEIC</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject9">
+                          <label for="privateLesson_subject9">TOEFL</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject10">
+                          <label for="privateLesson_subject10">TEPS (텝스)</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject11">
+                          <label for="privateLesson_subject11">일본어 회화</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject12">
+                          <label for="privateLesson_subject12">일본어 자격(JLPT/JPT)</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject13">
+                          <label for="privateLesson_subject13">중국어 회화</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject14">
+                          <label for="privateLesson_subject14">중국어 자격 (HSK)</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject15">
+                          <label for="privateLesson_subject15">미술</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject16">
+                          <label for="privateLesson_subject16">음악</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_subject" id="privateLesson_subject6">
+                          <label for="privateLesson_subject6">직접입력</label>
+                        </div>
+                      </li>
+                      <li>
+                        <input type="text" class="h-txtfield-basic" value="과외가능 과목 입력" disabled="">
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">과외횟수 (요일)</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-120"><option>주3회</option></select>
+                      </li>
+                      <li>
+                        <ul>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week1">
+                              <label for="privateLesson_week1">월</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week2">
+                              <label for="privateLesson_week2">화</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week3">
+                              <label for="privateLesson_week3">수</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week4">
+                              <label for="privateLesson_week4">목</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week5">
+                              <label for="privateLesson_week5">금</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week6">
+                              <label for="privateLesson_week6">토</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="h-checkbox checkbox01">
+                              <input type="checkbox" name="privateLesson_week" id="privateLesson_week7">
+                              <label for="privateLesson_week7">일</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">희망 수업료</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-160 mr10"><option>월급</option></select>
+                        <div class="h-field-wrap input-wd-300">
+                          <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="희망급여(숫자만)">
+                          <span class="include_txt">원</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_pay" id="privateLesson_pay0">
+                          <label for="privateLesson_pay0">수업료 협의 가능</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">과외가능 시간</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-120 mr5"><option>선택</option></select>
+                        ~
+                        <select class="input-wd-120 ml5 mr10"><option>선택</option></select>
+                        <span class="h-txt-pit">2시간 30분 수업</span>
+                      </li>
+                      <li>
+                        <div class="h-checkbox checkbox01">
+                          <input type="checkbox" name="privateLesson_pay" id="privateLesson_pay0">
+                          <label for="privateLesson_pay0">휴식시간 포함</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">과외경력</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-160"><option>선택</option></select>
+                      <li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">과외장소</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-160"><option>학생집</option></select>
+                      <li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="labelArea">통화 가능 시간</div>
+                    <ul>
+                      <li>
+                        <select class="input-wd-120 mr5"><option>09:00</option></select>
+                        ~
+                        <select class="input-wd-120 ml5"><option>20:00</option></select>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
+
+
+            
 
 
 
