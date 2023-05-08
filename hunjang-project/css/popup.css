@@ -50,7 +50,7 @@
   .h-popup-b-g { flex-direction: column; }
   }
 
-  @media (orientation: landscape) { 
+  @media (orientation: landscape) {
    @media (max-height: 599px){
    .h-popup.popup-03 { height: auto; }
   .h-popup.popup-03 .pop-container { justify-content: flex-start; }
@@ -203,22 +203,31 @@
 .condition-list li + li { margin-left:24px; }
 
 /* 추천채용정보설정 상세검색 */
-.clear {background:url('../images/icon_xs_close.png') no-repeat center;width:15px;height:15px;margin-left: 5px;}
+.clear {background:url('../images/icon_xs_close.png') no-repeat center;width:15px;height:15px;margin-left: 5px;vertical-align: -2px;}
+.srch-detail .depth-box {padding:17px; font-size:var(--text-subtitle3);}
+.srch-detail .depth-box .h-checkbox label {vertical-align: baseline;}
+.srch-detail .line-box .ph-tit {float:left; min-width: 62px; padding:18px 0 0 20px; color:var(--black-6); font-size: var(--text-subtitle3);}
+.srch-detail .line-box:after {content:''; display:block; clear:both;}
+.srch-detail .depth-box.depth-calc {float:left; width: calc(100% - 240px);}
+/* .srch-detail .depth-box ul.depth1 > li:first-child:after {content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px;} */
+.srch-detail .depth-box ul.depth1 {position:relative; left:-5px; line-height:20px;}
 .srch-detail .depth-box ul.depth1 > li:first-child:before {display:none;}
-.srch-detail .depth-box ul.depth1 > li:first-child:after {content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px;}
-.srch-detail .depth-box ul.depth1 > li + li {margin-right:10px;}
+.srch-detail .depth-box ul.depth1 > li {margin:0 5px;}
 .srch-detail .depth-box ul.depth1 + ul.depth1 {margin-top: 10px;}
 .srch-detail .depth-box .depth1 > li + li:before {display: none;}
 .srch-detail .depth-box .depth1 + .depth1:before {display:none;}
-.srch-detail .depth-box {padding:17px; font-size:var(--text-subtitle3);}
 .srch-detail .depth-box > li:after {display: none;}
 .srch-detail .depth-box > li {flex-direction: column;}
 .srch-detail .depth-box > li {padding: 17px;}
-.srch-detail .depth-box .depth-col + .depth-col {margin-top:13px;}
+.srch-detail .depth-box .depth-col + .depth-col {margin-top:6px;}
 
-/* 선택하기 버튼 */
+
+/* 추천 채용정보 설정 선택 레이어 */
 .srch-detail .line-box { position:relative; min-height:54px; border:1px solid var(--border-basic-2); border-radius: 4px; box-sizing: border-box; background-color:#fff; }
-.srch-detail .line-box a { position: absolute; top: 10px; right: 3px; }
+.srch-detail .line-box + .line-box {margin-top:10px;}
+.srch-detail .line-box.active {position:relative; box-sizing: border-box; background-color:#fff;}
+.srch-detail .line-box.active .commonSrchBox_dpt {position: absolute; height:252px; border:1px solid var(--border-basic-1); border-radius: 4px; background: #fff; box-shadow: 0px 5px 10px #0000001A; z-index: 1;}
+.srch-detail .depth-box a { position: absolute; top: 10px; right: 3px; }
 
 
 /* 이력서_등록_사진추가 팝업*/
@@ -278,11 +287,13 @@
 
 /* 과목선택 공통 팝업 */
 .commonSrchBox_dpt .srchBox_subject .subjectList {display:flex;}
-.commonSrchBox_dpt .srchBox_subject .subjectList .subject_dpt1 {width:230px;height: 200px;padding:10px 0;box-sizing: border-box;overflow-y: scroll;border-right: 1px solid var(--border-basic-4);}
-.commonSrchBox_dpt .srchBox_subject .subjectList .subject_dpt2 {width:calc(100% - 230px);height: 200px;display: flex;flex-wrap: wrap;overflow-y: scroll;padding: 8px;box-sizing: border-box;align-content: flex-start;}
-.commonSrchBox_dpt .srchBox_subject .subjectList ul li {padding: 4px 6px; box-sizing: border-box; cursor: pointer;}
+.commonSrchBox_dpt .srchBox_subject .subjectList .subject_dpt1 {width:290px;height: 200px; padding:10px 0;box-sizing: border-box;overflow-y: scroll;border-right: 1px solid var(--border-basic-4);}
+.commonSrchBox_dpt .srchBox_subject .subjectList .subject_dpt2 {width:calc(100% - 230px);height: 200px; display: flex;flex-wrap: wrap;overflow-y: scroll;padding: 8px;box-sizing: border-box;align-content: flex-start;}
+.commonSrchBox_dpt .srchBox_subject .subjectList ul li {padding: 4px 15px 4px 6px;line-height:20px; box-sizing: border-box; cursor: pointer;}
 .commonSrchBox_dpt ul li .h-checkbox.checkbox03 input[type="checkbox"] + label:hover:after {background:none;}
 .commonSrchBox_dpt ul li:hover {background: var(--neutral-3);}
+.commonSrchBox_dpt .guide-txt {padding:18px; font-size: var(--text-subtitle5); color:var(--black-3);}
+.commonSrchBox_dpt .srchBox_subject .subjectList + .button-group {padding-right:10px; border-top:1px solid var(--border-basic-4);}
 
 .subjectList .subject_dpt1 {display: flex; flex-direction: column;}
 .subjectList .subject_dpt1.col2 {flex-wrap: wrap; flex-direction: row;}
@@ -304,7 +315,7 @@
 .h-winpop-wrap {padding:20px 0; box-sizing:border-box;}
 .h-winpop-wrap.bg-neutral-3 {background-color:var(--neutral-3);}
 .h-winpop-wrap.bg-white,
-.h-winpop-wrap.bg-white .h-resume-wrap .container {background-color:#fff;} 
+.h-winpop-wrap.bg-white .h-resume-wrap .container {background-color:#fff;}
 
 .h-winpop-wrap .h-winpop-header {max-width:1000px; margin-left:auto; margin-right:auto; box-sizing:border-box;}
 .h-winpop-wrap .h-winpop-header .h-tit-box-1 {margin-top:0;}
