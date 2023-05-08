@@ -1,69 +1,7 @@
 @charset "utf-8";
 
-/* ==================================== Layout ==================================== */
-.h-resume-wrap {display:flex; flex-flow:row wrap; height:100%;}
-.h-resume-wrap header {position:fixed; z-index:10; order:1; width:100%;}
-.h-resume-wrap header .h-logo_wrap {position:absolute; left:40px; width:100px;}
-.h-resume-wrap header .h-logo_wrap img {max-width:100%;}
-.h-resume-wrap .container {order:2; top:85px; left:0; width:calc(100% - 250px); height:calc(100vh - 85px); overflow-y:scroll;}
-.h-resume-wrap .content:not(.resume-registForm) {width:1000px; box-sizing:border-box;}
+/* 정렬 */
 .h-resume-wrap .col {display:flex; flex-flow:column nowrap; text-align:center;}
-
-
-
-/* ==================================== right menu ==================================== */
-/* right menu - 공통 */
-.h-resume-wrap .r-side {position:fixed; top:85px; right:0; order:3; display:flex; flex-flow:column nowrap; width:250px; height:calc(100vh - 85px); padding:20px; overflow-y:auto; overflow-x:hidden; box-sizing:border-box;}
-.h-resume-wrap .r-side [class^="h-button"] {width:100%; margin-left:0; margin-right:0;}
-.h-resume-wrap .r-side [class^="h-button"]:not(:first-child) {margin-top:10px;}
-
-/* right menu - 이력서 보기 */
-.h-resume-wrap .r-side .modify-date {width:100%; height:54px; font-size:var(--text-subtitle4); color:var(--black-3); border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
-.h-resume-wrap .r-side .modify-date strong {font-weight:var( --text-medium); color:var(--black-2);}
-
-.h-resume-wrap .r-side .h-resume-item {position:relative;}
-.h-resume-wrap .r-side .h-resume-item:before {position:absolute; top:10px; left:4px; content:''; width:1px; height:calc(100% - 20px); background-color:var(--border-basic-4);}
-.h-resume-wrap .r-side .h-resume-item li {position:relative; display:flex; flex-flow:row wrap; align-items:center;}
-.h-resume-wrap .r-side .h-resume-item li::before {content:''; width:9px; height:9px; margin-top:-1px; margin-right:15px; background:#fff; border:1px solid var(--border-basic-4); border-radius:50%; box-sizing:border-box; transition:all ease-out 0.3s;}
-.h-resume-wrap .r-side .h-resume-item li:not(:first-child) {margin-top:11px;}
-.h-resume-wrap .r-side .h-resume-item li a {color:var(--black-5); transition:all ease-out 0.3s;}
-.h-resume-wrap .r-side .h-resume-item li:hover a {color:var(--black-3);}
-.h-resume-wrap .r-side .h-resume-item li:hover::before {background-color:var(--black-4); border-color:var(--black-4);}
-.h-resume-wrap .r-side .h-resume-item li.active::before {background-color:var(--blue-3); border-color:var(--blue-3);}
-.h-resume-wrap .r-side .h-resume-item li.active a {color:var(--blue-3); font-weight:var(--text-medium);}
-
-/* right menu - 이력서 등록 */
-.h-resume-wrap .r-side .h-register .h-register-tit {position:relative; font-size:var(--text-subtitle2); font-weight:var(--text-bold);}
-.h-resume-wrap .r-side .h-register .h-register-tit::before {position:absolute; top:0; left:0; content:''; width:100%; height:calc(100% + -1px); border-bottom:1px solid #DFE4EC;}
-.h-resume-wrap .r-side .h-register .h-register-tit strong {position:relative; padding-bottom:10px; display:inline-block; border-bottom:1px solid #000; box-sizing:border-box;}
-.h-resume-wrap .r-side .h-register .h-register-cate li {position:relative; display:flex; flex-flow:row wrap; align-items:center; border-radius:4px;}
-.h-resume-wrap .r-side .h-register .h-register-cate li a {display:flex; flex-flow:row wrap; align-items:center; width:100%; padding:7px 15px; color:var(--black-6); box-sizing:border-box; transition:all ease 0.3s;}
-.h-resume-wrap .r-side .h-register .h-register-cate li:not(.required) a {justify-content:space-between;}
-.h-resume-wrap .r-side .h-register .h-register-cate li:not(.required) a::after {display:inline-block; font-family:'Material Icons'; content:'add_circle_outline'; width:24px; height:24px; font-style:normal; font-size:24px;}
-/* 필수 값 */
-.h-resume-wrap .r-side .h-register .h-register-cate .required a {font-weight:var(--text-medium); color:var(--black-2);}
-.h-resume-wrap .r-side .h-register .h-register-cate .required strong {display:inline-block; margin-left:5px; font-size:10px; font-weight:var(--text-regular); color:var(--orange);}
-/* hover */
-.h-resume-wrap .r-side .h-register .h-register-cate li:hover a {color:var(--black-3);}
-/* active */
-.h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active {background-color:var(--neutral-3);}
-.h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active a {font-weight:var(--text-medium); color:var(--blue-3);}
-.h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active a::after {display:inline-block; content:'cancel_outline'; color:var(--grey-1);}
-/* 미리보기 button */
-.h-resume-wrap .r-side .h-register .h-preview-wrap {margin-top:20px;}
-.h-resume-wrap .r-side .h-register .h-preview-wrap [class^="h-button"] {position:relative; justify-content:space-between; padding-left:15px; padding-right:15px; font-size:var(--text-subtitle4); transition:all ease-out 0.3s;}
-.h-resume-wrap .r-side .h-register .h-preview-wrap [class^="h-button"]:not(:first-child) {margin-top:5px;}
-.h-resume-wrap .r-side .h-register .h-preview-wrap [class^="h-button"]:hover {border-color:var(--black-5);}
-.h-resume-wrap .r-side .h-register .h-preview-wrap [class^="h-button"]::after {display:inline-block; content:''; width:24px; height:20px; box-sizing:border-box;}
-.h-resume-wrap .r-side .h-register .h-preview-wrap .h-preview-pc::after {background:url(../images/icon_preview_pc.svg) center no-repeat;}
-.h-resume-wrap .r-side .h-register .h-preview-wrap .h-preview-mobile::after {background:url(../images/icon_preview_mobile.svg) center no-repeat;}
-/* 자동저장, button */
-.h-resume-wrap .r-side .h-register + .btn-wrap .h-auto-save {font-size:var(--text-subtitle5); color:var(--black-6); text-align:center;}
-.h-resume-wrap .r-side .h-register + .btn-wrap [class^="h-button"]:not(:nth-of-type(1)) {margin-top:5px;}
-
-
-/* contents */
-.h-resume-wrap .h-resume-tit {padding:30px 10px; border-top:1px solid var(--grey-3); box-sizing:border-box;}
 
 /* ==================================== 공통 ==================================== */
 /* box */
@@ -168,9 +106,6 @@
 
 
 /* 간격 */
-.h-resume-wrap .r-side .modify-date + .h-resume-item,
-.h-resume-wrap .r-side .h-resume-item-wrap + .btn-wrap {margin-top:15px;}
-.h-resume-wrap .r-side .h-register + .btn-wrap {margin-top:130px;}
 .h-resume-wrap .h-subbox-wide + .h-subbox-list {margin-top:20px;}
 .h-resume-wrap .h-photo + .h-personal-info {margin-left:30px;}
 .h-resume-wrap .h-personal-info p + p {margin-top:5px;}
