@@ -28,7 +28,7 @@
         <div class="mypage-dropdown">
           <a href="#" class="name">홍길동님</a>
           <!-- 토글 -->
-          <div class="toggle">
+          <div class="toggle droupdown">
             <ul>
               <li><a href="#">이력서 등록</a></li>
               <li><a href="#">이력서 관리</a></li>
@@ -103,25 +103,25 @@
         <div>
           <ul class="tab-menu">
             <li class="active">
-              <a href="">
+              <a href="javascript:void(0);">
                 <p class="txt">입사지원 완료</p>
                 <p class="number">15</p>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="javascript:void(0);">
                 <p class="txt">이력서 열람</p>
                 <p class="number">0</p>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="javascript:void(0);">
                 <p class="txt">이력서 미열람</p>
                 <p class="number">0</p>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="javascript:void(0);">
                 <p class="txt">입사지원 취소</p>
                 <p class="number">0</p>
               </a>
@@ -131,7 +131,18 @@
           <div class="tab-content">
             <div class="basic-serchbox">
               <div class="col">
-                <span class="date-picker"><input type="text"> ~ <input type="text"></span>
+                <div class="h-date-wrap">
+                  <div class="h-field-wrap calendar">
+                    <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+                    <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+                  </div>
+                  ~
+                  <div class="h-field-wrap calendar">
+                    <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+                    <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+                  </div>
+                </div>
+                
                 <div class="h-radio-02">
                   <input type="radio" id="hcheck02_1" name="hcheck02" checked>
                   <label for="hcheck02_1">1주일</label>
@@ -216,17 +227,66 @@
                   <a href="#" class="txt-nowrap-1 i-block h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
                 </p>
                 <div class="flex items-center applicant-col">
-                  <a href="#" class="h-button-xxs h-button-white h-button-nobg"><span>지원이력서</span><img src="../../../images/btn_grey_arrow.svg"></a>
+                  <a href="#" class="h-button-xxs h-button-white"><span>지원이력서</span><img src="../../../images/btn_grey_arrow.svg"></a>
                   <p class="text-subtitle5">지원자 수 : <span class="h-txt-2">10명</span></p>
                 </div>
               </td>
-              <td>채용마감</td>
-              <td>미열람</td>
+              <td><span class="h-txt-2">채용중</span></td>
+              <td><span class="h-txt-2">미열람</span></td>
               <td>
                 <a href="#" class="h-button-m sprt-btn-cancle">지원취소</a>
               </td>
             </tr>
 
+            <tr>
+              <td>
+                <p class="text-subtitle5 h-txt-pit">지원완료</p>
+                <p class="h-txt-3 text-subtitle5">2022.11.18</p>
+              </td>
+              <td class="txt-l">
+                <p class="h-box-wd500 flex flex-center">
+                  <span class="txt-nowrap-1 i-block text-subtitle2">서울아카데미 수학학원</span>
+                </p>
+
+                <p class="h-box-wd500 flex flex-start mt3-mb6">
+                  <a href="#" class="txt-nowrap-1 i-block h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
+                </p>
+                <div class="flex items-center applicant-col">
+                  <a href="#" class="h-button-xxs h-button-white"><span>지원이력서</span><img src="../../../images/btn_grey_arrow.svg"></a>
+                  <p class="text-subtitle5">지원자 수 : <span class="h-txt-2">10명</span></p>
+                </div>
+              </td>
+              <td><span class="h-txt-5">채용마감</span></td>
+              <td><span class="h-txt-2">미열람</span></td>
+              <td>
+                <a href="#" class="h-button-m sprt-btn-cancle h-button-grey1">삭제</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p class="text-subtitle5 h-txt-pit">지원완료</p>
+                <p class="h-txt-3 text-subtitle5">2022.11.18</p>
+              </td>
+              <td class="txt-l">
+                <p class="h-box-wd500 flex flex-center">
+                  <span class="txt-nowrap-1 i-block text-subtitle2">서울아카데미 수학학원</span>
+                </p>
+
+                <p class="h-box-wd500 flex flex-start mt3-mb6">
+                  <a href="#" class="txt-nowrap-1 i-block h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
+                </p>
+                <div class="flex items-center applicant-col">
+                  <a href="#" class="h-button-xxs h-button-white"><span>지원이력서</span><img src="../../../images/btn_grey_arrow.svg"></a>
+                  <p class="text-subtitle5">지원자 수 : <span class="h-txt-2">10명</span></p>
+                </div>
+              </td>
+              <td><span class="h-txt-5">채용마감</span></td>
+              <td><span class="h-txt-pit">열람</span></td>
+              <td>
+                <a href="#" class="h-button-m sprt-btn-cancle h-button-grey1">삭제</a>
+              </td>
+            </tr>
           </tbody>
         </table>
 

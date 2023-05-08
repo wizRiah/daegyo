@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 로케이션바 */
-.hunjang-wrap .content .location {display:flex; justify-content:flex-end; align-items:center;}
+.hunjang-wrap .content .location {position:absolute; top:59px; right:0; display:flex; justify-content:flex-end; align-items:center;}
 .hunjang-wrap .content .location li {font-size:var(--text-subtitle5); color:var(--black-3); letter-spacing:-1px;}
 .hunjang-wrap .content .location li:first-child {line-height:15px;}
 .hunjang-wrap .content .location li + li {position:relative;}
@@ -22,6 +22,40 @@
 .h-over-hidden {overflow:hidden;}
 .h-subtxtbox-01 {padding:40px; margin-bottom:70px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
 .h-subtxtbox-01 .h-radio-02 {background:#fff;}
+
+
+
+
+
+/* 강사서비스 홈(메인) */
+.h-teacher-main .h-section { display:flex; flex-wrap: wrap; margin-top: 17px; } 
+.h-teacher-main .h-profile-wrap { box-sizing: border-box; flex: 0 0 auto; width: auto; max-width: 100%; } 
+.h-teacher-main .h-myProfile { width: 220px; height: 287px; padding: 25px 35px 0; box-sizing: border-box; background: #fff; border-radius: 15px; } 
+.h-teacher-main .h-myProfile .h-infos-area { position: relative; padding: 0 0 15px 0; text-align: center; } 
+.h-teacher-main .h-myProfile .h-infos-area .h-icon-status { position: absolute; top: -3px; } 
+.h-teacher-main .h-myProfile .h-infos-area .h-icon-status .h-ico-img { height: 28px; width: 28px; overflow: hidden; max-width: 100%; display: flex; justify-content: center; align-items: center; } 
+.h-teacher-main .h-myProfile .h-infos-area .h-icon-status .h-ico-img i { color: var(--grey-1); font-weight: 200; } 
+.h-teacher-main .h-myProfile .h-infos-area .h-status { font-size: var(--text-subtitle4); } 
+.h-teacher-main .h-myProfile .h-infos-area .h-btn-myStatus { font-size: var(--text-subtitle6); margin: 5px 0 0 0; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-img-wrap { position: relative; width: 110px; margin: 0 auto; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-img-wrap .h-img-box { position: relative; width: 110px; height: 133px; margin: 0 auto; background: var(--neutral-3); border-radius: 4px; overflow: hidden; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-img-wrap .h-img-box img { width: 100%; height: auto; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-img-wrap .p-mod { font-size: var(--text-subtitle5); height: 30px; width: 100%; background: #00000080; position: absolute; bottom: 0; left: 0; color: #fff; border-radius: 0 0 4px 4px; z-index: 7; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-profile-Info { padding: 10px 0 0; } 
+.h-teacher-main .h-myProfile .h-photo-area .h-profile-Info .h-name { font-size: var(--text-h4); color: var(--black-1); } 
+.h-teacher-main .h-myProfile .h-photo-area .h-profile-Info .h-ad { font-size: var(--text-subtitle5); margin-top: 5px; } 
+.h-teacher-main .h-wrap-myActive { padding: 30px 0 30px 30px; box-sizing: border-box; flex-basis: 0; flex-grow: 1; max-width: 100%; color: #fff; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive { background: var(--blue-grey); border-radius: 15px; position: relative; width: 100%; box-sizing: inherit; padding: 40px; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title { font-size: var(--text-subtitle5); } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title .h-title-ico { display: inline-block; background: beige; width: 23px; height: 24px; margin-right: 7px; background:url(/images/icon_point.png); } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title strong {line-height:27px; font-family: 'Roboto'; color:#EEFF00; font-size:var(--text-h3); padding-left: 10px; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list { margin-top: 26px; height: 94px; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li { position:relative; text-align: center; flex:1; font-size:var(--text-subtitle4);} 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li .h-maActive-num { font-family: 'SUIT'; font-weight:var(--text-bold); font-size: var(--text-h1); margin: 13px 0 16px; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:after{content:''; position:absolute; right:0; top:0; width:1px; height: 100%; background-color:#FFFFFF26; }
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:last-child:after{content:none;}
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li .h-maActive-link{color: #fff;}
+
 
 
 /* 이력서 등록 */
@@ -162,7 +196,7 @@
 .tab-menu li {width:250px; border-radius: 15px;background-color:#fff;text-align: center; border:1px solid transparent;}
 .tab-menu li a {display: block; height:100%; padding: 29px 0;}
 .tab-menu li a .txt {font-size: var(--text-subtitle2);}
-.tab-menu li a .number {font-family: ''; font-size: var(--text-h1);}
+.tab-menu li a .number {font-family:"SUIT"; font-size: var(--text-h1); font-weight:var(--text-bold);}
 .tab-menu li.active {background-color: var(--cyan);}
 .tab-menu li.active a {color:#fff;}
 .tab-menu li.active :hover {color:#fff;}
@@ -180,11 +214,6 @@
 .basic-serchbox .col + .col {margin-top:10px;}
 
 .applicant-col a {margin-left:0; margin-right:20px;}
-
-/* 테이블내에 내역이 없을 경우 공통 */
-.tblsrch-result-none {padding:100px 0!important;}
-.tblsrch-result-none a {margin-top: 20px; font-weight: 300;}
-
 
 .sprt-btn-del {width:60px; background-color:var(--grey-1); font-weight: 300;}
 .sprt-btn-cancle {width:60px; background-color:var(--grey-3); font-weight: 300;}
