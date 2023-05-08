@@ -25,3 +25,24 @@ caption,legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-s
 .blind {clip:rect(0,0,0,0); overflow:hidden; display:block; width:1px; height:1px;margin:-1px;padding:0;border:0; font-size:1px; line-height:0; text-indent:-9999px}
 * html table {border-collapse:collapse}
 *+html table {border-collapse:collapse}
+
+
+@media print {
+    html, body {width:210mm; height:297mm; page-break-inside:avoid; page-break-after:auto;}
+    table {page-break-inside:auto;}
+    tr    {page-break-inside:avoid; page-break-after:auto;}
+    thead {display:table-header-group;}
+    tfoot {display:table-footer-group;}
+
+    .h-winpop-wrap .hunjang-wrap .content {width:100%;}
+    .h-resume-wrap .h-video-list li {flex:0 1 30%; height:auto; border:1px solid var(--border-basic-3);}
+
+    /* 프린트 영역 노출 안됨 */
+	.no-print {display:none;}
+
+    /* 배경색 포함 프린트 */
+    .status, .h-emoticon::before,
+    .h-resume-wrap .h-status-wrap .score,
+    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
+}
+@page {size:auto; margin:10mm;}

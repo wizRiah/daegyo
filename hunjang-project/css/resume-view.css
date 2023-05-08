@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-/* 정렬 */
+/* ==================================== 공통 ==================================== */
+/* align */
 .h-resume-wrap .col {display:flex; flex-flow:column nowrap; text-align:center;}
 
-/* ==================================== 공통 ==================================== */
 /* box */
 .h-resume-wrap .h-subbox-wide {position:relative;}
 .h-resume-wrap .h-subbox-wide,
@@ -120,56 +120,6 @@
 
 
 
-/* ==================================== Window Popup ==================================== */
-.h-winpop-wrap {padding:20px 0; box-sizing:border-box;}
-.h-winpop-wrap.bg-neutral-3 {background-color:var(--neutral-3);}
-.h-winpop-wrap.bg-white,
-.h-winpop-wrap.bg-white .h-resume-wrap .container {background-color:#fff;} 
-
-.h-winpop-wrap .h-winpop-header {max-width:1000px; margin-left:auto; margin-right:auto; box-sizing:border-box;}
-.h-winpop-wrap .h-winpop-header .h-tit-box-1 {margin-top:0;}
-.h-winpop-wrap .h-winpop-header .h-tit-box-1 [class^="h-button"] {width:200px; margin:0;}
-.h-winpop-wrap .h-winpop-header .h-subbox-basic {padding:30px; margin-bottom:30px; background-color:var(--neutral-2); border-radius:15px; box-sizing:border-box;}
-
-.h-winpop-wrap.bg-white .h-winpop-header .h-tit-box-1 {margin-bottom:30px;}
-.h-winpop-wrap.bg-white .h-resume-wrap .h-resume-tit {padding-top:50px; border-top:0;}
-
-.h-winpop-wrap .h-tab-Contents-02 {max-width:1000px; margin-left:auto; margin-right:auto; box-sizing:border-box;}
-
-.h-bullet-list {display:flex; flex-flow:row wrap; align-items:center;}
-.h-bullet-list li {position:relative; padding-left:6px; font-size:var(--text-subtitle4); font-weight:var(--text-medium); color:var(--black-2);}
-.h-bullet-list li:not(:first-child) {margin-left:20px;}
-.h-bullet-list li::before {position:absolute; top:8px; left:0; content:''; width:2px; height:2px; border-radius:50%; background-color:var(--black-3);}
-.h-bullet-list li .tit {font-weight:var(--text-regular); color:var(--black-3);}
-.h-bullet-list li .tit::after {content:':'; margin-left:5px; margin-right:5px;}
-
-.h-winpop-wrap .h-resume-wrap .container {top:0; width:100%; max-width:1000px; height:100%; margin-left:auto; margin-right:auto; overflow-y:hidden; box-sizing:border-box;}
-.h-winpop-wrap .hunjang-wrap .content {padding-top:0;}
-.h-winpop-wrap.bg-white .h-resume-wrap .container {padding:0 0 20px;}
-
-/* Mobile 미리보기 */
-.h-view-mobile-wrap {width:390px; height:600px; padding:18px 20px; margin:50px auto 0; background-color:var(--neutral-3); border-style:solid; border-color:#707070; border-width:8px 8px 0 8px; border-radius:30px 30px 0 0; box-sizing:border-box;}
-.h-winpop-wrap .h-view-mobile-wrap .h-resume-wrap .container {overflow-y:auto;}
-
-
-
-/* ==================================== Layer Popup ==================================== */
-/* Pop Uploading */
-.h-pop-uploading-wrap {position:absolute; top:0; left:0; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; width:100%; height:100%; background-color:#FFFFFFE6; box-sizing:border-box;}
-.h-pop-uploading-wrap .h-progress-wrap {display:inline-flex;}
-.h-pop-uploading-wrap .h-progress-wrap .h-progress {flex-flow:column wrap; width:300px;}
-.h-pop-uploading-wrap .h-progress-wrap .h-progress .h-progress-bar-inner {width:100%; height:10px; border-radius:5px; margin:0;}
-.h-pop-uploading-wrap .h-progress-wrap .h-progress .h-progress-bar-inner .h-progress-bar {background-color:var(--blue-3);}
-
-/* Pop 시강(영상) 보기 */
-.h-popup-wrap .h-video-wrap {position:relative; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; height:410px; box-sizing:border-box; overflow:hidden;}
-.h-popup-wrap .h-video-wrap .h-button-video {position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; padding:0; margin:0; border-radius:0; background-color:#00000080; box-sizing:border-box; transition:background-color ease-out 0.3s;}
-.h-popup-wrap .h-video-wrap:hover .h-button-video {background-color:#00000090;}
-.h-popup-wrap .h-video-wrap .h-button-video i {font-size:50px;}
-.h-popup-wrap .h-video-wrap video {width:auto; max-width:100%;}
-
-
-
 /* ==================================== 파일이력서 작성 ==================================== */
 /* 이력서 파일 */
 .h-add-file-wrap {display:flex; flex-flow:column wrap; justify-content:center; align-items:center; padding-top:50px !important; padding-bottom:50px !important;}
@@ -204,24 +154,3 @@
 .h-resume-link textarea {width:100%; height:100px; font-size:var(--text-subtitle3); resize:none;}
 .h-txt-warn[style *= "none"] + .link-text {margin-top:20px;}
 .h-txt-warn[style *= "block"] + .link-text {margin-top:10px;}
-
-
-@media print {
-    html, body {width:210mm; height:297mm; page-break-inside:avoid; page-break-after:auto;}
-    table {page-break-inside:auto;}
-    tr    {page-break-inside:avoid; page-break-after:auto;}
-    thead {display:table-header-group;}
-    tfoot {display:table-footer-group;}
-
-    .h-winpop-wrap .hunjang-wrap .content {width:100%;}
-    .h-resume-wrap .h-video-list li {flex:0 1 30%; height:auto; border:1px solid var(--border-basic-3);}
-
-    /* 프린트 영역 노출 안됨 */
-	.no-print {display:none;}
-
-    /* 배경색 포함 프린트 */
-    .status, .h-emoticon::before,
-    .h-resume-wrap .h-status-wrap .score,
-    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
-}
-@page {size:auto; margin:10mm;}
