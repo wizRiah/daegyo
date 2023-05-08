@@ -1,18 +1,19 @@
 @charset "utf-8";
 
 /* 로케이션바 */
-.hunjang-wrap .content .location {display: flex; justify-content: flex-end; align-items: center;}
-.hunjang-wrap .content .location li {font-size: 13px; color:#bcbcbc; letter-spacing: -1px;}
+.hunjang-wrap .content .location {display:flex; justify-content:flex-end; align-items:center;}
+.hunjang-wrap .content .location li {font-size:var(--text-subtitle5); color:var(--black-3); letter-spacing:-1px;}
 .hunjang-wrap .content .location li:first-child {line-height:15px;}
 .hunjang-wrap .content .location li + li {position:relative;}
-.hunjang-wrap .content .location li + li:before {content:'\e5e1'; height: 15px; line-height: 18px; margin-right:5px; padding-left:5px; font-size: 12px; color:#bcbcbc;}
-.hunjang-wrap .content .location li.active {color:#333;}
+.hunjang-wrap .content .location li + li:before {content:'\e5e1'; height: 15px; line-height: 18px; margin-right:5px; padding-left:5px; font-size:var(--text-subtitle6); color:var(--grey-1);}
+.hunjang-wrap .content .location li.active {font-weight:var(--text-medium); color:var(--black-2);}
 
 
 /* 공통 */
 .my-txtbox {margin-bottom: 50px;}
 .my-txtbox ul li {position: relative; color:var(--black-3);}
-.my-txtbox .text-h1 {display:block; margin-bottom:35px;}
+.my-txtbox .text-h1 {display:block; margin-bottom:30px;}
+.my-txtbox .text-h1 .text-subtitle4 {line-height:24px;}
 .my-txtbox .text-subtitle4 li {position: relative; padding-left:10px; color:#7E7E7E;}
 .my-txtbox .text-subtitle4 li:after {content:''; position: absolute; top:10px; left:0; width:2px; height:2px; background:#7e7e7e; border-radius: 50%;}
 .my-txtbox .text-subtitle4 li.em:after{background-color:var( --orange);}
@@ -93,7 +94,7 @@
 
 /* 이력서 관리 */
 .my-resumebox {position: relative; padding-bottom:60px; margin-bottom:60px;}
-.my-resumebox .contxt {padding: 40px;width:500px;height: 160px;border-radius: 15px;background: url("../images/img_resume_regInfo.png") no-repeat 125px 180px #fff !important;word-break: break-all;}
+.my-resumebox .contxt {padding: 40px;width:500px;height: 160px;border-radius: 15px;background: url("../images/img_resume_regInfo.png") no-repeat 149px 180px #fff !important;word-break: break-all;}
 .my-resumebox .contxt .name {margin-bottom:15px;font-size: var(--text-h4); color:var(--black-1);}
 .my-resumebox .contxt .name .point {color:var(--blue-3); font-weight:600;}
 .my-resumebox .contxt-btns {overflow: hidden; position:absolute; top:30px; right:0; height: 100%; border-radius: 15px; height:270px;}
@@ -239,6 +240,7 @@
 .my-subtxtbox .resume-form.resume-match-detail {display: block;text-align: center;padding: 65px 0;}
 .my-subtxtbox .resume-form.resume-match-detail div {margin-bottom: 15px;}
 .my-subtxtbox .resume-form.resume-match-detail span {margin:0 3px;}
+.my-subtxtbox .resume-form.resume-match-detail span[class^="h-txt"] {margin:0;}
 .my-resume-matching .h-tbl-basic-1 tbody tr td.no-data {padding:96px 10px;}
 
       /*상세*/
@@ -260,8 +262,8 @@
       .resume-form .title .my-resume-list::-webkit-scrollbar-thumb { background:#E1E1E1; }
 
 /* ==================================== 이메일 수신 설정 =============================== */
-.emailReceiveForm {flex-direction:row;}
-.emailReceiveForm .email-leftBox {width: 55%;}
+.emailReceiveForm {flex-direction:row; justify-content:space-between; align-items:stretch;}
+.emailReceiveForm .email-leftBox {width:510px;}
 .emailReceiveForm .email-leftBox .title {width: 100%;}
 .emailReceiveForm .email-leftBox .resume-list {margin-bottom: 25px; display: block; float: left;}
 .emailReceiveForm .email-leftBox .resume-list li {width:100%;}
@@ -270,8 +272,8 @@
 .email-switchBox li:last-child {margin-right:0;}
 
 .emailReceiveForm .email-leftBox .email-switchBox li .h-switch {position: relative; top: auto; right: auto;}
-.emailReceiveForm .email-rightBox {width:45%; padding-top: 15px;}
-.emailReceiveForm .email-rightBox .rcmmd-email {font-size:var(--text-subtitle4);color:var(--black-6);width: 100%;text-align: center;height: 120px;line-height: 110px;margin-top: 15px;}
+.emailReceiveForm .email-rightBox {flex-grow:1; padding-top:15px; margin-left:160px;}
+.emailReceiveForm .email-rightBox .rcmmd-email {font-size:var(--text-subtitle4); color:var(--black-6); width:100%; height:120px; line-height:110px; margin-top:15px; text-align:center;}
 .emailReceiveForm .email-rightBox .rcmmd-email img {max-width:100%; max-height:100%;}
 
 
