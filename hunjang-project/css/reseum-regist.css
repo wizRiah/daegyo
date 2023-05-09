@@ -18,6 +18,7 @@
 /*공통*/
 .resume-registForm {width: 1020px;}
 .resume-registForm select {height: 54px; font-size: 15px; color: #333333;}
+.resume-registForm select:disabled {background-color:#F2F2F2; color:#BCBCBC;}
 .resume-registForm .resume-reg-basicBox {width: 100%; padding: 50px 60px; background: #fff; border-radius: 15px; margin-top: 50px; box-shadow: 0px 5px 15px #0000000D; ; box-sizing: border-box;}
 .resume-registForm .resume-reg-basicBox>h2 {line-height: normal;}
 .resume-registForm .resume-reg-basicBox>h2>span {padding-bottom: 20px; display: inline-block; display: inline-flex; align-items: center;}
@@ -50,12 +51,15 @@ ul.resume-regList>li>ul {width: 100%; display: flex; flex-direction: row; justif
 ul.resume-regList>li>ul>li {margin-right: 10px; min-height: 54px; display: flex; align-items: center; justify-content: flex-start;}
 ul.resume-regList>li>ul>li .h-checkbox {margin: 0;}
 ul.resume-regList>li>ul>li .h-checkbox.checkbox01 input[type="checkbox"] + label {margin-right: 20px; font-size:15px;}
+ul.resume-regList>li>ul>li.hiddenList {display:none;}
+ul.resume-regList>li>ul>li.hiddenList.on {display:flex;}
 
 ul.resume-regList.addRegList>li:first-child {border-top: 1px solid #62666B; margin:40px 0 20px;}
 ul.resume-regList.addRegList>li:first-child {padding: 0 0 7px;overflow: hidden;position: relative;display: flex;align-items: center;text-indent: -9999px;justify-content: flex-end;width: 100%;margin-bottom: 0;}
 ul.resume-regList.addRegList .delete_section {}
+ul.resume-regList.addRegList .delete_section:hover {cursor: pointer;}
 ul.resume-regList.addRegList .delete_section:before {content: "close";font-family: 'Material Icons';display: inline-block;width: 34px;height: 34px;line-height:34px;background-color: #62666b;text-indent: 0;text-align: center;color: #fff;font-size:25px;padding: 0.5px 0 0 0px;box-sizing: border-box;font-weight:400;}
-
+ul.resume-regList.addRegList.on {display:none;}
 
 
 /* 타이틀입력부분 */
@@ -82,18 +86,21 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.myInfo {}
 .resume-registForm .resume-reg-basicBox.myInfo .infoLyot {width: 100%; display: flex; flex-wrap: wrap;}
     /*좌측사진*/
-    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue {width:180px;flex-shrink:0;text-align: center;display: flex;flex-direction: column;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue {width:180px; height:252px; flex-shrink:0;text-align: center;display: flex;flex-direction: column;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile {}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage {height: 133px;border-radius: 4px;background: #fff;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage.off {display:none;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button {width: 100%;height: 100%;font-size: 13px;color: #BCBCBC;border-radius: 4px;background: #fff;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button:before {content:"+";color: #8C9197;font-size: 23px;width: 22px;height: 22px;line-height: 15px;border: 2px solid #8C9197;border-radius: 100%;display: inline-block;text-align: center;vertical-align: middle;box-sizing: border-box;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-noImage button span {width:100%;display: block;margin-top: 5px;}
-    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage {height:133px;border-radius:4px;position: relative;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage {display: none;height:133px;border-radius:4px;position: relative;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage.on {display:block;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgbox {width: 100%; height: 100%; overflow: hidden; border-radius: 4px;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgbox img {width: 100%;height: auto;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgmodify {font-size:13px;height:30px;width:100%;background: #00000080;position: absolute;bottom: 0;left: 0;color: #fff;border-radius: 0 0 4px 4px;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete {overflow: hidden; position: absolute; display: flex; right: -10px; top: -10px;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete:before {content: "close"; font-family: 'Material Icons'; display: inline-block; width: 20px; height: 20px; line-height: 19px; background-color: #c3cad3; text-indent: 0; text-align: center; color: #fff; border-radius: 100%; font-size: 15px; padding: 0.5px 0 0 0px; box-sizing: border-box; font-weight: 600; transition:all 0.5s;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete:hover {cursor:pointer;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile.resume-myImage .imgdelete:hover:before {background:#7E7E7E;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile-Info {padding:20px 0 0;}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .innerbox-blue .resume-profile-Info strong {font-size:16px; color:#333;}
@@ -102,6 +109,11 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList {width: calc(100% - 180px);}
     .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li {padding: 0 15px 0 40px;}
     .resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:first-child .h-field-wrap, .resume-registForm .resume-reg-basicBox.myInfo ul.resume-regList>li:last-child .h-field-wrap {width: 400px !important;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li:first-child {align-items: flex-start;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li:first-child .labelArea {margin-top: 18px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li:first-child ul li.phone-certifiedInput {margin-top: 12px;}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li:first-child ul li.phone-certifiedInput.on {}
+    .resume-registForm .resume-reg-basicBox.myInfo .infoLyot .resume-regList>li:first-child ul li.phone-certifiedInput .h-field-wrap {width:280px !important;}
 
 
 
@@ -131,6 +143,7 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .academic_block ul.resume-regList>li.majorUl .labelArea {padding-top: 18px;}
     .academic_block ul.resume-regList>li.majorUl>ul {flex-direction: column;align-items: flex-start;}
     .academic_block ul.resume-regList>li.majorUl>ul>li:not(:first-child) {margin-top: 10px;}
+    .academic_block ul.resume-regList>li.majorUl>ul>li.hiddenList.off {display:none;}
 
 
 
@@ -157,6 +170,8 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child {width:100%;margin: 12px 0 18px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child .labelArea {width: auto; margin-right: 20px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li:last-child input[type="text"] {width:449px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li.hiddenList {margin-top: 12px; width: 564px;}
+    .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>ul>li.line2>ul>li.hiddenList .labelArea {width: auto; margin-right: 20px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue {margin-bottom:20px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue select {height:46px;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap .innerbox-blue .resume-regList>li {padding: 0;}
@@ -352,6 +367,7 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li {margin-bottom: 3px;}
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li>ul>li {min-height: 46px;}
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(2) .hiddenList, .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(3) .hiddenList {margin-top: 0; padding-top: 3px;}
+.resume-registForm .resume-reg-basicBox.preferential .resume-regList>li>ul.on + .hiddenList {display: flex; margin-top: 7px; margin-bottom: 15px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList {width: 100%;display: none;flex-direction: row;flex-wrap: wrap;box-sizing: border-box;padding:5px 0 40px 116px;border-bottom: 1px solid #62666B;margin-bottom: 5px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList.on {display: flex;margin-top: 7px;margin-bottom: 15px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList>li {width: auto; min-height:46px;}
@@ -385,7 +401,8 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"] + label:hover:before,
 .resume-registForm .resume-reg-basicBox.disclosure .h-checkbox.checkbox02 input[type="radio"]:checked + label:before {opacity: 1; right: 20px;}
     /*공개여부 선택히 보여지는 것들 */
-    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList {margin-top:50px;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList {margin-top:50px;display: none;}  
+    .resume-registForm .resume-reg-basicBox.disclosure .hiddenList.on {display:block;}
     .resume-registForm .resume-reg-basicBox.disclosure .hiddenList h2.h2-line {border-bottom: 1px solid #E0E6EF;margin-bottom: 30px;}  
     .resume-registForm .resume-reg-basicBox.disclosure .hiddenList h2.h2-line span {border-bottom: 1px solid #62666B; padding-bottom: 20px;display: inline-block; display: inline-flex; align-items: center;}  
     .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .smallGuide {margin-bottom:20px;}
@@ -406,7 +423,8 @@ ul.resume-regList.addRegList .delete_section:before {content: "close";font-famil
 .resume-registForm .resume-reg-basicBox.agreement .innerbox-blue>ul {margin-top: 20px; display: flex; justify-content: flex-start;}
 .resume-registForm .resume-reg-basicBox.agreement .innerbox-blue>ul>li .h-checkbox.checkbox02 label {margin-right: 30px; font-weight: 600;}
     /* 과외 이력서로 동시 활용 선택시 보여지는 것들 */
-    .resume-registForm .resume-reg-basicBox.agreement .hiddenList {margin-top:50px;} 
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList {display:none; margin-top:50px;} 
+    .resume-registForm .resume-reg-basicBox.agreement .hiddenList.on {display:block;}
     .resume-registForm .resume-reg-basicBox.agreement .hiddenList h2.h2-line {border-bottom: 1px solid #E0E6EF;margin-bottom: 30px;}  
     .resume-registForm .resume-reg-basicBox.agreement .hiddenList h2.h2-line span {border-bottom: 1px solid #62666B; padding-bottom: 20px;display: inline-block; display: inline-flex; align-items: center;}  
     .resume-registForm .resume-reg-basicBox.agreement .hiddenList .smallGuide {margin-bottom:30px;}
