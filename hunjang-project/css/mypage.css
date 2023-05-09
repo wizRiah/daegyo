@@ -28,7 +28,7 @@
 
 
 /* 강사서비스 홈(메인) */
-.h-teacher-main .h-section { display:flex; flex-wrap: wrap; margin-top: 17px; } 
+.h-teacher-main .h-section { display: flex; flex-wrap: wrap; justify-content: space-between; } 
 .h-teacher-main .h-profile-wrap { box-sizing: border-box; flex: 0 0 auto; width: auto; max-width: 100%; } 
 .h-teacher-main .h-myProfile { width: 220px; height: 287px; padding: 25px 35px 0; box-sizing: border-box; background: #fff; border-radius: 15px; } 
 .h-teacher-main .h-myProfile .h-infos-area { position: relative; padding: 0 0 15px 0; text-align: center; } 
@@ -48,13 +48,47 @@
 .h-teacher-main .h-wrap-myActive .h-p-myActive { background: var(--blue-grey); border-radius: 15px; position: relative; width: 100%; box-sizing: inherit; padding: 40px; } 
 .h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title { font-size: var(--text-subtitle5); } 
 .h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title .h-title-ico { display: inline-block; background: beige; width: 23px; height: 24px; margin-right: 7px; background:url(/images/icon_point.png); } 
-.h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title strong {line-height:27px; font-family: 'Roboto'; color:#EEFF00; font-size:var(--text-h3); padding-left: 10px; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-pro-title strong { line-height:27px; font-family: 'Roboto'; color:#EEFF00; font-size:var(--text-h3); padding-left: 10px; } 
 .h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list { margin-top: 26px; height: 94px; } 
-.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li { position:relative; text-align: center; flex:1; font-size:var(--text-subtitle4);} 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li { position:relative; text-align: center; flex:1; font-size:var(--text-subtitle4); } 
 .h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li .h-maActive-num { font-family: 'SUIT'; font-weight:var(--text-bold); font-size: var(--text-h1); margin: 13px 0 16px; } 
-.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:after{content:''; position:absolute; right:0; top:0; width:1px; height: 100%; background-color:#FFFFFF26; }
-.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:last-child:after{content:none;}
-.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li .h-maActive-link{color: #fff;}
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:after { content:''; position:absolute; right:0; top:0; width:1px; height: 100%; background-color:#FFFFFF26; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li:last-child:after { content:none; } 
+.h-teacher-main .h-wrap-myActive .h-p-myActive .h-myActive-list li .h-maActive-link { color: #fff; } 
+.h-teacher-main .h-res-wrap { flex: 0 0 auto; max-width: 100%; width: 700px; padding: 40px; border-radius: 15px; background: #ffffff; border: none; height: 311px; box-sizing: border-box; } 
+.h-teacher-main .h-res-wrap .h-tit-box-1 { margin-top: 0; } 
+.h-teacher-main .my-resume { position: relative; padding: 20px 30px; background: var(--neutral-3); border-radius: 10px; box-sizing: border-box; height: 118px; } 
+.h-teacher-main .my-resume .modified { padding: 0 0 5px 0; } 
+.h-teacher-main .my-resume .modified .date { font-size:var(--text-subtitle6); color:var(--black-3); } 
+.h-teacher-main .my-resume .date { height: 14px; } 
+.h-teacher-main .my-resume .title { margin-top: 10px; } 
+.h-teacher-main .my-resume .type { width: 41px; height: 22px; background: var(--grey-3); border-radius: 13px; display: inline-block; color: #fff; font-size: var(--text-subtitle6); font-weight: var(--text-medium); text-align: center; line-height: 22px; margin-left: 10px; } 
+.h-teacher-main .my-resume .btn-area li { display: inline-block; position: relative; margin: 0 0 0 12px; padding: 0 0 0 12px; } 
+.h-teacher-main .my-resume .btn-area li:first-child { margin:0; padding:0; } 
+.h-teacher-main .my-resume .btn-area li a { font-size: var(--text-subtitle5); padding:0; } 
+.h-teacher-main .my-resume .btn-area li::after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: 13px; margin: -7px 0 0 0; background: #c3cad4; } .h-teacher-main .my-resume .btn-area li:first-child::after { content: none; } 
+.h-teacher-main .my-resume .progress { justify-content: center; position: absolute; right: 20px; bottom: -62px; width: 70px; height: 91px; background: var(--cyan); color: #ffffff; border-radius: 4px; } 
+.h-teacher-main .my-resume .progress .txt { display: inline-block; position: relative; font-size: var(--text-subtitle6); } 
+.h-teacher-main .my-resume .progress strong { margin: 5px 0 0 0; font-size: var(--text-h2); } 
+.h-teacher-main .my-resume .progress strong .per { font-size: var(--text-subtitle4); } 
+.h-teacher-main .h-res-wrap .detail-list { display: block; position: relative; z-index: 1; overflow: hidden; margin: 0 0 0 -20px; padding: 10px 130px 0 0; } 
+.h-teacher-main .h-res-wrap .detail-list li { position: relative; float: left; padding: 0 0 0 15px; margin: 10px 0 0 20px; font-size: var(--text-subtitle4); color: var(--black-2); } 
+.h-teacher-main .h-res-wrap .detail-list li::after { content: ""; position: absolute; left: 7px; top: 7px; width: 2px; height: 2px; background: var(--black-3); border-radius: 50%; } 
+.h-teacher-main .h-appli-wrap { width: 350px; height: 345px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; background: #677CEB; border-radius: 15px; } 
+.h-teacher-main .h-appli-wrap .h-tit-box-1 { margin-top: 0; } 
+.h-teacher-main .h-appli-wrap .h-tit-box-1 p { color: #fff; } 
+.h-teacher-main .h-appli-wrap .h-tit-box-1 .h-button-more { color: #fff; } 
+.h-teacher-main .h-appli-wrap .h-tit-box-1 .h-button-more::after { color: #fff; } 
+.h-teacher-main .h-appli-wrap .my-apply { border-top: 1px solid #FFFFFF26; } 
+.h-teacher-main .h-appli-wrap .h-apply { padding: 25px 0 0 0; } 
+.h-teacher-main .h-appli-wrap .h-apply .txt1 { font-size: var(--text-subtitle2); color: #ffffff; } 
+.h-teacher-main .h-appli-wrap .h-apply .txt2 { margin: 10px 0 0 0; line-height: 26px; color: #FFFFFF; } 
+.h-teacher-main .h-appli-wrap .h-apply .h-app-date { color: #FFFFFF99; margin-top: 28px; font-size: var(--text-subtitle4); } 
+.h-teacher-main .h-appli-wrap .h-apply .btn-area { margin: 35px 0 0 0; height: 28px; width: 100%; display: flex; justify-content: center; align-items: center; } 
+.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-appli-btn { width:28px; height:28px; background:url(../images/ico_service_arrow.png); display: block; } 
+.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-appli-btn.after { transform: rotate(180deg); } 
+.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-pg-num { padding: 0 12px; font-weight: bold; font-size: 14px; font-family: 'SUIT'; color: #fff; } 
+.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-pg-num .h-no-active{ color: #A2B1FF;}
 
 
 
