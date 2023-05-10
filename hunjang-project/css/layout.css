@@ -7,8 +7,11 @@
 .hunjang-wrap header .header-inner .h-listbox-wrap + .myicon-wrap,
 .hunjang-wrap header .header-inner .h-listbox-group + .myicon-wrap {margin-left:40px;}
 .hunjang-wrap header .header-inner .h-listbox-wrap .droupdown.academy-name {min-width:220px;}
-.hunjang-wrap header .header-inner .myicon-wrap {display:flex; align-items: center; margin-right:30px;}
-.hunjang-wrap header .header-inner .myicon-wrap  li + li {margin-left:25px;}
+.hunjang-wrap header .header-inner .myicon-wrap {display:flex; align-items:center;}
+.hunjang-wrap header .header-inner .myicon-wrap li,
+.hunjang-wrap header .header-inner .myicon-wrap li a {display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+.hunjang-wrap header .header-inner .myicon-wrap li + li {margin-left:25px;}
+.hunjang-wrap header .header-inner .myicon-wrap + .mypage-dropdown {margin-left:30px;}
 .hunjang-wrap header .header-inner .mypage-dropdown {position:relative; z-index:2;}
 .hunjang-wrap header .header-inner .mypage-dropdown .name {font-size:var(--text-subtitle4); color:#fff;}
 .hunjang-wrap header .header-inner .mypage-dropdown .droupdown {overflow:hidden; display:block; position:absolute; top:100%; right:-10px; z-index:1; width:170px; height:0; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
@@ -140,16 +143,7 @@
 
 /* ==================================== 학원서비스 Layout ==================================== */
 .h-academy-wrap header {background-color:#26B2C8F2;}
-
-
-
-.h-listbox-wrap {position:relative; z-index:2; display:inline-flex; align-items:center;}
-.h-listbox-wrap .droupdown {overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
-.h-listbox-wrap .droupdown ul {margin:10px 0; text-align:left;}
-.h-listbox-wrap .droupdown ul li a {display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:15px;}
-.h-listbox-wrap .droupdown ul li:hover {background:var(--neutral-3); transition:all 0.2s ease;}
-.h-listbox-wrap > input[type="checkbox"] {position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden;}
-.h-listbox-wrap > input[type="checkbox"] + label {position:relative; display:block; padding:11px 38px 11px 20px; font-size:var(--text-subtitle5); font-weight:var(--text-medium); color:#fff; border:1px solid #FFFFFF4D; border-radius:30px; cursor:pointer; box-sizing:border-box;}
-.h-listbox-wrap > input[type="checkbox"] + label:after {position:absolute; content:''; right:20px; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); background:transparent url('../images/icon_select_arrow_line.png') center no-repeat; width:8px; height:4px; transition:transform 0.5s; cursor:pointer;}
-.h-listbox-wrap > input[type="checkbox"]:checked + label:after {transform: rotate(180deg);}
-.h-listbox-wrap > input[type="checkbox"]:checked ~ .droupdown {top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border:1px solid var(--grey-3);}
+.h-academy-wrap header .header-inner .myicon-wrap {margin-right:0;}
+.h-academy-wrap header .header-inner .myicon-wrap + .h-product-dropdown {margin-left:25px;}
+.h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label {width:24px; height:24px; padding-right:0; text-indent:-99999px;}
+.h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label:after {width:24px; height:24px; background:url(../images/icon_mypage_arrow_big.png) no-repeat;}
