@@ -39,9 +39,13 @@
  .h-popup.popup-03 .pop-container { padding:30px 40px 40px; }
  .h-popup.popup-03 .pop-body { height: calc(100% - 190px); }
  .h-popup-b-g a { margin-bottom: 8px; }
- .h-popup.popup-04 {padding: 30px; border: 1px solid #62666B; border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none;}
+ .h-popup.popup-04 {position:absolute; padding: 30px; border: 1px solid #62666B; border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none;}
  .h-popup.popup-04 .pop-body {height: 100%; overflow: visible;}
  .h-popup.popup-04 .pop-container {    height: 100%; overflow: visible;}
+ .h-popup.popup-04 .pop-title {font-size:20px;}
+ .h-popup.popup-04 select {height:46px;}
+ .h-popup.popup-04 .h-checkbox {margin:0;}
+ .h-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label {font-size:14px;}
 
 
 
@@ -368,4 +372,21 @@
 .datePicker .select_yearList>ul>li>a {width: 100%; display: block; font-size: 15px;}
 .datePicker .select_yearList>ul>li>a.select {background: #F5F7FA; color: #61A6FF;}
 .datePicker .select_yearList>ul>li>a:hover {background: #F5F7FA;}
+
+
+
+/* 인풋 - 키워드 자동입력 박스 (학교검색/ 자격증검색 등) */
+.keyword-Srch-Wrap {display:none;width: 510px;border: 1px solid #62666B;border-radius: 4px;margin-top: 5px;overflow: hidden;position: absolute;z-index: 1;background: #fff;top: 54px;box-sizing: border-box;}
+.keyword-Srch-Wrap.on {display:inline-block;}
+.keyword-Srch-Wrap .srchKeyword {color: #61A6FF;}
+.keyword-Srch-Wrap>ul {height: 190px; overflow-y: scroll;}
+.keyword-Srch-Wrap>ul>li {font-size:15px; color:#333; padding: 9px 19px;}
+.keyword-Srch-Wrap>ul>li.no-data {text-align:center;display: flex;flex-direction: column;align-items: center;width: 100%;box-sizing: border-box;padding: 74px 0;background: #fff !important;}
+.keyword-Srch-Wrap>ul>li.no-data b {width:100%;font-weight: 500;}
+.keyword-Srch-Wrap>ul>li.no-data span {width:100%; color: #7e7e7e; margin-top:5px;}
+.keyword-Srch-Wrap>ul>li:hover {background: #F5F7FA;}
+.keyword-Srch-Wrap .directInput {background: #F5F7FA; border-top: 1px solid #D4DAE2; text-align: center;}
+.keyword-Srch-Wrap .directInput button {font-size: 14px; color: #333; width: 100%; padding: 17px 5px;}
+.keyword-Srch-Wrap .directInput button span {}
+.keyword-Srch-Wrap .directInput button:after {content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid #62666B; transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px;}
 
