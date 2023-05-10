@@ -118,6 +118,10 @@ select option:disabled {display: none;}
 .h-txt-c {text-align:center;}
 .h-txt-r {text-align:right;}
 
+/* float */
+.fl-l {float:left;}
+.fl-r {float:right;}
+
 /* flex */
 .flex { display: flex; }
 .flex.inline { display:inline-flex; }
@@ -605,16 +609,11 @@ button
 .h-button-underline.h-ud-em{padding: 0;line-height: 21px;height: 21px;vertical-align: top;font-weight: var(--text-bold);font-size: var(--text-h4);margin: 0;}
 
 /* 임시 데이터피커 */
-.date-picker input {width:200px!important;}
-
-
-
-
-
-
-
-
-
+.date-picker {display: flex; align-items: center; width:420px;}
+.date-picker input.datePicker {float:left; width:200px!important; padding:15px 45px 15px 20px; /*background:url('../images/btn_calendar.svg') no-repeat 163px #fff;*/}
+.date-picker > input.datePicker {margin-right:-15px;}
+.date-picker img.ui-datepicker-trigger {float: left; position: relative; right: 20px; cursor: pointer;}
+.date-picker img.ui-datepicker-trigger + input.datePicker {margin-left:4px;}
 
 
 /*
