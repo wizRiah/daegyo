@@ -237,7 +237,7 @@
                   <!-- 02_사진이 있을때 -->
                   <div class="resume-profile resume-myImage on">
                     <div class="imgbox">
-                      <img src="https://i.namu.wiki/i/p36SBzHzq2N9PUL4x3akY4ZEtm5Okh6BfuFoDuUVb7kcQcaGS6xLktW8XCuBhbt7HuzEct-S3LoOJAehoT8OAYGsI2hfvoZUnXno5zUNt0lFoUsVARedOJC3fdJkgK28EdTwxP03fyOX5yyU6HqXOA.webp">
+                      <img src="https://i.namu.wiki/i/tkPWy3w5xYxd_GJunkIallJd9FyD4oKMDuEMj4WXM4-D4LsA_k15pEG0YjJrLBNdg3JBl4dcdBTQAbBvXFMY-GGSk_iCj6AtglITJRijKNMjJIasmyoZlFc4cKoHtkuv2gfrxi6mP6KPPpxizvSqGQ.webp">
                     </div>
                     <button type="button" class="imgmodify" onclick = "location.href = 'select-resume_이력서_등록_사진추가_pop.html' ">사진변경</button>
                     <button type="button" class="imgdelete" title="이미지 삭제"></button>
@@ -278,7 +278,48 @@
                         </div>
                         <div class="guide_tooltip">
                           안심번호 안내
-                          <button type="button" class="h-btn-question">?</button>
+                          <button type="button" class="h-btn-question laypopup_ScriptSample01">?</button>
+
+                                      <!-- POPUP -->
+                                      <div class="h-popup popup-04 ui-draggable sampleClss01" style="width:580px; right:0; top:40px; display:none;">
+                                        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+                                          <p class="pop-title text-h3">안심번호 서비스란?</p>
+                                        </div>
+
+                                        <div class="pop-body">
+                                          <div class="pop-container">
+                                            <p class="text-subtitle6 h-txt-2 mb10">
+                                              개인정보보호를 위해 이력서에 회원님의 실제 휴대폰번호 대신 050X-XXX-XXXX 형식의 임시 가상번호를 표기하는 서비스입니다. (휴대폰만 이용가능)
+                                            </p>
+                                            <p class="text-subtitle6 h-txt-3 mt5">
+                                              이력서를 공개하면 자동으로 안심번호 서비스가 적용되어 개인정보를 보호합니다.<br>
+                                              이력서를 비공개 하거나 삭제하면 안심번호 서비스가 자동으로 해지되어 휴대폰 연결이 되지 않습니다. <br>
+                                              이력서를 열람하는 인사담당자가 안심번호로 전화를 걸면 실제 휴대폰번호로 연결되며, 문자수신도 가능합니다. <br>
+                                              실제 휴대폰 번호로 연결된 후의 통화료 외 부가적인 이용료는 없습니다. <br>
+                                              단 입사지원 시에는 기업에게 안심번호가 아닌 실제 휴대폰 번호가 전달됩니다.
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <button type="button" class="close" title="팝업 닫기">
+                                          <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                        </button>
+                                      </div>
+
+                                      <script>
+                                        $( document ).ready( function() {
+                                            $( '.laypopup_ScriptSample01' ).click( function() {
+                                              $('.sampleClss01').css("display","inline-block");
+                                            } );
+                                        } );
+
+                                        $( document ).ready( function() {
+                                            $( '.close' ).click( function() {
+                                              $('.sampleClss01').css("display","none");
+                                            } );
+                                        } );
+                                      </script>
+
+
                         </div>
                       </li>
                       <li class="hiddenList phone-certifiedInput">
@@ -312,9 +353,57 @@
                 </li>
                 <li>
                     <div class="labelArea">통화 가능시간</div>
-                    <div class="h-field-wrap">
+                    <div class="h-field-wrap" style="overflow:visible;">
                       <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="통화 가능시간 설정">
-                      <a href="#" class="h-button-s">설정하기</a>
+                      <a href="#" class="h-button-s laypopup_ScriptSample02">설정하기</a>
+
+                                  <!-- POPUP -->
+                                  <div class="h-popup popup-04 ui-draggable sampleClss02" style="width:400px; right:-1; top:56px; display:none;">
+                                    <div class="pop-header ui-draggable-handle" style="cursor: move;">
+                                      <p class="pop-title text-h3">통화 가능시간</p>
+                                    </div>
+
+                                    <div class="pop-body">
+                                      <div class="pop-container">
+                                        <p class="text-subtitle5 h-txt-3">※ 통화 가능시간 저장 시 작성된 이력서에 모두 반영됩니다.</p>
+                                        <ul>
+                                          <li class="flex flex-center mt10 mb15">
+                                            <select class="input-wd-160">
+                                              <option>시간선택</option>
+                                            </select>
+                                            <span class="ml5 mr5">~</span>
+                                            <select class="input-wd-160">
+                                              <option>시간선택</option>
+                                            </select>
+                                          </li>
+                                          <li>
+                                            <div class="h-checkbox checkbox01">
+                                              <input type="checkbox" name="everytimeOK" id="everytimeOK" checked="">
+                                              <label for="everytimeOK">통화가능시간 : 언제든 상관없음</label>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <button type="button" class="close" title="팝업 닫기">
+                                      <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                    </button>
+                                  </div>
+
+                                  <script>
+                                    $( document ).ready( function() {
+                                        $( '.laypopup_ScriptSample02' ).click( function() {
+                                          $('.sampleClss02').css("display","inline-block");
+                                        } );
+                                    } );
+
+                                    $( document ).ready( function() {
+                                        $( '.close' ).click( function() {
+                                          $('.sampleClss02').css("display","none");
+                                        } );
+                                    } );
+                                  </script>
+
                     </div>
                 </li>
               </ul>
@@ -378,8 +467,34 @@
                     <ul class="resume-regList">
                       <li>
                           <div class="labelArea">학교명<span class="necessary">필수</span></div>
-                          <div class="formArea">
+                          <div class="formArea" style="position:relative;">
                               <input type="text" class="h-txtfield-basic input-wd-510 mr10 highschoolNm" placeholder="학교명 입력">
+
+                                    <!-- 학교명 입력시 자동검색되는 목록 -->
+                                    <div class="keyword-Srch-Wrap">
+                                        <ul>
+                                          <li><span class="srchKeyword">서울</span>고등학교</li>
+                                          <li><span class="srchKeyword">서울</span>디지털고등학교</li>
+                                          <li><span class="srchKeyword">서울</span>사이버고등학교</li>
+                                          <li><span class="srchKeyword">서울</span>시립고등학교</li>
+                                          <li><span class="srchKeyword">서울</span>남상고등학교</li>
+                                          <li><span class="srchKeyword">서울</span>여자학교</li>
+                                          <li><span class="srchKeyword">서울</span>공립고등학교</li>
+                                          <!-- 검색한 내용이 업는 경우 -->
+                                          <li class="no-data">
+                                            <b>검색하신 학교명이 없습니다.</b>
+                                            <span>아래 직접입력을 클릭하셔서 학교명을 입력해주세요.</span>
+                                          </li>
+                                        </ul>
+                                        <div class="directInput">
+                                          <button type="button">
+                                            <span class="srchKeyword">'서울'</span> 직접입력
+                                          </button>
+                                        </div>
+                                    </div>
+
+
+
                               <div class="h-checkbox checkbox01">
                                 <input type="checkbox" name="gosi" id="gosi">
                                 <label for="gosi">대입 검정고시</label>
@@ -387,9 +502,17 @@
                           </div>
 
                           <script>
+                            //대입 검정고시 클릭시 학교명 입력하는 input 비활성.
                             $( document ).ready( function() {
                                 $( '#gosi' ).click( function() {
                                   $('.highschoolNm').prop("disabled",true);
+                                } );
+                              } );
+
+                              //학교명입력 클릭시 자동검색 리스트 노출.
+                              $( document ).ready( function() {
+                                $( '.highschoolNm' ).click( function() {
+                                  $('.keyword-Srch-Wrap').toggleClass("on");
                                 } );
                               } );
                           </script>
@@ -556,7 +679,7 @@
                         <ul>
                           <li>
                             <input type="text" id="txtNm" class="h-txtfield-basic input-wd-570 mr5" placeholder="전공학과 명 입력">
-                            <a href="javascript:void(0);" class="h-button-s">전공추가</a>
+                            <a href="javascript:void(0);" class="h-button-s addmajor">전공추가</a>
                           </li>
                           <li class="hiddenList hiddenList04">
                             <select class="input-wd-160 mr10"><option>부전공</option></select>
@@ -567,7 +690,7 @@
                         <script>
                             //전공추가버튼 클릭시 하단으로 부전공 입력폼 추가.
                             $( document ).ready( function() {
-                              $( '.h-button-s' ).click( function() {
+                              $( '.addmajor' ).click( function() {
                                 $('.hiddenList04').addClass("on");
                                 $(this).hide();
                               } );
@@ -578,7 +701,7 @@
                               $( '.h-btn-x' ).click( function() {
                                 $(this).parent().addClass("off");
                                 $(this).parent().removeClass("on");
-                                $('.h-button-s').show();
+                                $('.addmajor').show();
                               } );
                             } );
                           </script>
@@ -907,7 +1030,41 @@
                                 <div class="h-checkbox checkbox01">
                                   <input type="checkbox" name="checkForm033333" id="check033333">
                                   <label for="check033333">학원명 없이 이력서 공개</label>
-                                  <button type="button" class="h-btn-question">?</button>
+                                  <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
+
+                                                                        <!-- POPUP -->
+                                                                        <div class="h-popup popup-04 ui-draggable sampleClss03" style="width:400px; right:0; top:97px; display:none;">
+                                                                          <div class="pop-header ui-draggable-handle" style="cursor: move;">
+                                                                            <p class="pop-title text-h3">학원명 없이 이력서 공개</p>
+                                                                          </div>
+                                  
+                                                                          <div class="pop-body">
+                                                                            <div class="pop-container">
+                                                                              <p class="text-subtitle6 h-txt-3">
+                                                                                ㆍ<span class="h-txt-2 h-txt-medium">이력서 공개 시</span> : 인재정보에서 해당 이력서를 보려고 할 때 학원명은 <br>
+                                                                                &nbsp;&nbsp;&nbsp;&nbsp;비공개 되어 보이지 않습니다. <br>
+                                                                                ㆍ<span class="h-txt-2 h-txt-medium">입사지원 시</span> : 입사지원 시에는 학원명이 공개되어 지원됩니다.
+                                                                              </p>
+                                                                            </div>
+                                                                          </div>
+                                                                          <button type="button" class="close" title="팝업 닫기">
+                                                                            <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                                          </button>
+                                                                        </div>
+                                  
+                                                                        <script>
+                                                                          $( document ).ready( function() {
+                                                                              $( '.laypopup_ScriptSample03' ).click( function() {
+                                                                                $('.sampleClss03').css("display","inline-block");
+                                                                              } );
+                                                                          } );
+                                  
+                                                                          $( document ).ready( function() {
+                                                                              $( '.close' ).click( function() {
+                                                                                $('.sampleClss03').css("display","none");
+                                                                              } );
+                                                                          } );
+                                                                        </script>
                                 </div>
                             </div>
                         </li>
@@ -1037,7 +1194,7 @@
                             </ul>
                             <div class="innerbox-blue">
                               <ul class="resume-regList">
-                                <li>
+                                <li style="position:relative;">
                                     <div class="labelArea">유아</div>
                                     <ul>
                                       <li>
@@ -1080,7 +1237,39 @@
                                         <select class="input-wd-160">
                                           <option>수업 최대인원</option>
                                         </select>
-                                        <button type="button" class="h-btn-question">?</button>
+                                        <button type="button" class="h-btn-question laypopup_ScriptSample04">?</button>
+
+                                                                              <!-- POPUP -->
+                                                                              <div class="h-popup popup-04 ui-draggable sampleClss04" style="width:370px; right:0; top:40px; display:none;">
+                                                                                <div class="pop-header ui-draggable-handle" style="cursor: move;">
+                                                                                  <p class="pop-title text-h3">수업최대인원</p>
+                                                                                </div>
+
+                                                                                <div class="pop-body">
+                                                                                  <div class="pop-container">
+                                                                                    <p class="text-subtitle6 h-txt-2 mb10">
+                                                                                      강사님 수업 진행 시, 한번에 최대 몇 명의 인원까지 해당 학원에서<br>
+                                                                                    수업을 진행했는지 인원을 선택해 주시면 됩니다.</p>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <button type="button" class="close" title="팝업 닫기">
+                                                                                  <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                                                </button>
+                                                                              </div>
+
+                                                                              <script>
+                                                                                $( document ).ready( function() {
+                                                                                    $( '.laypopup_ScriptSample04' ).click( function() {
+                                                                                      $('.sampleClss04').css("display","inline-block");
+                                                                                    } );
+                                                                                } );
+
+                                                                                $( document ).ready( function() {
+                                                                                    $( '.close' ).click( function() {
+                                                                                      $('.sampleClss04').css("display","none");
+                                                                                    } );
+                                                                                } );
+                                                                              </script>
                                       </li>
                                     </ul>
                                 </li>
@@ -2003,8 +2192,8 @@
           </div>
 
           <div class="h-btn-wrap">
-              <a href="javascript:void(0);" class="h-button-ml h-button-teal"><i class="material-symbols-outlined vert-m mr5">add_circle</i>파일등록 추가</a>
-              <a href="javascript:void(0);" class="h-button-ml">내 파일함</a>
+              <a href="../Addfunction/manage-files_파일관리_파일등록_pop.html" class="h-button-ml h-button-teal"><i class="material-symbols-outlined vert-m mr5">add_circle</i>파일등록 추가</a>
+              <a href="../Addfunction/manage-files_파일관리_내파일관리_pop.html" class="h-button-ml">내 파일함</a>
           </div>
           </div>
 
@@ -2549,7 +2738,7 @@
               </li>
             </ul>
 
-            <div class="innerbox-blue">
+            <div class="innerbox-blue" style="position:relative;">
               <div class="h-checkbox checkbox02">
                 <input type="checkbox" name="checkForm" id="check02" checked="">
                 <label for="check02">
@@ -2559,7 +2748,48 @@
               </div>
               <div>
                 <span>민감정보 제공안내</span>
-                <button type="button" class="h-btn-question">?</button>
+                <button type="button" class="h-btn-question laypopup_ScriptSample05">?</button>
+
+
+                                                      <!-- POPUP -->
+                                                      <div class="h-popup popup-04 ui-draggable sampleClss05" style="width:500px; right:0; top:75px; display:none;">
+                                                        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+                                                          <p class="pop-title text-h3">민감정보 제공안내</p>
+                                                        </div>
+                
+                                                        <div class="pop-body">
+                                                          <div class="pop-container">
+                                                            <p class="text-subtitle6 h-txt-2 mb10">
+                                                              민감정보는 선택입력 항목이며, 입력하지 않더라도 이력서 작성에 제한을 두지 않습니다.
+                                                            </p>
+                                                            <p class="text-subtitle6 h-txt-3 mt5">
+                                                              ㆍ개인정보 수집 및 이용목적 : 효과적인 취업지원, 경력개발에 적합한 서비스를 제공하기 위함. <br>
+                                                              ㆍ수집하는 개인정보 항목 : 장애여부, 병역사항, 국가보훈, 고용지원금 <br>
+                                                              ㆍ개인정보의 보유 및 이용기간 : 인정보의 수집 및 이용에 대한 동의를 철회 하거나, 수집 및ㆍ<br>
+                                                              &nbsp;&nbsp;&nbsp;&nbsp;이용목적이 달성되거나 이용기간이 종료한 경우 개인정보를 지체 없이 파기. <br>
+                                                              &nbsp;&nbsp;&nbsp;&nbsp;(단, 상법 등 관계법령의 규정에 의하여ㆍ보존할 필요가 있는 경우 거래내역과 최소한의 <br>
+                                                              &nbsp;&nbsp;&nbsp;&nbsp;기본정보를 일정기간 보유)
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                        <button type="button" class="close" title="팝업 닫기">
+                                                          <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                        </button>
+                                                      </div>
+                
+                                                      <script>
+                                                        $( document ).ready( function() {
+                                                            $( '.laypopup_ScriptSample05' ).click( function() {
+                                                              $('.sampleClss05').css("display","inline-block");
+                                                            } );
+                                                        } );
+                
+                                                        $( document ).ready( function() {
+                                                            $( '.close' ).click( function() {
+                                                              $('.sampleClss05').css("display","none");
+                                                            } );
+                                                        } );
+                                                      </script>
               </div>
             </div>
           </div>
