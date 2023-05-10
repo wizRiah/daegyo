@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- 데이터피커 cdn -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -118,7 +123,12 @@
 
         <div class="basic-serchbox">
           <div class="col">
-            <span class="date-picker"><input type="text"> ~ <input type="text"></span>
+            <span class="date-picker">
+              <input type="text" id="datepickerStart" class="datePicker" placeholder="YYYY-MM-DD">
+              ~
+              <input type="text" id="datepickerEnd" class="datePicker" placeholder="YYYY-MM-DD">
+            </span>
+
             <div class="h-radio-02 mr5">
               <input type="radio" id="hcheck02_1" name="hcheck02" checked>
               <label for="hcheck02_1">1주일</label>
@@ -300,6 +310,31 @@
 
 
   </div>
+
+
+  <script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yy-mm-dd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년',
+        showMonthAfterYear:true,
+        showOn:"button",
+        buttonImage:"../../../images/btn_calendar.svg",
+        buttonImageOnly:true,
+    });
+
+    $(function() {
+      $("#datepickerStart, #datepickerEnd").datepicker();
+    });
+  </script>
+
 
 </body>
 
