@@ -47,7 +47,8 @@
  .h-popup.popup-04 .h-checkbox {margin:0;}
  .h-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label {font-size:14px;}
 
-
+ .h-popup .h-subbox-basic-guide {background:#F5F7FA; padding:20px; border-radius: 10px;}
+ .h-popup .h-checkbox.checkbox01 input[type="checkbox"] + label:hover:after {display:none;}
 
  @media (max-width: 1049px){
   .h-popup { width: 85% !important; }
@@ -156,7 +157,7 @@
 .pop-container .resume-list-item { position: absolute; top: 33px; left:0; width:100%; background:#fff; z-index: 1; border:2px solid var(--grey-3); border-radius: 4px; box-sizing: border-box; box-shadow: 0px 5px 10px #0000001A; }
 .pop-container .resume-list-item .basic-serchbox { margin: 0; width: calc(100% - 9px); border-radius: 0; padding: 0 0 0 13px; background:transparent; box-sizing: border-box; }
 .pop-container .resume-list-item ul { overflow-y: auto; overflow-x: hidden; height: 228px; transition: height 0.5s; }
-.pop-container .resume-list-item ul li { display: flex; align-items: center; cursor: pointer; padding: 15px; }
+.pop-container .resume-list-item ul li { display: flex; align-items: center; /*cursor: pointer;*/ padding: 15px; }
 .pop-container .resume-list-item ul li:hover { background-color: var(--neutral-3); transition: all ease-out 0.3s; }
 .pop-container .resume-list-item ul li .basic-serchbox .btit { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; display: inline-block; width: 87%; }
 
@@ -390,3 +391,45 @@
 .keyword-Srch-Wrap .directInput button span {}
 .keyword-Srch-Wrap .directInput button:after {content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid #62666B; transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px;}
 
+
+
+/* 학원서비스 - 공개제의한 인재 답변 팝업 */
+.suggestion_status {width: 50%;display: inline-block;vertical-align: middle;font-weight: 400;}
+.suggestion_status>span {font-size:20px;display: flex;align-items: center;}
+.suggestion_status>span.acceptance {color:#61A6FF}
+.suggestion_status>span.refusal {color:#BCBCBC}
+.suggestion_status>span span {margin-right:5px;}
+
+.openOffer-POPUP {border-top:1px solid #E0E6EF;padding-top:30px;}
+.openOffer-POPUP .employeeInfo {display: flex; margin-bottom: 30px;}
+.openOffer-POPUP .employeeInfo .profileArea {width:85px;padding-right:20px;box-sizing: border-box;padding-top: 5px;}
+.openOffer-POPUP .employeeInfo .profileArea .imgbox {width:65px; height:65px; overflow:hidden; border-radius:100%; }
+.openOffer-POPUP .employeeInfo .profileArea .imgbox img {width:100%; height:100%;}
+.openOffer-POPUP .employeeInfo .infoArea {width:calc(100% - 85px);}
+.openOffer-POPUP .employeeInfo .infoArea>ul {display:flex;flex-direction: column;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li {margin-bottom: 8px;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li:last-child {margin-bottom:0;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li .em-name {font-size:14px;font-weight: 600;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li .gen-old {font-size:13px; color:#7E7E7E}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li.text-subtitle1 {color: #151515;font-weight: 700;/* margin-bottom: 0; */line-height: normal;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li>ul {margin-top: 0;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li {padding-left:0;font-size: 13px;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li:before {display:none;}
+.openOffer-POPUP .h-subbox-basic {background:#EBEFF5;padding: 27px 30px;border-radius: 10px;font-size: 14px;color: #333;margin-bottom: 27px;}
+.openOffer-POPUP .h-subbox-basic .h-bullet-list {background:#fff;justify-content: center;padding: 20px 10px;border-radius: 10px;margin-top: 11px;}
+.openOffer-POPUP .h-subbox-basic .answerBox {margin-top:20px;display: flex;}
+.openOffer-POPUP .h-subbox-basic .answerBox .circle {width:40px;height:40px;line-height: 40px;text-align: center;background:#26B2C8;color:#fff;font-size:13px;border-radius:100%;margin-right:15px;margin-top: 3px;}
+.openOffer-POPUP .h-subbox-basic .answerBox .rightBox {line-height: 20px;}
+.openOffer-POPUP .h-subbox-basic .answerBox .rightBox .date {font-size:13px; color:#9A9A9A;}
+.openOffer-POPUP .h-subbox-basic .answerBox .rightBox .co {font-size:13px;}
+.openOffer-POPUP .h-subbox-basic .answerBox + .h-pagination {margin-top:20px;border-top: 1px solid #D4DAE2;padding-top: 20px;}
+.openOffer-POPUP .h-subbox-basic .answerBox + .h-pagination .h-btn {background-color:#fff;}
+.openOffer-POPUP .h-subbox-basic2 {border-radius:10px;background: #F5F7FA;padding: 28px 30px 25px;margin-bottom: 20px;}
+.openOffer-POPUP .h-subbox-basic2 .text-subtitle1 {margin-bottom: 7px;color: #151515;font-weight: 600;}
+.openOffer-POPUP .h-subbox-basic2 .text-subtitle3 {margin-bottom: 11px;color: #7E7E7E;font-weight: 300;}
+.openOffer-POPUP .h-subbox-basic2 .h-bullet-list {flex-direction: column;align-items: flex-start;}
+.openOffer-POPUP .h-subbox-basic2 .h-bullet-list li {margin: 0 0 7px 0;font-size: 13px;display: flex;margin-left: 2px;}
+.openOffer-POPUP .h-subbox-basic2 .h-bullet-list li .tit {color: #9A9A9A;width: 56px;margin-right: 10px;}
+.openOffer-POPUP .h-subbox-basic2 .h-bullet-list li .tit:after {display:none;}
+.openOffer-POPUP .h-subbox-basic2 .h-bullet-list li a {text-decoration:underline;}
+.openOffer-POPUP .applyTxt {color:#333333; line-height:22px;}
