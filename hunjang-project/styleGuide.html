@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/styleGuide.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- 데이터피커 cdn -->
+  <link rel="stylesheet" href="css/jquery-ui-1.12.1.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   <style>
     html {
       background: #efefef;
@@ -286,9 +289,15 @@
           </div>
 
 
-
-
-
+          <br><br>
+          <h4>달력 아이콘 클릭시 열림</h4>
+          <div class="guide_item">
+            <span class="date-picker">
+              <input type="text" id="datepickerStart" class="datePicker" placeholder="YYYY-MM-DD">
+              ~
+              <input type="text" id="datepickerEnd" class="datePicker" placeholder="YYYY-MM-DD">
+            </span>
+          </div>
 
           <br><br>
 
@@ -1461,6 +1470,32 @@
 
 
   </div>
+
+  <script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yy-mm-dd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '.',
+        showMonthAfterYear:true,
+        showOn:"button",
+        buttonImage:"images/btn_calendar.svg",
+        buttonImageOnly:true,
+        minDate: 0,
+    });
+
+    $(function() {
+      $("#datepickerStart, #datepickerEnd").datepicker();
+    });
+  </script>
+
+
 </body>
 
 </html>
