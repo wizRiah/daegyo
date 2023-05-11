@@ -86,9 +86,12 @@
 .h-resume-wrap .h-resume-tit {padding:30px 10px; border-top:1px solid var(--grey-3); box-sizing:border-box;}
 
 /* right menu - 공통 */
-.h-resume-wrap .r-side {position:fixed; top:85px; right:0; order:3; display:flex; flex-flow:column nowrap; width:250px; height:calc(100vh - 85px); padding:20px; overflow-y:auto; overflow-x:hidden; box-sizing:border-box;}
+.h-resume-wrap .r-side {position:fixed; top:85px; right:0; order:3; display:flex; flex-flow:column nowrap; width:250px; height:calc(100vh - 85px); box-sizing:border-box;}
 .h-resume-wrap .r-side [class^="h-button"] {width:100%; margin-left:0; margin-right:0;}
 .h-resume-wrap .r-side [class^="h-button"]:not(:first-child) {margin-top:10px;}
+.h-resume-wrap .r-side .h-resume-item-wrap {padding:20px; box-sizing:border-box; overflow-y:auto; overflow-x:hidden;}
+.h-resume-wrap .r-side .btn-wrap {position:relative; right:0; bottom:0; width:250px; padding:20px; background:#fff; box-sizing:border-box;}
+
     /* right menu - 이력서 보기 */
     .h-resume-wrap .r-side .modify-date {width:100%; height:54px; font-size:var(--text-subtitle4); color:var(--black-3); border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
     .h-resume-wrap .r-side .modify-date strong {font-weight:var( --text-medium); color:var(--black-2);}
@@ -135,15 +138,18 @@
     .h-resume-wrap .r-side .h-register + .btn-wrap [class^="h-button"]:not(:nth-of-type(1)) {margin-top:5px;}
 
 /* 간격 */
-.h-resume-wrap .r-side .modify-date + .h-resume-item,
-.h-resume-wrap .r-side .h-resume-item-wrap + .btn-wrap {margin-top:15px;}
-.h-resume-wrap .r-side .h-register + .btn-wrap {margin-top:130px;}
+.h-resume-wrap .r-side .modify-date + .h-resume-item {margin-top:15px;}
+
+
 
 
 
 /* ==================================== 학원서비스 Layout ==================================== */
+.h-academy-wrap .container{background: var(--neutral-5);}
 .h-academy-wrap header {background-color:#26B2C8F2;}
 .h-academy-wrap header .header-inner .myicon-wrap {margin-right:0;}
 .h-academy-wrap header .header-inner .myicon-wrap + .h-product-dropdown {margin-left:25px;}
 .h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label {width:24px; height:24px; padding-right:0; text-indent:-99999px;}
 .h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label:after {width:24px; height:24px; background:url(../images/icon_mypage_arrow_big.png) no-repeat;}
+/* 인재매칭 - 이력서 보기 */
+.htMatch-rsview-wrap header {background-color:#62666B;}

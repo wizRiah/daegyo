@@ -3,38 +3,48 @@
 .h-tab-01 + .h-tit-box-1 {margin-top:70px;}
 
 
-/* ==================================== 학원서비스 ==================================== */
+/* ==================================== 채용공고관리 ==================================== */
 .h-academy-recruit {}
 .h-academy-recruit .h-tit-box-1 select {color:var(--black-2);}
 .h-academy-recruit .h-tit-box-1 input[type="text"] + [class^="h-button"] {margin-left:10px;}
 .h-academy-recruit .h-tit-box-1 [class^="h-button"]:nth-last-child(1) {margin-right:0;}
 
-/* 목록 */
+/* 채용공고 - 목록 */
 .h-notice-list {display:flex; flex-flow:column wrap;}
 .h-notice-list li.resume-form {display:flex; flex-flow:row wrap; justify-content:flex-start; align-items:center;}
 .h-notice-list li.resume-form + li.resume-form {margin-top:10px;}
-.h-notice-list li .h-circle {flex-grow:0; width:65px; height:65px; border-radius:50%; background-color:var(--cyan); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:#fff; line-height:22px;}
-.h-notice-list li .h-circle + .h-info-wrap {margin-left:30px;}
-.h-notice-list li .h-info-wrap {flex-grow:1; display:inline-flex; flex-flow:column wrap;}
-    .h-notice-list li .h-info-wrap .tit {font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1); line-height:24px;}
-    .h-notice-list li .h-info-wrap .info-txt {display:flex; flex-flow:row wrap;}
-    .h-notice-list li .h-info-wrap .info-txt li {display:inline-flex; align-items:center; font-size:var(--text-subtitle5); line-height:20px;}
-    .h-notice-list li .h-info-wrap .info-txt li:not(:first-child)::before {content:''; display:inline-block; width:1px; height:13px; margin-left:12px; margin-right:12px; background-color:var(--border-basic-2);}
-    .h-notice-list li .h-info-wrap .info-txt span {color:var(--black-3);}
-    .h-notice-list li .h-info-wrap .info-txt span::after {content:':'; display:inline-block; margin-left:4px; margin-right:4px;}
-    .h-notice-list li .h-info-wrap .btn-wrap .h-button-xxs {padding:0 12px; margin-left:0; margin-right:0;}
-    .h-notice-list li .h-info-wrap .btn-wrap .h-txt-pit,
-    .h-notice-list li .h-info-wrap .btn-wrap .h-button-link {margin-left:10px;}
-    .h-notice-list li .h-info-wrap .tit + .info-txt {margin-top:12px;}
-    .h-notice-list li .h-info-wrap .info-txt + .btn-wrap {margin-top:25px;}
-.h-notice-list li .info-count {flex-grow:0; display:inline-flex; flex-flow:row wrap;}
-.h-notice-list li .info-count li a {min-width:60px;}
-.h-notice-list li .info-count li:not(:first-child) {margin-left:20px;}
-.h-notice-list li .info-count li a {width:100%; height:100%; display:flex; flex-flow:column wrap; text-align:center;}
-.h-notice-list li .info-count li .num {font-size:var(--text-h2); font-weight:var(--text-bold); color:var(--black-2); line-height:30px;}
-.h-notice-list li .info-count li .num.all {color:var(--blue-3);}
-.h-notice-list li .info-count li .item {font-size:var(--text-subtitle5); color:var(--black-5); line-height:18px;}
-.h-notice-list li .info-count li .num + .item {margin-top:10px;}
+    /* 공고상태 */
+    .h-notice-list li .h-circle {flex-grow:0; width:65px; height:65px; border-radius:50%; background-color:var(--grey-1); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:#fff; line-height:16px;}
+    .h-notice-list li .h-circle.ongoing {background-color:var(--cyan);}
+    .h-notice-list li .h-circle + .h-info-wrap {margin-left:30px;}
+    /* 공고제목, 채용담당자, 모집기간, 등록일, 버튼 */
+    .h-notice-list li .h-info-wrap {flex-grow:1; max-width:630px; display:inline-flex; flex-flow:column wrap;}
+        .h-notice-list li .h-info-wrap .tit {font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1); line-height:24px;}
+        .h-notice-list li .h-info-wrap .info-txt {display:flex; flex-flow:row wrap;}
+        .h-notice-list li .h-info-wrap .info-txt li {display:inline-flex; align-items:center; font-size:var(--text-subtitle5); line-height:20px;}
+        .h-notice-list li .h-info-wrap .info-txt li:not(:first-child)::before {content:''; display:inline-block; width:1px; height:13px; margin-left:12px; margin-right:12px; background-color:var(--border-basic-2);}
+        .h-notice-list li .h-info-wrap .info-txt span {color:var(--black-3);}
+        .h-notice-list li .h-info-wrap .info-txt span::after {content:':'; display:inline-block; margin-left:4px; margin-right:4px;}
+        .h-notice-list li .h-info-wrap .btn-wrap .h-button-xxs {padding:0 12px; margin-left:0; margin-right:0;}
+        .h-notice-list li .h-info-wrap .btn-wrap .h-txt-pit,
+        .h-notice-list li .h-info-wrap .btn-wrap .h-button-link {margin-left:10px;}
+        .h-notice-list li .h-info-wrap .btn-wrap .h-button-link p {margin-right:7px;}
+        .h-notice-list li .h-info-wrap .tit + .info-txt {margin-top:12px;}
+        .h-notice-list li .h-info-wrap .info-txt + .btn-wrap {margin-top:25px;}
+    /* 전체지원자, 열람, 미열람 */
+    .h-notice-list li .info-count {flex-grow:0; display:inline-flex; flex-flow:row wrap; margin-left:auto;}
+    .h-notice-list li .info-count li a {min-width:60px;}
+    .h-notice-list li .info-count li:not(:first-child) {margin-left:20px;}
+    .h-notice-list li .info-count li a {width:100%; height:100%; display:flex; flex-flow:column wrap; text-align:center;}
+    .h-notice-list li .info-count li .num {font-size:var(--text-h2); font-weight:var(--text-bold); color:var(--black-2); line-height:30px;}
+    .h-notice-list li .info-count li .num.all {color:var(--blue-3);}
+    .h-notice-list li .info-count li .item {font-size:var(--text-subtitle5); color:var(--black-5); line-height:18px;}
+    .h-notice-list li .info-count li .num + .item {margin-top:10px;}
+    /* 결제하기 */
+    .h-notice-list li .info-payment {max-width:270px; flex-grow:0; display:inline-flex; flex-flow:column wrap; align-items:flex-end; margin-left:auto;}
+    .h-notice-list li .info-payment .txt {font-size:var(--text-subtitle5); text-align:right; line-height:20px;}
+    .h-notice-list li .info-payment .txt + .h-button-link {margin-top:15px;}
+    .h-notice-list li .info-payment .h-button-link {width:auto; margin-right:0;}
 
 /* pagination 영역 */
 .h-academy-recruit .h-pagination-wrap {position:relative; display:flex; align-items:center; margin-top:40px;}
