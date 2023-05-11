@@ -39,13 +39,13 @@
 .h-popup.popup-03 .pop-container { padding:30px 40px 40px; }
 .h-popup.popup-03 .pop-body { height: calc(100% - 190px); }
 .h-popup-b-g a { margin-bottom: 8px; }
-.h-popup.popup-04 {position:absolute; padding: 30px; border: 1px solid #62666B; border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none;}
+.h-popup.popup-04 {position:absolute; padding: 30px; border: 1px solid var(--grey-3); border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none;}
 .h-popup.popup-04 .pop-body {height: 100%; overflow: visible;}
 .h-popup.popup-04 .pop-container {    height: 100%; overflow: visible;}
 .h-popup.popup-04 .pop-title {font-size:20px;}
 .h-popup.popup-04 select {height:46px;}
 .h-popup.popup-04 .h-checkbox {margin:0;}
-.h-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label {font-size:14px;}
+.h-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label {font-size:var(--text-subtitle4);}
 
   @media (max-width: 1049px){
       .h-popup { width: 85% !important; }
@@ -77,11 +77,19 @@
 
 
 /* 팝업내 공통적으로 쓰이는 디자인요소 */
-.h-popup .h-subbox-basic-guide-bold {background:#EBEFF5; padding:20px; border-radius: 10px;}
-.h-popup .h-subbox-basic-guide {background:#F5F7FA; padding:20px; border-radius: 10px;}
+.input-wd-120 {width:120px !important; min-width:120px;}
+.input-wd-160 {width:160px !important; min-width:160px;}
+.input-wd-290 {width:290px !important; min-width:290px;}
+.input-wd-500 {width:500px !important; min-width:500px;}
+
+.h-popup .h-subbox-basic-guide-bold {background:#EBEFF5; padding:20px; border-radius: 10px; width:100%;}
+.h-popup .h-subbox-basic-guide {background:var(--neutral-3); padding:20px; border-radius: 10px;}
 .h-popup .h-checkbox {margin-left:0;}
 .h-popup .h-checkbox.checkbox01 input[type="checkbox"] + label:hover:after {display:none;}
-.h-popup .h-txtfield-basic {height:46px !important;}
+.h-popup .h-radio-01 input[type="radio"] + label .rchk {margin-left: 0 !important;}
+.h-popup .h-txtfield-basic,
+.h-popup .h-field-wrap, .h-popup .h-field-wrap .h-txtfield-inner {height:46px !important;}
+.h-popup .h-field-wrap:not(.calendar) .h-txtfield-inner + a {height:34px;line-height: 34px;}
 
 .h-bullet-list {display:flex; flex-flow:row wrap; align-items:center;}
 .h-bullet-list li {position:relative; padding-left:6px; font-size:var(--text-subtitle4); font-weight:var(--text-medium); color:var(--black-2);}
@@ -90,10 +98,22 @@
 .h-bullet-list li .tit {font-weight:var(--text-regular); color:var(--black-3);}
 .h-bullet-list li .tit::after {content:':'; margin-left:5px; margin-right:5px;}
 
-.h-bullet-list.column-list {}
-.h-bullet-list.column-list li {margin-left: 0;color: #7E7E7E; font-weight: 400;font-size: 13px;line-height: 22px;}
-.h-bullet-list.column-list li b {color:#333333; font-weight:500;}
+.h-bullet-list.column-list {flex-direction: column; width: 100%;}
+.h-bullet-list.column-list li {margin-left: 0;color: var(--black-3);font-weight: var(--text-regular);font-size:var(--text-subtitle5);line-height: 22px;width: 100%;}
+.h-bullet-list.column-list li .tit,
+.h-bullet-list.column-list li b {color:var(--black-2); font-weight: var(--text-medium);}
 
+.basic-formList {}
+.basic-formList>li {display:flex;align-items: center;margin-bottom: 20px;}
+.basic-formList>li .labelArea {width:82px;font-size:var(--text-subtitle4);color: var(--black-3);}
+.basic-formList>li .formArea {width:calc(100% - 82px);display: flex;flex-wrap: wrap;justify-content: flex-start;}
+.basic-formList>li.line2 {align-items:flex-start;}
+.basic-formList>li.line2 .labelArea {margin-top:15px;}
+
+.readmore-Arrowbtn {display: inline-block;width: 19px;height: 19px;border-radius: 100%;border: 1px solid var(--grey-2);text-indent: -999px;overflow: hidden;position: relative;box-sizing: border-box;}
+.readmore-Arrowbtn:before {content: "";display: inline-block;width: 6px;height: 6px;border: 1px solid var(--grey-2);border-width: 0 1.5px 1.5px 0;position: absolute;left: 5px;top: 4px;transform: rotate(45deg);transition: 0.5s;}
+.readmore-Arrowbtn.on:before {transform: rotate(225deg);top: 7px;}
+.readmore-Arrowbtn:hover, .readmore-Arrowbtn:hover:before {cursor: pointer;}
 
 
 
@@ -132,7 +152,7 @@
 .pop-container ul.top-list-box.be-none li { padding-left:0; }
 
 
-.pop-container .col-guide li { display: flex; width:250px; /* height: 200px; */padding: 25px 0; border-radius:10px; background-color:var(--neutral-3); text-align: center; align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: column; font-weight: 400; }
+.pop-container .col-guide li { display: flex; width:250px; /* height: 200px; */padding: 25px 0; border-radius:10px; background-color:var(--neutral-3); text-align: center; align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: column; font-weight: var(--text-regular); }
 .pop-container .col-guide li img { height:70px; margin: 18px 0; }
 
 
@@ -193,7 +213,7 @@
 .slide-card-wrap .recruitment-info .swiper-slide .btn-star { position: absolute; top:10px; right:10px; }
 .slide-card-wrap .recruitment-info .swiper-slide .stit { width: 100%; display: -webkit-box; word-wrap: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; line-height: 1.3em; height: 2.6em; margin-top: 3px; }
 .slide-card-wrap .detail-info { margin-top: 15px; }
-.slide-card-wrap .detail-info li { float:left; font-size: var(--text-subtitle6); font-weight: 400; }
+.slide-card-wrap .detail-info li { float:left; font-size: var(--text-subtitle6); font-weight: var(--text-regular); }
 .slide-card-wrap .detail-info li + li { position:relative; margin-left:15px; }
 .slide-card-wrap .detail-info li + li:after { content:''; position: absolute; top: 1px; left: -8px; width: 2px; height: 13px; background:#e9e9e9; }
 .slide-card-wrap .detail-info li:nth-child(3n) { clear:both; margin-left:0; margin-top: 5px; }
@@ -253,7 +273,7 @@
 .pop-container .h-img-preview { margin: 30px 0 20px 0; }
 .pop-container .h-img-preview .before { flex: 0 0 400px; }
 .pop-container .h-img-preview .preview { overflow: hidden; position: relative; height: 153px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; }
-.pop-container .h-img-preview .before .preview { width: 400px; border: 1px solid #CCD1D7; border-radius: 4px; }
+.pop-container .h-img-preview .before .preview { width: 400px; border: 1px solid var(--border-basic-2); border-radius: 4px; }
 .pop-container .h-img-preview .before .preview::after { content: "아래 사진찾기에서 사진을 등록해 주세요."; position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-weight: var(--text-light); font-size: var(--text-subtitle4); color: var(--black-6); }
 .pop-container .h-img-preview .before .preview.on::after { content: none; }
 .pop-container .h-img-preview .arrow { justify-content: center; align-self: flex-end; height: 153px; }
@@ -261,7 +281,7 @@
 .pop-container .h-img-preview .after { flex: 0 0 130px; }
 .pop-container .h-img-preview .after .preview { background: var(--neutral-3); overflow: hidden; padding: 10px; width:130px; }
 .pop-container .h-img-preview .after .preview::after { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 10px solid #ffffff; box-sizing: inherit; }
-.pop-container .h-img-preview .after .preview::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 1px solid #CCD1D7; box-sizing: inherit; z-index: 1; border-radius: 4px; }
+.pop-container .h-img-preview .after .preview::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 1px solid var(--border-basic-2); box-sizing: inherit; z-index: 1; border-radius: 4px; }
 
 
 /* 이력서_등록_퀵자기소개서 팝업*/
@@ -357,7 +377,7 @@
 /* 이력서 선택 팝업 */
 .pop-container .resume-check li {padding:30px 0;}
 .pop-container .resume-check li img {height:90px;}
-.pop-container .resume-check li .item-txt {margin-bottom:20px; font-size: 13px; line-height:1.2em;}
+.pop-container .resume-check li .item-txt {margin-bottom:20px; font-size:var(--text-subtitle5); line-height:1.2em;}
 .pop-container .resume-check li .h-button-ml {width:160px;}
 
 
@@ -365,55 +385,55 @@
 
 
 /* 달력 - datePicker */
-.datePicker {padding: 0px; border: 1px solid #62666B; border-radius: 4px; box-sizing: border-box; min-height: auto; max-height: none; text-align: center;}
+.datePicker {padding: 0px; border: 1px solid var(--grey-3); border-radius: 4px; box-sizing: border-box; min-height: auto; max-height: none; text-align: center;}
 .datePicker .pop-body {height: 100%; overflow: visible;}
 .datePicker .pop-container {height: 100%; overflow: visible;}
 .datePicker .select_year {display: flex; flex-direction: row; width: 100%; justify-content: center; margin-top: 14px; align-items: center;}
-.datePicker .select_year>button {width: 29px; height: 29px; background: #F5F7FA; border-radius: 100%; text-align: center;}
+.datePicker .select_year>button {width: 29px; height: 29px; background: var(--neutral-3); border-radius: 100%; text-align: center;}
 .datePicker .select_year>button.prev {}
 .datePicker .select_year>button.next {background: none;}
-.datePicker .select_year>button.prev:before, .datePicker .select_year>button.next:before {content: ""; display: inline-block; width: 7px; height: 7px; border: 1px solid #8C9197; transform: rotate(45deg); vertical-align: middle;}
+.datePicker .select_year>button.prev:before, .datePicker .select_year>button.next:before {content: ""; display: inline-block; width: 7px; height: 7px; border: 1px solid var(--grey-2); transform: rotate(45deg); vertical-align: middle;}
 .datePicker .select_year>button.prev:before {border-width: 0 0 1.5px 1.5px; margin-left: 3px;}
 .datePicker .select_year>button.next:before {border-width: 1px 1px 0 0; margin-right: 4px;}
 .datePicker .select_year>ul {display: flex; width: 54px; overflow: hidden; margin: 0 3px;}
 .datePicker .select_year>ul li {}
-.datePicker .select_year>ul li a {font-size: 16px; color: #333; font-weight: 600; margin: 0 6px; padding-left: 2px;}
+.datePicker .select_year>ul li a {font-size: 16px; color: var(--black-2); font-weight: 600; margin: 0 6px; padding-left: 2px;}
 .datePicker .select_month {}
 .datePicker .select_month>ul {padding: 10px 18px; display: flex; flex-wrap: wrap; justify-content: space-between;}
 .datePicker .select_month>ul>li {width: 43px; height: 30px;}
-.datePicker .select_month>ul>li>a {width: 100%; display: block; line-height: 30px; border-radius: 4px; font-size: 14px; color: #7E7E7E;}
-.datePicker .select_month>ul>li>a.select {background: #F5F7FA; color: #61A6FF;}
-.datePicker .select_month>ul>li>a:hover {background: #F5F7FA;}
+.datePicker .select_month>ul>li>a {width: 100%; display: block; line-height: 30px; border-radius: 4px; font-size:var(--text-subtitle4); color: var(--black-3);}
+.datePicker .select_month>ul>li>a.select {background: var(--neutral-3); color: var(--blue-3);}
+.datePicker .select_month>ul>li>a:hover {background: var(--neutral-3);}
 .datePicker .select_yearList {}
 .datePicker .select_yearList>ul {height: 223px; overflow-y: scroll;}
 .datePicker .select_yearList>ul>li {width: 100%; height: 36px; line-height: 36px;}
 .datePicker .select_yearList>ul>li>a {width: 100%; display: block; font-size: 15px;}
-.datePicker .select_yearList>ul>li>a.select {background: #F5F7FA; color: #61A6FF;}
-.datePicker .select_yearList>ul>li>a:hover {background: #F5F7FA;}
+.datePicker .select_yearList>ul>li>a.select {background: var(--neutral-3); color: var(--blue-3);}
+.datePicker .select_yearList>ul>li>a:hover {background: var(--neutral-3);}
 
 
 
 /* 인풋 - 키워드 자동입력 박스 (학교검색/ 자격증검색 등) */
-.keyword-Srch-Wrap {display:none;width: 510px;border: 1px solid #62666B;border-radius: 4px;margin-top: 5px;overflow: hidden;position: absolute;z-index: 1;background: #fff;top: 54px;box-sizing: border-box;}
+.keyword-Srch-Wrap {display:none;width: 510px;border: 1px solid var(--grey-3);border-radius: 4px;margin-top: 5px;overflow: hidden;position: absolute;z-index: 1;background: #fff;top: 54px;box-sizing: border-box;}
 .keyword-Srch-Wrap.on {display:inline-block;}
-.keyword-Srch-Wrap .srchKeyword {color: #61A6FF;}
+.keyword-Srch-Wrap .srchKeyword {color: var(--blue-3);}
 .keyword-Srch-Wrap>ul {height: 190px; overflow-y: scroll;}
-.keyword-Srch-Wrap>ul>li {font-size:15px; color:#333; padding: 9px 19px;}
+.keyword-Srch-Wrap>ul>li {font-size:15px; color:var(--black-2); padding: 9px 19px;}
 .keyword-Srch-Wrap>ul>li.no-data {text-align:center;display: flex;flex-direction: column;align-items: center;width: 100%;box-sizing: border-box;padding: 74px 0;background: #fff !important;}
-.keyword-Srch-Wrap>ul>li.no-data b {width:100%;font-weight: 500;}
-.keyword-Srch-Wrap>ul>li.no-data span {width:100%; color: #7e7e7e; margin-top:5px;}
-.keyword-Srch-Wrap>ul>li:hover {background: #F5F7FA;}
-.keyword-Srch-Wrap .directInput {background: #F5F7FA; border-top: 1px solid #D4DAE2; text-align: center;}
-.keyword-Srch-Wrap .directInput button {font-size: 14px; color: #333; width: 100%; padding: 17px 5px;}
+.keyword-Srch-Wrap>ul>li.no-data b {width:100%;font-weight: var(--text-medium);}
+.keyword-Srch-Wrap>ul>li.no-data span {width:100%; color: var(--black-3); margin-top:5px;}
+.keyword-Srch-Wrap>ul>li:hover {background: var(--neutral-3);}
+.keyword-Srch-Wrap .directInput {background: var(--neutral-3); border-top: 1px solid var(--border-basic-4); text-align: center;}
+.keyword-Srch-Wrap .directInput button {font-size:var(--text-subtitle4); color: var(--black-2); width: 100%; padding: 17px 5px;}
 .keyword-Srch-Wrap .directInput button span {}
-.keyword-Srch-Wrap .directInput button:after {content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid #62666B; transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px;}
+.keyword-Srch-Wrap .directInput button:after {content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid var(--grey-3); transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px;}
 
 
 
 /* 학원서비스 - 공개제의한 인재 답변 팝업 */
-.suggestion_status {width: 50%;display: inline-block;vertical-align: middle;font-weight: 400;}
+.suggestion_status {width: 50%;display: inline-block;vertical-align: middle;font-weight: var(--text-regular);}
 .suggestion_status>span {font-size:20px;display: flex;align-items: center;}
-.suggestion_status>span.acceptance {color:#61A6FF}
+.suggestion_status>span.acceptance {color:var(--blue-3)}
 .suggestion_status>span.refusal {color:#BCBCBC}
 .suggestion_status>span span {margin-right:5px;}
 
@@ -426,27 +446,35 @@
 .openOffer-POPUP .employeeInfo .infoArea>ul {display:flex;flex-direction: column;}
 .openOffer-POPUP .employeeInfo .infoArea>ul>li {margin-bottom: 8px;}
 .openOffer-POPUP .employeeInfo .infoArea>ul>li:last-child {margin-bottom:0;}
-.openOffer-POPUP .employeeInfo .infoArea>ul>li .em-name {font-size:14px;font-weight: 600;}
-.openOffer-POPUP .employeeInfo .infoArea>ul>li .gen-old {font-size:13px; color:#7E7E7E}
-.openOffer-POPUP .employeeInfo .infoArea>ul>li.text-subtitle1 {color: #151515;font-weight: 700;/* margin-bottom: 0; */line-height: normal;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li .em-name {font-size:var(--text-subtitle4);font-weight: 600;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li .gen-old {font-size:var(--text-subtitle5); color:var(--black-3)}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li.text-subtitle1 {color: var(--black-1);font-weight: 700;/* margin-bottom: 0; */line-height: normal;}
 .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul {margin-top: 0;}
-.openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li {padding-left:0;font-size: 13px;}
+.openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li {padding-left:0;font-size:var(--text-subtitle5);}
 .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li:before {display:none;}
-.openOffer-POPUP .h-subbox-basic-guide-bold {padding: 27px 30px; font-size: 14px;color: #333;margin-bottom: 27px;}
+.openOffer-POPUP .h-subbox-basic-guide-bold {padding: 27px 30px; font-size:var(--text-subtitle4);color: var(--black-2);margin-bottom: 27px;}
 .openOffer-POPUP .h-subbox-basic-guide-bold .h-bullet-list {background:#fff; justify-content: center;padding: 20px 10px;border-radius: 10px;margin-top: 11px;}
 .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox {margin-top:20px;display: flex;}
-.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .circle {width:40px;height:40px;line-height: 40px;text-align: center;background:#26B2C8;color:#fff;font-size:13px;border-radius:100%;margin-right:15px;margin-top: 3px;}
+.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .circle {width:40px;height:40px;line-height: 40px;text-align: center;background:var(--cyan);color:#fff;font-size:var(--text-subtitle5);border-radius:100%;margin-right:15px;margin-top: 3px;}
 .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox {line-height: 20px;}
-.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .date {font-size:13px; color:#9A9A9A;}
-.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .co {font-size:13px;}
-.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox + .h-pagination {margin-top:20px;border-top: 1px solid #D4DAE2;padding-top: 20px;}
+.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .date {font-size:var(--text-subtitle5); color:var(--black-5);}
+.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .co {font-size:var(--text-subtitle5);}
+.openOffer-POPUP .h-subbox-basic-guide-bold .answerBox + .h-pagination {margin-top:20px;border-top: 1px solid var(--border-basic-4);padding-top: 20px;}
 .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox + .h-pagination .h-btn {background-color:#fff;}
 .openOffer-POPUP .h-subbox-basic-guide {padding: 28px 30px 25px; margin-bottom: 20px;}
-.openOffer-POPUP .h-subbox-basic-guide .text-subtitle1 {margin-bottom: 7px;color: #151515;font-weight: 600;}
-.openOffer-POPUP .h-subbox-basic-guide .text-subtitle3 {margin-bottom: 11px;color: #7E7E7E;font-weight: 300;}
+.openOffer-POPUP .h-subbox-basic-guide .text-subtitle1 {margin-bottom: 7px;color: var(--black-1);font-weight: 600;}
+.openOffer-POPUP .h-subbox-basic-guide .text-subtitle3 {margin-bottom: 11px;color: var(--black-3);font-weight: 300;}
 .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list {flex-direction: column;align-items: flex-start;}
-.openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li {margin: 0 0 7px 0;font-size: 13px;display: flex;margin-left: 2px;}
-.openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit {color: #9A9A9A;width: 56px;margin-right: 10px;}
+.openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li {margin: 0 0 7px 0;font-size:var(--text-subtitle5);display: flex;margin-left: 2px;}
+.openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit {color: var(--black-5);width: 56px;margin-right: 10px;}
 .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit:after {display:none;}
 .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li a {text-decoration:underline;}
-.openOffer-POPUP .applyTxt {color:#333333; line-height:22px;}
+.openOffer-POPUP .applyTxt {color:var(--black-2); line-height:22px;}
+
+/*학원서비스 - 인터뷰 메시지전송 */
+.interview-messagePOP {}
+.interview-messagePOP .h-tab-Contents-02>input[type="radio"] + label {width:200px;}
+.interview-messagePOP .h-tab-Contents-02>input[type="radio"]:checked + label {font-weight:600;}
+.interview-messagePOP [class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox {padding-top:30px;}
+.interview-messagePOP textarea {width:100%;height:206px;overflow-y:scroll;border:1px solid var(--border-basic-2);text-align: left;font-size:var(--text-subtitle4);line-height: 22px;padding: 10px 20px;box-sizing: border-box;border-radius: 4px;}
+.interview-messagePOP .h-subbox-basic-guide-bold.on {display:block !important;}
