@@ -145,11 +145,33 @@
 
 
 /* ==================================== 학원서비스 Layout ==================================== */
-.h-academy-wrap .container{background: var(--neutral-5);}
-.h-academy-wrap header {background-color:#26B2C8F2;}
-.h-academy-wrap header .header-inner .myicon-wrap {margin-right:0;}
-.h-academy-wrap header .header-inner .myicon-wrap + .h-product-dropdown {margin-left:25px;}
-.h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label {width:24px; height:24px; padding-right:0; text-indent:-99999px;}
-.h-academy-wrap header .header-inner .h-product-dropdown > input[type="checkbox"] + label:after {width:24px; height:24px; background:url(../images/icon_mypage_arrow_big.png) no-repeat;}
-/* 인재매칭 - 이력서 보기 */
-.htMatch-rsview-wrap header {background-color:#62666B;}
+/* header - 공통 */
+:is(.h-academy-wrap, .htMatch-rsview-wrap) header .header-inner .myicon-wrap {margin-right:0;}
+:is(.h-academy-wrap, .htMatch-rsview-wrap) header .header-inner .h-product-dropdown > input[type="checkbox"] + label {width:24px; height:24px; padding-right:0;}
+:is(.h-academy-wrap, .htMatch-rsview-wrap) header .header-inner .h-product-dropdown > input[type="checkbox"] + label:after {width:24px; height:24px; background:url(../images/icon_mypage_arrow_big.png) no-repeat;}
+:is(.h-academy-wrap, .htMatch-rsview-wrap) header .header-inner .myicon-wrap + .h-product-dropdown {margin-left:25px;}
+:is(.h-academy-wrap, .htMatch-rsview-wrap) header .header-inner .h-product-dropdown label {text-indent:-9999px;}
+    /* header - 채용공고 관리 */
+    .h-academy-wrap header {background-color:#26B2C8F2;}
+    /* header - 이력서 보기 */
+    .htMatch-rsview-wrap header {width:100%; background-color:#62666B;}
+    .htMatch-rsview-wrap header .header-inner {justify-content:space-between;}
+    .htMatch-rsview-wrap header .header-inner .h-btn-wrap .h-button-volunteer {height:44px !important; padding:0 30px; margin:0; color:#fff; border:1px solid #FFFFFF4D !important;}
+    .htMatch-rsview-wrap header .header-inner .h-btn-wrap .h-button-volunteer img {display:inline-block; width:16px; height:14px; margin-right:10px; transform:scaleX(-1);}
+    .htMatch-rsview-wrap header .header-inner .h-btn-wrap + .notify-title {margin-left:38px;}
+    .htMatch-rsview-wrap header .header-inner .notify-title {font-size:var(--text-h2); font-weight:var(--text-bold); color:#fff;}
+
+/* left menu - 이력서 보기*/
+.htMatch-rsview-wrap .l-side {position:fixed; left:0; top:85px; width:270px; height:100%; box-sizing:border-box; border:1px solid red;}
+.htMatch-rsview-wrap .l-side .h-teacher-list {display:flex; flex-flow:column wrap;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li {width:100%; border-bottom:1px solid var(--border-basic-3);}
+.htMatch-rsview-wrap .l-side .h-teacher-list li a {display:flex; flex-flow:row wrap; align-items:center; padding:20px 16px 20px 20px; box-sizing:border-box;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap {width:65px; height:65px; border-radius:50%; border:1px solid var(--neutral-2); overflow:hidden;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap + .info-wrap {margin-left:10px;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap {color:var(--black-2);}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name {font-size:var(--text-subtitle2); font-weight:var(--text-bold); line-height:24px;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name .pl {font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3); margin-left:5px;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap :is(.career, .academic) {font-size:var(--text-subtitle5); line-height:20px;}
+
+/* contents - 공통 */
+:is(.h-academy-wrap, .htMatch-rsview-wrap) .container {background-color:var(--neutral-5);}
