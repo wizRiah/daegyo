@@ -17,11 +17,14 @@
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <div class="hunjang-wrap h-resume-wrap  htMatch-wrap htMatch-rsview-wrap">
+ 
+
+  <div class="hunjang-wrap h-resume-wrap htMatch-wrap htMatch-rsview-wrap">
     <!-- header -->
     <header>
       <div class="header-inner" style="justify-content: flex-start;">
@@ -43,10 +46,7 @@
 
 
         <!-- 이력서 제목 -->
-        <div id="anchor-personal" class="h-resume-tit" style="
-    border-top: 0;
-    padding-top: 0;
-">
+        <div id="anchor-personal" class="h-resume-tit" style="border-top: 0; padding-top: 0;">
           <strong class="text-h1">인내와 성실이 무기인 훈장마을 강사가 되고 싶어요</strong>
         </div>
 
@@ -895,8 +895,10 @@
         </div>
 
       </div>
+
+      <!-- 건 수 퀵메뉴 -->
       <div class="subQuickPosition" style="z-index: 10;position: absolute;width: 100%;visibility: hidden;margin-top: 158px;top: 0;">
-        <div class="subQuickWrap wzAffix" data-topspace="wzSubQuickTopPosition()" data-bottom="#footer" data-fix-point="" data-load-function="wzSubQuickMatchHeight" style="visibility: hidden;z-index: 1;position: relative;left: 0;width: 100%;" data-affix="off" data-affix-bottom="0" data-affix-top="305">
+        <div class="subQuickWrap" style="visibility: hidden;z-index: 1;position: relative;left: 0;width: 100%;">
           <div id="subQuickMenu" class="subQuickMenu basic" style="
     width: 1300px;
     margin: 0 auto;
@@ -918,31 +920,54 @@
                 <div class="quick" style="
     width: 150px;
     box-sizing: border-box;
-    border: 1px solid #D4DAE2;
     visibility: visible;
-    padding: 0;
     height: auto;
-    float: left;
     border-radius: 4px;
-    background: #FFFFFF;
 ">
 
                   <div class="menuContents" style="
     box-sizing: border-box;
     padding: 20px;
+    border: 1px solid #D4DAE2;
+    border-radius: 4px;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
 ">
                     <p class="rd-tit mt10">이력서 열람 건수</p><p class="rd-count h-txt-teal h-txt-bold mt5" style="
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border-basic-4);
-">16<span>건</span></p><a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs" style="
+">16<span>건</span></p><a href="javascript:void(0);" class="" style="
     line-height: 20px;
     font-size: 13px;
     padding: 0;
     margin-top: 15px;
+    color: #0E97FF;
+    text-decoration: underline !important;
+    font-weight: var(--text-medium);
+    display: block;
 ">이력서 열람서비스<br>신청하기</a>
                   </div>
 
-                </div>
+                <div class="menuContents" style="
+    border: 1px solid #D4DAE2;
+    border-radius: 4px;
+    margin-top: 10px;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+">
+                    <a href="javascript:void(0);" class="" style="
+    font-size: 14px;
+    color: #333;
+"><input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">인재 스크랩</a>
+                  </div><a class="h-button-m h-button-orange proposal-btn " href="javascript:void(0);" style="
+    margin: 0;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    line-height: 50px;
+">연락처 공개제의</a></div>
               </div>
             </div>
           </div>
@@ -973,6 +998,14 @@
 
 
   </div>
+
+  <script>
+    $( document ).ready( function() {
+        $( '.readmore-Arrowbtn' ).click( function() {
+          $('.readmore-Arrowbtn').toggleClass("on");
+        } );
+      } );
+  </script>
 
 </body>
 
