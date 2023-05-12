@@ -2,7 +2,7 @@
 @import 'styleGuide.css';
 
 /* 헤더 */
-.hunjang-wrap header {position:fixed; right:0; top:0; z-index:1; width:calc(100% - 270px); height:85px; background:#43A986F2; box-sizing:border-box;}
+.hunjang-wrap header {position:fixed; right:0; top:0; z-index:1; width:100%; height:85px; background:#43A986F2; box-sizing:border-box;}
 .hunjang-wrap header .header-inner {display:flex; justify-content:flex-end; align-items:center; height:100%; padding:0 40px;}
 .hunjang-wrap header .header-inner .h-listbox-wrap + .myicon-wrap,
 .hunjang-wrap header .header-inner .h-listbox-group + .myicon-wrap {margin-left:40px;}
@@ -28,7 +28,7 @@
 .hunjang-wrap header .header-inner .mypage-dropdown > input[type="checkbox"]:checked ~ .droupdown {top:calc(100% + 10px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border:1px solid var(--grey-3);}
 
 /* lnb */
-.hunjang-wrap aside {position:fixed; left:0; top:0; width:270px; height:100%;}
+.hunjang-wrap aside {position:fixed; left:0; top:0; z-index:2; width:270px; height:100%; background:#fff; box-shadow:2px 0 15px #00000003;}
 .hunjang-wrap aside .top_logo {display:flex; justify-content:center; align-items:center; height:125px;}
 .hunjang-wrap aside .top_logo img {width:auto; max-width:140px;}
 .hunjang-wrap aside ul {overflow-y:auto; height:calc(100% - 125px); padding-left:20px; padding-right:20px; box-sizing:border-box;}
@@ -54,6 +54,7 @@
 .hunjang-wrap aside ul li.active a {font-weight:var(--text-medium); color:var(--blue-3);}
 .hunjang-wrap aside ul li a {display:block; padding:13px 20px 13px 14px; color:var(--black-4);}
 
+
 /* 푸터 */
 .hunjang-wrap footer {margin-top:170px; padding:45px 0; font-size:var(--text-subtitle5); color:var(--black-3); border-top:1px solid var(--border-basic-3);}
 .hunjang-wrap footer ul li a {color:var(--black-3);}
@@ -69,6 +70,8 @@
 /* 컨텐츠 영역 */
 .hunjang-wrap .container {position:relative; top:85px; left:270px; width:calc(100% - 270px); background:var(--neutral-3);}
 .hunjang-wrap .content {position:relative; max-width:1080px; margin:0 auto; padding-top:90px;}
+    /* lnb 없는 경우 */
+    .hunjang-wrap header + .container {left:0; width:100%;}
 
 
 
@@ -83,7 +86,6 @@
 /* contents */
 .h-resume-wrap .container {order:2; top:85px; left:0; width:calc(100% - 250px); height:calc(100vh - 85px); overflow-y:scroll;}
 .h-resume-wrap .content:not(.resume-registForm) {width:1000px; box-sizing:border-box;}
-.h-resume-wrap .h-resume-tit {padding:30px 10px; border-top:1px solid var(--grey-3); box-sizing:border-box;}
 
 /* right menu - 공통 */
 .h-resume-wrap .r-side {position:fixed; top:85px; right:0; order:3; display:flex; flex-flow:column nowrap; width:250px; height:calc(100vh - 85px); box-sizing:border-box;}
@@ -162,16 +164,24 @@
     .htMatch-rsview-wrap header .header-inner .notify-title {font-size:var(--text-h2); font-weight:var(--text-bold); color:#fff;}
 
 /* left menu - 이력서 보기*/
-.htMatch-rsview-wrap .l-side {position:fixed; left:0; top:85px; width:270px; height:100%; box-sizing:border-box; border:1px solid red;}
+.htMatch-rsview-wrap .l-side {position:fixed; left:0; top:85px; z-index:2; width:270px; height:calc(100% - 85px); overflow-y:auto; padding-bottom:20px; margin-top:2px; background:#fff; box-sizing:border-box; box-shadow:2px 0 15px #00000003;}
 .htMatch-rsview-wrap .l-side .h-teacher-list {display:flex; flex-flow:column wrap;}
 .htMatch-rsview-wrap .l-side .h-teacher-list li {width:100%; border-bottom:1px solid var(--border-basic-3);}
 .htMatch-rsview-wrap .l-side .h-teacher-list li a {display:flex; flex-flow:row wrap; align-items:center; padding:20px 16px 20px 20px; box-sizing:border-box;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap {width:65px; height:65px; border-radius:50%; border:1px solid var(--neutral-2); overflow:hidden;}
+.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
 .htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap + .info-wrap {margin-left:10px;}
 .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap {color:var(--black-2);}
 .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name {font-size:var(--text-subtitle2); font-weight:var(--text-bold); line-height:24px;}
 .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name .pl {font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3); margin-left:5px;}
 .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap :is(.career, .academic) {font-size:var(--text-subtitle5); line-height:20px;}
+.htMatch-rsview-wrap .l-side .h-teacher-list + .h-pagination {margin-top:15px;}
+    /* 이력서 선택 */
+    .htMatch-rsview-wrap .l-side .h-teacher-list li.active {position:relative; background-color:var(--neutral-3);}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li.active::after {position:absolute; top:12px; right:6px; font-family:'Material Icons'; content:'check_circle_outline'; width:22px; height:22px; font-style:normal; font-size:22px; color:var(--blue-3);}
 
 /* contents - 공통 */
 :is(.h-academy-wrap, .htMatch-rsview-wrap) .container {background-color:var(--neutral-5);}
+    /*contents - 이력서 보기*/
+    .htMatch-rsview-wrap .container {left:auto; width:100%;}
+    .htMatch-rsview-wrap .l-side + .container {left:270px; width:calc(100% - 270px);}
+    .htMatch-rsview-wrap .container .h-resume-tit {}
