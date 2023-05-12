@@ -27,9 +27,11 @@
 .h-resume-wrap .h-personal-info .name {font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1);}
 
 /* 핸드폰, 이메일, 주소 */
+.h-resume-wrap .h-personal-info-list {max-width:510px;}
 .h-resume-wrap .h-personal-info-list li:not(:first-child) {margin-top:15px;}
+.h-resume-wrap .h-personal-info-list li {display:flex;}
 .h-resume-wrap .h-personal-info-list li .tit {display:inline-block; width:34px; margin-right:30px; font-size:var(--text-subtitle5); color:var(--black-5);}
-.h-resume-wrap .h-personal-info-list li .txt {display:inline-block; font-size:var(--text-subtitle3); font-weight:var(--text-regular); color:var(--black-2);}
+.h-resume-wrap .h-personal-info-list li .txt {display:inline-block; width:calc(100% - 64px); font-size:var(--text-subtitle3); font-weight:var(--text-regular); color:var(--black-2);}
 
 /* 지원 상태 */
 .h-resume-wrap .h-status-wrap {display:inline-flex; flex-flow:row wrap; position:absolute; top:20px; right:20px;}
@@ -126,4 +128,7 @@
 .h-resume-wrap .r-side .h-register .h-register-tit + .h-register-cate {margin-top:15px;}
 
 
-
+@media print {
+    .h-winpop-wrap .hunjang-wrap .content {width:100% !important;}
+    .h-resume-wrap .h-video-list li {flex:0 1 30% !important; height:auto; border:1px solid var(--border-basic-3);}
+}

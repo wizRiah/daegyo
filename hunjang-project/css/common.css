@@ -28,14 +28,11 @@ caption,legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-s
 
 
 @media print {
-    html, body {width:210mm; height:297mm; page-break-inside:avoid; page-break-after:auto;}
-    table {page-break-inside:auto;}
-    tr    {page-break-inside:avoid; page-break-after:auto;}
-    thead {display:table-header-group;}
-    tfoot {display:table-footer-group;}
-
-    .h-winpop-wrap .hunjang-wrap .content {width:100%;}
-    .h-resume-wrap .h-video-list li {flex:0 1 30%; height:auto; border:1px solid var(--border-basic-3);}
+    html, body {width:210mm !important; height:297mm !important; page-break-inside:avoid; page-break-after:auto;}
+    table {page-break-inside:auto !important;}
+    tr    {page-break-inside:avoid !important; page-break-after:auto !important;}
+    thead {display:table-header-group !important;}
+    tfoot {display:table-footer-group !important;}
 
     /* 프린트 영역 노출 안됨 */
 	.no-print {display:none;}
