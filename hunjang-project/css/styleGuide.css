@@ -380,11 +380,12 @@ button
 .h-listbox-wrap > input[type="checkbox"] + label { position:relative; display:block; padding:11px 38px 11px 20px; font-size:var(--text-subtitle5); font-weight:var(--text-medium); color:#fff; border:1px solid #FFFFFF4D; border-radius:30px; cursor:pointer; box-sizing:border-box; }
 .h-listbox-wrap > input[type="checkbox"] + label:after { position:absolute; content:''; right:20px; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); background:transparent url('../images/icon_select_arrow_line.png') center no-repeat; width:8px; height:4px; transition:transform 0.5s; cursor:pointer; }
 .h-listbox-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
-.h-listbox-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid var(--grey-3); }
-.h-listbox-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+.h-listbox-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; outline:1px solid var(--grey-3); }
+.h-listbox-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px 5px 0; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
 .h-listbox-wrap .dropdown ul { margin:10px 0; text-align:left; }
 .h-listbox-wrap .dropdown ul li a { display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; }
 .h-listbox-wrap .dropdown ul li:hover { background:var(--neutral-3); transition:all 0.2s ease; }
+    .h-listbox-wrap .dropdown::-webkit-scrollbar-thumb {height:30%;}
 
 /* checkbox - dropdown type 2 */
 .h-listbox2-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
@@ -393,8 +394,8 @@ button
 .h-listbox2-wrap > input[type="checkbox"] + label { position:relative; display:block; font-size:var(--text-subtitle5); color:var(--black-5); cursor:pointer; box-sizing:border-box; }
 .h-listbox2-wrap > input[type="checkbox"] + label:after { display:inline-block; content:''; width:0; height:0; border-top:5px solid var(--black-5); border-left:3px solid transparent; border-right:3px solid transparent; margin-left:4px; vertical-align:middle; transition:transform 0.5s; cursor:pointer; }
 .h-listbox2-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
-.h-listbox2-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:150px; opacity:1; visibility:visible; margin-bottom:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid var(--grey-3); }
-.h-listbox2-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:-15px; z-index:1; width:150px; height:0; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+.h-listbox2-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:150px; opacity:1; visibility:visible; margin-bottom:0; outline:1px solid var(--grey-3); }
+.h-listbox2-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:-15px; z-index:1; width:150px; height:0; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px 5px 0; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
 .h-listbox2-wrap .dropdown ul { margin:10px 0; text-align:left; }
 .h-listbox2-wrap .dropdown ul li a { display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; }
 .h-listbox2-wrap .dropdown ul li:hover { background:var(--neutral-3); transition:all 0.2s ease; }
@@ -408,7 +409,7 @@ button
 .h-notice-wrap > input[type="checkbox"] + label::after {position:absolute; right:-12px; top:50%; transform:translate(-50%, -50%) rotate(0deg); content:''; width:24px; height:24px; background:url(../images/arrow_dropdown.svg) center no-repeat; transition:transform 0.5s;} 
 .h-notice-wrap > input[type="checkbox"]:checked + label::after {transform:translate(-50%, -50%) rotate(180deg);}
 .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown {top:40px; z-index:3; height:300px; opacity:1; visibility:visible; margin-bottom:0;}
-.h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:30px; left:0; z-index:-1; width:1040px; height:0; opacity:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:2px solid var(--grey-3); background:#fff; border-radius:4px; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
+.h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:30px; left:0; z-index:-1; width:1040px; height:0; opacity:0; border-style:solid; border-color:#fff; border-width:5px 3px 5px 0; outline:2px solid var(--grey-3); background:#fff; border-radius:4px; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
 .h-notice-wrap .dropdown .droup-group {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle2);}
 .h-notice-wrap .dropdown .droup-group .group-title {width:134px; padding:30px; font-weight:var(--text-medium); color:var(--black-2); line-height:19px; box-sizing:border-box;}
 .h-notice-wrap .dropdown .droup-group .group-list {flex-grow:1; padding:20px 0; border-left:1px solid var(--border-basic-4);}
