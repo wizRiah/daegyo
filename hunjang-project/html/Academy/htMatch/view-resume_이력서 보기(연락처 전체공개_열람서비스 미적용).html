@@ -53,20 +53,22 @@
 
 
         <!-- 인적사항 -->
-        <!-- 연락처 공개시 -->
-        <div class="h-subbox-wide flex flex-center" style="display:none;">
+       
+        <!-- 연락처 전체공개_열람서비스 미 적용 -->
+        <div class="h-subbox-wide flex flex-center none">
 
           <!-- 등록된 이력서 사진이 없을 때 노출되지 않음 -->
           <div class="h-photo flex-set">
             <img src="https://image.utoimage.com/preview/cp872722/2023/03/202303008903_500.jpg" alt="">
           </div>
 
-          <div class="h-personal-info">
+          <div class="h-personal-info none">
             <p class="name">홍길동</p>
             <p class="age">1978년 (45세)</p>
             <p class="gender">남성</p>
           </div>
 
+          <!-- 데이트 *표시 되어야함. -->
           <ul class="h-personal-info-list">
             <li>
               <span class="tit">핸드폰</span>
@@ -81,41 +83,8 @@
               <strong class="txt">(12345) 경기도 김포시 김포한강2로 192 김포아파트 105동 2501호</strong>
             </li>
           </ul>
-
-          <div class="h-status-wrap">
-            <div class="status flex-set">
-              <p class="col">
-                <i class="h-emoticon type01 material-symbols-outlined">sentiment_satisfied</i>
-                <span>즉출가능</span>
-              </p>
-            </div>
-            <div class="score flex-set">
-              <p class="col">
-                <span>충실도</span>
-                <strong class="num">80</strong>
-                <span>%</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- 연락처 비공개시 -->
-        <div class="h-subbox-wide flex flex-center none">
-
-          <!-- 등록된 이력서 사진이 없을 때 노출되지 않음 -->
-          <div class="h-photo flex-set">
-            <img src="https://image.utoimage.com/preview/cp872722/2023/03/202303008903_500.jpg" alt="">
-          </div>
-
-          <div class="h-personal-info">
-            <p class="name">홍길동</p>
-            <p class="age">1978년 (45세)</p>
-            <p class="gender">남성</p>
-          </div>
-          <div class="h-personal-info-none flex flex-column">
-            <p>작성자가 이력서 등록 시 연락처를 비공개 하였습니다.</p><span class="h-txt-3">연락처 공개제의를 클릭 후 강사가 수락하면 연락처 확인이 가능합니다.</span>
-          </div>
+          <!-- // -->
+          
           <div class="h-status-wrap">
             <div class="flex">
               <div class="status flex-set">
@@ -132,10 +101,11 @@
                 </p>
               </div>
             </div>
-            <a class="h-button-m h-button-orange proposal-btn " href="javascript:void(0);">연락처 공개제의</a>
+            <a class="h-button-m h-button-orange proposal-btn " href="javascript:void(0);">연락처 확인하기</a>
           </div>
         </div>
 
+       
 
         <!-- 학력사항, 경력사항, 희망급여, 희망근무지/근무형태 -->
         <ul class="h-subbox-list item-4">
@@ -940,10 +910,18 @@
               <div class="floating">
                 <div class="quick">
 
-                  <div class="menuContents">
+                 
+                  <!-- <div class="menuContents">
                     <p class="rd-tit mt10">이력서 열람 건수</p>
                     <p class="rd-count h-txt-teal h-txt-bold mt5">16<span>건</span></p>
                     <a href="javascript:void(0);" class="apply-line-btn">이력서 열람서비스<br>신청하기</a>
+                  </div> -->
+
+                   <!-- 열람서비스 적용시 (on 클래스 추가되도록.)-->
+                  <div class="menuContents on">
+                    <p class="rd-tit mt10">이력서 열람 건수</p>
+                    <p class="rd-count h-txt-teal h-txt-bold mt5">100<span>건</span></p>
+                    <p class="h-txt-2 mt15 dead-info"><span class="h-txt-orange">2024.01.01</span> 까지<br>이용가능</p>
                   </div>
 
                   <div class="menuContents htMatch-scrap-btn">
@@ -952,9 +930,7 @@
                     </a>
                   </div>
 
-                  <a class="h-button-m h-button-orange suggest-btn" href="javascript:void(0);">연락처
-                    공개제의
-                  </a>
+                  <a class="h-button-m h-button-orange suggest-btn" href="javascript:void(0);">연락처 확인하기</a>
 
                   <!-- 버튼 클릭시 최상단으로 이동하도록. -->
                   <a class="h-quick-arrow" href="javascript:void(0);" title="최상단으로 이동" onclick="$('html, body').animate({scrollTop: '0'})">
