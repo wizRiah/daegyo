@@ -162,6 +162,14 @@
 
           <h3 class="guide_tit_s">컴포넌트</h3>
 
+          <h4>Bullet List Type 01 - font-size, color는 class로 같이 넣어줘야함</h4><br>
+          <ul class="h-bullet-01 text-subtitle5 h-txt-3">
+            <li>채용공고 게재기간은 최초 게재일로부터 최대 50일까지 입니다.</li>
+            <li>진행중인 공고는 최대 10개까지 가능. 초과 등록된 공고는 ‘대기중’ 상태가 되며, 유료서비스 신청 시에는 무제한 진행 가능합니다.</li>
+            <li>대기중 채용공고는 접수마감일까지 대기중 리스트에서 확인 가능하며, 마감일 이후 1년간 마감리스트에서 확인 가능합니다.</li>
+          </ul>
+          <br><br>
+
           <h4>input text (label 너비는 각 페이지의 디자인에 맞춰서 쓰시오)</h4><br>
           <div class="guide_page_only">
             <div>
@@ -314,19 +322,19 @@
           </div>
           <br><br><br>
 
-          <h4>droupdown</h4>
+          <h4>dropdown</h4>
           <div class="guide_item" style="background:#26B2C8F2; padding:20px;">
 
             <!-- 그룹으로 사용시에는 h-listbox-group으로 감싸기 -->
             <div class="h-listbox-group">
 
               <!-- 개별로 사용시에는 h-listbox-wrap -->
-              <!-- droupdown 01 -->
+              <!-- dropdown 01 -->
               <div class="h-listbox-wrap">
                 <input type="checkbox" id="list-box-01" class="list-box" />
-                <label for="list-box-01">droupdown 01</label>
-                <!-- droupdown -->
-                <div class="droupdown">
+                <label for="list-box-01">dropdown 01</label>
+                <!-- dropdown -->
+                <div class="dropdown">
                   <ul>
                     <li>
                       <a href="javascript:void(0);">111</a>
@@ -338,12 +346,12 @@
                 </div>
               </div>
 
-              <!-- droupdown 02 -->
+              <!-- dropdown 02 -->
               <div class="h-listbox-wrap">
                 <input type="checkbox" id="list-box-02" class="list-box" />
-                <label for="list-box-02">droupdown 02</label>
-                <!-- droupdown -->
-                <div class="droupdown">
+                <label for="list-box-02">dropdown 02</label>
+                <!-- dropdown -->
+                <div class="dropdown">
                   <ul>
                     <li>
                       <a href="javascript:void(0);">111</a>
@@ -355,12 +363,12 @@
                 </div>
               </div>
 
-              <!-- droupdown 03 -->
+              <!-- dropdown 03 -->
               <div class="h-listbox-wrap">
                 <input type="checkbox" id="list-box-03" class="list-box" />
-                <label for="list-box-03">droupdown 03</label>
-                <!-- droupdown -->
-                <div class="droupdown academy-name">
+                <label for="list-box-03">dropdown 03</label>
+                <!-- dropdown -->
+                <div class="dropdown academy-name">
                   <ul>
                     <li>
                       <a href="javascript:void(0);">111</a>
@@ -373,7 +381,64 @@
               </div>
             </div>
           </div>
-          <br><br><br>
+          <br><br>
+          
+
+          <div class="h-listbox2-wrap">
+            <input type="checkbox" id="tbl-selbox" class="list-box">
+            <label for="tbl-selbox">모집부문</label>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li><a href="javascript:void(0);">국어</a></li>
+                <li><a href="javascript:void(0);">영어</a></li>
+                <li><a href="javascript:void(0);">수학</a></li>
+                <li><a href="javascript:void(0);">과학</a></li>
+                <li><a href="javascript:void(0);">국영수를</a></li>
+                <li><a href="javascript:void(0);">우선으로해야</a></li>
+                <li><a href="javascript:void(0);">아리아리아리</a></li>
+                <li><a href="javascript:void(0);">인정받고</a></li>
+                <li><a href="javascript:void(0);">일류대학으로간다</a></li>
+              </ul>
+            </div>
+          </div>
+          <br><br>
+
+
+          <!-- 타이틀 dropdown -->
+          <div class="h-notice-wrap">
+
+            <input type="checkbox" id="list-box" class="h-title-btn">
+            <label for="list-box">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!</label>
+
+            <!-- dropdown -->
+            <div class="dropdown">
+              <div class="droup-group">
+                <div class="group-title">진행중 공고</div>
+                <ul class="group-list">
+                  <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
+                </ul>
+              </div>
+              
+              <!-- 비활성화 시키는 경우 클래스 close추가 -->
+              <div class="droup-group close">
+                <div class="group-title">마감 공고</div>
+                <ul class="group-list">
+                  <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <br><br><br><br>
+
+
 
           <h4>checkbox</h4>
           <div class="guide_item">
@@ -424,6 +489,13 @@
             <div class="h-checkbox checkbox04 ">
               <input type="checkbox" name="checkForm" id="check04_1" />
               <label for="check04_1"></label>
+            </div>
+
+            <br><br>
+
+            <div class="h-checkbox checkbox05">
+              <input type="checkbox" name="checkForm" id="check05">
+              <label for="check05">미열람만 보기</label>
             </div>
 
           </div>
@@ -1015,6 +1087,83 @@
 
 
           </div>
+          <br><br>
+
+          <!-- 컨텐츠 없는 버튼형 탭 1 -->
+          <ul class="h-tab-01">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <span class="status">진행중</span>
+                <strong class="num">15</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">접수마감</span>
+                <strong class="num">68</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">대기중</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">임시저장</span>
+                <strong class="num">12</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">전체</span>
+                <strong class="num">187</strong>
+              </a>
+            </li>
+          </ul>
+          <br><br>
+
+
+          <!-- 컨텐츠 없는 버튼형 탭 2 -->
+          <ul class="col h-tab-02">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <span class="status">전체</span>
+                <strong class="num">5</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">열람</span>
+                <strong class="num">68</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">서류합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">면접합격</span>
+                <strong class="num">12</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">최종합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">불합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+          </ul>
           <br><br><br>
 
 

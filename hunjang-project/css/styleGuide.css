@@ -281,6 +281,10 @@ button
 
 
 
+/* Bullet List Type 01 - font-size, color는 class로 같이 넣어줘야함 */
+.h-bullet-01 li {position:relative; padding-left:10px;}
+.h-bullet-01 li:after {position:absolute; top:10px; left:4px; content:''; width:2px; height:2px; background-color:currentColor; border-radius:50%;} 
+
 /* 체크박스 */
 .h-checkbox { display: inline-block; vertical-align: middle; -webkit-user-select: none !important; user-select: none !important; margin: 3px; /* z-index: 0; */ }
 .h-checkbox input,
@@ -362,18 +366,63 @@ button
 .h-checkbox.checkbox04 input[type="checkbox"]:checked + label { color:var(--blue-3); }
 
 
-/* checkbox - dropdown type */
+/* checkbox05 */
+.checkbox05 input[type="checkbox"] + label {position:relative; z-index:0; display:inline-flex; justify-content:center; align-items:center; height:46px; font-size:var(--text-subtitle4); color:var( --black-2); padding:15px 20px 15px 45px; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
+.checkbox05 input[type="checkbox"] + label::before {position:absolute; top:12px; left:20px; font-family:'Material Icons'; content:'check_circle_outline'; width:18px; height:18px; font-style:normal; font-size:22px; color:var(--grey-1);}
+.checkbox05 input[type="checkbox"]:checked + label,
+.checkbox05 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
+
+
+/* checkbox - dropdown type 1 */
 .h-listbox-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
 .h-listbox-wrap > input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
 .h-listbox-wrap > input[type="checkbox"]:focus + label:before { border-color:#000; }
 .h-listbox-wrap > input[type="checkbox"] + label { position:relative; display:block; padding:11px 38px 11px 20px; font-size:var(--text-subtitle5); font-weight:var(--text-medium); color:#fff; border:1px solid #FFFFFF4D; border-radius:30px; cursor:pointer; box-sizing:border-box; }
 .h-listbox-wrap > input[type="checkbox"] + label:after { position:absolute; content:''; right:20px; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); background:transparent url('../images/icon_select_arrow_line.png') center no-repeat; width:8px; height:4px; transition:transform 0.5s; cursor:pointer; }
 .h-listbox-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
-.h-listbox-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border:1px solid var(--grey-3); }
-.h-listbox-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+.h-listbox-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid var(--grey-3); }
+.h-listbox-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
 .h-listbox-wrap .dropdown ul { margin:10px 0; text-align:left; }
 .h-listbox-wrap .dropdown ul li a { display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; }
 .h-listbox-wrap .dropdown ul li:hover { background:var(--neutral-3); transition:all 0.2s ease; }
+
+/* checkbox - dropdown type 2 */
+.h-listbox2-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
+.h-listbox2-wrap > input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
+.h-listbox2-wrap > input[type="checkbox"]:focus + label:before { border-color:#000; }
+.h-listbox2-wrap > input[type="checkbox"] + label { position:relative; display:block; font-size:var(--text-subtitle5); color:var(--black-5); cursor:pointer; box-sizing:border-box; }
+.h-listbox2-wrap > input[type="checkbox"] + label:after { display:inline-block; content:''; width:0; height:0; border-top:5px solid var(--black-5); border-left:3px solid transparent; border-right:3px solid transparent; margin-left:4px; vertical-align:middle; transition:transform 0.5s; cursor:pointer; }
+.h-listbox2-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
+.h-listbox2-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:150px; opacity:1; visibility:visible; margin-bottom:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid var(--grey-3); }
+.h-listbox2-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:-15px; z-index:1; width:150px; height:0; opacity:0; border-radius:6px; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid transparent; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+.h-listbox2-wrap .dropdown ul { margin:10px 0; text-align:left; }
+.h-listbox2-wrap .dropdown ul li a { display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; }
+.h-listbox2-wrap .dropdown ul li:hover { background:var(--neutral-3); transition:all 0.2s ease; }
+    .h-listbox2-wrap .dropdown::-webkit-scrollbar-thumb {height:30%;}
+
+/* checkbox - dropdown type - title */
+.h-notice-wrap {position:relative; display:inline-flex; width:auto; max-width:100%; align-items:center;}
+.h-notice-wrap > input[type="checkbox"] {position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden;}
+.h-notice-wrap > input[type="checkbox"]:focus + label:before {border-color:#000;}
+.h-notice-wrap > input[type="checkbox"] + label {position:relative; display:block; width:100%; font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1); line-height:24px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; padding-right:34px; cursor:pointer; box-sizing:border-box;}
+.h-notice-wrap > input[type="checkbox"] + label::after {position:absolute; right:-12px; top:50%; transform:translate(-50%, -50%) rotate(0deg); content:''; width:24px; height:24px; background:url(../images/arrow_dropdown.svg) center no-repeat; transition:transform 0.5s;} 
+.h-notice-wrap > input[type="checkbox"]:checked + label::after {transform:translate(-50%, -50%) rotate(180deg);}
+.h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown {top:40px; z-index:3; height:300px; opacity:1; visibility:visible; margin-bottom:0;}
+.h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:30px; left:0; z-index:-1; width:1040px; height:0; opacity:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:2px solid var(--grey-3); background:#fff; border-radius:4px; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
+.h-notice-wrap .dropdown .droup-group {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle2);}
+.h-notice-wrap .dropdown .droup-group .group-title {width:134px; padding:30px; font-weight:var(--text-medium); color:var(--black-2); line-height:19px; box-sizing:border-box;}
+.h-notice-wrap .dropdown .droup-group .group-list {flex-grow:1; padding:20px 0; border-left:1px solid var(--border-basic-4);}
+.h-notice-wrap .dropdown .droup-group .group-list li {position:relative; display:flex; flex-flow:row wrap; justify-content:space-between; align-items:center; padding:10px 30px 10px 30px; font-weight:var(--text-regular);}
+.h-notice-wrap .dropdown .droup-group .group-list li::before {position:absolute; top:18px; left:20px; content:'';  width:2px; height:2px; background-color:var(--black-2); border-radius:50%;}
+.h-notice-wrap .dropdown .droup-group:not(.close) .group-list li:hover {background:var(--neutral-3); transition:all 0.2s ease;}
+.h-notice-wrap .dropdown .droup-group .group-list li a {font-size:var(--text-subtitle2); color:var(--black-2); line-height:19px;}
+.h-notice-wrap .dropdown .droup-group .group-list li .date {display:inline-block; font-size:var(--text-subtitle5); color:var(--black-3); line-height:15px;}
+.h-notice-wrap .dropdown .droup-group + .droup-group {border-top:1px solid var(--border-basic-4);}
+    /* 클릭 비활성화 */
+    .h-notice-wrap .dropdown .droup-group.close .group-title {color:var(--grey-1);}
+    .h-notice-wrap .dropdown .droup-group.close .group-list li::before {background-color:var(--black-5);}
+    .h-notice-wrap .dropdown .droup-group.close .group-list li a {color:var(--black-5); pointer-events:none; }
+
 
 
 /*
@@ -734,6 +783,42 @@ TAB
 .h-tab-Contents-02>.tabCo-Wrap:before { content:""; width: 100%; display: inline-block; border-top: 1px solid #606060; position: absolute; z-index:1; margin-top: 0px; }
 .h-tab-Contents-02>input[type="radio"]:first-child + label { border-left-width:1px; }
 .h-tab-Contents-02>input[type="radio"] + label:before { background:var(--grey-1); }
+
+
+/* Tab - only button 컨텐츠 없는 버튼형 탭 */
+/* tab menu 1 */
+.h-tab-01 {display:flex; flex-flow:row wrap; align-items:center;}
+.h-tab-01 li:not(:nth-child(5n+1)) {margin-left:20px;}
+.h-tab-01 li:nth-child(n+6) {flex-grow:0; margin-top:20px;}
+.h-tab-01 li {flex:1 0 200px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:15px; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-01 li a {display:flex; flex-flow:column wrap; justify-content:center; padding:25px; color:var(--black-2); box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-01 li a .status {font-size:var(--text-subtitle3); line-height:18px;}
+.h-tab-01 li a .num {font-family:"SUIT"; font-size:var(--text-h1); font-weight:var(--text-bold); line-height:40px;}
+.h-tab-01 li a .status + .num {margin-top:12px;}
+    /* hover */
+    .h-tab-01 li:hover {border-color:var(--teal);}
+    .h-tab-01 li:hover a {color:var(--teal);}
+    /* active */
+    .h-tab-01 li.active {border-color:var(--teal); background-color:var(--teal);}
+    .h-tab-01 li.active a {color:#fff;}
+
+/* tab menu 2 */
+.h-tab-02 {display:flex; flex-flow:row wrap; align-items:center;}
+.h-tab-02 li:not(:nth-child(8n+1)) {margin-left:5px;}
+.h-tab-02 li:nth-child(n+9) {flex-grow:0; margin-top:5px;}
+.h-tab-02 li {flex:0 0 130px; height:54px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-3); border-radius:90px; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-02 li a {display:flex; flex-flow:row wrap; justify-content:center; align-items:center; width:100%; height:100%; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-02 li a > * {transition:all ease 0.3s;}
+.h-tab-02 li a .status {font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px;}
+.h-tab-02 li a .num {font-family:"SUIT"; font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); line-height:18px;}
+.h-tab-02 li a .status + .num {margin-left:10px;}
+    /* hover */
+    .h-tab-02 li:hover {border-color:var(--teal);}
+    .h-tab-02 li:hover a > * {color:var(--teal);}
+    /* active */
+    .h-tab-02 li.active {border-color:var(--teal); background-color:var(--teal);}
+    .h-tab-02 li.active a > * {color:#fff;}
+
 
 
 /* 상태 이모티콘 */
