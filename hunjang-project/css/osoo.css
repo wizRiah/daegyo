@@ -34,9 +34,8 @@
         .resume-form .h-info-wrap .info-txt + .btn-wrap {margin-top:25px;}
     /* 전체지원자, 열람, 미열람 */
     .resume-form .info-count {flex-grow:0; display:inline-flex; flex-flow:row wrap; margin-left:auto;}
-    .resume-form .info-count li a {min-width:60px;}
     .resume-form .info-count li:not(:first-child) {margin-left:20px;}
-    .resume-form .info-count li a {width:100%; height:100%; display:flex; flex-flow:column wrap; text-align:center;}
+    .resume-form .info-count li a {min-width:60px; width:100%; height:100%; display:flex; flex-flow:column wrap; text-align:center;}
     .resume-form .info-count li .num {font-size:var(--text-h2); font-weight:var(--text-bold); color:var(--black-2); line-height:30px;}
     .resume-form .info-count li .num.all {color:var(--blue-3);}
     .resume-form .info-count li .item {font-size:var(--text-subtitle5); color:var(--black-5); line-height:18px;}
@@ -46,10 +45,32 @@
     .resume-form .info-payment .txt {font-size:var(--text-subtitle5); text-align:right; line-height:20px;}
     .resume-form .info-payment .txt + .h-button-link {margin-top:15px;}
     .resume-form .info-payment .h-button-link {width:auto; margin-right:0;}
+    /* 공고보기, 공고수정, 공고마감 */
+    .resume-form .notice-btn-wrap {flex-grow:0; display:inline-flex; flex-flow:row wrap; margin-left:auto;}
+    .resume-form .notice-btn-wrap li:not(:first-child) {margin-left:25px;}
+    .resume-form .notice-btn-wrap li a {width:auto; display:flex; flex-flow:column wrap; text-align:center;}
+    .resume-form .notice-btn-wrap li a .item {font-size:var(--text-subtitle6); font-weight:var(--text-regular); color:var(--black-2); line-height:14px;}
+    .resume-form .notice-btn-wrap li a img + .item {margin-top:7px;}
 
 
 /* 채용공고관리 - 지원자관리 - 목록  */
+.h-academy-recruit .resume-form + .my-txtbox {margin-top:40px; margin-bottom:30px;}
+.h-academy-recruit .resume-form + .my-txtbox.line {border-bottom:1px solid var(--border-basic-3);}
+.h-academy-recruit .resume-form + .my-txtbox.line .text-h1 {margin-bottom:20px; letter-spacing:-0.8px; line-height:37px;}
+.h-academy-recruit .flex-between .col.h-tab-02 {flex-grow:1;}
+.h-academy-recruit .flex-between .col.btn-wrap input[type="checkbox"], 
+.h-academy-recruit .flex-between .col.btn-wrap [class^="h-button"] {margin:0;}
+/* table - 지원자 리스트 */
+.h-tbl-volunteer thead tr th:last-child {padding-right:10px;}
+.h-tbl-volunteer tbody tr td {padding:20px 5px;}
+.h-tbl-volunteer tbody tr td:first-child {width:60px; text-align:center;}
+.h-tbl-volunteer tbody tr td:last-child {text-align:center;}
 
+.h-volunteer-wrap {display:flex; flex-flow:row wrap; align-items:center; box-sizing:border-box;}
+.h-volunteer-wrap .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
+.h-volunteer-wrap .photo-wrap + .info-wrap {margin-left:15px;}
+.h-volunteer-wrap .info-wrap .name {font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); line-height:24px;}
+.h-volunteer-wrap .info-wrap .age {font-size:var(--text-subtitle5); color:var(--black-3); line-height:24px;}
 
 /* pagination 영역 */
 .h-academy-recruit .h-pagination-wrap {position:relative; display:flex; align-items:center; margin-top:40px;}
@@ -63,7 +84,29 @@
 
 /* ==================================== 공통 ==================================== */
 
-/* tab menu */
+/* 체크박스 */
+.checkbox05 input[type="checkbox"] + label {position:relative; z-index:0; display:inline-flex; justify-content:center; align-items:center; height:46px; font-size:var(--text-subtitle4); color:var( --black-2); padding:15px 20px 15px 45px; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
+.checkbox05 input[type="checkbox"] + label::before {position:absolute; top:12px; left:20px; font-family:'Material Icons'; content:'check_circle_outline'; width:18px; height:18px; font-style:normal; font-size:22px; color:var(--grey-1);}
+.checkbox05 input[type="checkbox"]:checked + label,
+.checkbox05 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
+
+
+/* checkbox - dropdown type 2 */
+.h-listbox2-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
+.h-listbox2-wrap > input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
+.h-listbox2-wrap > input[type="checkbox"]:focus + label:before { border-color:#000; }
+.h-listbox2-wrap > input[type="checkbox"] + label { position:relative; display:block; font-size:var(--text-subtitle5); color:var(--black-5); cursor:pointer; box-sizing:border-box; }
+.h-listbox2-wrap > input[type="checkbox"] + label:after { display:inline-block; content:''; width:0; height:0; border-top:5px solid var(--black-5); border-left:3px solid transparent; border-right:3px solid transparent; margin-left:4px; vertical-align:middle; transition:transform 0.5s; cursor:pointer; }
+.h-listbox2-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
+.h-listbox2-wrap > input[type="checkbox"]:checked ~ .dropdown { top:calc(100% + 5px); height:150px; opacity:1; visibility:visible; margin-bottom:0; border-style:solid; border-color:#fff; border-width:5px 3px; outline:1px solid var(--grey-3); }
+.h-listbox2-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:-15px; z-index:1; width:150px; height:0; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+.h-listbox2-wrap .dropdown ul { margin:10px 0; text-align:left; }
+.h-listbox2-wrap .dropdown ul li a { display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; }
+.h-listbox2-wrap .dropdown ul li:hover { background:var(--neutral-3); transition:all 0.2s ease; }
+    .h-listbox2-wrap .dropdown::-webkit-scrollbar-thumb {height:30%;}
+
+
+/* tab menu 1 */
 .h-tab-01 {display:flex; flex-flow:row wrap; align-items:center;}
 .h-tab-01 li:not(:nth-child(5n+1)) {margin-left:20px;}
 .h-tab-01 li:nth-child(n+6) {flex-grow:0; margin-top:20px;}
@@ -79,25 +122,52 @@
     .h-tab-01 li.active {border-color:var(--teal); background-color:var(--teal);}
     .h-tab-01 li.active a {color:#fff;}
 
+/* tab menu 2 */
+.h-tab-02 {display:flex; flex-flow:row wrap; align-items:center;}
+.h-tab-02 li:not(:nth-child(8n+1)) {margin-left:5px;}
+.h-tab-02 li:nth-child(n+9) {flex-grow:0; margin-top:5px;}
+.h-tab-02 li {flex:0 0 130px; height:54px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-3); border-radius:90px; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-02 li a {display:flex; flex-flow:row wrap; justify-content:center; align-items:center; width:100%; height:100%; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-02 li a > * {transition:all ease 0.3s;}
+.h-tab-02 li a .status {font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px;}
+.h-tab-02 li a .num {font-family:"SUIT"; font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); line-height:18px;}
+.h-tab-02 li a .status + .num {margin-left:10px;}
+    /* hover */
+    .h-tab-02 li:hover {border-color:var(--teal);}
+    .h-tab-02 li:hover a > * {color:var(--teal);}
+    /* active */
+    .h-tab-02 li.active {border-color:var(--teal); background-color:var(--teal);}
+    .h-tab-02 li.active a > * {color:#fff;}
+
 /* list type 01 - font-size, color는 class로 같이 넣어줘야함 */
 .h-bullet-01 li {position:relative; padding-left:10px;}
 .h-bullet-01 li:after {position:absolute; top:10px; left:4px; content:''; width:2px; height:2px; background-color:currentColor; border-radius:50%;} 
 
-
+.width-120 {width:120px !important; min-width:auto;}
 .width-160 {width:160px !important;}
 .width-350 {width:350px !important;}
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
 
 
 /* checkbox - dropdown type2 */
-.h-notice-wrap {position:relative; z-index:2; display:inline-flex; width:auto; max-width:100%; align-items:center;}
+.h-notice-wrap {display:inline-flex; width:auto; max-width:100%; align-items:center;}
 .h-notice-wrap > input[type="checkbox"] {position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden;}
 .h-notice-wrap > input[type="checkbox"]:focus + label:before {border-color:#000;}
 .h-notice-wrap > input[type="checkbox"] + label {position:relative; display:block; width:100%; font-size:var(--text-h4); font-weight:var(--text-bold); color:var(--black-1); line-height:24px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; padding-right:34px; cursor:pointer; box-sizing:border-box;}
 .h-notice-wrap > input[type="checkbox"] + label::after {position:absolute; right:-12px; top:50%; transform:translate(-50%, -50%) rotate(0deg); content:''; width:24px; height:24px; background:url(../images/arrow_dropdown.svg) center no-repeat; transition:transform 0.5s;} 
 .h-notice-wrap > input[type="checkbox"]:checked + label::after {transform:translate(-50%, -50%) rotate(180deg);}
-.h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown {top:calc(100% + 5px); height:auto; opacity:1; visibility:visible; margin-bottom:0; border:1px solid var(--grey-3);}
-.h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
-.h-notice-wrap .dropdown ul {margin:10px 0; text-align:left;}
-.h-notice-wrap .dropdown ul li a {display:block; padding:10px 20px; font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px;}
-.h-notice-wrap .dropdown ul li:hover {background:var(--neutral-3); transition:all 0.2s ease;}
+.h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown {top:80px; z-index:3; height:300px; opacity:1; visibility:visible; margin-bottom:0;}
+.h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:70px; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); z-index:-1; width:1040px; height:0; opacity:0; border:2px solid var(--grey-3); background:#fff; border-radius:4px; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s;}
+.h-notice-wrap .dropdown .droup-group {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle2);}
+.h-notice-wrap .dropdown .droup-group .group-title {width:134px; padding:30px; font-weight:var(--text-medium); color:var(--black-2); line-height:19px; box-sizing:border-box;}
+.h-notice-wrap .dropdown .droup-group .group-list {flex-grow:1; padding:20px 0; border-left:1px solid var(--border-basic-4);}
+.h-notice-wrap .dropdown .droup-group .group-list li {position:relative; display:flex; flex-flow:row wrap; justify-content:space-between; align-items:center; padding:10px 30px 10px 30px; font-weight:var(--text-regular);}
+.h-notice-wrap .dropdown .droup-group .group-list li::before {position:absolute; top:18px; left:20px; content:'';  width:2px; height:2px; background-color:var(--black-2); border-radius:50%;}
+.h-notice-wrap .dropdown .droup-group:not(.close) .group-list li:hover {background:var(--neutral-3); transition:all 0.2s ease;}
+.h-notice-wrap .dropdown .droup-group .group-list li a {font-size:var(--text-subtitle2); color:var(--black-2); line-height:19px;}
+.h-notice-wrap .dropdown .droup-group .group-list li .date {display:inline-block; font-size:var(--text-subtitle5); color:var(--black-3); line-height:15px;}
+.h-notice-wrap .dropdown .droup-group + .droup-group {border-top:1px solid var(--border-basic-4);}
+    /* 마감 */
+    .h-notice-wrap .dropdown .droup-group.close .group-title {color:var(--grey-1);}
+    .h-notice-wrap .dropdown .droup-group.close .group-list li::before {background-color:var(--black-5);}
+    .h-notice-wrap .dropdown .droup-group.close .group-list li a {color:var(--black-5); pointer-events:none; }

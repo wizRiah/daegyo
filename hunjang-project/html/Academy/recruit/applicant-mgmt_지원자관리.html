@@ -190,6 +190,7 @@
         </ul>
         
         
+        <!-- 채용공고 영역 -->
         <div class="resume-form">
             <!-- 진행중인 경우 ongoing 클래스를 넣어주세요 -->
             <div class="h-circle ongoing flex-set">진행중</div>
@@ -204,22 +205,23 @@
                   <!-- dropdown -->
                   <div class="dropdown">
                     <div class="droup-group">
-                      <div>진행중 공고</div>
-                      <ul>
-                        <li>훈장마을 부문별 신입/경력 사원 모집공고<span>~2023.06.01</span></li>
-                        <li>반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님<span>~2023.06.01</span></li>
-                        <li>훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)<span>~2023.06.01</span></li>
-                        <li>반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용<span>~2023.06.01</span></li>
+                      <div class="group-title">진행중 공고</div>
+                      <ul class="group-list">
+                        <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
                       </ul>
                     </div>
-
-                    <div class="droup-group">
-                      <div>마감 공고</div>
-                      <ul>
-                        <li>훈장마을 부문별 신입/경력 사원 모집공고<span>~2023.06.01</span></li>
-                        <li>반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님<span>~2023.06.01</span></li>
-                        <li>훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)<span>~2023.06.01</span></li>
-                        <li>반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용<span>~2023.06.01</span></li>
+                    
+                    <!-- 비활성화 시키는 경우 클래스 close추가 -->
+                    <div class="droup-group close">
+                      <div class="group-title">마감 공고</div>
+                      <ul class="group-list">
+                        <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                        <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
                       </ul>
                     </div>
                   </div>
@@ -234,32 +236,192 @@
               </ul>
             </div>
 
-            <ul class="info-count">
+            <ul class="notice-btn-wrap">
               <li>
                 <a href="javascript:void(0);">
-                  <strong class="num all">10</strong>
-                  <span class="item">전체 지원자</span>
+                  <img src="../../../images/icon_notice_view.svg">
+                  <span class="item">공고보기</span>
                 </a>
               </li>
               <li>
                 <a href="javascript:void(0);">
-                  <strong class="num">8</strong>
-                  <span class="item">열람</span>
+                  <img src="../../../images/icon_notice_modify.svg">
+                  <span class="item">공고수정</span>
                 </a>
               </li>
               <li>
                 <a href="javascript:void(0);">
-                  <strong class="num">2</strong>
-                  <span class="item">미열람</span>
+                  <img src="../../../images/icon_notice_close.svg">
+                  <span class="item">공고마감</span>
                 </a>
               </li>
             </ul>
         </div>
 
 
-        <div class="my-txtbox">
+        <div class="my-txtbox line">
           <strong class="text-h1">지원자 관리</strong>
         </div>
+
+        
+        <div class="flex flex-center flex-between">
+          <!-- Tab - 지원자 분류 -->
+          <ul class="col h-tab-02">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <span class="status">전체</span>
+                <strong class="num">5</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">열람</span>
+                <strong class="num">68</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">서류합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">면접합격</span>
+                <strong class="num">12</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">최종합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">불합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+          </ul>
+
+
+          <div class="col btn-wrap">
+            <!-- 미열람만 보기 -->
+            <div class="h-checkbox checkbox05">
+              <input type="checkbox" name="checkForm" id="check05">
+              <label for="check05">미열람만 보기</label>
+            </div>
+
+            <!-- 초기화 -->
+            <a href="javascript:void(0);" class="h-button-s h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></a>
+          </div>
+        </div>
+
+
+        <!-- 지원자 리스트 -->
+        <table class="h-tbl-basic-1 h-tbl-volunteer mt20">
+          <thead>
+            <tr>
+              <th>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check_all">
+                  <label for="check_all"></label>
+                </div>
+              </th>
+              <th style="width:80px;">
+                
+                <!-- 모집부문 -->
+                <div class="h-listbox2-wrap">
+                  <input type="checkbox" id="tbl-selbox" class="list-box">
+                  <label for="tbl-selbox">모집부문</label>
+                  <!-- dropdown -->
+                  <div class="dropdown">
+                    <ul>
+                      <li><a href="javascript:void(0);">국어</a></li>
+                      <li><a href="javascript:void(0);">영어</a></li>
+                      <li><a href="javascript:void(0);">수학</a></li>
+                      <li><a href="javascript:void(0);">과학</a></li>
+                      <li><a href="javascript:void(0);">국영수를</a></li>
+                      <li><a href="javascript:void(0);">우선으로해야</a></li>
+                      <li><a href="javascript:void(0);">아리아리아리</a></li>
+                      <li><a href="javascript:void(0);">인정받고</a></li>
+                      <li><a href="javascript:void(0);">일류대학으로간다</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </th>
+              <th style="width:170px;">이름 &#47; 나이</th>
+              <th>
+                <a href="javascript:void(0);" title="경력 내림차순">경력 ↓</a>
+                <a href="javascript:void(0);" title="경력 오름차순" style="display:none;">경력 ↑</a>
+              </th>
+              <th style="width:140px;">
+                <a href="javascript:void(0);" title="최종학력 내림차순">최종학력 ↓</a>
+                <a href="javascript:void(0);" title="최종학력 오름차순" style="display:none;">최종학력 ↑</a>
+              </th>
+              <th style="width:130px;">전공 &#47; 학점</th>
+              <th style="width:100px;">
+                <a href="javascript:void(0);" title="지원일 내림차순">지원일 ↓</a>
+                <a href="javascript:void(0);" title="지원일 오름차순" style="display:none;">지원일 ↑</a>
+              </th>
+              <th style="width:125px;">평가</th>
+              <th style="width:60px;">관리</th>
+            </tr>
+          </thead>
+          <tbody class="text-subtitle4 h-txt-l">
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check_01">
+                  <label for="check_01"></label>
+                </div>
+              </td>
+              <td><p class="h-txt-2">국어</p></td>
+              <td>
+                <!-- 사진/이름/나이 -->
+                <a class="h-volunteer-wrap" href="javascript:void(0);">
+                  <div class="photo-wrap">
+                    <img src="../../../images/dummy-man.svg">
+                  </div>
+                  <div class="info-wrap">
+                    <p class="name">임꺽정</p>
+                    <p class="age">8년 1개월</p>
+                  </div>
+                </a>
+              </td>
+              <td>
+                <p class="h-txt-2">8년 1개월</p>
+                <p class="h-txt-3 text-subtitle5">경기 푸른미래수학학원</p>
+              </td>
+              <td>
+                <p class="h-txt-2">대학교(4년)</p>
+                <p class="h-txt-3 text-subtitle5">서울대학교</p>
+              </td>
+              <td>
+                <p class="h-txt-2">식품영양학</p>
+                <p class="h-txt-3 text-subtitle5">3.0 <span class="i-block h-txt-6">/</span> 4.5</p>
+              </td>
+              <td>
+                <p class="h-txt-3 text-subtitle5">2023.03.16</p>
+                <p class="h-txt-2">열람</p>
+              </td>
+              <td>
+                <select name="" id="" class="width-120">
+                  <option value="" disabled="" selected="">평가</option>
+                  <option value="">서류합격</option>
+                  <option value="">면접합격</option>
+                  <option value="">최종합격</option>
+                  <option value="">불합격</option>
+                </select>
+              </td>
+              <td>
+                <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-menu "><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
 
 
