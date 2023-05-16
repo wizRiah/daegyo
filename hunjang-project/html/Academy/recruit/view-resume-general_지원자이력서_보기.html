@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/mypage.css">
   <link rel="stylesheet" href="../../../css/resume-view.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
@@ -20,7 +21,7 @@
 
 <body>
 
-  <div class="hunjang-wrap htMatch-rsview-wrap h-resume-wrap">
+  <div class="hunjang-wrap htMatch-rsview-wrap h-resume-wrap htMatch-wrap">
     <!-- header -->
     <header>
       <div class="header-inner">
@@ -1076,6 +1077,73 @@
 
       </div>
       <!-- //contents -->
+
+
+      <!-- Side Quick Menu -->
+      <div class="h-quick-position">
+        <div class="h-quickWrap">
+          <div id="h-quickMenu" class="h-quick-menu">
+            <div class="q-position">
+              <div class="floating">
+                <div class="quick">                
+                  
+
+                  <!-- 열람처리/인쇄하기/저장하기 -->
+                  <div class="menuContents">
+                    <ul class="q-icon-list">
+                      <li>
+                        <button type="button" class="qbtn-icon-1">
+                          <span class="btn-icon"><img src="../../../images/qicon_read.svg" alt=""></span>
+                          <span class="btn-name">열람처리</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="qbtn-icon-1">
+                          <span class="btn-icon"><img src="../../../images/qicon_print.svg" alt=""></span>
+                          <span class="btn-name">인쇄하기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="qbtn-icon-1">
+                          <span class="btn-icon"><img src="../../../images/qicon_save.svg" alt=""></span>
+                          <span class="btn-name">저장하기</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <!-- 평가 Select Box -->
+                  <select class="q-select-1 mt10" name="" id="">
+                    <option value="" disabled="" selected="">평가</option>
+                    <option value="">서류합격</option>
+                    <option value="">면접합격</option>
+                    <option value="">최종합격</option>
+                    <option value="">불합격</option>
+                  </select>
+
+
+                  <!-- 면접 메시지 전송 -->
+                  <button type="button" class="menuContents qbtn-msg-send mt10">
+                    <img class="qicon-message" src="../../../images/qicon_message.svg" alt="">
+                    <span class="btn-name mt10">면접 메시지 전송</span>
+                  </button>
+
+
+                  <!-- 버튼 클릭시 최상단으로 이동하도록. -->
+                  <a class="h-quick-arrow" href="javascript:void(0);" title="최상단으로 이동" onclick="$('html, body').animate({scrollTop: '0'})">
+                    <span class="material-symbols-outlined">
+                      north
+                    </span>
+                  </a>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <footer>
         <ul class="quick-menu">
