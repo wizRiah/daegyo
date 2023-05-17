@@ -32,6 +32,11 @@
         .resume-form .h-info-wrap .btn-wrap .h-button-link p {margin-right:7px;}
         .resume-form .h-info-wrap .title + .info-txt {margin-top:12px;}
         .resume-form .h-info-wrap .info-txt + .btn-wrap {margin-top:25px;}
+        /* title 클릭 시 dorpdown */
+        .resume-form .h-info-wrap .title .h-notice-wrap {position:inherit;}
+        .resume-form .h-info-wrap .title .h-notice-wrap .dropdown {overflow-y:auto; display:block; position:absolute; top:70px; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); z-index:-1; width:1040px;}
+        .resume-form .h-info-wrap .title .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown {top:80px; z-index:3;}
+
     /* 전체지원자, 열람, 미열람 */
     .resume-form .info-count {flex-grow:0; display:inline-flex; flex-flow:row wrap; margin-left:auto;}
     .resume-form .info-count li:not(:first-child) {margin-left:20px;}
@@ -60,17 +65,22 @@
 .h-academy-recruit .flex-between .col.h-tab-02 {flex-grow:1;}
 .h-academy-recruit .flex-between .col.btn-wrap input[type="checkbox"], 
 .h-academy-recruit .flex-between .col.btn-wrap [class^="h-button"] {margin:0;}
-/* table - 지원자 리스트 */
-.h-tbl-volunteer thead tr th:last-child {padding-right:10px;}
-.h-tbl-volunteer tbody tr td {padding:20px 5px;}
-.h-tbl-volunteer tbody tr td:first-child {width:60px; text-align:center;}
-.h-tbl-volunteer tbody tr td:last-child {text-align:center;}
+    /* table - 지원자 리스트 */
+    .h-tbl-volunteer thead tr th:last-child {padding-right:10px;}
+    .h-tbl-volunteer tbody tr td {padding:20px 5px;}
+    .h-tbl-volunteer tbody tr td:first-child {width:60px; text-align:center;}
+    .h-tbl-volunteer tbody tr td:last-child {text-align:center;}
+    .h-tbl-volunteer tbody tr td .h-txtbox-1 + .date {margin-top:5px;}
+    /* 사진, 이름, 경력 */
+    .h-volunteer-wrap {display:flex; flex-flow:row wrap; align-items:center; box-sizing:border-box;}
+    .h-volunteer-wrap .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
+    .h-volunteer-wrap .photo-wrap + .info-wrap {margin-left:15px;}
+    .h-volunteer-wrap .info-wrap .name {font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); line-height:24px;}
+    .h-volunteer-wrap .info-wrap .age {font-size:var(--text-subtitle5); color:var(--black-3); line-height:24px;}
 
-.h-volunteer-wrap {display:flex; flex-flow:row wrap; align-items:center; box-sizing:border-box;}
-.h-volunteer-wrap .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
-.h-volunteer-wrap .photo-wrap + .info-wrap {margin-left:15px;}
-.h-volunteer-wrap .info-wrap .name {font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); line-height:24px;}
-.h-volunteer-wrap .info-wrap .age {font-size:var(--text-subtitle5); color:var(--black-3); line-height:24px;}
+/* 공고와 연관된 추천인재 */
+.h-academy-recruit .h-title-info {position:relative; display:inline-flex; align-items:center; font-size:var(--text-h3); font-weight:var(--text-bold); color:var(--black-1);}
+
 
 /* pagination 영역 */
 .h-academy-recruit .h-pagination-wrap {position:relative; display:flex; align-items:center; margin-top:40px;}
@@ -82,8 +92,25 @@
 
 
 
+/* ==================================== Side Quick Menu ==================================== */
+.quick .q-icon-list {font-size:var(--text-subtitle4); color:var(--black-2); line-height:24px; margin-top:4px; margin-bottom:4px;}
+.quick .q-icon-list li:not(:first-child) {margin-top:19px;}
+.quick .q-icon-list .qbtn-icon-1 {display:flex; flex-flow:row wrap; align-items:center; color:var(--black-2);}
+.quick .q-icon-list .qbtn-icon-1 .btn-icon {display:inline-flex; justify-content:center; align-items:center; width:20px; height:20px;}
+.quick .q-icon-list .qbtn-icon-1 .btn-icon img {max-width:100%; max-height:100%;}
+.quick .q-icon-list .qbtn-icon-1 .btn-name {display:inline-block;}
+.quick .q-icon-list .qbtn-icon-1 .btn-icon + .btn-name {margin-left:14px;}
+.quick .q-select-1 {width:100% !important; color:var(--black-2);}
+.quick .qbtn-msg-send {display:inline-flex; justify-content:center; align-items:center; width:100%; font-size:var(--text-subtitle4); color:var(--black-2); padding-top:30px; padding-bottom:30px;}
+.quick .qbtn-msg-send .qicon-message {margin-right:10px;}
+
+
+
 /* ==================================== 공통 ==================================== */
 .width-120 {width:120px !important; min-width:auto;}
 .width-160 {width:160px !important;}
 .width-350 {width:350px !important;}
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
+
+
+
