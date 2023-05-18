@@ -391,6 +391,7 @@
 .my-subtxtbox.bg-white {background:#fff !important; padding:60px 70px; border-color:#E0E6EF; margin-bottom:30px;}
 .my-subtxtbox.bg-white .text-h2 {color:#7E7E7E; font-weight:400; margin-bottom:20px;}
 .my-subtxtbox.bg-white .text-h2 strong {font-weight:600; color:#333333;}
+.my-subtxtbox.bg-white + .h-btn-wrap {margin-top:40px;}
 
 .mylogoImg .logo-filebox .upload-logoname {display: inline-block; vertical-align: middle; color:#333333; font-size:14px; border:none; width:auto !important;}
 .mylogoImg .logo-filebox .upload-logoname::placeholder {color:#BCBCBC;}
@@ -421,3 +422,14 @@
 .checkbox05Ul {display:flex; flex-direction:row; justify-content:flex-start; flex-wrap:wrap;}
 .checkbox05Ul li {margin-right:9px !important; margin-bottom:10px;}
 .checkbox05Ul li .h-checkbox, .checkbox05Ul li .h-radio-03 {margin:0;}
+
+    /* 학원 콘텐츠사진 (이력서등록의 시강파일등록부분과 동일) */
+    .academyIMG-list {display:inline-flex; margin-top:15px;}
+    .academyIMG-list li {width:175px; height:111px; border-radius:4px; position:relative; align-items: center; box-sizing: border-box; overflow: hidden; margin-right: 15px;}
+    .academyIMG-list li img {width:auto; max-width:100%;}
+    /* 수정, 삭제 버튼 */
+    .academyIMG-list li .academyIMG-btn-wrap {position:absolute; top:8px; right:8px; z-index:3;}
+    /* 파일 없는 경우 */
+    .academyIMG-list li.academyIMG-none {background-color:#fff;}
+    .academyIMG-list li.academyIMG-none [class^="h-button"] {flex-flow:column wrap; width:100%; height:100%; line-height:normal; font-size:var(--text-subtitle5); margin:0; border:0;}
+    .academyIMG-list li.academyIMG-none [class^="h-button"] i {color:var(--grey-1); margin-bottom:3px;}
