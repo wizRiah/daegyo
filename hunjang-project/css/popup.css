@@ -372,6 +372,7 @@
  .item-inquiry .inquiry-txtfield .textarea textarea { height: 100%; border-style: none; background-color: transparent; padding: 15px 20px; margin-top: 0; width: 100%; } 
 
 
+
 /* 인근지하철 */
 .subway-wrap .include_search { padding: 0 15px 0 20px; position: relative; display: flex; align-items: center; } 
 .subway-wrap .include_search:before { content: ""; width: 25px; height: 25px; display: inline-block; background: url(../images/ico-search.png) no-repeat; background-position: center; } 
@@ -380,8 +381,21 @@
 .subway-wrap .reset-btn-wrap { justify-content: flex-end; } 
 .subway-wrap .reset-btn-wrap button { margin: 0; padding: 0; line-height: 18px; height: 18px; } 
 .subway-wrap .reset-btn-wrap button i { color: var(--border-basic-2); font-weight: 100; font-size: var(--text-subtitle2); } 
+.subway-wrap .h-popup { overflow-y: auto; } 
+.subway-wrap .h-notice-wrap { display: flex; } 
+.subway-wrap .h-notice-wrap .dropdown { width: 100%; top: 56px; z-index: 3; height: 0; opacity: 0; visibility: visible; margin-bottom: 0; border: 1px solid var(--grey-3); outline: 0; } 
+.subway-wrap .h-notice-wrap .dropdown .droup-group .group-list { padding: 12px 0; } 
+.subway-wrap .h-notice-wrap .dropdown .droup-group .group-list li { padding: 9px 20px; display: flex; justify-content: flex-start; } 
+.subway-wrap .h-notice-wrap .dropdown .droup-group .group-list li::before { content: none; } 
 
+ /* 검색창 활성화시 */
+ .subway-wrap .h-notice-wrap.on .h-field-wrap { border-color: var(--grey-3); } 
+ .subway-wrap .h-notice-wrap.on .dropdown { height: 148px; opacity: 1; } 
 
+ /* 검색어 선택시 */
+ .subway-wrap .result-wrap.select-result { justify-content: flex-start; padding: 12px 20px; flex-direction: column; height: fit-content; align-items: flex-start; max-height: 146px; } 
+ .subway-wrap .select-result .result-data { margin: 6px 0; display: flex; flex-flow: row wrap; align-items: center; vertical-align: middle; } 
+ .subway-wrap .select-result .result-data span { font-size: var(--text-subtitle3); color: #333; } 
 
 
 
