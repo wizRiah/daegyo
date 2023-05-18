@@ -378,7 +378,10 @@ button
 .checkbox05 input[type="checkbox"] + label::before {position:absolute; top:12px; left:20px; font-family:'Material Icons'; content:'check_circle_outline'; width:18px; height:18px; font-style:normal; font-size:22px; color:var(--grey-1);}
 .checkbox05 input[type="checkbox"]:checked + label,
 .checkbox05 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
-
+.checkbox05.bg-cyan input[type="checkbox"] + label {padding-left:43px;}
+.checkbox05.bg-cyan input[type="checkbox"] + label::before {left:16px;}
+.checkbox05.bg-cyan input[type="checkbox"]:checked + label, 
+.checkbox05.bg-cyan input[type="checkbox"]:checked + label::before {color:#fff; background:#31B5CA; border-color:#31B5CA;}
 
 /* checkbox - dropdown type 1 */
 .h-listbox-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
@@ -496,6 +499,9 @@ button
 .h-radio-04 input[type="radio"] + label:after {left: 24px;top: 19.5px;}
 .h-radio-04 input[type="radio"]:checked + label {border: 1px solid var(--blue-3);}
 .h-radio-04 input[type="radio"] + label:before{margin-top: -2px;}
+.h-radio-04.bg-cyan input[type="radio"]:checked + label {background:#31B5CA; border-color:#31B5CA; color:#fff;}
+.h-radio-04.bg-cyan input[type="radio"]:checked + label::before,
+.h-radio-03.bg-cyan input[type="radio"]:checked + label:after {border-color:#fff;}
 
 /* switch */
 .h-switch { display: inline-block; z-index: 0; }
