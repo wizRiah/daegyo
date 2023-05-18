@@ -1,6 +1,4 @@
-@charset "utf-8"; 
-
-/***** 팝업 공통 (layout) *****/
+@charset "utf-8"; /***** 팝업 공통 (layout) *****/
 .h-popup-wrap { display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; } 
 .h-popup { height: fit-content; top: 10%; white-space: normal; display: block; word-wrap: break-word; min-height: 300px; border-radius: 15px; position: relative; margin: 0 auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; padding: 40px; background-color: #fff; box-sizing: border-box; max-height: calc(100vh - 150px); } 
 .h-popup .pop-header { width: 100%; text-align: left; box-sizing: border-box; padding-bottom: 20px; } 
@@ -98,9 +96,9 @@
 
 
 /*왼쪽에 th가 있는 table design */
-.h-tbl-basic-1.left-TH-bg {}
-.h-tbl-basic-1.left-TH-bg th {background:#F5F7FA; font-size:14px; color:#333; text-align:left; padding:20px; vertical-align:top; line-height:20px;}
-.h-tbl-basic-1.left-TH-bg td {font-size:14px; color:#333; padding:20px 10px 20px 20px !important; text-align:left;}
+.h-tbl-basic-1.left-TH-bg { } 
+.h-tbl-basic-1.left-TH-bg th { background:#F5F7FA; font-size:14px; color:#333; text-align:left; padding:20px; vertical-align:top; line-height:20px; } 
+.h-tbl-basic-1.left-TH-bg td { font-size:14px; color:#333; padding:20px 10px 20px 20px !important; text-align:left; } 
 
 
 
@@ -372,8 +370,19 @@
 
 
 /* 인근지하철 */
-.include_search { padding: 0 15px 0 20px; position: relative; display: flex; align-items: center; } 
-.include_search:before { content: ""; width: 25px; height: 25px; display: inline-block; background: url(../images/ico-search.png) no-repeat; background-position: center; } 
+.subway-wrap .include_search { padding: 0 15px 0 20px; position: relative; display: flex; align-items: center; } 
+.subway-wrap .include_search:before { content: ""; width: 25px; height: 25px; display: inline-block; background: url(../images/ico-search.png) no-repeat; background-position: center; } 
+.subway-wrap .result-wrap { width: 550px; height: 82px; background-color: #F5F7FA; border-radius: 4px; border: 1px solid #CCD1D7; margin-top: 10px; box-sizing: border-box; justify-content: center; align-items: center; } 
+.subway-wrap .result-wrap p { font-size: var(--text-subtitle3); } 
+.subway-wrap .reset-btn-wrap { justify-content: flex-end; } 
+.subway-wrap .reset-btn-wrap button { margin: 0; padding: 0; line-height: 18px; height: 18px; } 
+.subway-wrap .reset-btn-wrap button i { color: var(--border-basic-2); font-weight: 100; font-size: var(--text-subtitle2); } 
+
+
+
+
+
+
 
 
 /* ==================================== Window Popup ==================================== */
@@ -518,36 +527,36 @@
 
 
 /*채용공고 > 견적서 보기 (window popup)*/
-.h-winpop-wrap .h-estimate-pop { display:flex; flex-flow:row wrap; height:100%;}
-.h-winpop-wrap .h-estimate-pop .container {top: 0; width: 100%; max-width:800px; height: 100%; margin-left: auto; margin-right: auto; overflow-y: hidden; box-sizing: border-box; order:2; left:0; background:#fff;}
+.h-winpop-wrap .h-estimate-pop { display:flex; flex-flow:row wrap; height:100%; } 
+.h-winpop-wrap .h-estimate-pop .container { top: 0; width: 100%; max-width:800px; height: 100%; margin-left: auto; margin-right: auto; overflow-y: hidden; box-sizing: border-box; order:2; left:0; background:#fff; } 
 
-.h-winpop-wrap .h-estimate-pop .btnbox .h-button-ml {width:142px; font-size:15px;}
-.h-winpop-wrap .h-estimate-pop .pop-title {font-size:36px; margin-bottom:10px;}
-.h-winpop-wrap .h-estimate-pop .pop-titdate {font-size:15px; color:#9A9A9A;}
-.h-winpop-wrap .h-estimate-pop .pop-titdate strong {color:#333; font-weight:500;}
-.h-estimate-pop .h-tbl-basic-1 tr:first-child th, .h-estimate-pop .h-tbl-basic-1 tr:first-child td {border-top:1px solid #62666B;}
-.h-estimate-pop .h-tbl-basic-1 thead tr th {background:#F5F7FA;}
-.h-estimate-pop .h-tbl-basic-1 tbody tr th {width:135px; background:#F5F7FA; font-size:14px; color:#9A9A9A; padding:19px 20px; text-align:left; font-weight:500; line-height:20px; border:1px solid #D4DAE2;}
-.h-estimate-pop .h-tbl-basic-1 tbody tr td {font-size:15px; padding:19px 20px; text-align:left; color:#333333; line-height:20px; border:1px solid #D4DAE2;}
+.h-winpop-wrap .h-estimate-pop .btnbox .h-button-ml { width:142px; font-size:15px; } 
+.h-winpop-wrap .h-estimate-pop .pop-title { font-size:36px; margin-bottom:10px; } 
+.h-winpop-wrap .h-estimate-pop .pop-titdate { font-size:15px; color:#9A9A9A; } 
+.h-winpop-wrap .h-estimate-pop .pop-titdate strong { color:#333; font-weight:500; } 
+.h-estimate-pop .h-tbl-basic-1 tr:first-child th, .h-estimate-pop .h-tbl-basic-1 tr:first-child td { border-top:1px solid #62666B; } 
+.h-estimate-pop .h-tbl-basic-1 thead tr th { background:#F5F7FA; } 
+.h-estimate-pop .h-tbl-basic-1 tbody tr th { width:135px; background:#F5F7FA; font-size:14px; color:#9A9A9A; padding:19px 20px; text-align:left; font-weight:500; line-height:20px; border:1px solid #D4DAE2; } 
+.h-estimate-pop .h-tbl-basic-1 tbody tr td { font-size:15px; padding:19px 20px; text-align:left; color:#333333; line-height:20px; border:1px solid #D4DAE2; } 
 .h-estimate-pop .h-tbl-basic-1 tbody tr th:first-child,
-.h-estimate-pop .h-tbl-basic-1 tbody tr td:first-child {border-left:none;}
-.h-estimate-pop .h-tbl-basic-1 tbody tr td:last-child {border-right:none;}
-.h-estimate-pop .h-tbl-basic-1 ~ .text-subtitle2 {margin-top:50px;}
+.h-estimate-pop .h-tbl-basic-1 tbody tr td:first-child { border-left:none; } 
+.h-estimate-pop .h-tbl-basic-1 tbody tr td:last-child { border-right:none; } 
+.h-estimate-pop .h-tbl-basic-1 ~ .text-subtitle2 { margin-top:50px; } 
 
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:first-child {font-size:13px;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td strong {font-size:15px;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:nth-child(2) {color:#9A9A9A;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:nth-child(3) {text-align:right; font-size:15px !important;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:last-child {color:#FF6000; text-align:right;}
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:first-child { font-size:13px; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td strong { font-size:15px; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:nth-child(2) { color:#9A9A9A; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:nth-child(3) { text-align:right; font-size:15px !important; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr td:last-child { color:#FF6000; text-align:right; } 
 .h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr:nth-last-child(2) th,
 .h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr:nth-last-child(2) td,
 .h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD th,
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td {border-bottom-color:#62666B; font-size:13px;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div {display:flex; justify-content:space-between; align-items:center;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div div:last-child {font-size:20px; font-weight:bold; letter-spacing:-0.5px;;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div div:last-child .won {font-size:14px; font-weight:400; margin-left:2px;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td:nth-child(2) {color:#333;}
-.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td:last-child>div div:last-child {font-size:26px;}
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td { border-bottom-color:#62666B; font-size:13px; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div { display:flex; justify-content:space-between; align-items:center; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div div:last-child { font-size:20px; font-weight:bold; letter-spacing:-0.5px;; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td>div div:last-child .won { font-size:14px; font-weight:400; margin-left:2px; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td:nth-child(2) { color:#333; } 
+.h-estimate-pop .h-tbl-basic-1.estimateTBL tbody tr.lastTD td:last-child>div div:last-child { font-size:26px; } 
 
-.h-estimate-pop .h-subbox-basic-guide {background: var(--neutral-3);padding: 20px;border-radius: 10px;}
+.h-estimate-pop .h-subbox-basic-guide { background: var(--neutral-3); padding: 20px; border-radius: 10px; } 
 
