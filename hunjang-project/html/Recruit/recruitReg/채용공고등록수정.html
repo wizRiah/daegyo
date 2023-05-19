@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/mypage.css">
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/resume-view.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -25,7 +26,7 @@
 </head>
 
 <body>
-
+ 
   <div class="hunjang-wrap h-academy-wrap recruitReg-wrap">
     <!-- header -->
     <header>
@@ -141,8 +142,20 @@
 
     <!-- container -->
     <div class="container">
+
+      <!-- 공지 배너 -->
+      <div class="notice-banner">
+        <div class="banner-inner">
+        <p class="point">22시 이후 부터는 등록되는 채용공고의 검수가 진행되지 않습니다. 해당 시간 이후에 작성되는 채용정보는 익일 09시부터 검수 후 순차 등록됩니다.</p>
+        <p class="txt">공고를 바로 진행해야 하는 학원은 공고등록 후 [즉시등록] 상품을 결제하시면 별도의 검수 없이 즉시 등록됩니다.<br>
+          <span class="h-txt-orange">(단, 채용공고의 내용이 직업안정법 위반 및 허위일 경우 금액은 환불되지 않고 공고는 삭제될 수 있습니다.)</span></p>
+        </div>
+      </div>
+    
       <!-- contents -->
       <div class="content resume-registForm">
+
+        
 
         <!-- 타이틀 -->
         <div class="my-txtbox">
@@ -160,7 +173,7 @@
             <li>
               <div class="labelArea">모집부문<span class="necessary">필수</span></div>
               <div class="col">
-                <input type="text" id="txtNm" class="h-txtfield-basic" value="" placeholder="ex) 수학강사 (모집부문을 추가할 경우 복사 버튼 클릭)">
+                <input type="text" id="txtNm" class="h-txtfield-basic notEnter" value="" placeholder="ex) 수학강사 (모집부문을 추가할 경우 복사 버튼 클릭)">
               </div>
               <div class="btn-box">
                 <a href="javascript:void(0);" class="h-button-l h-button-grey1 del">삭제</a>
@@ -170,7 +183,7 @@
             </li>
             <!-- 모집부문 상세 토글 -->
             <li class="regdiv-toggle" style="display:block;">
-              <div class="regdiv-inner">   
+              <div class="regdiv-inner">
                 <ul class="resume-regList">
                   <!-- 과목 -->
                   <li>
@@ -213,12 +226,12 @@
                       </li>
                       <li>
                         <span class="inptxtAdd">
-                          <input type="text">
+                          <input type="text" class="notEnter">
                           <label for="">년 이상</label>
                         </span>
                       </li>
                       <li class="ml20">
-                        <div class="h-checkbox checkbox01">
+                        <div class="h-checkbox checkbox01 notEnter">
                           <input type="checkbox" name="desiredSel01" id="desiredSel01_3">
                           <label for="desiredSel01_3">경력무관</label>
                         </div>
@@ -230,19 +243,19 @@
                     <div class="labelArea">근무형태<span class="necessary">필수</span></div>
                     <ul>
                       <li>
-                        <div class="h-radio-01">
-                          <input type="radio" id="career_old05_1" name="career_old05" checked="">
+                        <div class="h-radio-01 notEnter">
+                          <input type="radio" id="career_old05_1" name="career_old05">
                           <label for="career_old05_1"><span class="rchk"></span>전임</label>
                         </div>
                       </li>
                       <li>
-                        <div class="h-radio-01">
+                        <div class="h-radio-01 notEnter">
                           <input type="radio" id="career_old05_3" name="career_old05">
                           <label for="career_old05_3"><span class="rchk"></span>단기</label>
                         </div>
                       </li>
                       <li>
-                        <div class="h-radio-01">
+                        <div class="h-radio-01 notEnter">
                           <input type="radio" id="career_old05_2" name="career_old05">
                           <label for="career_old05_2"><span class="rchk"></span>파트타임ㆍ아르바이트</label>
                         </div>
@@ -301,20 +314,20 @@
                     <ul>
                       <li>
                         <div class="h-radio-01">
-                          <input type="radio" id="career_old05_1" name="career_old05" checked="">
-                          <label for="career_old05_1"><span class="rchk"></span>0명</label>
+                          <input type="radio" id="career_old06_1" name="career_old06" checked="">
+                          <label for="career_old06_1"><span class="rchk"></span>0명</label>
                         </div>
                       </li>
                       <li>
                         <div class="h-radio-01">
-                          <input type="radio" id="career_old05_2" name="career_old05">
-                          <label for="career_old05_2"><span class="rchk"></span>00명</label>
+                          <input type="radio" id="career_old06_2" name="career_old06">
+                          <label for="career_old06_2"><span class="rchk"></span>00명</label>
                         </div>
                       </li>
                       <li>
                         <div class="h-radio-01">
-                          <input type="radio" id="career_old05_3" name="career_old05">
-                          <label for="career_old05_3"><span class="rchk"></span>직접입력</label>
+                          <input type="radio" id="career_old06_3" name="career_old06">
+                          <label for="career_old06_3"><span class="rchk"></span>직접입력</label>
                         </div>
                       </li>
                       <li>
@@ -326,7 +339,7 @@
                     </ul>
                   </li>
                 </ul>
-             </div>
+              </div>
             </li>
             <!-- // -->
             <li>
@@ -354,7 +367,7 @@
               <div class="labelArea">학력<span class="necessary">필수</span></div>
               <ul>
                 <li>
-                  <select>
+                  <select class="notEnter">
                     <option>선택</option>
                   </select>
                 </li>
@@ -392,8 +405,8 @@
               </div>
             </li>
 
-             <!-- 우대조건 -->
-             <li>
+            <!-- 우대조건 -->
+            <li>
               <div class="labelArea">우대조건</div>
               <div class="h-field-wrap">
                 <div class="srch-detail wd100">
@@ -442,10 +455,10 @@
               <div class="labelArea">성별ㆍ연령</div>
               <div class="h-field-wrap">
                 <div class="innerbox-blue">
-                <p class="btit">※ 성별∙연령 입력불가 안내 : <span class="h-txt-5">합리적 이유없이 성별제한, 연령제한을 하는 경우 벌금이 부과될 수 있습니다.</span></p>
-                <p class="stit">성차별금지 <a href="javascript:void(0);" class="h-txt-pit">남녀고용평등에 관한 법률</a></p>
-                <p class="stit">연령차별금지 <a href="javascript:void(0);" class="h-txt-pit">고용상 연령차별 금지에 관현 법률</a></p>
-              </div>
+                  <p class="btit">※ 성별∙연령 입력불가 안내 : <span class="h-txt-5">합리적 이유없이 성별제한, 연령제한을 하는 경우 벌금이 부과될 수 있습니다.</span></p>
+                  <p class="stit">성차별금지 <a href="javascript:void(0);" class="h-txt-pit">남녀고용평등에 관한 법률</a></p>
+                  <p class="stit">연령차별금지 <a href="javascript:void(0);" class="h-txt-pit">고용상 연령차별 금지에 관현 법률</a></p>
+                </div>
               </div>
             </li>
 
@@ -463,12 +476,6 @@
             </li>
 
           </ul>
-          
-       
-    
-
-    
-
 
         </div>
 
@@ -480,12 +487,16 @@
               <div class="labelArea mt20">급여<span class="necessary">필수</span></div>
               <ul>
                 <li>
-                  <select>
+                  <select class="mr10">
                     <option>연봉</option>
                     <option>내규에 따름</option>
                   </select>
+                  <div class="h-field-wrap input-wd-240 notEnter">
+                    <input type="text" id="txtNm" class="h-txtfield-inner">
+                    <span class="include_txt">만원</span>
+                  </div>
                 </li>
-                <li><input type="text" class="h-txtfield-basic"></li>
+               
                 <li class="ml20">
                   <div class="h-checkbox checkbox01">
                     <input type="checkbox" name="desiredSel01" id="desiredSel01_3">
@@ -493,7 +504,8 @@
                   </div>
                 </li>
                 <li class="sm-txt">주<b>40시간</b> 기준 최저연봉 <b class="ml5">약 24,126,960원</b>
-                  <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">최저임금제도 안내</a></li>
+                  <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">최저임금제도 안내</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -634,12 +646,6 @@
               </ul>
             </li>
           </ul>
-          
-       
-    
-
-    
-
 
         </div>
 
@@ -720,10 +726,10 @@
                     <input type="radio" name="hradio03" id="hradio03_5">
                     <label for="hradio03_5">FAX</label>
                   </div>
-                </li>  
+                </li>
               </ul>
               <ul class="h-fields-wrap mt10">
-                <li class="sm-txt h-txt-5"><span class="h-txt-2 mr5">※ 훈장마을 접수 - </span> 모바일,PC 손쉽게 지원이 가능합니다. 지원서는 채용담당자 메일로 전송됩니다.</li>       
+                <li class="sm-txt h-txt-5"><span class="h-txt-2 mr5">※ 훈장마을 접수 - </span> 모바일,PC 손쉽게 지원이 가능합니다. 지원서는 채용담당자 메일로 전송됩니다.</li>
               </ul>
               <ul class="h-fields-wrap mt10">
                 <li><input type="text" id="" class="h-txtfield-basic input-wd-400" placeholder="Fax번호 입력 (&#34;-&#34;없이 번호만 입력)"></li>
@@ -752,15 +758,15 @@
                 <li class="mb15">
                   <div class="filebox" style="width:630px;">
                     <input class="upload-name" value="자사양식을 선택해 주세요.">
-                    <label for="file" class="h-button-s h-button-grey2">파일선택</label> 
+                    <label for="file" class="h-button-s h-button-grey2">파일선택</label>
                     <input type="file" id="file">
                   </div>
                 </li>
               </ul>
-              
-            </li> 
+
+            </li>
           </ul>
-         
+
 
           <!-- 접수기간과 방법 > 제출서류 -->
           <ul class="resume-regList mt15">
@@ -770,18 +776,18 @@
                 <li><input type="text" id="" class="h-txtfield-basic input-wd-800" placeholder="Ex) 졸업증명서, 성적증명서, 자격증"></li>
               </ul>
               <ul class="h-fields-wrap mt10">
-                <li class="sm-txt h-txt-5">입사 전, 입사 후 지원자가 제출 해야할 서류를 직접 입력해 주세요.</li>       
+                <li class="sm-txt h-txt-5">입사 전, 입사 후 지원자가 제출 해야할 서류를 직접 입력해 주세요.</li>
               </ul>
-            </li>           
+            </li>
           </ul>
-          
+
 
           <!-- 접수기간과 방법 > 참고자료 -->
           <ul class="resume-regList mt30">
             <li class="flex-baseline">
               <div class="labelArea">참고자료</div>
               <div class="h-field-wrap flex-baseline">
-                
+
                 <div class="file-list">
                   <span class="placehoder-hidden">학원 소개 및 브로슈어 등 자료를 업로드 해주세요</span>
                   <!-- <ul>
@@ -802,7 +808,7 @@
           </ul>
 
           <script>
-            $("#file").on('change',function(){
+            $("#file").on('change', function() {
               var fileName = $("#file").val();
               $(".upload-name").val(fileName);
             });
@@ -840,7 +846,7 @@
                 </li>
                 <li><a href="javascript:void(0);" class="h-button-ml m0 blt-plus">추가</a></li>
               </ul>
-              
+
 
             </li>
           </ul>
@@ -860,7 +866,7 @@
                 <li><input type="text" id="" class="h-txtfield-basic" placeholder="" value="홍길동" style="width:250px;"></li>
                 <li><input type="text" id="" class="h-txtfield-basic" placeholder="채용 부서가 있는 경우 입력" style="width:420px;"></li>
               </ul>
-            </li>           
+            </li>
           </ul>
 
           <!-- 전화번호 -->
@@ -876,7 +882,7 @@
                   <input type="text" id="" class="h-txtfield-basic input-wd-110">
                 </li>
               </ul>
-            </li>           
+            </li>
           </ul>
 
           <!-- 휴대폰 번호 -->
@@ -885,14 +891,14 @@
               <div class="labelArea">휴대폰 번호<span class="necessary">필수</span></div>
               <ul class="hp-number">
                 <li>
-                  <input type="text" id="" class="h-txtfield-basic input-wd-110">
+                  <input type="text" id="" class="h-txtfield-basic input-wd-110 notEnter">
                   -
-                  <input type="text" id="" class="h-txtfield-basic input-wd-110">
+                  <input type="text" id="" class="h-txtfield-basic input-wd-110 notEnter">
                   -
-                  <input type="text" id="" class="h-txtfield-basic input-wd-110">
+                  <input type="text" id="" class="h-txtfield-basic input-wd-110 notEnter">
                 </li>
               </ul>
-            </li>           
+            </li>
           </ul>
 
           <!-- 이메일 주소 -->
@@ -906,37 +912,201 @@
                 <li>
                   <a href="javascript:void(0);" class="h-button-s m0">현재 담당자 정보 저장</a>
                   <ul class="part-name">
-                    <li><div class="h-button-s h-button-white close-bar">홍길동</div></li>
-                    <li><div class="h-button-s h-button-white close-bar">채용담당</div></li>
-                    <li><div class="h-button-s h-button-white close-bar">홍길순</div></li>
-                    <li><div class="h-button-s h-button-white close-bar">탁쌤</div></li>
-                    <li><div class="h-button-s h-button-white close-bar">양쌤</div></li> 
+                    <li>
+                      <div class="h-button-s h-button-white close-bar">홍길동</div>
+                    </li>
+                    <li>
+                      <div class="h-button-s h-button-white close-bar">채용담당</div>
+                    </li>
+                    <li>
+                      <div class="h-button-s h-button-white close-bar">홍길순</div>
+                    </li>
+                    <li>
+                      <div class="h-button-s h-button-white close-bar">탁쌤</div>
+                    </li>
+                    <li>
+                      <div class="h-button-s h-button-white close-bar">양쌤</div>
+                    </li>
                   </ul>
                 </li>
               </ul>
-            </li>           
+            </li>
           </ul>
-
-
-
-
 
         </div>
 
 
+        <!-- 상세요강 템플릿 반영 -->
+
+        <div class="resume-reg-basicBox">
+          <h2 class="text-h2 h2-line h-txt-5 h-txt-light">
+            <span>지금까지 입력한<b class="h-txt-2 ml5">상세요강</b>을 <b class="h-txt-2 ml5">템플릿에 반영</b>해 보세요.</span>
+            <a href="" class="txt-tip">상세요강 작성 팁</a>
+          </h2>
+
+
+          <!-- 채용제목 -->
+          <ul class="resume-regList">
+            <li>
+              <div class="labelArea">채용제목<span class="necessary">필수</span></div>
+              <input type="text" id="" class="topTit-bold" placeholder="채용정보 제목을 입력해주세요.">
+
+              <div class="wd100 block h-txt-c mt50 mb50">
+                <button type="button" class="btn-templtSave">입력한 내용 템플릿에 반영하기</button>
+              </div>
+
+            </li>
+          </ul>
+
+
+          <!-- 탭 -->
+          <div class="templt-editor">
+            <div class="h-tab-Contents-02">
+              <input type="radio" id="tabBtn02_1" name="tab02" checked="">
+              <label for="tabBtn02_1">디자인 템플릿</label>
+
+              <input type="radio" id="tabBtn02_2" name="tab02">
+              <label for="tabBtn02_2">직접입력ㆍHTML</label>
+
+              <button class="btn-detailView">상세요강 미리보기</button>
+
+              <div class="tabCo-Wrap">
+                <!-- 첫번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+
+                  <!-- 템플릿 썸네일 이미지 -->
+                  <ul class="thumb-checkbox">
+                    <li class="h-checkbox checkbox05">
+                      <input type="radio" name="checkForm" id="check05_1" checked>
+                      <label for="check05_1"><img src="../../../images/templt_thumb01.jpg" alt=""></label>
+                    </li>
+                    <li class="h-checkbox checkbox05">
+                      <input type="radio" name="checkForm" id="check05_2">
+                      <label for="check05_2"><img src="../../../images/templt_thumb02.jpg" alt=""></label>
+                    </li>
+                    <li class="h-checkbox checkbox05">
+                      <input type="radio" name="checkForm" id="check05_3">
+                      <label for="check05_3"><img src="../../../images/templt_thumb03.jpg" alt=""></label>
+                    </li>
+                    <li class="h-checkbox checkbox05">
+                      <input type="radio" name="checkForm" id="check05_4">
+                      <label for="check05_4"><img src="../../../images/templt_thumb04.jpg" alt=""></label>
+                    </li>
+                    <li class="h-checkbox checkbox05">
+                      <input type="radio" name="checkForm" id="check05_5">
+                      <label for="check05_5"><img src="../../../images/templt_thumb05.jpg" alt=""></label>
+                    </li>
+                  </ul>
+                  <div class="btn-add">
+                    <a href="javascript:void(0);" class="h-button-ml m0 blt-plus">모집부문 추가</a>
+                    <a href="javascript:void(0);" class="h-button-ml m0 blt-plus">항목 추가</a>
+                  </div>
+
+                  <!-- 에디터 뷰 -->
+                  <div class="editor-view">
+                    템플릿이 들어가는 부분 입니다<br><br><br><br><br><br><br><br><br>
+                  </div>
+
+                </div>
+
+                <!-- 두번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+
+                  <!-- 에디터 뷰 -->
+                  <div class="editor-view">
+                    템플릿이 들어가는 부분 입니다<br><br><br><br><br><br><br><br><br>
+                  </div>
+
+                </div>
+
+              </div>
 
 
 
+            </div>
+          </div>
+          <!-- // -->
 
+
+        </div>
+
+        <div class="h-txt-c mt50">
+          <button type="button" class="h-button-xl h-button-orange btn-noticeReg">강사 공고 등록하기</button>
+          <p class="mt20 text-subtitle4 h-txt-3">채용공고 등록 전 <b class="h-txt-2">사전 확인</b>을 거친 후 게재됩니다. 확인 중에는 공고가 노출되지 않습니다.</p>
+        </div>
 
 
       </div>
 
 
-
-
-
       <!-- //contents -->
+
+    <!-- 사이드 퀵메뉴 -->
+    <div class="h-quick-position">
+      <div class="h-quickWrap">
+        <div id="h-quickMenu" class="h-quick-menu wd1080">
+          <div class="q-position">
+            <div class="floating">
+              <div class="quick">
+                <ul class="preview-col">
+                  <li>
+                    <a href="#">
+                      <img src="../../../images/icon_preview_pc.svg" alt="">
+                      <p>PC<br>미리보기</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../../../images/icon_preview_mobile.svg" alt="">
+                      <p>Mobile<br>미리보기</p>
+                    </a>
+                  </li>
+                </ul>
+                <p class="time-save h-txt-6 text-subtitle5">20시 30분 15초에 자동저장</p>
+                <button type="button" class="h-button-l h-button-grey btn-save01">임시저장</button>
+                <button type="button" class="h-button-l h-button-orange btn-save02">채용공고 등록</button>
+
+                <div class="r-side">
+                  <ul class="h-resume-item text-subtitle5">
+                    <li class="active">
+                      <a href="#anchor-personal">모집부문</a>
+                    </li>
+                    <li class="notEnter">
+                      <a href="#anchor-academic">지원자격</a>
+                    </li>
+                    <li>
+                      <a href="#anchor-career">근무조건</a>
+                    </li>
+                    <li>
+                      <a href="#anchor-video">접수기간</a>
+                    </li>
+                    <li>
+                      <a href="#anchor-cert">채용담당자</a>
+                    </li>
+                    <li>
+                      <a href="#anchor-award">상세요강</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 버튼 클릭시 최상단으로 이동하도록. -->
+                <a class="h-quick-arrow" href="javascript:void(0);" title="최상단으로 이동" onclick="$('html, body').animate({scrollTop: '0'})">
+                  <i class="material-symbols-outlined">
+                    arrow_upward
+                  </i>
+                  <span class="qscroll-top">TOP</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // -->
+
+
+
 
       <footer>
         <ul class="quick-menu">
@@ -958,27 +1128,25 @@
     </div>
     <!-- //container -->
 
-
-
   </div>
 
   <script>
     $.datepicker.setDefaults({
-        dateFormat: 'yy-mm-dd',
-        prevText: '이전 달',
-        nextText: '다음 달',
-        monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-        monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-        showMonthAfterYear: true,
-        yearSuffix: '.',
-        showMonthAfterYear:true,
-        showOn:"button",
-        buttonImage:"../../../images/btn_calendar.svg",
-        buttonImageOnly:true,
-        minDate: 0,
+      dateFormat: 'yy-mm-dd',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+      monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      showMonthAfterYear: true,
+      yearSuffix: '.',
+      showMonthAfterYear: true,
+      showOn: "button",
+      buttonImage: "../../../images/btn_calendar.svg",
+      buttonImageOnly: true,
+      minDate: 0,
     });
 
     $(function() {
