@@ -378,7 +378,10 @@ button
 .checkbox05 input[type="checkbox"] + label::before {position:absolute; top:12px; left:20px; font-family:'Material Icons'; content:'check_circle_outline'; width:18px; height:18px; font-style:normal; font-size:22px; color:var(--grey-1);}
 .checkbox05 input[type="checkbox"]:checked + label,
 .checkbox05 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
-
+.checkbox05.bg-cyan input[type="checkbox"] + label {padding-left:43px;}
+.checkbox05.bg-cyan input[type="checkbox"] + label::before {left:16px;}
+.checkbox05.bg-cyan input[type="checkbox"]:checked + label, 
+.checkbox05.bg-cyan input[type="checkbox"]:checked + label::before {color:#fff; background:#31B5CA; border-color:#31B5CA;}
 
 /* checkbox - dropdown type 1 */
 .h-listbox-wrap { position:relative; z-index:2; display:inline-flex; align-items:center; }
@@ -496,6 +499,9 @@ button
 .h-radio-04 input[type="radio"] + label:after {left: 24px;top: 19.5px;}
 .h-radio-04 input[type="radio"]:checked + label {border: 1px solid var(--blue-3);}
 .h-radio-04 input[type="radio"] + label:before{margin-top: -2px;}
+.h-radio-04.bg-cyan input[type="radio"]:checked + label {background:#31B5CA; border-color:#31B5CA; color:#fff;}
+.h-radio-04.bg-cyan input[type="radio"]:checked + label::before,
+.h-radio-03.bg-cyan input[type="radio"]:checked + label:after {border-color:#fff;}
 
 /* switch */
 .h-switch { display: inline-block; z-index: 0; }
@@ -568,7 +574,15 @@ button
 .h-tbl-basic-1 tbody tr td .h-count-1 + span { display:inline-block; margin-top:2px; }
 .h-tbl-basic-1 .h-checkbox,
 .h-tbl-basic-1 .h-checkbox.checkbox01 input[type="checkbox"] + label:before { margin:0; }
- /* 테이블 hover 시 tr 색 변경 없음 */
+
+.h-tbl-basic-2 {border-top:2px solid #62666B;}
+.h-tbl-basic-2 tbody th, .h-tbl-basic-2 tbody td {border:1px solid #E0E6EF; text-align:left;}
+.h-tbl-basic-2 tbody th {background:#F5F7FA; color:#9A9A9A; font-size:13px; line-height:15px; padding:19px 30px; }
+.h-tbl-basic-2 tbody td {font-size:14px; color:#333333; padding:18px 20px; line-height:16px;}
+.h-tbl-basic-2 tbody tr th:first-child, .h-tbl-basic-2 tbody tr td:first-child {border-left:none;}
+.h-tbl-basic-2 tbody tr th:last-child, .h-tbl-basic-2 tbody tr td:last-child {border-right:none;}
+
+/* 테이블 hover 시 tr 색 변경 없음 */
  .hover-bg-none tbody tr:hover td { background-color:transparent; }
  /* 테이블 앞 checkbox 있는 경우 width 값 */
  .check-use :is(th:first-child, td:first-child) { width:44px; }
@@ -920,3 +934,29 @@ TAB
  
  /* placeholder hidden 처리 */
  .placehoder-hidden {color:var(--black-6); font-size:var(--text-subtitle3);}
+
+
+
+
+
+/* 선택한 값이 인풋부분 내용 들어오는 디자인 */
+.clear { background:url('../images/icon_xs_close.png') no-repeat center; width:15px; height:15px; margin-left: 5px; vertical-align: -2px; } 
+.srch-detail .depth-box { padding:17px; font-size:var(--text-subtitle3); } 
+.srch-detail .depth-box .h-checkbox label { vertical-align: baseline; } 
+.srch-detail .line-box .ph-tit { float:left; min-width: 62px; padding:18px 0 0 20px; color:var(--black-6); font-size: var(--text-subtitle3); } 
+.srch-detail .line-box:after { content:''; display:block; clear:both; } 
+.srch-detail .depth-box.depth-calc { float:left; width: calc(100% - 240px); } 
+/* .srch-detail .depth-box ul.depth1 > li:first-child:after { content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px; } */
+.srch-detail .depth-box ul.depth1 { position:relative; left:-5px; line-height:20px; } 
+.srch-detail .depth-box ul.depth1 > li:first-child:before { display:none; } 
+.srch-detail .depth-box ul.depth1 > li { margin:0 5px; } 
+.srch-detail .depth-box ul.depth1 + ul.depth1 { margin-top: 10px; } 
+.srch-detail .depth-box .depth1 > li + li:before { display: none; } 
+.srch-detail .depth-box .depth1 + .depth1:before { display:none; } 
+.srch-detail .depth-box > li:after { display: none; } 
+.srch-detail .depth-box > li { flex-direction: column; } 
+.srch-detail .depth-box > li { padding: 17px; } 
+.srch-detail .depth-box .depth-col + .depth-col { margin-top:6px; } 
+.srch-detail .depth-box .depth-row {display:table;;}
+.srch-detail .depth-box .depth-row .depth-tit {display:table-cell; font-size:14px; font-weight:var(--text-medium);}
+.srch-detail .depth-box .depth-row ul.depth1 > li {font-size:14px; font-weight:var(--text-regular);}
