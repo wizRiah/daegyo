@@ -81,6 +81,10 @@
 .h-txt-regular { font-weight:var(--text-regular); }
 .h-txt-bold { font-weight:var(--text-bold); }
 
+.h-txt-l {text-align:left;}
+.h-txt-c {text-align:center;}
+.h-txt-r {text-align:right;}
+
 .h-txt-warn { color:#FF5656; }
 .h-txt-warn::before { display:inline-block; content:'error_outline'; font-family:'Material Icons'; font-style:normal; font-size:24px; vertical-align:middle; margin-right:5px; box-sizing:border-box; }
 
@@ -106,6 +110,10 @@ select option:disabled { display: none; }
 .h-border-none { border:none !important; }
 
 /* display */
+.wd1000 {width:1000px;}
+.wd1080 {width:1080px;}
+.wd1300 {width:1300px;}
+.wd1225 {width:1225px;}
 .wd100 { width:100%; }
 .wd49 { width:49%; }
 
@@ -150,6 +158,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .mt25 { margin-top:25px; }
 .mt30 { margin-top:30px; }
 .mt40 { margin-top:40px; }
+.mt50 { margin-top:50px; }
 .mt70 { margin-top:70px; }
 
 .ml5 { margin-left:5px; }
@@ -164,6 +173,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .mb15 { margin-bottom:15px; }
 .mb20 { margin-bottom:20px; }
 .mb30 { margin-bottom: 30px; }
+.mb50 { margin-bottom:50px; }
 
 .p0 { padding:0!important; }
 .pl10 { padding-left:10px; }
@@ -209,6 +219,7 @@ button
 .h-button-m { height:42px; line-height:42px; font-size:var(--text-subtitle4); }
 .h-button-ml { height:46px; line-height:46px; font-size:var(--text-subtitle4); }
 .h-button-l { height:54px; line-height:54px; font-size:var(--text-subtitle2); font-weight:var(--text-medium); }
+.h-button-xl {height: 66px; line-height: 66px; font-size: var(--text-h4); font-weight: var(--text-bold);}
 
 /* 사이즈별 : 아이콘만 있는 경우 */
 .h-btn-sqre { padding:0; text-align:center; }
@@ -380,7 +391,7 @@ button
 .checkbox05 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
 .checkbox05.bg-cyan input[type="checkbox"] + label {padding-left:43px;}
 .checkbox05.bg-cyan input[type="checkbox"] + label::before {left:16px;}
-.checkbox05.bg-cyan input[type="checkbox"]:checked + label, 
+.checkbox05.bg-cyan input[type="checkbox"]:checked + label,
 .checkbox05.bg-cyan input[type="checkbox"]:checked + label::before {color:#fff; background:#31B5CA; border-color:#31B5CA;}
 
 /* checkbox - dropdown type 1 */
@@ -496,7 +507,7 @@ button
 /* 04 체크버튼형 */
 .h-radio-04 {display: inline-block;vertical-align: middle;margin: 0 3px;background: #fff;font-size: var(--text-subtitle4); box-sizing: border-box;cursor: pointer; height: 46px;}
 .h-radio-04 input[type="radio"] + label {color: #333;padding: 15px 20px;box-sizing: border-box;display: inline-block;height: 46px;border: 1px solid var(--border-basic-2);border-radius: 4px;}
-.h-radio-04 input[type="radio"] + label:after {left: 24px;top: 19.5px;}
+.h-radio-04 input[type="radio"] + label:after {left: 24px;top: 18.5px;}
 .h-radio-04 input[type="radio"]:checked + label {border: 1px solid var(--blue-3);}
 .h-radio-04 input[type="radio"] + label:before{margin-top: -2px;}
 .h-radio-04.bg-cyan input[type="radio"]:checked + label {background:#31B5CA; border-color:#31B5CA; color:#fff;}
@@ -931,32 +942,53 @@ TAB
  75% { box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0; }
  87.5% { box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em; }
  }
- 
+
  /* placeholder hidden 처리 */
  .placehoder-hidden {color:var(--black-6); font-size:var(--text-subtitle3);}
 
 
+ /* 필수입력 미입력시 디자인*/
+ /* checkbox */
+ .h-checkbox.notEnter input[type="checkbox"] + label:before,
+ .h-checkbox.notEnter label>input[type="checkbox"] + .notEnter .spanLabel:before {border:1px solid #FF5656; background-color:#FFFDE2;}
+
+ /* radiobox  */
+ .notEnter input[type="radio"] + label .rchk {background-color:#FFFDE2; border-color:#FF5656;}
+
+ /* input text에 값이 없으면*/
+ input.h-txtfield-basic.notEnter:placeholder-shown {background-color: #FFFDE2; border:1px solid #FF5656!important;}
+
+ /* input text에 값이 들어가면 */
+ input:valid {background-color:#fff;}
+ input[type="text"].h-txtfield-basic.notEnter:not(:placeholder-shown) {background-color:#fff!important;}
+ input[type="text"].notEnter {border:1px solid #FF5656; background-color:#FFFDE2;}
+ .notEnter .h-txtfield-inner {background:#FFFDE2;}
+ .h-field-wrap.notEnter {border:1px solid #FF5656!important; background-color:#FFFDE2;}
+ .h-field-wrap.notEnter .h-txtfield-inner {background:#FFFDE2;}
+
+ /* select */
+ select.notEnter {border:1px solid #FF5656!important; background-color:#FFFDE2;}
 
 
 
 /* 선택한 값이 인풋부분 내용 들어오는 디자인 */
-.clear { background:url('../images/icon_xs_close.png') no-repeat center; width:15px; height:15px; margin-left: 5px; vertical-align: -2px; } 
-.srch-detail .depth-box { padding:17px; font-size:var(--text-subtitle3); } 
-.srch-detail .depth-box .h-checkbox label { vertical-align: baseline; } 
-.srch-detail .line-box .ph-tit { float:left; min-width: 62px; padding:18px 0 0 20px; color:var(--black-6); font-size: var(--text-subtitle3); } 
-.srch-detail .line-box:after { content:''; display:block; clear:both; } 
-.srch-detail .depth-box.depth-calc { float:left; width: calc(100% - 240px); } 
+.clear { background:url('../images/icon_xs_close.png') no-repeat center; width:15px; height:15px; margin-left: 5px; vertical-align: -2px; }
+.srch-detail .depth-box { padding:17px; font-size:var(--text-subtitle3); }
+.srch-detail .depth-box .h-checkbox label { vertical-align: baseline; }
+.srch-detail .line-box .ph-tit { float:left; min-width: 62px; padding:18px 0 0 20px; color:var(--black-6); font-size: var(--text-subtitle3); }
+.srch-detail .line-box:after { content:''; display:block; clear:both; }
+.srch-detail .depth-box.depth-calc { float:left; width: calc(100% - 240px); }
 /* .srch-detail .depth-box ul.depth1 > li:first-child:after { content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px; } */
-.srch-detail .depth-box ul.depth1 { position:relative; left:-5px; line-height:20px; } 
-.srch-detail .depth-box ul.depth1 > li:first-child:before { display:none; } 
-.srch-detail .depth-box ul.depth1 > li { margin:0 5px; } 
-.srch-detail .depth-box ul.depth1 + ul.depth1 { margin-top: 10px; } 
-.srch-detail .depth-box .depth1 > li + li:before { display: none; } 
-.srch-detail .depth-box .depth1 + .depth1:before { display:none; } 
-.srch-detail .depth-box > li:after { display: none; } 
-.srch-detail .depth-box > li { flex-direction: column; } 
-.srch-detail .depth-box > li { padding: 17px; } 
-.srch-detail .depth-box .depth-col + .depth-col { margin-top:6px; } 
+.srch-detail .depth-box ul.depth1 { position:relative; left:-5px; line-height:20px; }
+.srch-detail .depth-box ul.depth1 > li:first-child:before { display:none; }
+.srch-detail .depth-box ul.depth1 > li { margin:0 5px; }
+.srch-detail .depth-box ul.depth1 + ul.depth1 { margin-top: 10px; }
+.srch-detail .depth-box .depth1 > li + li:before { display: none; }
+.srch-detail .depth-box .depth1 + .depth1:before { display:none; }
+.srch-detail .depth-box > li:after { display: none; }
+.srch-detail .depth-box > li { flex-direction: column; }
+.srch-detail .depth-box > li { padding: 17px; }
+.srch-detail .depth-box .depth-col + .depth-col { margin-top:6px; }
 .srch-detail .depth-box .depth-row {display:table;;}
 .srch-detail .depth-box .depth-row .depth-tit {display:table-cell; font-size:14px; font-weight:var(--text-medium);}
 .srch-detail .depth-box .depth-row ul.depth1 > li {font-size:14px; font-weight:var(--text-regular);}
