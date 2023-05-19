@@ -956,11 +956,13 @@ TAB
  .notEnter input[type="radio"] + label .rchk {background-color:#FFFDE2; border-color:#FF5656;}
 
  /* input text에 값이 없으면*/
- input.notEnter:placeholder-shown {background-color: #FFFDE2!important; border:1px solid #FF5656!important;}
+ input.h-txtfield-basic.notEnter:placeholder-shown {background-color: #FFFDE2; border:1px solid #FF5656!important;}
 
  /* input text에 값이 들어가면 */
- input.notEnter:valid{background-color:#fff;}
- input[type="text"].notEnter {border:1px solid #FF5656!important; background-color:#FFFDE2;}
+ input:valid {background-color:#fff;}
+ input[type="text"].h-txtfield-basic.notEnter:not(:placeholder-shown) {background-color:#fff!important;}
+ input[type="text"].notEnter {border:1px solid #FF5656; background-color:#FFFDE2;}
+ .notEnter .h-txtfield-inner {background:#FFFDE2;}
  .h-field-wrap.notEnter {border:1px solid #FF5656!important; background-color:#FFFDE2;}
  .h-field-wrap.notEnter .h-txtfield-inner {background:#FFFDE2;}
 
