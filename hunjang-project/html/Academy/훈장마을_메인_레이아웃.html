@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>인재정보 홈</title>
+  <title>훈장마을_메인_레이아웃</title>
   <link rel="stylesheet" href="/css/font.css">
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/styleGuide.css">
   <link rel="stylesheet" href="/css/mypage.css">
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/human.css">
+  <link rel="stylesheet" href="/css/hunjang-main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css">
   <link rel="stylesheet"
@@ -20,11 +20,24 @@
 
 <body>
 
-  <div class="hm-hunjang-wrap">
+  <div class="hunjang-main-wrap">
     <!-- header -->
     <header class="flex items-center">
 
       <div class="header-top">
+        <div class="header-utils">
+          <div class="layout-inner flex">
+            <div class="spacer"></div>
+            <div class="right">
+              <div class="utils flex">
+                <div class="item"><a href="#">공지사항</a></div>
+                <div class="item"><a href="#">FAQ</a></div>
+                <div class="item"><a href="#">이벤트</a></div>
+                <div class="item"><a href="#">온라인 상담</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="layout-inner">
           <div class="header-top-inner flex">
 
@@ -32,15 +45,50 @@
               <a class="top-logo" href="#">
                 <img src="../../images/top_logo.png" alt="훈장마을로고">
               </a>
-              <span class="subtitle text-subtitle2 h-txt-3">인재정보</span>
             </div>
 
-            <div class="search-bar">
-              <form name="s-form" method="get" action="#">
-                <input type="text" name="query" value="" maxlength="25" class="text" style="width:100%;">
-                <a href="#" class="btn-srch">검색</a>
-              </form>
-            </div>
+            <div class="center search" style="
+    display: flex;
+    position: absolute;
+    left: 50%;
+    width: 578px;
+    margin: 0 0 0 -390px;
+"><div class="search-bar" style="
+    height: 50px;
+    background: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    flex: 1 0 auto;
+    max-width: 100%;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    border-radius: 50px;
+">
+              <input style="
+"><button type="button" href="#" class="btn-srch">검색</button>
+            </div><button type="button" class="btn-search-detail rounded-pill v-btn v-btn--is-elevated v-btn--has-bg theme--dark v-size--x-large fillGreen" style="
+    width: 148px;
+    margin: 0 0 0 10px;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    color: #7E7E7E;
+    border: 1px solid #CCD1D7;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    min-width: 96px;
+    padding: 0 24px;
+    border-radius: 9999px !important;
+    background-color: #FFFFFF;
+"><span class="v-btn__content" style="
+    font-size: 13px;
+">과목&amp;지역 찾기</span></button></div>
 
             <div class="h-t-banS">
               배너슬라이드존
@@ -260,6 +308,9 @@
 
 
   </div>
+
+
+
 
   <div class="lottie-bg" style="display: none;">
     <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
