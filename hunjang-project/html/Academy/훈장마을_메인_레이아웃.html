@@ -21,9 +21,9 @@
 <body>
 
   <div class="hunjang-main-wrap">
-    <!-- header -->
-    <header class="flex items-center">
 
+    <!-- header -->
+    <header>
       <div class="header-top">
         <div class="header-utils">
           <div class="layout-inner flex">
@@ -40,74 +40,37 @@
         </div>
         <div class="layout-inner">
           <div class="header-top-inner flex">
-
             <div class="top-logo-inner flex">
               <a class="top-logo" href="#">
                 <img src="../../images/top_logo.png" alt="훈장마을로고">
               </a>
             </div>
-
-            <div class="center search" style="
-    display: flex;
-    position: absolute;
-    left: 50%;
-    width: 578px;
-    margin: 0 0 0 -390px;
-"><div class="search-bar" style="
-    height: 50px;
-    background: #ffffff;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    flex: 1 0 auto;
-    max-width: 100%;
-    display: flex;
-    padding: 0 20px;
-    align-items: center;
-    border-radius: 50px;
-">
-              <input type="text" id="" placeholder="학원명, 과목명을 검색해보세요."><button type="button" href="#" class="btn-srch">검색</button>
-            </div><button type="button" class="btn-search-detail rounded-pill v-btn v-btn--is-elevated v-btn--has-bg theme--dark v-size--x-large fillGreen" style="
-    width: 148px;
-    margin: 0 0 0 10px;
-    outline: 0;
-    position: relative;
-    text-decoration: none;
-    font-size: 14px;
-    color: #7E7E7E;
-    border: 1px solid #CCD1D7;
-    font-weight: 400;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    min-width: 96px;
-    padding: 0 24px;
-    border-radius: 9999px !important;
-    background-color: #FFFFFF;
-"><span class="v-btn__content" style="
-    font-size: 13px;
-">과목&amp;지역 찾기</span></button></div>
-
-            <div class="h-t-banS">
-              배너슬라이드존
+            <div class="center search flex">
+              <div class="search-bar flex">
+                <input type="text" id="" placeholder="학원명, 과목명을 검색해보세요."><button type="button" href="#" class="btn-srch">검색</button>
+              </div><button href="javascript:void(0);" class="h-button-ml h-button-white btn-search-detail">
+                <span class="h-txt-3 h-txt-medium">과목&amp;지역 찾기</span><i class="material-symbols-outlined">
+                  expand_more
+                </i></button>
             </div>
-
+            <div class="button-group flex inline">
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="header-menu">
         <div class="layout-inner">
-          <div class="header-menu-inner flex items-center">
+          <div class="header-menu-inner">
             <div class="left">
-              <div class="gnb-wrap flex items-center">
+              <div class="gnb-wrap">
                 <div class="all-menu">
-                  <a class="btn-all-menu" href="#">전체보기</a>
+                  <button type="button" class="btn-all-menu" href="javascript:void(0);">전체보기</button>
 
-                  <div class="panel-all-menu on">
+                  <!-- 클래스 on 추가시 전체메뉴 보임 -->
+                  <div class="panel-all-menu">
                     <div class="layout-inner">
-
                       <div class="lnb-expand-wrap flex">
                         <div class="lnb-expand-inwrap lnb-all flex">
                           <div class="item job">
@@ -156,70 +119,57 @@
                           <div class="item partner"><a href="#">학원 파트너</a></div>
                         </div>
                       </div>
-
                     </div>
                   </div>
-
                 </div>
-                <ul class="gnb-list flex">
+                <ul class="gnb-list">
                   <li class="list on">
                     <a href="#">
-                      <span class="bline">전체인재정보</span>
+                      <span class="bline">채용정보</span>
                     </a>
                   </li>
                   <li class="list">
                     <a href="#">
-                      <span class="bline">과목별 인재정보</span>
+                      <span class="bline">TOP100</span>
                     </a>
                   </li>
                   <li class="list">
                     <a href="#">
-                      <span class="bline">과외 인재정보</span>
+                      <span class="bline">브랜드 채용관</span>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      <span class="bline">학원톡톡</span>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      <span class="h-txt-teal bline">이력서 등록</span>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      <span class="bline" style="color: #26B2C8;">공고등록</span>
                     </a>
                   </li>
                 </ul>
-
               </div>
             </div>
-
             <div class="spacer"></div>
 
+            <!-- 슬라이드 배너 -->
             <div class="right">
-              <ul class="link-more flex items-center">
-                <li>
-                  <a href="#">
-                    <span class="p-reg">
-                      이력서 등록
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="a-reg">
-                      채용공고 등록
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="tl">
-                    <span class="i-ad">
-                      채용 상품
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="bl">
-                    <span class="i-fr">
-                      학원파트너 상품
-                    </span>
-                  </a>
-                </li>
-              </ul>
+              <div class="link-more">
+                <a href="#" style="display: block;width: 261px;">
+                  <img src="/images/main-banner01.png" alt="학원생활 큐레이션 에딧">
+                </a>
+              <a href="#" style="display: block;width: 261px;">
+                  <img src="/images/main-banner01.png" alt="학원생활 큐레이션 에딧">
+                </a>
+              </div>
             </div>
-
           </div>
-
-
         </div>
       </div>
 
@@ -229,77 +179,65 @@
 
 
     <!-- container -->
-    <div class="hm-container" style="display:none;">
+    <div class="container">
       <!-- 컨텐츠 -->
       <div class="content">
-
-        <!-- 타이틀 -->
-        <div class="my-txtbox">
-          <strong class="text-h1">이력서 등록</strong>
-          <ul class="text-subtitle4">
-            <li>훈장마을의 이력서는 총3개의 Type으로 구성되어 있어, 강사님이 원하는 Type으로 선택하신 후 이력서를 작성할 수 있습니다.</li>
-            <li>이력서는 최대 5개까지 등록이 가능하고, Type별로 중복 등록이 가능합니다.</li>
-            <li>파일이력서, 링크 이력서도 기본적인 입력항목은 존재하고, 해당 이력서로도 훈장마을 온라인 지원을 이용할 수 있습니다.</li>
-            <li>이력서는 자동 임시저장 기능이 적용되어 있어서 작성 중에 대기화면으로 5분 이상이 지나면 임시저장 됩니다.</li>
-            <li>일반 이력서만 PDF저장이 가능합니다.</li>
-            <li class="text-black">입사지원 후에 이력서가 수정되더라도 지원한 내용은 수정되지 않습니다.</li>
-          </ul>
-        </div>
-
-        <ul class="resumebox flex justify-between cursor-pointer">
-          <li class="resumbtn">
-            <a href="#">
-              <div class="text-h2">일반 이력서</div>
-              <div class="text-subtitle4">학력사항, 경력사항, 자기소개서, 각종 증명 등 채용담당자가 강사님을 잘 알 수 있도록 일반 이력서 작성을 이용해 보세요.</div>
-              <button class="ico_arrow" type="button"></button>
-              <img src="../../images/img_resume_01.png" class="img" style="max-width:120px;">
-              <img src="../../images/img_resume_on_01.png" class="img-on">
-            </a>
-          </li>
-
-          <li class="resumbtn">
-            <a href="#">
-              <div class="text-h2">파일 이력서</div>
-              <div class="text-subtitle4">강사님이 가지고 있는 이력서 파일을 PDF로 변환 및 업로드 하시면 훈장마을 온라인 지원을 이용해서 학원에 지원할 수 있습니다.</div>
-              <button class="ico_arrow" type="button"></button>
-              <img src="../../images/img_resume_02.png" class="img" style="max-width:120px;">
-              <img src="../../images/img_resume_on_02.png" class="img-on">
-            </a>
-          </li>
-
-          <li class="resumbtn">
-            <a href="#">
-              <div class="text-h2">링크 이력서</div>
-              <div class="text-subtitle4">온라인에 올려놓은 개인 프로필, 블로그 및 파일등록 링크(URL)를 입력하면 이력서가 완성되고 훈장마을 온라인 지원을 이용해서 학원에 지원할
-                수
-                있습니다.</div>
-              <button class="ico_arrow" type="button"></button>
-              <img src="../../images/img_resume_03.png" class="img" style="max-width:120px;">
-              <img src="../../images/img_resume_on_03.png" class="img-on">
-            </a>
-          </li>
-        </ul>
-
-
-
+        컨텐츠영역
       </div>
       <!-- // -->
 
+
+
       <footer>
-        <ul class="quick-menu">
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보취급방침</a></li>
-          <li><a href="#">이메일 무단 수집거부</a></li>
-          <li><a href="#">제휴문의</a></li>
-          <li><a href="#">고객센터</a></li>
-        </ul>
-        <ul class="office-info">
-          <li><span class="tit">훈장마을 고객센터</span> : 02-858-0429 (평일 09:00~18:00, 주말.공휴일 휴무 / 점심시간 12:30~13:30)</li>
-          <li><span class="tit">이메일</span> : hunjang@daekyo.co.kr</li>
-          <li><span class="tit">Fax</span> : 02-858-6956</li>
-        </ul>
-        <p class="copyr">© EDUVATION INC.</p>
+        <div class="f-menu-wrap">
+          <div class="layout-inner">
+            <div class="footer-inner">
+              <ul class="f-menu-list flex">
+                <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li><li><a href="#">이메일무단수집거부</a></li><li><a href="#">찾아오시는길</a></li><li><a href="#">고객센터</a></li><li><a href="#">채용상품안내</a></li><li><a href="#">광고상품안내</a></li><li><a href="#">제휴문의</a></li></ul>
+              <div class="spacer"></div>
+              <div class="family-site">
+                <select name="" id="">
+                  <option value="" disabled="" selected="">Family service</option>
+                  <option value="">에듀베이션</option>
+                  <option value="">통통통</option>
+                  <option value="">앤써통</option>
+                  <option value="">훈장EDU</option>
+                  <option value="">에-딧</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-info flex">
+          <div class="layout-inner">
+            <div class="info-contents flex">
+              <div class="f-logo"><img src="/images/footer_logo.png" alt="하단로고"></div>
+
+              <div class="callcenter">
+                <p class="tit">훈장마을 고객센터</p>
+                <p class="call">02-858-0492</p>
+                <p class="time">평일 09:00~18:00 (점심시간 12:30~13:30)</p>
+                <p class="contact mt5">
+                  <span class="mail">이메일 : hunjang@daekyo.co.kr</span>
+                  <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
+                </p>
+              </div>
+              <div class="spacer"></div>
+              <div class="addr-info">
+                <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
+                <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
+                  <span style="padding: 0 0 0 18px;">직업정보제공사업 신고번호 : 서울관악 2004-10</span>
+                </p>
+                <p><span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</span></p>
+                <p>ⓒ EDUVATION INC.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </footer>
 
     </div>
@@ -307,7 +245,6 @@
 
 
   </div>
-
 
 
 
