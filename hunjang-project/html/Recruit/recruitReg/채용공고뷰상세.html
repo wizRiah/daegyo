@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../css/common.css">
     <link rel="stylesheet" href="../../../css/styleGuide.css">
     <link rel="stylesheet" href="../../../css/layout.css">
+    <link rel="stylesheet" href="../../../css/popup.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -52,11 +53,16 @@
             <div class="h-recruit-ViewWrap">
 
                 <!-- 좌측 클릭스크롤버튼 -->
-                <div class="left-remoteBTN">
-                    <a href="#" class="recruit-Info on">채용공고</a>
-                    <a href="#rcrut-method" class="recruit-way">접수방법</a>
-                    <a href="#rcrut-acdmyInfo" class="academy-Info">학원정보</a>
+                <div class="left-remoteBTN-wrap">
+                        <div class="left-remoteBTN">
+                            <a href="#" class="recruit-Info on">채용공고</a>
+                            <a href="#rcrut-method" class="recruit-way">접수방법</a>
+                            <a href="#rcrut-acdmyInfo" class="academy-Info">학원정보</a>
+                        </div>
                 </div>
+
+                
+
 
                 <!-- 좌측 : 채용공고 내용(컨텐츠) -->
                 <div class="recruitView-Contents rcrt-View-Left">
@@ -85,6 +91,22 @@
                                         <li><strong>전임</strong>13:00~22:00</li>
                                         <li><strong>단기</strong>13:00~22:00
                                             <button type="button" class="addCategory">+</button>
+                                            
+                                                <!-- 근무형태의 + 버튼 클릭시 노출 팝업  -->
+                                                <div class="h-popup popup-04 ui-draggable" style="width:230px;">
+                                                    <div class="pop-body">
+                                                        <div class="pop-container">
+                                                            <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                                                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00 </li>
+                                                                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00 </li>
+                                                                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">파트.알바</span> 18:00~20:00</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="close" title="팝업 닫기">
+                                                        <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                    </button>
+                                                </div>
                                         </li>
                                     </ul>
                                 </span>
@@ -95,6 +117,26 @@
                                     경기 안산시 단원구, 경기전체, 안산시 상록구, 시흥시, 화성시, 서울전체
                                     <button type="button" class="addCategory">+</button>
                                     <button type="button" class="more-small-btn">지도보기</button>
+
+                                                <!-- 근무형지역의 + 버튼 클릭시 노출 팝업 -->
+                                                <div class="h-popup popup-04 ui-draggable" style="width:220px;">
+                                                    <div class="pop-body">
+                                                        <div class="pop-container">
+                                                            <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                                                <li class="text-subtitle4 h-txt-3">경기 안산시 단원</li> 
+                                                                <li class="text-subtitle4 h-txt-3">경기전체</li>
+                                                                <li class="text-subtitle4 h-txt-3">경기 안산시 상록구</li>
+                                                                <li class="text-subtitle4 h-txt-3">경기 화성시</li>
+                                                                <li class="text-subtitle4 h-txt-3">서울전체</li>
+                                                                <li class="text-subtitle4 h-txt-3">서울 강남구</li>
+                                                                <li class="text-subtitle4 h-txt-3">서울 노원구</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="close" title="팝업 닫기">
+                                                        <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                    </button>
+                                                </div>
                                 </span>
                             </li>
                         </ul>
@@ -161,6 +203,21 @@
                                     </ul>
                                     <div>
                                         <a href="" class="guide-i-btn">제출서류 보기</a>
+
+                                            <!-- 접수 기간 및 방법 - 제출서류보기 클릭시 노출 팝업 -->
+                                            <div class="h-popup popup-04 ui-draggable" style="width:260px;">
+                                                <div class="pop-body">
+                                                    <div class="pop-container">
+                                                        <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                                            <li class="text-subtitle4 h-txt-3" style="color:#333;">졸업 증명서, 주민등록등본</li>
+                                                        </ul>
+                                                        <p class="text-subtitle6 h-txt-5 ml10">입사 전/후 지원서류를 확인해 주세요.</p>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="close" title="팝업 닫기">
+                                                    <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                                </button>
+                                            </div>
                                     </div>
                                 </span>
                             </li>
@@ -326,13 +383,93 @@
                             </li>
                         </ul>
                     </div>
+                </div>
 
 
 
 
+
+
+                <!-- 우측 : 채용공고 리스트 -->
+                <div class="recruitView-list-wrap">
+                    <div class="wd-1164">
+                        <div class="recruitView-list rcrt-View-right">
+                            <!-- 채용공고 목록(글3개) -->
+                            <ul class="rcrtListUl">
+                                <li>
+                                    <p>피엠피영어2관학원</p>
+                                    <strong>PMP영어학원-초등과 중고등 영어선생님 모십니다.</strong>
+                                    <ul>
+                                        <li>서울 구로구</li>
+                                        <li>신입/경력</li>
+                                        <li>대졸</li>
+                                    </ul>
+                                    <div class="btnbox">
+                                        <div>
+                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
+                                            <label for="btn-scrap2" onclick="">스크랩</label>
+                                        </div>
+                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>서울아카데미 수학학원</p>
+                                    <strong>강동구 서울아카데미 수학학원에서 유능한 수학선생님을 모십니다.</strong>
+                                    <ul>
+                                        <li>서울 구로구</li>
+                                        <li>신입/경력</li>
+                                        <li>대졸</li>
+                                    </ul>
+                                    <div class="btnbox">
+                                        <div>
+                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
+                                            <label for="btn-scrap2" onclick="">스크랩</label>
+                                        </div>
+                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>개런티영어학원</p>
+                                    <strong>동탄개런티영어 전임 강사 채용 근속우대</strong>
+                                    <ul>
+                                        <li>서울 구로구</li>
+                                        <li>신입/경력</li>
+                                        <li>대졸</li>
+                                    </ul>
+                                    <div class="btnbox">
+                                        <div>
+                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
+                                            <label for="btn-scrap2" onclick="">스크랩</label>
+                                        </div>
+                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- 배너박스 -->
+                            <div class="rcrtView-Banner">
+                                <a href="#">
+                                    <img src="../../../images/recruit-view-bnrSample.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="recruitView-Contents wd100">
                     <h3 class="text-h2 h-txt-3"><strong class="h-txt-1">이 채용공고와</strong> 유사한 인기공고</h3>
 
                     <table class="h-tbl-basic-1">
+                        <colgroup>
+                            <col style="width:125px;">
+                            <col style="width:582px;">
+                            <col style="width:150px;">
+                            <col style="width:102px;">
+                            <col style="width:109px;">
+                            <col style="width:123px;">
+                        </colgroup>
                         <thead>
                         <tr>
                             <th>근무지</th>
@@ -344,100 +481,145 @@
                         </tr>
                         </thead>
                         <tbody class="text-subtitle4">
-                        <tr>
-                            <td>
-                            <span class="h-txt-2 text-subtitle5">서울 강남구, 경기도 오산시 외1</span>
-                            </td>
-                            <td class="txt-l">
-                            <div class="h-job-info">
-                                <div class="academy-wrap">
-                                <p class="academy">
-                                    <span class="txt-ellipsis text-subtitle2">서울아카데미 수학학원</span>
-            
-                                    <!-- 버튼 좋아요 -->
-                                    <input type="checkbox" class="btn-tgl btn-like" id="btn-like1">
-                                    <label for="btn-like1" onclick=""></label>
-                                </p>
+                            <tr>
+                                <td>
+                                <span class="h-txt-2 text-subtitle5">서울 강남구, 경기도 오산시 외1</span>
+                                </td>
+                                <td class="txt-l">
+                                <div class="h-job-info">
+                                    <div class="academy-wrap">
+                                    <p class="academy">
+                                        <span class="txt-ellipsis text-subtitle2">서울아카데미 수학학원</span>
+                
+                                        <!-- 버튼 좋아요 -->
+                                        <input type="checkbox" class="btn-tgl btn-like" id="btn-like1">
+                                        <label for="btn-like1" onclick=""></label>
+                                    </p>
+                                    </div>
+                
+                                    <div class="academy-wrap">
+                                    <p class="academy mt3-mb6">
+                                        <a href="javascript:void(0);" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
+                
+                                        <!-- 버튼 스크랩 -->
+                                        <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">
+                                        <label for="btn-scrap1" onclick="">스크랩</label>
+                                    </p>
+                                    </div>
+                
+                                    <span class="text-subtitle5">모집부문 : <em class="h-txt-2">수학</em></span>
                                 </div>
-            
-                                <div class="academy-wrap">
-                                <p class="academy mt3-mb6">
-                                    <a href="javascript:void(0);" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다.</a>
-            
-                                    <!-- 버튼 스크랩 -->
-                                    <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">
-                                    <label for="btn-scrap1" onclick="">스크랩</label>
-                                </p>
+                                </td>
+                                <td>
+                                <p class="td-nomarl">월급</p>
+                                <p class="td-bold">200만원~300만원</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">경력무관</p>
+                                <p class="td-nomarl">대학교(4년)</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">채용시 마감</p>
+                                <p class="td-nomarl">11.12 등록</p>
+                                </td>
+                                <td>
+                                <a href="javascript:void(0);" class="h-button-m h-button-teal">즉시지원</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <span class="h-txt-2 text-subtitle5">서울 동대문구</span>
+                                </td>
+                                <td class="txt-l">
+                                <div class="h-job-info">
+                                    <div class="academy-wrap">
+                                    <p class="academy">
+                                        <span class="txt-ellipsis text-subtitle2">알과영과학학원</span>
+                
+                                        <!-- 버튼 좋아요 -->
+                                        <input type="checkbox" class="btn-tgl btn-like" id="btn-like1">
+                                        <label for="btn-like1" onclick=""></label>
+                                    </p>
+                                    </div>
+                
+                                    <div class="academy-wrap">
+                                    <p class="academy mt3-mb6">
+                                        <a href="javascript:void(0);" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">[송파/강동] 중등부, 고등부 과학 선생님 채용</a>
+                
+                                        <!-- 버튼 스크랩 -->
+                                        <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap1">
+                                        <label for="btn-scrap1" onclick="">스크랩</label>
+                                    </p>
+                                    </div>
+                
+                                    <span class="text-subtitle5">모집부문 : <em class="h-txt-2">수학</em></span>
                                 </div>
-            
-                                <span class="text-subtitle5">모집부문 : <em class="h-txt-2">수학</em></span>
-                            </div>
-                            </td>
-                            <td>
-                            <p class="td-nomarl">월급</p>
-                            <p class="td-bold">200만원~300만원</p>
-                            </td>
-                            <td>
-                            <p class="td-bold">경력무관</p>
-                            <p class="td-nomarl">대학교(4년)</p>
-                            </td>
-                            <td>
-                            <p class="td-bold">채용시 마감</p>
-                            <p class="td-nomarl">11.12 등록</p>
-                            </td>
-                            <td>
-                            <a href="javascript:void(0);" class="h-button-m h-button-teal">즉시지원</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            <span class="h-txt-2 text-subtitle5">서울 강남구, 경기도 오산시 외1</span>
-                            </td>
-                            <td class="txt-l">
-                            <div class="h-job-info">
-                                <div class="academy-wrap">
-                                <p class="academy">
-                                    <span class="txt-ellipsis text-subtitle2">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
-            
-                                    <!-- 버튼 좋아요 -->
-                                    <input type="checkbox" class="btn-tgl btn-like" id="btn-like2">
-                                    <label for="btn-like2" onclick=""></label>
-                                </p>
+                                </td>
+                                <td>
+                                <p class="td-nomarl">월급</p>
+                                <p class="td-bold">협의 후 결정</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">경력3년↑ </p>
+                                <p class="td-nomarl">학력무관</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">채용시 마감</p>
+                                <p class="td-nomarl">11.12 등록</p>
+                                </td>
+                                <td>
+                                <a href="javascript:void(0);" class="h-button-m h-button-teal">즉시지원</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <span class="h-txt-2 text-subtitle5">서울 강남구, 경기도 오산시 외1</span>
+                                </td>
+                                <td class="txt-l">
+                                <div class="h-job-info">
+                                    <div class="academy-wrap">
+                                    <p class="academy">
+                                        <span class="txt-ellipsis text-subtitle2">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+                
+                                        <!-- 버튼 좋아요 -->
+                                        <input type="checkbox" class="btn-tgl btn-like" id="btn-like2">
+                                        <label for="btn-like2" onclick=""></label>
+                                    </p>
+                                    </div>
+                
+                                    <div class="academy-wrap">
+                                    <p class="academy mt3-mb6">
+                                        <a href="javascript:void(0);" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다. 서울아카데미 수학학원 서울아카데미 수학학원</a>
+                
+                                        <!-- 버튼 스크랩 -->
+                                        <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
+                                        <label for="btn-scrap2" onclick="">스크랩</label>
+                                    </p>
+                                    </div>
+                
+                                    <span class="text-subtitle5">모집부문 : <em class="h-txt-2">과학계열</em></span>
                                 </div>
-            
-                                <div class="academy-wrap">
-                                <p class="academy mt3-mb6">
-                                    <a href="javascript:void(0);" class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1" target="_self" title="현재창에서 페이지 이동">강동구 서울아카데미에서 수학 선생님을 모십니다. 서울아카데미 수학학원 서울아카데미 수학학원</a>
-            
-                                    <!-- 버튼 스크랩 -->
-                                    <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
-                                    <label for="btn-scrap2" onclick="">스크랩</label>
-                                </p>
-                                </div>
-            
-                                <span class="text-subtitle5">모집부문 : <em class="h-txt-2">과학계열</em></span>
-                            </div>
-                            </td>
-                            <td>
-                            <p class="td-nomarl">월급</p>
-                            <p class="td-bold">200만원~300만원</p>
-                            </td>
-                            <td>
-                            <p class="td-bold">경력무관</p>
-                            <p class="td-nomarl">대학교(4년)</p>
-                            </td>
-                            <td>
-                            <p class="td-bold">채용시 마감</p>
-                            <p class="td-nomarl">11.12 등록</p>
-                            </td>
-                            <td>
-                            <a href="javascript:void(0);" class="h-button-m h-button-teal">즉시지원</a>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>
+                                <p class="td-nomarl">월급</p>
+                                <p class="td-bold">200만원~300만원</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">경력무관</p>
+                                <p class="td-nomarl">대학교(4년)</p>
+                                </td>
+                                <td>
+                                <p class="td-bold">채용시 마감</p>
+                                <p class="td-nomarl">11.12 등록</p>
+                                </td>
+                                <td>
+                                <a href="javascript:void(0);" class="h-button-m h-button-teal">즉시지원</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
-                    <div class="h-pagination wh40 flex-set" aria-disabled="false" role="navigation">
+                    <div class="h-pagination wh40 flex-set mb30" aria-disabled="false" role="navigation">
                         <div class="h-pagination-content flex no-wrap items-center">
         
                         <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
@@ -517,84 +699,113 @@
         
                         </div>
                     </div>
-
-                </div>
-
-
-
-
-
-
-                <!-- 우측 : 채용공고 리스트 -->
-                <div class="recruitView-list-wrap">
-                    <div class="wd-1164">
-                        <div class="recruitView-list rcrt-View-right">
-                            <!-- 채용공고 목록(글3개) -->
-                            <ul class="rcrtListUl">
-                                <li>
-                                    <p>피엠피영어2관학원</p>
-                                    <strong>PMP영어학원-초등과 중고등 영어선생님 모십니다.</strong>
-                                    <ul>
-                                        <li>서울 구로구</li>
-                                        <li>신입/경력</li>
-                                        <li>대졸</li>
-                                    </ul>
-                                    <div class="btnbox">
-                                        <div>
-                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
-                                            <label for="btn-scrap2" onclick="">스크랩</label>
-                                        </div>
-                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>서울아카데미 수학학원</p>
-                                    <strong>강동구 서울아카데미 수학학원에서 유능한 수학선생님을 모십니다.</strong>
-                                    <ul>
-                                        <li>서울 구로구</li>
-                                        <li>신입/경력</li>
-                                        <li>대졸</li>
-                                    </ul>
-                                    <div class="btnbox">
-                                        <div>
-                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
-                                            <label for="btn-scrap2" onclick="">스크랩</label>
-                                        </div>
-                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>개런티영어학원</p>
-                                    <strong>동탄개런티영어 전임 강사 채용 근속우대</strong>
-                                    <ul>
-                                        <li>서울 구로구</li>
-                                        <li>신입/경력</li>
-                                        <li>대졸</li>
-                                    </ul>
-                                    <div class="btnbox">
-                                        <div>
-                                            <input type="checkbox" class="btn-tgl btn-scrap" id="btn-scrap2">
-                                            <label for="btn-scrap2" onclick="">스크랩</label>
-                                        </div>
-                                        <a href="#" class="h-button-xms h-button-white">즉시지원</a>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <!-- 배너박스 -->
-                            <div class="rcrtView-Banner">
-                                <a href="#">
-                                    <img src="../../../images/recruit-view-bnrSample.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
     </div>
 
+
+
+
+
+<!-- 근무형태의 + 버튼 클릭시 노출 팝업 
+<div class="h-popup popup-04 ui-draggable" style="width:230px;">
+    <div class="pop-body">
+        <div class="pop-container">
+            <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00 </li>
+                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00 </li>
+                <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">파트.알바</span> 18:00~20:00</li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="close" title="팝업 닫기">
+        <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+    </button>
+</div>
+-->
+
+<!-- 근무형지역의 + 버튼 클릭시 노출 팝업 
+<div class="h-popup popup-04 ui-draggable" style="width:220px;">
+    <div class="pop-body">
+        <div class="pop-container">
+            <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                <li class="text-subtitle4 h-txt-3">경기 안산시 단원</li> 
+                <li class="text-subtitle4 h-txt-3">경기전체</li>
+                <li class="text-subtitle4 h-txt-3">경기 안산시 상록구</li>
+                <li class="text-subtitle4 h-txt-3">경기 화성시</li>
+                <li class="text-subtitle4 h-txt-3">서울전체</li>
+                <li class="text-subtitle4 h-txt-3">서울 강남구</li>
+                <li class="text-subtitle4 h-txt-3">서울 노원구</li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="close" title="팝업 닫기">
+        <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+    </button>
+</div>
+-->
+
+
+
+
 </body>
+
+
+<script>
+    //좌측 사이드퀵메뉴 3개 클릭시 반응 디자인.
+    $( document ).ready( function() {
+        $( '.recruit-Info' ).click( function() {
+          $('.recruit-Info').addClass("on");
+          $('.recruit-way').removeClass("on");
+          $('.academy-Info').removeClass("on");
+        } );
+      } );
+
+      $( document ).ready( function() {
+        $( '.recruit-way' ).click( function() {
+          $('.recruit-way').addClass("on");
+          $('.recruit-Info').removeClass("on");
+          $('.academy-Info').removeClass("on");
+        } );
+      } );
+
+      $( document ).ready( function() {
+        $( '.academy-Info' ).click( function() {
+          $('.academy-Info').addClass("on");
+          $('.recruit-Info').removeClass("on");
+          $('.recruit-way').removeClass("on");
+        } );
+      } );
+
+
+
+
+    //스크롤시 상단 타이틀영역 고정하기.
+    $("body").on("mousewheel", function (e) {
+        var wheel = e.originalEvent.wheelDelta;
+
+        if (wheel > 0) {
+            //스크롤 올릴때
+            console.log("올리는 중");
+            $('.top-recruitView-Title').removeClass("fixed");
+        } else {
+            //스크롤 내릴때
+            console.log("내리는 중");
+            $('.top-recruitView-Title').addClass("fixed");
+        }
+     });
+
+
+
+     //레이어팝업들 선택하면 노출
+
+
+</script>
+
+
+
+
 
 
 </html>
