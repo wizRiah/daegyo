@@ -175,21 +175,23 @@
     .htMatch-rsview-wrap header .header-inner .h-btn-wrap + .notify-title {margin-left:38px;}
     .htMatch-rsview-wrap header .header-inner .notify-title {font-size:var(--text-h2); font-weight:var(--text-bold); color:#fff;}
 
-/* left menu - 이력서 보기*/
-.htMatch-rsview-wrap .l-side {position:fixed; left:0; top:85px; z-index:2; width:270px; height:calc(100% - 85px); overflow-y:auto; padding-bottom:20px; margin-top:2px; background:#fff; box-sizing:border-box; box-shadow:2px 0 15px #00000003;}
-.htMatch-rsview-wrap .l-side .h-teacher-list {display:flex; flex-flow:column wrap;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li {width:100%; border-bottom:1px solid var(--border-basic-3);}
-.htMatch-rsview-wrap .l-side .h-teacher-list li a {display:flex; flex-flow:row wrap; align-items:center; padding:20px 16px 20px 20px; box-sizing:border-box;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap + .info-wrap {margin-left:10px;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap {color:var(--black-2);}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name {font-size:var(--text-subtitle2); font-weight:var(--text-bold); line-height:24px;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name .pl {font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3); margin-left:5px;}
-.htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap :is(.career, .academic) {font-size:var(--text-subtitle5); line-height:20px;}
-.htMatch-rsview-wrap .l-side .h-teacher-list + .h-pagination {margin-top:15px;}
-    /* 이력서 선택 */
-    .htMatch-rsview-wrap .l-side .h-teacher-list li.active {position:relative; background-color:var(--neutral-3);}
-    .htMatch-rsview-wrap .l-side .h-teacher-list li.active::after {position:absolute; top:12px; right:6px; font-family:'Material Icons'; content:'check_circle_outline'; width:22px; height:22px; font-style:normal; font-size:22px; color:var(--blue-3);}
+/* left menu - 공통 */
+.h-academy-wrap aside ul li:before {display:inline-block; content:''; width:24px; height:24px; margin-left:20px; background-image:url('../images/lnb_icons_service.png');}
+    /* left menu - 이력서 보기*/
+    .htMatch-rsview-wrap .l-side {position:fixed; left:0; top:85px; z-index:2; width:270px; height:calc(100% - 85px); overflow-y:auto; padding-bottom:20px; margin-top:2px; background:#fff; box-sizing:border-box; box-shadow:2px 0 15px #00000003;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list {display:flex; flex-flow:column wrap;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li {width:100%; border-bottom:1px solid var(--border-basic-3);}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li a {display:flex; flex-flow:row wrap; align-items:center; padding:20px 16px 20px 20px; box-sizing:border-box;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap {width:65px; height:65px; border-radius:50%; background-color:#fff; border:1px solid var(--neutral-2); overflow:hidden;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .photo-wrap + .info-wrap {margin-left:10px;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap {color:var(--black-2);}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name {font-size:var(--text-subtitle2); font-weight:var(--text-bold); line-height:24px;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap .name .pl {font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3); margin-left:5px;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list li .info-wrap :is(.career, .academic) {font-size:var(--text-subtitle5); line-height:20px;}
+    .htMatch-rsview-wrap .l-side .h-teacher-list + .h-pagination {margin-top:15px;}
+        /* 이력서 선택 */
+        .htMatch-rsview-wrap .l-side .h-teacher-list li.active {position:relative; background-color:var(--neutral-3);}
+        .htMatch-rsview-wrap .l-side .h-teacher-list li.active::after {position:absolute; top:12px; right:6px; font-family:'Material Icons'; content:'check_circle_outline'; width:22px; height:22px; font-style:normal; font-size:22px; color:var(--blue-3);}
 
 /* contents - 공통 */
 :is(.h-academy-wrap, .htMatch-rsview-wrap) .container {background-color:var(--neutral-5);}
