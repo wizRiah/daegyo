@@ -670,6 +670,33 @@ button
 /***** 간격 *****/
 .h-tbl-basic-1 + .h-pagination { margin-top:40px; }
 
+
+/* Table - 썸네일 있는 유형 (인재정보 리스트) */
+.h-tbl-resume thead tr th:first-child {padding-left:20px;}
+.h-tbl-resume tbody tr th:first-child {padding-left:20px; vertical-align:top;}
+.h-tbl-resume thead tr th:last-child,
+.h-tbl-resume tbody tr td:last-child {padding-right:20px;}
+.h-tbl-resume tbody tr th,
+.h-tbl-resume tbody tr td {padding:20px 0;}
+    /* 사진, 이름, 성별, 나이 */
+    .h-tbl-resume .thumb-wrap {width:160px; height:100%; display:flex; flex-direction:row; align-items:center;}
+    .h-tbl-resume .thumb-wrap .photo {display:inline-flex; justify-content:center; width:65px; height:65px; border-radius:50%; border:1px solid var(--border-basic-4); box-sizing:border-box; overflow:hidden;}
+    .h-tbl-resume .thumb-wrap .photo img {max-width:100%;}
+    .h-tbl-resume .thumb-wrap .name {width:calc(100% - 80px); margin-left:15px; text-align:left; font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); text-overflow:ellipsis; white-space:nowrap; overflow:hidden; line-height:18px;}
+    .h-tbl-resume .thumb-wrap .name .pl {display:block; margin-top:5px; font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3);}
+    /* 이력서 정보 - 제목, 학력, 경력, 근무형태, 희망 근무지 등 */
+    .h-tbl-resume .h-job-info {max-width:730px; padding-left:5px; padding-right:5px; text-align:left;}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .h-txtbox-1 {margin-left:10px;}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .txt-ellipsis {max-width:calc(100% - 84px);}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .btn-scrap[type="checkbox"] + label {margin-top:-3px;}
+    .h-tbl-resume .h-job-info .academy-wrap + .h-resume-info-list {margin-top:5px;}
+    .h-tbl-resume .h-resume-info-list + .status-txtbox {margin-top:15px;}
+    /* 이력서 확인 - 이력서 보기, 연락처 공개제의 */
+    .h-tbl-resume .btn-wrap {width:130px;}
+    .h-tbl-resume .btn-wrap [class^="h-button"] {width:100%; padding:0; margin-left:0; margin-right:0;}
+    .h-tbl-resume .btn-wrap [class^="h-button"] + [class^="h-button"] {margin-top:5px;}
+    .h-tbl-resume .btn-wrap .date {margin-top:20px; font-size:var(--text-subtitle5); color:var(--black-3); text-align:center;}
+
 /***** tbl-list - 학력, 경력, 근무형태, 희망근무지 등 *****/
 .h-resume-info-list {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle5);}
 .h-resume-info-list .list-group {display:inline-flex; flex-flow:row wrap; color:var(--black-2);}
@@ -896,6 +923,13 @@ TAB
 
  /* txtbox (배경색은 버튼 컬러 클래스 추가) */
 .h-txtbox-1 {display:inline-flex; justify-content:center; align-items:center; height:22px; padding-left:10px; padding-right:10px; font-size:var(--text-subtitle6); font-weight:var(--text-medium); color:#fff; border-radius:13px; box-sizing:border-box;}
+
+/* txt-box (ex. 상태, 시강) */
+.status-txtbox {display:inline-flex; margin-top:15px;}
+.status-txtbox .h-txtbox-1 {height:24px; font-size:var(--text-subtitle6); color:var(--cyan); border:1px solid var(--grey-1); border-radius:50px;}
+.status-txtbox .h-txtbox-1 + .h-txtbox-1 {margin-left:5px;}
+.status-txtbox .h-txtbox-1.video {color:var(--black-3);}
+.status-txtbox .h-txtbox-1.video::before {display:inline-block; content:''; width:8px; height:8px; margin-right:6px; background:url(../images/icon_video_play_red.svg) center no-repeat; background-size:8px;}
 
 /* Subway Line */
 .h-subway {display:inline-flex; justify-content:center; align-items:center; height:19px; line-height:19px; padding:0 8px; font-size:11px; font-weight:var(--text-medium); color:#fff; border-radius:30px; background-color:var(--grey-1);}
