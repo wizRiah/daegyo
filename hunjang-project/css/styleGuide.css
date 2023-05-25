@@ -179,6 +179,12 @@ select + [class^="h-button"] { margin-left:10px; }
 .pl10 { padding-left:10px; }
 .pr10 { padding-right:10px; }
 
+/* width, height */
+.width-120 {width:120px !important; min-width:auto;}
+.width-160 {width:160px !important;}
+.width-350 {width:350px !important;}
+.height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
+
 
 
 /* googl material icons */
@@ -268,7 +274,9 @@ button
 .h-button-file {flex-flow:initial; border-color:#C5C5C5;}
 .h-button-file::after {display:inline-block; content:''; width:15px; height:16px; background:transparent url(../images/icon_file.svg) center no-repeat; background-size:15px 16px; margin-left:7px;}
 .h-button-info {width:20px; height:20px; background:transparent url(../images/icon_info_circle.svg) center no-repeat; background-size:20px 20px;}
-
+.h-button-detail {display:inline-flex; width:auto; height:auto; line-height:normal; padding:0; margin:0; font-size:var(--text-subtitle5); color:var(--black-2);}
+.h-button-detail::after {content:'east'; font-size:17px; font-family:'Material Icons'; font-style:normal; font-weight:100; height:100%; color:#91969c; margin-left:5px; box-sizing:border-box;}
+.h-button-detail span {margin-left:0 !important;}
 
 /* 버튼 그룹 */
 .button-group a { font-size:var(--text-subtitle5); box-sizing: border-box; height: 33px; line-height: 33px; margin: 0 2px; }
@@ -663,6 +671,43 @@ button
 .h-tbl-basic-1 + .h-pagination { margin-top:40px; }
 
 
+/* Table - 썸네일 있는 유형 (인재정보 리스트) */
+.h-tbl-resume thead tr th:first-child {padding-left:20px;}
+.h-tbl-resume tbody tr th:first-child {padding-left:20px; vertical-align:top;}
+.h-tbl-resume thead tr th:last-child,
+.h-tbl-resume tbody tr td:last-child {padding-right:20px;}
+.h-tbl-resume tbody tr th,
+.h-tbl-resume tbody tr td {padding:20px 0;}
+    /* 사진, 이름, 성별, 나이 */
+    .h-tbl-resume .thumb-wrap {width:160px; height:100%; display:flex; flex-direction:row; align-items:center;}
+    .h-tbl-resume .thumb-wrap .photo {display:inline-flex; justify-content:center; width:65px; height:65px; border-radius:50%; border:1px solid var(--border-basic-4); box-sizing:border-box; overflow:hidden;}
+    .h-tbl-resume .thumb-wrap .photo img {max-width:100%;}
+    .h-tbl-resume .thumb-wrap .name {width:calc(100% - 80px); margin-left:15px; text-align:left; font-size:var(--text-subtitle4); font-weight:var(--text-bold); color:var(--black-2); text-overflow:ellipsis; white-space:nowrap; overflow:hidden; line-height:18px;}
+    .h-tbl-resume .thumb-wrap .name .pl {display:block; margin-top:5px; font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:var(--black-3);}
+    /* 이력서 정보 - 제목, 학력, 경력, 근무형태, 희망 근무지 등 */
+    .h-tbl-resume .h-job-info {max-width:730px; padding-left:5px; padding-right:5px; text-align:left;}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .h-txtbox-1 {margin-left:10px;}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .txt-ellipsis {max-width:calc(100% - 84px);}
+    .h-tbl-resume .h-job-info .academy-wrap .academy .btn-scrap[type="checkbox"] + label {margin-top:-3px;}
+    .h-tbl-resume .h-job-info .academy-wrap + .h-resume-info-list {margin-top:5px;}
+    .h-tbl-resume .h-resume-info-list + .status-txtbox {margin-top:15px;}
+    /* 이력서 확인 - 이력서 보기, 연락처 공개제의 */
+    .h-tbl-resume .btn-wrap {width:130px;}
+    .h-tbl-resume .btn-wrap [class^="h-button"] {width:100%; padding:0; margin-left:0; margin-right:0;}
+    .h-tbl-resume .btn-wrap [class^="h-button"] + [class^="h-button"] {margin-top:5px;}
+    .h-tbl-resume .btn-wrap .date {margin-top:20px; font-size:var(--text-subtitle5); color:var(--black-3); text-align:center;}
+
+/***** tbl-list - 학력, 경력, 근무형태, 희망근무지 등 *****/
+.h-resume-info-list {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle5);}
+.h-resume-info-list .list-group {display:inline-flex; flex-flow:row wrap; color:var(--black-2);}
+.h-resume-info-list .list-group:not(:first-child):not(.hope-area)::before {display:inline-block; content:''; width:1px; height:13px; margin:5px 10px 0; background-color:var(--border-basic-2);}
+.h-resume-info-list .list-group .item-name {color:var(--black-3);}
+.h-resume-info-list .list-group .item-name::after {content:':'; display:inline-block; margin-left:3px; margin-right:3px;}
+.h-resume-info-list .list-group.info_wrap .info-list {display:inline-flex; width:auto;}
+.h-resume-info-list .list-group.hope-area {width:100%;}
+.h-resume-info-list .list-group.hope-area .info-list {width:calc(100% - 70px);}
+
+
 
 
 
@@ -834,9 +879,9 @@ TAB
 /* Tab - only button 컨텐츠 없는 버튼형 탭 */
 /* tab menu 1 */
 .h-tab-01 {display:flex; flex-flow:row wrap; align-items:center;}
-.h-tab-01 li:not(:nth-child(5n+1)) {margin-left:20px;}
+.h-tab-01 li:not(:nth-child(5n)) {margin-right:20px;}
 .h-tab-01 li:nth-child(n+6) {flex-grow:0; margin-top:20px;}
-.h-tab-01 li {flex:1 0 200px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:15px; box-sizing:border-box; transition:all ease 0.3s;}
+.h-tab-01 li {flex:0 0 200px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:15px; box-sizing:border-box; transition:all ease 0.3s;}
 .h-tab-01 li a {display:flex; flex-flow:column wrap; justify-content:center; padding:25px; color:var(--black-2); box-sizing:border-box; transition:all ease 0.3s;}
 .h-tab-01 li a .status {font-size:var(--text-subtitle3); line-height:18px;}
 .h-tab-01 li a .num {font-family:"SUIT"; font-size:var(--text-h1); font-weight:var(--text-bold); line-height:40px;}
@@ -878,6 +923,13 @@ TAB
 
  /* txtbox (배경색은 버튼 컬러 클래스 추가) */
 .h-txtbox-1 {display:inline-flex; justify-content:center; align-items:center; height:22px; padding-left:10px; padding-right:10px; font-size:var(--text-subtitle6); font-weight:var(--text-medium); color:#fff; border-radius:13px; box-sizing:border-box;}
+
+/* txt-box (ex. 상태, 시강) */
+.status-txtbox {display:inline-flex; margin-top:15px;}
+.status-txtbox .h-txtbox-1 {height:24px; font-size:var(--text-subtitle6); color:var(--cyan); border:1px solid var(--grey-1); border-radius:50px;}
+.status-txtbox .h-txtbox-1 + .h-txtbox-1 {margin-left:5px;}
+.status-txtbox .h-txtbox-1.video {color:var(--black-3);}
+.status-txtbox .h-txtbox-1.video::before {display:inline-block; content:''; width:8px; height:8px; margin-right:6px; background:url(../images/icon_video_play_red.svg) center no-repeat; background-size:8px;}
 
 /* Subway Line */
 .h-subway {display:inline-flex; justify-content:center; align-items:center; height:19px; line-height:19px; padding:0 8px; font-size:11px; font-weight:var(--text-medium); color:#fff; border-radius:30px; background-color:var(--grey-1);}
