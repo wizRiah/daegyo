@@ -570,11 +570,14 @@ button
 
 
 
-/***** 테이블 상단 텍스트 *****/
+/***** 테이블 상단 텍스트 영역 *****/
+.h-list-option-box :is([class^="h-button"], [class^="h-radio"], select):first-child {margin-left:0;}
+.h-list-option-box :is([class^="h-button"], [class^="h-radio"], select):last-child {margin-right:0;}
+
 .h-tit-box-1 { display:flex; margin-top:20px; margin-bottom:20px; box-sizing:border-box; }
 .h-tit-box-1 .h-tit-26 + :is(p, span) { margin-left:15px; }
 .h-tit-box-1 .h-tit-26 + .h-button-more { padding:0; margin:0 0 0 20px; transition:none; overflow:initial; }
- .h-tit-box-1 .h-tit-26 + .h-button-more:focus:before { display:none; }
+.h-tit-box-1 .h-tit-26 + .h-button-more:focus:before { display:none; }
 .h-tit-box-1 .vert-m { vertical-align:middle; }
 .h-tit-box-1 [class^="h-button"]:first-child { margin-left:0; }
 
