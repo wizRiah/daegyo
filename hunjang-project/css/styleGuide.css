@@ -570,11 +570,14 @@ button
 
 
 
-/***** 테이블 상단 텍스트 *****/
+/***** 테이블 상단 텍스트 영역 *****/
+.h-list-option-box :is([class^="h-button"], [class^="h-radio"], select):first-child {margin-left:0;}
+.h-list-option-box :is([class^="h-button"], [class^="h-radio"], select):last-child {margin-right:0;}
+
 .h-tit-box-1 { display:flex; margin-top:20px; margin-bottom:20px; box-sizing:border-box; }
 .h-tit-box-1 .h-tit-26 + :is(p, span) { margin-left:15px; }
 .h-tit-box-1 .h-tit-26 + .h-button-more { padding:0; margin:0 0 0 20px; transition:none; overflow:initial; }
- .h-tit-box-1 .h-tit-26 + .h-button-more:focus:before { display:none; }
+.h-tit-box-1 .h-tit-26 + .h-button-more:focus:before { display:none; }
 .h-tit-box-1 .vert-m { vertical-align:middle; }
 .h-tit-box-1 [class^="h-button"]:first-child { margin-left:0; }
 
@@ -920,6 +923,11 @@ TAB
  .h-emoticon.type03::before { background-color:#FFEA02; }
  .h-emoticon.type04::before { background-color:#FF9100; }
 
+ .h-emoticon.type05 { color:#61A6FF; font-weight:300; font-size: 28px!important;}
+ .h-emoticon.type05::before {width:22px; height:22px;}
+ .h-emoticon.type06 { color:#bcbcbc; font-weight:300; font-size: 28px!important;}
+ .h-emoticon.type06::before {width:22px; height:22px;}
+
 
  /* txtbox (배경색은 버튼 컬러 클래스 추가) */
 .h-txtbox-1 {display:inline-flex; justify-content:center; align-items:center; height:22px; padding-left:10px; padding-right:10px; font-size:var(--text-subtitle6); font-weight:var(--text-medium); color:#fff; border-radius:13px; box-sizing:border-box;}
@@ -1044,3 +1052,6 @@ TAB
 .srch-detail .depth-box .depth-row {display:table;;}
 .srch-detail .depth-box .depth-row .depth-tit {display:table-cell; font-size:14px; font-weight:var(--text-medium);}
 .srch-detail .depth-box .depth-row ul.depth1 > li {font-size:14px; font-weight:var(--text-regular);}
+
+/* 툴팁 */
+.h-popup .tooltip-body button.close {width:40px; height:40px;}
