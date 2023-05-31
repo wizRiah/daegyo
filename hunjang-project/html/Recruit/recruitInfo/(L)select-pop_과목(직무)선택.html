@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../../../css/mypage.css">
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/popup.css">
-  <link rel="stylesheet" href="../../../css/recruit-info.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -36,7 +35,7 @@
 
           <!-- popup -->
           <div class="h-popup-wrap">
-            <div class="h-popup popup-01 ui-draggable" style="width: 940px; height: fit-content;">
+            <div class="h-popup popup-01 ui-draggable" style="width:900px; height:fit-content;">
               <div class="pop-header ui-draggable-handle">
                 <span class="pop-title text-h4">과목(직무) 선택</span>
                 <span class="pop-sub-title">최대5개까지 과목(직무)을 선택할 수 있습니다.</span>
@@ -47,12 +46,14 @@
       
                   <!-- search input -->
                   <div class="srch-input-wrap width-550">
-                    <input type="text" id="txtNm" class="h-txtfield" placeholder="찾으시는 과목(직무)을 입력하세요" />
+                    <input type="text" id="txtNm" class="h-txtfield" placeholder="찾으시는 과목(직무)을 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='찾으시는 과목(직무)을 입력하세요'" />
                     <button type="button" class="h-btn-x" title=""></button>
-                    <div class="search-word-wrap">
+
+                    <!-- dropdown -->
+                    <div class="srch-word-wrap">
                       <div class="scroll-y">
 
-                        <ul class="search-word-list">
+                        <ul class="srch-word-list">
                           <li class="h-checkbox checkbox01">
                             <input type="checkbox" name="checkForm" id="word1-srch01" checked="">
                             <label for="word1-srch01">
@@ -63,6 +64,27 @@
                           <li class="h-checkbox checkbox01">
                             <input type="checkbox" name="checkForm" id="word1-srch02" checked="">
                             <label for="word1-srch02">
+                              <span class="cate">입시/고시</span>
+                              <span class="srch-word">국어</span>
+                            </label>
+                          </li>
+                          <li class="h-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="word1-srch03" checked="">
+                            <label for="word1-srch03">
+                              <span class="cate">입시/고시</span>
+                              <span class="srch-word">국어</span>
+                            </label>
+                          </li>
+                          <li class="h-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="word1-srch04" checked="">
+                            <label for="word1-srch04">
+                              <span class="cate">입시/고시</span>
+                              <span class="srch-word">국어</span>
+                            </label>
+                          </li>
+                          <li class="h-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="word1-srch05" checked="">
+                            <label for="word1-srch05">
                               <span class="cate">입시/고시</span>
                               <span class="srch-word">국어</span>
                             </label>
@@ -102,7 +124,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_3">
                                   <label for="check1_3">
-                                    외국어
+                                    외국어 (생활/비즈니 영어)
                                   </label>
                                 </div>
                               </li>
@@ -126,7 +148,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_6">
                                   <label for="check1_6">
-                                    IT
+                                    교사
                                   </label>
                                 </div>
                               </li>
@@ -134,7 +156,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_7">
                                   <label for="check1_7">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -142,7 +164,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_8">
                                   <label for="check1_8">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -150,7 +172,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_9">
                                   <label for="check1_9">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -158,7 +180,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_10">
                                   <label for="check1_10">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -166,7 +188,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_11">
                                   <label for="check1_11">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -174,7 +196,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm1" id="check1_12">
                                   <label for="check1_12">
-                                    IT
+                                    겁쟁이 사자
                                   </label>
                                 </div>
                               </li>
@@ -194,7 +216,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_2">
                                   <label for="check2_2">
-                                    기계/자동차/조선공학
+                                    영어
                                   </label>
                                 </div>
                               </li>
@@ -202,7 +224,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_3">
                                   <label for="check2_3">
-                                    기계/자동차/조선공학
+                                    수학
                                   </label>
                                 </div>
                               </li>
@@ -210,7 +232,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_4">
                                   <label for="check2_4">
-                                    기계/자동차/조선공학
+                                    과학계열
                                   </label>
                                 </div>
                               </li>
@@ -218,7 +240,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_5">
                                   <label for="check2_5">
-                                    기계/자동차/조선공학
+                                    물리
                                   </label>
                                 </div>
                               </li>
@@ -226,7 +248,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_6">
                                   <label for="check2_6">
-                                    식품/유전/바이오
+                                    화학
                                   </label>
                                 </div>
                               </li>
@@ -234,7 +256,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_7">
                                   <label for="check2_7">
-                                    기타 외국어 공인시험
+                                    생물
                                   </label>
                                 </div>
                               </li>
@@ -242,7 +264,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_8">
                                   <label for="check2_8">
-                                    기타 외국어 공인시험
+                                    지구과학
                                   </label>
                                 </div>
                               </li>
@@ -250,7 +272,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_9">
                                   <label for="check2_9">
-                                    기타 외국어 공인시험
+                                    산업공학
                                   </label>
                                 </div>
                               </li>
@@ -258,7 +280,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_10">
                                   <label for="check2_10">
-                                    기타 외국어 공인시험
+                                    기계/자동차/조선공학
                                   </label>
                                 </div>
                               </li>
@@ -266,7 +288,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_11">
                                   <label for="check2_11">
-                                    기타 외국어 공인시험
+                                    섬유공학
                                   </label>
                                 </div>
                               </li>
@@ -274,7 +296,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_12">
                                   <label for="check2_12">
-                                    기타 외국어 공인시험
+                                    신소재/재료공학
                                   </label>
                                 </div>
                               </li>
@@ -282,7 +304,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_13">
                                   <label for="check2_13">
-                                    기타 외국어 공인시험
+                                    우주/항공공학
                                   </label>
                                 </div>
                               </li>
@@ -290,7 +312,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_14">
                                   <label for="check2_14">
-                                    기타 외국어 공인시험
+                                    식품/유전/바이오
                                   </label>
                                 </div>
                               </li>
@@ -298,7 +320,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_15">
                                   <label for="check2_15">
-                                    기타 외국어 공인시험
+                                    공학계열
                                   </label>
                                 </div>
                               </li>
@@ -306,7 +328,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_16">
                                   <label for="check2_16">
-                                    기타 외국어 공인시험
+                                    기타 1
                                   </label>
                                 </div>
                               </li>
@@ -314,7 +336,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_17">
                                   <label for="check2_17">
-                                    기타 외국어 공인시험
+                                    기타2
                                   </label>
                                 </div>
                               </li>
@@ -322,7 +344,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_18">
                                   <label for="check2_18">
-                                    기타 외국어 공인시험
+                                    기타3
                                   </label>
                                 </div>
                               </li>
@@ -330,7 +352,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_19">
                                   <label for="check2_19">
-                                    기타 외국어 공인시험
+                                    기타4
                                   </label>
                                 </div>
                               </li>
@@ -338,7 +360,7 @@
                                 <div class="h-checkbox checkbox04">
                                   <input type="checkbox" name="checkForm2" id="check2_20">
                                   <label for="check2_20">
-                                    기타 외국어 공인시험
+                                    기타5
                                   </label>
                                 </div>
                               </li>
@@ -350,60 +372,61 @@
                       </div>
                     </div>
 
-                    <!-- 선택정보 노출 영역 -->
+                    <!-- 선택정보 노출 영역 (최대 5개) -->
                     <div class="wd100 line-box">
                       <div class="depth-box">
+
+                        <!-- 선택 1 -->
                         <div class="depth-col">
                           <span class="depth-tit">입시/고시<button type="button" class="clear"></button></span>
                           <ul class="depth1">
                             <li>과학계열<button type="button" class="clear"></button></li>
                             <li>지구과학<button type="button" class="clear"></button></li>
                             <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
-                            <li>논술<button type="button" class="clear"></button></li>
-                            <li>과학계열<button type="button" class="clear"></button></li>
-                            <li>지구과학<button type="button" class="clear"></button></li>
                           </ul>
                         </div>
       
+                        <!-- 선택 2 -->
                         <div class="depth-col">
                           <span class="depth-tit">외국어 공인시험<button type="button" class="clear"></button></span>
                           <ul class="depth1">
                             <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
-                            <li>영어(TOEIC, TOEFL, TESOL)<button type="button" class="clear"></button></li>
                           </ul>
                         </div>
+
+                        <!-- 선택 3 -->
+                        <div class="depth-col">
+                          <span class="depth-tit">전문/자격증<button type="button" class="clear"></button></span>
+                          <ul class="depth1">
+                            <li>웹디자인기능사<button type="button" class="clear"></button></li>
+                          </ul>
+                        </div>
+
+                        <!-- 선택 4 -->
+                        <div class="depth-col">
+                          <span class="depth-tit">전문/자격증<button type="button" class="clear"></button></span>
+                          <ul class="depth1">
+                            <li>웹디자인기능사<button type="button" class="clear"></button></li>
+                            <li>수목치료기술자<button type="button" class="clear"></button></li>
+                            <li>경매사<button type="button" class="clear"></button></li>
+                          </ul>
+                        </div>
+
+                        <!-- 선택 5 -->
+                        <div class="depth-col">
+                          <span class="depth-tit">교사<button type="button" class="clear"></button></span>
+                          <ul class="depth1">
+                            <li>사서교사자격증<button type="button" class="clear"></button></li>
+                            <li>평생교육사<button type="button" class="clear"></button></li>
+                          </ul>
+                        </div>
+
                       </div>
                     </div>      
 
                   </div>
 
+                  <!-- 버튼 - 초기화 -->
                   <button type="button" class="h-button-icon-refresh h-btn-reset">
                     <i class="material-symbols-outlined" aria-hidden="true">cached</i>
                     <span class="text-subtitle6 h-txt-3">초기화</span>

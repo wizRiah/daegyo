@@ -41,7 +41,7 @@
     .recruit-info-wrap .l-side .h-search-list .active .dropdown-wrap {display:block;}
 /* 채용정보 */
 .recruit-info-cont {width:1164px;}
-.recruit-info-cont .h-tit-box-1 {margin-top:20px; margin-bottom:0;}
+.recruit-info-cont .h-tit-box-1 {margin-top:16px; margin-bottom:0;}
 /* 오늘의 채용정보 */
 .h-linebox-wrap + .h-list-option-box {margin-top:70px !important;}
 .h-linebox-wrap {flex-direction:row; border:1px solid var(--border-basic-3); border-radius:10px; box-sizing:border-box; overflow:hidden;}
@@ -69,48 +69,21 @@
 .recruit-info-wrap footer {width:100%;}
 
     @media only screen and (max-width:1600px) {
-        .recruit-info-wrap .content {width:calc(100% - 270px); max-width:none; margin-left:240px;}
+        .recruit-info-wrap .l-side + .content {width:calc(100% - 270px); max-width:none; margin-left:240px;}
     }
 
 
 
 /* ==================================== Popup ==================================== */
-/* 과목(직무)선택 - 검색 input */
-.srch-input-wrap {position:relative; display:inline-flex; flex-direction:row; align-items:center; height:54px; padding:15px 20px; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box; transition:all 0.2s;}
-.srch-input-wrap::before {content:''; display:inline-block; width:24px; height:24px; background:url(../images/icon_search.svg) center no-repeat; background-size:24px; margin-right:10px; box-sizing:border-box;}
-.srch-input-wrap .h-txtfield {width:calc(100% - 58px); padding-left:5px; margin-right:4px; font-size:var(--text-subtitle3); border:0;}
-.srch-input-wrap .h-txtfield:focus {outline:none;}
-.srch-input-wrap .h-btn-x {display:none; justify-content:center; align-items:center; width:20px; height:20px; background-color:var(--grey-1); border-radius:50%; overflow:hidden;}
-.srch-input-wrap .h-btn-x::before {display:inline-flex; justify-content:center; align-items:center; content:"close"; font-family:'Material Icons'; color:#fff; border-radius:50%; font-size:14px; font-weight:600; box-sizing:border-box;}
-.srch-input-wrap .search-word-wrap {display:none; position:absolute; top:calc(100% + 5px); left:-1px; z-index:2; width:calc(100% + 2px); height:150px; padding:20px; font-size:var(--text-subtitle3); background-color:#fff; border:1px solid var(--grey-3); border-radius:4px; box-shadow:0 5px 10px #0000001A; box-sizing:border-box;}
-    /* 검색 input 입력 결과 체크 영역 */
-    .srch-input-wrap.active {border-color:var(--grey-3);}
-    .srch-input-wrap.active .h-btn-x,
-    .srch-input-wrap.active .search-word-wrap {display:inline-flex;}
-    .srch-input-wrap .search-word-wrap .scroll-y {overflow-y:auto; box-sizing:border-box;}
-    .srch-input-wrap .search-word-wrap .scroll-y::-webkit-scrollbar-thumb {height:30%;}
-    .srch-input-wrap .search-word-wrap ul li {display:flex; align-items:center;}
-    .srch-input-wrap .search-word-wrap ul li:not(:first-child) {margin-top:13px;}
-    .srch-input-wrap .search-word-wrap ul li .cate::after {display:inline-block; content:'>'; color:var(--black-6); margin-left:5px;}
-    .srch-input-wrap .search-word-wrap ul li .srch-word {color:var(--blue-3);}
-/* 초기화 버튼 */
-.h-button-icon-refresh.h-btn-reset {position:absolute; right:0; min-width:auto !important; padding:0; margin:7px 0 0; background-color:transparent;}
-.h-button-icon-refresh.h-btn-reset i {font-size:20px; color:var(--grey-1);}
-.h-button-icon-refresh.h-btn-reset span {margin-left:5px !important;}
-/* 상세 선택 */
-.srch-select-wrap [class^="subject_dpt"]::-webkit-scrollbar {width:14px;}
-.srch-select-wrap [class^="subject_dpt"]::-webkit-scrollbar-thumb {height:30%; border-style:solid; border-color:#fff; border-width:5px 3px; border-radius:4px; box-sizing:border-box;}
-.srch-select-wrap [class^="subject_dpt"] li {display:inline-flex; align-items:center; height:34px; line-height:34px !important; cursor:default !important;}
-.srch-select-wrap .subject_dpt1 li {padding:0 0 0 20px !important;}
-.srch-select-wrap .depth-box {padding:18px 20px; color:var(--black-2);}
-.srch-select-wrap .depth-box .depth-tit {font-weight:var(--text-medium);}
-.srch-select-wrap + .btn-wrap [class^="h-button"] {border-radius:2px;}
+
 
 
 
 /* ==================================== 공통 ==================================== */
+.width-100 {width:100px !important;}
 
-
+/***** tbl-list - 학력, 경력, 근무형태, 희망근무지 등 *****/
+.h-resume-info-list .list-group .item:not(:last-child)::after {display:inline-block; content:','; margin-right:4px;}
 
 
 
