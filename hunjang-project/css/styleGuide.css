@@ -886,15 +886,17 @@ TAB
 .h-tab-01 li:nth-child(n+6) {flex-grow:0; margin-top:20px;}
 .h-tab-01 li {flex:0 0 200px; text-align:center; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:15px; box-sizing:border-box; transition:all ease 0.3s;}
 .h-tab-01 li a {display:flex; flex-flow:column wrap; justify-content:center; padding:25px; color:var(--black-2); box-sizing:border-box; transition:all ease 0.3s;}
-.h-tab-01 li a .status {font-size:var(--text-subtitle3); line-height:18px;}
+.h-tab-01 li a .status {width:auto; font-size:var(--text-subtitle3); line-height:18px; text-align: center; background:transparent;}
 .h-tab-01 li a .num {font-family:"SUIT"; font-size:var(--text-h1); font-weight:var(--text-bold); line-height:40px;}
 .h-tab-01 li a .status + .num {margin-top:12px;}
     /* hover */
     .h-tab-01 li:hover {border-color:var(--teal);}
     .h-tab-01 li:hover a {color:var(--teal);}
+    .h-tab-01 li:hover a .status {color:var(--teal);}
     /* active */
     .h-tab-01 li.active {border-color:var(--teal); background-color:var(--teal);}
     .h-tab-01 li.active a {color:#fff;}
+    .h-tab-01 li.active a .status {color:#fff;}
 
 /* tab menu 2 */
 .h-tab-02 {display:flex; flex-flow:row wrap; align-items:center;}
