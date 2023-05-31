@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/hunjang-main.css">
+  <link rel="stylesheet" href="../../css/yhy.css">
+
+  <!-- 충돌나는지만 확인 -->
+  <link rel="stylesheet" href="../../css/recruit-info.css">
+  <link rel="stylesheet" href="../../css/popup.css">
+  <link rel="stylesheet" href="../../css/mypage.css">
+  <link rel="stylesheet" href="../../css/resume-view.css">
+  <link rel="stylesheet" href="../../css/reseum-regist.css">
+  <link rel="stylesheet" href="../../css/recruit-view.css">
+  <link rel="stylesheet" href="../../css/academy-service.css">
+  <link rel="stylesheet" href="../../css/human_srch.css">
+  <link rel="stylesheet" href="../../css/hunjang-main_ssj.css">
+  <link rel="stylesheet" href="../../css/osoo.css">
+  <!-- // -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <!-- Tab menu -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <div class="hunjang-main-wrap">
+
+    <!-- header -->
+    <header>
+      <div class="header-top">
+        <div class="header-utils">
+          <div class="layout-inner flex">
+            <div class="spacer"></div>
+            <div class="right">
+              <div class="utils flex">
+                <div class="item"><a href="#">공지사항</a></div>
+                <div class="item"><a href="#">FAQ</a></div>
+                <div class="item"><a href="#">이벤트</a></div>
+                <div class="item"><a href="#">온라인 상담</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout-inner">
+          <div class="header-top-inner flex">
+
+            <!-- 로고 -->
+            <div class="top-logo-inner flex">
+              <a class="top-logo" href="#">
+                <img src="../../images/top_logo.png" alt="훈장마을로고">
+              </a>
+            </div>
+            <div class="center search flex">
+              <div class="search-bar flex">
+                <input type="text" id="" placeholder="학원명, 과목명을 검색해보세요.">
+                <button type="button" class="btn-srch">검색</button>
+              </div>
+              <!-- 과목 지역찾기 버튼 -->
+              <div class="h-listbox-wrap">
+                <input type="checkbox" id="list-box-01" class="list-box">
+                <label for="list-box-01">과목&amp;지역 찾기
+                  <i class="material-symbols-outlined">
+                    expand_more
+                  </i>
+                </label>
+                <div class="box-search-detail">
+                  <div class="h-tab-Contents-02"><button type="button" class="close" title="팝업 닫기">
+                      <img src="../../images/close_btn.svg" alt="팝업 닫기">
+                    </button>
+                    <input type="radio" id="tabBtn02_1" name="tab02" checked="">
+                    <label for="tabBtn02_1">과목 (직무)</label>
+
+                    <input type="radio" id="tabBtn02_2" name="tab02">
+                    <label for="tabBtn02_2">지역</label>
+
+                    <!-- 과목&지역 찾기 버튼 클릭시 팝업 창 -->
+                    <div class="tabCo-Wrap">
+
+                      <!-- 첫번째 탭(직무) 클릭했을때 활성화되는 내용들 -->
+                      <div class="tabCo-CommonBox">
+                        <div class="h-tab-container">
+
+                          <!-- Tab Content -->
+                          <div class="tab-content-wrap">
+                            <!-- Tab Content 학력 - 세로 7단 -->
+                            <div id="tab3-1" class="tab-content current">
+                              <ul class="tab-check-list col-7">
+                                <li>
+                                  <div class="h-checkbox checkbox04">
+                                    <input type="checkbox" name="checkForm" id="tab3-cont1-check01" checked="">
+                                    <label for="tab3-cont1-check01">대학교 (4년)</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-checkbox checkbox04">
+                                    <input type="checkbox" name="checkForm" id="tab3-cont2-check02">
+                                    <label for="tab3-cont2-check02">대학원 석사</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-checkbox checkbox04">
+                                    <input type="checkbox" name="checkForm" id="tab3-cont3-check03">
+                                    <label for="tab3-cont3-check03">대학원 박사</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-checkbox checkbox04">
+                                    <input type="checkbox" name="checkForm" id="tab3-cont4-check04">
+                                    <label for="tab3-cont4-check04">대학 (2,3년)</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-checkbox checkbox04">
+                                    <input type="checkbox" name="checkForm" id="tab3-cont5-check05">
+                                    <label for="tab3-cont5-check05">고등학교</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <!-- 두번째 탭() 클릭했을때 활성화되는 내용들 -->
+                      <div class="tabCo-CommonBox">
+                        <div class="tabs-items">
+                          <div class="tab-container">
+                            <div class="tab-subject region">
+                              <div class="cell cell-main">
+                                <div class="item">
+                                  <ul class="flex flex-wrap">
+                                    <!-- 클릭시 클래스 on 추가 -->
+                                    <!-- 지역 클릭시 해당 지역 채용공고 보이도록 개발 -->
+                                    <li class="on">서울</li>
+                                    <li>경기</li>
+                                    <li>인천</li>
+                                    <li>대전</li>
+                                    <li>세종</li>
+                                    <li>충남</li>
+                                    <li>충북</li>
+                                    <li>광주</li>
+                                    <li>전남</li>
+                                    <li>전북</li>
+                                    <li>대구</li>
+                                    <li>경북</li>
+                                    <li>부산</li>
+                                    <li>울산</li>
+                                    <li>경남</li>
+                                    <li>강원</li>
+                                    <li>제주</li>
+                                    <li>전국</li>
+                                  </ul>
+                                </div>
+
+                              </div>
+                              <div class="cell cell-sub">
+                                <div class="item"><b class="dep1">서울지역 채용공고</b>
+                                  <ul class="dep2 flex flex-wrap">
+                                    <li><a href="#">전체</a></li>
+                                    <li><a href="#">강남구</a></li>
+                                    <li><a href="#">강동구</a></li>
+                                    <li><a href="#">강북구</a></li>
+                                    <li><a href="#">강서구</a></li>
+                                    <li><a href="#">관악구</a></li>
+                                    <li><a href="#">광진구</a></li>
+                                    <li><a href="#">구로구</a></li>
+                                    <li><a href="#">금천구</a></li>
+                                    <li><a href="#">노원구</a></li>
+                                    <li><a href="#">도봉구</a></li>
+                                    <li><a href="#">동대문구</a></li>
+                                    <li><a href="#">동작구</a></li>
+                                    <li><a href="#">마포구</a></li>
+                                    <li><a href="#">서대문구</a></li>
+                                    <li><a href="#">서초구</a></li>
+                                    <li><a href="#">성동구</a></li>
+                                    <li><a href="#">성북구</a></li>
+                                    <li><a href="#">송파구</a></li>
+                                    <li><a href="#">양천구</a></li>
+                                    <li><a href="#">영등포구</a></li>
+                                    <li><a href="#">용산구</a></li>
+                                    <li><a href="#">은평구</a></li>
+                                    <li><a href="#">종로구</a></li>
+                                    <li><a href="#">중구</a></li>
+                                    <li><a href="#">중랑구</a></li>
+                                    <li><a href="#">전지역</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // -->
+            </div>
+            <!-- 로그인,회원가입 버튼 -->
+            <div class="button-group flex inline">
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu">
+        <div class="layout-inner">
+          <div class="header-menu-inner">
+            <div class="left">
+              <div class="gnb-wrap">
+                <div class="all-menu">
+                  <!-- 전체보기 버튼 클릭시 클래스 on 추가-->
+                  <button type="button" class="btn-all-menu" href="javascript:void(0);">
+                    <div class="btn-image"></div>
+                  </button>
+
+                  <!-- 클래스 on 추가시 전체메뉴 보임 -->
+                  <div class="panel-all-menu">
+                    <div class="layout-inner">
+                      <div class="lnb-expand-wrap flex">
+                        <div class="lnb-expand-inwrap lnb-all flex">
+                          <div class="item job">
+                            <a href="#" class="dep1">채용정보</a>
+                            <ul class="dep2">
+                              <li><a href="#">오늘의 채용정보</a></li>
+                              <li><a href="#">지역별</a></li>
+                              <li><a href="#">과목별</a></li>
+                              <li><a href="#">직무별</a></li>
+                              <li><a href="#">근무형태별</a></li>
+                              <li><a href="#">학력별</a></li>
+                              <li><a href="#">경력별</a></li>
+                              <li><a href="#">급여별</a></li>
+                            </ul>
+                          </div>
+                          <div class="item top100"><a href="#" class="dep1">TOP 100</a>
+                            <ul class="dep2">
+                              <li><a href="#">오늘의 TOP 100</a></li>
+
+                            </ul>
+                          </div>
+                          <div class="item pool"><a href="#" class="dep1">브랜드 채용관</a>
+                            <ul class="dep2">
+                            </ul>
+                          </div>
+                          <div class="item haktalk" style="
+    flex: 0 0 250px;
+"><a href="#" class="dep1">학원톡톡</a>
+                            <ul class="dep2">
+                              <li><a href="#">티츄 웹툰</a></li>
+                              <li><a href="#">전자근로계약</a></li>
+                              <li><a href="#">스마트취업 TOOL</a></li>
+                              <li><a href="#">학원노무 / 세무 FAQ</a></li>
+                              <li><a href="#">우리동네 학원검색</a></li>
+                              <li><a href="#">Poll</a></li>
+                              <li><a href="#">학원생활 꿀팁</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="main-links">
+                          <div class="item product"><a href="#">유료 상품 안내</a></div>
+                          <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
+                          <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
+                          <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="gnb-list">
+                  <li class="list on">
+                    <a href="#">
+                      채용정보
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      TOP100
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      브랜드 채용관
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#">
+                      학원톡톡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" style="color: var(--teal);">이력서 등록</a>
+                  </li>
+                  <li class="list">
+                    <a href="#" style="color: #26B2C8;">채용공고 등록</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="spacer"></div>
+
+            <!-- 슬라이드 배너 -->
+            <div class="right">
+              <div class="link-more">
+                <a href="#" style="">
+                  <img src="../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
+                </a>
+                <a href="#" style="">
+                  <img src="../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- // -->
+
+
+
+    <!-- container -->
+    <div class="container">
+      <!-- 컨텐츠 -->
+      <div class="content">
+
+        <div class="flex flex-between flex-end menu-btit">
+          <ul class="menu-btit-list">
+            <li class="on"><a href="#"><span class="text-h1">경력별 채용정보</span></a></li>
+          </ul>
+        </div>
+
+        <!-- 검색조건영역 -->
+        <div class="htSearch-tab-wrap">
+
+          <!-- Tab 경력, 과목(직무), 지역, 학력, 상세조건 -->
+          <div class="h-tab-Contents-01 htSearch-tab htRound-tab">
+            <!-- Tab Menu -->
+            <input type="radio" id="tabBtn01_1" name="tab01" class="tab-career">
+            <label for="tabBtn01_1">경력</label>
+
+            <input type="radio" id="tabBtn01_2" name="tab01" class="tab-duty">
+            <label for="tabBtn01_2">과목(직무)</label>
+
+            <input type="radio" id="tabBtn01_3" name="tab01" class="tab-area">
+            <label for="tabBtn01_3">지역</label>
+
+            <input type="radio" id="tabBtn01_4" name="tab01" class="tab-academic">
+            <label for="tabBtn01_4">학력</label>
+
+            <input type="radio" id="tabBtn01_5" name="tab01" class="tab-computer">
+            <label for="tabBtn01_5">상세조건</label>
+
+
+            <!-- Tab Contents -->
+            <div class="tabCo-Wrap">
+
+              <!-- 첫번째 탭 - 경력 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="h-tab-container">
+
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 경력 - 세로 7단 -->
+                    <div id="tab4-1" class="tab-content current">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab4-cont1-check01" checked="">
+                            <label for="tab4-cont1-check01">신입</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab4-cont2-check02">
+                            <label for="tab4-cont2-check02">경력 1년~3년</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab4-cont3-check03">
+                            <label for="tab4-cont3-check03">경력 4년~7년</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab4-cont4-check04">
+                            <label for="tab4-cont4-check04">경력 4년~7년</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab4-cont5-check05">
+                            <label for="tab4-cont5-check05">경력 10년 이상</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- 두번째 탭 - 과목(직무) 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="h-tab-container">
+
+                  <!-- Tab -->
+                  <ul class="tabs-wrap">
+                    <li class="tab-link current" data-tab="tab2-1">입시/고시</li>
+                    <li class="tab-link" data-tab="tab2-2">보습/속셈</li>
+                    <li class="tab-link" data-tab="tab2-3">외국어(생활/비즈니스 영어)</li>
+                    <li class="tab-link" data-tab="tab2-4">외국어 공인시험</li>
+                    <li class="tab-link" data-tab="tab2-5">전문/자격증</li>
+                    <li class="tab-link" data-tab="tab2-6">IT</li>
+                    <li class="tab-link" data-tab="tab2-7">교사</li>
+                    <li class="tab-link" data-tab="tab2-8">예체능</li>
+                    <li class="tab-link" data-tab="tab2-9">관리/사무/행정</li>
+                    <li class="tab-link" data-tab="tab2-10">기타</li>
+                  </ul>
+
+
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 입시/고시 - 세로 5단 -->
+                    <div id="tab2-1" class="tab-content current">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check01" checked="">
+                            <label for="tab2-cont1-check01">국어</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check02">
+                            <label for="tab2-cont1-check02">영어</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check03">
+                            <label for="tab2-cont1-check03">수학</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check04">
+                            <label for="tab2-cont1-check04">과학계열</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check05">
+                            <label for="tab2-cont1-check05">물리</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check06">
+                            <label for="tab2-cont1-check06">물리</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check07">
+                            <label for="tab2-cont1-check07">화학</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check08">
+                            <label for="tab2-cont1-check08">생물</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check09">
+                            <label for="tab2-cont1-check09">지구과학</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check10">
+                            <label for="tab2-cont1-check10">사회계열</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check11">
+                            <label for="tab2-cont1-check11">논술</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check12">
+                            <label for="tab2-cont1-check12">한국사</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check13">
+                            <label for="tab2-cont1-check13">입시컨설팅</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check14">
+                            <label for="tab2-cont1-check14">입시미술</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont1-check15">
+                            <label for="tab2-cont1-check15">입시음악</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 보습/속셈 - 세로 5단 -->
+                    <div id="tab2-2" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check01" checked="">
+                            <label for="tab2-cont2-check01">보습</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check02">
+                            <label for="tab2-cont2-check02">속셈</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check03">
+                            <label for="tab2-cont2-check03">보습</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check04">
+                            <label for="tab2-cont2-check04">속셈</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check05">
+                            <label for="tab2-cont2-check05">보습</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check06">
+                            <label for="tab2-cont2-check06">속셈</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check07">
+                            <label for="tab2-cont2-check07">보습</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont2-check08">
+                            <label for="tab2-cont2-check08">속셈</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 외국어(생활/비즈니스 영어) - 세로 5단 -->
+                    <div id="tab2-3" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check01" checked="">
+                            <label for="tab2-cont3-check01">생활</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check02">
+                            <label for="tab2-cont3-check02">비즈니스</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check03">
+                            <label for="tab2-cont3-check03">생활</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check04">
+                            <label for="tab2-cont3-check04">비즈니스</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check05">
+                            <label for="tab2-cont3-check05">생활</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check06">
+                            <label for="tab2-cont3-check06">비즈니스</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check07">
+                            <label for="tab2-cont3-check07">생활</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont3-check08">
+                            <label for="tab2-cont3-check08">비즈니스</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 외국어 공인시험 - 세로 4단 -->
+                    <div id="tab2-4" class="tab-content">
+                      <ul class="tab-check-list col-4">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check01" checked="">
+                            <label for="tab2-cont4-check01">영어 (TOEIC, TOEFL, TESOL)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check02">
+                            <label for="tab2-cont4-check02">영어 (TEPS, OPIc)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check03">
+                            <label for="tab2-cont4-check03">유학 (SAT, GRE, IELTS, CELTA)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check03">
+                            <label for="tab2-cont4-check03">중국어 (HSK)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check03">
+                            <label for="tab2-cont4-check03">일본어 (JPT)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont4-check03">
+                            <label for="tab2-cont4-check03">기타 외국어 공인시험</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 전문/자격증 - 세로 4단 -->
+                    <div id="tab2-5" class="tab-content">
+                      <ul class="tab-check-list col-4">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check01" checked="">
+                            <label for="tab2-cont5-check01">전문</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check02">
+                            <label for="tab2-cont5-check02">자격증</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check03">
+                            <label for="tab2-cont5-check03">전문</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check03">
+                            <label for="tab2-cont5-check03">자격증</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check03">
+                            <label for="tab2-cont6-check03">전문</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont5-check03">
+                            <label for="tab2-cont7-check03">자격증</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content IT - 세로 5단 -->
+                    <div id="tab2-6" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check01" checked="">
+                            <label for="tab2-cont6-check01">아이티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check02">
+                            <label for="tab2-cont6-check02">아이티티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check03">
+                            <label for="tab2-cont6-check03">아이티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check04">
+                            <label for="tab2-cont6-check04">아이티티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check05">
+                            <label for="tab2-cont6-check05">아이티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check06">
+                            <label for="tab2-cont6-check06">아이티티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check07">
+                            <label for="tab2-cont6-check07">아이티</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont6-check08">
+                            <label for="tab2-cont6-check08">아이티티</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 교사 - 세로 5단 -->
+                    <div id="tab2-7" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont7-check01" checked="">
+                            <label for="tab2-cont7-check01">교사 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont7-check02">
+                            <label for="tab2-cont7-check02">교사 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont7-check03">
+                            <label for="tab2-cont7-check03">교사 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 예체능 - 세로 4단 -->
+                    <div id="tab2-8" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont8-check01" checked="">
+                            <label for="tab2-cont8-check01">예체능</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont8-check02">
+                            <label for="tab2-cont8-check02">예체능</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont8-check03">
+                            <label for="tab2-cont8-check03">예체능</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 관리/사무/행정 - 세로 5단 -->
+                    <div id="tab2-9" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont9-check01" checked="">
+                            <label for="tab2-cont9-check01">관리</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont9-check02">
+                            <label for="tab2-cont9-check02">사무</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont9-check03">
+                            <label for="tab2-cont9-check03">행정</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 기타 - 세로 5단 -->
+                    <div id="tab2-10" class="tab-content">
+                      <ul class="tab-check-list col-5">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont10-check01" checked="">
+                            <label for="tab2-cont10-check01">기타로</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont10-check02">
+                            <label for="tab2-cont10-check02">오도바이</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab2-cont10-check03">
+                            <label for="tab2-cont10-check03">타자</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- 세번째 탭 - 지역 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="swiper h-tab-container swiper-initialized swiper-horizontal">
+
+                  <!-- Tab -->
+                  <ul class="swiper-wrapper tabs-wrap" id="swiper-wrapper-349ca31e2310215c4" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(20px, 0px, 0px);">
+                    <li class="swiper-slide tab-link current swiper-slide-active" data-tab="tab1-1" role="group" aria-label="1 / 18" style="width: 107.6px;">서울특별시</li>
+                    <li class="swiper-slide tab-link swiper-slide-next" data-tab="tab1-2" role="group" aria-label="2 / 18" style="width: 107.6px;">경기도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-3" role="group" aria-label="3 / 18" style="width: 107.6px;">인천광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-4" role="group" aria-label="4 / 18" style="width: 107.6px;">부산광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-5" role="group" aria-label="5 / 18" style="width: 107.6px;">대구광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-6" role="group" aria-label="6 / 18" style="width: 107.6px;">광주광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-7" role="group" aria-label="7 / 18" style="width: 107.6px;">대전광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-8" role="group" aria-label="8 / 18" style="width: 107.6px;">울산광역시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-9" role="group" aria-label="9 / 18" style="width: 107.6px;">세종특별자치시</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-10" role="group" aria-label="10 / 18" style="width: 107.6px;">강원도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-11" role="group" aria-label="11 / 18" style="width: 107.6px;">경상남도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-12" role="group" aria-label="12 / 18" style="width: 107.6px;">경상북도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-13" role="group" aria-label="13 / 18" style="width: 107.6px;">전라남도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-14" role="group" aria-label="14 / 18" style="width: 107.6px;">전라북도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-15" role="group" aria-label="15 / 18" style="width: 107.6px;">충청남도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-16" role="group" aria-label="16 / 18" style="width: 107.6px;">충청북도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-17" role="group" aria-label="17 / 18" style="width: 107.6px;">제주도</li>
+                    <li class="swiper-slide tab-link" data-tab="tab1-18" role="group" aria-label="18 / 18" style="width: 107.6px;">전국</li>
+                  </ul>
+                  <div class="swiper-button-prev btn-arrow btn-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-349ca31e2310215c4" aria-disabled="true"></div>
+                  <div class="swiper-button-next btn-arrow btn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-349ca31e2310215c4" aria-disabled="false"></div>
+
+
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 서울 -->
+                    <div id="tab1-1" class="tab-content current">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check01" checked="">
+                            <label for="tab1-cont1-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check02">
+                            <label for="tab1-cont1-check02">강남구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check03">
+                            <label for="tab1-cont1-check03">강동구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check04">
+                            <label for="tab1-cont1-check04">강북구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check05">
+                            <label for="tab1-cont1-check05">강서구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check06">
+                            <label for="tab1-cont1-check06">관악구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check07">
+                            <label for="tab1-cont1-check07">광진구</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check08">
+                            <label for="tab1-cont1-check08">구로구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check09">
+                            <label for="tab1-cont1-check09">금천구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check10">
+                            <label for="tab1-cont1-check10">노원구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check11">
+                            <label for="tab1-cont1-check11">도봉구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check12">
+                            <label for="tab1-cont1-check12">동대문구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check13">
+                            <label for="tab1-cont1-check13">동작구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check14">
+                            <label for="tab1-cont1-check14">마포구</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check15">
+                            <label for="tab1-cont1-check15">서대문구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check16">
+                            <label for="tab1-cont1-check16">서초구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check17">
+                            <label for="tab1-cont1-check17">성동구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check18">
+                            <label for="tab1-cont1-check18">성북구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check19">
+                            <label for="tab1-cont1-check19">송파구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check20">
+                            <label for="tab1-cont1-check20">양천구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check21">
+                            <label for="tab1-cont1-check21">영등포구</label>
+                          </div>
+                        </li>
+
+
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check22">
+                            <label for="tab1-cont1-check22">용산구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check23">
+                            <label for="tab1-cont1-check23">은평구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check24">
+                            <label for="tab1-cont1-check24">종로구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check25">
+                            <label for="tab1-cont1-check25">중구</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont1-check26">
+                            <label for="tab1-cont1-check26">중랑구</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 경기도 -->
+                    <div id="tab1-2" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont2-check01" checked="">
+                            <label for="tab1-cont2-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont2-check02">
+                            <label for="tab1-cont2-check02">경기도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont2-check03">
+                            <label for="tab1-cont2-check03">경기도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont2-check04">
+                            <label for="tab1-cont2-check04">경기도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 인천광역시 -->
+                    <div id="tab1-3" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont3-check01" checked="">
+                            <label for="tab1-cont3-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont3-check02">
+                            <label for="tab1-cont3-check02">인천 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont3-check03">
+                            <label for="tab1-cont3-check03">인천 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont3-check04">
+                            <label for="tab1-cont3-check04">인천 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 부산광역시 -->
+                    <div id="tab1-4" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont4-check01" checked="">
+                            <label for="tab1-cont4-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont4-check02">
+                            <label for="tab1-cont4-check02">부산 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont4-check03">
+                            <label for="tab1-cont4-check03">부산 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont4-check04">
+                            <label for="tab1-cont4-check04">부산 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 대구광역시 -->
+                    <div id="tab1-5" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont5-check01" checked="">
+                            <label for="tab1-cont5-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont5-check02">
+                            <label for="tab1-cont5-check02">대구 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont5-check03">
+                            <label for="tab1-cont5-check03">대구 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont5-check04">
+                            <label for="tab1-cont5-check04">대구 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 광주광역시 -->
+                    <div id="tab1-6" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont6-check01" checked="">
+                            <label for="tab1-cont6-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont6-check02">
+                            <label for="tab1-cont6-check02">광주 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont6-check03">
+                            <label for="tab1-cont6-check03">광주 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont6-check04">
+                            <label for="tab1-cont6-check04">광주 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 대전광역시 -->
+                    <div id="tab1-7" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont7-check01" checked="">
+                            <label for="tab1-cont7-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont7-check02">
+                            <label for="tab1-cont7-check02">대전 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont7-check03">
+                            <label for="tab1-cont7-check03">대전 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont7-check04">
+                            <label for="tab1-cont7-check04">대전 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 울산광역시 -->
+                    <div id="tab1-8" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont8-check01" checked="">
+                            <label for="tab1-cont8-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont8-check02">
+                            <label for="tab1-cont8-check02">울산 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont8-check03">
+                            <label for="tab1-cont8-check03">울산 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont8-check04">
+                            <label for="tab1-cont8-check04">울산 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 세종자치시 -->
+                    <div id="tab1-9" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont9-check01" checked="">
+                            <label for="tab1-cont9-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont9-check02">
+                            <label for="tab1-cont9-check02">세종 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont9-check03">
+                            <label for="tab1-cont9-check03">세종 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont9-check04">
+                            <label for="tab1-cont9-check04">세종 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 강원도 -->
+                    <div id="tab1-10" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont10-check01" checked="">
+                            <label for="tab1-cont10-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont10-check02">
+                            <label for="tab1-cont10-check02">강원도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont10-check03">
+                            <label for="tab1-cont10-check03">강원도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont10-check04">
+                            <label for="tab1-cont10-check04">강원도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 경상남도 -->
+                    <div id="tab1-11" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont11-check01" checked="">
+                            <label for="tab1-cont11-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont11-check02">
+                            <label for="tab1-cont11-check02">경상남도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont11-check03">
+                            <label for="tab1-cont11-check03">경상남도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont11-check04">
+                            <label for="tab1-cont11-check04">경상남도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 경상북도 -->
+                    <div id="tab1-12" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont12-check01" checked="">
+                            <label for="tab1-cont12-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont12-check02">
+                            <label for="tab1-cont12-check02">경상북도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont12-check03">
+                            <label for="tab1-cont12-check03">경상북도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont12-check04">
+                            <label for="tab1-cont12-check04">경상북도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 전라남도 -->
+                    <div id="tab1-13" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont13-check01" checked="">
+                            <label for="tab1-cont13-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont13-check02">
+                            <label for="tab1-cont13-check02">전라남도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont13-check03">
+                            <label for="tab1-cont13-check03">전라남도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont13-check04">
+                            <label for="tab1-cont13-check04">전라남도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 전라북도 -->
+                    <div id="tab1-14" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont14-check01" checked="">
+                            <label for="tab1-cont14-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont14-check02">
+                            <label for="tab1-cont14-check02">전라북도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont14-check03">
+                            <label for="tab1-cont14-check03">전라북도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont14-check04">
+                            <label for="tab1-cont14-check04">전라북도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 충청남도 -->
+                    <div id="tab1-15" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont15-check01" checked="">
+                            <label for="tab1-cont15-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont15-check02">
+                            <label for="tab1-cont15-check02">충청남도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont15-check03">
+                            <label for="tab1-cont15-check03">충청남도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont15-check04">
+                            <label for="tab1-cont15-check04">충청남도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 충청북도 -->
+                    <div id="tab1-16" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont16-check01" checked="">
+                            <label for="tab1-cont16-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont16-check02">
+                            <label for="tab1-cont16-check02">충청북도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont16-check03">
+                            <label for="tab1-cont16-check03">충청북도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont16-check04">
+                            <label for="tab1-cont16-check04">충청북도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 제주도 -->
+                    <div id="tab1-17" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont17-check01" checked="">
+                            <label for="tab1-cont17-check01">전체</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont17-check02">
+                            <label for="tab1-cont17-check02">제주도 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont17-check03">
+                            <label for="tab1-cont17-check03">제주도 2</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont17-check04">
+                            <label for="tab1-cont17-check04">제주도 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Tab Content 전국 -->
+                    <div id="tab1-18" class="tab-content">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont18-check01" checked="">
+                            <label for="tab1-cont18-check01">전국</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab1-cont18-check02">
+                            <label for="tab1-cont18-check02">노래자랑</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+
+              </div>
+
+              <!-- 네번째 탭 - 학력 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="h-tab-container">
+
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 학력 - 세로 7단 -->
+                    <div id="tab3-1" class="tab-content current">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont1-check01" checked="">
+                            <label for="tab3-cont1-check01">대학교 (4년)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont2-check02">
+                            <label for="tab3-cont2-check02">대학원 석사</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont3-check03">
+                            <label for="tab3-cont3-check03">대학원 박사</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont4-check04">
+                            <label for="tab3-cont4-check04">대학 (2,3년)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont5-check05">
+                            <label for="tab3-cont5-check05">고등학교</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- 다섯번째 탭 - 상세조건 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="h-tab-container">
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 상세조건 검색옵션 -->
+                    <div id="tab6-1" class="tab-content current">
+                      <ul class="h-bullet-01">
+                        <li>
+                          <span class="item-name">근무형태</span>
+                          <ul class="cont-check-list">
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type01" id="work2_type01_1">
+                                <label for="work2_type01_1">전임</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type01" id="work2_type01_2">
+                                <label for="work2_type01_2">단기</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type01" id="work2_type01_3">
+                                <label for="work2_type01_3">파트타임ㆍ아르바이트</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type01" id="work2_type01_4">
+                                <label for="work2_type01_4">전체</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <span class="item-name">근무기간</span>
+                          <ul class="cont-check-list">
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_1">
+                                <label for="work2_type02_1">1개월 미만</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_2">
+                                <label for="work2_type02_2">1개월~3개월</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_3">
+                                <label for="work2_type02_3">3개월~6개월</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_4">
+                                <label for="work2_type02_4">6개월~1년</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_5">
+                                <label for="work2_type02_5">1년 이상</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type02" id="work2_type02_6">
+                                <label for="work2_type02_6">전체</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <span class="item-name">근무일수</span>
+                          <ul class="cont-check-list">
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type03" id="work2_type03_1">
+                                <label for="work2_type03_1">주6일</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type03" id="work2_type03_2">
+                                <label for="work2_type03_2">주4일</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type03" id="work2_type03_3">
+                                <label for="work2_type03_3">주3일</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type03" id="work2_type03_4">
+                                <label for="work2_type03_4">주2일</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type03" id="work2_type03_5">
+                                <label for="work2_type03_5">주1일</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <span class="item-name">근무요일</span>
+                          <ul class="cont-check-list">
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type04" id="work2_type04_1">
+                                <label for="work2_type04_1">월~일</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type04" id="work2_type04_2">
+                                <label for="work2_type04_2">월~토</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type04" id="work2_type04_3">
+                                <label for="work2_type04_3">월~금</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="work2_type04" id="work2_type04_4">
+                                <label for="work2_type04_4">주말 (토,일)</label>
+                              </div>
+                            </li>
+
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 선택한 검색옵션 표기 -->
+          <div class="htSearch-result-wrap">
+            <!-- 선택한 검색옵션이 없는 경우 - display:block 처리 -->
+            <p class="no-search" style="display:none;">검색 조건을 설정해 주세요.</p>
+
+            <ul class="result-list-depth-1">
+              <li class="cate-group">서울특별시<button type="button" class="deleteKywrd">행 전체 삭제</button></li>
+              <li>강북구<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>금천구<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>강남구<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+            <ul class="result-list-depth-1">
+              <li class="cate-group">인천광역시<button type="button" class="deleteKywrd">행 전체 삭제</button></li>
+              <li>전체<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+            <ul class="result-list-depth-1">
+              <li class="cate-group">보습/속셈<button type="button" class="deleteKywrd">행 전체 삭제</button></li>
+              <li>국어<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>영어<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>논술/독서<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+            <ul class="result-list-depth-1">
+              <li class="cate-group">입시/고시<button type="button" class="deleteKywrd">행 전체 삭제</button></li>
+              <li>전체<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+            <ul class="result-list-1">
+              <li>대학교(4년)<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>대학원 석사<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>신입<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>경력 1년~3년<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+            <ul class="result-list-1">
+              <li>초등<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>중등<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>일급<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>시급<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>즉시 출근 가능<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>파워포인트<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>한글/워드<button type="button" class="deleteKywrd">삭제</button></li>
+              <li>엑셀<button type="button" class="deleteKywrd">삭제</button></li>
+            </ul>
+
+            <div class="htSearch-countbox">
+              <button type="button" class="h-button-l btn-result"><span class="point">32,309건</span> 공고 검색</button>
+              <button type="button" class="btn-sm-reset">선택 초기화</button>
+            </div>
+            
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- 지역 스페셜 TOP -->
+        <div class="flex flex-between flex-end menu-stit">
+          <strong class="text-h1">LOGO 스페셜 TOP</strong>
+          <a href="#" class="qmenu-arrow">상품안내</a>
+        </div>
+
+        <div class="card-logo-wrap">
+          <ul class="nowrap-type">
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy01.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy02.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy03.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy04.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/img_nologo.png" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/img_nologo.png" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- LOGO TOP -->
+        <div class="flex flex-between flex-end menu-stit">
+          <strong class="text-h1">LOGO TOP</strong>
+          <a href="#" class="qmenu-arrow">상품안내</a>
+        </div>
+
+        <div class="card-logo-wrap">
+          <ul class="nowrap-type">
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy01.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy02.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy03.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/logo_dummy04.jpg" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/img_nologo.png" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+            <li>
+              <span class="btn-star">
+                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+              </span>
+              <div class="imgbox">
+                <img src="../../images/img_nologo.png" alt="">
+              </div>
+              <div class="cardbox">
+                <p class="name">파란수학학원</p>
+                <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                <div class="txtbox">
+                  <span class="areatxt">경기 고양시</span>
+                  <span class="deadline">채용시</span>
+                </div>
+                <p class="paytxt"><span>급여 : </span>면접 후 결정</p>
+              </div>
+              <button type="button" class="btn-circle-plus">+</button>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="flex flex-between mb20">
+          <a href="javascript:void(0);" class="h-button-ml">선택공고 한번에 지원하기</a>
+          <div>
+            <select name="" id="" style="width:180px; margin-right:5px;">
+              <option value="" disabled="" selected="">수정일 순</option>
+              <option value="">등록일 순</option>
+              <option value="">수정일 순</option>
+              <option value="">마감일 순</option>
+            </select>
+            <select name="" id="" style="width:180px; margin:0;">
+              <option value="" disabled="" selected="">40개씩 보기</option>
+              <option value="">20개씩 보기</option>
+              <option value="">40개씩 보기</option>
+              <option value="">60개씩 보기</option>
+              <option value="">80개씩 보기</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 테이블 -->
+        <table class="h-tbl-basic-1 check-use tbl-recruit">
+          <thead>
+            <tr>
+              <th>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_all">
+                  <label for="tbl_check_all"></label>
+                </div>
+              </th>
+              <th style="width:150px;">근무지</th>
+              <th>학원명 / 공고제목 / 모집부문 / 급여</th>
+              <th style="width:100px;">지원자격</th>
+              <th style="width:110px;">마감일 / 등록일</th>
+              <th style="width:110px;">접수방법</th>
+            </tr>
+          </thead>
+          <tbody class="text-subtitle4">
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_01">
+                  <label for="tbl_check_01"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 강남구</p>
+                  <p>경기도 오산시 외1</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">서울아카데미 수학학원</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like1">
+                      <label for="tbl-btn-like1" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">강동구 서울아카데미에서 수학 선생님을 모십니다.</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                        <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력3년↑</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_02">
+                  <label for="tbl_check_02"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">알과영과학학원</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like2">
+                      <label for="tbl-btn-like2" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap2">
+                        <label for="tbl-btn-scrap2" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_03">
+                  <label for="tbl_check_03"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like3">
+                      <label for="tbl-btn-like3" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap3">
+                        <label for="tbl-btn-scrap3" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_04">
+                  <label for="tbl_check_04"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like4">
+                      <label for="tbl-btn-like4" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap4">
+                        <label for="tbl-btn-scrap4" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_05">
+                  <label for="tbl_check_05"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like5">
+                      <label for="tbl-btn-like5" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap5">
+                        <label for="tbl-btn-scrap5" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_06">
+                  <label for="tbl_check_06"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like6">
+                      <label for="tbl-btn-like6" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap6">
+                        <label for="tbl-btn-scrap6" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="h-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_06">
+                  <label for="tbl_check_06"></label>
+                </div>
+              </td>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
+
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+
+                    <!-- 학원명, 좋아요 -->
+                    <div class="academy-wrap">
+                      <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                      <!-- 버튼 좋아요 -->
+                      <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like6">
+                      <label for="tbl-btn-like6" onclick=""></label>
+                    </div>
+
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">옵션이 적용 되지 않은 공고 모습입니다. 제목이 길다 길어 엄청 길다. 길면 기차 기차는 빨라 빠르면 비행기 비행기는 높아 여행가고 싶다.</span>
+
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap6">
+                        <label for="tbl-btn-scrap6" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="tbl-btn-wrap">
+                    <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                    <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- pagination -->
+        <div class="h-pagination wh40 flex-set mb50" aria-disabled="false" role="navigation">
+          <div class="h-pagination-content flex no-wrap items-center">
+
+            <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+              <span class="h-btn-content items-center flex">
+                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+              </span>
+            </button>
+            <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+              <span class="h-btn-content items-center flex">
+                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+              </span>
+            </button>
+
+            <div class="h-pagination-middle flex justify-center">
+              <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">1</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">2</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">3</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">4</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">5</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">6</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="7" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">7</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="8" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">8</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="9" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">9</span>
+                </span>
+              </button>
+              <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="10" aria-current="false">
+                <span class="h-btn-content items-center flex">
+                  <span class="block">10</span>
+                </span>
+              </button>
+            </div>
+
+            <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+              <span class="h-btn-content items-center flex">
+                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+              </span>
+            </button>
+            <button class="h-btn non-selectable h-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+              <span class="h-btn-content items-center flex">
+                <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!-- // -->
+
+
+      <!-- footer -->
+      <footer>
+        <div class="f-menu-wrap">
+          <div class="layout-inner">
+            <div class="footer-inner">
+              <ul class="f-menu-list flex">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">채용상품안내</a></li>
+                <li><a href="#">광고상품안내</a></li>
+                <li><a href="#">제휴문의</a></li>
+              </ul>
+              <div class="spacer"></div>
+              <div class="family-site">
+                <select name="" id="">
+                  <option value="" disabled="" selected="">Family service</option>
+                  <option value="">에듀베이션</option>
+                  <option value="">통통통</option>
+                  <option value="">앤써통</option>
+                  <option value="">훈장EDU</option>
+                  <option value="">에-딧</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-info flex">
+          <div class="layout-inner">
+            <div class="info-contents flex">
+              <div class="f-logo"><img src="../../images/footer_logo.png" alt="하단로고"></div>
+
+              <div class="callcenter">
+                <p class="tit">훈장마을 고객센터</p>
+                <p class="call">02-858-0492</p>
+                <p class="time">평일 09:00~18:00 (점심시간 12:30~13:30)</p>
+                <p class="contact mt5">
+                  <span class="mail">이메일 : hunjang@daekyo.co.kr</span>
+                  <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
+                </p>
+              </div>
+              <div class="spacer"></div>
+              <div class="addr-info">
+                <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
+                <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
+                  <span style="padding: 0 0 0 18px;">직업정보제공사업 신고번호 : 서울관악 2004-10</span>
+                </p>
+                <p><span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</span></p>
+                <p>ⓒ EDUVATION INC.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </footer>
+      <!-- // -->
+
+    </div>
+    <!-- // -->
+
+
+  </div>
+
+
+
+  <div class="lottie-bg" style="display: none;">
+    <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+        <defs>
+          <clipPath id="__lottie_element_35">
+            <rect width="32" height="22" x="0" y="0"></rect>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#__lottie_element_35)">
+          <g transform="matrix(1,0,0,1,8.75,8.653697967529297)" opacity="1" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.75,1.75)">
+              <path fill="rgb(91,86,147)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+          <g transform="matrix(1,0,0,1,15,8.271718978881836)" opacity="0.8" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
+              <path fill="rgb(233,82,131)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+          <g transform="matrix(1,0,0,1,21,10.43514347076416)" opacity="0.5" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
+              <path fill="rgb(243,154,0)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+
+  <div id="dim" style="display: none;"></div>
+
+  <script>
+    // header 전체메뉴
+    $(document).ready(function() {
+
+      // 전체메뉴 창 뒤 어두운 배경
+      var $dim = document.getElementById('dim');
+      // header 전체메뉴 클릭시
+      $('.btn-all-menu').click(function() {
+        // 전체메뉴 버튼 close버튼으로 변경
+        $(this).toggleClass("on");
+        $('.panel-all-menu').toggleClass("on");
+
+        // 전체메뉴 창 뒤 어두운 배경 추가
+        if ($dim.style.display == "none") {
+          $dim.style.display = "block";
+        } else {
+          $dim.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // Swiper
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 10,
+      loop: false,
+
+      // Swiper - Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesOffsetBefore: 20
+    });
+
+    // Tab
+    $(document).ready(function() {
+
+      $('ul.tabs-wrap li').click(function() {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs-wrap li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+      })
+    })
+  </script>
+
+</body>
+
+</html>

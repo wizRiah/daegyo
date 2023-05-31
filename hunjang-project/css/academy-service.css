@@ -557,6 +557,13 @@
     .htSearch-tab>input[type="radio"].tab-academic + label::before {width:24px; background-image:url('../images/icon_academic.png');}
     .htSearch-tab>input[type="radio"].tab-career + label::before {width:22px; background-image:url('../images/icon_career.png');}
     .htSearch-tab>input[type="radio"].tab-time + label::before {width:25px; background-image:url('../images/icon_time.png');}
+    .htSearch-tab>input[type="radio"].tab-call + label::before {width:25px; background-image:url('../images/icon_call.png');}
+    .htSearch-tab>input[type="radio"].tab-computer + label::before {width:25px; background-image:url('../images/icon_computer.png');}
+    .htSearch-tab>input[type="radio"].tab-money + label::before {width:27px; background-image:url('../images/icon_money.png');}
+    
+
+
+
     /* Tab - checked */
     .htSearch-tab>input[type="radio"]:checked + label {background-color:var(--teal); border-color:var(--teal);}
     .htSearch-tab>input[type="radio"]:checked + label::before,
@@ -626,7 +633,7 @@
 
 
 /* Tab - result 선택한 검색옵션 표기 */
-.htSearch-result-wrap {padding:25px 30px; font-size:var(--text-subtitle4); color:var(--black-5); line-height:16px; background-color:var(--neutral-2); border:1px solid var(--border-basic-2); border-radius:0 0 4px 4px; box-sizing:border-box;}
+.htSearch-result-wrap {position:relative; padding:25px 30px; font-size:var(--text-subtitle4); color:var(--black-5); line-height:16px; background-color:var(--neutral-2); border:1px solid var(--border-basic-2); border-radius:0 0 4px 4px; box-sizing:border-box;}
     /* Depth 없는 경우 */
     .result-list-1 {display:flex; flex-flow:row wrap;}
     .result-list-1 li {display:inline-flex; align-items:center; height:34px; padding-left:15px; padding-right:15px; font-size:var(--text-subtitle4); color:var(--black-2); background:#fff; border:1px solid var(--border-basic-2); border-radius:90px; box-sizing:border-box;}
@@ -640,6 +647,13 @@
     .htSearch-result-wrap [class^="result-list-"] + [class^="result-list-"] {margin-top:14px;}
     /* button - 삭제 */
     .htSearch-result-wrap .deleteKywrd {width:15px; height:15px; text-indent:-9999px; margin-left:5px; background:transparent url(../images/icon_cancel.svg) center no-repeat; background-size:15px 15px;}
+    /* 검색 결과 개수 */
+    .htSearch-countbox {position:absolute; right:25px; top:25px; display: flex; flex-direction: column; align-items: flex-end;}
+    .htSearch-countbox .btn-result {min-width:180px!important; padding:0 30px; margin:0; font-size:var(--text-subtitle2); color:#fff; font-weight:var(--text-regular);}
+    .htSearch-countbox .btn-result .point {margin-left:0!important; margin-right:5px; font-weight:var(--text-medium); color:#D6FF00;}
+    .htSearch-countbox .btn-sm-reset {margin-top:12px; font-size:var(--text-subtitle6); color:var(--black-3);}
+    .htSearch-countbox .btn-sm-reset:before {content:''; display:inline-block; margin-right:6px; background:url('../images/icon_reset.png') no-repeat; width: 18px; height:14px; vertical-align: -2px;}
+    
 
 
 /* 스페셜 강사 */
