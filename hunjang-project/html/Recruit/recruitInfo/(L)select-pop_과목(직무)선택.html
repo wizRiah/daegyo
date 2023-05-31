@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Toggle - input -->
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
@@ -35,21 +38,42 @@
           <div class="h-popup-wrap">
             <div class="h-popup popup-01 ui-draggable" style="width: 940px; height: fit-content;">
               <div class="pop-header ui-draggable-handle">
-                <span class="pop-title text-h4">과목선택</span>
-                <span class="pop-sub-title">최대5개까지 우대전공을 선택할 수 있습니다.</span>
+                <span class="pop-title text-h4">과목(직무) 선택</span>
+                <span class="pop-sub-title">최대5개까지 과목(직무)을 선택할 수 있습니다.</span>
               </div>
       
               <div class="pop-body">
-                <div class="pop-container" style="overflow: hidden!important;">
+                <div class="pop-container" style="overflow:hidden !important;">
       
                   <!-- search input -->
                   <div class="srch-input-wrap width-550">
                     <input type="text" id="txtNm" class="h-txtfield" placeholder="찾으시는 과목(직무)을 입력하세요" />
-                    <div class="search-word-wrap"></div>
-                    <button type="button" class="h-btn-x">내용지우기</button>
+                    <button type="button" class="h-btn-x" title=""></button>
+                    <div class="search-word-wrap">
+                      <div class="scroll-y">
+
+                        <ul class="search-word-list">
+                          <li class="h-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="word1-srch01" checked="">
+                            <label for="word1-srch01">
+                              <span class="cate">보습/속셈</span>
+                              <span class="srch-word">국어</span>
+                            </label>
+                          </li>
+                          <li class="h-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="word1-srch02" checked="">
+                            <label for="word1-srch02">
+                              <span class="cate">입시/고시</span>
+                              <span class="srch-word">국어</span>
+                            </label>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="srch-detail mt10">
+                  <div class="srch-detail srch-select-wrap mt10">
 
                     <div class="wd100 line-box">
                       <div class="commonSrchBox_dpt">
@@ -379,9 +403,14 @@
                     </div>      
 
                   </div>
+
+                  <button type="button" class="h-button-icon-refresh h-btn-reset">
+                    <i class="material-symbols-outlined" aria-hidden="true">cached</i>
+                    <span class="text-subtitle6 h-txt-3">초기화</span>
+                  </button>
       
-                  <!-- 등록 취소 버튼 -->
-                  <div class="flex flex-set mt20">
+                  <!-- 버튼 영역 -->
+                  <div class="flex flex-set mt20 btn-wrap">
                     <a href="#" class="h-button-s">확인</a>
                     <a href="#" class="h-button-s h-button-grey1">취소</a>
                   </div>
@@ -409,6 +438,19 @@
 
   </div>
   <div class="lottie-bg"></div>
+
+  <!-- Toggle - input -->
+  <script>
+    $(document).ready(function() {
+      $(".srch-input-wrap .h-txtfield").click(function() {
+        $(this).parent().siblings().removeClass('active')
+        $(this).parent().toggleClass('active');
+      });
+      $(".srch-input-wrap .h-btn-x").click(function() {
+        $(this).parent().removeClass('active');
+      });
+  })
+  </script>
 </body>
 
 </html>

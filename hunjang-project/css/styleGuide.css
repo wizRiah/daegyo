@@ -183,7 +183,9 @@ select + [class^="h-button"] { margin-left:10px; }
 .width-120 {width:120px !important; min-width:auto;}
 .width-160 {width:160px !important;}
 .width-350 {width:350px !important;}
+.width-550 {width:550px !important;}
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
+.height-200 {height:200px !important;}
 
 
 
@@ -289,6 +291,11 @@ button
 [class^="h-button-circle"].edit::after { content:'edit'; font-size:12px; }
 [class^="h-button-circle"].remove::after { content:'close'; font-size:16px; }
 
+.h-button-circle-30 {position:relative; min-width:auto !important; width:30px; height:30px; line-height:normal; padding:0; margin:0; border-radius:50%;}
+[class^="h-button-circle"].text-none {text-indent:-9999px; overflow:hidden;}
+[class^="h-button-circle"].popup::after {content:''; background:url('../images/icon_search_s.png') center no-repeat;}
+[class^="h-button-circle"].newtab::after {content:''; background:url('../images/icon_newtab_s.png') center no-repeat;}
+.h-tbl-basic-1 .tbl-btn-wrap [class^="h-button-circle"]:is(.popup, .newtab) {margin-top:2px; margin-bottom:2px; background-color:var(--neutral-3);}
 
 
 @keyframes hbtnFX01 {
@@ -641,10 +648,24 @@ button
 .h-th-tit strong + p { margin-top:10px; }
 
 .h-job-info { min-width:420px; box-sizing:border-box; }
-.h-job-info .academy-wrap { display:flex; box-sizing:border-box; }
+.h-job-info .academy-wrap { display:flex; align-items:center; box-sizing:border-box; }
 .h-job-info .academy-wrap .academy { display:flex; align-items:center; flex:1; width:1px; }
 .h-job-info .academy-wrap .academy .txt-ellipsis { display:inline-block; width:auto; max-width:calc(100% - 33px); }
 .h-job-info .academy-wrap + p + p { margin-top:5px; }
+.h-job-info .recruit-cate {display:flex;}
+.h-job-info .recruit-cate .cate-wrap + .cate-wrap {margin-left:15px;}
+.h-job-info .recruit-cate .cate-wrap .cate-name {color:var(--black-3);}
+.h-job-info .recruit-cate .cate-wrap .cate-name::after {display:inline-block; content:':'; margin-left:3px;}
+.h-job-info .recruit-cate .cate-wrap .cate-item {color:var(--black-2);}
+.h-job-info .recruit-cate .cate-wrap .cate-item:not(:last-child)::after {display:inline-block; content:',';}
+.h-job-info .option-academy {color:#334EFF; font-weight:var(--text-medium);}
+.h-job-info .option-title-1 {color:#334EFF;}
+.h-job-info .option-title-2 {background-color:#FFF700;}
+.h-job-info .option-title-3 {color:#fff; background-color:#26B2C8;}
+/* 근무지 나열 되는 경우 */
+.h-tbl-basic-1 .work-place {font-size:var(--text-subtitle5); color:var(--black-2); line-height:22px;}
+.h-tbl-basic-1 .work-place p:not(:last-child)::after {display:inline-block; content:',';}
+
 
 /***** 목록 유형 1 - dl dt dd *****/
 .h-list-1 { display:flex; flex-flow:row wrap; text-align:left; box-sizing:border-box; }
@@ -699,6 +720,12 @@ button
     .h-tbl-resume .btn-wrap [class^="h-button"] {width:100%; padding:0; margin-left:0; margin-right:0;}
     .h-tbl-resume .btn-wrap [class^="h-button"] + [class^="h-button"] {margin-top:5px;}
     .h-tbl-resume .btn-wrap .date {margin-top:20px; font-size:var(--text-subtitle5); color:var(--black-3); text-align:center;}
+    /* 채용정보 */
+    .tbl-recruit thead tr th,
+    .tbl-recruit tbody tr td {padding-left:5px; padding-right:5px;}
+    .tbl-recruit.check-use tr :is(th:first-child, td:first-child) {padding-left:10px;}
+    .tbl-recruit .h-job-info {width:560px;}
+    .tbl-recruit .h-job-info .academy-wrap .h-txtbox-2 + span {margin-left:7px;}
 
 /***** tbl-list - 학력, 경력, 근무형태, 희망근무지 등 *****/
 .h-resume-info-list {display:flex; flex-flow:row wrap; font-size:var(--text-subtitle5);}
@@ -761,9 +788,11 @@ button
 
 /* 스크롤 공통 디자인 */
 .hunjang-wrap *::-webkit-scrollbar,
-.h-popup-wrap *::-webkit-scrollbar { width: 8px; }
+.h-popup-wrap *::-webkit-scrollbar,
+.container *::-webkit-scrollbar { width: 8px; }
 .hunjang-wrap *::-webkit-scrollbar-thumb,
-.h-popup-wrap *::-webkit-scrollbar-thumb { background-color: #E1E1E1; height:150px; }
+.h-popup-wrap *::-webkit-scrollbar-thumb,
+.container *::-webkit-scrollbar-thumb { background-color: #E1E1E1; height:150px; }
 
 /* 표 내에 건수 */
 .h-button-underline.h-ud-em { padding: 0; line-height: 21px; height: 21px; vertical-align: top; font-weight: var(--text-bold); font-size: var(--text-h4); margin: 0; }
@@ -933,6 +962,9 @@ TAB
 
  /* txtbox (배경색은 버튼 컬러 클래스 추가) */
 .h-txtbox-1 {display:inline-flex; justify-content:center; align-items:center; height:22px; padding-left:10px; padding-right:10px; font-size:var(--text-subtitle6); font-weight:var(--text-medium); color:#fff; border-radius:13px; box-sizing:border-box;}
+.h-txtbox-2 {display:inline-flex; justify-content:center; align-items:center; height:19px; padding-left:8px; padding-right:8px; font-size:11px; font-weight:var(--text-medium); color:#fff; line-height:normal; border-radius:30px; box-sizing:border-box;}
+.h-txtbox-2.option-hurry {background-color:#E4AB22;}
+.h-txtbox-2.option-hot {background-color:#FF5656;}
 
 /* txt-box (ex. 상태, 시강) */
 .status-txtbox {display:inline-flex; margin-top:15px;}
