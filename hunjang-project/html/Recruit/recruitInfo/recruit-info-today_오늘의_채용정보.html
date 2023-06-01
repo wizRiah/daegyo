@@ -322,50 +322,47 @@
             <div class="left">
               <div class="gnb-wrap">
                 <div class="all-menu">
-                  <!-- 전체보기 버튼 -->
-                  <button type="button" class="btn-all-menu" href="javascript:void(0);">전체보기</button>
+                  <!-- 전체보기 버튼 클릭시 클래스 on 추가-->
+                  <button type="button" class="btn-all-menu" href="javascript:void(0);">
+                    <div class="btn-image"></div>
+                  </button>
 
-                  <!-- 클래스 on 추가시 전체메뉴 보임 -->
-                  <div class="panel-all-menu">
+                  <div class="panel-all-menu h-all-menu">
                     <div class="layout-inner">
                       <div class="lnb-expand-wrap flex">
                         <div class="lnb-expand-inwrap lnb-all flex">
                           <div class="item job">
                             <a href="#" class="dep1">채용정보</a>
                             <ul class="dep2">
-                              <li><a href="#">상세검색</a></li>
+                              <li><a href="#">오늘의 채용정보</a></li>
                               <li><a href="#">지역별</a></li>
-                              <li><a href="#">과목/직무별</a></li>
-                              <li><a href="#">경력별</a></li>
-                              <li><a href="#">학력별</a></li>
+                              <li><a href="#">과목별</a></li>
+                              <li><a href="#">직무별</a></li>
                               <li><a href="#">근무형태별</a></li>
+                              <li><a href="#">학력별</a></li>
+                              <li><a href="#">경력별</a></li>
+                              <li><a href="#">급여별</a></li>
                             </ul>
                           </div>
                           <div class="item top100"><a href="#" class="dep1">TOP 100</a>
                             <ul class="dep2">
-                              <li><a href="#">과목/직무별</a></li>
-                              <li><a href="#">지역별</a></li>
+                              <li><a href="#">오늘의 TOP 100</a></li>
+
                             </ul>
                           </div>
-                          <div class="item pool"><a href="#" class="dep1">인재정보</a>
+                          <div class="item pool"><a href="#" class="dep1">브랜드 채용관</a>
                             <ul class="dep2">
-                              <li><a href="#">오늘 등록된 인재</a></li>
-                              <li><a href="#">전체 인재</a></li>
-                              <li><a href="#">지역별</a></li>
-                              <li><a href="#">근무형태</a></li>
-                              <li><a href="#">강의대상</a></li>
-                              <li><a href="#">예체능/IT</a></li>
-                              <li><a href="#">공인시험</a></li>
                             </ul>
                           </div>
-                          <div class="item haktalk"><a href="#" class="dep1">학원톡톡</a>
+                          <div class="item haktalk" style="flex: 0 0 250px;"><a href="#" class="dep1">학원톡톡</a>
                             <ul class="dep2">
                               <li><a href="#">티츄 웹툰</a></li>
-                              <li><a href="#">학원탐방</a></li>
-                              <li><a href="#">학원생활</a></li>
+                              <li><a href="#">전자근로계약</a></li>
+                              <li><a href="#">스마트취업 TOOL</a></li>
+                              <li><a href="#">학원노무 / 세무 FAQ</a></li>
+                              <li><a href="#">우리동네 학원검색</a></li>
                               <li><a href="#">Poll</a></li>
-                              <li><a href="#">사진 리터칭</a></li>
-                              <li><a href="#">학원 서식</a></li>
+                              <li><a href="#">학원생활 꿀팁</a></li>
                             </ul>
                           </div>
                         </div>
@@ -373,40 +370,161 @@
                           <div class="item product"><a href="#">유료 상품 안내</a></div>
                           <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
                           <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
-                          <div class="item partner"><a href="#">학원 파트너</a></div>
+                          <div class="item search"><a href="#">채용정보 상세검색</a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- 메인메뉴 -->
                 <ul class="gnb-list">
                   <li class="list on">
-                    <a href="#">
+                    <a href="#" class="gnb-button">
                       채용정보
                     </a>
+                    <div class="panel-all-menu panel-lnb-wrap">
+                      <div class="layout-inner">
+                        <div class="lnb-expand-wrap flex">
+                          <div class="lnb-expand-inwrap lnb-all flex">
+                            <div class="cell flex">
+                              <div class="item">
+                                <p class="dep1 lnb-tit">채용정보</p>
+                                <div class="ch-img"></div>
+                              </div>
+                            </div>
+                            <div class="cell">
+                              <div class="item" style="padding: 28px 30px 20px;">
+                                <a href="#" class="dep1">오늘의 채용정보</a>
+                              </div>
+                              <div class="item"><a href="#" class="dep1">지역별</a>
+                                <ul class="dep2 flex flex-wrap third">
+                                  <li><a href="#">서울</a></li>
+                                  <li><a href="#">경기</a></li>
+                                  <li><a href="#">인천</a></li>
+                                  <li><a href="#">경남</a></li>
+                                  <li><a href="#">전남</a></li>
+                                  <li><a href="#">충남</a></li>
+                                  <li><a href="#">전북</a></li>
+                                  <li><a href="#">충북</a></li>
+                                  <li><a href="#">강원</a></li>
+                                  <li><a href="#">부산</a></li>
+                                  <li><a href="#">대구</a></li>
+                                  <li><a href="#">대전</a></li>
+                                  <li><a href="#">광주</a></li>
+                                  <li><a href="#">울산</a></li>
+                                  <li><a href="#">경북</a></li>
+                                  <li><a href="#">제주</a></li>
+                                  <li><a href="#">세종</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="cell" style="flex: 0 0 241px;">
+                              <div class="item"><a href="#" class="dep1">과목/직무별</a>
+                                <ul class="dep2 flex-wrap second flex">
+                                  <li><a href="#">보습/속셈</a></li>
+                                  <li><a href="#">입시/고시</a></li>
+                                  <li><a href="#">외국어</a></li>
+                                  <li><a href="#">외국어 공인시험</a></li>
+                                  <li><a href="#">예체능</a></li>
+                                  <li><a href="#">전문/자격증</a></li>
+                                  <li><a href="#">IT</a></li>
+                                  <li><a href="#">교사</a></li>
+                                  <li><a href="#">교육분야</a></li>
+                                  <li><a href="#">관리/사무/행정</a></li>
+                                  <li><a href="#">기타</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="cell" style="flex: 0 0 153px;">
+                              <div class="item"><a href="#" class="dep1">학력별</a>
+                                <ul class="dep2">
+                                  <li><a href="#">대학교 (4년)</a></li>
+                                  <li><a href="#">대학원 (석사)</a></li>
+                                  <li><a href="#">대학원 (박사)</a></li>
+                                  <li><a href="#">대학 (2, 3년)</a></li>
+                                  <li><a href="#">고등학교</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="cell" style="flex: 0 0 164px;">
+                              <div class="item"><a href="#" class="dep1">근무형태별</a>
+                                <ul class="dep2">
+                                  <li><a href="#">전임강사</a></li>
+                                  <li><a href="#">단기강사</a></li>
+                                  <li><a href="#">파트타임ㆍ알바</a></li>
+                                </ul>
+                              </div>
+                              <div class="item"><a href="#" class="dep1">경력별</a>
+                                <ul class="dep2">
+                                  <li><a href="#">신입</a></li>
+                                  <li><a href="#">경력</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="main-links">
+                            <div class="item product"><a href="#">유료 상품 안내</a></div>
+                            <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
+                            <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
+                            <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li class="list">
-                    <a href="#">
+                    <a href="#" class="gnb-button">
                       TOP100
                     </a>
                   </li>
                   <li class="list">
-                    <a href="#">
+                    <a href="#" class="gnb-button">
                       브랜드 채용관
                     </a>
                   </li>
-                  <li class="list">
-                    <a href="#">
+                  <li class="list talktalk on">
+                    <a href="#" class="gnb-button">
                       학원톡톡
                     </a>
+                    <div class="panel-all-menu panel-lnb-wrap">
+                      <div class="layout-inner">
+                        <div class="lnb-expand-wrap flex">
+                          <div class="lnb-expand-inwrap lnb-all flex">
+                            <div class="cell flex">
+                              <div class="item">
+                                <p class="dep1 lnb-tit">학원톡톡</p>
+                                <div class="ch-img"></div>
+                              </div>
+                            </div>
+                            <div class="cell">
+                              <div class="item">
+                                <ul class="dep2" style="margin-top: 0;">
+                                  <li><a href="#">티츄 웹툰</a></li>
+                                  <li><a href="#">전자근로계약</a></li>
+                                  <li><a href="#">스마트취업 TOOL</a></li>
+                                  <li><a href="#">학원노무 / 세무 FAQ</a></li>
+                                  <li><a href="#">우리동네 학원검색</a></li>
+                                  <li><a href="#">Poll</a></li>
+                                  <li><a href="#">학원생활 꿀팁</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="main-links">
+                            <div class="item product"><a href="#">유료 상품 안내</a></div>
+                            <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
+                            <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
+                            <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li class="list">
-                    <a href="#" style="color: var(--teal);">이력서 등록              </a>
+                    <a href="#" class="gnb-button" style="color: var(--teal);">이력서 등록</a>
                   </li>
                   <li class="list">
-                    <a href="#" style="color: #26B2C8;">
-                      공고등록
-                    </a>
+                    <a href="#" class="gnb-button" style="color: #26B2C8;">채용공고 등록</a>
                   </li>
                 </ul>
               </div>
@@ -414,12 +532,12 @@
             <div class="spacer"></div>
 
             <!-- 슬라이드 배너 -->
-            <div class="right">
+            <div class="right slide">
               <div class="link-more">
-                <a href="#" style="display: block;width: 261px;">
+                <a href="#">
                   <img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
                 </a>
-                <a href="#" style="display: block;width: 261px;">
+                <a href="#">
                   <img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
                 </a>
               </div>
@@ -596,7 +714,7 @@
 
 
             <!-- 지원할 수 있는 채용정보 -->
-            <div class="flex h-linebox-wrap mt30">
+            <div class="flex h-linebox-wrap height-200 mt30">
                 <div class="left-wrap">
                     <p class="text">지원할 수 있는 채용정보</p>
                     <div class="img-box">
@@ -617,36 +735,38 @@
                         </div>
                     </div>
                     <div class="recruit-wrap">
-                        <ul class="recruit-list">
-                            <li>
-                                <span class="cate">울릉도 동남쪽 뱃길따라 이백리</span>
-                                <span class="title">지원해보세요 어서 지금 당장 이곳으로 지원 하자하자 훈장 마을 캐릭터는 물개인가 물범인가 누가 저 동물을 골랐는가 훈장과 무슨 관련인가</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">초/중/고 수학/과학, 수경/과경, 유투엠 + 올림피아드학원 채용!</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">갈무리에서 가능한 건 수업만이 아니야! 최고의 강사가 되는 법을 알려줍니다.</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">초/중/고 수학/과학, 수경/과경, 유투엠 + 올림피아드학원 채용!</span>
-                            </li>
-                            <li>
-                                <span class="cate">경기 오산시</span>
-                                <span class="title">갈무리에서 가능한 건 수업만이 아니야! 최고의 강사가 되는 법을 알려줍니다.</span>
-                            </li>
-                        </ul>
+                        <div class="scroll-y">
+                            <ul class="recruit-list">
+                                <li>
+                                    <span class="cate">울릉도 동남쪽 뱃길따라 이백리</span>
+                                    <span class="title">지원해보세요 어서 지금 당장 이곳으로 지원 하자하자 훈장 마을 캐릭터는 물개인가 물범인가 누가 저 동물을 골랐는가 훈장과 무슨 관련인가</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">초/중/고 수학/과학, 수경/과경, 유투엠 + 올림피아드학원 채용!</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">갈무리에서 가능한 건 수업만이 아니야! 최고의 강사가 되는 법을 알려줍니다.</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">초/중/고 수학/과학, 수경/과경, 유투엠 + 올림피아드학원 채용!</span>
+                                </li>
+                                <li>
+                                    <span class="cate">경기 오산시</span>
+                                    <span class="title">갈무리에서 가능한 건 수업만이 아니야! 최고의 강사가 되는 법을 알려줍니다.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -668,7 +788,7 @@
 
 
             <!-- list area -->
-            <table class="h-tbl-basic-1 check-use">
+            <table class="h-tbl-basic-1 check-use tbl-recruit">
                 <thead>
                   <tr>
                     <th>
