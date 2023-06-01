@@ -1,4 +1,4 @@
-@charset "utf-8"; /* 메인레이아웃 */
+@charset "utf-8"; /* 훈장마을 메인 레이아웃 */
 /* 공통 */
 .hunjang-main-wrap .layout-inner { width: 1164px; margin: 0 auto; } 
 .hunjang-main-wrap .spacer { flex-grow: 1 !important; } 
@@ -19,7 +19,7 @@
 .hunjang-main-wrap header .header-menu { z-index: 1; margin-bottom:4px; position: relative; width: 100%; border-bottom: 1px solid #E0E6EF; box-shadow: 0px 4px 0px 0px rgb(0, 0, 0, 0.04); } 
 .hunjang-main-wrap header .header-menu-inner { display: flex; align-items: center; } 
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap { display: flex; align-items: center; } 
-.hunjang-main-wrap header .header-menu:after { content: ''; position: absolute; width: 100%; background-color: rgb(0, 0, 0, 0.04); bottom: -5px; height: 4px; } 
+.hunjang-main-wrap header .header-menu:after { content: ''; position: absolute; width: 100%; background-color: rgb(0, 0, 0, 0.04); bottom: -4px; height: 4px; } 
 
 /* 검색바 */
 .hunjang-main-wrap header .header-top .header-top-inner .search { position: absolute; left: 50%; width: 578px; margin: 0 0 0 -390px; } 
@@ -148,8 +148,11 @@
 .hunjang-main-wrap footer .info-contents .callcenter .contact { margin-top: 5px; } 
 .hunjang-main-wrap footer .info-contents .addr-info { font-size: 12px; color: var(--black-3); line-height: 22px; } 
 
-
 /* // */
+
+
+
+
 
 
 
@@ -162,10 +165,11 @@
 .hunjang-main-wrap .login-contents { width: 100%; display: flex; height: 117px; } 
 .hunjang-main-wrap .login-contents li { flex: 50%; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; } 
 .hunjang-main-wrap .login-contents li:last-child { border-width: 0 0 1px 0; } 
-.hunjang-main-wrap .login-contents li a { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; } 
+.hunjang-main-wrap .login-contents li a { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; } 
 .hunjang-main-wrap .login-contents li a .login-icon { width: 36px; height: 32px; text-align: center; margin: 0 auto; background: url(../images/main_visual_ico_01.png) no-repeat; background-position: center; background-size: contain; } 
 .hunjang-main-wrap .login-contents li a .login-icon.acad { width: 32px; height: 32px; background: url(../images/main_visual_ico_02.png) no-repeat; background-position: center; background-size: contain; } 
-.hunjang-main-wrap .login-contents li a p { font-size: 14px; font-weight: 500; } 
+.hunjang-main-wrap .login-contents li a p { font-size: 14px; line-height: 16px; } 
+
 .hunjang-main-wrap .join-info { width: 100%; display: flex; } 
 .hunjang-main-wrap .join-info li { flex: 33%; border-right: 1px solid #E0E6EF; box-sizing: border-box; } 
 .hunjang-main-wrap .join-info li:last-child { border-right: 0; } 
@@ -190,18 +194,75 @@
 .hunjang-main-wrap .logo-slide-wrap .logo-arrow.logo-arrow-prev:hover { background-image: url(../images/logo-slide-prev-on.png); } 
 
 
-/* 브랜드채용관 */
-.h-button-xs.h-button-grey1.h-button-radius {padding:0 20px;}
 
-[class^="brand-rcrutment-Wrap"] {display: flex;flex-wrap: wrap;justify-content: space-between;}
-[class^="brand-rcrutment-Wrap"] .brand-block {border: 1px solid #E0E6EF;border-radius:10px;background:#fff;box-shadow:0px 5px 10px #0000000D;overflow: hidden;text-align: center;display: flex;flex-direction: column;align-items: center;justify-content: center;transition: border-color 0.5s;}
-[class^="brand-rcrutment-Wrap"] .brand-block:hover {border-color:#26B2C8;}
-.brand-rcrutment-Wrap-4block .brand-block {width:273px; height:217px; margin-bottom:24px;}
-.brand-rcrutment-Wrap-5block .brand-block {width:216px; height:189px; margin-bottom:18px;}
-[class^="brand-rcrutment-Wrap"] .logoBox {width: 140px; height: 58px; line-height: 58px; vertical-align: middle;}
-[class^="brand-rcrutment-Wrap"] .logoBox img {display: inline-block;max-width: 100%;max-height: 100%;vertical-align: middle;}
-[class^="brand-rcrutment-Wrap"] .brandNmBox {font-size:18px;color:#333;font-weight:600;margin: 10px 0 15px;}
-[class^="brand-rcrutment-Wrap"] .brandnumberBox {font-size:15px;padding: 7px 20px;background:#FF6000;border-radius:30px;text-align:center;color:#fff;font-family: 'SUIT';}
-.brand-rcrutment-Wrap-5block .logoBox {width:100px; height:42px;}
-.brand-rcrutment-Wrap-5block .brandNmBox {font-size:16px;}
-.brand-rcrutment-Wrap-5block .brandnumberBox {color:#FF6000;background:#fff;font-size: 18px;font-weight: 600;padding: 0;}
+
+ /* pc메인 로그인 후 서비스 미 신청 */
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li { border: 0; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-width: 0 0 1px 0; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li a p { font-size: 13px; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon { margin: 7px auto 0; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox { margin: 0; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label { height: 116px; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; border-radius: 0; padding: 15px; flex-direction: column; width: 100%; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"] + label::before { top: 13px; left: 13px; opacity: 0.5; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label, 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label::before { opacity:1; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover p { color:#0E97FF; } 
+ .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover .h-checkbox input[type="checkbox"] + label::before { color:#0E97FF; opacity: 1; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt { font-size: 13px; line-height: 42px; text-align: center; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt.first.noactive { display:none; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt.second { display:none; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt.second.active { display: block; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt.third { display:none; } 
+ .hunjang-main-wrap .login-wrap.no-service .apply-txt.third.active { display: block; } 
+
+
+ /* 강사회원 로그인 */
+ .hunjang-main-wrap .login-wrap.login-after { padding: 25px; } 
+ .hunjang-main-wrap .login-wrap.login-after .login-name { font-size: 13px; line-height: 15px; margin-bottom: 6px; } 
+ .hunjang-main-wrap .login-wrap.login-after .modify-info { font-size: 13px; line-height: 20px; } 
+ .hunjang-main-wrap .login-wrap.login-after .button-group { margin: 8px 0; } 
+ .hunjang-main-wrap .login-wrap.login-after .button-group .ac { margin-left: 0; } 
+ .hunjang-main-wrap .login-wrap.login-after .button-group .rf { margin-right: 0; } 
+ .hunjang-main-wrap .login-wrap.login-after .add-info-link li { position:relative; padding: 0 15px; } 
+ .hunjang-main-wrap .login-wrap.login-after .add-info-link li:first-child { padding-left:0; } 
+ .hunjang-main-wrap .login-wrap.login-after .add-info-link li:after { content: ''; width: 1px; height: 13px; position: absolute; right: 0; top: 50%; margin-top: -6.5px; background: #E0E6EF; } 
+ .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child:after { content:none; } 
+
+
+
+ /* 학원회원 로그인 */
+ .hunjang-main-wrap .acad-login .modify-info .info-num { color: #0E97FF; text-decoration: underline; } 
+
+    /* 학원회원 로그인 - 상호가 2개 이상인 경우 */
+    .hunjang-main-wrap .acad-login .h-notice-wrap{margin-bottom: 2px;}
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label { font-size: 13px; padding-right: 20px; color: #7E7E7E; font-weight: var(--text-regular); line-height: 21px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label::after { right: -10px; background-size: contain; width: 20px; height: 20px; } 
+    .hunjang-main-wrap .acad-login .add-info-link li a { font-size: var(--text-subtitle5); } 
+    .hunjang-main-wrap .acad-login .dropdown ul li:hover { background: var(--neutral-3); transition: all 0.2s ease; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown { display:block; width: 210px; height: 160px; top: 28px;} 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown {  display:none; outline-width: 1px; border-radius: 6px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul { margin: 6px 0; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul li a { display: block; padding: 10px 20px; font-size: var(--text-subtitle4); color: var(--black-3); line-height: 16px; } 
+
+
+/* // */
+
+
+
+
+
+/* 브랜드채용관 */
+.h-button-xs.h-button-grey1.h-button-radius { padding:0 20px; } 
+
+[class^="brand-rcrutment-Wrap"] { display: flex; flex-wrap: wrap; justify-content: space-between; } 
+[class^="brand-rcrutment-Wrap"] .brand-block { border: 1px solid #E0E6EF; border-radius:10px; background:#fff; box-shadow:0px 5px 10px #0000000D; overflow: hidden; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: border-color 0.5s; } 
+[class^="brand-rcrutment-Wrap"] .brand-block:hover { border-color:#26B2C8; } 
+.brand-rcrutment-Wrap-4block .brand-block { width:273px; height:217px; margin-bottom:24px; } 
+.brand-rcrutment-Wrap-5block .brand-block { width:216px; height:189px; margin-bottom:18px; } 
+[class^="brand-rcrutment-Wrap"] .logoBox { width: 140px; height: 58px; line-height: 58px; vertical-align: middle; } 
+[class^="brand-rcrutment-Wrap"] .logoBox img { display: inline-block; max-width: 100%; max-height: 100%; vertical-align: middle; } 
+[class^="brand-rcrutment-Wrap"] .brandNmBox { font-size:18px; color:#333; font-weight:600; margin: 10px 0 15px; } 
+[class^="brand-rcrutment-Wrap"] .brandnumberBox { font-size:15px; padding: 7px 20px; background:#FF6000; border-radius:30px; text-align:center; color:#fff; font-family: 'SUIT'; } 
+.brand-rcrutment-Wrap-5block .logoBox { width:100px; height:42px; } 
+.brand-rcrutment-Wrap-5block .brandNmBox { font-size:16px; } 
+.brand-rcrutment-Wrap-5block .brandnumberBox { color:#FF6000; background:#fff; font-size: 18px; font-weight: 600; padding: 0; } 
