@@ -182,15 +182,23 @@ select + [class^="h-button"] { margin-left:10px; }
 
 /* width, height */
 .min-width-auto {min-width:auto !important;}
-.width-215 {width:215px !important;}
-.width-630 {width:630px !important;}
+.width-100 {width:100px !important;}
 .width-120 {width:120px !important; min-width:auto;}
 .width-160 {width:160px !important;}
+.width-200 {width:200px !important;}
+.width-215 {width:215px !important;}
+.width-300 {width:300px !important;}
 .width-350 {width:350px !important;}
+.width-445 {width:445px !important;}
 .width-550 {width:550px !important;}
+.width-630 {width:630px !important;}
+
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
 .height-200 {height:200px !important;}
 
+
+/* border-radius */
+.radius-2 {border-radius:2px !important;}
 
 
 /* googl material icons */
@@ -252,6 +260,7 @@ button
 .h-button-grey { background: var(--border-basic-1); }
 .h-button-grey1 { background: var(--grey-1); }
 .h-button-grey2 { background: var(--grey-2); }
+.h-button-neutral3 { background: var(--neutral-3); }
 .h-button-teal { background: var(--teal); }
 .h-button-cyan { background: var(--cyan); }
 .h-button-blue { background: var(--blue-3); }
@@ -290,16 +299,18 @@ button
 
 
 /* 원형 버튼 */
-.h-button-circle-20 { position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%; }
-[class^="h-button-circle"]::after { display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; font-family:'Material Icons'; font-style:normal; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box; }
-[class^="h-button-circle"].edit::after { content:'edit'; font-size:12px; }
-[class^="h-button-circle"].remove::after { content:'close'; font-size:16px; }
-
-.h-button-circle-30 {position:relative; min-width:auto !important; width:30px; height:30px; line-height:normal; padding:0; margin:0; border-radius:50%;}
-[class^="h-button-circle"].text-none {text-indent:-9999px; overflow:hidden;}
-[class^="h-button-circle"].popup::after {content:''; background:url('../images/icon_search_s.png') center no-repeat;}
-[class^="h-button-circle"].newtab::after {content:''; background:url('../images/icon_newtab_s.png') center no-repeat;}
-.h-tbl-basic-1 .tbl-btn-wrap [class^="h-button-circle"]:is(.popup, .newtab) {margin-top:2px; margin-bottom:2px; background-color:var(--neutral-3);}
+[class^="h-button-circle"] { position:relative; min-width:auto !important; width:20px; height:20px; line-height:normal; padding:0; margin:0; border-radius:50%; }
+.h-button-circle-20 { width:20px; height:20px; }
+.h-button-circle-30 { width:30px; height:30px; }
+.h-button-circle-44 { width:44px; height:44px; }
+    [class^="h-button-circle"]::after { display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; font-family:'Material Icons'; font-style:normal; width:100%; height:100%; color:#fff; border-radius:50%; box-sizing:border-box; }
+    [class^="h-button-circle"].edit::after { content:'edit'; font-size:12px; }
+    [class^="h-button-circle"].remove::after { content:'close'; font-size:16px; }
+    [class^="h-button-circle"].text-none {text-indent:-9999px; overflow:hidden;}
+    [class^="h-button-circle"].popup::after {content:''; background:url('../images/icon_search_s.png') center no-repeat;}
+    [class^="h-button-circle"].newtab::after {content:''; background:url('../images/icon_newtab_s.png') center no-repeat;}
+    [class^="h-button-circle"].new-window::after {content:''; background:url('../images/icon_newtab.png') center no-repeat; background-size:16px;}
+    .h-tbl-basic-1 .tbl-btn-wrap [class^="h-button-circle"]:is(.popup, .newtab) {margin-top:2px; margin-bottom:2px; background-color:var(--neutral-3);}
 
 
 @keyframes hbtnFX01 {
@@ -631,6 +642,12 @@ button
 .th-white tbody tr td .td-bold { color:var(--black-2); font-weight:var(--text-bold); }
 .th-white tbody tr td .td-normal { font-size:var(--text-subtitle5); }
 
+/***** 테이블 tbody 스크롤 *****/
+.scrolltbody {width:100%; height:100%; border-bottom:none !important;}
+.scrolltbody thead {display:table; width:100%;}
+.scrolltbody tbody {display:block; height:calc(100% - 52px); overflow-y:auto;}
+.scrolltbody tr {display:table; width:100%; box-sizing:border-box;}
+
 /***** 테이블 file *****/
 .h-tbl-file thead tr th,
 .h-tbl-file tbody tr td { padding:20px; }
@@ -686,14 +703,17 @@ button
 /***** 체크박스 토글버튼 *****/
 .btn-tgl[type="checkbox"] { position:absolute; width:1px; height:1px; clip:rect(0 0 0 0); padding:0; margin-left:1px; border:0; overflow:hidden; }
 .btn-tgl[type="checkbox"] + label { display:inline-block; width:23px; height:23px; text-indent:-9999px; margin-left:10px; cursor:pointer; overflow:hidden; }
-.btn-tgl[type="checkbox"] + label:before { content:''; width:100%; height:100%; display:block; border:2px solid transparent; border-radius:4px; box-sizing:border-box; transition:background-image 0.3s; }
+.btn-tgl[type="checkbox"] + label:before { content:''; width:100%; height:100%; display:block; border-radius:4px; box-sizing:border-box; transition:background-image 0.3s; }
  /* 좋아요 */
  .btn-like[type="checkbox"] + label:before { background:url(../images/btn-like.png) center no-repeat; }
  .btn-like[type="checkbox"]:checked + label:before { background-image:url(../images/btn-like-active.png); }
  /* 스크랩 */
- .btn-scrap[type="checkbox"] + label {margin-bottom:3px;}
  .btn-scrap[type="checkbox"] + label:before { background:url(../images/btn-scrap.png) top center no-repeat; }
  .btn-scrap[type="checkbox"]:checked + label:before { background-image:url(../images/btn-scrap-active.png); }
+ /* 스크랩 진한색 */
+ .btn-scrap-bold[type="checkbox"] + label {margin:0;}
+ .btn-scrap-bold[type="checkbox"] + label:before {background:url(../images/btn_scrap_bold.png) top center no-repeat; background-size:22px 20px;}
+ .btn-scrap-bold[type="checkbox"]:checked + label:before {background-image:url(../images/btn_scrap_bold_active.png);}
 
 /***** 간격 *****/
 .h-tbl-basic-1 + .h-pagination { margin-top:40px; }
@@ -737,6 +757,7 @@ button
 .h-resume-info-list .list-group:not(:first-child):not(.hope-area)::before {display:inline-block; content:''; width:1px; height:13px; margin:5px 10px 0; background-color:var(--border-basic-2);}
 .h-resume-info-list .list-group .item-name {color:var(--black-3);}
 .h-resume-info-list .list-group .item-name::after {content:':'; display:inline-block; margin-left:3px; margin-right:3px;}
+.h-resume-info-list .list-group .item:not(:last-child)::after {display:inline-block; content:','; margin-right:4px;}
 .h-resume-info-list .list-group.info_wrap .info-list {display:inline-flex; width:auto;}
 .h-resume-info-list .list-group.info_wrap .info-list + .info-list {margin-top:7px;}
 .h-resume-info-list .list-group.hope-area {width:100%;}
