@@ -9,10 +9,18 @@
   <link rel="stylesheet" href="../css/styleGuide.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/hunjang-main.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <link rel="stylesheet" href="../../css/yhy.css">
 
@@ -39,6 +47,7 @@
 
     <!-- header -->
     <header>
+
       <div class="header-top">
         <div class="header-utils">
           <div class="layout-inner flex">
@@ -62,12 +71,14 @@
                 <img src="../images/top_logo.png" alt="훈장마을로고">
               </a>
             </div>
+
             <div class="center search flex">
+              <!-- 검색박스 -->
               <div class="search-bar flex">
                 <input type="text" id="" placeholder="학원명, 과목명을 검색해보세요.">
                 <button type="button" class="btn-srch">검색</button>
               </div>
-              <!-- 과목 지역찾기 버튼 -->
+              <!-- 과목 지역찾기 -->
               <div class="h-listbox-wrap search-btn">
                 <input type="checkbox" id="list-box-01" class="list-box">
                 <label for="list-box-01">과목&amp;지역 찾기
@@ -75,17 +86,15 @@
                     expand_more
                   </i>
                 </label>
+                <!-- 과목&지역 찾기 버튼 클릭시 팝업 창 -->
                 <div class="box-search-detail">
                   <div class="h-tab-Contents-02"><button type="button" class="close" title="팝업 닫기">
                       <img src="../images/close_btn.svg" alt="팝업 닫기">
                     </button>
                     <input type="radio" id="tabBtn02_1" name="tab02" checked="">
                     <label for="tabBtn02_1">과목 (직무)</label>
-
                     <input type="radio" id="tabBtn02_2" name="tab02">
                     <label for="tabBtn02_2">지역</label>
-
-                    <!-- 과목&지역 찾기 버튼 클릭시 팝업 창 -->
                     <div class="tabCo-Wrap">
                       <!-- 첫번째 탭(과목(직무)) 클릭했을때 활성화되는 내용들 -->
                       <div class="tabCo-CommonBox">
@@ -248,7 +257,7 @@
                         </div>
                       </div>
 
-                      <!-- 두번째 탭() 클릭했을때 활성화되는 내용들 -->
+                      <!-- 두번째 탭(지역) 클릭했을때 활성화되는 내용들 -->
                       <div class="tabCo-CommonBox">
                         <div class="tabs-items">
                           <div class="tab-container">
@@ -256,8 +265,8 @@
                               <div class="cell cell-main">
                                 <div class="item">
                                   <ul class="flex flex-wrap">
-                                    <!-- 클릭시 클래스 on 추가 -->
                                     <!-- 지역 클릭시 해당 지역 채용공고 보이도록 개발 -->
+                                    <!-- 클릭시 클래스 on 추가 -->
                                     <li class="on">서울</li>
                                     <li>경기</li>
                                     <li>인천</li>
@@ -278,7 +287,6 @@
                                     <li>전국</li>
                                   </ul>
                                 </div>
-
                               </div>
                               <div class="cell cell-sub">
                                 <div class="item"><b class="dep1">서울지역 채용공고</b>
@@ -322,54 +330,87 @@
                 </div>
               </div>
               <!-- // -->
+
             </div>
+
             <!-- 로그인,회원가입 버튼 -->
-            <div class="button-group flex" style="
-    display: none;
-">
+            <div class="button-group flex">
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
-            </div><div class="h-listbox-wrap serv-login-drop" style="
-">
-                <input type="checkbox" id="list-box-02" class="list-box">
-                <label for="list-box-02">강사서비스</label>
-                <!-- dropdown -->
-                <div class="dropdown">
-                  <p class="h-txt-1 user-name">
-<span class="h-txt-bold txt-ellipsis" style="display: inline-block;width: auto;max-width: calc(100% - 33px);vertical-align: text-bottom;">홍길동</span>님
-</p>
-<ul>
-                    <li>
-                      <a href="javascript:void(0);">이력서 등록</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">이력서 관리</a>
-                    </li>
+            </div>
+
+            <!-- 강사서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop" style="display: none;">
+              <input type="checkbox" id="list-box-02" class="list-box">
+              <label for="list-box-02">강사서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">홍길동</span>님
+                </p>
+                <ul>
                   <li>
-                      <a href="javascript:void(0);">지원 현황</a>
-                    </li><li>
-                      <a href="javascript:void(0);" style="
-">메일 수신설정</a>
-                    </li><li>
-                      <a href="javascript:void(0);">비밀번호 변경</a>
-                    </li><li>
-                      <a href="javascript:void(0);">개인정보 수정</a>
-                    </li><li>
-                      <a href="javascript:void(0);">로그인 관리</a>
-                    </li></ul><button type="button" class="btn-log" style="
-    width: 160px;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    font-size: var(--text-subtitle4);
-    color: #fff;
-    background: var(--grey-1);
-    border-radius: 4px;
-">로그아웃</button>
-                </div>
+                    <a href="javascript:void(0);">이력서 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">이력서 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">지원 현황</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">메일 수신설정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">비밀번호 변경</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">개인정보 수정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">로그인 관리</a>
+                  </li>
+                </ul><button type="button" class="btn-log">로그아웃</button>
               </div>
+            </div>
+
+            <!-- 학원서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop academy" style="display: none;">
+              <input type="checkbox" id="list-box-03" class="list-box">
+              <label for="list-box-03">학원서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">광개토대왕수학학원ㅌ</span>님
+                </p>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용상품안내</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">마케팅 수신관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">학원 정보 수정</a>
+                  </li>
+                </ul>
+                <button type="button" class="btn-log">로그아웃</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
       <div class="header-menu">
         <div class="layout-inner">
           <div class="header-menu-inner">
@@ -599,6 +640,7 @@
           </div>
         </div>
       </div>
+
     </header>
     <!-- // -->
 
@@ -606,189 +648,194 @@
 
     <!-- container -->
     <div class="container">
-      <!-- 컨텐츠 -->
+
+      <!-- 메인비쥬얼 -->
       <div class="main-visual-wrap">
         <div class="main-visual">
           <div class="flex">
+
+            <!-- 메인 슬라이드 -->
             <div class="main-slide-wrap" style="background: #847f78;"></div>
+            <!-- // -->
 
+
+            <!-- 로그인,공지사항 -->
             <div class="right">
-              <!-- 로그인 섹션 -->
 
-                <!-- 로그인 전 -->
-                <div class="login-wrap">
-                  <ul class="login-contents">
-                    <li><a href="#">
-                        <div class="login-icon teach"></div>
-                        <p class="mt10 h-txt-c h-txt-1">강사 로그인</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <div class="login-icon acad"></div>
-                        <p class="mt10 h-txt-c h-txt-1">학원 로그인</p>
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="join-info">
-                    <li>
-                      <a href="#">
-                        <p class="h-txt-c h-txt-pit text-subtitle5">회원가입</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p class="h-txt-c h-txt-3 text-subtitle5">아이디 찾기</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p class="h-txt-c h-txt-3 text-subtitle5">PW 찾기</p>
-                      </a>
-                    </li>
-                  </ul>
+
+              <!-- 로그인 전 -->
+              <div class="login-wrap">
+                <ul class="login-contents">
+                  <li><a href="#">
+                      <div class="login-icon teach"></div>
+                      <p class="mt10 h-txt-c h-txt-1">강사 로그인</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="login-icon acad"></div>
+                      <p class="mt10 h-txt-c h-txt-1">학원 로그인</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="join-info">
+                  <li>
+                    <a href="#">
+                      <p class="h-txt-c h-txt-pit text-subtitle5">회원가입</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="h-txt-c h-txt-3 text-subtitle5">아이디 찾기</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="h-txt-c h-txt-3 text-subtitle5">PW 찾기</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- // -->
+
+
+              <!-- PC메인 로그인 후 서비스 미 신청 -->
+              <div class="login-wrap no-service" style="display:none;">
+                <ul class="login-contents">
+                  <li class="teach-serv">
+                    <a href="#">
+                      <div class="h-checkbox checkbox05">
+                        <input type="checkbox" name="checkForm" id="check05">
+                        <label for="check05">
+                          <div class="login-icon teach"></div>
+                          <p class="mt10 h-txt-c h-txt-2">강사 서비스<br>신청하기</p>
+                        </label>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="academy-serv">
+                    <a href="#">
+                      <div class="h-checkbox checkbox05">
+                        <input type="checkbox" name="checkForm" id="check06">
+                        <label for="check06">
+                          <div class="login-icon acad"></div>
+                          <p class="mt10 h-txt-c h-txt-2">학원 서비스<br>신청하기</p>
+                        </label>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <p class="apply-txt h-txt-5 first">강사 또는 학원 서비스를 신청해 주세요!</p>
+                <p class="apply-txt h-txt-2 second">매일 <span class="h-txt-orange">통통통 Point</span>를 드립니다!</p>
+                <p class="apply-txt h-txt-2 third"><span class="h-txt-orange">웰컴쿠폰</span>을 즉시 지급해 드립니다!</p>
+              </div>
+              <!-- // -->
+
+              <!-- 강사회원 로그인 -->
+              <div class="login-wrap login-after teacher-login" style="display:none;">
+                <p class="h-txt-3 login-name"><span class="h-txt-2 h-txt-bold h-tit-18 txt-ellipsis">홍길동</span>님</p>
+                <p class="h-txt-3 modify-info">최종 수정일 : <span class="h-txt-2">2022.05.12</span></p>
+                <div class="button-group flex">
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
                 </div>
-                <!-- // -->
+                <ul class="flex add-info-link">
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      지원현황
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      스크랩
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      추천채용
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- // -->
 
-
-                <!-- PC메인 로그인 후 서비스 미 신청 -->
-                <div class="login-wrap no-service" style="display:none;">
-                  <ul class="login-contents">
-                    <li class="teach-serv">
-                      <a href="#">
-                        <div class="h-checkbox checkbox05">
-                          <input type="checkbox" name="checkForm" id="check05">
-                          <label for="check05">
-                            <div class="login-icon teach"></div>
-                            <p class="mt10 h-txt-c h-txt-2">강사 서비스<br>신청하기</p>
-                          </label>
-                        </div>
-                      </a>
-                    </li>
-
-                    <li class="academy-serv">
-                      <a href="#">
-                        <div class="h-checkbox checkbox05">
-                          <input type="checkbox" name="checkForm" id="check06">
-                          <label for="check06">
-                            <div class="login-icon acad"></div>
-                            <p class="mt10 h-txt-c h-txt-2">학원 서비스<br>신청하기</p>
-                          </label>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                  <p class="apply-txt h-txt-5 first">강사 또는 학원 서비스를 신청해 주세요!</p>
-                  <p class="apply-txt h-txt-2 second">매일 <span class="h-txt-orange">통통통 Point</span>를 드립니다!</p>
-                  <p class="apply-txt h-txt-2 third"><span class="h-txt-orange">웰컴쿠폰</span>을 즉시 지급해 드립니다!</p>
+              <!-- 학원회원 로그인 -->
+              <div class="login-wrap login-after acad-login" style="display:none;">
+                <p class="h-txt-3 login-name">
+                  <span class="h-txt-2 h-txt-bold h-tit-18 txt-ellipsis">광개토대왕수학영어학원</span>님
+                </p>
+                <p class="h-txt-3 modify-info">진행중인 공고
+                  <a class="info-num h-txt-bold" href="#">5</a>건
+                </p>
+                <div class="button-group flex">
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
                 </div>
-                <!-- // -->
+                <ul class="flex add-info-link">
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      지원자 관리
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      추천인재
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- // -->
 
-                <!-- 강사회원 로그인 -->
-                <div class="login-wrap login-after teacher-login" style="display:none;">
-                  <p class="h-txt-3 login-name"><span class="h-txt-2 h-txt-bold h-tit-18">홍길동</span>님</p>
-                  <p class="h-txt-3 modify-info">최종 수정일 : <span class="h-txt-2">2022.05.12</span></p>
-                  <div class="button-group flex">
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
+              <!-- 학원회원 로그인 - 상호가 2개 이상인 경우 -->
+              <div class="login-wrap login-after acad-login" style="display:none;">
+                <div class="h-notice-wrap">
+                  <input type="checkbox" id="list-box" class="h-title-btn">
+                  <label for="list-box"><span
+                      class="h-txt-2 h-txt-bold h-tit-18 txt-ellipsis">광개토대왕수학영어학원</span>님</label>
+
+                  <!-- dropdown -->
+                  <div class="dropdown">
+                    <ul>
+                      <li>
+                        <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                      </li>
+                    </ul>
                   </div>
-                  <ul class="flex">
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        지원현황
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        스크랩
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        추천채용
-                      </a>
-                    </li>
-                  </ul>
+
                 </div>
-                <!-- // -->
-
-                <!-- 학원회원 로그인 -->
-                <div class="login-wrap login-after acad-login" style="display:none;">
-                  <p class="h-txt-3 login-name">
-                    <span class="h-txt-2 h-txt-bold h-tit-18">광개토대왕수학영어학원</span>님
-                  </p>
-                  <p class="h-txt-3 modify-info">진행중인 공고
-                    <a class="info-num h-txt-bold" href="#">5</a>건
-                  </p>
-                  <div class="button-group flex">
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
-                  </div>
-                  <ul class="flex">
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        지원자 관리
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        추천인재
-                      </a>
-                    </li>
-                  </ul>
+                <p class="h-txt-3 modify-info">진행중인 공고
+                  <a class="info-num h-txt-bold" href="#">5</a>건
+                </p>
+                <div class="button-group flex">
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                  <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
                 </div>
-                <!-- // -->
-
-                <!-- 학원회원 로그인 - 상호가 2개 이상인 경우 -->
-                <div class="login-wrap login-after acad-login" style="display:none;">
-                  <div class="h-notice-wrap">
-                    <input type="checkbox" id="list-box" class="h-title-btn">
-                    <label for="list-box"><span class="h-txt-2 h-txt-bold h-tit-18">광개토대왕수학영어학원</span>님</label>
-
-                    <!-- dropdown -->
-                    <div class="dropdown">
-                      <ul>
-                        <li>
-                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-                  <p class="h-txt-3 modify-info">진행중인 공고
-                    <a class="info-num h-txt-bold" href="#">5</a>건
-                  </p>
-                  <div class="button-group flex">
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
-                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
-                  </div>
-                  <ul class="flex add-info-link">
-                    <li>
-                      <a href="#" class="h-txt-c h-txt-3">
-                        지원자 관리
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
-                        추천인재
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- // -->
-
+                <ul class="flex add-info-link">
+                  <li>
+                    <a href="#" class="h-txt-c h-txt-3">
+                      지원자 관리
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                      추천인재
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <!-- // -->
 
 
@@ -803,76 +850,71 @@
               <!-- // -->
 
             </div>
+            <!-- // -->
+
           </div>
+
+         
 
           <!-- 로고 배너 슬라이드 -->
           <div class="logo-slide-wrap">
-            <div class="logo-slide">
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <div>
-                    <img src="/images/top_logo.png" alt="">
-                  </div>
-                </a>
-              </div>
+            <div class="swiper logo-mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+              <div class="swiper-wrapper" id="swiper-wrapper-9df22dac7c23441c" aria-live="polite">  
 
-            </div>
-            <button class="logo-arrow logo-arrow-prev" type="button"></button>
-            <button class="logo-arrow logo-arrow-next" type="button"></button>
+                <!-- 8개까지만 나열 -->
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="3 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="4 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="5 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="6 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="7 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="8 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="9 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+                <div class="swiper-slide" role="group" aria-label="10 / 10">
+                  <a href="javascript:void(0);"><img class="thumbnail" src="../images/top_logo.png"></a>
+                </div>
+
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            <div class="swiper-button-next logo-arrow" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-9df22dac7c23441c" aria-disabled="false"></div>
+            <div class="swiper-button-prev logo-arrow swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9df22dac7c23441c" aria-disabled="true"></div>
           </div>
           <!-- // -->
 
         </div>
       </div>
+      <!-- // -->
+
+
+      <!-- 컨텐츠 -->
       <div class="content">
 
         <div class="card-ui-wrap">
@@ -896,7 +938,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -918,7 +961,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -940,7 +984,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -962,7 +1007,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -985,7 +1031,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -1007,7 +1054,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -1029,7 +1077,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -1051,7 +1100,8 @@
                   </div>
                   <div class="cardbox">
                     <p class="name">파란수학학원</p>
-                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                    <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                      길어집니다. 점점 더 길어집니다.</strong>
                     <div class="txtbox">
                       <span>경기 고양시</span>
                       <span>수학</span>
@@ -1085,7 +1135,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1105,7 +1156,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1125,7 +1177,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1145,7 +1198,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1166,7 +1220,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1186,7 +1241,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1206,7 +1262,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1226,7 +1283,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</strong>
+                  <strong class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더
+                    길어집니다. 점점 더 길어집니다.</strong>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1258,7 +1316,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1278,7 +1337,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1298,7 +1358,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1318,7 +1379,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1339,7 +1401,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1359,7 +1422,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1379,7 +1443,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1399,7 +1464,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1431,7 +1497,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1451,7 +1518,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1471,7 +1539,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1491,7 +1560,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1511,7 +1581,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1532,7 +1603,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1552,7 +1624,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1572,7 +1645,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1592,7 +1666,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1612,7 +1687,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1645,7 +1721,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1665,7 +1742,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1685,7 +1763,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1705,7 +1784,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1726,7 +1806,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1746,7 +1827,8 @@
                 </div>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <div class="txtbox">
                     <span>경기 고양시</span>
                     <span>수학</span>
@@ -1775,7 +1857,8 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt">D-11</span>
                 </div>
               </li>
@@ -1786,7 +1869,8 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt fc-orange">오늘마감</span>
                 </div>
               </li>
@@ -1797,7 +1881,8 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt">D-11</span>
                 </div>
               </li>
@@ -1809,7 +1894,8 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt">D-11</span>
                 </div>
               </li>
@@ -1820,7 +1906,8 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt">D-11</span>
                 </div>
               </li>
@@ -1831,97 +1918,98 @@
                 </span>
                 <div class="cardbox">
                   <p class="name">파란수학학원</p>
-                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                  <p class="btit">초등/중등/고등부 선생님 각 초빙합니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점
+                    더 길어집니다.</p>
                   <span class="txt">D-11</span>
                 </div>
               </li>
-
-
             </ul>
           </div>
 
 
-
         </div>
-
-        <!-- // -->
-
 
       </div>
       <!-- // -->
 
 
-      <!-- footer -->
-      <footer>
-        <div class="f-menu-wrap">
-          <div class="layout-inner">
-            <div class="footer-inner">
-              <ul class="f-menu-list flex">
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">이메일무단수집거부</a></li>
-                <li><a href="#">찾아오시는길</a></li>
-                <li><a href="#">고객센터</a></li>
-                <li><a href="#">채용상품안내</a></li>
-                <li><a href="#">광고상품안내</a></li>
-                <li><a href="#">제휴문의</a></li>
-              </ul>
-              <div class="spacer"></div>
-              <div class="family-site">
-                <select name="" id="">
-                  <option value="" disabled="" selected="">Family service</option>
-                  <option value="">에듀베이션</option>
-                  <option value="">통통통</option>
-                  <option value="">앤써통</option>
-                  <option value="">훈장EDU</option>
-                  <option value="">에-딧</option>
-                </select>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="footer-info flex">
-          <div class="layout-inner">
-            <div class="info-contents flex">
-              <div class="f-logo"><img src="../images/footer_logo.png" alt="하단로고"></div>
-
-              <div class="callcenter">
-                <p class="tit">훈장마을 고객센터</p>
-                <p class="call">02-858-0492</p>
-                <p class="time">평일 09:00~18:00 (점심시간 12:30~13:30)</p>
-                <p class="contact mt5">
-                  <span class="mail">이메일 : hunjang@daekyo.co.kr</span>
-                  <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
-                </p>
-              </div>
-              <div class="spacer"></div>
-              <div class="addr-info">
-                <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
-                <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
-                  <span style="padding: 0 0 0 18px;">직업정보제공사업 신고번호 : 서울관악 2004-10</span>
-                </p>
-                <p><span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</span></p>
-                <p>ⓒ EDUVATION INC.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </footer>
-      <!-- // -->
-
     </div>
     <!-- // -->
 
 
+
+    <!-- footer -->
+    <footer>
+      <div class="f-menu-wrap">
+        <div class="layout-inner">
+          <div class="footer-inner">
+            <ul class="f-menu-list flex">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">찾아오시는길</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">채용상품안내</a></li>
+              <li><a href="#">광고상품안내</a></li>
+              <li><a href="#">제휴문의</a></li>
+            </ul>
+            <div class="spacer"></div>
+            <div class="family-site">
+              <select name="" id="">
+                <option value="" disabled="" selected="">Family service</option>
+                <option value="">에듀베이션</option>
+                <option value="">통통통</option>
+                <option value="">앤써통</option>
+                <option value="">훈장EDU</option>
+                <option value="">에-딧</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-info flex">
+        <div class="layout-inner">
+          <div class="info-contents flex">
+            <div class="f-logo">
+              <img src="../images/footer_logo.png" alt="하단로고">
+            </div>
+            <div class="callcenter">
+              <p class="tit">훈장마을 고객센터</p>
+              <p class="call">02-858-0492</p>
+              <p class="time">평일 09:00~18:00 (점심시간 12:30~13:30)</p>
+              <p class="contact mt5">
+                <span class="mail">이메일 : hunjang@daekyo.co.kr</span>
+                <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
+              </p>
+            </div>
+            <div class="spacer">
+            </div>
+            <div class="addr-info">
+              <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
+              <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
+                <span style="padding: 0 0 0 18px;">직업정보제공사업 신고번호 : 서울관악 2004-10</span>
+              </p>
+              <p><span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</span></p>
+              <p>ⓒ EDUVATION INC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    <!-- // -->
+
   </div>
+  <!-- // -->
+
 
 
   <div class="lottie-bg" style="display: none;">
     <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22"
+        preserveAspectRatio="xMidYMid meet"
+        style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
         <defs>
           <clipPath id="__lottie_element_35">
             <rect width="32" height="22" x="0" y="0"></rect>
@@ -1957,59 +2045,68 @@
 
   <div id="dim" style="display: none;"></div>
 
+
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
 
-      // header 전체메뉴
-      // 전체메뉴 창 뒤 어두운 배경
-      var $dim = document.getElementById('dim');
-      // 전체메뉴 클릭시 나오는 메뉴
-      var $allMenu = $('.hunjang-main-wrap .h-all-menu');
-      // 메인메뉴 클릭시 나오는 메뉴
-      var $subMenu = $('.hunjang-main-wrap .panel-lnb-wrap');
-      // 메인메뉴
-      var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
+      // 헤더 공통함수
+      var headerFunction = function () {
+     
+        // header 전체메뉴
+        // 전체메뉴 창 뒤 어두운 배경
+        var $dim = document.getElementById('dim');
+        // 전체메뉴 클릭시 나오는 메뉴
+        var $allMenu = $('.hunjang-main-wrap .h-all-menu');
+        // 메인메뉴 클릭시 나오는 메뉴
+        var $subMenu = $('.hunjang-main-wrap .panel-lnb-wrap');
+        // 메인메뉴
+        var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
 
-
-      // 전체메뉴 창 뒤 어두운 배경 추가
-      var darkBackground = function () {
-
-        if ($dim.style.display == "none") {
-          $dim.style.display = "block";
-        } else {
-          $dim.style.display = "none";
-        }
-
-      };
-
-
-      // header 전체메뉴 클릭시
-      $('.hunjang-main-wrap .btn-all-menu').click(function() {
-
-        // 전체메뉴 버튼 close버튼으로 변경
-        $(this).toggleClass("on");
-
-        // 전체메뉴 창 활성화
-        $allMenu.toggleClass("on");
 
         // 전체메뉴 창 뒤 어두운 배경 추가
-        darkBackground();
+        var darkBackground = function () {
 
-        // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
-        // ????
+          if ($dim.style.display == "none") {
+            $dim.style.display = "block";
+          } else {
+            $dim.style.display = "none";
+          }
 
-      });
-
-
-      // 메인메뉴 호버시 어두운 배경 추가
-      $('.hunjang-main-wrap .gnb-list>li.on').hover(function() {
-
-        darkBackground();
-
-      });
+        };
 
 
+        // header 전체메뉴 클릭시
+        $('.hunjang-main-wrap .btn-all-menu').click(function () {
+
+          // 전체메뉴 버튼 close버튼으로 변경
+          $(this).toggleClass("on");
+
+          // 전체메뉴 창 활성화
+          $allMenu.toggleClass("on");
+
+          // 전체메뉴 창 뒤 어두운 배경 추가
+          darkBackground();
+
+          // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
+          // ????
+
+        });
+
+
+        // 메인메뉴 호버시 어두운 배경 추가
+        $('.hunjang-main-wrap .gnb-list>li.on').hover(function () {
+
+          darkBackground();
+
+        });
+
+      }
+
+
+      headerFunction();
+
+      
 
       // pc메인 로그인 후 서비스 미 신청 부분
       // 해당 신청하기 영역 hover시
@@ -2018,10 +2115,31 @@
         $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.second').toggleClass("active");
       });
 
+
+
+
+
       $('.hunjang-main-wrap .login-wrap.no-service .login-contents li.academy-serv a').hover(function () {
         $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.first').toggleClass("noactive");
         $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.third').toggleClass("active");
       });
+
+
+      //logo slide
+      var swiper = new Swiper(".logo-mySwiper", {
+        slidesPerView: 8,
+        spaceBetween: 6,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+
 
     });
   </script>

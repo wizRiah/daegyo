@@ -25,6 +25,7 @@
 
     <!-- header -->
     <header>
+
       <div class="header-top">
         <div class="header-utils">
           <div class="layout-inner flex">
@@ -48,30 +49,30 @@
                 <img src="../images/top_logo.png" alt="훈장마을로고">
               </a>
             </div>
+
             <div class="center search flex">
+              <!-- 검색박스 -->
               <div class="search-bar flex">
                 <input type="text" id="" placeholder="학원명, 과목명을 검색해보세요.">
                 <button type="button" class="btn-srch">검색</button>
               </div>
-              <!-- 과목 지역찾기 버튼 -->
-              <div class="h-listbox-wrap">
+              <!-- 과목 지역찾기 -->
+              <div class="h-listbox-wrap search-btn">
                 <input type="checkbox" id="list-box-01" class="list-box">
                 <label for="list-box-01">과목&amp;지역 찾기
                   <i class="material-symbols-outlined">
                     expand_more
                   </i>
                 </label>
+                <!-- 과목&지역 찾기 버튼 클릭시 팝업 창 -->
                 <div class="box-search-detail">
                   <div class="h-tab-Contents-02"><button type="button" class="close" title="팝업 닫기">
                       <img src="../images/close_btn.svg" alt="팝업 닫기">
                     </button>
                     <input type="radio" id="tabBtn02_1" name="tab02" checked="">
                     <label for="tabBtn02_1">과목 (직무)</label>
-
                     <input type="radio" id="tabBtn02_2" name="tab02">
                     <label for="tabBtn02_2">지역</label>
-
-                    <!-- 과목&지역 찾기 버튼 클릭시 팝업 창 -->
                     <div class="tabCo-Wrap">
                       <!-- 첫번째 탭(과목(직무)) 클릭했을때 활성화되는 내용들 -->
                       <div class="tabCo-CommonBox">
@@ -234,7 +235,7 @@
                         </div>
                       </div>
 
-                      <!-- 두번째 탭() 클릭했을때 활성화되는 내용들 -->
+                      <!-- 두번째 탭(지역) 클릭했을때 활성화되는 내용들 -->
                       <div class="tabCo-CommonBox">
                         <div class="tabs-items">
                           <div class="tab-container">
@@ -242,8 +243,8 @@
                               <div class="cell cell-main">
                                 <div class="item">
                                   <ul class="flex flex-wrap">
-                                    <!-- 클릭시 클래스 on 추가 -->
                                     <!-- 지역 클릭시 해당 지역 채용공고 보이도록 개발 -->
+                                    <!-- 클릭시 클래스 on 추가 -->
                                     <li class="on">서울</li>
                                     <li>경기</li>
                                     <li>인천</li>
@@ -264,7 +265,6 @@
                                     <li>전국</li>
                                   </ul>
                                 </div>
-
                               </div>
                               <div class="cell cell-sub">
                                 <div class="item"><b class="dep1">서울지역 채용공고</b>
@@ -308,15 +308,87 @@
                 </div>
               </div>
               <!-- // -->
+
             </div>
+
             <!-- 로그인,회원가입 버튼 -->
-            <div class="button-group flex inline">
+            <div class="button-group flex">
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
             </div>
+
+            <!-- 강사서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop" style="display: none;">
+              <input type="checkbox" id="list-box-02" class="list-box">
+              <label for="list-box-02">강사서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">홍길동</span>님
+                </p>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);">이력서 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">이력서 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">지원 현황</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">메일 수신설정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">비밀번호 변경</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">개인정보 수정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">로그인 관리</a>
+                  </li>
+                </ul><button type="button" class="btn-log">로그아웃</button>
+              </div>
+            </div>
+
+            <!-- 학원서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop academy" style="display: none;">
+              <input type="checkbox" id="list-box-03" class="list-box">
+              <label for="list-box-03">학원서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">광개토대왕수학학원ㅌ</span>님
+                </p>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용상품안내</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">마케팅 수신관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">학원 정보 수정</a>
+                  </li>
+                </ul>
+                <button type="button" class="btn-log">로그아웃</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
       <div class="header-menu">
         <div class="layout-inner">
           <div class="header-menu-inner">
@@ -546,6 +618,7 @@
           </div>
         </div>
       </div>
+
     </header>
     <!-- // -->
 
@@ -587,14 +660,15 @@
                 </select>
               </div>
             </div>
-
           </div>
         </div>
+
         <div class="footer-info flex">
           <div class="layout-inner">
             <div class="info-contents flex">
-              <div class="f-logo"><img src="../images/footer_logo.png" alt="하단로고"></div>
-
+              <div class="f-logo">
+                <img src="../images/footer_logo.png" alt="하단로고">
+              </div>
               <div class="callcenter">
                 <p class="tit">훈장마을 고객센터</p>
                 <p class="call">02-858-0492</p>
@@ -604,7 +678,8 @@
                   <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
                 </p>
               </div>
-              <div class="spacer"></div>
+              <div class="spacer">
+              </div>
               <div class="addr-info">
                 <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
                 <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
@@ -616,7 +691,6 @@
             </div>
           </div>
         </div>
-
 
       </footer>
       <!-- // -->
@@ -674,55 +748,63 @@
 
     $(document).ready(function () {
 
-      // header 전체메뉴
-      // 전체메뉴 창 뒤 어두운 배경
-      var $dim = document.getElementById('dim');
-      // 전체메뉴 클릭시 나오는 메뉴
-      var $allMenu = $('.hunjang-main-wrap .h-all-menu');
-      // 메인메뉴 클릭시 나오는 메뉴
-      var $subMenu = $('.hunjang-main-wrap .panel-lnb-wrap');
-      // 메인메뉴
-      var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
+          // 헤더 공통함수
+          var headerFunction = function () {
+          
+            // header 전체메뉴
+            // 전체메뉴 창 뒤 어두운 배경
+            var $dim = document.getElementById('dim');
+            // 전체메뉴 클릭시 나오는 메뉴
+            var $allMenu = $('.hunjang-main-wrap .h-all-menu');
+            // 메인메뉴 클릭시 나오는 메뉴
+            var $subMenu = $('.hunjang-main-wrap .panel-lnb-wrap');
+            // 메인메뉴
+            var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
 
-      // header 전체메뉴 클릭시
-      $('.hunjang-main-wrap .btn-all-menu').click(function () {
 
-        // 전체메뉴 버튼 close버튼으로 변경
-        $(this).toggleClass("on");
+            // 전체메뉴 창 뒤 어두운 배경 추가
+            var darkBackground = function () {
 
-        // 전체메뉴 창 활성화
-        $allMenu.toggleClass("on");
-        
+              if ($dim.style.display == "none") {
+                $dim.style.display = "block";
+              } else {
+                $dim.style.display = "none";
+              }
+
+            };
+
+
+            // header 전체메뉴 클릭시
+            $('.hunjang-main-wrap .btn-all-menu').click(function () {
+
+              // 전체메뉴 버튼 close버튼으로 변경
+              $(this).toggleClass("on");
+
+              // 전체메뉴 창 활성화
+              $allMenu.toggleClass("on");
+
+              // 전체메뉴 창 뒤 어두운 배경 추가
+              darkBackground();
+
+              // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
+              // ????
+
+            });
+
+
+            // 메인메뉴 호버시 어두운 배경 추가
+            $('.hunjang-main-wrap .gnb-list>li.on').hover(function () {
+
+              darkBackground();
+
+            });
+
+          }
+
+
+          headerFunction();
+
        
-
-        // 전체메뉴 창 뒤 어두운 배경 추가
-        if ($dim.style.display == "none") {
-          $dim.style.display = "block";
-        } else {
-          $dim.style.display = "none";
-        }
-
-
-        // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
-        // ????
-
-
-      });
-
-
-      // 메인메뉴 호버시 어두운 배경 추가
-      $('.hunjang-main-wrap .gnb-list>li.on').hover(function () {
-       
-          if ($dim.style.display == "none") {
-          $dim.style.display = "block";
-        } else {
-          $dim.style.display = "none";
-        }
-
-      });
-
-
-
     });
 
   </script>
