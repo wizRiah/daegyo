@@ -625,3 +625,27 @@
 .tbl-today-veiw-pop tr td:nth-child(3) {width:130px;}
 .tbl-today-veiw-pop tr td:nth-child(4),
 .tbl-today-veiw-pop tr td:nth-child(5) {width:100px;}
+
+/* 훈장마을 - 공고미리보기 */
+.pop-preview-btn-wrap {display:flex; margin-left:30px;}
+.pop-preview-btn-wrap [class^="h-button"] + [class^="h-button"] {margin-left:5px;}
+.pop-container .h-job-info.preview {margin-left:40px;}
+.pop-container .h-job-info.preview .academy-wrap .academy .txt-ellipsis {max-width:100%;}
+.pop-container .h-job-info.preview .academy-wrap + .h-list-1 {margin-top:8px;}
+.pop-container .h-job-info .h-list-1 {margin-left:4px;}
+.pop-container .h-job-info .h-list-1 :is(dt, dd) {font-size:var(--text-subtitle5);}
+.pop-container .h-job-info .h-list-1 dt {width:55px;}
+.pop-container .h-job-info .h-list-1 dt::before {top:7px;}
+.pop-container .h-job-info .h-list-1 dd {width:calc(100% - 55px);}
+.pop-container .h-slide-recruit-wrap .h-txtbox-1 {background-color:var(--grey-2); font-weight:var(--text-regular);}
+/* slide - 모집부문 정보 */
+.h-slide-recruit-wrap {padding-left:40px; padding-right:40px; box-sizing:border-box;}
+.slide-recruit-info {position:relative; padding:34px; background-color:var(--neutral-3); border-radius:10px; box-sizing:border-box;}
+.slide-recruit-info .slide-box {position:relative; display:inline-flex; align-items:center; padding:25px; background-color:var(--neutral-3); box-sizing:border-box; overflow:hidden;}
+.slide-recruit-info .slide-box:nth-child(n+2)::before {position:absolute; left:0; content:''; width:1px; height:148px; background-color:var(--border-basic-3);}
+    /* slide button - Prev, Next */
+    .h-slide-recruit-wrap .slide-arrow {top:calc(50% + 40px); width:50px; height:50px; background:url(../images/arrow_slide.png) center no-repeat;}
+    .h-slide-recruit-wrap .slide-arrow::after {display:none;}
+    .h-slide-recruit-wrap .arrow-prev {left:13px; transform:scaleX(-1); -webkit-transform:scaleX(-1); -o-transform:scaleX(-1); -moz-transform:scaleX(-1);}
+    .h-slide-recruit-wrap .arrow-next {right:13px;}
+    .h-slide-recruit-wrap .swiper-button-disabled {opacity:1 !important; background:url(../images/arrow_slide_disabled.png) center no-repeat;}
