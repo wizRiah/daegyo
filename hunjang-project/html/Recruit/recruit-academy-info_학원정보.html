@@ -530,39 +530,39 @@
 
                 <!-- 10개까지만 나열 -->
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="../../images/academyInfo_photoSample01.png"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="../../images/academyInfo_photoSample01.png"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://acaimg.etoos.com/hp/pc/images/cnt/lookaround/h2_02.jpg"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://acaimg.etoos.com/hp/pc/images/cnt/lookaround/h2_02.jpg"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://cdn.woodkorea.co.kr/news/photo/202302/72129_82343_1123.jpg"></a>
+                  <a href="javascript:void(0);" class="thumbnail thumbnail-video"><img src="https://cdn.woodkorea.co.kr/news/photo/202302/72129_82343_1123.jpg"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://t1.daumcdn.net/news/202101/03/seouleconomy/20210103180216602mmpi.jpg"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://t1.daumcdn.net/news/202101/03/seouleconomy/20210103180216602mmpi.jpg"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://gohanvit.co.kr/html/image/m_bnr2_01.jpg"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://gohanvit.co.kr/html/image/m_bnr2_01.jpg"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://www.esangdance.net/data/file/p08/3717577837_r1bWcHLE_20c6c437e8b30f77ae50e1543a31d94c30ddfdb3.jpg"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://www.esangdance.net/data/file/p08/3717577837_r1bWcHLE_20c6c437e8b30f77ae50e1543a31d94c30ddfdb3.jpg"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEZLTeeVGH3CDWN2cOK8TRkSb_DGNgzRcLW8W2evGuqjCZvpsgE9o4b11EPnkoz3RdWZA&usqp=CAU"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEZLTeeVGH3CDWN2cOK8TRkSb_DGNgzRcLW8W2evGuqjCZvpsgE9o4b11EPnkoz3RdWZA&usqp=CAU"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://compphoto.incruit.com/2021/03/1_202139221648.JPG"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://compphoto.incruit.com/2021/03/1_202139221648.JPG"></a>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="javascript:void(0);"><img class="thumbnail" src="https://mblogthumb-phinf.pstatic.net/MjAyMTEyMDNfMTQ2/MDAxNjM4NTEzMDE3ODUz.iJtnbfDMK6Gf9hMfEwCgBV4fdeHKoDqKadpFSdifcAUg.zJ3OEX3kBSTABAFDD6EN6GJSIdlEOJ0qjzqGO_Kfs_og.JPEG.mbestjjc/20211203%EF%BC%BF124816.jpg?type=w800"></a>
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMTEyMDNfMTQ2/MDAxNjM4NTEzMDE3ODUz.iJtnbfDMK6Gf9hMfEwCgBV4fdeHKoDqKadpFSdifcAUg.zJ3OEX3kBSTABAFDD6EN6GJSIdlEOJ0qjzqGO_Kfs_og.JPEG.mbestjjc/20211203%EF%BC%BF124816.jpg?type=w800"></a>
                 </div>
 
               </div>
@@ -579,8 +579,8 @@
 
       <div class="wd100 academyInfo-map">
         <div class="content">
-          <p class="h-tit-26 h-txt-c mb20 mt30">학원위치</p>
-          <div class="text-subtitle4 h-txt-3 mb20 h-txt-c">(12345) 서울 구로구 디지털로26길 123 지플러스타워9층 906호</div>
+          <p class="h-tit-26 h-txt-c mb15 mt20">학원위치</p>
+          <div class="text-subtitle4 h-txt-3 mb15 h-txt-c">(12345) 서울 구로구 디지털로26길 123 지플러스타워9층 906호</div>
           <a href="javascript:void(0);" class="h-button-s h-button-white" style="width:120px;">지도보기</a>
         </div>
       </div>
@@ -903,7 +903,7 @@
     //클릭시 큰이미지로 뿌림
     window.onload = function() {
         let bigPic = document.querySelector('.bigPhoto');
-        let smallPics = document.querySelectorAll('.thumbnail');
+        let smallPics = document.querySelectorAll('.thumbnail>img');
 
         for(let i = 0; i < smallPics.length; i++) {
             smallPics[i].onclick = changepic;
