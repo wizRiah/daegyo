@@ -1,9 +1,5 @@
 @charset "utf-8"; 
 
-
-
-
-
 /* 훈장마을 메인 */
 .hunjang-main-wrap .main-visual-wrap { background-color: #F6F7F8; } 
 .hunjang-main-wrap .main-visual { padding: 26px 0px 30px; position: relative; max-width: 1164px; margin: 0 auto; } 
@@ -28,90 +24,70 @@
 .hunjang-main-wrap .notice-wrap ul li:hover a { color:#0E97FF; } 
 
 
-/* 로고슬라이드 */
-.hunjang-main-wrap .logo-slide-wrap { width: 100%; position: relative; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper,
-.hunjang-main-wrap .logo-slide-wrap swiper-container { margin-left: 21px; margin-right: 21px; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-slide { transition: 0.1s; height: 60px; line-height: 40px; text-align: center; overflow: hidden; padding: 12px 25px; border-radius: 90px; border: 1px solid #E0E6EF; box-sizing: border-box; background: #fff; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-slide .thumbnail { width: auto; max-width: 95%; max-height: 100%; display: inline-block; vertical-align: middle; margin-top: -6px; } 
-.hunjang-main-wrap .logo-slide-wrap .logo-arrow { transition: all 0.2s; background: url(../images/logo-slide-next.png) no-repeat center/contain; width: 8px; height: 12px; right: 0; margin-top: -6px; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-button-next:after, 
-.hunjang-main-wrap .logo-slide-wrap .swiper-rtl .swiper-button-prev:after { content:none; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-button-prev { background-image:url(../images/logo-slide-prev.png); left:0; } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-button-next:hover { background-image: url(../images/logo-slide-next-on.png); } 
-.hunjang-main-wrap .logo-slide-wrap .swiper-button-prev:hover { background-image: url(../images/logo-slide-prev-on.png); } 
+    /* pc메인 로그인 후 서비스 미 신청 */
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li { border: 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-width: 0 0 1px 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a p { font-size: 13px; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon { margin: 7px auto 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox { margin: 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label { height: 116px; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; border-radius: 10px 0 0 0; padding: 15px; flex-direction: column; width: 100%; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-radius: 0 10px 0 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"] + label::before { top: 13px; left: 13px; opacity: 0.5; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label, 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label::before { opacity:1; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover p { color:#0E97FF; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover .h-checkbox input[type="checkbox"] + label::before { color:#0E97FF; opacity: 1; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt { font-size: 13px; line-height: 42px; text-align: center; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt.first.noactive { display:none; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt.second { display:none; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt.second.active { display: block; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt.third { display:none; } 
+    .hunjang-main-wrap .login-wrap.no-service .apply-txt.third.active { display: block; } 
 
 
+    /* 강사회원 로그인 */
+    .hunjang-main-wrap .login-wrap.login-after { padding: 25px; } 
+    .hunjang-main-wrap .login-wrap.login-after .login-name { font-size: 13px; line-height: 21px; } 
+    .hunjang-main-wrap .login-wrap.login-after .login-name span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
+    .hunjang-main-wrap .login-wrap.login-after .modify-info { font-size: 13px; line-height: 20px; } 
+    .hunjang-main-wrap .login-wrap.login-after .button-group { margin: 8px 0; } 
+    .hunjang-main-wrap .login-wrap.login-after .button-group .ac { margin-left: 0; } 
+    .hunjang-main-wrap .login-wrap.login-after .button-group .rf { margin-right: 0; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li { position:relative; padding: 0 15px; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:first-child { padding-left:0; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:after { content: ''; width: 1px; height: 13px; position: absolute; right: 0; top: 50%; margin-top: -6.5px; background: #E0E6EF; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child:after { content:none; } 
 
 
-/* 헤더부분 강사서비스 로그인 */
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label { padding: 11px 38px 11px 45px; border-color: #26B2C8; color: #26B2C8; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:after { transition:all 0.5s; transform: translateY(-50%) rotate(180deg); background: transparent url(../images/icon_select_arrow_color.png) no-repeat center/contain; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:before { content: ""; background: url(../images/main_login_icon01.png) no-repeat center/contain; position: absolute; left: 20px; top: 9px; width: 18px; height: 18px; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"]:checked + label:after { transform: translateY(-50%) rotate(360deg); } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown { max-height: fit-content; width: 180px; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name { font-size: var(--text-subtitle2); padding: 15px 20px; position:relative; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name:after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #E7ECF3; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log { position:relative; width: 160px; padding: 10px 0; margin-bottom: 10px; font-size: var(--text-subtitle4); color: #fff; background: var(--grey-1); border-radius: 4px; } 
-.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log:before { content: ''; display: inline-block; margin-right: 10px; background: url(../images/icon_logout.png) no-repeat center; width: 16px; height: 16px; vertical-align: middle; font-weight: var(--text-regular); } 
- 
-/* 헤더부분 학원서비스 로그인 */
-.hunjang-main-wrap .academy.h-listbox-wrap > input[type="checkbox"] + label:before { background-image:url(../images/main_login_icon02.png); } 
+    /* 학원회원 로그인 */
+    .hunjang-main-wrap .acad-login .modify-info .info-num { color: #0E97FF; text-decoration: underline; } 
 
+    /* 학원회원 로그인 - 상호가 2개 이상인 경우 */
+    .hunjang-main-wrap .acad-login .h-notice-wrap { margin-bottom: 2px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label { font-size: 13px; padding-right: 20px; color: #7E7E7E; font-weight: var(--text-regular); line-height: 21px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label::after { right: -9px; background-size: contain; width: 20px; height: 20px; } 
+    .hunjang-main-wrap .acad-login .add-info-link li a { font-size: var(--text-subtitle5); } 
+    .hunjang-main-wrap .acad-login .dropdown ul li:hover { background: var(--neutral-3); transition: all 0.2s ease; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown { display:block; width: 210px; height: 160px; top: 28px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown { display:none; outline-width: 1px; border-radius: 6px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul { margin: 6px 0; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul li a { display: block; padding: 10px 20px; font-size: var(--text-subtitle4); color: var(--black-3); line-height: 16px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap label span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
 
+    /* 로고슬라이드 */
+    .hunjang-main-wrap .logo-slide-wrap { width: 100%; position: relative; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper,
+    .hunjang-main-wrap .logo-slide-wrap swiper-container { margin-left: 21px; margin-right: 21px; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-slide { transition: 0.1s; height: 60px; line-height: 40px; text-align: center; overflow: hidden; padding: 12px 25px; border-radius: 90px; border: 1px solid #E0E6EF; box-sizing: border-box; background: #fff; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-slide .thumbnail { width: auto; max-width: 95%; max-height: 100%; display: inline-block; vertical-align: middle; margin-top: -6px; } 
+    .hunjang-main-wrap .logo-slide-wrap .logo-arrow { transition: all 0.2s; background: url(../images/logo-slide-next.png) no-repeat center/contain; width: 8px; height: 12px; right: 0; margin-top: -6px; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-button-next:after, 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-rtl .swiper-button-prev:after { content:none; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-button-prev { background-image:url(../images/logo-slide-prev.png); left:0; } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-button-next:hover { background-image: url(../images/logo-slide-next-on.png); } 
+    .hunjang-main-wrap .logo-slide-wrap .swiper-button-prev:hover { background-image: url(../images/logo-slide-prev-on.png); } 
 
- /* pc메인 로그인 후 서비스 미 신청 */
- .hunjang-main-wrap .login-wrap.no-service .login-contents li { border: 0; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-width: 0 0 1px 0; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li a p { font-size: 13px; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon { margin: 7px auto 0; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox { margin: 0; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label { height: 116px; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; border-radius: 10px 0 0 0; padding: 15px; flex-direction: column; width: 100%; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-radius: 0 10px 0 0; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"] + label::before { top: 13px; left: 13px; opacity: 0.5; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label, 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label::before { opacity:1; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover p { color:#0E97FF; } 
- .hunjang-main-wrap .login-wrap.no-service .login-contents li a:hover .h-checkbox input[type="checkbox"] + label::before { color:#0E97FF; opacity: 1; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt { font-size: 13px; line-height: 42px; text-align: center; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt.first.noactive { display:none; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt.second { display:none; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt.second.active { display: block; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt.third { display:none; } 
- .hunjang-main-wrap .login-wrap.no-service .apply-txt.third.active { display: block; } 
-
-
- /* 강사회원 로그인 */
- .hunjang-main-wrap .login-wrap.login-after { padding: 25px; } 
- .hunjang-main-wrap .login-wrap.login-after .login-name { font-size: 13px; line-height: 21px; } 
- .hunjang-main-wrap .login-wrap.login-after .login-name span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
- .hunjang-main-wrap .login-wrap.login-after .modify-info { font-size: 13px; line-height: 20px; } 
- .hunjang-main-wrap .login-wrap.login-after .button-group { margin: 8px 0; } 
- .hunjang-main-wrap .login-wrap.login-after .button-group .ac { margin-left: 0; } 
- .hunjang-main-wrap .login-wrap.login-after .button-group .rf { margin-right: 0; } 
- .hunjang-main-wrap .login-wrap.login-after .add-info-link li { position:relative; padding: 0 15px; } 
- .hunjang-main-wrap .login-wrap.login-after .add-info-link li:first-child { padding-left:0; } 
- .hunjang-main-wrap .login-wrap.login-after .add-info-link li:after { content: ''; width: 1px; height: 13px; position: absolute; right: 0; top: 50%; margin-top: -6.5px; background: #E0E6EF; } 
- .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child:after { content:none; } 
-
-
- /* 학원회원 로그인 */
- .hunjang-main-wrap .acad-login .modify-info .info-num { color: #0E97FF; text-decoration: underline; } 
-
- /* 학원회원 로그인 - 상호가 2개 이상인 경우 */
- .hunjang-main-wrap .acad-login .h-notice-wrap { margin-bottom: 2px; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label { font-size: 13px; padding-right: 20px; color: #7E7E7E; font-weight: var(--text-regular); line-height: 21px; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label::after { right: -9px; background-size: contain; width: 20px; height: 20px; } 
- .hunjang-main-wrap .acad-login .add-info-link li a { font-size: var(--text-subtitle5); } 
- .hunjang-main-wrap .acad-login .dropdown ul li:hover { background: var(--neutral-3); transition: all 0.2s ease; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown { display:block; width: 210px; height: 160px; top: 28px; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown { display:none; outline-width: 1px; border-radius: 6px; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul { margin: 6px 0; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul li a { display: block; padding: 10px 20px; font-size: var(--text-subtitle4); color: var(--black-3); line-height: 16px; } 
- .hunjang-main-wrap .acad-login .h-notice-wrap label span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
-
-
+/* 메인 끝 */
 
 
 

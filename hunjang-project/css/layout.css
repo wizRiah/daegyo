@@ -212,11 +212,6 @@
 
 
 
-
-
-
-
-
 /* 훈장마을 메인 레이아웃 */
 /* 공통 */
 .hunjang-main-wrap .layout-inner { width: 1164px; margin: 0 auto; } 
@@ -322,6 +317,22 @@
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.membership a::before { width: 25px; left: -2px; height: 24px; background-image: url(../images/main_ico_03.png); } 
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.search a::before { width: 21px; height: 17px; background-image: url(../images/main_ico_04.png); } 
 
+/* 헤더부분 강사서비스 로그인 */
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label { padding: 11px 38px 11px 45px; border-color: #26B2C8; color: #26B2C8; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:after { transition:all 0.5s; transform: translateY(-50%) rotate(180deg); background: transparent url(../images/icon_select_arrow_color.png) no-repeat center/contain; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:before { content: ""; background: url(../images/main_login_icon01.png) no-repeat center/contain; position: absolute; left: 20px; top: 9px; width: 18px; height: 18px; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"]:checked + label:after { transform: translateY(-50%) rotate(360deg); } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown { max-height: fit-content; width: 180px; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name { font-size: var(--text-subtitle2); padding: 15px 20px; position:relative; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name:after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #E7ECF3; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log { position:relative; width: 160px; padding: 10px 0; margin-bottom: 10px; font-size: var(--text-subtitle4); color: #fff; background: var(--grey-1); border-radius: 4px; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log:before { content: ''; display: inline-block; margin-right: 10px; background: url(../images/icon_logout.png) no-repeat center; width: 16px; height: 16px; vertical-align: middle; font-weight: var(--text-regular); } 
+ 
+/* 헤더부분 학원서비스 로그인 */
+.hunjang-main-wrap .academy.h-listbox-wrap > input[type="checkbox"] + label:before { background-image:url(../images/main_login_icon02.png); } 
+
+
 /* 메인메뉴 */
 .hunjang-main-wrap header .gnb-list { margin: 0 0 0 10px; display: flex; } 
 .hunjang-main-wrap header .gnb-list>li { flex: 0 0 auto; } 
@@ -368,4 +379,4 @@
 .hunjang-main-wrap footer .info-contents .callcenter .time { margin-top: 7px; font-weight: var(--text-bold); } 
 .hunjang-main-wrap footer .info-contents .callcenter .contact { margin-top: 5px; } 
 .hunjang-main-wrap footer .info-contents .addr-info { font-size: 12px; color: var(--black-3); line-height: 22px; } 
-/* // */
+
