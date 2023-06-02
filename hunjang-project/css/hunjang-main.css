@@ -192,18 +192,19 @@
 .hunjang-main-wrap .logo-slide-wrap .logo-arrow.logo-arrow-next:hover { background-image: url(../images/logo-slide-next-on.png); } 
 .hunjang-main-wrap .logo-slide-wrap .logo-arrow.logo-arrow-prev:hover { background-image: url(../images/logo-slide-prev-on.png); } 
 
-/* 헤더부분 강사서비스 로그인 */
 
+/* 헤더부분 강사서비스 로그인 */
 .hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label { padding: 11px 38px 11px 45px; border-color: #26B2C8; color: #26B2C8; } 
 .hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:after { transition:all 0.5s; transform: translateY(-50%) rotate(180deg); background: transparent url(../images/icon_select_arrow_color.png) no-repeat center/contain; } 
 .hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label:before { content: ""; background: url(../images/main_login_icon01.png) no-repeat center/contain; position: absolute; left: 20px; top: 9px; width: 18px; height: 18px; } 
 .hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"]:checked + label:after { transform: translateY(-50%) rotate(360deg); } 
-
-
-
-
-
-
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown { max-height: fit-content; width: 180px; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name { font-size: var(--text-subtitle2); padding: 15px 20px; position:relative; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name:after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #E7ECF3; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .user-name span { display: inline-block; width: auto; max-width: calc(100% - 33px); vertical-align: text-bottom; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log { position:relative; width: 160px; padding: 10px 0; margin-bottom: 10px; font-size: var(--text-subtitle4); color: #fff; background: var(--grey-1); border-radius: 4px; } 
+.hunjang-main-wrap .serv-login-drop.h-listbox-wrap .dropdown .btn-log:before { content: ''; display: inline-block; margin-right: 10px; background: url(../images/icon_logout.png) no-repeat center; width: 16px; height: 16px; vertical-align: middle; font-weight: var(--text-regular); } 
+ 
 
 
 
@@ -325,9 +326,11 @@
 .academyInfo-photo .academy-photo-slide:hover {cursor: pointer;}
 .academyInfo-photo .academy-photo-slide .swiper-slide {height:95px; position:relative; padding:0; border-radius:4px; overflow:hidden;} 
 .academyInfo-photo .academy-photo-slide .swiper-slide img {width:100%; display:block; position: absolute; left:-999px; top:-999px; right:-999px; bottom:-999px; margin:auto; min-width:100%; min-height: 100%;}
-.academyInfo-photo .academy-photo-slide .swiper-slide .clickPhoto:after {content:""; background:url(../images/icon_mypage_arrow_full.png) no-repeat center #43A986B3; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.academyInfo-photo .academy-photo-slide .swiper-slide .thumbnail-video:before {content:""; width:23px; height:23px; display:inline-block; background:url(../images/play-arrow-circle.png); z-index: 2; position: absolute; top: 50%; left: 50%; margin:-14px 0 0 -12px;}
+.academyInfo-photo .academy-photo-slide .swiper-slide .clickPhoto:after {content:""; background:url(../images/icon_mypage_arrow_full.png) no-repeat center 31px #43A986B3; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.academyInfo-photo .academy-photo-slide .swiper-slide .clickPhoto.thumbnail-video:before {display:none;}
 .academyInfo-photo .academy-photo-slide .swiper-button-next, 
-.academyInfo-photo .academy-photo-slide .swiper-button-prev {width:64px; height:64px; background:url(../images/slide-arrow-circleBtn.png); top:50%; margin-top:-26px; opacity:1 !important;} 
+.academyInfo-photo .academy-photo-slide .swiper-button-prev {width:64px; height:64px; background:url(../images/slide-arrow-circleBtn.png); top:50%; margin-top:-27px; opacity:1 !important;} 
 .academyInfo-photo .academy-photo-slide .swiper-button-next {right:0; margin-right:-32px; background-position:right;} 
 .academyInfo-photo .academy-photo-slide .swiper-button-prev {left:0; margin-left:-32px;} 
 .academyInfo-photo .academy-photo-slide .swiper-button-next::after {display:none;}
