@@ -126,10 +126,15 @@
     .h-resume-wrap .r-side .h-register .h-register-tit::before {position:absolute; top:0; left:0; content:''; width:100%; height:calc(100% + -1px); border-bottom:1px solid #DFE4EC;}
     .h-resume-wrap .r-side .h-register .h-register-tit strong {position:relative; padding-bottom:10px; display:inline-block; border-bottom:1px solid #000; box-sizing:border-box;}
     /* right menu list */
-    .h-resume-wrap .r-side .h-register .h-register-cate li {position:relative; display:flex; flex-flow:row wrap; align-items:center; border-radius:4px;}
-    .h-resume-wrap .r-side .h-register .h-register-cate li a {display:flex; flex-flow:row wrap; align-items:center; width:100%; padding:7px 15px; color:var(--black-6); box-sizing:border-box; transition:all ease 0.3s;}
-    .h-resume-wrap .r-side .h-register .h-register-cate li:not(.required) a {justify-content:space-between;}
-    .h-resume-wrap .r-side .h-register .h-register-cate li:not(.required) a::after {display:inline-block; font-family:'Material Icons'; content:'add_circle_outline'; width:24px; height:24px; font-style:normal; font-size:24px;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li {position:relative; display:flex; justify-content: space-between; flex-flow:row wrap; align-items:center; border-radius:4px; padding:5px 15px;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li a {display:flex; flex-flow:row wrap; align-items:center; color:var(--black-6); box-sizing:border-box; transition:all ease 0.3s;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-add {display:flex;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-add:hover:after {color: var(--black-3); transition:all ease 0.3s;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-add::after {display:inline-block; font-family:'Material Icons'; content:'add_circle_outline'; width:24px; height:24px; font-style:normal; font-size:24px; color: var(--black-6);}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-close {display:flex;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-close:hover:after {color: var(--black-3); transition:all ease 0.3s;}
+    .h-resume-wrap .r-side .h-register .h-register-cate li .btnReg-close::after {display:inline-block; font-family:'Material Icons'; content:'cancel_outline'; width:24px; height:24px; font-style:normal; font-size:24px; color: var(--grey-1);}
+    
     /* 필수 값 */
     .h-resume-wrap .r-side .h-register .h-register-cate .required a {font-weight:var(--text-medium); color:var(--black-2);}
     .h-resume-wrap .r-side .h-register .h-register-cate .required strong {display:inline-block; margin-left:5px; font-size:10px; font-weight:var(--text-regular); color:var(--orange);}
@@ -138,7 +143,7 @@
     /* active */
     .h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active {background-color:var(--neutral-3);}
     .h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active a {font-weight:var(--text-medium); color:var(--blue-3);}
-    .h-resume-wrap .r-side .h-register .h-register-cate li:not(.required).active a::after {display:inline-block; content:'cancel_outline'; color:var(--grey-1);}
+    
     /* 미리보기 button */
     .h-resume-wrap .r-side .h-register .h-preview-wrap {margin-top:20px;}
     .h-resume-wrap .r-side .h-register .h-preview-wrap [class^="h-button"] {position:relative; justify-content:space-between; padding-left:15px; padding-right:15px; font-size:var(--text-subtitle4); transition:all ease-out 0.3s;}
