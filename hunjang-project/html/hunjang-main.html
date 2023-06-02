@@ -68,7 +68,7 @@
                 <button type="button" class="btn-srch">검색</button>
               </div>
               <!-- 과목 지역찾기 버튼 -->
-              <div class="h-listbox-wrap">
+              <div class="h-listbox-wrap search-btn">
                 <input type="checkbox" id="list-box-01" class="list-box">
                 <label for="list-box-01">과목&amp;지역 찾기
                   <i class="material-symbols-outlined">
@@ -324,10 +324,28 @@
               <!-- // -->
             </div>
             <!-- 로그인,회원가입 버튼 -->
-            <div class="button-group flex inline">
+            <div class="button-group flex" style="
+    display: none;
+">
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
-            </div>
+            </div><div class="h-listbox-wrap serv-login-drop" style="
+">
+                <input type="checkbox" id="list-box-02" class="list-box">
+                <label for="list-box-02" style="
+">강사서비스</label>
+                <!-- dropdown -->
+                <div class="dropdown">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);">111</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">222</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -572,33 +590,188 @@
         <div class="main-visual">
           <div class="flex">
             <div class="main-slide-wrap" style="background: #847f78;"></div>
+
             <div class="right">
-              <div class="login-wrap">
-                <ul class="login-contents">
-                  <li><a href="#">
-                      <div class="login-icon teach"></div>
-                      <p class="mt10 h-txt-c h-txt-1">강사 로그인</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="login-icon acad"></div>
-                      <p class="mt10 h-txt-c h-txt-1">학원 로그인</p>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="join-info">
-                  <li><a href="#">
-                      <p class="h-txt-c h-txt-pit text-subtitle5">회원가입</p>
-                    </a></li>
-                  <li><a href="#">
-                      <p class="h-txt-c h-txt-3 text-subtitle5">아이디 찾기</p>
-                    </a></li>
-                  <li><a href="#">
-                      <p class="h-txt-c h-txt-3 text-subtitle5">PW 찾기</p>
-                    </a></li>
-                </ul>
-              </div>
+              <!-- 로그인 섹션 -->
+
+                <!-- 로그인 전 -->
+                <div class="login-wrap">
+                  <ul class="login-contents">
+                    <li><a href="#">
+                        <div class="login-icon teach"></div>
+                        <p class="mt10 h-txt-c h-txt-1">강사 로그인</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="login-icon acad"></div>
+                        <p class="mt10 h-txt-c h-txt-1">학원 로그인</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="join-info">
+                    <li>
+                      <a href="#">
+                        <p class="h-txt-c h-txt-pit text-subtitle5">회원가입</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p class="h-txt-c h-txt-3 text-subtitle5">아이디 찾기</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p class="h-txt-c h-txt-3 text-subtitle5">PW 찾기</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- // -->
+
+
+                <!-- PC메인 로그인 후 서비스 미 신청 -->
+                <div class="login-wrap no-service" style="display:none;">
+                  <ul class="login-contents">
+                    <li class="teach-serv">
+                      <a href="#">
+                        <div class="h-checkbox checkbox05">
+                          <input type="checkbox" name="checkForm" id="check05">
+                          <label for="check05">
+                            <div class="login-icon teach"></div>
+                            <p class="mt10 h-txt-c h-txt-2">강사 서비스<br>신청하기</p>
+                          </label>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="academy-serv">
+                      <a href="#">
+                        <div class="h-checkbox checkbox05">
+                          <input type="checkbox" name="checkForm" id="check06">
+                          <label for="check06">
+                            <div class="login-icon acad"></div>
+                            <p class="mt10 h-txt-c h-txt-2">학원 서비스<br>신청하기</p>
+                          </label>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="apply-txt h-txt-5 first">강사 또는 학원 서비스를 신청해 주세요!</p>
+                  <p class="apply-txt h-txt-2 second">매일 <span class="h-txt-orange">통통통 Point</span>를 드립니다!</p>
+                  <p class="apply-txt h-txt-2 third"><span class="h-txt-orange">웰컴쿠폰</span>을 즉시 지급해 드립니다!</p>
+                </div>
+                <!-- // -->
+
+                <!-- 강사회원 로그인 -->
+                <div class="login-wrap login-after teacher-login" style="display:none;">
+                  <p class="h-txt-3 login-name"><span class="h-txt-2 h-txt-bold h-tit-18">홍길동</span>님</p>
+                  <p class="h-txt-3 modify-info">최종 수정일 : <span class="h-txt-2">2022.05.12</span></p>
+                  <div class="button-group flex">
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
+                  </div>
+                  <ul class="flex">
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        지원현황
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        스크랩
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        추천채용
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- // -->
+
+                <!-- 학원회원 로그인 -->
+                <div class="login-wrap login-after acad-login" style="display:none;">
+                  <p class="h-txt-3 login-name">
+                    <span class="h-txt-2 h-txt-bold h-tit-18">광개토대왕수학영어학원</span>님
+                  </p>
+                  <p class="h-txt-3 modify-info">진행중인 공고
+                    <a class="info-num h-txt-bold" href="#">5</a>건
+                  </p>
+                  <div class="button-group flex">
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
+                  </div>
+                  <ul class="flex">
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        지원자 관리
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        추천인재
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- // -->
+
+                <!-- 학원회원 로그인 - 상호가 2개 이상인 경우 -->
+                <div class="login-wrap login-after acad-login" style="display:none;">
+                  <div class="h-notice-wrap">
+                    <input type="checkbox" id="list-box" class="h-title-btn">
+                    <label for="list-box"><span class="h-txt-2 h-txt-bold h-tit-18">광개토대왕수학영어학원</span>님</label>
+
+                    <!-- dropdown -->
+                    <div class="dropdown">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);"><span class="h-txt-medium">광개토대왕수학학원</span>님</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                  <p class="h-txt-3 modify-info">진행중인 공고
+                    <a class="info-num h-txt-bold" href="#">5</a>건
+                  </p>
+                  <div class="button-group flex">
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on flex-1 h-txt-medium">이력서 관리</a>
+                    <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf flex-1 h-txt-medium">로그아웃</a>
+                  </div>
+                  <ul class="flex add-info-link">
+                    <li>
+                      <a href="#" class="h-txt-c h-txt-3">
+                        지원자 관리
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="h-txt-c text-subtitle5 h-txt-3">
+                        추천인재
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- // -->
+
+              <!-- // -->
+
+
+              <!-- 공지사항 게시판 -->
               <div class="notice-wrap">
                 <p class="h-txt-1 h-txt-bold">공지사항</p>
                 <ul class="h-bullet-01">
@@ -606,8 +779,12 @@
                   <li><a href="#" class="txt-ellipsis">채용공고 게재기간은 최초 게재일로부터 최대 50일까지 입니다.</a></li>
                 </ul>
               </div>
+              <!-- // -->
+
             </div>
           </div>
+
+          <!-- 로고 배너 슬라이드 -->
           <div class="logo-slide-wrap">
             <div class="logo-slide">
               <div>
@@ -671,6 +848,8 @@
             <button class="logo-arrow logo-arrow-prev" type="button"></button>
             <button class="logo-arrow logo-arrow-next" type="button"></button>
           </div>
+          <!-- // -->
+
         </div>
       </div>
       <div class="content">
@@ -1719,7 +1898,6 @@
   </div>
 
 
-
   <div class="lottie-bg" style="display: none;">
     <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
@@ -1761,6 +1939,7 @@
   <script>
     $(document).ready(function() {
 
+
       // header 전체메뉴
       // 전체메뉴 창 뒤 어두운 배경
       var $dim = document.getElementById('dim');
@@ -1771,6 +1950,19 @@
       // 메인메뉴
       var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
 
+
+      // 전체메뉴 창 뒤 어두운 배경 추가
+      var darkBackground = function () {
+
+        if ($dim.style.display == "none") {
+          $dim.style.display = "block";
+        } else {
+          $dim.style.display = "none";
+        }
+
+      };
+
+
       // header 전체메뉴 클릭시
       $('.hunjang-main-wrap .btn-all-menu').click(function() {
 
@@ -1780,19 +1972,11 @@
         // 전체메뉴 창 활성화
         $allMenu.toggleClass("on");
 
-
-
         // 전체메뉴 창 뒤 어두운 배경 추가
-        if ($dim.style.display == "none") {
-          $dim.style.display = "block";
-        } else {
-          $dim.style.display = "none";
-        }
-
+        darkBackground();
 
         // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
         // ????
-
 
       });
 
@@ -1800,15 +1984,23 @@
       // 메인메뉴 호버시 어두운 배경 추가
       $('.hunjang-main-wrap .gnb-list>li.on').hover(function() {
 
-        if ($dim.style.display == "none") {
-          $dim.style.display = "block";
-        } else {
-          $dim.style.display = "none";
-        }
+        darkBackground();
 
       });
 
 
+
+      // pc메인 로그인 후 서비스 미 신청 부분
+      // 해당 신청하기 영역 hover시
+      $('.hunjang-main-wrap .login-wrap.no-service .login-contents li.teach-serv a').hover(function () {
+        $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.first').toggleClass("noactive");
+        $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.second').toggleClass("active");
+      });
+
+      $('.hunjang-main-wrap .login-wrap.no-service .login-contents li.academy-serv a').hover(function () {
+        $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.first').toggleClass("noactive");
+        $('.hunjang-main-wrap .login-wrap.no-service .apply-txt.third').toggleClass("active");
+      });
 
     });
   </script>
