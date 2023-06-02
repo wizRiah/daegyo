@@ -626,17 +626,32 @@
             </div>
             <div class="spacer"></div>
 
-            <!-- 슬라이드 배너 -->
-            <div class="right slide">
-              <div class="link-more">
-                <a href="#">
-                  <img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
-                <a href="#">
-                  <img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
+
+            <!-- Swiper -->
+            <div class="swiper r-auto-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../images/main-banner02.png" alt="스마트한 학원관리 통통통"></a>
+                </div>
               </div>
             </div>
+  
+            <script>
+              var swiper = new Swiper(".r-auto-slide", {
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false
+                },
+              });
+            </script>
+
+
+
+
+
           </div>
         </div>
       </div>
@@ -655,7 +670,40 @@
           <div class="flex">
 
             <!-- 메인 슬라이드 -->
-            <div class="main-slide-wrap" style="background: #847f78;"></div>
+
+            <!-- Swiper -->
+       
+              <div class="swiper main-slide-wrap">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../images/bg_mainVisual01.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="../images/bg_mainVisual01.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="../images/bg_mainVisual01.jpg" alt=""></div>
+                </div>
+
+                
+                
+                <!-- <div class="mainVisual-controller"> -->
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+               <!-- </div> -->
+                
+              </div>
+          
+
+            <!-- Initialize Swiper -->
+            <script>
+              var swiper = new Swiper(".main-slide-wrap", {
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+            </script>
             <!-- // -->
 
 
@@ -902,7 +950,7 @@
                 </div>
 
               </div>
-              <!-- <div class="swiper-pagination"></div> -->
+
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
             <div class="swiper-button-next logo-arrow" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-9df22dac7c23441c" aria-disabled="false"></div>
             <div class="swiper-button-prev logo-arrow swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9df22dac7c23441c" aria-disabled="true"></div>
@@ -2130,7 +2178,7 @@
         slidesPerView: 8,
         spaceBetween: 6,
         pagination: {
-          el: ".swiper-pagination",
+          // el: ".swiper-pagination",
           clickable: true,
         },
         navigation: {
