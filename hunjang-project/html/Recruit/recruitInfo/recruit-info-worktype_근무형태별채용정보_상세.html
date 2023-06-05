@@ -4,30 +4,28 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="../../css/font.css">
-  <link rel="stylesheet" href="../../css/common.css">
-  <link rel="stylesheet" href="../../css/styleGuide.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/hunjang-main.css">
-  <link rel="stylesheet" href="../../css/yhy.css">
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../../css/layout.css">
+  <link rel="stylesheet" href="../../../css/hunjang-main.css">
 
   <!-- 충돌나는지만 확인 -->
-  <link rel="stylesheet" href="../../css/recruit-info.css">
-  <link rel="stylesheet" href="../../css/popup.css">
-  <link rel="stylesheet" href="../../css/mypage.css">
-  <link rel="stylesheet" href="../../css/resume-view.css">
-  <link rel="stylesheet" href="../../css/reseum-regist.css">
-  <link rel="stylesheet" href="../../css/recruit-view.css">
-  <link rel="stylesheet" href="../../css/academy-service.css">
-  <link rel="stylesheet" href="../../css/human_srch.css">
-  <link rel="stylesheet" href="../../css/hunjang-main_ssj.css">
-  <link rel="stylesheet" href="../../css/osoo.css">
+  <link rel="stylesheet" href="../../../css/recruit-info.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+  <link rel="stylesheet" href="../../../css/mypage.css">
+  <link rel="stylesheet" href="../../../css/resume-view.css">
+  <link rel="stylesheet" href="../../../css/reseum-regist.css">
+  <link rel="stylesheet" href="../../../css/recruit-view.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/human_srch.css">
+  <link rel="stylesheet" href="../../../css/hunjang-main_ssj.css">
+  <link rel="stylesheet" href="../../../css/osoo.css">
   <!-- // -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <!-- swiper slide cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
@@ -65,7 +63,7 @@
             <!-- 로고 -->
             <div class="top-logo-inner flex">
               <a class="top-logo" href="#">
-                <img src="../../images/top_logo.png" alt="훈장마을로고">
+                <img src="../../../images/top_logo.png" alt="훈장마을로고">
               </a>
             </div>
             <div class="center search flex">
@@ -318,20 +316,34 @@
             </div>
             <div class="spacer"></div>
 
-            <!-- 슬라이드 배너 -->
-            <div class="right">
-              <div class="link-more">
-                <a href="#" style="">
-                  <img src="../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
-                <a href="#" style="">
-                  <img src="../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
+
+            <!-- Swiper -->
+            <div class="swiper r-auto-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../../../images/main-banner02.png" alt="스마트한 학원관리 통통통"></a>
+                </div>
               </div>
             </div>
+
+            <script>
+              var swiper = new Swiper(".r-auto-slide", {
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false
+                },
+              });
+            </script>
+
+
+
           </div>
         </div>
       </div>
+
     </header>
     <!-- // -->
 
@@ -344,17 +356,17 @@
 
         <!-- content title -->
         <div class="h-tit-box-1 flex-end">
-          <p class="i-block h-tit-26">학력별 채용정보</p>
+          <p class="i-block h-tit-26">근무형태별 채용정보</p>
         </div>
 
         <!-- 검색조건영역 -->
         <div class="htSearch-tab-wrap">
 
-          <!-- Tab 학력, 과목(직무), 지역, 경력, 상세조건 -->
+          <!-- Tab 직무, 지역, 학력, 경력, 상세조건 -->
           <div class="h-tab-Contents-01 htSearch-tab htRound-tab">
             <!-- Tab Menu -->
-            <input type="radio" id="tabBtn01_1" name="tab01" class="tab-academic">
-            <label for="tabBtn01_1">학력</label>
+            <input type="radio" id="tabBtn01_1" name="tab01" class="tab-time">
+            <label for="tabBtn01_1">근무형태</label>
 
             <input type="radio" id="tabBtn01_2" name="tab01" class="tab-duty">
             <label for="tabBtn01_2">과목(직무)</label>
@@ -362,17 +374,20 @@
             <input type="radio" id="tabBtn01_3" name="tab01" class="tab-area">
             <label for="tabBtn01_3">지역</label>
 
-            <input type="radio" id="tabBtn01_4" name="tab01" class="tab-career">
-            <label for="tabBtn01_4">경력</label>
+            <input type="radio" id="tabBtn01_4" name="tab01" class="tab-academic">
+            <label for="tabBtn01_4">학력</label>
 
-            <input type="radio" id="tabBtn01_5" name="tab01" class="tab-computer">
-            <label for="tabBtn01_5">상세조건</label>
+            <input type="radio" id="tabBtn01_5" name="tab01" class="tab-career">
+            <label for="tabBtn01_5">경력</label>
+
+            <input type="radio" id="tabBtn01_6" name="tab01" class="tab-computer">
+            <label for="tabBtn01_6">상세조건</label>
 
 
             <!-- Tab Contents -->
             <div class="tabCo-Wrap">
 
-              <!-- 첫번째 탭 - 학력 검색옵션 -->
+              <!-- 첫번째 탭 - 근무형태 검색옵션 -->
               <div class="tabCo-CommonBox">
 
                 <div class="h-tab-container">
@@ -381,37 +396,26 @@
                   <div class="tab-content-wrap">
                     <!-- Tab Content 학력 - 세로 7단 -->
                     <div id="tab3-1" class="tab-content current">
-                      <ul class="tab-check-list col-7">
+                      <ul class="tab-check-list col-4">
                         <li>
                           <div class="h-checkbox checkbox04">
                             <input type="checkbox" name="checkForm" id="tab3-cont1-check01" checked="">
-                            <label for="tab3-cont1-check01">대학교 (4년)</label>
+                            <label for="tab3-cont1-check01">전임강사</label>
                           </div>
                         </li>
                         <li>
                           <div class="h-checkbox checkbox04">
                             <input type="checkbox" name="checkForm" id="tab3-cont2-check02">
-                            <label for="tab3-cont2-check02">대학원 석사</label>
+                            <label for="tab3-cont2-check02">단기강사</label>
                           </div>
                         </li>
                         <li>
                           <div class="h-checkbox checkbox04">
                             <input type="checkbox" name="checkForm" id="tab3-cont3-check03">
-                            <label for="tab3-cont3-check03">대학원 박사</label>
+                            <label for="tab3-cont3-check03">파트타임 강사ㆍ임시강사 (알바)</label>
                           </div>
                         </li>
-                        <li>
-                          <div class="h-checkbox checkbox04">
-                            <input type="checkbox" name="checkForm" id="tab3-cont4-check04">
-                            <label for="tab3-cont4-check04">대학 (2,3년)</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="h-checkbox checkbox04">
-                            <input type="checkbox" name="checkForm" id="tab3-cont5-check05">
-                            <label for="tab3-cont5-check05">고등학교</label>
-                          </div>
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>
@@ -1595,7 +1599,55 @@
 
               </div>
 
-              <!-- 네번째 탭 - 경력 검색옵션 -->
+              <!-- 네번째 탭 - 학력 검색옵션 -->
+              <div class="tabCo-CommonBox">
+
+                <div class="h-tab-container">
+
+                  <!-- Tab Content -->
+                  <div class="tab-content-wrap">
+                    <!-- Tab Content 학력 - 세로 7단 -->
+                    <div id="tab3-1" class="tab-content current">
+                      <ul class="tab-check-list col-7">
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont1-check01" checked="">
+                            <label for="tab3-cont1-check01">대학교 (4년)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont2-check02">
+                            <label for="tab3-cont2-check02">대학원 석사</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont3-check03">
+                            <label for="tab3-cont3-check03">대학원 박사</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont4-check04">
+                            <label for="tab3-cont4-check04">대학 (2,3년)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="h-checkbox checkbox04">
+                            <input type="checkbox" name="checkForm" id="tab3-cont5-check05">
+                            <label for="tab3-cont5-check05">고등학교</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- 다섯번째 탭 - 경력 검색옵션 -->
               <div class="tabCo-CommonBox">
 
                 <div class="h-tab-container">
@@ -1643,7 +1695,7 @@
 
               </div>
 
-              <!-- 다섯번째 탭 - 상세조건 검색옵션 -->
+              <!-- 여섯번째 탭 - 상세조건 검색옵션 -->
               <div class="tabCo-CommonBox">
 
                 <div class="h-tab-container">
@@ -1843,7 +1895,7 @@
               <button type="button" class="h-button-l btn-result"><span class="point">32,309건</span> 공고 검색</button>
               <button type="button" class="btn-sm-reset">선택 초기화</button>
             </div>
-
+            
           </div>
 
         </div>
@@ -1871,7 +1923,7 @@
                 <label for="tbl-btn-scrap1_1" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy01.jpg" alt="">
+                <img src="../../../images/logo_dummy01.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -1892,7 +1944,7 @@
                 <label for="tbl-btn-scrap1_2" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy02.jpg" alt="">
+                <img src="../../../images/logo_dummy02.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -1913,7 +1965,7 @@
                 <label for="tbl-btn-scrap1_3" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy03.jpg" alt="">
+                <img src="../../../images/logo_dummy03.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -1934,7 +1986,7 @@
                 <label for="tbl-btn-scrap1_4" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy04.jpg" alt="">
+                <img src="../../../images/logo_dummy04.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -1956,7 +2008,7 @@
                 <label for="tbl-btn-scrap1_5" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/img_nologo.png" alt="">
+                <img src="../../../images/img_nologo.png" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -1977,7 +2029,7 @@
                 <label for="tbl-btn-scrap1_6" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/img_nologo.png" alt="">
+                <img src="../../../images/img_nologo.png" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2009,7 +2061,7 @@
                 <label for="tbl-btn-scrap2_1" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy01.jpg" alt="">
+                <img src="../../../images/logo_dummy01.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2030,7 +2082,7 @@
                 <label for="tbl-btn-scrap2_2" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy02.jpg" alt="">
+                <img src="../../../images/logo_dummy02.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2051,7 +2103,7 @@
                 <label for="tbl-btn-scrap2_3" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy03.jpg" alt="">
+                <img src="../../../images/logo_dummy03.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2072,7 +2124,7 @@
                 <label for="tbl-btn-scrap2_4" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/logo_dummy04.jpg" alt="">
+                <img src="../../../images/logo_dummy04.jpg" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2094,7 +2146,7 @@
                 <label for="tbl-btn-scrap2_5" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/img_nologo.png" alt="">
+                <img src="../../../images/img_nologo.png" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2115,7 +2167,7 @@
                 <label for="tbl-btn-scrap2_6" onclick="">스크랩</label>
               </span>
               <a href="" class="imgbox">
-                <img src="../../images/img_nologo.png" alt="">
+                <img src="../../../images/img_nologo.png" alt="">
               </a>
               <div class="cardbox">
                 <a href="">
@@ -2132,6 +2184,9 @@
             </li>
           </ul>
         </div>
+
+        
+
 
         <div class="flex flex-between mb20">
           <a href="javascript:void(0);" class="h-button-ml">선택공고 한번에 지원하기</a>
@@ -2151,8 +2206,6 @@
             </select>
           </div>
         </div>
-
-        
 
         <!-- 테이블 -->
         <table class="h-tbl-basic-1 check-use tbl-recruit">
@@ -2819,7 +2872,7 @@
         <div class="footer-info flex">
           <div class="layout-inner">
             <div class="info-contents flex">
-              <div class="f-logo"><img src="../../images/footer_logo.png" alt="하단로고"></div>
+              <div class="f-logo"><img src="../../../images/footer_logo.png" alt="하단로고"></div>
 
               <div class="callcenter">
                 <p class="tit">훈장마을 고객센터</p>

@@ -3,15 +3,34 @@
 
 <head>
   <meta charset="utf-8">
-  <title>훈장마을_브랜드채용관</title>
+  <title>훈장마을 - 학원정보</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/hunjang-main.css">
+
+  <!-- 충돌나는지만 확인 -->
+  <link rel="stylesheet" href="../../../css/recruit-info.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+  <link rel="stylesheet" href="../../../../css/mypage.css">
+  <link rel="stylesheet" href="../../../css/resume-view.css">
+  <link rel="stylesheet" href="../../../css/reseum-regist.css">
+  <link rel="stylesheet" href="../../../css/recruit-view.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/human_srch.css">
+  <!-- // -->
+
+  <!-- google font -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  
 </head>
 
 <body>
@@ -58,7 +77,7 @@
                 </label>
                 <div class="box-search-detail">
                   <div class="h-tab-Contents-02"><button type="button" class="close" title="팝업 닫기">
-                      <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                      <img src="../../images/close_btn.svg" alt="팝업 닫기">
                     </button>
                     <input type="radio" id="tabBtn02_1" name="tab02" checked="">
                     <label for="tabBtn02_1">과목 (직무)</label>
@@ -318,8 +337,10 @@
             <div class="left">
               <div class="gnb-wrap">
                 <div class="all-menu">
-                  <!-- 전체보기 버튼 -->
-                  <button type="button" class="btn-all-menu" href="javascript:void(0);">전체보기</button>
+                  <!-- 전체보기 버튼 클릭시 클래스 on 추가-->
+                  <button type="button" class="btn-all-menu" href="javascript:void(0);">
+                    <div class="btn-image"></div>
+                  </button>
 
                   <!-- 클래스 on 추가시 전체메뉴 보임 -->
                   <div class="panel-all-menu">
@@ -329,39 +350,37 @@
                           <div class="item job">
                             <a href="#" class="dep1">채용정보</a>
                             <ul class="dep2">
-                              <li><a href="#">상세검색</a></li>
+                              <li><a href="#">오늘의 채용정보</a></li>
                               <li><a href="#">지역별</a></li>
-                              <li><a href="#">과목/직무별</a></li>
-                              <li><a href="#">경력별</a></li>
-                              <li><a href="#">학력별</a></li>
+                              <li><a href="#">과목별</a></li>
+                              <li><a href="#">직무별</a></li>
                               <li><a href="#">근무형태별</a></li>
+                              <li><a href="#">학력별</a></li>
+                              <li><a href="#">경력별</a></li>
+                              <li><a href="#">급여별</a></li>
                             </ul>
                           </div>
                           <div class="item top100"><a href="#" class="dep1">TOP 100</a>
                             <ul class="dep2">
-                              <li><a href="#">과목/직무별</a></li>
-                              <li><a href="#">지역별</a></li>
+                              <li><a href="#">오늘의 TOP 100</a></li>
+
                             </ul>
                           </div>
-                          <div class="item pool"><a href="#" class="dep1">인재정보</a>
+                          <div class="item pool"><a href="#" class="dep1">브랜드 채용관</a>
                             <ul class="dep2">
-                              <li><a href="#">오늘 등록된 인재</a></li>
-                              <li><a href="#">전체 인재</a></li>
-                              <li><a href="#">지역별</a></li>
-                              <li><a href="#">근무형태</a></li>
-                              <li><a href="#">강의대상</a></li>
-                              <li><a href="#">예체능/IT</a></li>
-                              <li><a href="#">공인시험</a></li>
                             </ul>
                           </div>
-                          <div class="item haktalk"><a href="#" class="dep1">학원톡톡</a>
+                          <div class="item haktalk" style="
+    flex: 0 0 250px;
+"><a href="#" class="dep1">학원톡톡</a>
                             <ul class="dep2">
                               <li><a href="#">티츄 웹툰</a></li>
-                              <li><a href="#">학원탐방</a></li>
-                              <li><a href="#">학원생활</a></li>
+                              <li><a href="#">전자근로계약</a></li>
+                              <li><a href="#">스마트취업 TOOL</a></li>
+                              <li><a href="#">학원노무 / 세무 FAQ</a></li>
+                              <li><a href="#">우리동네 학원검색</a></li>
                               <li><a href="#">Poll</a></li>
-                              <li><a href="#">사진 리터칭</a></li>
-                              <li><a href="#">학원 서식</a></li>
+                              <li><a href="#">학원생활 꿀팁</a></li>
                             </ul>
                           </div>
                         </div>
@@ -369,7 +388,7 @@
                           <div class="item product"><a href="#">유료 상품 안내</a></div>
                           <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
                           <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
-                          <div class="item partner"><a href="#">학원 파트너</a></div>
+                          <div class="item search"><a href="#">채용정보 상세검색</a></div>
                         </div>
                       </div>
                     </div>
@@ -397,34 +416,43 @@
                     </a>
                   </li>
                   <li class="list">
-                    <a href="#" style="color: var(--teal);">이력서 등록              </a>
+                    <a href="#" style="color: var(--teal);">이력서 등록</a>
                   </li>
                   <li class="list">
-                    <a href="#" style="
-    color: #26B2C8;
-">
-                      공고등록
-                    </a>
+                    <a href="#" style="color: #26B2C8;">채용공고 등록</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="spacer"></div>
 
-            <!-- 슬라이드 배너 -->
-            <div class="right">
-              <div class="link-more">
-                <a href="#" style="display: block;width: 261px;">
-                  <img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
-                <a href="#" style="display: block;width: 261px;">
-                  <img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
+             <!-- Swiper -->
+             <div class="swiper r-auto-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../../../images/main-banner01.png" alt="학원생활 큐레이션 에딧"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../../../images/main-banner02.png" alt="스마트한 학원관리 통통통"></a>
+                </div>
               </div>
             </div>
+
+            <script>
+              var swiper = new Swiper(".r-auto-slide", {
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false
+                },
+              });
+            </script>
+
+
+
           </div>
         </div>
       </div>
+
     </header>
     <!-- // -->
 
@@ -436,208 +464,327 @@
 
 
 
-
       <!-- 컨텐츠 -->
-      <div class="wd100" style=" background:#F6F7F8;">
-        <div class="content" style="background:transparent;">
+      <div class="wd100 academyInfo-mainTop bg01">
+        <!-- bg01 을 bg02, bg03, bg04, bg05 까지 1~5의 숫자로 변경하면 배경이미지가 바뀜. -->
+        <div class="content">
+          <p class="h-tit-26 whiteColor">학원정보</p>
+          <div class="radiusBox">
 
-          <h2 class="h-tit-26 mt20 mb30 flex flex-between" >
-            <span>스페셜 학원 브랜드 채용관</span>
-            <a href="javascript:void(0);" class="h-button-xs h-button-grey1 h-button-radius text-subtitle5 h-txt-regular"><span>입점문의</span><img src="../../../images/btn_white_arrow.svg"></a>
-          </h2>
+            <div class="academyInfo-logoBox">
+              <img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg">
+            </div>
 
-          <div class="brand-rcrutment-Wrap-4block">
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-              <div class="brandNmBox">파란수학학원</div>
-              <div class="brandnumberBox">17</div>
-            </a>
+            <div class="academyInfo-NmBox">
+              <span class="text-subtitle2">파란수학학원</span>
+              <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like5">
+              <label for="tbl-btn-like5" onclick=""></label>
+              <p>
+                <b>파란수학학원</b>은 <b>2023년 3월 5일</b>에 개원하여 <b>1년 이상</b> 학원을 운영중인 <b>입시/보습/속셈</b> 전문학원 입니다. <br>
+                <b>유아, 초등</b>을 대상으로 <b>국어, 미술, 수학</b>을 전문으로 교육하고 있으며, 원생은 <b>30명~100명 미만</b>의 원생이 파란수학<b>학원</b>을 등원하고 있습니다.
+              </p>
 
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-              <div class="brandNmBox">리케이온어학원</div>
-              <div class="brandnumberBox">88</div>
-            </a>
+              <table class="h-tbl-basic-2">
+                <colgroup>
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>학원유형</th>
+                    <td>보습/속셈</td>
+                    <th>주요과목</th>
+                    <td>수학, 과학</td>
+                  </tr>
+                  <tr>
+                    <th>원장(대표자)</th>
+                    <td>홍길동</td>
+                    <th>학원 설립일</th>
+                    <td>2023년 3월 10일</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-              <div class="brandNmBox">짱솔학원</div>
-              <div class="brandnumberBox">5</div>
-            </a>
+            <p class="h-tit-26 h-txt-c mb20 mt30">복지.혜택</p>
+            <ul class="academyInfo-benefit">
+              <li>연금.보험 - 국민연금, 고용보험, 산재보험, 건강보험</li>
+              <li>휴무, 휴가, 행사 - 주5일제</li>
+              <li>편의, 여가, 건강 - 점심 식사 지원</li>
+              <li>보상.수당.지원 - 퇴직금, 장기근속 포상, 휴일근로수당, 연월차제도수당, 명절선물/명절상여</li>
+            </ul>
 
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-              <div class="brandNmBox">크레버스</div>
-              <div class="brandnumberBox">123</div>
-            </a>
 
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-              <div class="brandNmBox">파란수학학원</div>
-              <div class="brandnumberBox">17</div>
-            </a>
 
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-              <div class="brandNmBox">리케이온어학원</div>
-              <div class="brandnumberBox">88</div>
-            </a>
-
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-              <div class="brandNmBox">짱솔학원</div>
-              <div class="brandnumberBox">5</div>
-            </a>
-
-            <a class="brand-block" href="#">
-              <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-              <div class="brandNmBox">크레버스</div>
-              <div class="brandnumberBox">123</div>
-            </a>
+            <p class="h-tit-26 h-txt-c mb20 mt30">인재상</p>
+            <ul class="academyInfo-person">
+              <li><div>성실하고 책임감이 강한 믿음직한 인재</div><div class="bedgeBox"></div></li>
+              <li><div>의욕적으로 임하는 도전적 인재</div><div class="bedgeBox"></div></li>
+              <li><div>항상 밝고 긍정적인 태도를 가진 인재</div><div class="bedgeBox"></div></li>
+              <li><div>전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재</div><div class="bedgeBox"></div></li>
+              <li><div>전문성과 업무 역량이 뛰어난 인재</div><div class="bedgeBox"></div></li>
+            </ul>
           </div>
+        </div>
+      </div>
+
+
+      <div class="wd100 academyInfo-photo" style=" background:#F6F7F8;">
+        <div class="content">
+          <p class="h-tit-26 h-txt-c mb20 mt30">학원정보</p>
+        
+          <div class="academy-photo-preview">
+            <img class="bigPhoto" src="../../../images/academyInfo_photoSample01.png">
+          </div>
+
+          <div class="academy-photo-slide">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">  
+
+                <!-- 10개까지만 나열 -->
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="../../../images/academyInfo_photoSample01.png"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://acaimg.etoos.com/hp/pc/images/cnt/lookaround/h2_02.jpg"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail thumbnail-video"><img src="https://cdn.woodkorea.co.kr/news/photo/202302/72129_82343_1123.jpg"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://t1.daumcdn.net/news/202101/03/seouleconomy/20210103180216602mmpi.jpg"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://gohanvit.co.kr/html/image/m_bnr2_01.jpg"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://www.esangdance.net/data/file/p08/3717577837_r1bWcHLE_20c6c437e8b30f77ae50e1543a31d94c30ddfdb3.jpg"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEZLTeeVGH3CDWN2cOK8TRkSb_DGNgzRcLW8W2evGuqjCZvpsgE9o4b11EPnkoz3RdWZA&usqp=CAU"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://compphoto.incruit.com/2021/03/1_202139221648.JPG"></a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="javascript:void(0);" class="thumbnail"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMTEyMDNfMTQ2/MDAxNjM4NTEzMDE3ODUz.iJtnbfDMK6Gf9hMfEwCgBV4fdeHKoDqKadpFSdifcAUg.zJ3OEX3kBSTABAFDD6EN6GJSIdlEOJ0qjzqGO_Kfs_og.JPEG.mbestjjc/20211203%EF%BC%BF124816.jpg?type=w800"></a>
+                </div>
+
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
 
         </div>
       </div>
+
+
+      <div class="wd100 academyInfo-map">
+        <div class="content">
+          <p class="h-tit-26 h-txt-c mb15 mt20">학원위치</p>
+          <div class="text-subtitle4 h-txt-3 mb15 h-txt-c">(12345) 서울 구로구 디지털로26길 123 지플러스타워9층 906호</div>
+          <a href="javascript:void(0);" class="h-button-s h-button-white" style="width:120px;">지도보기</a>
+        </div>
+      </div>
+
+
 
 
       <div class="content">
-        <h2 class="h-tit-26 mt20 mb30">전체 학원 브랜드</h2>
-        
-        <div class="brand-rcrutment-Wrap-5block">
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-            <div class="brandNmBox">파란수학학원</div>
-            <div class="brandnumberBox">17</div>
-          </a>
+        <p class="h-tit-26 mb20 mt30">채용공고</p>
+        <table class="h-tbl-basic-1 tbl-recruit">
+          <thead>
+            <tr>
+              <th style="width:150px;">근무지</th>
+              <th>학원명 / 공고제목 / 모집부문 / 급여</th>
+              <th style="width:100px;">지원자격</th>
+              <th style="width:110px;">마감일 / 등록일</th>
+              <th style="width:110px;">접수방법</th>
+            </tr>
+          </thead>
+          <tbody class="text-subtitle4">
+            <tr>
+              <td>
+                <div class="work-place">
+                  <p>서울 강남구</p>
+                  <p>경기도 오산시 외1</p>
+                </div>
+              </td>
+              <td class="txt-l">
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-            <div class="brandNmBox">리케이온어학원</div>
-            <div class="brandnumberBox">88</div>
-          </a>
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">강동구 서울아카데미에서 수학 선생님을 모십니다.</span>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-            <div class="brandNmBox">짱솔학원</div>
-            <div class="brandnumberBox">5</div>
-          </a>
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                        <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+                      </p>
+                    </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-            <div class="brandNmBox">파란수학학원</div>
-            <div class="brandnumberBox">17</div>
-          </a>
+                  </div>
+                </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-            <div class="brandNmBox">리케이온어학원</div>
-            <div class="brandnumberBox">88</div>
-          </a>
+              </td>
+              <td>
+                <p class="td-bold">경력3년↑</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-            <div class="brandNmBox">짱솔학원</div>
-            <div class="brandnumberBox">5</div>
-          </a>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+            <tr>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-            <div class="brandNmBox">파란수학학원</div>
-            <div class="brandnumberBox">17</div>
-          </a>
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-            <div class="brandNmBox">리케이온어학원</div>
-            <div class="brandnumberBox">88</div>
-          </a>
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap2">
+                        <label for="tbl-btn-scrap2" onclick="">스크랩</label>
+                      </p>
+                    </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-            <div class="brandNmBox">짱솔학원</div>
-            <div class="brandnumberBox">5</div>
-          </a>
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                  </div>
+                </div>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://www.hunjang.com/databank/a_photo/srjw333.jpg"></div>
-            <div class="brandNmBox">파란수학학원</div>
-            <div class="brandnumberBox">17</div>
-          </a>
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/201812/18/pjwx04_blny-jahya_logo.png"></div>
-            <div class="brandNmBox">리케이온어학원</div>
-            <div class="brandnumberBox">88</div>
-          </a>
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202202/24/r7si6w_orui-1p4uilq_logo.jpg"></div>
-            <div class="brandNmBox">짱솔학원</div>
-            <div class="brandnumberBox">5</div>
-          </a>
+            <tr>
+              <td>
+                <div class="work-place">
+                  <p>서울 동대문구</p>
+                </div>
+              </td>
+              <td class="txt-l">
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
+                <div class="flex flex-between flex-center">
+                  <div class="h-job-info">
 
-          <a class="brand-block" href="#">
-            <div class="logoBox"><img src="https://pds.saramin.co.kr/company/logo/202203/25/r9ap2o_8xn0-3w0nzs_logo.jpg"></div>
-            <div class="brandNmBox">크레버스</div>
-            <div class="brandnumberBox">123</div>
-          </a>
-        </div>
+                    <!-- 공고제목, 스크랩 -->
+                    <div class="academy-wrap">
+                      <p class="academy mt3-mb6">
+                        <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
 
+                        <!-- 버튼 스크랩 -->
+                        <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap3">
+                        <label for="tbl-btn-scrap3" onclick="">스크랩</label>
+                      </p>
+                    </div>
+
+                    <!-- 모집부문, 급여 -->
+                    <div class="recruit-cate text-subtitle5">
+                      <p class="cate-wrap">
+                        <span class="cate-name">모집부문</span>
+                        <span class="cate-item">수학</span>
+                        <span class="cate-item">과학</span>
+                      </p>
+
+                      <p class="cate-wrap">
+                        <span class="cate-name">급여</span>
+                        <span class="cate-item">월급</span>
+                        <span class="cate-item">200만원~300만원</span>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </td>
+              <td>
+                <p class="td-bold">경력무관</p>
+                <p class="td-nomarl">대학교(4년)</p>
+              </td>
+              <td>
+                <p class="td-bold">채용시 마감</p>
+                <p class="td-nomarl">11.12 등록</p>
+              </td>
+              <td>
+                <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <!-- 컨텐츠 END// -->
 
-
-
-
-
-
-
-
-
-
+      <!--컨텐츠 END -->
 
 
 
@@ -677,7 +824,7 @@
         <div class="footer-info flex">
           <div class="layout-inner">
             <div class="info-contents flex">
-              <div class="f-logo"><img src="../../../images/footer_logo.png" alt="하단로고"></div>
+              <div class="f-logo"><img src="../../images/footer_logo.png" alt="하단로고"></div>
 
               <div class="callcenter">
                 <p class="tit">훈장마을 고객센터</p>
@@ -713,43 +860,79 @@
 
 
 
-  <div class="lottie-bg" style="display: none;">
-    <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22"
-        preserveAspectRatio="xMidYMid meet"
-        style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-        <defs>
-          <clipPath id="__lottie_element_35">
-            <rect width="32" height="22" x="0" y="0"></rect>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#__lottie_element_35)">
-          <g transform="matrix(1,0,0,1,8.75,8.653697967529297)" opacity="1" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.75,1.75)">
-              <path fill="rgb(91,86,147)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-          <g transform="matrix(1,0,0,1,15,8.271718978881836)" opacity="0.8" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
-              <path fill="rgb(233,82,131)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-          <g transform="matrix(1,0,0,1,21,10.43514347076416)" opacity="0.5" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
-              <path fill="rgb(243,154,0)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-        </g>
-      </svg>
-    </div>
-  </div>
 
+
+  <div id="dim" style="display: none;"></div>
+
+  <script>
+    // header 전체메뉴
+    $(document).ready(function() {
+
+      // 전체메뉴 창 뒤 어두운 배경
+      var $dim = document.getElementById('dim');
+      // header 전체메뉴 클릭시
+      $('.btn-all-menu').click(function() {
+        // 전체메뉴 버튼 close버튼으로 변경
+        $(this).toggleClass("on");
+        $('.panel-all-menu').toggleClass("on");
+
+        // 전체메뉴 창 뒤 어두운 배경 추가
+        if ($dim.style.display == "none") {
+          $dim.style.display = "block";
+        } else {
+          $dim.style.display = "none";
+        }
+      });
+    });
+
+
+
+  //slide
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+
+
+
+
+  
+  //다른거 클릭했을때 기존에 클릭했던거 해제시키는거까지는 못했어요. 해주세욥.
+  $( document ).ready( function() {
+      $( '.swiper-slide>a' ).click( function() {
+        $(this).addClass("clickPhoto");
+      } );
+    } );
+
+  
+    //클릭시 큰이미지로 뿌림
+    window.onload = function() {
+        let bigPic = document.querySelector('.bigPhoto');
+        let smallPics = document.querySelectorAll('.thumbnail>img');
+
+        for(let i = 0; i < smallPics.length; i++) {
+            smallPics[i].onclick = changepic;
+        }
+
+        function changepic() {
+            let smallPicsAttribute = this.getAttribute('src');
+            bigPic.setAttribute('src', smallPicsAttribute);
+        }
+    }
+
+
+
+</script>
 
 </body>
 
