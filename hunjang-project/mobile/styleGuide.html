@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>스타일 가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/styleGuide.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- 데이터피커 cdn -->
+  <link rel="stylesheet" href="css/jquery-ui-1.12.1.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <style>
+    html {
+      background: #efefef;
+    }
+
+    .guide_container {
+      position: relative;
+      background: #efefef;
+    }
+
+    .guide_contents {
+      max-width: 1300px;
+      margin: 0 auto;
+      min-height: 300px;
+      padding: 70px 20px 120px;
+    }
+
+    .guidebBox {
+      border: 1px solid #ddd
+    }
+
+    .guide_big_tit {
+      position: relative;
+      font-size: 30px;
+    }
+
+    .guide_big_tit:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #eee;
+      content: ""
+    }
+
+    .guide_tit {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    .guide_tit_s {
+      font-size: 20px;
+      margin: 30px 0 25px
+    }
+
+    .guide_tit_s:first-child {
+      margin-top: 0
+    }
+
+    .guide_txt_desc {
+      margin-bottom: 40px;
+      font-size: 18px;
+      color: #666
+    }
+
+    .guide_tit_s+.guide_txt_desc {
+      margin-top: -15px
+    }
+
+    .guide_table {
+      table-layout: fixed;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .guide_table_tit {
+      vertical-align: top;
+    }
+
+    .guide_table_con {
+      padding: 30px;
+      background: #fff;
+      vertical-align: top;
+      color: #000
+    }
+
+    .guide_table_tit+.guide_table_con {
+      border-radius: 10px
+    }
+
+    .guide_colorbox {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 5px;
+      background: #fff;
+      vertical-align: middle;
+    }
+
+    .guide_item {
+      display: block;
+      margin-top: 10px
+    }
+
+    .guide_item:first-child {
+      margin-top: 0
+    }
+
+    .guide_description {
+      padding: 20px;
+      background: #cfd6e4;
+      color: #333;
+    }
+
+    .guide_description ul {
+      margin-left: 20px
+    }
+
+    .guide_description li {
+      list-style: square;
+    }
+
+    .guide_page_only {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .guide_page_only>div {
+      width: 30%;
+      margin-right: 1%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="wrap">
+
+    <!-- Contents -->
+    <section id="contents" class="contents guide_contents">
+
+      <h1 class="guide_big_tit">UI Style Guide</h1>
+
+      <div class="guide_table">
+        <div class="guide_table_tit">
+          <h2 class="guide_tit">Text field</h2>
+        </div>
+
+        <div class="guide_table_con">
+
+          <h3 class="guide_tit_s">컴포넌트</h3>
+
+          <h4>Bullet List Type 01 - font-size, color는 class로 같이 넣어줘야함</h4><br>
+          <ul class="h-bullet-01 text-subtitle5 h-txt-3">
+            <li>채용공고 게재기간은 최초 게재일로부터 최대 50일까지 입니다.</li>
+            <li>진행중인 공고는 최대 10개까지 가능. 초과 등록된 공고는 ‘대기중’ 상태가 되며, 유료서비스 신청 시에는 무제한 진행 가능합니다.</li>
+            <li>대기중 채용공고는 접수마감일까지 대기중 리스트에서 확인 가능하며, 마감일 이후 1년간 마감리스트에서 확인 가능합니다.</li>
+          </ul>
+          <br><br>
+
+          <h4>input text (label 너비는 각 페이지의 디자인에 맞춰서 쓰시오)</h4><br>
+          <div class="guide_page_only">
+            <div>
+              <!-- 01_기본형 -->
+              <!-- 
+                          텍스트박스 제목이 없는 경우에는 h-field-wrap
+                          텍스트 박스 왼쪽으로 제목이 나와있는 경우에는 h-field-wrap을 한번 제목이랑 함께 감싸준 h-textfield
+                          (02_버튼있는 유형으로 보면 더 쉽게 이해가능)
+                      -->
+              <div class="h-textfield">
+                <label for="txtNm">이름<span class="necessary">필수</span></label>
+                <input type="text" id="txtNm" class="h-txtfield-basic" />
+              </div>
+            </div>
+            <div>
+              <input type="text" id="txtNm" class="h-txtfield-basic" placeholder="이름" />
+            </div>
+
+            <div>
+              <input type="text" id="txtNm" class="h-txtfield-basic" disabled placeholder="이름" />
+            </div>
+
+
+            <div>
+              <!-- 02_버튼 있는 유형 -->
+              <div class="h-textfield">
+                <label for="txtNm">이름<span class="necessary">필수</span></label>
+                <div class="h-field-wrap">
+                  <input type="text" id="txtNm" class="h-txtfield-inner" />
+                  <a href="javascript:void(0);" class="h-button-s">설정하기</a>
+                </div>
+              </div>
+
+            </div>
+            <div>
+              <div class="h-field-wrap">
+                <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="이름" />
+                <a href="javascript:void(0);" class="h-button-s">설정하기</a>
+              </div>
+            </div>
+            <div></div>
+
+
+            <div>
+              <!-- 03_달력형 -->
+              <div class="h-textfield">
+                <label for="txtNm">일정</label>
+                <div class="h-field-wrap calendar">
+                  <input type="text" id="txtNm" class="h-txtfield-inner" readonly />
+                  <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+              <div class="h-field-wrap calendar">
+                <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM" readonly />
+                <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+              </div>
+            </div>
+
+            <div style="width:100%;">
+              <span class="i-block text-subtitle4 mr10">일정 묶음</span>
+
+              <!-- 일정 묶음 YYYY.MM.DD ~ YYYY.MM.DD -->
+              <div class="h-date-wrap">
+                <div class="h-field-wrap calendar">
+                  <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+                  <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+                </div>
+                ~
+                <div class="h-field-wrap calendar">
+                  <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+                  <a href="javascript:void(0);" class="h-btn-calndar" title="날짜 선택"></a>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+            <div>
+              <!-- 04_단위-텍스트포함유형 -->
+              <div class="h-field-wrap">
+                <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="희망급여(숫자만)" />
+                <span class="include_txt">만원</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="h-field-wrap">
+                <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="인증번호 입력" />
+                <span class="include_txt txtcolor-blue">인증성공</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="h-field-wrap">
+                <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="인증번호 입력" />
+                <span class="include_txt txtcolor-orange">인증실패</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 유난히 큰 유형 -->
+          <div class="h-field-wrap titleSize">
+            <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="이름" />
+            <a href="javascript:void(0);" class="h-btn-x" title="내용지우기"></a>
+          </div>
+
+          <br>
+
+          <!-- 타이핑 넘버 노출형 -->
+          <div class="h-field-wrap titleSize typenm">
+            <input type="text" id="txtNm" class="h-txtfield-inner" placeholder="이름" />
+            <div class="typngNm">
+              (
+              <span>00</span>
+              / 100자
+              )
+            </div>
+          </div>
+
+
+          <br><br>
+          <h4>달력 아이콘 클릭시 열림</h4>
+          <div class="guide_item">
+            <span class="date-picker">
+              <input type="text" id="datepickerStart" class="datePicker" placeholder="YYYY-MM-DD">
+              ~
+              <input type="text" id="datepickerEnd" class="datePicker" placeholder="YYYY-MM-DD">
+            </span>
+          </div>
+
+          <br><br>
+
+          <h4>select</h4>
+          <div class="guide_item">
+            <select name="" id="">
+              <option value="" disabled="" selected="">리스트 수</option>
+              <option value="">20개씩 보기</option>
+              <option value="">40개씩 보기</option>
+              <option value="">60개씩 보기</option>
+              <option value="">80개씩 보기</option>
+              <option value="">100개씩 보기</option>
+            </select>
+          </div>
+          <br><br><br>
+
+          <h4>dropdown</h4>
+          <div class="guide_item" style="background:#26B2C8F2; padding:20px;">
+
+            <!-- 그룹으로 사용시에는 h-listbox-group으로 감싸기 -->
+            <div class="h-listbox-group">
+
+              <!-- 개별로 사용시에는 h-listbox-wrap -->
+              <!-- dropdown 01 -->
+              <div class="h-listbox-wrap">
+                <input type="checkbox" id="list-box-01" class="list-box" />
+                <label for="list-box-01">dropdown 01</label>
+                <!-- dropdown -->
+                <div class="dropdown">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);">111</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">222</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- dropdown 02 -->
+              <div class="h-listbox-wrap">
+                <input type="checkbox" id="list-box-02" class="list-box" />
+                <label for="list-box-02">dropdown 02</label>
+                <!-- dropdown -->
+                <div class="dropdown">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);">111</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">222</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- dropdown 03 -->
+              <div class="h-listbox-wrap">
+                <input type="checkbox" id="list-box-03" class="list-box" />
+                <label for="list-box-03">dropdown 03</label>
+                <!-- dropdown -->
+                <div class="dropdown academy-name">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);">111</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">222</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          
+
+          <div class="h-listbox2-wrap">
+            <input type="checkbox" id="tbl-selbox" class="list-box">
+            <label for="tbl-selbox">모집부문</label>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li><a href="javascript:void(0);">국어</a></li>
+                <li><a href="javascript:void(0);">영어</a></li>
+                <li><a href="javascript:void(0);">수학</a></li>
+                <li><a href="javascript:void(0);">과학</a></li>
+                <li><a href="javascript:void(0);">국영수를</a></li>
+                <li><a href="javascript:void(0);">우선으로해야</a></li>
+                <li><a href="javascript:void(0);">아리아리아리</a></li>
+                <li><a href="javascript:void(0);">인정받고</a></li>
+                <li><a href="javascript:void(0);">일류대학으로간다</a></li>
+              </ul>
+            </div>
+          </div>
+          <br><br>
+
+          <!-- Dropdown - 아이콘 -->
+          <div class="h-listbox3-wrap">
+            <input type="checkbox" id="more-box4" class="list-box">
+            <label for="more-box4"><i class="material-symbols-outlined vert-m">more_vert</i></label>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><i class="material-symbols-outlined vert-m">block</i>차단</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><i class="material-symbols-outlined vert-m">delete</i>삭제</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br><br>
+
+
+          <!-- 타이틀 dropdown -->
+          <div class="h-notice-wrap">
+
+            <input type="checkbox" id="list-box" class="h-title-btn">
+            <label for="list-box">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!</label>
+
+            <!-- dropdown -->
+            <div class="dropdown">
+              <div class="droup-group">
+                <div class="group-title">진행중 공고</div>
+                <ul class="group-list">
+                  <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
+                </ul>
+              </div>
+              
+              <!-- 비활성화 시키는 경우 클래스 close추가 -->
+              <div class="droup-group close">
+                <div class="group-title">마감 공고</div>
+                <ul class="group-list">
+                  <li><a href="javascript:void(0);">훈장마을 부문별 신입/경력 사원 모집공고</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포지역 우수한 학생들과 함께 하고픈 감각있는 수학.과학 선생님</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">훈장마을 수학학원 초등 선생님 모집 (대치, 분당, 목동)</a><span class="date">~2023.06.01</span></li>
+                  <li><a href="javascript:void(0);">반포 훈장마을 영어 중고등부 영어 강사/데스크 직원 채용</a><span class="date">~2023.06.01</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <br><br><br><br>
+
+
+
+          <h4>checkbox</h4>
+          <div class="guide_item">
+
+            <div class="h-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="check01" checked />
+              <label for="check01">체크박스 디자인 01</label>
+            </div>
+
+            <div class="h-checkbox checkbox01">
+              <label>
+                <input type="checkbox" name="checkForm" /><span class="spanLabel"></span>
+              </label>
+            </div>
+
+            <br><br>
+
+            <div class="h-checkbox checkbox02">
+              <input type="checkbox" name="checkForm" id="check02" checked />
+              <label for="check02">
+                <i class="material-icons">task_alt</i>체크박스 디자인 02</label>
+            </div>
+
+            <div class="h-checkbox checkbox02 notxt">
+              <input type="checkbox" name="checkForm" id="check02_1" />
+              <label class="material-icons" for="check02_1">task_alt</label>
+            </div>
+
+            <br><br>
+
+            <div class="h-checkbox checkbox03">
+              <input type="checkbox" name="checkForm" id="check03" checked />
+              <label for="check03">체크박스 디자인 03</label>
+            </div>
+
+            <div class="h-checkbox checkbox03 ">
+              <input type="checkbox" name="checkForm" id="check03_1" />
+              <label for="check03_1"></label>
+            </div>
+
+            <br><br>
+
+            <div class="h-checkbox checkbox04">
+              <input type="checkbox" name="checkForm" id="check04" checked="" />
+              <label for="check04">체크박스 디자인04</label>
+            </div>
+
+            <div class="h-checkbox checkbox04 ">
+              <input type="checkbox" name="checkForm" id="check04_1" />
+              <label for="check04_1"></label>
+            </div>
+
+            <br><br>
+
+            <div class="h-checkbox checkbox05">
+              <input type="checkbox" name="checkForm" id="check05">
+              <label for="check05">미열람만 보기</label>
+            </div>
+
+          </div>
+          <br>
+
+          <h4>radio button</h4>
+          <div class="guide_item">
+            <!-- 라디오버튼 01 -->
+            <div class="h-radio-01">
+              <input type="radio" id="hradio01" name="hradio01" checked />
+              <label for="hradio01"><span class="rchk"></span>Line</label>
+
+              <input type="radio" id="hradio01_2" name="hradio01" />
+              <label for="hradio01_2"><span class="rchk"></span>Rectangle</label>
+
+              <input type="radio" id="hradio01_3" name="hradio01" />
+              <label for="hradio01_3"><span class="rchk"></span>Ellipse</label>
+
+              <input type="radio" id="hradio01_4" name="hradio01" />
+              <label for="hradio01_4"><span class="rchk"></span></label>
+            </div>
+            <br>
+
+            <!-- 라디오버튼 02 -->
+            <div class="h-radio-02">
+              <input type="radio" id="hradio02_1" name="hradio02" checked />
+              <label for="hradio02_1">일주일</label>
+
+              <input type="radio" id="hradio02_2" name="hradio02" />
+              <label for="hradio02_2">1개월</label>
+
+              <input type="radio" id="hradio02_3" name="hradio02" />
+              <label for="hradio02_3">2개월</label>
+
+              <input type="radio" id="hradio02_4" name="hradio02" />
+              <label for="hradio02_4">3개월</label>
+
+              <input type="radio" id="hradio02_5" name="hradio02" />
+              <label for="hradio02_5">6개월</label>
+
+              <input type="radio" id="hradio02_6" name="hradio02" />
+              <label for="hradio02_6">1년</label>
+            </div>
+            <br>
+
+            <!-- 라디오 버튼 03 -->
+            <div class="h-radio-03">
+              <input type="radio" name="hradio03" id="hradio03_1" checked />
+              <label for="hradio03_1">Radio</label>
+
+              <input type="radio" name="hradio03" id="hradio03_2" />
+              <label for="hradio03_2"></label>
+            </div>
+
+
+            <br>
+            <!-- 라디오 버튼 04 -->
+            <div class="h-radio-03 h-radio-04">
+              <input type="radio" name="hradio04" id="hradio04_1" />
+              <label for="hradio04_1">전체공개만 보기</label>
+            </div>
+            <div class="h-radio-03 h-radio-04">
+              <input type="radio" name="hradio04" id="hradio04_2" />
+              <label for="hradio04_2">연락처 비공개만 보기</label>
+            </div>
+
+          </div>
+          <br>
+
+
+
+          <h4>switch</h4>
+          <div class="guide_item">
+            <!-- 텍스트 없는것 X -->
+            <div class="h-switch">
+              <input type="checkbox" id="switch" name="switch1" />
+              <label for="switch" class="h-switchBtn-box">
+                <span class="h-switchBtn"></span>
+              </label>
+            </div>
+            <br>
+
+            <!-- 텍스트 있는것 O -->
+            <div class="h-switch">
+              <input type="checkbox" id="switch2" name="switch2" checked />
+              <span class="h-switchlabel">이력서 공개중</span>
+              <label for="switch2" class="h-switchBtn-box">
+                <span class="h-switchBtn"></span>
+              </label>
+            </div>
+
+          </div>
+          <br>
+
+          <h4>pagination</h4>
+          <div class="guide_item">
+
+            <!-- pagination 디자인 01 -->
+            <!-- 버튼 클릭시 클래스 h-btn-outline 추가 -->
+            <div class="h-pagination flex-set" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button"
+                    aria-label="1" aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="6"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+            <br>
+
+            <!-- pagination 디자인 02 -->
+            <div class="h-pagination flex-set" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button"
+                    aria-label="1" aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="6"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+            <br>
+
+            <!-- pagination 디자인 03 - wh30 / size 30px -->
+            <div class="h-pagination wh30 flex-set" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button"
+                    aria-label="1" aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+            <br>
+
+            <!-- pagination 디자인 04 - wh40 / size 40px -->
+            <div class="h-pagination wh40 flex-set" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button"
+                    aria-label="1" aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="6"
+                    aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+          <br>
+
+          <h4>button</h4>
+          <div class="guide_item">
+
+            <!-- 사이즈별 -->
+            <a href="javascript:void(0);" class="h-button-xxs">설정하기(30-xxs)</a>
+            <a href="javascript:void(0);" class="h-button-xms">설정하기(33-xms)</a>
+            <a href="javascript:void(0);" class="h-button-xs">설정하기(36-xs)</a>
+            <a href="javascript:void(0);" class="h-button-s">설정하기(38-s)</a>
+            <a href="javascript:void(0);" class="h-button-sm">설정하기(40-sm)</a>
+            <a href="javascript:void(0);" class="h-button-m">설정하기(42-m)</a>
+            <a href="javascript:void(0);" class="h-button-ml">설정하기(46-ml)</a>
+            <a href="javascript:void(0);" class="h-button-l">설정하기(54-l)</a>
+            <br><br>
+
+            <!-- 사이즈별 : 아이콘만 있는 경우 (h-btn-sqre) -->
+            <a href="javascript:void(0);" class="h-button-xs h-btn-sqre"><i
+                class="material-symbols-outlined vert-m">add_circle</i></a>
+            <a href="javascript:void(0);" class="h-button-s h-btn-sqre"><i
+                class="material-symbols-outlined vert-m">add_circle</i></a>
+            <a href="javascript:void(0);" class="h-button-m h-btn-sqre"><i
+                class="material-symbols-outlined vert-m">add_circle</i></a>
+            <a href="javascript:void(0);" class="h-button-l h-btn-sqre"><i
+                class="material-symbols-outlined vert-m">add_circle</i></a>
+            <br><br>
+
+            <!-- 새로고침 (h-button-icon-refresh) -->
+            <a href="javascript:void(0);" class="h-button-xs h-btn-sqre h-button-icon-refresh"><i
+                class="material-symbols-outlined" aria-hidden="true">cached</i></a>
+            <a href="javascript:void(0);" class="h-button-s h-btn-sqre h-button-icon-refresh"><i
+                class="material-symbols-outlined" aria-hidden="true">cached</i></a>
+            <a href="javascript:void(0);" class="h-button-m h-btn-sqre h-button-icon-refresh"><i
+                class="material-symbols-outlined" aria-hidden="true">cached</i></a>
+            <a href="javascript:void(0);" class="h-button-l h-btn-sqre h-button-icon-refresh"><i
+                class="material-symbols-outlined" aria-hidden="true">cached</i></a>
+            <br><br>
+
+            <!-- 컬러별 -->
+            <div style="background:#f5f5f5; padding:10px 0;">
+              <a href="javascript:void(0);" class="h-button-m h-button-white h-button-nobg">투명버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-white">흰색버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-grey">진회색버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-grey1">연회색버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-teal">초록버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-cyan">민트버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-blue">파랑버튼</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-orange">오렌지색버튼</a>
+            </div>
+            <br><br>
+
+            <!-- 특수디자인 : 배경이 없는경우 (h-button-nobg) -->
+            <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-xs">텍스트만있음</a>
+            <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">밑줄도있음</a>
+            <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i
+                class="fa fa-refresh" aria-hidden="true"></i><span>오늘 날짜로 업데이트</span></a>
+
+            <a href="javascript:void(0);" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+
+            <a href="javascript:void(0);" class="h-button-xxs h-button-nobg h-button-detail"><span>상품정보</span></a>
+
+            <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del "><i
+                class="material-symbols-outlined vert-m">delete</i></a>
+            <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-menu "><i class="fa fa-ellipsis-v"
+                aria-hidden="true"></i></a>
+            <br>
+
+
+
+            <a href="javascript:void(0);" class="h-button-xxs h-button-white h-button-nobg"><span>지원이력서</span><img
+                src="images/btn_grey_arrow.svg"></a>
+            <a href="javascript:void(0);" class="h-button-l"><img src="images/printer-outline.svg"><span>인쇄하기</span></a>
+            <a href="javascript:void(0);" class="h-button-l"><span>인쇄하기</span><img src="images/printer-outline.svg"></a>
+            <a href="javascript:void(0);" class="h-button-ml h-button-teal h-button-add"><span
+                class="vert-m">파일등록</span><i class="material-symbols-outlined vert-m">add_circle</i></a>
+            <a href="javascript:void(0);" class="h-button-l h-button-radius">둥근 버튼</a>
+            <a href="javascript:void(0);" class="h-button-m h-button-cyan h-button-download">다운로드</a>
+            <a href="javascript:void(0);" class="h-button-s h-button-white h-button-file">다운로드</a>
+
+            <br>
+            <br>
+            <!-- 버튼 그룹 -->
+
+            <!-- 버튼 그룹 -->
+            <!-- on 클래스시 활성화 -->
+            <div class="button-group flex inline">
+              <a href="javascript:void(0);" class="h-button-m h-button-grey1 ac on">버튼그룹01</a>
+              <a href="javascript:void(0);" class="h-button-m h-button-grey1 rf">버튼그룹02</a>
+
+            </div>
+
+            <!-- 원형 버튼 -->
+            <div class="mt20">
+              <!-- 수정 -->
+              <a href="javascript:void(0);" class="h-button-circle-20 edit h-button-blue"></a>
+
+              <!-- 삭제 -->
+              <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+
+
+              <button type="button" class="h-button-circle-30 text-none popup h-button-white">상세보기(팝업)</button>
+              <button type="button" class="h-button-circle-30 text-none newtab h-button-white">새 탭</button>
+
+              <div class="h-button-circle-44 h-button-neutral3">
+                <input type="checkbox" class="btn-tgl btn-scrap-bold" id="notice-scrap1">
+                <label for="notice-scrap1" onclick="">채용공고 스크랩</label>
+              </div>
+
+              <a href="javascript:void(0);" class="h-button-circle-44 h-button-neutral3 new-window" target="_blank" title="채용공고 페이지로 이동"></a>
+            </div>
+
+
+
+          </div>
+          <br><br><br>
+
+
+          <h4>Emoticon01</h4>
+          <div class="guide_item">
+            <i class="h-emoticon type01 material-symbols-outlined">sentiment_satisfied</i>
+            <i class="h-emoticon type02 material-symbols-outlined">sentiment_satisfied</i>
+            <i class="h-emoticon type03 material-symbols-outlined">sentiment_satisfied</i>
+            <i class="h-emoticon type04 material-symbols-outlined">sentiment_satisfied</i>
+          </div>
+          <br><br><br>
+
+          <h4>Emoticon02</h4>
+          <div class="guide_item">
+            <i class="h-emoticon type05 material-symbols-outlined">sentiment_satisfied</i>
+            <i class="h-emoticon type06 material-symbols-outlined">sentiment_dissatisfied</i>
+          </div>
+          <br><br><br>
+
+
+          <h4>Text Box</h4>
+          <div class="guide_item">
+            <p class="h-txtbox-1 h-button-grey">진회색</p>
+            <p class="h-txtbox-1 h-button-grey1">연회색</p>
+            <p class="h-txtbox-1 h-button-teal">초록</p>
+            <p class="h-txtbox-1 h-button-cyan">민트</p>
+            <p class="h-txtbox-1 h-button-blue">파랑</p>
+            <p class="h-txtbox-1 h-button-orange">오렌지</p>
+            <p class="h-txtbox-2 option-hurry">급구</p>
+            <p class="h-txtbox-2 option-hot">HOT</p>
+          </div>
+          <br><br><br>
+
+
+          <h4>Subway - 서울지하철</h4>
+          <div class="guide_item">
+            <p class="h-subway seoul line-1">1호선</p>
+            <p class="h-subway seoul line-2">2호선</p>
+            <p class="h-subway seoul line-3">3호선</p>
+            <p class="h-subway seoul line-4">4호선</p>
+            <p class="h-subway seoul line-5">5호선</p>
+            <p class="h-subway seoul line-6">6호선</p>
+            <p class="h-subway seoul line-7">7호선</p>
+            <p class="h-subway seoul line-8">8호선</p>
+            <p class="h-subway seoul line-9">9호선</p>
+            <p class="h-subway seoul line-ap">공항</p>
+            <p class="h-subway seoul line-gj">경의중앙</p>
+            <p class="h-subway seoul line-gc">경춘</p>
+            <p class="h-subway seoul line-si">수인분당</p>
+            <p class="h-subway seoul line-sb">신분당</p>
+            <p class="h-subway seoul line-gg">경강</p>
+            <p class="h-subway seoul line-sh">서해</p>
+            <p class="h-subway seoul line-ic1">인천1</p>
+            <p class="h-subway seoul line-ic2">인천2</p>
+            <p class="h-subway seoul line-ev">에버라인</p>
+            <p class="h-subway seoul line-uj">의정부</p>
+            <p class="h-subway seoul line-ui">우이신설</p>
+            <p class="h-subway seoul line-gp">김포골드</p>
+            <p class="h-subway seoul line-sl">신림</p>
+          </div>
+          <br>
+
+          <h4>Subway - 부산지하철</h4>
+          <div class="guide_item">
+            <p class="h-subway busan line-1">1호선</p>
+            <p class="h-subway busan line-2">2호선</p>
+            <p class="h-subway busan line-3">3호선</p>
+            <p class="h-subway busan line-4">4호선</p>
+            <p class="h-subway busan line-dh">동해</p>
+            <p class="h-subway busan line-gh">부산김해</p>
+          </div>
+          <br>
+          
+          <h4>Subway - 대구지하철</h4>
+          <div class="guide_item">
+            <p class="h-subway daegu line-1">1호선</p>
+            <p class="h-subway daegu line-2">2호선</p>
+            <p class="h-subway daegu line-3">3호선</p>
+          </div>
+          <br>
+
+          <h4>Subway - 광주, 대전</h4>
+          <div class="guide_item">
+            <p class="h-subway only line-1">1호선</p>
+          </div>
+          <br><br><br>
+
+
+          <h4>Progress</h4>
+          <div class="guide_item">
+
+            <div class="my-subtxtbox h-progress-wrap">
+              <strong class="text-subtitle4 h-txt-medium">사용량 :</strong>
+              <div class="h-progress">
+                <span class="min">0MB</span>
+                <div class="h-progress-bar-inner">
+                  <strong class="size" style="left:40%;">40MB</strong>
+                  <div class="h-progress-bar" style="width:40%;" id="progressBar" data-width="40"></div>
+                </div>
+                <span class="max">100MB</span>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+          <h4>TAB</h4>
+          <div class="guide_item">
+
+            <div class="h-tab-Contents-01">
+              <input type="radio" id="tabBtn01_1" name="tab01">
+              <label for="tabBtn01_1">탭 하나</label>
+
+              <input type="radio" id="tabBtn01_2" name="tab01" checked />
+              <label for="tabBtn01_2">탭 둘</label>
+
+              <input type="radio" id="tabBtn01_3" name="tab01">
+              <label for="tabBtn01_3">탭 3</label>
+
+              <input type="radio" id="tabBtn01_4" name="tab01">
+              <label for="tabBtn01_4">탭 4</label>
+
+              <input type="radio" id="tabBtn01_5" name="tab01">
+              <label for="tabBtn01_5">탭 5</label>
+
+              <div class="tabCo-Wrap">
+                <!-- 첫번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 하나'의 컨텐츠
+                </div>
+
+                <!-- 두번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 둘'의 컨텐츠
+                </div>
+
+                <!-- 3번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 3'의 컨텐츠
+                </div>
+
+                <!-- 4번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 4'의 컨텐츠
+                </div>
+
+                <!-- 5번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 5'의 컨텐츠
+                </div>
+
+              </div>
+            </div>
+
+
+            <br>
+
+
+
+            <div class="h-tab-Contents-02">
+              <input type="radio" id="tabBtn02_1" name="tab02">
+              <label for="tabBtn02_1">탭 하나</label>
+
+              <input type="radio" id="tabBtn02_2" name="tab02" checked />
+              <label for="tabBtn02_2">탭 둘</label>
+
+              <input type="radio" id="tabBtn02_3" name="tab02">
+              <label for="tabBtn02_3">탭 3</label>
+
+              <input type="radio" id="tabBtn02_4" name="tab02">
+              <label for="tabBtn02_4">탭 4</label>
+
+              <div class="tabCo-Wrap">
+                <!-- 첫번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 하나'의 컨텐츠
+                </div>
+
+                <!-- 두번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 둘'의 컨텐츠
+                </div>
+
+                <!-- 3번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 3'의 컨텐츠
+                </div>
+
+                <!-- 4번째 탭 클릭했을때 활성화되는 내용들 -->
+                <div class="tabCo-CommonBox">
+                  '탭 4'의 컨텐츠
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+          <br><br>
+
+          <!-- 컨텐츠 없는 버튼형 탭 1 -->
+          <ul class="h-tab-01">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <span class="status">진행중</span>
+                <strong class="num">15</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">접수마감</span>
+                <strong class="num">68</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">대기중</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">임시저장</span>
+                <strong class="num">12</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">전체</span>
+                <strong class="num">187</strong>
+              </a>
+            </li>
+          </ul>
+          <br><br>
+
+
+          <!-- 컨텐츠 없는 버튼형 탭 2 -->
+          <ul class="col h-tab-02">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <span class="status">전체</span>
+                <strong class="num">5</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">열람</span>
+                <strong class="num">68</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">서류합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">면접합격</span>
+                <strong class="num">12</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">최종합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="status">불합격</span>
+                <strong class="num">2</strong>
+              </a>
+            </li>
+          </ul>
+          <br><br><br>
+
+
+
+
+
+
+
+          <h4>Loading</h4>
+          <div class="guide_item">
+            <div class="h-file-loader">Uploading...</div>
+          </div>
+          <br><br><br>
+
+
+
+
+
+
+
+          <h4>Text - 주의! 앞쪽에 느낌표 표시 됨</h4>
+          <div class="guide_item">
+            <div class="text-subtitle5 h-txt-warn">https&#58;&#47;&#47;, http&#58;&#47;&#47; 까지 입력되어야 합니다.</div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <!-- 테이블 -->
+      <div class="guide_table">
+        <div class="guide_table_tit">
+          <h2 class="guide_tit">Table</h2>
+        </div>
+
+        <div class="guide_table_con">
+
+
+
+          <!-- 테이블 상단 텍스트 -->
+          <!-- text 정렬 : flex-start, flex-center, flex-end -->
+          <div class="h-tit-box-1 flex-end">
+            <p class="i-block h-tit-26">추천 채용정보</p>
+            <a href="javascript:void(0);" class="h-button-more h-button-nobg">더보기</a>
+          </div>
+          <!-- /테이블 상단 텍스트 -->
+
+          <!-- 테이블 유형 1 (기본) -->
+          <!-- checkbox 있는 경우 check-use 클래스 추가 -->
+          <table class="h-tbl-basic-1 check-use tbl-recruit">
+            <thead>
+              <tr>
+                <th>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_all">
+                    <label for="tbl_check_all"></label>
+                  </div>
+                </th>
+                <th style="width:150px;">근무지</th>
+                <th>학원명 / 공고제목 / 모집부문 / 급여</th>
+                <th style="width:100px;">지원자격</th>
+                <th style="width:110px;">마감일 / 등록일</th>
+                <th style="width:110px;">접수방법</th>
+              </tr>
+            </thead>
+            <tbody class="text-subtitle4">
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_01">
+                    <label for="tbl_check_01"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 강남구</p>
+                    <p>경기도 오산시 외1</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <!-- 채용공고 아이템 옵션상품 - 급구 적용 -->
+                        <p class="h-txtbox-2 option-hurry">급구</p>
+                        <span class="text-subtitle2">서울아카데미 수학학원</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like1">
+                        <label for="tbl-btn-like1" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">강동구 서울아카데미에서 수학 선생님을 모십니다.</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                          <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_02">
+                    <label for="tbl_check_02"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <!-- 채용공고 아이템 옵션상품 - HOT 적용 -->
+                        <p class="h-txtbox-2 option-hot">HOT</p>
+                        <span class="text-subtitle2">알과영과학학원</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like2">
+                        <label for="tbl-btn-like2" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap2">
+                          <label for="tbl-btn-scrap2" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_03">
+                    <label for="tbl_check_03"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <!-- 채용공고 아이템 옵션상품 - 학원명 강조 적용 option-academy -->
+                        <span class="text-subtitle2 option-academy">(주)올림피아드교육_수학</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like3">
+                        <label for="tbl-btn-like3" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap3">
+                          <label for="tbl-btn-scrap3" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_04">
+                    <label for="tbl_check_04"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like4">
+                        <label for="tbl-btn-like4" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <!-- 채용공고 아이템 옵션상품 - 공고제목 강조 적용 option-title-1 -->
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1 option-title-1">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap4">
+                          <label for="tbl-btn-scrap4" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_05">
+                    <label for="tbl_check_05"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like5">
+                        <label for="tbl-btn-like5" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <!-- 채용공고 아이템 옵션상품 - 공고제목 형광펜 적용 option-title-2 -->
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1 option-title-2">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap5">
+                          <label for="tbl-btn-scrap5" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_06">
+                    <label for="tbl_check_06"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like6">
+                        <label for="tbl-btn-like6" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <!-- 채용공고 아이템 옵션상품 - 형광펜 + 공고제목 강조 적용 option-title-3 -->
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1 option-title-3">[송파/강동] 중등부, 고등부 과학 선생님 채용</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap6">
+                          <label for="tbl-btn-scrap6" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <div class="h-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_06">
+                    <label for="tbl_check_06"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="work-place">
+                    <p>서울 동대문구</p>
+                  </div>
+                </td>
+                <td class="txt-l">
+
+                  <div class="flex flex-between flex-center">
+                    <div class="h-job-info">
+
+                      <!-- 학원명, 좋아요 -->
+                      <div class="academy-wrap">
+                        <span class="text-subtitle2">(주)올림피아드교육_수학</span>
+
+                        <!-- 버튼 좋아요 -->
+                        <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like6">
+                        <label for="tbl-btn-like6" onclick=""></label>
+                      </div>
+  
+                      <!-- 공고제목, 스크랩 -->
+                      <div class="academy-wrap">
+                        <p class="academy mt3-mb6">
+                          <span class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">옵션이 적용 되지 않은 공고 모습입니다. 제목이 길다 길어 엄청 길다. 길면 기차 기차는 빨라 빠르면 비행기 비행기는 높아 여행가고 싶다.</span>
+  
+                          <!-- 버튼 스크랩 -->
+                          <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap6">
+                          <label for="tbl-btn-scrap6" onclick="">스크랩</label>
+                        </p>
+                      </div>
+
+                      <!-- 모집부문, 급여 -->
+                      <div class="recruit-cate text-subtitle5">
+                        <p class="cate-wrap">
+                          <span class="cate-name">모집부문</span>
+                          <span class="cate-item">수학</span>
+                          <span class="cate-item">과학</span>
+                        </p>
+
+                        <p class="cate-wrap">
+                          <span class="cate-name">급여</span>
+                          <span class="cate-item">월급</span>
+                          <span class="cate-item">200만원~300만원</span>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="tbl-btn-wrap">
+                      <button type="button" class="h-button-circle-30 text-none popup">상세보기(팝업)</button>
+                      <button type="button" class="h-button-circle-30 text-none newtab">새 탭</button>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+                  <p class="td-bold">경력무관</p>
+                  <p class="td-nomarl">대학교(4년)</p>
+                </td>
+                <td>
+                  <p class="td-bold">채용시 마감</p>
+                  <p class="td-nomarl">11.12 등록</p>
+                </td>
+                <td>
+                  <button type="button" class="h-button-m h-button-teal m0 wd100">즉시지원</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /테이블 유형 1 (기본) -->
+          <br><br>
+
+
+          <!-- 테이블 유형 2 (기본) -->
+          <table class="h-tbl-basic-2">
+            <colgroup>
+              <col style="width:155px;">
+              <col style="width:315px;">
+              <col style="width:155px;">
+              <col style="width:315px;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>사업자등록증</th>
+                <td>220-00-00000</td>
+                <th>개업일</th>
+                <td>2023년 3월 5일</td>
+              </tr>
+              <tr>
+                <th>사업장명</th>
+                <td>솔입학원 (%타입상태%)</td>
+                <th>대표자</th>
+                <td>양쌤</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- / 테이블 유형 2 (기본) -->
+
+
+
+
+          <!-- 테이블 검색결과가 없을때 / table class에 hover-bg-none 추가! -->
+          <div class="h-tit-box-1 flex-end">
+            <p class="i-block h-tit-26">추천 채용정보</p>
+          </div>
+          <table class="h-tbl-basic-1 hover-bg-none">
+            <tbody class="text-subtitle4">
+              <tr>
+                <td class="tblsrch-result-none">
+                  <p class="text-subtitle4">지원한 학원이 없습니다.<br>
+                    학원 채용정보 검색 후 입사지원 하세요.</p>
+                  <a href="javascript:void(0);" class="h-button-s">채용정보 보러가기</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br><br><br>
+
+
+          <!-- 썸네일 있는 테이블 -->
+          <table class="h-tbl-basic-1 h-tbl-resume">
+            <thead>
+                <tr>
+                    <th style="width:170px;">이름 &#47; 나이</th>
+                    <th style="width:auto">이력서 정보</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <div class="thumb-wrap">
+                            <div class="photo">
+                                <img src="images/dummy-man.svg">
+                            </div>
+                            <p class="name">남○○<span class="pl">(남, 41세)</span></p>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="h-job-info h-txt-l">                
+                            <div class="academy-wrap">
+                              <p class="academy mt3-mb6">
+                                <strong class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">강동구 서울아카데미에서 수학 선생님을 모십니다.</strong>
+        
+                                <!-- 버튼 스크랩 -->
+                                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap1">
+                                <label for="tbl-btn-scrap1" onclick="">스크랩</label>
+
+                                <span class="h-txtbox-1 h-button-grey1">파일</span>
+                              </p>
+                            </div>
+
+                            <ul class="h-resume-info-list">
+                                <li class="list-group">
+                                    <span class="item-name">최종학력</span>대학교(4년) 졸업예정
+                                </li>
+                                <li class="list-group">
+                                    <span class="item-name">경력</span><span class="h-txt-pit">2년 7개월</span>
+                                </li>
+                                <li class="list-group info_wrap">
+                                    <span class="item-name">근무형태</span>
+                                    <ul class="info-list">
+                                        <li>파트</li>
+                                        <li>단기</li>
+                                        <li>알바</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group info_wrap hope-area">
+                                    <span class="item-name">희망 근무지</span>
+                                    <ul class="info-list">
+                                        <li class="cate-group">서울</li>
+                                        <li>구로구</li>
+                                        <li>강남구</li>
+                                        <li>강서구</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="status-txtbox">
+                                <span class="h-txtbox-1 h-button-white">이직고려</span>
+                                <span class="h-txtbox-1 h-button-white video">시강</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <div class="thumb-wrap">
+                            <div class="photo">
+                                <img src="images/dummy-woman.svg">
+                            </div>
+                            <p class="name">김○○<span class="pl">(여, 34세)</span></p>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="h-job-info h-txt-l">                
+                            <div class="academy-wrap">
+                              <p class="academy mt3-mb6">
+                                <strong class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">인내와 성실이 무기이다. 무기일 것을 무기일 껄!</strong>
+        
+                                <!-- 버튼 스크랩 -->
+                                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap2">
+                                <label for="tbl-btn-scrap2" onclick="">스크랩</label>
+
+                                <span class="h-txtbox-1 h-button-grey1">링크</span>
+                              </p>
+                            </div>
+
+                            <ul class="h-resume-info-list">
+                                <li class="list-group">
+                                    <span class="item-name">최종학력</span>대학교(4년) 졸업예정
+                                </li>
+                                <li class="list-group">
+                                    <span class="item-name">경력</span><span class="h-txt-pit">2년 7개월</span>
+                                </li>
+                                <li class="list-group info_wrap">
+                                    <span class="item-name">근무형태</span>
+                                    <ul class="info-list">
+                                        <li>파트</li>
+                                        <li>단기</li>
+                                        <li>알바</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group info_wrap hope-area">
+                                    <span class="item-name">희망 근무지</span>
+                                    <ul class="info-list">
+                                        <li class="cate-group">서울</li>
+                                        <li>구로구</li>
+                                        <li>강남구</li>
+                                        <li>강서구</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="status-txtbox">
+                                <span class="h-txtbox-1 h-button-white">즉출가능</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <div class="thumb-wrap">
+                            <div class="photo">
+                                <img src="images/dummy-woman.svg">
+                            </div>
+                            <p class="name">김○○<span class="pl">(여, 34세)</span></p>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="h-job-info h-txt-l">                
+                            <div class="academy-wrap">
+                              <p class="academy mt3-mb6">
+                                <strong class="txt-ellipsis h-txt-1 h-txt-bold text-subtitle1">국어 논술 학원 및 과외 경력 20년 국어 논술 학원 및 과외 경력 20년 국어 논술 학원 및 과외 경력 20년 국어 논술 학원 및 과외 경력 20년</strong>
+        
+                                <!-- 버튼 스크랩 -->
+                                <input type="checkbox" class="btn-tgl btn-scrap" id="tbl-btn-scrap2">
+                                <label for="tbl-btn-scrap2" onclick="">스크랩</label>
+
+                                <span class="h-txtbox-1 h-button-grey1">링크</span>
+                              </p>
+                            </div>
+
+                            <ul class="h-resume-info-list">
+                                <li class="list-group">
+                                    <span class="item-name">최종학력</span>대학교(4년) 졸업예정
+                                </li>
+                                <li class="list-group">
+                                    <span class="item-name">경력</span><span class="h-txt-pit">2년 7개월</span>
+                                </li>
+                                <li class="list-group info_wrap">
+                                    <span class="item-name">근무형태</span>
+                                    <ul class="info-list">
+                                        <li>파트</li>
+                                        <li>단기</li>
+                                        <li>알바</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group info_wrap hope-area">
+                                    <span class="item-name">희망 근무지</span>
+                                    <ul class="info-list">
+                                        <li class="cate-group">인천</li>
+                                        <li>서구</li>
+                                        <li>연수구</li>
+                                        <li>남동구</li>
+                                        <li>부평구</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="status-txtbox">
+                                <span class="h-txtbox-1 h-button-white">구직중</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+
+
+
+          <!-- 테이블 상단 텍스트 -->
+          <!-- text 정렬 : flex-start, flex-center, flex-end -->
+          <div class="h-tit-box-1 flex-end">
+            <span class="i-block h-tit-16 h-txt-3">첨부된 파일&nbsp;- &nbsp;</span>
+            <span class="h-txt-2">총 7건</a>
+          </div>
+          <!-- /테이블 상단 텍스트 -->
+
+          <!-- 테이블 - 파일 -->
+          <table class="h-tbl-basic-1 h-tbl-file">
+            <thead>
+              <tr>
+                <th>파일구분</th>
+                <th>파일명</th>
+                <th>파일용량</th>
+                <th>등록일</th>
+                <th>삭제</th>
+              </tr>
+            </thead>
+            <tbody class="text-subtitle5">
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_excel.png" alt="">
+                    <span>포트폴리오</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-file-name">강남엄마_제
+                    휴종료에 따른 사이트 수정 포트폴리오.xlsx</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">2022.04.14</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_samsung.png" alt="">
+                    <span>포트폴리오</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">http://www.naver.com</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">2022.04.14</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_zip.png" alt="">
+                    <span>자격증</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">자격증파일_홍길동.zip</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">2022.04.14</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_ppt.png" alt="">
+                    <span>기획안</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">자격증파일_홍길동.zip</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">2022.04.14</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_hancom.png" alt="">
+                    <span>경력기술서</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">경력기술서_홍길동_20221212.hwp</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">2022.04.14</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_file_acrobat.png" alt="">
+                    <span>경력기술서</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">경력기술서_홍길동_20221212.pdf</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">6.8MB</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="txt-l">
+                  <div class="flex inline flex-center">
+                    <img class="h-file-icon" src="images/icon_flie_word.png" alt="">
+                    <span>추천서</span>
+                  </div>
+                </td>
+                <td class="txt-l">
+                  <a href="javascript:void(0);"
+                    class="h-button-txt h-button-nobg h-button-underline h-file-name">서울대학교_컴퓨터공학박사_홍길동님_20221212.doc</a>
+                </td>
+                <td>9.2MB</td>
+                <td><span class="h-txt-6">6.8MB</span></td>
+                <td>
+                  <a href="javascript:void(0);" class="h-button-icon h-button-nobg h-button-del"><i
+                      class="material-symbols-outlined vert-m">delete</i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /테이블 - 파일 -->
+
+
+
+          <br><br><br>
+
+
+
+          <!-- 테이블 상단 텍스트 -->
+          <!-- text 정렬 : flex-start, flex-center, flex-end -->
+          <div class="h-tit-box-1 flex-end">
+            <p class="i-block h-tit-26">학력사항</p>
+            <p class="i-block h-tit-16">최종학력 - 대학교 <span class="h-txt-pit">4년 졸업예정</span></p>
+          </div>
+          <!-- /테이블 상단 텍스트 -->
+
+          <!-- 테이블 thead 흰색 + 세로 구분 선 있는 유형 -->
+          <!-- 클래스 hover-bg-none 추가 : 테이블 hover 시 tr 색 변경 없음 -->
+          <table class="h-tbl-basic-1 th-white hover-bg-none">
+            <thead>
+              <tr>
+                <th>재학기간</th>
+                <th>학력(구분)</th>
+                <th>학교명(소재지)</th>
+                <th>전공</th>
+                <th>학점</th>
+              </tr>
+            </thead>
+            <tbody class="text-subtitle3">
+              <tr>
+                <td>2007.03 ~ 2011.02</td>
+                <td>
+                  <p class="td-bold">대학교(4년)</p>
+                  <p class="td-nomarl">졸업예정</p>
+                </td>
+                <td>
+                  <p class="td-bold">서울디지털대학교</p>
+                  <p class="td-nomarl">(서울)</p>
+                </td>
+                <td>
+                  <p class="td-bold">전산정보처리</p>
+                  <p class="td-nomarl">(복수전공 : 경영학과)</p>
+                </td>
+                <td>
+                  <p class="td-bold">3 <span class="i-block h-txt-6">&#47;</span> 4.5</p>
+                </td>
+              </tr>
+              <tr>
+                <td>1994.03 ~ 1997.02</td>
+                <td>
+                  <p class="td-bold">고등학교</p>
+                  <p class="td-nomarl">졸업</p>
+                </td>
+                <td>
+                  <p class="td-bold">춘천고등학교</p>
+                  <p class="td-nomarl">(강원)</p>
+                </td>
+                <td>
+                  <p class="td-bold">이과계열</p>
+                </td>
+                <td>
+                  <p class="td-bold">-</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /테이블 thead 흰색 + 세로 구분 선 있는 유형 -->
+
+
+
+          <br><br><br>
+
+
+
+          <!-- 테이블 상단 텍스트 -->
+          <!-- text 정렬 : flex-start, flex-center, flex-end -->
+          <div class="h-tit-box-1 flex-end">
+            <p class="i-block h-tit-26">경력사항</p>
+            <p class="i-block h-tit-16">총 <span class="h-txt-pit">11년 3개월</span></p>
+          </div>
+          <!-- /테이블 상단 텍스트 -->
+
+          <!-- 테이블 thead 흰색 + 세로 구분 선 있는 유형 -->
+          <!-- 클래스 hover-bg-none 추가 : 테이블 hover 시 tr 색 변경 없음 -->
+          <table class="h-tbl-basic-1 th-white hover-bg-none">
+            <thead>
+              <tr>
+                <th>학원명 &#47; 근무기간</th>
+                <th>근무내용</th>
+              </tr>
+            </thead>
+            <tbody class="text-subtitle3">
+              <tr>
+                <th rowspan="2" class="vert-t txt-l">
+                  <div class="h-th-tit">
+                    <strong class="block h-tit-18">훈장마을 구로지점</strong>
+                    <p class="text-subtitle3 h-txt-3 h-txt-regular">
+                      2007.05 ~ 재직중<br>
+                      (1년 3개월)
+                    </p>
+                  </div>
+                </th>
+                <td>
+                  <dl class="h-list-1">
+                    <dt>근무형태</dt>
+                    <dd>파트, 단기, 알바</dd>
+
+                    <dt>과목</dt>
+                    <dd>수학</dd>
+
+                    <dt>급여</dt>
+                    <dd>연봉 3,100만원</dd>
+
+                    <dt>퇴사사유</dt>
+                    <dd>경영악화</dd>
+
+                    <dt>수업역량</dt>
+                    <dd>
+                      - 유아 (전 연령) <span>&#47; 수업 최대인원 :</span> 10명 이내</span><br>
+                      - 초등 (1학년~4학년) <span>&#47; 수업 최대인원 :</span> 11명~20명 내외</span><br>
+                      - 중등 (2학년~3학년) <span>&#47; 수업 최대인원 :</span> 10명 이내</span>
+                    </dd>
+                  </dl>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <dl class="h-list-1 dt-wide">
+                    <dt>담당업무 및 경력기술</dt>
+                    <dd>강의 준비 및 강의실 청소, 학원수업준비 등</dd>
+                  </dl>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /테이블 thead 흰색 + 세로 구분 선 있는 유형 -->
+
+
+
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+
+
+
+  </section>
+  <!--// Contents -->
+
+
+  </div>
+
+  <script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yy-mm-dd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '.',
+        showMonthAfterYear:true,
+        showOn:"button",
+        buttonImage:"images/btn_calendar.svg",
+        buttonImageOnly:true,
+        minDate: 0,
+    });
+
+    $(function() {
+      $("#datepickerStart, #datepickerEnd").datepicker();
+    });
+  </script>
+
+
+</body>
+
+</html>

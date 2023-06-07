@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* reset */
+* {font-family:'Pretendard';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none;}
+th img, td img, input, label {vertical-align:middle}
+img {image-rendering:-webkit-optimize-contrast;transform:translateZ(0);backface-visibility:hidden;}
+dl,ul,ol,menu {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input,select,textarea,button {vertical-align:middle;font-size:100%}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body{-webkit-text-size-adjust:none}
+input[type="text"],input[type="password"],input[type="submit"], textarea {-webkit-appearance:none;-webkit-border-radius:0;}
+input:checked[type="checkbox"] {-webkit-appearance:checkbox;}
+button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"] {-webkit-appearance:button;-webkit-border-radius:0}
+body,th,td,input,select,textarea,button {color:#000}
+a {color:#000;text-decoration:none;cursor:pointer}
+a:active, a:hover {text-decoration:none}
+address,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+body,th,td,input,select,textarea,button {/* font-size:13px; *//*line-height:1.25em;*/}
+caption,legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-size:1px;line-height:0}
+.blind {clip:rect(0,0,0,0); overflow:hidden; display:block; width:1px; height:1px;margin:-1px;padding:0;border:0; font-size:1px; line-height:0; text-indent:-9999px}
+* html table {border-collapse:collapse}
+*+html table {border-collapse:collapse}
+html{scroll-behavior: smooth; }
+
+
+@media print {
+    html, body {width:210mm !important; height:297mm !important; page-break-inside:avoid; page-break-after:auto;}
+    table {page-break-inside:auto !important;}
+    tr    {page-break-inside:avoid !important; page-break-after:auto !important;}
+    thead {display:table-header-group !important;}
+    tfoot {display:table-footer-group !important;}
+
+    /* 프린트 영역 노출 안됨 */
+	.no-print {display:none;}
+
+    /* 배경색 포함 프린트 */
+    .status, .h-emoticon::before,
+    .h-resume-wrap .h-status-wrap .score,
+    .h-resume-wrap .h-add-view-wrap .link-box {print-color-adjust:exact; -webkit-print-color-adjust:exact;}
+}
+@page {size:auto; margin:10mm;}
