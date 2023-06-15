@@ -503,6 +503,7 @@ button
 라디오버튼
 */
 [class^="h-radio"] input[type="radio"] { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; }
+[class^="h-radio"] input[type="checkbox"] { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; }
 
 /* 01 기본형 */
 .h-radio-01 {padding-left:30px;}
@@ -544,6 +545,13 @@ button
 .h-radio-03 input[type="radio"] + label:after { content:""; position: absolute; left: 4px; top: 4px; display: inline-block; width: 8px; height: 4px; border: 2px solid #C3CAD4; border-width: 0 0 2px 2px; transform: rotate(-45deg); opacity: 1; border-radius: 0; background-color: transparent; }
 .h-radio-03 input[type="radio"]:checked + label:after { border-color: var(--blue-3); }
 .h-radio-03 input[type="radio"]:checked + label {color:var(--blue-3);}
+    /*동일디자인 - checkbox 버전*/
+    .h-radio-03 input[type="checkbox"] + label { text-align: center; transition: color 0.5s; -webkit-transition: color 0.5s; color: var(--grey-2); font-size: 14px; position: relative; cursor:pointer; }
+    .h-radio-03 input[type="checkbox"] + label:before {content:"";width:18px;height:18px;border-radius:100%;display:inline-block;margin-right: 5px;border: 2px solid #C3CAD4;vertical-align: middle;box-sizing: border-box;margin-top: -3px;}
+    .h-radio-03 input[type="checkbox"]:checked + label:before {border-color: var(--blue-3);}
+    .h-radio-03 input[type="checkbox"] + label:after { content:""; position: absolute; left: 4px; top: 4px; display: inline-block; width: 8px; height: 4px; border: 2px solid #C3CAD4; border-width: 0 0 2px 2px; transform: rotate(-45deg); opacity: 1; border-radius: 0; background-color: transparent; }
+    .h-radio-03 input[type="checkbox"]:checked + label:after { border-color: var(--blue-3); }
+    .h-radio-03 input[type="checkbox"]:checked + label {color:var(--blue-3);}
 
 
 /* 04 체크버튼형 */
