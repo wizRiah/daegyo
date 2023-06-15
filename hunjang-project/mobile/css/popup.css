@@ -34,8 +34,9 @@
 
 /*popup-03*/
 .h-m-popup.popup-bottom {top:auto; bottom:0; width:100%; border-radius: 10px 10px 0 0; position: fixed;} 
-
-
+.h-m-popup.popup-bottom .pop-header .pop-title {padding-left: 30px;}
+.h-m-popup.popup-bottom  .pop-container {padding: 0 20px 20px;}
+.h-radio-05 input[type="radio"]:checked + label {font-weight:400;}
 
 
 
@@ -70,6 +71,7 @@
 .h-pop-btnbox {width: 100%;display:flex;justify-content: space-between;}
 .h-pop-btnbox button {width:49.5%;margin: 0;}
 
+a.h-txt-pit {text-decoration:underline;}
 
 
 
@@ -78,8 +80,22 @@
 
 
 
-/*강사서비스 - 이력서 등록*/
-/* 이력서를 3분만에 등록하고싶다면? */
+/*강사서비스 */
+/*- 이력서 등록 : 이력서 유형선택 */
+.rsme-rgst-btmpopupWrap {display: flex;flex-wrap: wrap;justify-content: space-between;}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] {position:relative;border: 1px solid #E0E6EF;border-radius: 4px;padding: 17px 20px;box-sizing: border-box;}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"]:after {content:"";width:30px;height:30px;display:inline-block;position:absolute;left:20px;bottom: 18px;background:url(../images/mobile/resme-regist-btmpopup-arrow.svg);}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] strong {}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] strong:after {content:"";}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] p {margin-top: 5px; width: 220px;}
+.rsme-rgst-btmpopupWrap .selectResume-basic {width: 100%; margin-bottom: 8px; padding-bottom: 61px;}
+.rsme-rgst-btmpopupWrap .selectResume-basic strong:after {width:72px; height:60px; display:inline-block; background:url(../images/mobile/resume-btmpop-basic.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .selectResume-file strong:after  {width:72px; height:52px; display:inline-block; background:url(../images/mobile/resume-btmpop-file.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .selectResume-link strong:after  {width:72px; height:52px; display:inline-block; background:url(../images/mobile/resume-btmpop-link.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .wd50 {width: calc(50% - 4px);padding-bottom: 87px;}
+
+
+/*- 이력서 등록 : 이력서를 3분만에 등록하고싶다면? */
 .resume-3minute-Tip {}
 .resume-3minute-Tip div {border-radius:10px;background-color: #F5F7FA;padding:20px 115px 20px 20px;margin-bottom:10px;box-sizing:border-box;background-repeat: no-repeat; position:relative;}
 .resume-3minute-Tip div strong {}
@@ -89,7 +105,7 @@
 .resume-3minute-Tip div.usefile:after {background: url(../images/mobile/resume-3minut-file.svg) #F5F7FA;background-repeat: no-repeat;background-position: center 3px;}
 .resume-3minute-Tip div.uselink:after {background: url(../images/mobile/resume-3minut-link.svg) #F5F7FA;background-repeat: no-repeat;background-position: center 0px;height: 105px;}
 
-/*강사서비스 - 입사지원(파일관리)*/
+/*- 입사지원(파일관리)*/
 .resume-fileList {padding: 10px 5px 10px 20px;padding-right:5px;}
 .resume-fileList .file-data {height: 210px;overflow-y:scroll;box-sizing: border-box;/* margin: 10px 0; */padding-right: 10px;}
 .resume-fileList .h-radio-03 {margin-top: 10px;}
@@ -98,4 +114,15 @@
 .resume-fileList .h-radio-03 input[type="checkbox"] + label:before {margin-top: -8px;}
 .resume-fileList .h-radio-03 input[type="checkbox"] + label:after {top: 1px;}
 .resume-fileList .file-nodata {padding: 9px 15px 10px 0;}
+
+/*- 이력서 공개설정*/
+.resume-openSet {}
+.resume-openSet .h-radio-05 {height:98px;}
+.resume-openSet .h-radio-05 input[type="radio"] + label {height:98px;flex-wrap: wrap;font-weight: 500;color: #333333;}
+.resume-openSet .h-radio-05:last-child {margin-bottom:0;}
+.resume-openSet .h-radio-05 input[type="radio"] + label div {width:100%;font-weight: 400 !important;color: #7E7E7E;}
+.resume-openSet .h-radio-05 input[type="radio"] + label div b {color:#333333;font-weight: 500;}
+.resume-openSet .h-radio-05 input[type="radio"]:checked + label.h-radio-05 input[type="radio"] + label div b {color:#333333;font-weight: 500;}
+.resume-openSet .h-radio-05 input[type="radio"]:checked + label {color: var(--blue-3);}
+
 
