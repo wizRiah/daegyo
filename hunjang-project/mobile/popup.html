@@ -28,7 +28,9 @@
 <div class="wrap">
 
 
-          <a href="javascript:void(0);" class="click01">팝업1 (가득차는)</a>
+          <a href="javascript:void(0);" class="click01">팝업1 (가득차는 - 닫기버튼)</a><br>
+
+          <a href="javascript:void(0);" class="click04">팝업1 (가득차는 - 뒤로가기버튼)</a>
           
           <br><br>
 
@@ -51,7 +53,7 @@
 
 
 
-          <!-- popup 디자인 01 -->
+          <!-- popup 디자인 01 (닫기버튼) -->
           <div class="h-popup-wrap">
             <div class="h-m-popup popup-01 ui-draggable"> 
               <div class="pop-header ui-draggable-handle" style="cursor:move;">
@@ -65,6 +67,27 @@
             </div>
           </div>
 
+
+
+
+
+          <!-- popup 디자인 01 (뒤로가기버튼)-->
+          <div class="h-popup-wrap">
+            <div class="h-m-popup popup-goback ui-draggable"> 
+              <div class="pop-header ui-draggable-handle" style="cursor:move;">
+                <p class="pop-title text-h3">팝업 01_팝업 제목</p>
+              </div>
+
+              <div class="pop-body">
+                <div class="pop-container">팝업내용</div>
+                <div class="btmbtnbox">
+                  <a href="#" class="canclebtn">취소</a>
+                  <a href="#" class="sendRespon">제안 답변보내기</a>
+                </div>
+              </div>
+              <button type="button" class="goback" title="뒤로가기"></button>
+            </div>
+          </div>
 
 
 
@@ -145,6 +168,14 @@
             $( document ).ready( function() {
                 $( '.click01' ).click( function() {
                   $('.popup-01').parent().css("display","inline-block");
+                } );
+            } );
+
+
+            // popup04 누르면
+            $( document ).ready( function() {
+                $( '.click04' ).click( function() {
+                  $('.popup-goback').parent().css("display","inline-block");
                 } );
             } );
 
