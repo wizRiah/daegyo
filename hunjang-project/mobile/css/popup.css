@@ -548,10 +548,10 @@
 
 
 /* 인풋 - 키워드 자동입력 박스 (학교검색/ 자격증검색 등) */
-.keyword-Srch-Wrap { display:none; width: 510px; border: 1px solid var(--grey-3); border-radius: 4px; margin-top: 5px; overflow: hidden; position: absolute; z-index: 1; background: #fff; top: 54px; box-sizing: border-box; } 
+.keyword-Srch-Wrap { display:none; width: 100%; border: 1px solid var(--grey-3); border-radius: 4px; /*margin-top: 5px;*/ overflow: hidden; position: absolute; z-index: 1; background: #fff; top: 54px; box-sizing: border-box; } 
 .keyword-Srch-Wrap.on { display:inline-block; } 
 .keyword-Srch-Wrap .srchKeyword { color: var(--blue-3); } 
-.keyword-Srch-Wrap>ul { height: 190px; overflow-y: scroll; } 
+.keyword-Srch-Wrap>ul { height: 187px; padding-top:10px; overflow-y: scroll; } 
 .keyword-Srch-Wrap>ul>li { font-size:15px; color:var(--black-2); padding: 9px 19px; } 
 .keyword-Srch-Wrap>ul>li.no-data { text-align:center; display: flex; flex-direction: column; align-items: center; width: 100%; box-sizing: border-box; padding: 74px 0; background: #fff !important; } 
 .keyword-Srch-Wrap>ul>li.no-data b { width:100%; font-weight: var(--text-medium); } 
@@ -561,6 +561,13 @@
 .keyword-Srch-Wrap .directInput button { font-size:var(--text-subtitle4); color: var(--black-2); width: 100%; padding: 17px 5px; } 
 .keyword-Srch-Wrap .directInput button span { } 
 .keyword-Srch-Wrap .directInput button:after { content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid var(--grey-3); transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px; } 
+
+/* 키워드 지우기 */
+.keyword-delwrap {width:100%; position:relative;}
+.keyword-delwrap > input[type="text"] {padding:0 40px 0 15px;}
+.keyword-del {position:absolute; top:13px; right:13px; background:url(../images/icon_sm_close_gray.png) no-repeat; width:20px; height:20px;}
+.keyword-del-squared {flex:none; background:url(../images/mobile/m_icon_close_squared_gray.png) no-repeat; width:22px; height:22px;}
+
 
 
 
