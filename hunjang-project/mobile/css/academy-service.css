@@ -3,9 +3,14 @@
 
 /*리스트 상단 기간 검색바*/
 .list-topBox {background: #F5F7FA;width: 100%;padding:20px 20px 11px;box-sizing:border-box;border-bottom: 1px solid #E0E6EF;}
+.list-topBox.noborder {border:none;}
 .list-topBox .tit {margin-bottom: 7px;display: flex;}
 .list-topBox .tit strong {margin-right: 7px;}
 .list-topBox .tit .i-guideBtn {}
+.list-topBox .flex.flex-between a,.list-topBox .flex.flex-between button {padding: 0 12px !important; min-width: auto !important;}
+.list-topBox .flex.flex-between a i,
+.list-topBox .flex.flex-between button i {font-size: 15px; vertical-align: middle; margin-top: -2px; margin-right: 3px;}
+.list-topBox .flex.flex-between select { height: 35px; min-width: 100px;}
 .list-topBox .m-datepicker {display: flex; justify-content: space-between;}
 .list-topBox .m-datepicker .periodBox {width: calc(100% - 68px);background:#EBEFF5;border-radius:4px;margin-right:5px;padding: 8px 15px;box-sizing:border-box;text-align: left;}
 .list-topBox .m-datepicker .periodBox .period {color:#9A9A9A;font-size:13px;margin-right: 8px;}
@@ -21,18 +26,27 @@
 .list-mbasic .libox {border-bottom:1px solid #E7EDF5;padding: 18px 15px;display: flex;}
 .list-mbasic .chckdiv {}
 .list-mbasic .txtdiv {}
-.list-mbasic .txtdiv .trTit {font-size:16px;color:#151515;font-weight:600;line-height:22px;margin-top: 2px;display: block;}
+.list-mbasic .txtdiv .trTit {font-size:16px;color:#151515;font-weight:600;line-height:22px;margin-top: 2px;display: block;margin-bottom: 3px;}
 .list-mbasic .txtdiv .dl {display:flex;}
 .list-mbasic .txtdiv .dt {font-size:12px;color:#9A9A9A;line-height:20px;margin-right: 3px;}
 .list-mbasic .txtdiv .dd {font-size:12px; color:#333333; line-height:20px;}
+.list-mbasic .txtdiv .subco {color:#7E7E7E; font-size:13px; line-height:20px;}
 .list-mbasic .txtdiv.loginList {display:flex;}
 .list-mbasic .txtdiv.loginList .dt {font-size:13px;}
 .list-mbasic .txtdiv.loginList .dd {font-size:13px; margin:0 20px 0 2px}
 
 .list-mbasic.no-data {width: 100%;display: flex;background: #F5F7FA;justify-content: center;align-items: center;min-height: 65vh;}
-.list-mbasic.no-data p {font-size:13px; color:#7E7E7E; line-height:20px;}
+.list-mbasic.no-data p {font-size:13px; color:#7E7E7E; line-height:20px; padding:0 30px;}
+.list-mbasic.no-data.includeBtn {flex-direction: column;align-items: center; text-align: center;}
+.list-mbasic.no-data.includeBtn a {margin-top:20px;}
 
 
+.yellowMking {font-size:12px;color:#333333;line-height:20px;margin-top: 4px;z-index: 0;display: inline-block;position: relative;}
+.yellowMking:before {content:"";display:inline-block;width:100%;height:6px;background:#ffe43a;position: absolute;z-index: -1;bottom: 3px;}
 
 
-
+/*연락처공개제의학원*/
+.rspnd-date {margin-top: 8px;text-align:center;line-height: 13px;}
+.rspnd-date p {font-size:12px;color:#7E7E7E;}
+.rspnd-date .d-daytxt {font-size:12px;}
+.list-mbasic .libox.libox-includeBtn .txtdiv {width: 100%;}
