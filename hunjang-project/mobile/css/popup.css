@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 
 /***** 모바일 팝업 공통 (layout) *****/
 .h-popup-wrap {display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; } 
@@ -6,6 +8,8 @@
 .h-m-popup .pop-header {width:100%;text-align: left;box-sizing: border-box;} 
 .h-m-popup .pop-header .pop-title {font-size:17px; color:var(--black-1); }
 .h-m-popup .pop-body {height: calc(100% - 60px);box-sizing: border-box;position: relative;overflow: hidden;} 
+.h-m-popup .pop-container {width: 100%;height: 100%;box-sizing: border-box;position: relative;word-wrap: break-word;overflow-y: auto;padding: 0 30px 30px;} 
+.h-m-popup .pop-container .pop-title {margin-bottom:10px; } 
 .h-m-popup button.close {height: 14px;top: 15px;right: 15px;width: 14px;height: 14px;position: absolute;background:url(../images/btn_close.png);border: none;cursor: pointer;text-align: center;box-sizing: border-box;background-size: 100%;background-repeat: no-repeat;/* background-position: top right; *//* background-color: #ccc; */} 
 .h-m-popup button.close img {vertical-align: middle; max-width: 14px; } 
 
@@ -34,6 +38,30 @@
 
 /*popup-02*/
 .h-m-popup.popup-02 {padding: 20px 0 0;width: calc(100% - 40px); max-height: 95vh;border-radius: 10px;margin: 0 auto;box-shadow: 0px 5px 10px #0000001A;} 
+.h-m-popup.popup-02 .pop-header .pop-title {padding:10px;} 
+.h-m-popup.popup-02.popup-02-1 .pop-header .pop-title {padding: 10px 30px;}
+.h-m-popup.popup-02.popup-02-2 .pop-header .pop-title {padding: 10px 30px;}
+.h-m-popup.popup-02 .pop-container .popup-btnbox {margin-top:20px; width:100%; text-align:center;}
+.h-m-popup.popup-02 .pop-container .popup-btnbox a {font-size:13px; display:inline-block; text-align:center; color:#fff; background:#62666B; min-width:135px; height:35px; line-height:35px; border-radius:4px;}
+.h-m-popup.popup-02 .pop-container + .popup-btnbox {width: 100%;display: flex;text-align: center;border-radius: 0 0 10px 10px;overflow: hidden;}
+.h-m-popup.popup-02 .pop-container + .popup-btnbox a {height: 54px;line-height: 54px;font-size:15px;width: 50%;box-sizing: border-box;}
+.h-m-popup.popup-02 .pop-container + .popup-btnbox a:first-child {border-top: 1px solid #E0E6EF;}
+.h-m-popup.popup-02 .pop-container + .popup-btnbox a:last-child  {background:#62666B;color: #fff;font-weight: 600;}
+
+/*popup-03*/
+.h-m-popup.popup-bottom {top:auto; bottom:0; width:100%; border-radius: 10px 10px 0 0; position: fixed;} 
+.h-m-popup.popup-bottom .pop-header .pop-title {padding-left: 30px;}
+.h-m-popup.popup-bottom  .pop-container {padding: 0 20px 20px;}
+.h-radio-05 input[type="radio"]:checked + label {font-weight:400;}
+
+
+
+
+
+
+
+
+
 /* 공통디자인 */
 .basic-popup-greytxt {color:#7E7E7E; font-size:13px; line-height:20px; font-weight:400;}
 .basic-popup-greytxt b {color:#333; font-weight:500;}
@@ -41,6 +69,18 @@
 
 /*기본 회색 텍스트 목록*/
 .popuplist-Tit {font-size:15px; color:#151515; line-height:18px; margin-bottom:10px; font-weight:600;}
+.basic-popup-list li {font-size:13px;line-height:22px;color:#7E7E7E;padding-left: 12px;position: relative;}
+.basic-popup-list li:before {content:"\b7";position: absolute;left: 4px;}
+.basic-popup-list li b {color:#333333; font-weight:500;}
+.basic-popup-list li b.h-txt-orange {color:var(--orange);}
+.basic-popup-list li a.h-txt-pit {text-decoration:underline;}
+.basic-popup-list li.h-txt-orange {color:var(--orange);}
+
+/*- 불렛의 텍스트 목록*/
+.basic-popup-list.bar-list li {font-size:12px;line-height: 20px;}
+.basic-popup-list.bar-list li:before {content:"-";}
+.basic-popup-list.bar-list li.h-txt-3 {color:#333333;}
+
 /* 하늘색 배경박스*/
 .lightblue-bgBox {width:100%; border-radius:10px; background:#F5F7FA; padding:20px; box-sizing:border-box;}
 .lightblue-bgBox .h-radio-01:last-child label {margin-bottom:0;}
@@ -63,7 +103,53 @@ a.h-txt-pit {text-decoration:underline;}
 
 
 
-a.h-txt-pit {text-decoration:underline;}
+
+
+
+
+
+/*강사서비스 */
+/*- 이력서 등록 : 이력서 유형선택 */
+.rsme-rgst-btmpopupWrap {display: flex;flex-wrap: wrap;justify-content: space-between;}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] {position:relative;border: 1px solid #E0E6EF;border-radius: 4px;padding: 17px 20px;box-sizing: border-box;}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"]:after {content:"";width:30px;height:30px;display:inline-block;position:absolute;left:20px;bottom: 18px;background:url(../images/mobile/resme-regist-btmpopup-arrow.svg);}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] strong {}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] strong:after {content:"";}
+.rsme-rgst-btmpopupWrap [class^="selectResume-"] p {margin-top: 5px; width: 220px;}
+.rsme-rgst-btmpopupWrap .selectResume-basic {width: 100%; margin-bottom: 8px; padding-bottom: 61px;}
+.rsme-rgst-btmpopupWrap .selectResume-basic strong:after {width:72px; height:60px; display:inline-block; background:url(../images/mobile/resume-btmpop-basic.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .selectResume-file strong:after  {width:72px; height:52px; display:inline-block; background:url(../images/mobile/resume-btmpop-file.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .selectResume-link strong:after  {width:72px; height:52px; display:inline-block; background:url(../images/mobile/resume-btmpop-link.svg);position: absolute;right: 20px;bottom: 20px;}
+.rsme-rgst-btmpopupWrap .wd50 {width: calc(50% - 4px);padding-bottom: 87px;}
+
+
+/*- 이력서 등록 : 이력서를 3분만에 등록하고싶다면? */
+.resume-3minute-Tip {}
+.resume-3minute-Tip div {border-radius:10px;background-color: #F5F7FA;padding:20px 115px 20px 20px;margin-bottom:10px;box-sizing:border-box;background-repeat: no-repeat; position:relative;}
+.resume-3minute-Tip div strong {}
+.resume-3minute-Tip div p {line-height:20px;}
+.resume-3minute-Tip div.usefile:after,
+.resume-3minute-Tip div.uselink:after {content:""; width:91px; height:90px; position:absolute; bottom:0; right:10px;}
+.resume-3minute-Tip div.usefile:after {background: url(../images/mobile/resume-3minut-file.svg) #F5F7FA;background-repeat: no-repeat;background-position: center 3px;}
+.resume-3minute-Tip div.uselink:after {background: url(../images/mobile/resume-3minut-link.svg) #F5F7FA;background-repeat: no-repeat;background-position: center 0px;height: 105px;}
+
+/*- 입사지원(파일관리)*/
+.resume-fileList {padding: 10px 5px 10px 20px;padding-right:5px;}
+.resume-fileList .file-data {height: 210px;overflow-y:scroll;box-sizing: border-box;/* margin: 10px 0; */padding-right: 10px;}
+.resume-fileList .h-radio-03 {margin-top: 10px;}
+.resume-fileList .h-radio-03 label span {width: calc(100% - 25px);display: inline-block;text-align: left;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #151515;}
+.resume-fileList .h-radio-03 label a {color:#0E97FF; text-decoration:underline;}
+.resume-fileList .h-radio-03 input[type="checkbox"] + label:before {margin-top: -8px;}
+.resume-fileList .h-radio-03 input[type="checkbox"] + label:after {top: 1px;}
+.resume-fileList .file-nodata {padding: 9px 15px 10px 0;}
+
+/*- 이력서 공개설정*/
+.resume-openSet {}
+.resume-openSet .h-radio-05 {height:98px;}
+.resume-openSet .h-radio-05 input[type="radio"] + label {height:98px;flex-wrap: wrap;font-weight: 500;color: #333333;}
+.resume-openSet .h-radio-05:last-child {margin-bottom:0;}
+.resume-openSet .h-radio-05 input[type="radio"] + label div {width:100%;font-weight: 400 !important;color: #7E7E7E;}
+.resume-openSet .h-radio-05 input[type="radio"] + label div b {color:#333333;font-weight: 500;}
 .resume-openSet .h-radio-05 input[type="radio"]:checked + label.h-radio-05 input[type="radio"] + label div b {color:#333333;font-weight: 500;}
 .resume-openSet .h-radio-05 input[type="radio"]:checked + label {color: var(--blue-3);}
 
