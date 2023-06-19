@@ -179,6 +179,16 @@ a.h-txt-pit {text-decoration:underline;}
 .h-radio-02.btn4item {}
 .h-radio-02.btn4item input[type="radio"] + label {width: 25%;margin: 0;display: inline-flex;justify-content: center;}
 .h-radio-02.btn4item input[type="radio"]:checked + label {background: #26B2C8;color: #fff;border-color: #1CA3B8;}
+.h-radio-02.btn6item {flex-wrap:wrap;}
+.h-radio-02.btn6item input[type="radio"] + label {width:33.3%; margin: 0;display: inline-flex;justify-content: center;}
+.h-radio-02.btn6item input[type="radio"] + label:first-of-type {border-radius:4px 0 0 0;}
+.h-radio-02.btn6item input[type="radio"] + label:nth-of-type(3) {border-radius:0 4px 0 0; border-right:1px solid var(--border-basic-2);}
+.h-radio-02.btn6item input[type="radio"] + label:nth-of-type(3) ~ label {border-top:none;}
+.h-radio-02.btn6item input[type="radio"] + label:nth-of-type(4) {border-radius:0 0 0 4px;}
+.h-radio-02.btn6item input[type="radio"] + label:last-of-type {border-radius:0 0 4px 0;}
+.h-radio-02.btn6item input[type="radio"]:checked + label +input + label {border-left-color:#1CA3B8;}
+.h-radio-02.btn6item input[type="radio"]:nth-of-type(3):checked + label +input + label {border-left-color:var(--border-basic-2);}
+.h-radio-02.btn6item input[type="radio"]:checked + label {background: #26B2C8;color: #fff;border-color: #1CA3B8;}
 
 .datepicker2box .date-picker {width: 100%;justify-content: space-between;}
 .datepicker2box .date-picker div {width: 47%;position: relative;}
