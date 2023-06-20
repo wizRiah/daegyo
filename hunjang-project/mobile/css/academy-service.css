@@ -2,51 +2,89 @@
 
 
 /*리스트 상단 기간 검색바*/
-.list-topBox {background: #F5F7FA;width: 100%;padding:20px 20px 11px;box-sizing:border-box;border-bottom: 1px solid #E0E6EF;}
+.list-topBox {background: var(--neutral-3);width: 100%; padding:20px 15px 11px;box-sizing:border-box;border-bottom: 1px solid var(--border-basic-3);}
 .list-topBox.noborder {border:none;}
 .list-topBox .tit {margin-bottom: 7px;display: flex;}
 .list-topBox .tit strong {margin-right: 7px;}
 .list-topBox .tit .i-guideBtn {}
 .list-topBox .flex.flex-between a,.list-topBox .flex.flex-between button {padding: 0 12px !important; min-width: auto !important;}
 .list-topBox .flex.flex-between a i,
-.list-topBox .flex.flex-between button i {font-size: 15px; vertical-align: middle; margin-top: -2px; margin-right: 3px;}
+.list-topBox .flex.flex-between button i {font-size:var(--text-subtitle3); vertical-align: middle; margin-top: -2px; margin-right: 3px;}
 .list-topBox .flex.flex-between select { height: 35px; min-width: 100px;}
 .list-topBox .m-datepicker {display: flex; justify-content: space-between;}
-.list-topBox .m-datepicker .periodBox {width: calc(100% - 68px);background:#EBEFF5;border-radius:4px;margin-right:5px;padding: 8px 15px;box-sizing:border-box;text-align: left;}
-.list-topBox .m-datepicker .periodBox .period {color:#9A9A9A;font-size:13px;margin-right: 8px;}
+.list-topBox .m-datepicker .periodBox {width: calc(100% - 68px);background:var(--neutral-2);border-radius:4px;margin-right:5px;padding: 8px 15px;box-sizing:border-box;text-align: left;}
+.list-topBox .m-datepicker .periodBox .period {color:var(--black-5);font-size:var(--text-subtitle5);margin-right: 8px;}
 .list-topBox .m-datepicker .periodBox .period:before {content:"\b7";margin-right: 3px;}
-.list-topBox .m-datepicker .periodBox .date {color:#333333; font-size:13px;}
+.list-topBox .m-datepicker .periodBox .date {color:#var(--black-2)var(--black-2); font-size:var(--text-subtitle5);}
 .list-topBox .m-datepicker .h-button-white {width:68px;margin: 0;}
 .list-topBox .totaldata {display:flex;}
-.list-topBox .totaldata .dt {font-size:13px; color:#7E7E7E;}
-.list-topBox .totaldata .dd {font-size:13px; color:#333333; margin-left:3px;}
+.list-topBox .totaldata .dt {font-size:var(--text-subtitle5); color:var(--black-3);}
+.list-topBox .totaldata .dd {font-size:var(--text-subtitle5); color:#var(--black-2)var(--black-2); margin-left:3px;}
+.list-topBox .bluebgBox {background:var(--neutral-2); border-radius:10px; padding:20px; box-sizing:border-box;}
 
 /*기본 리스트*/
 .list-mbasic {}
 .list-mbasic .libox {border-bottom:1px solid #E7EDF5;padding: 18px 15px;display: flex;}
 .list-mbasic .chckdiv {}
 .list-mbasic .txtdiv {}
-.list-mbasic .txtdiv .trTit {font-size:16px;color:#151515;font-weight:600;line-height:22px;margin-top: 2px;display: block;margin-bottom: 3px;}
+.list-mbasic .txtdiv .trTit {font-size:var(--text-subtitle2);color:var(--black-1);font-weight:var(--text-bold);line-height:22px;margin-top: 2px;display: block;margin-bottom: 3px;}
 .list-mbasic .txtdiv .dl {display:flex;}
-.list-mbasic .txtdiv .dt {font-size:12px;color:#9A9A9A;line-height:20px;margin-right: 3px;}
-.list-mbasic .txtdiv .dd {font-size:12px; color:#333333; line-height:20px;}
-.list-mbasic .txtdiv .subco {color:#7E7E7E; font-size:13px; line-height:20px;}
+.list-mbasic .txtdiv .dt {font-size:var(--text-subtitle6);color:var(--black-5);line-height:20px;margin-right: 3px;}
+.list-mbasic .txtdiv .dd {font-size:var(--text-subtitle6); color:#var(--black-2)var(--black-2); line-height:20px;}
+.list-mbasic .txtdiv .subco {color:var(--black-3); font-size:var(--text-subtitle5); line-height:20px;}
 .list-mbasic .txtdiv.loginList {display:flex;}
-.list-mbasic .txtdiv.loginList .dt {font-size:13px;}
-.list-mbasic .txtdiv.loginList .dd {font-size:13px; margin:0 20px 0 2px}
+.list-mbasic .txtdiv.loginList .dt {font-size:var(--text-subtitle5);}
+.list-mbasic .txtdiv.loginList .dd {font-size:var(--text-subtitle5); margin:0 20px 0 2px}
 
-.list-mbasic.no-data {width: 100%;display: flex;background: #F5F7FA;justify-content: center;align-items: center;min-height: 65vh;}
-.list-mbasic.no-data p {font-size:13px; color:#7E7E7E; line-height:20px; padding:0 30px;}
+.list-mbasic .straightUl {display: flex;}
+.list-mbasic .straightUl .dt {}
+.list-mbasic .straightUl .dd {margin-right: 15px;}
+
+.list-mbasic.no-data {width: 100%;display: flex;background: var(--neutral-3);justify-content: center;align-items: center;min-height: 65vh;}
+.list-mbasic.no-data p {font-size:var(--text-subtitle5); color:var(--black-3); line-height:20px; padding:0 30px;}
 .list-mbasic.no-data.includeBtn {flex-direction: column;align-items: center; text-align: center;}
 .list-mbasic.no-data.includeBtn a {margin-top:20px;}
 
 
-.yellowMking {font-size:12px;color:#333333;line-height:20px;margin-top: 4px;z-index: 0;display: inline-block;position: relative;}
+.yellowMking {font-size:var(--text-subtitle6);color:#var(--black-2)var(--black-2);line-height:20px;margin-top: 4px;z-index: 0;display: inline-block;position: relative;}
 .yellowMking:before {content:"";display:inline-block;width:100%;height:6px;background:#ffe43a;position: absolute;z-index: -1;bottom: 3px;}
+
+
+.bg-lightblue-List {background:var(--neutral-3); padding:20px 15px; width:100%; box-sizing:border-box;}
+.bg-lightblue-List .list-topBox {border-bottom:none; padding:0 0 3px;}
+/*기본 화이트박스 리스트*/
+.list-whitebox {background:#fff; border-radius:10px; box-sizing:border-box; padding:20px; margin-bottom:10px;}
+.list-whitebox .trTit {font-size:var(--text-subtitle3); font-weight:var(--text-bold); line-height:18px; color:var(--black-1); margin-bottom:5px; display:block;}
+.list-whitebox .subco {font-size:var(--text-subtitle5); color:var(--black-3); line-height:20px; margin-bottom:10px;}
+.list-whitebox .select_check {margin-top:20px;}
+.list-whitebox a:only-of-type.wd100 {margin-left:0; margin-right:0;}
+.list-whitebox .h-switch {margin-right:15px;}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*연락처공개제의학원*/
 .rspnd-date {margin-top: 8px;text-align:center;line-height: 13px;}
-.rspnd-date p {font-size:12px;color:#7E7E7E;}
-.rspnd-date .d-daytxt {font-size:12px;}
+.rspnd-date p {font-size:var(--text-subtitle6);color:var(--black-3);}
+.rspnd-date .d-daytxt {font-size:var(--text-subtitle6);}
 .list-mbasic .libox.libox-includeBtn .txtdiv {width: 100%;}
+
+/*연락처공개제의학원*/
+.filemngr .libox {display:flex; justify-content:space-between; align-items: flex-end;}
+.filemngr .libox:last-child {margin-bottom:70px;}
+.filemngr .filesort {display:flex; align-items:center;}
+.filemngr .filesort img {width:18px; margin-right:7px;}
+.filemngr .filesort span {font-size:var(--text-subtitle5); color:var(--black-3); line-height:20px;}
+.filemngr .trTit {padding-top: 4px;}
+.filemngr .r-box .h-button-del {margin:0 -10px -10px 0}
+
+
