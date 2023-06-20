@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>이력서등록 경력사항(강사전용)</title>
+  <title>이력서등록 경력사항(강사전용)1</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/academy-service.css">
   <link rel="stylesheet" href="../../../css/reseum-regist.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
 
   <!-- google font -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
@@ -41,40 +42,52 @@
     <div class="container">
 
       <!-- content -->
-      <div class="content">
+      <div class="content resume-regList-cont">
 
       <!-- 경력사항(강사전용) -->
       <ul class="resume-regList">
-        <li>
+        <li class="pop-position">
           <p class="labelArea">학원명<span class="h-txt-orange">*</span></p>
           <input type="text" placeholder="학원명 입력" class="h-txtfield-basic h-txtfield-shadow">
-          <div class="h-checkbox checkbox01">
+          <div class="h-checkbox checkbox01" style="position:relative;">
             <input type="checkbox" name="checkForm" id="check01" checked="">
-            <label for="check01" class="text-subtitle4 mr5">비공개</label>
-            <!-- 툴팁내용 -->
-          </div>
-          <button class="tooltipBtn mt10"></button>
+            <label for="check01" class="text-subtitle4">비공개</label>
+            <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
 
-          <!--  -->
-          <div class="h-popup popup-04 ui-draggable sampleClss03" style="width: 400px; right: 0px; top: 97px; display: inline-block;">
-            <div class="pop-header ui-draggable-handle" style="cursor: move;">
-              <p class="pop-title text-h3">학원명 없이 이력서 공개</p>
-            </div>
 
-            <div class="pop-body">
-              <div class="pop-container">
-                <p class="text-subtitle6 h-txt-3">
-                  ㆍ<span class="h-txt-2 h-txt-medium">이력서 공개 시</span> : 인재정보에서 해당 이력서를 보려고 할 때 학원명은 <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;비공개 되어 보이지 않습니다. <br>
-                  ㆍ<span class="h-txt-2 h-txt-medium">입사지원 시</span> : 입사지원 시에는 학원명이 공개되어 지원됩니다.
-                </p>
+            <!-- POPUP -->
+            <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="width:335px; left:0; top:25px; display:none;">
+              <div class="pop-body">
+                <div class="pop-container">
+                  <p class="pop-title">학원명 없이 이력서 공개</p>
+                    <p class="text-subtitle6 h-txt-medium ml10 h-txt-3"><span class="blt-dottxt h-txt-2">이력서 공개 시</span> : 인재정보에서 해당 이력서를 보려고 할 때 학원명은 비공개 되어 보이지 않습니다.</p>
+                    <p class="text-subtitle6 h-txt-medium ml10 h-txt-3"><span class="blt-dottxt h-txt-2">입사지원 시</span> : 입사지원 시에는 학원명이 공개되어 지원됩니다.</p>
+                </div>
               </div>
+              <button type="button" class="close" title="팝업 닫기"></button>
             </div>
-            <button type="button" class="close" title="팝업 닫기">
-              <img src="../../../images/close_btn.svg" alt="팝업 닫기">
-            </button>
+
+            <script>
+              $( document ).ready( function() {
+                  $( '.laypopup_ScriptSample03' ).click( function() {
+                    $('.sampleClss03').css("display","inline-block");
+                  } );
+              } );
+
+              $( document ).ready( function() {
+                  $( '.close' ).click( function() {
+                    $('.sampleClss03').css("display","none");
+                  } );
+              } );
+            </script>
+            <!-- // -->
+          
+            
           </div>
-          <!-- // -->
+          
+
+    
+          
         </li>
         <li>
           <p class="labelArea">근무기간<span class="h-txt-orange">*</span></p>
@@ -118,7 +131,7 @@
             <label for="hradio02_3">파트ㆍ알바</label>
           </div>
         </li>
-        <li class="squareBtns-col5 mb30">
+        <li class="flex-basis-even mb30">
           <p class="labelArea">강의대상<span class="h-txt-orange">*</span></p>
           <div class="h-radio-02 squareBtn">
             <input type="radio" id="hradio03_1" name="hradio03">

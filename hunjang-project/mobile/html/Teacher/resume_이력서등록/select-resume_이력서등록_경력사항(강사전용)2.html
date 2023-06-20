@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>이력서등록 경력사항(강사전용)2</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../../css/layout.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/reseum-regist.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+
+  <div class="m-hunjang-wrap">
+
+    <!-- header -->
+    <header class="hc-white">
+      <div class="location">
+        <a href="" class="arrowBtn">경력사항</a>
+      </div>
+    </header>
+    <!-- // -->
+
+
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- content -->
+      <div class="content resume-regList-cont">
+
+        <!-- 경력사항(강사전용) -->
+        <div class="flex-basis-even mb15">
+          <div class="h-checkbox checkbox06">
+
+            <input type="checkbox" id="checkbox01_1" checked="">
+            <label for="checkbox01_1">유아</label>
+
+            <input type="checkbox" id="checkbox01_2" checked="">
+            <label for="checkbox01_2">초등</label>
+
+            <input type="checkbox" id="checkbox01_3" checked="">
+            <label for="checkbox01_3">중등</label>
+
+            <input type="checkbox" id="checkbox01_4" checked="">
+            <label for="checkbox01_4">고등(재수생)</label>
+
+            <input type="checkbox" id="checkbox01_5" checked="">
+            <label for="checkbox01_5">성인(일반,대학생)</label>
+
+          </div>
+        </div>
+
+        <ul class="resume-regList">
+
+          <!-- 유아 -->
+          <li class="basic-box">
+            <span class="h-checkbox checkbox01">
+              <span class="h-resume-title mr15">유아</span>
+              <input type="checkbox" name="checkForm" id="checkbox02_1" checked="">
+              <label for="checkbox02_1" class="text-subtitle4">전 연령</label>
+            </span>
+
+            <ul class="resume-addbox">
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox02_2">
+                  <label for="checkbox02_2" class="text-subtitle4">5세 미만</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox02_3">
+                  <label for="checkbox02_3" class="text-subtitle4">5세</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox02_4">
+                  <label for="checkbox02_4" class="text-subtitle4">6세</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox02_5">
+                  <label for="checkbox02_5" class="text-subtitle4">7세</label>
+                </span>
+              </li>
+              <li class="mt10" style="position:relative;">
+                <select name="" id="" class="width-200">
+                  <option value="" disabled="" selected="">수업 최대인원</option>
+                  <option value="">10명 이내</option>
+                  <option value="">11명~20명</option>
+                  <option value="">21명~30명</option>
+                  <option value="">31명~40명</option>
+                  <option value="">41명~50명</option>
+                  <option value="">50명 이상</option>
+                </select>
+                <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
+
+                <!-- 툴팁 -->
+                <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="display:none; width:calc(100% + 40px); left: -20px; top: 40px;">
+                  <div class="pop-body">
+                    <div class="pop-container">
+                      <p class="pop-title">수업 최대인원</p>
+                      <p class="text-subtitle6 h-txt-medium h-txt-2">강사님 수업 진행 시, 한번에 최대 몇 명의 인원까지 해당 학원에 서수업을 진행했는지 인원을 선택해 주시면 됩니다.</p>
+                    </div>
+                  </div>
+                  <button type="button" class="close" title="팝업 닫기"></button>
+                </div>
+                <!-- // -->
+
+                <script>
+                  $(document).ready(function() {
+                    $('.laypopup_ScriptSample03').click(function() {
+                      $('.sampleClss03').css("display", "inline-block");
+                    });
+                  });
+
+                  $(document).ready(function() {
+                    $('.close').click(function() {
+                      $('.sampleClss03').css("display", "none");
+                    });
+                  });
+                </script>
+
+              </li>
+            </ul>
+          </li>
+
+
+          <!-- 초등  -->
+          <li class="basic-box">
+            <span class="h-checkbox checkbox01">
+              <span class="h-resume-title mr15">초등</span>
+              <input type="checkbox" name="checkForm" id="checkbox03_1" checked="">
+              <label for="checkbox03_1" class="text-subtitle4">전 학년</label>
+            </span>
+
+            <ul class="resume-addbox">
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_2">
+                  <label for="checkbox03_2" class="text-subtitle4">1학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_3">
+                  <label for="checkbox03_3" class="text-subtitle4">2학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_4">
+                  <label for="checkbox03_4" class="text-subtitle4">3학년</label>
+                </span>
+              </li>
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_5">
+                  <label for="checkbox03_5" class="text-subtitle4">4학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_6">
+                  <label for="checkbox03_6" class="text-subtitle4">5학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox03_7">
+                  <label for="checkbox03_7" class="text-subtitle4">6학년</label>
+                </span>
+              </li>
+              <li class="mt10" style="position:relative;">
+                <select name="" id="" class="width-200">
+                  <option value="" disabled="" selected="">수업 최대인원</option>
+                  <option value="">10명 이내</option>
+                  <option value="">11명~20명</option>
+                  <option value="">21명~30명</option>
+                  <option value="">31명~40명</option>
+                  <option value="">41명~50명</option>
+                  <option value="">50명 이상</option>
+                </select>
+                <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
+
+                <!-- 툴팁 -->
+                <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="display:none; width:calc(100% + 40px); left: -20px; top: 40px;">
+                  <div class="pop-body">
+                    <div class="pop-container">
+                      <p class="pop-title">수업 최대인원</p>
+                      <p class="text-subtitle6 h-txt-medium h-txt-2">강사님 수업 진행 시, 한번에 최대 몇 명의 인원까지 해당 학원에 서수업을 진행했는지 인원을 선택해 주시면 됩니다.</p>
+                    </div>
+                  </div>
+                  <button type="button" class="close" title="팝업 닫기"></button>
+                </div>
+                <!-- // -->
+
+              </li>
+            </ul>
+          </li>
+
+
+          <!-- 중등  -->
+          <li class="basic-box">
+            <span class="h-checkbox checkbox01">
+              <span class="h-resume-title mr15">중등</span>
+              <input type="checkbox" name="checkForm" id="checkbox04_1" checked="">
+              <label for="checkbox04_1" class="text-subtitle4">전 학년</label>
+            </span>
+
+            <ul class="resume-addbox">
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox04_2">
+                  <label for="checkbox04_2" class="text-subtitle4">1학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox04_3">
+                  <label for="checkbox04_3" class="text-subtitle4">2학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox04_4">
+                  <label for="checkbox04_4" class="text-subtitle4">3학년</label>
+                </span>
+              </li>
+              <li class="mt10" style="position:relative;">
+                <select name="" id="" class="width-200">
+                  <option value="" disabled="" selected="">수업 최대인원</option>
+                  <option value="">10명 이내</option>
+                  <option value="">11명~20명</option>
+                  <option value="">21명~30명</option>
+                  <option value="">31명~40명</option>
+                  <option value="">41명~50명</option>
+                  <option value="">50명 이상</option>
+                </select>
+                <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
+
+                <!-- 툴팁 -->
+                <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="display:none; width:calc(100% + 40px); left: -20px; top: 40px;">
+                  <div class="pop-body">
+                    <div class="pop-container">
+                      <p class="pop-title">수업 최대인원</p>
+                      <p class="text-subtitle6 h-txt-medium h-txt-2">강사님 수업 진행 시, 한번에 최대 몇 명의 인원까지 해당 학원에 서수업을 진행했는지 인원을 선택해 주시면 됩니다.</p>
+                    </div>
+                  </div>
+                  <button type="button" class="close" title="팝업 닫기"></button>
+                </div>
+                <!-- // -->
+
+              </li>
+            </ul>
+          </li>
+
+
+          <!-- 고등  -->
+          <li class="basic-box">
+            <span class="h-checkbox checkbox01">
+              <span class="h-resume-title mr15">고등</span>
+              <input type="checkbox" name="checkForm" id="checkbox05_1" checked="">
+              <label for="checkbox05_1" class="text-subtitle4">전 학년</label>
+            </span>
+
+            <ul class="resume-addbox">
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox05_2">
+                  <label for="checkbox05_2" class="text-subtitle4">1학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox05_3">
+                  <label for="checkbox05_3" class="text-subtitle4">2학년</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox05_4">
+                  <label for="checkbox05_4" class="text-subtitle4">3학년</label>
+                </span>
+              </li>
+              <li class="h-checkbox checkbox01 wd100 flex">
+                <span>
+                  <input type="checkbox" name="checkForm" id="checkbox05_5">
+                  <label for="checkbox05_5" class="text-subtitle4">재수생</label>
+                </span>
+              </li>
+              <li class="mt10" style="position:relative;">
+                <select name="" id="" class="width-200">
+                  <option value="" disabled="" selected="">수업 최대인원</option>
+                  <option value="">10명 이내</option>
+                  <option value="">11명~20명</option>
+                  <option value="">21명~30명</option>
+                  <option value="">31명~40명</option>
+                  <option value="">41명~50명</option>
+                  <option value="">50명 이상</option>
+                </select>
+                <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
+
+                <!-- 툴팁 -->
+                <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="display:none; width:calc(100% + 40px); left: -20px; top: 40px;">
+                  <div class="pop-body">
+                    <div class="pop-container">
+                      <p class="pop-title">수업 최대인원</p>
+                      <p class="text-subtitle6 h-txt-medium h-txt-2">강사님 수업 진행 시, 한번에 최대 몇 명의 인원까지 해당 학원에 서수업을 진행했는지 인원을 선택해 주시면 됩니다.</p>
+                    </div>
+                  </div>
+                  <button type="button" class="close" title="팝업 닫기"></button>
+                </div>
+                <!-- // -->
+
+              </li>
+            </ul>
+          </li>
+
+          <!-- 과목선택 창과 동일한 레이어 팝업 -->
+          <li>
+            <p class="labelArea">근무지역<span class="h-txt-orange">*</span></p>
+            <input type="text" class="mt5" placeholder="근무지역 선택">
+          </li>
+
+          <li>
+            <p class="labelArea">급여 실 수령액<span class="h-txt-orange">*</span></p>
+            <div class="h-txtfield-inner">
+              <select name="" id="" class="min-wd100px mr5">
+                <option value="" disabled="" selected="">연봉</option>
+                <option value="">월급</option>
+              </select>
+              <input type="text" placeholder="급여 입력 (숫자만)">
+            </div>
+          </li>
+
+          <li>
+            <p class="labelArea">담당업무 및 경력기술</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="담당업무 및 경력기숧 입력" class="h-txtfield-basic wd100" style="height:150px!important;"></textarea>
+          </li>
+
+        </ul>
+
+        <!-- on 클래스 추가시 버튼 바뀜 -->
+        <div class="lineadd-wrap mt30 pt30">
+          <p class="h-resume-title">항목추가</p>
+          <button type="button" class="circle-plusBtn on">근무지역</button>
+          <button type="button" class="circle-plusBtn on">급여 실 수령액</button>
+          <button type="button" class="circle-plusBtn on">담당업무 밀 경력기술</button>
+        </div>
+
+
+      </div>
+      <!-- // content -->
+
+    </div>
+    <!-- // container -->
+
+    <div class="fixed-bottom">
+      <ul class="bc-gray">
+        <li><button type="button">취소</button></li>
+        <li><button type="button">작성완료</button></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>

@@ -5,6 +5,7 @@
 .min-wd105px {min-width:105px;}
 
 
+
 /* =================== 이력서 등록 완료 ================== */
 
 /* 이력서 등록 네비 */
@@ -44,8 +45,9 @@
 .h-textfield .placehoder-hidden .h-txt-orange {margin-left:3px; font-size:var(--text-subtitle6);}
 
 /* 이력서 등록 폼 공통 */
+.squareBtn + .basic-box {margin-top:15px;}
 .basic-box {padding:20px; background:#fff; border-radius:10px; box-sizing: border-box;}
-.basic-box + .basic-box {margin-top:15px;}
+.basic-box + .basic-box {margin-top:10px!important;}
 .basic-box + .h-button-ml.h-button-teal {margin:15px 0 0;}
 .h-button-ml.h-button-teal + .basic-box {margin:15px 0 0;}
 .basic-box-inner {position:relative;}
@@ -139,21 +141,57 @@
 .outlineBtn-wrap.alRight .h-checkbox.checkbox02 input[type="checkbox"] + label span {display: flex; align-items: center; font-size:var(--text-subtitle3);}
 .outlineBtn-wrap.alRight .h-checkbox.checkbox02 input[type="checkbox"] + label span img {margin-right:9px;}
 
-/* 버튼 2개가 한줄에 들어갈때 */
+/* 사각형 플러스버튼 한줄에 두개 */
 .outlineBtn-wrap.calc2 {display: flex; justify-content: space-between;}
 .outlineBtn-wrap.calc2 .circle-plusBtn {width:calc(100% / 2 - 5px); margin:0;}
 
-.h-checkbox.checkbox06 input[type="checkbox"] + label {position: relative; width:100%; padding:15px 0;  transition: color 0.5s; -webkit-transition: color 0.5s; color: var(--grey-2); font-size: 14px; cursor:pointer; text-align: center;}
-.h-checkbox.checkbox06 li:nth-child(-n+2) input[type="checkbox"] + label {border-bottom:1px solid var(--border-basic-2)}
-.h-checkbox.checkbox06 input[type="checkbox"]:checked + label {background:var(--cyan); color:#fff;}
-.h-checkbox.checkbox06 li:nth-child(odd) input[type="checkbox"] + label {border-right:1px solid var(--border-basic-2)}
+/* 사각형 버튼 한줄에 여러개 */
+.h-radio-02.squareBtn {margin-left:5px;}
+.h-radio-02.squareBtn input[type="radio"] + label { display:inline-block; width:100%; height:45px; line-height:44px; border:1px solid var(--border-basic-2); font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
+.h-radio-02.squareBtn input[type="radio"] + label:before { content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+.h-radio-02.squareBtn input[type="radio"]:checked + label { border-color:var(--cyan); background:var(--cyan); color: #fff; font-weight: var(--text-medium); }
+.h-radio-02.squareBtn input[type="radio"]:checked + label +input + label { border-left-color:var(--cyan); }
+.h-radio-02.squareBtn input[type="radio"]:disabled + label { background:var(--border-basic-4); }
 
-.edubg-listbox {display:flex; flex-wrap: wrap; width:100%; margin:0 0 20px 0; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing: border-box;}
-.edubg-listbox li {display:flex; width:50%;}
+/* 사격형 버튼 딱맞게 떨어지는 스타일 */
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label { display:inline-block; width:100%; height:45px; line-height:44px; border:1px solid var(--border-basic-2); font-size:var(--text-subtitle4); margin:0; padding:0 5px; margin-left:-1px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:before { content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"]:checked + label { border-color:#1ca3b8; background:var(--cyan); color: #fff; font-weight: var(--text-medium); }
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"]:checked + label +input + label { border-left-color:#1ca3b8; }
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"]:disabled + label { background:var(--border-basic-4); }
+
+.flex-basis-even .h-checkbox.checkbox06 {display:flex; flex-wrap: wrap; /*width:100%; margin:0 0 20px 0; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing: border-box;*/}
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label {/*width: 40%;*/ flex-basis: 30%; flex-grow: 1;}
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(n+8) {margin-top:-1px;}
+
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:first-of-type {border-radius: 4px 0 0 0;}
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:last-of-type {border-radius: 0 0 4px 0;}
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(6) {border-radius: 0 4px 0 0;}
+.flex-basis-even .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(8) {border-radius: 0 0 0 4px;}
+
+.flex-basis-even .h-radio-02.squareBtn {display: flex; flex-wrap: wrap;}
+.flex-basis-even .h-radio-02.squareBtn input[type="radio"] + label {/*width:40%;*/ flex-basis: 30%; flex-grow: 1;}
+.flex-basis-even .h-radio-02.squareBtn input[type="radio"] + label:nth-child(n+8) {margin-top:-1px;}
+
+.flex-basis-even .h-radio-02 input[type="radio"] + label:first-of-type {border-radius: 4px 0 0 0;}
+.flex-basis-even .h-radio-02 input[type="radio"] + label:last-of-type {border-radius: 0 0 4px 0;}
+.flex-basis-even .h-radio-02 input[type="radio"] + label:nth-child(6) {border-radius: 0 4px 0 0;}
+.flex-basis-even .h-radio-02 input[type="radio"] + label:nth-child(8) {border-radius: 0 0 0 4px;}
+
+/* 사격형 버튼 안맞게 떨어지는 스타일 */
+.flex-basis-even.fl-wd33 .h-checkbox.checkbox06 input[type="checkbox"] + label {flex-basis:33.33%; flex-grow:0;}
+.flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label {flex-basis:50%; flex-grow:0;}
+.flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(6) {border-radius: 0 0 0 4px;}
+.flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(8) {border-radius: 0 0 4px 0;}
+.flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(n+6) {margin-top:-1px;}
+.flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(4) {border-radius: 0 4px 0 0;}
+
+
 
 
 /* =================== 이력서 등록 ================== */
 .resume-regList > li + li {margin-top:25px;}
+.resume-regList > li + li.basic-box {margin-top:15px;}
 .resume-regList .h-checkbox.checkbox01 {margin:10px 0 0;}
 
 .h-txtfield-inner {position:relative; display:flex; align-items: center;}
@@ -161,6 +199,7 @@
 .h-txtfield-inner > input[type="text"] + select {margin-left:5px;}
 .h-txtfield-inner > input + button {flex:none;}
 .h-txtfield-inner > input[type="text"] {position:relative;}
+/* .h-txtfield-inner > select {min-width:100px;} */
 
 .h-txtfield-srch {position:relative; display:flex; align-items: center;}
 .h-txtfield-srch input[type="text"] {padding:0 40px 0 15px;}
@@ -185,24 +224,6 @@
 .imgAdd .remove {position:absolute; top:0; right:0;}
 .imgAdd .imgChg {position: absolute; bottom: 10px; width: calc(100% - 20px); height: 30px; background: #00000080; color: #fff; font-size: var(--text-subtitle5); font-weight: var(--text-regular); text-align: center; border-radius: 0 0 4px 4px;}
 
-
-/* 사각형 버튼 여러개 나열 */
-.h-radio-02.squareBtn {margin-left:5px;}
-.h-radio-02.squareBtn input[type="radio"] + label { display:inline-block; width:100%; height:45px; line-height:44px; border:1px solid var(--border-basic-2); font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
-.h-radio-02.squareBtn input[type="radio"] + label:before { content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
-.h-radio-02.squareBtn input[type="radio"]:checked + label { border-color:var(--cyan); background:var(--cyan); color: #fff; font-weight: var(--text-medium); }
-.h-radio-02.squareBtn input[type="radio"]:checked + label +input + label { border-left-color:var(--cyan); }
-.h-radio-02.squareBtn input[type="radio"]:disabled + label { background:var(--border-basic-4); }
-
-.squareBtns-col5 .h-radio-02.squareBtn {display: flex; flex-wrap: wrap;}
-.squareBtns-col5 .h-radio-02.squareBtn input[type="radio"] + label {width:40%; flex-basis: 30%; flex-grow: 10;}
-.squareBtns-col5 .h-radio-02.squareBtn input[type="radio"] + label:nth-child(n+8) {margin-top:-1px;}
-.squareBtns-col5 .h-radio-02 input[type="radio"] + label:first-of-type {border-radius: 4px 0 0 0;}
-.squareBtns-col5 .h-radio-02 input[type="radio"] + label:last-of-type {border-radius: 0 0 4px 0;}
-.squareBtns-col5 .h-radio-02 input[type="radio"] + label:nth-child(6) {border-radius: 0 4px 0 0;}
-.squareBtns-col5 .h-radio-02 input[type="radio"] + label:nth-child(8) {border-radius: 0 0 0 4px;}
-
-
 .h-txtfield-wrap.time {display: flex; justify-content: space-between; align-items: center;}
 .h-txtfield-wrap.time select {width:calc(100% / 2 - 10px);}
 .h-txtfield-wrap.time select + select {margin-left:0;}
@@ -220,18 +241,117 @@
 .roundBtn50 {height:42px; padding:0 20px; border:1px solid var(--border-basic-2); border-radius: 50px; background:#fff; font-size:var(--text-subtitle4); color:var(--black-2); font-weight:var(--text-regular);}
 
 /* 툴팁 버튼 */
-.tooltipBtn {background:url('../images/mobile/m_icon_qmark.png') no-repeat; width:20px; height:20px;}
+/* .tooltipBtn {background:url('../images/mobile/m_icon_qmark.png') no-repeat; width:20px; height:20px;} */
+.h-btn-question {width: 20px; height: 20px; border-radius: 100%; border: 1px solid #cdd2d8; margin: 0 7px; background: #fff; font-size:12px;}
+.h-btn-question:hover {cursor: pointer;}
 
 /* 그림자 스타일 input[type="text"] */
 .h-txtfield-shadow {border-color:var(--grey-3)!important; box-shadow: 0px 5px 10px #0000001A;}
 
 /* 항목추가 라인 */
 .lineadd-wrap {border-top:2px solid var(--border-basic-3);}
+.lineadd-wrap .circle-plusBtn.on {}
+.circle-plusBtn.on {border:1px solid var(--blue-3); color:var(--blue-3);}
+.circle-plusBtn.on:before {background:url('../images/mobile/icon_minus_outline_blue.png');}
 
 /* input[type="text"]에 돋보기 */
 .searchBtn-wrap {position:relative;}
 .searchBtn-wrap .h-m-searchBtn {position:absolute; top:50%; right:15px; transform: translateY(-50%); background:url('../images/mobile/m_icon_sm_search.png') no-repeat; width:21px; height:21px;}
 .searchBtn-wrap > input[type="text"] {padding:0 40px 0 15px;}
 
-/* 자동완성 키워드 */
-/* .keyword-Srch-Wrap {margin-top:0;} */
+/* 툴팁 팝업 */
+.h-m-popup.popup-04 { position:absolute; padding: 20px; border: 1px solid var(--grey-3); border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0px 5px 10px #0000001A;} 
+.h-m-popup.popup-04 .pop-body { height: 100%; overflow: visible; } 
+.h-m-popup.popup-04 .pop-container { height: 100%; overflow: visible; padding:0;} 
+.h-m-popup.popup-04 .pop-title { font-size:var(--text-subtitle3); font-weight:var(--text-bold);} 
+.h-m-popup.popup-04 select { height:46px; } 
+.h-m-popup.popup-04 .h-checkbox { margin:0; } 
+.h-m-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label { font-size:var(--text-subtitle4); } 
+.h-m-popup.popup-04 button.close {background:url(../images/close_btn.svg) no-repeat; width:14px; height:14px;}
+.h-m-popup .blt-dottxt {position:relative;}
+.h-m-popup .blt-dottxt:before {content:'ㆍ'; position:absolute; top:0; left:-10px;}
+
+/* 인풋 - 키워드 자동입력 박스 (학교검색/ 자격증검색 등) */
+.keyword-Srch-Wrap { display:none; width: 100%; border: 1px solid var(--grey-3); border-radius: 4px; /*margin-top: 5px;*/ overflow: hidden; position: absolute; z-index: 1; background: #fff; top: 54px; box-sizing: border-box; } 
+.keyword-Srch-Wrap.on { display:inline-block; } 
+.keyword-Srch-Wrap .srchKeyword { color: var(--blue-3); } 
+.keyword-Srch-Wrap>ul { height: 187px; padding-top:10px; overflow-y: scroll; } 
+.keyword-Srch-Wrap>ul>li { font-size:15px; color:var(--black-2); padding: 9px 19px; } 
+.keyword-Srch-Wrap>ul>li.no-data { text-align:center; display: flex; flex-direction: column; align-items: center; width: 100%; box-sizing: border-box; padding: 74px 0; background: #fff !important; } 
+.keyword-Srch-Wrap>ul>li.no-data b { width:100%; font-weight: var(--text-medium); font-size:var(--text-subtitle4);} 
+.keyword-Srch-Wrap>ul>li.no-data span { width:100%; color: var(--black-3); margin-top:5px; font-size:var(--text-subtitle5);} 
+.keyword-Srch-Wrap>ul>li:hover { background: var(--neutral-3); } 
+.keyword-Srch-Wrap .directInput { background: var(--neutral-3); border-top: 1px solid var(--border-basic-4); text-align: center; } 
+.keyword-Srch-Wrap .directInput button { font-size:var(--text-subtitle4); color: var(--black-2); width: 100%; padding: 17px 5px; } 
+.keyword-Srch-Wrap .directInput button span { } 
+.keyword-Srch-Wrap .directInput button:after { content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid var(--grey-3); transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px; } 
+
+/* 키워드 지우기 */
+.keyword-delwrap {width:100%; position:relative;}
+.keyword-delwrap > input[type="text"] {padding:0 40px 0 15px;}
+.keyword-del {position:absolute; top:13px; right:13px; background:url(../images/icon_sm_close_gray.png) no-repeat; width:20px; height:20px;}
+.keyword-del-squared {flex:none; background:url(../images/mobile/m_icon_close_squared_gray.png) no-repeat; width:22px; height:22px;}
+
+
+
+/* 이력서 등록 컨텐츠 색깔, 간격 */
+.content {padding:20px 20px 80px;}
+.content.resume-regList-cont {/*padding:20px 20px 80px;*/ background:var(--neutral-3);}
+
+.pt30 {padding-top:30px;}
+.mr15 {margin-right:15px;}
+
+
+/* 이력서등록_경력사항(강사전용) */
+.resume-addbox .h-checkbox.checkbox01 > span + span {margin-left:15px;}
+/* .resume-addbox .h-checkbox.checkbox01 > span {width:25%;} */
+.resume-addbox .h-checkbox.checkbox01 {display: flex;}
+
+.resume-addbox.gap10 .h-checkbox.checkbox01 {display: flex; flex-wrap: wrap; gap: 12px;}
+.resume-addbox.gap10 .h-checkbox.checkbox01 > span + span {margin-left:0;}
+
+/* 금액 입력 (숫자만) 만원 */
+.pseudo-wrap input[type="text"] + .pseudo-txt {position:absolute; top:15px; right:15px; font-size:var(--text-subtitle4);}
+.pseudo-wrap input[type="text"] {padding:0 45px 0 15px;}
+
+/* 추가선택항목 디자인 */
+.basic-box .addlist .tit {display:inline-block; min-width:60px; font-size:var(--text-subtitle4); color:var(--black-1);}
+.basic-box .addlist .tit + select {width: calc(100% - 85px); margin-left: 20px;}
+.basic-box .addlist li + li {margin-top:10px;}
+
+/* 내용보기 화살표 버튼 */
+.h-button-underline.arrowBtn {margin:0;font-weight:var(--text-regular);}
+.h-button-underline.arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_icon_arrow_gray.png') no-repeat; width:12px; height:6px;}
+
+
+/* 스타일 가이드에 문법 잘못되어있는거 고치기*/
+.h-radio-01 {padding:0;}
+.h-radio-01 input[type="radio"] + * {text-indent:0 !important;}
+
+.basic-box .h-radio-01 li + li {margin-left:10px;}
+
+/* */
+.blue-box {padding:20px; background:var(--neutral-2); border-radius:10px;}
+.blue-box .btit {font-size:var(--text-subtitle3);}
+.blue-box .stit {font-size:var(--text-subtitle6); line-height:16px; font-weight: var(--text-regular);}
+
+/* 이력서등록_파일등록 */
+.file-upload-wrap .guidetxt {margin: -20px -20px 0; padding:20px; background:var(--neutral-3); color:var(--black-3); font-size:var(--text-subtitle5); border-bottom: 1px solid var(--neutral-2);}
+.file-upload-wrap button:not(.h-button-del) {padding:0 30px;}
+/* .file-regList {margin:0 -20px; background:#fff;} */
+.file-regList {margin:0 -20px 20px;}
+.file-regList > li {position:relative; padding:20px; border-bottom: 1px solid var(--neutral-2);}
+.file-regList li .h-checkbox {float:left;}
+.file-regList li .tit-list {margin-left:40px; width:calc(100% - 60px);}
+.file-regList li .tit-list p {margin-bottom:3px; font-size:var(--text-subtitle5); color:var(--black-2);}
+.file-regList li .tit-list .h-button-underline {display:inline-block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:97%; padding:0; margin:0; font-size:var(--text-subtitle5); font-weight:var(--text-medium);}
+.file-regList li .h-button-del {position:absolute; right:20px; bottom:20px; margin:0; width:auto; height:auto;}
+.file-regList li .h-button-icon:hover {background:none!important;}
+.file-regList li.no-data {display: flex; flex-direction: column; align-items: center; justify-content: center; height:135px;}
+
+.file-regList.blue-type {margin:0 0 20px;}
+.file-regList.blue-type > li {padding:15px; border-bottom:0; background:var(--neutral-3); border-radius:10px;}
+.file-regList.blue-type > li + li {margin-top:5px;}
+.file-regList.blue-type .detail-info {display: flex; margin-top:10px;}
+.file-regList.blue-type .detail-info li {font-size:11px;}
+.file-regList.blue-type .detail-info li + li {margin-left:15px;}
