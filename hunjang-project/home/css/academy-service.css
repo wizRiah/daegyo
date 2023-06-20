@@ -1260,13 +1260,13 @@
 .rcrt-adv-Listbox .adv-infotxt div strong {color:#FF6000; font-weight:600;}
     /*left : 상품명 버튼*/
     .rcrt-adv-Listbox .left-prdctBtnBox {width:190px; display:flex; flex-direction:column; }
-    .rcrt-adv-Listbox .left-prdctBtnBox button {font-size:14px; line-height:16px; width:100%; padding:18px 0px 18px 20px; border-top:1px solid #E0E6EF; text-align:left; position:relative;}
+    .rcrt-adv-Listbox .left-prdctBtnBox button {font-size:14px; line-height:16px; width:100%; padding:18px 0px 18px 10px; border-top:1px solid #E0E6EF; text-align:left; position:relative;}
     .rcrt-adv-Listbox .left-prdctBtnBox button:last-child {border-bottom:1px solid #E0E6EF;}
     .rcrt-adv-Listbox .left-prdctBtnBox button .num {color:#BCBCBC; margin-right:8px;}
     .rcrt-adv-Listbox .left-prdctBtnBox button .prdctNm {color:#333333; font-weight:500;}
     .rcrt-adv-Listbox .left-prdctBtnBox button .moreItem {padding:10px 0 0 30px;}
     .rcrt-adv-Listbox .left-prdctBtnBox button .moreItem div {font-size:14px; margin-top:5px;}
-    .rcrt-adv-Listbox .left-prdctBtnBox button:after {content:""; width:5px; height:5px; display:inline-block; border:1px solid #CCD1D7; transform: rotate(45deg); border-width: 1px 1px 0 0; position: absolute; right: 20px; top: 22px;}
+    .rcrt-adv-Listbox .left-prdctBtnBox button:after {content:""; width:5px; height:5px; display:inline-block; border:1px solid #CCD1D7; transform: rotate(45deg); border-width: 1px 1px 0 0; position: absolute; right:10px; top: 22px;}
     .rcrt-adv-Listbox .left-prdctBtnBox button.selected {border-color:#43A986;}
     .rcrt-adv-Listbox .left-prdctBtnBox button.selected * {color:#43A986;}
     .rcrt-adv-Listbox .left-prdctBtnBox button.selected + button {border-top-color:#43A986;}
@@ -1278,11 +1278,12 @@
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB {display:flex; flex-wrap:wrap;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"] {display:none;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB label {width:50%; text-align:center; height:54px; line-height:54px; color:#333333; font-size:14px; border-bottom:1px solid #E0E6EF;}
-    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB label:before {content:""; height:20px; display:inline-block; vertical-align: middle; margin-right: 10px; background: #ddd;}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB label:only-of-type {width:100%;}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB label:before {content:""; background:url(../images/product-info-pc_mobile.png); background-size:24px; height:20px; display:inline-block; vertical-align: middle; margin-right: 10px;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .label-prvwPC:before {width:24px;}
-    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .label-prvwmobile:before {width:16px;}
-    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"].preview-pc:checked ~ .label-prvwPC:before {}
-    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"].preview-mobile:checked ~.label-prvwmobile:before {}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .label-prvwmobile:before {width:16px; background-position-y:-40px; background-position-x:-4px;}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:checked + label.label-prvwPC:before {background-position-y: -20px;}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:checked + label.label-prvwmobile:before {background-position-y: -60px;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:checked + label {background:#43A986; color:#ffffff; border-bottom-color:#43A986;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox {width:100%; height:645px;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox [class^="tabbox-"] {display:none; width:100%; height:100%; transition:background-position 1s;}
