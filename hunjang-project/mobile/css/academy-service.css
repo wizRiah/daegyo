@@ -23,7 +23,7 @@
 .list-topBox .bluebgBox {background:var(--neutral-2); border-radius:10px; padding:20px; box-sizing:border-box;}
 
 /*기본 리스트*/
-.list-mbasic {}
+.list-mbasic {width:100%;}
 .list-mbasic .libox {border-bottom:1px solid #E7EDF5;padding: 18px 15px;display: flex;}
 .list-mbasic .chckdiv {}
 .list-mbasic .txtdiv {}
@@ -85,6 +85,33 @@
 .filemngr .filesort img {width:18px; margin-right:7px;}
 .filemngr .filesort span {font-size:var(--text-subtitle5); color:var(--black-3); line-height:20px;}
 .filemngr .trTit {padding-top: 4px;}
-.filemngr .r-box .h-button-del {margin:0 -10px -10px 0}
+.filemngr .r-box .h-button-del {margin:0 -10px -10px 0;}
+
+/*내이력서열람학원*/
+.myrsume-OpenAcmy {overflow:hidden;}
+.myrsume-OpenAcmy .libox {display:flex; padding: 0;position: relative;flex-wrap: wrap; z-index:0;}
+.myrsume-OpenAcmy .libox .libox.wd100 {z-index:1; background:#fff;}
+.myrsume-OpenAcmy .chckdiv {padding: 17px 0 17px 15px;}
+.myrsume-OpenAcmy .txtdiv {width: 100%;width: calc(100% - 128px);flex-shrink:3;padding: 17px 5px 17px 0;}
+.myrsume-OpenAcmy .r-box {width: 68px; padding: 20px 0; display: flex; align-items: center; text-align: center; border-left: 1px solid #E7EDF5; box-sizing: border-box;}
+.myrsume-OpenAcmy .r-box .geonIng {font-size:12px;width: 100%;}
+.myrsume-OpenAcmy .r-box .geonIng p {font-weight:500;}
+.myrsume-OpenAcmy .r-box .geonIng strong {font-weight:500;margin-right: -2px;}
+.myrsume-OpenAcmy .r-box button {width:100%; clear:both; margin-top:3px;}
+.myrsume-OpenAcmy .r-box button.close img {transform:rotate(180deg);}
+
+.myrsume-OpenAcmy .libox-subWrap {background:#EBEFF5; padding-bottom:4px; transition: all 1s;overflow: hidden; margin-top: -180px;}
+.myrsume-OpenAcmy .libox-subWrap.on {/*display:block !important;*/ margin-top:0;}
+.myrsume-OpenAcmy .libox-sub {width:100%;background: #F5F7FA;border-top: 1px solid #E7EDF5;}
+.myrsume-OpenAcmy .libox-sub .txtdiv {padding-left: 55px; position: relative; width: calc(100% - 80px); box-sizing: border-box;}
+.myrsume-OpenAcmy .libox-sub .txtdiv .trTit {width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.myrsume-OpenAcmy .libox-sub .txtdiv .dt:not(:last-of-type):after {content:"";display: inline-block;width: 1px;height: 12px;background: #E0E6EF;margin: 0 5px 0 7px;vertical-align: middle;}
+.myrsume-OpenAcmy .libox-sub .txtdiv:before {content:"";width:8px;height:10px;border:1px solid #C3CAD4;border-width:0 0 1px 1px;display:inline-block;/* margin: 22px 15px 0 32px; */position: absolute;left: 32px;top: 22px;}
+.myrsume-OpenAcmy .libox-sub .r-box {border-left:none;flex-direction:column;align-items: flex-end;width: 80px;padding: 15px 15px 16px 0;}
+.myrsume-OpenAcmy .libox-sub .r-box a {margin:0; width:65px;}
+.myrsume-OpenAcmy .libox-sub .r-box .scrap_star {margin-top: 7px;}
+
+.myrsume-OpenAcmy .libox-sub .r-box .scrap_star .btn-scrap-bold[type="checkbox"] + label {width: 20px; height: 18px;}
+.myrsume-OpenAcmy .libox-sub .r-box .scrap_star .btn-scrap-bold[type="checkbox"] + label:before {background-size: 20px 18px;}
 
 
