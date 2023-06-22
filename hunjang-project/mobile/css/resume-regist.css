@@ -10,17 +10,27 @@
 .h-line-hgt20 {line-height: 20px!important;}
 
 .h-button-underline.h-fs12 {font-size:var(--text-subtitle6); padding:0; margin:0;}
+.m-hunjang-wrap textarea.h-txtfield-basic {resize: none;}
 
 
 
 /* =================== 이력서 등록 완료 ================== */
 
-/* 이력서 등록 네비 */
+/* 이력서 등록 네비 (슬라이드 X)*/
 .resumeReg-nav {display:flex; justify-content: space-around; width:100%;}
 .resumeReg-nav li {display:flex; align-items: center; /*width: calc(100% / 6);*/ justify-content: center;}
 .resumeReg-nav li a {position:relative; padding:15px 3px; font-size:var(--text-subtitle3);}
 .resumeReg-nav li.active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--blue-3);}
 .resumeReg-nav li.active a {font-weight: var(--text-medium); color:var(--blue-3);}
+
+/* 이력서 등록 네비 (슬라이드 X)*/
+/* .resumeReg-slide-nav {display:flex; justify-content: space-around; width:100%;} */
+/* .resumeReg-slide-nav {padding:0 20px;} */
+.resumeReg-slide-nav {background:var(--neutral-3);}
+.resumeReg-slide-nav .swiper-slide {display:flex; align-items: center; width:auto; justify-content: center; margin-left:20px;}
+.resumeReg-slide-nav .swiper-slide a {position:relative; padding:15px 5px; font-size:var(--text-subtitle3);}
+.resumeReg-slide-nav .swiper-slide-active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--blue-3);}
+.resumeReg-slide-nav .swiper-slide-active a {font-weight: var(--text-medium); color:var(--blue-3);}
 
 /* 이력서 제목 입력 추천 */
 .resume-title {position:relative;}
@@ -280,7 +290,7 @@
 .searchBtn-wrap > input[type="text"] {padding:0 40px 0 15px;}
 
 /* 툴팁 팝업 */
-.h-m-popup.popup-04 { position:absolute; padding: 20px; border: 1px solid var(--grey-3); border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0px 5px 10px #0000001A;} 
+.h-m-popup.popup-04 { position:absolute; padding: 20px; border: 1px solid var(--grey-3); border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0px 5px 10px #0000001A; background:#fff; z-index:2;} 
 .h-m-popup.popup-04 .pop-body { height: 100%; overflow: visible; } 
 .h-m-popup.popup-04 .pop-container { height: 100%; overflow: visible; padding:0;} 
 .h-m-popup.popup-04 .pop-title { font-size:var(--text-subtitle3); font-weight:var(--text-bold);} 
@@ -341,7 +351,7 @@
 
 /* 내용보기 화살표 버튼 */
 .h-button-underline.arrowBtn {margin:0;font-weight:var(--text-regular);}
-.h-button-underline.arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_icon_arrow_gray.png') no-repeat; width:12px; height:6px;}
+.h-button-underline.arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_arrow_down_gray.png') no-repeat; width:12px; height:6px;}
 
 
 /* 스타일 가이드에 문법 잘못되어있는거 고치기*/
@@ -450,11 +460,43 @@ input[type="checkbox"]:checked + label.label-intxt .intxt {display:block; width:
 
 
 /* 이력서 선택 팝업 */
-/* .h-radio-01.img-radiobox {height:130px;} */
-/* .h-radio-01.img-radiobox + .h-radio-01.img-radiobox {margin-top:10px;} */
 .h-radio-01.img-radiobox .img-box {width:calc(100% - 105px);}
 .h-radio-01.img-radiobox .img-box .text-subtitle5 {line-height:1.3em;}
 .h-radio-01.img-radiobox .img-box img {position: absolute; top: 50%; right: 20px; transform: translateY(-50%);}
+.h-radio-01.img-radiobox input[type="radio"]:checked + label {border-color:var(--cyan)}
+.h-radio-01.img-radiobox input[type="radio"] + label {padding:20px; border-radius:10px; background:var(--neutral-3); border:1px solid transparent;}
+.h-popup-wrap .h-radio-01.img-radiobox + .enterBtn {display: block; margin-top:10px!important; width: calc(100% - 10px); font-size:var(--text-subtitle4); font-weight:var(--text-medium);}
 
-.h-radio-01.img-radiobox input[type="radio"]:checked + label {border:1px solid var(--cyan);}
-.h-radio-01.img-radiobox input[type="radio"] + label {padding:20px; border-radius:10px; background:var(--neutral-3);}
+
+/* ================= 퀵자기소개서 ================= */
+/* .selfIntro-cont {background:var(--neutral-3);} */
+.selfIntro-cont .basic-box {background:var(--neutral-3);}
+.selfIntro-cont .h-textarea-box textarea {margin-top:10px; height:550px!important; border-radius: 3px 3px 0 0!important;}
+
+/* .letter-count {display:flex; justify-content: flex-end;} */
+.letter-count {position: relative; margin-top: -1px; padding:15px 0; background:var(--neutral-2); border-radius: 0 0 3px 3px; border:1px solid var(--border-basic-2); z-index: 1;}
+.letter-count li + li {position:relative; padding-left: 10px; margin-left: 10px;}
+.letter-count li + li:after {content:''; position:absolute; top:0; left:0; width:1px; height:14px; background:var(--border-basic-4);}
+.selfIntro-cont .basic-box .introTxt {overflow: hidden; position:relative; width:calc(100% - 12px); margin-top:12px; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.4em; height: 4.2em; font-size:var(--text-subtitle5); color:var(--h-txt-2);}
+/* .selfIntro-cont .basic-box .introTxt:after {content:''; position:absolute; bottom:7px; right:0; } */
+.selfIntro-cont .basic-box + .basic-box {margin-top:10px!important;}
+.selfIntro-cont .moreBtn-arrow {margin-bottom:5px; background:url('../images/mobile/m_arrow_down_gray.png') no-repeat; width:12px; height:6px;}
+
+/* 선택 체크박스 */
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 {margin:0;}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 label {display:inline-block; position: absolute; top: 15px; right: 15px; width:64px; height:28px; line-height:28px; border:1px solid var(--border-basic-2); border-radius: 50px; font-size:var(--text-subtitle6); background:#fff;}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 label i {margin:-5px 7px 0 0; width:14px; height:14px; font-size:var(--text-subtitle1); color:var(--grey-1);}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 input[type="checkbox"]:checked + label {border-color:var(--blue-3);}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 input[type="checkbox"]:checked + label i {color:var(--blue-3);}
+
+.round50-btn {position: fixed; bottom: 80px;  right: 70px; margin: 0; padding:0 20px; border-radius:50px;}
+.round50-btn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_arrow_down_white.png') no-repeat; width:12px; height:6px;}
+
+
+.selfIntro-cont .h-textarea-box.prv-toggle {position:fixed; width:100%; left:0; bottom:54px; z-index:1;}
+.selfIntro-cont .h-textarea-box.prv-toggle textarea {height:215px!important; margin-top:0; border-radius: 0!important; border-top-color: #000!important; font-size:var(--text-subtitle4); line-height:20px; box-shadow: 5px 6px 6px 6px #0000000D;}
+.selfIntro-cont .h-textarea-box.prv-toggle .letter-count {border-radius: 0!important;}
+
+.h-btn-imark {background:url('../images/mobile/icon_important_mark.png') no-repeat; width:18px; height:18px;}
+.h-btn-imark + .h-m-popup.popup-04 {border:2px solid var(--border-basic-1); border-radius: 2px;}
+
