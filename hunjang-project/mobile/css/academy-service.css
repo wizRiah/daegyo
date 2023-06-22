@@ -15,26 +15,36 @@
 .list-topBox .m-datepicker .periodBox {width: calc(100% - 68px);background:var(--neutral-2);border-radius:4px;margin-right:5px;padding: 8px 15px;box-sizing:border-box;text-align: left;}
 .list-topBox .m-datepicker .periodBox .period {color:var(--black-5);font-size:var(--text-subtitle5);margin-right: 8px;}
 .list-topBox .m-datepicker .periodBox .period:before {content:"\b7";margin-right: 3px;}
-.list-topBox .m-datepicker .periodBox .date {color:#var(--black-2)var(--black-2); font-size:var(--text-subtitle5);}
+.list-topBox .m-datepicker .periodBox .date {color:var(--black-2)var(--black-2); font-size:var(--text-subtitle5);}
 .list-topBox .m-datepicker .h-button-white {width:68px;margin: 0;}
 .list-topBox .totaldata {display:flex;}
 .list-topBox .totaldata .dt {font-size:var(--text-subtitle5); color:var(--black-3);}
-.list-topBox .totaldata .dd {font-size:var(--text-subtitle5); color:#var(--black-2)var(--black-2); margin-left:3px;}
+.list-topBox .totaldata .dd {font-size:var(--text-subtitle5); color:var(--black-2)var(--black-2); margin-left:3px;}
 .list-topBox .bluebgBox {background:var(--neutral-2); border-radius:10px; padding:20px; box-sizing:border-box;}
+.list-topBox .guideTxt {font-size:13px; color:#7E7E7E; line-height:22px; padding-left: 9px; text-indent: -5px;}
+.list-topBox .guideTxt:before {content:"\b7"; margin-right:3px;}
+.list-topBox a.wd100.h-button-teal {margin:15px 0 0; font-size:15px; font-weight:500;}
+.content.white-nopadding .list-topBox:only-child {min-height: 82vh;}
 
 /*기본 리스트*/
-.list-mbasic {width:100%;}
-.list-mbasic .libox {border-bottom:1px solid #E7EDF5;padding: 18px 15px;display: flex;}
+.list-mbasic {width:100%; display:flex; flex-direction:column;}
+.list-mbasic .libox {border-bottom:1px solid #E7EDF5;padding: 18px 15px 17px;display: flex;}
+.list-mbasic:not(.myrsume-OpenAcmy) .libox {justify-content: space-between;}
 .list-mbasic .chckdiv {}
 .list-mbasic .txtdiv {}
-.list-mbasic .txtdiv .trTit {font-size:var(--text-subtitle2);color:var(--black-1);font-weight:var(--text-bold);line-height:22px;margin-top: 2px;display: block;margin-bottom: 3px;}
+.list-mbasic:not(.myrsume-OpenAcmy) .txtdiv {width:65%; flex-grow: 3;}
+.list-mbasic .txtdiv .trTit {width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--text-subtitle2);color:var(--black-1);font-weight:var(--text-bold);line-height:22px;margin-top: 2px;display: block;margin-bottom: 3px;}
 .list-mbasic .txtdiv .dl {display:flex;}
 .list-mbasic .txtdiv .dt {font-size:var(--text-subtitle6);color:var(--black-5);line-height:20px;margin-right: 3px;}
-.list-mbasic .txtdiv .dd {font-size:var(--text-subtitle6); color:#var(--black-2)var(--black-2); line-height:20px;}
+.list-mbasic .txtdiv .dd {font-size:var(--text-subtitle6); color:var(--black-2)var(--black-2); line-height:20px;}
+.list-mbasic .txtdiv .dl.straightDl {}
+.list-mbasic .txtdiv .dl.straightDl .dt:not(:last-of-type):after {content:"";display: inline-block;width: 1px;height: 12px;background: #E0E6EF;margin: 0 5px 0 7px;vertical-align: middle;}
 .list-mbasic .txtdiv .subco {color:var(--black-3); font-size:var(--text-subtitle5); line-height:20px;}
 .list-mbasic .txtdiv.loginList {display:flex;}
 .list-mbasic .txtdiv.loginList .dt {font-size:var(--text-subtitle5);}
 .list-mbasic .txtdiv.loginList .dd {font-size:var(--text-subtitle5); margin:0 20px 0 2px}
+.list-mbasic .r-btnbox {display: flex;flex-direction:column;align-items: flex-end;justify-content: space-between;min-width: 70px;}
+.list-mbasic .r-btnbox a {margin:0;}
 
 .list-mbasic .straightUl {display: flex;}
 .list-mbasic .straightUl .dt {}
@@ -46,7 +56,7 @@
 .list-mbasic.no-data.includeBtn a {margin-top:20px;}
 
 
-.yellowMking {font-size:var(--text-subtitle6);color:#var(--black-2)var(--black-2);line-height:20px;margin-top: 4px;z-index: 0;display: inline-block;position: relative;}
+.yellowMking {font-size:var(--text-subtitle6);color:var(--black-2)var(--black-2);line-height:20px;margin-top: 4px;z-index: 0;display: inline-block;position: relative;}
 .yellowMking:before {content:"";display:inline-block;width:100%;height:6px;background:#ffe43a;position: absolute;z-index: -1;bottom: 3px;}
 
 
@@ -76,7 +86,6 @@
 .rspnd-date {margin-top: 8px;text-align:center;line-height: 13px;}
 .rspnd-date p {font-size:var(--text-subtitle6);color:var(--black-3);}
 .rspnd-date .d-daytxt {font-size:var(--text-subtitle6);}
-.list-mbasic .libox.libox-includeBtn .txtdiv {width: 100%;}
 
 /*연락처공개제의학원*/
 .filemngr .libox {display:flex; justify-content:space-between; align-items: flex-end;}
@@ -100,7 +109,7 @@
 .myrsume-OpenAcmy .r-box button {width:100%; clear:both; margin-top:3px;}
 .myrsume-OpenAcmy .r-box button.close img {transform:rotate(180deg);}
 
-.myrsume-OpenAcmy .libox-subWrap {background:#EBEFF5; padding-bottom:4px; transition: all 1s;overflow: hidden; margin-top: -180px;}
+.myrsume-OpenAcmy .libox-subWrap {width:100%; background:#EBEFF5; padding-bottom:4px; transition: all 1s;overflow: hidden; margin-top: -180px;}
 .myrsume-OpenAcmy .libox-subWrap.on {/*display:block !important;*/ margin-top:0;}
 .myrsume-OpenAcmy .libox-sub {width:100%;background: #F5F7FA;border-top: 1px solid #E7EDF5;}
 .myrsume-OpenAcmy .libox-sub .txtdiv {padding-left: 55px; position: relative; width: calc(100% - 80px); box-sizing: border-box;}
@@ -110,8 +119,130 @@
 .myrsume-OpenAcmy .libox-sub .r-box {border-left:none;flex-direction:column;align-items: flex-end;width: 80px;padding: 15px 15px 16px 0;}
 .myrsume-OpenAcmy .libox-sub .r-box a {margin:0; width:65px;}
 .myrsume-OpenAcmy .libox-sub .r-box .scrap_star {margin-top: 7px;}
-
 .myrsume-OpenAcmy .libox-sub .r-box .scrap_star .btn-scrap-bold[type="checkbox"] + label {width: 20px; height: 18px;}
 .myrsume-OpenAcmy .libox-sub .r-box .scrap_star .btn-scrap-bold[type="checkbox"] + label:before {background-size: 20px 18px;}
 
+
+/* 이력서매칭정보 */
+.myresumeInfoBox {margin-top:10px;}
+.myresumeInfoBox .dl {width:100%;display: flex;align-items: center; position:relative;}
+.myresumeInfoBox .dl .dt {font-size:12px; color:#9A9A9A; line-height:20px;}
+.myresumeInfoBox .dl .dd {font-size:12px;color:#333333;line-height:20px;padding-left: 4px;}
+.myresumeInfoBox .dl .h-button-refresh {height: auto; line-height: normal;}
+.myresumeInfoBox .titbox {padding:5px 0 0;display: flex;justify-content: space-between;}
+.myresumeInfoBox .titbox .tit {font-size:16px;color:#151515;line-height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width: 90%;flex-grow: 2;display: list-item;}
+.myresumeInfoBox .titbox .foldBtn {width: 21px; height: 21px; background: url(../images/arrow_dropdown.svg); background-size: 21px;}
+.myresumeInfoBox .resume-prevwnbtn {align-items: flex-end;}
+.myresumeInfoBox .resume-prevwnbtn .dlbox {}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl {}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .dt {}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .dt:before {content:"\b7";margin-right: 2px;}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .dd {}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .dd .foldBtn {}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .foldBtn {width: 17px; height: 17px; background: url(../images/arrow_dropdown.svg) no-repeat; background-size: 17px; padding: 0 !important; margin-left: 8px; transition:transform 0.5s;}
+.myresumeInfoBox .resume-prevwnbtn .dlbox .dl .foldBtn.active {transform: rotate(180deg);}
+.myresumeInfoBox .resume-prevwnbtn .btnbox  {}
+.myresumeInfoBox .resume-prevwnbtn .btnbox a {margin:0;}
+.myresumeInfoBox .no-resume {font-size:15px; line-height:22px; color:#151515; width:100%; text-align:center; padding:8px 0;}
+
+.myresume-list {}
+.myresume-list .myresumeInfoBox {margin:0 0 10px;}
+.myresume-list .myresumeInfoBox .resume-prevwnbtn {}
+.myresume-list .myresumeInfoBox .resume-prevwnbtn .dlbox { width: 100%; display: flex; flex-wrap: wrap; flex-direction: row;}
+.myresume-list .myresumeInfoBox .resume-prevwnbtn .dlbox .dl {width: auto;box-sizing: border-box;padding-right: 14px;}
+.myresume-list .myresumeInfoBox .resume-prevwnbtn .dlbox .dl:nth-child(2) ~ .dl {width: 100%;}
+.myresume-list .myresumeInfoBox .h-checkbox {width:100%;margin: 15px 0 0;}
+.myresume-list .myresumeInfoBox .h-checkbox.checkbox02 input[type="checkbox"] + label {border: 1px solid #E0E6EF;border-radius: 4px;width: 100%;display: block;height: 35px;line-height: 35px;box-sizing: border-box;font-size: 13px;}
+.myresume-list .myresumeInfoBox .h-checkbox.checkbox02 input[type="checkbox"] + label:after {display:none;}
+.myresume-list .myresumeInfoBox .h-checkbox.checkbox02 i {font-size: 16px;font-weight: 600;}
+.myresume-list .myresumeInfoBox .h-checkbox.checkbox02 input[type="checkbox"]:checked + label {font-weight: 500;border-color: #61A6FF;}
+
+
+
+/* 지원현황 */
+.apply_topbox {display:flex;justify-content:space-between;flex-wrap:wrap;}
+.apply_topbox select {height:35px;min-width:130px;border-color: #CCD1D7;}
+.apply_topbox .r-box {}
+.apply_topbox .r-box .h-button-white {margin: 0 !important; min-width: 68px !important; border-color: #E0E6EF;}
+.apply_topbox .r-box .h-button-icon-refresh {background:var(--grey-1); width:38px; height:35px; min-width: 38px !important; margin: 0;}
+.apply_topbox .applyStatus4 {width:100%;margin-top: 15px;display: flex;justify-content: space-around;}
+.apply_topbox .applyStatus4 div {background:#EBEFF5;border-radius:4px;text-align:center;margin-right: 5px;flex-grow: 1;padding: 10px 0;}
+.apply_topbox .applyStatus4 div strong {font-family:'SUIT'; font-size:22px;}
+.apply_topbox .applyStatus4 div p {font-size:12px; line-height:14px; margin-top:5px;}
+.apply_topbox .applyStatus4 div:first-child {background:#26B2C8;}
+.apply_topbox .applyStatus4 div:first-child * {color:#fff;}
+.apply_topbox .applyStatus4 div:last-child {margin-right:0;}
+.apply_topbox .h-m-popup.popup-04 {position: relative; width: 100%; clear: both; border-radius: 4px; margin: 10px 0 0; padding:15px;}
+.apply_topbox .h-m-popup.popup-04 .periodBox {display:flex;line-height: 19px;}
+.apply_topbox .h-m-popup.popup-04 .periodBox .period {color:var(--black-5);font-size:var(--text-subtitle5);margin-right: 15px;min-width: 40px;}
+.apply_topbox .h-m-popup.popup-04 .periodBox .period:before {content:"\b7";margin-right: 3px;}
+.apply_topbox .h-m-popup.popup-04 .periodBox .date {color:var(--black-2)var(--black-2); font-size:var(--text-subtitle5);}
+
+.apply_List {}
+.apply_List .libox {}
+.apply_List .libox .txtdiv {display: flex; flex-wrap: wrap;}
+.apply_List .libox .txtdiv .dl {align-items: baseline;}
+.apply_List .libox .txtdiv .dl .yellowMking {margin-left:10px;}
+.apply_List .libox .txtdiv .dl .yellowMking.reading_O {color:#333333; font-weight:600;}
+.apply_List .libox .txtdiv .dl .yellowMking.reading_X {color:#BCBCBC; font-weight:600;}
+.apply_List .libox .txtdiv .dl .dd {max-width: 74%; vertical-align: middle;}
+.apply_List .libox .txtdiv .dl .dd a {color:#0E97FF;text-decoration:underline;display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;vertical-align: middle;}
+.apply_List .libox .txtdiv .dl:first-of-type,
+.apply_List .libox .txtdiv .dl:nth-of-type(2) {width:100%;}
+.apply_List .libox .txtdiv .dl:last-of-type {margin-left:12px;}
+.apply_List .libox .r-btnbox {justify-content: flex-start;}
+.apply_List .libox .r-btnbox .rcrtSttBox {font-size:12px; padding:12px 10px; width:65px; box-sizing:border-box; text-align:center; margin-bottom:10px; border-radius:4px; background: #F5F7FA;}
+.apply_List .libox .r-btnbox .rcrtSttBox p {color:#333333;}
+.apply_List .libox .r-btnbox .rcrtSttBox span {color:#7E7E7E; margin-top:3px;}
+.apply_List .libox .r-btnbox .rcrtSttBox.ing p {}
+.apply_List .libox .r-btnbox .rcrtSttBox.ing span {}
+.apply_List .libox .r-btnbox .rcrtSttBox.fin p {color:#BCBCBC;}
+.apply_List .libox .r-btnbox .rcrtSttBox.fin span {}
+.apply_List .libox .r-btnbox a {min-width:63px !important;}
+
+
+
+
+
+/* 스크랩채용 */
+.scrapRcrt_topbox {display:flex;justify-content:space-between;margin-bottom: -7px; flex-wrap:wrap;}
+.scrapRcrt_topbox select {height:35px;min-width:130px;border-color: #CCD1D7;}
+.scrapRcrt_topbox .r-box {}
+.scrapRcrt_topbox .r-box .h-button-white {margin: 0 !important; min-width: 68px !important; border-color: #E0E6EF;}
+.scrapRcrt_topbox .r-box .h-checkbox {background: #fff; width: 130px; margin: 0;}
+.scrapRcrt_topbox .r-box .h-checkbox input[type="checkbox"] + label {border: 1px solid #E0E6EF;border-radius: 4px;width: 100%;display: block;height: 35px;line-height: 35px;box-sizing: border-box;font-size: 13px; color:#333333;}
+.scrapRcrt_topbox .r-box .h-checkbox input[type="checkbox"] + label:after {display:none;}
+.scrapRcrt_topbox .r-box .h-checkbox i {font-size: 16px; color:#C3CAD4;}
+.scrapRcrt_topbox .r-box .h-checkbox input[type="checkbox"]:checked + label {font-weight: 500;border-color: #61A6FF; color:#61A6FF;}
+.scrapRcrt_topbox .r-box .h-checkbox input[type="checkbox"]:checked + label i {color:var(--blue-3);}
+.scrap_recruitList .txtdiv {padding-top: 2px;}
+.scrap_recruitList .txtdiv .txtdiv_column {display: flex; align-items: flex-end;}
+.scrap_recruitList .txtdiv .txtdiv_column div {width: 70%; flex-grow: 2;}
+.scrap_recruitList .txtdiv .txtdiv_column .h-button-xxs0 {}
+.scrap_recruitList .txtdiv .txtdiv_column .h-button-fin {background:#F2F2F2; color:#9A9A9A; width:63px;}
+.scrap_recruitList .txtdiv .txtdiv_column .r-btnbox {width: 30px !important; min-width: 30px; flex-grow: 0 !important;}
+.scrap_recruitList .txtdiv .dlWrap {display: flex;flex-wrap: wrap;width: 100% !important;}
+.scrap_recruitList .txtdiv .dlWrap .dl {padding-right:11px;width: auto;flex-grow: 0;}
+.scrap_recruitList .txtdiv .yellowMking {width: auto !important;}
+.scrap_recruitList .r-btnbox .h-button-del {margin: 0 -11px -10px 0;}
+.scrapRcrt_topbox .h-m-popup.popup-04 {position: relative; width: 100%; clear: both; border-radius: 4px; margin: 10px 0 13px; padding:15px;}
+.scrapRcrt_topbox .h-m-popup.popup-04 .periodBox {display:flex;line-height: 19px;}
+.scrapRcrt_topbox .h-m-popup.popup-04 .periodBox .period {color:var(--black-5);font-size:var(--text-subtitle5);margin-right: 15px;min-width: 40px;}
+.scrapRcrt_topbox .h-m-popup.popup-04 .periodBox .period:before {content:"\b7";margin-right: 3px;}
+.scrapRcrt_topbox .h-m-popup.popup-04 .periodBox .date {color:var(--black-2)var(--black-2); font-size:var(--text-subtitle5);}
+
+
+/* 추천 채용정보 */
+.rcmnd_topbox {}
+.rcmnd_topbox .btnbox {}
+.rcmnd_topbox .btnbox a {margin:0 3px 0 0; width:120px;}
+.rcmnd_topbox .rcmd-setlist {margin-top:10px;}
+.rcmnd_topbox .rcmd-setlist div:not(.h-radio-03) {position:relative;margin-bottom: 5px;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 {margin:0; height:48px; width:100%;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 input[type="checkbox"] + label {width:100%;height:100%;text-align:left;padding:15px;background: #EBEFF5;border-color: #E0E6EF;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 input[type="checkbox"] + label:after {left:19px;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 input[type="checkbox"] + label span {width: 80%; display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; color: #9A9A9A; }
+.rcmnd_topbox .rcmd-setlist div .delete-check {width:15px;height:15px;background:url(../images/icon_xs_close.png);position: absolute;right: 15px;top: 50%;margin-top: -7.5px;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 input[type="checkbox"]:checked + label {color:#333333;background: #fff;}
+.rcmnd_topbox .rcmd-setlist div .h-radio-04 input[type="checkbox"]:checked + label span {color: #333333;}
 

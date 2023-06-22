@@ -3,7 +3,6 @@
 
 /***** 모바일 팝업 공통 (layout) *****/
 .h-popup-wrap {display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; } 
-.h-m-popup {height: fit-content;top: 10%;white-space: normal;/* display: block; */word-wrap: break-word;position: relative;flex: 0 0 auto;flex-direction: column;z-index: 1001;background-color: #fff;box-sizing: border-box;} 
 .h-m-popup {height: fit-content;top: 10%;white-space: normal; word-wrap: break-word;position: relative;flex: 0 0 auto;flex-direction: column;z-index: 1001;background-color: #fff;box-sizing: border-box;} 
 .h-m-popup .pop-header {width:100%;text-align: left;box-sizing: border-box;} 
 .h-m-popup .pop-header .pop-title {font-size:var(--text-subtitle17); color:var(--black-1); }
@@ -37,7 +36,9 @@
 .h-m-popup.popup-goback .btmbtnbox a {font-size:var(--text-subtitle3);height: 54px;line-height: 54px;text-align:center;width:50%; display: inline-flex;justify-content: center; box-sizing:border-box;}
 .h-m-popup.popup-goback .btmbtnbox .canclebtn {color:var(--black-2);background: #fff;border-top:1px solid var(--border-basic-3);}
 .h-m-popup.popup-goback .btmbtnbox .sendRespon {color:#fff; background-color:var(--border-basic-1);}
-.h-m-popup.popup-goback .btmbtnbox a:only-child {margin:0; width:100%; border-radius:0;}
+.h-m-popup.popup-goback .btmbtnbox a:first-child {width:44%;}
+.h-m-popup.popup-goback .btmbtnbox a:last-child {flex-grow:2;}
+.h-m-popup.popup-goback .btmbtnbox a:only-child {margin:0; width:100% !important; border-radius:0;}
 .h-m-popup.popup-goback .btmbtnbox a.nextpage img {transform:rotate(180deg); margin-left:10px; width:20px; height:14px;}
 
 .h-m-popup.popup-goback button.goback {left:20px;top: 20px;} 
@@ -94,6 +95,7 @@
 /* 하늘색 배경박스*/
 .lightblue-bgBox {width:100%; border-radius:10px; background:var(--neutral-3); padding:20px; box-sizing:border-box;}
 .lightblue-bgBox .h-radio-01:last-child label {margin-bottom:0;}
+.white-bgBox {width:100%; border-radius:10px; background:#fff; padding:20px; box-sizing:border-box;}
 .popup-goback .lightblue-bgBox {background:var(--neutral-2);}
 
 .h-pop-btnbox {width: 100%;display:flex;justify-content: space-between;}
@@ -262,9 +264,16 @@ a.h-txt-pit {text-decoration:underline;}
 
 
 
+/* 입사지원 (완료 팝업)*/
+.sendFinWrap {padding:30px 15px 15px; width:100%; box-sizing:border-box; background:#F5F7FA; text-align:center;}
+.sendFinWrap img {width:92px; height:70px; margin-bottom:20px;}
+.sendFinWrap .btnBox a {font-size:15px; margin:0; width:100%; margin-top:10px;}
+.sendFinWrap .tit17 {font-size:17px; margin-top:30px;}
 
-
-
+.simple-list {width:100%; max-height:200px; overflow-y:scroll; background:#fff; border-bottom:1px solid #E0E6EF; padding:10px 20px 10px; box-sizing:border-box;}
+.simple-list a {width:100%; padding:8px 0; display:block;}
+.simple-list p {font-size:13px; color:#7E7E7E; line-height:20px; margin-bottom:2px;}
+.simple-list strong {font-size:16px; color:#151515; line-height:22px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;}
 
 
 
