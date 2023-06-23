@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>이력서등록 취업우대사항1</title>
+  <title>이력서등록 취업우대사항</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
@@ -159,20 +159,46 @@
         <div class="h-checkbox checkbox01" style="position:relative; margin-top:25px;">
           <input type="checkbox" name="checkForm" id="check01" checked="">
           <label for="check01" class="text-subtitle4">민감정보 제공에 동의합니다.</label>
-          <a href="" class="h-button-txt h-button-nobg h-button-underline arrowBtn">내용보기</a>
+          <button type="button" id="txtToggle" onclick='change()' class="h-button-txt h-button-nobg h-button-underline tgl-arrowBtn">내용보기</button>
+
+
+          <div id="tgl-dropDown" class="blue-box tgl-arrowBox mt15">
+            <strong class="h-txt-bold btit">민감정보 제공안내</strong>
+            <p class="h-txt-2 mt15 stit">민감정보는 선택입력 항목이며, 입력하지 않더라도 이력서 작성에 제한을 두지 않습니다.</p>
+            <p class="h-txt-3 mt10 stit">
+              - 개인정보 수집 및 이용목적 : 효과적인 취업지원, 경력개발에 적합한 서비스를 제공하기 위함.<br>
+              - 수집하는 개인정보 항목 : 장애여부, 병역사항, 국가보훈, 고용지원금<br>
+              - 개인정보의 보유 및 이용기간 : 인정보의 수집 및 이용에 대한 동의를 철회 하거나, 수집 및 이용목적이 달성되거나 이용기간이 종료한 경우 개인정보를 지체 없이 파기.<br>
+              (단, 상법 등 관계법령의 규정에 의하여ㆍ보존할 필요가 있는 경우 거래내역과 최소한의 기본정보를 일정기간 보유)
+            </p>
+          </div>
+
         </div>
 
-        <div class="blue-box mt15">
-          <strong class="h-txt-bold btit">민감정보 제공안내</strong>
-          <p class="h-txt-2 mt15 stit">민감정보는 선택입력 항목이며, 입력하지 않더라도 이력서 작성에 제한을 두지 않습니다.</p>
-          <p class="h-txt-3 mt10 stit">
-            - 개인정보 수집 및 이용목적 : 효과적인 취업지원, 경력개발에 적합한 서비스를 제공하기 위함.<br>
-            - 수집하는 개인정보 항목 : 장애여부, 병역사항, 국가보훈, 고용지원금<br>
-            - 개인정보의 보유 및 이용기간 : 인정보의 수집 및 이용에 대한 동의를 철회 하거나, 수집 및 이용목적이 달성되거나 이용기간이 종료한 경우 개인정보를 지체 없이 파기.<br>
-            (단, 상법 등 관계법령의 규정에 의하여ㆍ보존할 필요가 있는 경우 거래내역과 최소한의 기본정보를 일정기간 보유)
-          </p>
-        </div>
+   
 
+        <script>
+        const txtToggle = document.getElementById("txtToggle")
+
+        txtToggle.addEventListener("click", function() {
+            if(txtToggle.innerText === '내용보기') {
+              txtToggle.innerText = '내용접기';
+            } else txtToggle.innerText ='내용보기';
+        });
+
+        var btn = document.getElementById("txtToggle");
+        var nav = document.getElementById("tgl-dropDown");
+
+        btn.addEventListener('click', () => {
+          if(!btn.classList.contains("is-open")) {
+            btn.classList.add("is-open");
+            nav.classList.add("is-open");
+          } else {
+            btn.classList.remove("is-open");
+            nav.classList.remove("is-open");
+          }
+        });
+      </script>
 
 
 

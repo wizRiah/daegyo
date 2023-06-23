@@ -100,12 +100,11 @@
         <div class="basic-box">
           <span class="h-txt-6 text-subtitle4">01.</span>
           <div class="flex flex-end">
-            <p class="introTxt">활발한 성격과 샘솟는 아이디어 덕분에, 중.고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 항상 기존의 것이 아닌 새로운 게임을 도입하려 했고, 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다.</p>
-            <button class="moreBtn-arrow"></button>
+            <a href="javascript:void(0);" class="introTxt">활발한 성격과 샘솟는 아이디어 덕분에, 중.고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 항상 기존의 것이 아닌 새로운 게임을 도입하려 했고, 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다.</a>
           </div>
           <div class="h-checkbox checkbox02">
-            <input type="checkbox" name="checkForm" id="check02" checked>
-            <label for="check02">
+            <input type="checkbox" name="checkForm" id="check01" checked>
+            <label for="check01">
               <i class="material-icons">task_alt</i>선택</label>
           </div>
         </div>
@@ -113,8 +112,7 @@
         <div class="basic-box">
           <span class="h-txt-6 text-subtitle4">02.</span>
           <div class="flex flex-end">
-            <p class="introTxt">활발한 성격과 샘솟는 아이디어 덕분에, 중.고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 항상 기존의 것이 아닌 새로운 게임을 도입하려 했고, 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다.</p>
-            <button class="moreBtn-arrow"></button>
+            <a href="javascript:void(0);" class="introTxt">활발한 성격과 샘솟는 아이디어 덕분에, 중.고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 항상 기존의 것이 아닌 새로운 게임을 도입하려 했고, 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다. 친구들과 점점 더 길어집니다.</a>
           </div>
           <div class="h-checkbox checkbox02">
             <input type="checkbox" name="checkForm" id="check02">
@@ -122,6 +120,13 @@
               <i class="material-icons">task_alt</i>선택</label>
           </div>
         </div>
+
+        
+        <script>
+        $(".introTxt").click(function(){
+            $(this).toggleClass("on");
+        });
+        </script>
 
         <!-- 페이징넘 -->
         <div class="h-pagination wh40 flex-set mt20" aria-disabled="false" role="navigation">
@@ -172,8 +177,8 @@
 
 
         <!-- 자기소개 미리보기 터치시 -->
-        <div class="h-textarea-box prv-toggle" style="display:none;">
-          <textarea name="" id="" cols="30" rows="10" class="wd100 h-txtfield-basic" placeholder="자기소개서 내용은 수정이 가능합니다. &#13;&#10; 아래 적용 버튼을 터치하시면 작성중인 이력서에 반영됩니다."></textarea>
+        <div id="tgl-dropOpen" class="h-textarea-box prv-toggle" style="display:block;">
+          <textarea name="" id="" cols="30" rows="10" class="wd100 h-txtfield-basic" placeholder="자기소개서 내용은 수정이 가능합니다.&#13;&#10;아래 적용 버튼을 터치하시면 작성중인 이력서에 반영됩니다."></textarea>
           <ul class="letter-count flex-set">
             <li class="text-subtitle7 h-txt-3">공백포함 -
               <span class="h-txt-orange h-txt-medium">581 자</span>
@@ -188,28 +193,6 @@
         </div>
 
 
-        <script>
-          const btn = document.getElementById('popupBtn');
-          const modal = document.getElementById('modalWrap');
-          const closeBtn = document.getElementById('closeBtn');
-
-          btn.onclick = function() {
-            modal.style.display = 'block';
-          }
-          closeBtn.onclick = function() {
-            modal.style.display = 'none';
-          }
-
-          window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-        </script>
-
-
-
-
       </div>
       <!-- // content -->
 
@@ -218,8 +201,23 @@
 
       <div class="quick-btmBtn">
         <a href="" class="topBtn fixedBtn"><img src="../../../images/mobile/m_arrow_top.png" alt=""></a>
-        <button type="button" class="h-button-ml h-button-teal round50-btn on">자기소개서 미리보기</button>
+        <button type="button" id="prv-toggleBtn" class="h-button-ml h-button-teal round50-btn">자기소개서 미리보기</button>
       </div>
+
+      <script>
+        var btn = document.getElementById("prv-toggleBtn");
+        var nav = document.getElementById("tgl-dropOpen");
+    
+        btn.addEventListener('click', () => {
+          if(!btn.classList.contains("is-open")) {
+            btn.classList.add("is-open");
+            nav.classList.add("is-open");
+          } else {
+            btn.classList.remove("is-open");
+            nav.classList.remove("is-open");
+          }
+        });
+      </script>
 
     </div>
     <!-- // container -->
@@ -237,6 +235,8 @@
 
 
   </div>
+
+
 
 
 </body>
