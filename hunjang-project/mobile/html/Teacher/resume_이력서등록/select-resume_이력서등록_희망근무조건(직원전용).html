@@ -42,7 +42,7 @@
     <div class="container">
 
       <!-- content -->
-      <div class="content resume-regList-cont">
+      <div class="content resume-regList-cont" style="padding-bottom:80px;">
 
         <!-- 희망근무조건(강사전용) -->
         <ul class="resume-regList">
@@ -175,7 +175,84 @@
           <button type="button" class="circle-plusBtn on">희망급여</button>
         </div>
 
-        <button class="roundBtn50 mt25"># 최저임금 알아보기</button>
+        <button id="popupBtn" class="roundBtn50 mt25"># 최저임금 알아보기</button>
+
+        <!-- 공통 팝업 -->
+        <div id="modalWrap" class="h-popup-wrap" style="display:none;">
+          <div class="h-m-popup popup-02 popup-02-2 ui-draggable" id="modalContent">
+            <div class="pop-header ui-draggable-handle">
+              <p class="pop-title text-h3">최저임금<span> (2023년)</span></p>
+            </div>
+
+            <div class="pop-body" id="modalBody">
+              <div class="pop-container">
+
+                <!-- 팝업속 내용 -->
+                <p class="text-subtitle5 h-txt-3">최저임금 제도는 임금의 최저준수를 정하고 이 수준 이상의 임금을 지급하도록 법으로 강제하는 제도입니다.</p>
+                <table class="h-tbl-simple mt20">
+                  <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:50%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th>최저임금</th>
+                    </tr>
+                  </thead>
+                  <tbody class="h-txt-c">
+                    <tr>
+                      <td class="h-txt-2">시급 <span class="h-txt-3 text-subtitle6">(1시간 기준)</span></td>
+                      <td class="h-txt-2 h-txt-r"><span class="h-txt-bold">9,620</span>원</td>
+                    </tr>
+                    <tr>
+                      <td class="h-txt-2">일급 <span class="h-txt-3 text-subtitle6">(8시간 기준)</span></td>
+                      <td class="h-txt-2 h-txt-r"><span class="h-txt-bold">76,960</span>원</td>
+                    </tr>
+                    <tr>
+                      <td class="h-txt-2">주급 <span class="h-txt-3 text-subtitle6">(40시간 기준)</span></td>
+                      <td class="h-txt-2 h-txt-r"><span class="h-txt-bold">461,760</span>원</td>
+                    </tr>
+                    <tr>
+                      <td class="h-txt-2">월급 <span class="h-txt-3 text-subtitle6">(209시간 기준)</span></td>
+                      <td class="h-txt-2 h-txt-r"><span class="h-txt-bold">2,010,580</span>원</td>
+                    </tr>
+                    <tr>
+                      <td class="h-txt-2">연봉 <span class="h-txt-3 text-subtitle6">(40시간 기준)</span></td>
+                      <td class="h-txt-2 h-txt-r"><span class="h-txt-bold">24,126,960</span>원</td>
+                    </tr>
+                  </tbody>
+                  
+                </table>
+                <!-- 팝업속 내용 END -->
+                
+              </div>
+            </div>
+
+            <button type="button" id="closeBtn" class="close" title="팝업 닫기"></button>
+
+          </div>
+        </div>
+
+        <script>
+          const btn = document.getElementById('popupBtn');
+          const modal = document.getElementById('modalWrap');
+          const closeBtn = document.getElementById('closeBtn');
+
+          btn.onclick = function() {
+            modal.style.display = 'block';
+          }
+          closeBtn.onclick = function() {
+            modal.style.display = 'none';
+          }
+
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+        <!-- // -->
 
 
 

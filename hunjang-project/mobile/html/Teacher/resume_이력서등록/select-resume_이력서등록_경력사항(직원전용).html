@@ -46,17 +46,17 @@
 
         <!-- 경력사항(직원전용) -->
         <ul class="resume-regList">
-          <li class="pop-position">
+
+          <li>
             <p class="labelArea">근무지명<span class="h-txt-orange">*</span></p>
             <input type="text" placeholder="근무지명 입력" class="h-txtfield-basic h-txtfield-shadow">
-            <div class="h-checkbox checkbox01" style="position:relative;">
+            <div class="h-checkbox checkbox01 wd100" style="position:relative;">
               <input type="checkbox" name="checkForm" id="check01" checked="">
               <label for="check01" class="text-subtitle4">비공개</label>
               <button type="button" class="h-btn-question laypopup_ScriptSample03">?</button>
 
-
               <!-- 툴팁 -->
-              <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="width:335px; left:0; top:25px; display:none;">
+              <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="left:0; top: 25px;">
                 <div class="pop-body">
                   <div class="pop-container">
                     <p class="pop-title">근무지명 없이 이력서 공개</p>
@@ -66,24 +66,25 @@
                 </div>
                 <button type="button" class="close" title="팝업 닫기"></button>
               </div>
+
+              <script>
+                $(document).ready(function() {
+                  $('.laypopup_ScriptSample03').click(function() {
+                    $('.sampleClss03').css("display", "inline-block");
+                  });
+                });
+  
+                $(document).ready(function() {
+                  $('.close').click(function() {
+                    $('.sampleClss03').css("display", "none");
+                  });
+                });
+              </script>
+
             </div>
 
-            <script>
-              $(document).ready(function() {
-                $('.laypopup_ScriptSample03').click(function() {
-                  $('.sampleClss03').css("display", "inline-block");
-                });
-              });
-
-              $(document).ready(function() {
-                $('.close').click(function() {
-                  $('.sampleClss03').css("display", "none");
-                });
-              });
-            </script>
-            <!-- // -->
-
           </li>
+
           <li>
             <p class="labelArea">근무기간<span class="h-txt-orange">*</span></p>
             <div class="h-txtfield-inner">

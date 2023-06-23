@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../../css/layout.css">
   <link rel="stylesheet" href="../../../css/academy-service.css">
   <link rel="stylesheet" href="../../../css/resume-regist.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
 
   <!-- google font -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
@@ -141,7 +142,53 @@
                 <p class="tit-co">4.0 / 4.5</p>
               </li>
             </ul>
-            <button class="dotmoreBtn"></button>
+         
+            <button class="dotmoreBtn" id="popupBtn"></button>
+      
+            <!-- 공통 팝업 -->
+            <div id="modalWrap" class="h-popup-wrap" style="display:none;">
+              <div class="h-m-popup popup-02 popup-02-2 ui-draggable" id="modalContent">
+                <div class="pop-header ui-draggable-handle">
+                  <p class="pop-title text-h3">학력사항</p>
+                </div>
+
+                <div class="pop-body" id="modalBody">
+                  <div class="pop-container">
+
+                    <!-- 팝업속 내용 -->
+                    <div class="onlyBtn-wrap">
+                      <button type="button" class="h-button-l h-button-neutral3">수정하기</button>
+                      <button type="button" class="h-button-l h-button-white">삭제하기</button>
+                    </div>
+                    <!-- 팝업속 내용 END -->
+                    
+                  </div>
+                </div>
+
+                <button type="button" id="closeBtn" class="close" title="팝업 닫기"></button>
+
+              </div>
+            </div>
+
+            <script>
+              const btn = document.getElementById('popupBtn');
+              const modal = document.getElementById('modalWrap');
+              const closeBtn = document.getElementById('closeBtn');
+
+              btn.onclick = function() {
+                modal.style.display = 'block';
+              }
+              closeBtn.onclick = function() {
+                modal.style.display = 'none';
+              }
+
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
+            </script>
+            <!-- // -->
           </div>
 
           <button type="button" class="circle-plusBtn">경력사항 추가</button>

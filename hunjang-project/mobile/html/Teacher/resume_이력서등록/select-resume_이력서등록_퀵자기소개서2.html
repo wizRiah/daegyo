@@ -31,11 +31,11 @@
     <!-- header -->
     <header class="hc-white">
       <div class="location">
-        <a href="" class="arrowBtn">퀵 자기소개서</a>
+        <a href="" class="closeBtn">퀵 자기소개서</a>
         <button type="button" class="h-btn-imark ml10 laypopup_ScriptSample03"></button>
 
         <!-- 툴팁 -->
-        <div class="h-m-popup popup-04 solid-2px ui-draggable sampleClss03" style="display:block; left: 0; top: 40px;">
+        <div class="h-m-popup popup-04 solid-2px ui-draggable sampleClss03" style="display:none; left: 0; top: 40px;">
           <div class="pop-body">
             <div class="pop-container">
               <p class="pop-title">수업 최대인원</p>
@@ -172,7 +172,7 @@
 
 
         <!-- 자기소개 미리보기 터치시 -->
-        <div class="h-textarea-box prv-toggle">
+        <div class="h-textarea-box prv-toggle" style="display:none;">
           <textarea name="" id="" cols="30" rows="10" class="wd100 h-txtfield-basic" placeholder="자기소개서 내용은 수정이 가능합니다. &#13;&#10; 아래 적용 버튼을 터치하시면 작성중인 이력서에 반영됩니다."></textarea>
           <ul class="letter-count flex-set">
             <li class="text-subtitle7 h-txt-3">공백포함 -
@@ -188,6 +188,28 @@
         </div>
 
 
+        <script>
+          const btn = document.getElementById('popupBtn');
+          const modal = document.getElementById('modalWrap');
+          const closeBtn = document.getElementById('closeBtn');
+
+          btn.onclick = function() {
+            modal.style.display = 'block';
+          }
+          closeBtn.onclick = function() {
+            modal.style.display = 'none';
+          }
+
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+
+
+
+
       </div>
       <!-- // content -->
 
@@ -196,7 +218,7 @@
 
       <div class="quick-btmBtn">
         <a href="" class="topBtn fixedBtn"><img src="../../../images/mobile/m_arrow_top.png" alt=""></a>
-        <button type="button" class="h-button-ml h-button-teal round50-btn">자기소개서 미리보기</button>
+        <button type="button" class="h-button-ml h-button-teal round50-btn on">자기소개서 미리보기</button>
       </div>
 
     </div>
