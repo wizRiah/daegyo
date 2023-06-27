@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>이력서등록_공개여부_모든정보비공개</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../../css/layout.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/resume-regist.css">
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+
+  <div class="m-hunjang-wrap">
+
+    <!-- header -->
+    <header class="hc-green">
+      <div class="location">
+        <span class="flex"><a href="" class="arrowBtn"></a>강사서비스</span>
+      </div>
+    </header>
+    <!-- // -->
+
+    <!-- nav -->
+    <div class="nav">
+      <ul class="resumeReg-nav">
+        <li class="active"><a href="">제목</a></li>
+        <li><a href="">기본정보</a></li>
+        <li><a href="">학력</a></li>
+        <li><a href="">경력</a></li>
+        <li><a href="">근무조건</a></li>
+        <li><a href="">공개설정</a></li>
+      </ul>
+    </div>
+    <!-- // -->
+
+    <!-- nav Swiper -->
+    <script>
+      var swiper = new Swiper(".nav-swiper", {
+        slidesPerView: "auto",
+      });
+    </script>
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- content -->
+      <div class="content resume-regList-cont">
+
+        <div class="resume-title h-textfield">
+          <input type="text" class="h-txtfield-basic">
+          <span class="placehoder-hidden">이력서 제목 입력<span class="h-txt-orange">(필수)</span></span>
+          <button type="button" class="my-resume-listBtn">추천</button>
+
+          <!-- my-resume-listBtn 클릭시 펼쳐짐 -->
+          <div class="my-resume-list">
+            <ul>
+              <li>
+                <a href="#" class="rsmTit">맡은 업무에 항상 최선을 다하는 강사 입니다.</a>
+              </li>
+              <li>
+                <a href="#" class="rsmTit">꼼꼼한 업무처리 원생들과 소통을 중요시하는 강사 입니다.</a>
+              </li>
+              <li>
+                <a href="#" class="rsmTit">밝은 미소와 긍정적인 에너지로 강의합니다.</a>
+              </li>
+              <li>
+                <a href="#" class="rsmTit">우리 학원의 원생들이 최고가 될 수 있도록 철저히 준비하고, 노력하고, 최선을 다해 훌륭한 사람이 될 수 있도록 노력하는 홍길동입니다.</a>
+              </li>
+              <li>
+                <a href="#" class="rsmTit">우리 학원의 원생들이 최고가 될 수 있도록 철저히 준비하고, 노력하고, 최선을 다해 훌륭한 사람이 될 수 있도록 노력하는 홍길동입니다.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="requiredTxt mt20 mb15"><span class="h-txt-orange">*</span> 표시 항목은 필수 입력정보입니다.</p>
+
+        <!-- 기본정보 -->
+        <div class="basic-box">
+          <p class="h-resume-title">기본정보<span class="h-txt-orange ml5">*</span></p>
+          <ul class="basic-info">
+            <li class="imgbox">
+              <img src="../../../images/mobile/img_dummy.jpg" alt="">
+            </li>
+            <li class="info-txt">
+              <p class="name">마동석</p>
+              <p class="age">(남, 100세, 1978년)</p>
+              <p class="txt">통화가능시간 :</p>
+              <p class="time">13:00 ~ 22:00</p>
+              <button type="button" class="editBtn"><img src="../../../images/mobile/m_icon_circle_pencil.png" alt=""></button>
+            </li>
+          </ul>
+          
+        </div>
+
+
+        <!-- 학력사항 -->
+        <div class="basic-box">
+          <p class="h-resume-title">학력사항<span class="h-txt-orange ml5">*</span></p>
+          <div class="flex-basis-even fl-wd50 mb20">
+            <div class="h-checkbox checkbox06">
+              <input type="checkbox" id="checkbox01_1" checked>
+              <label for="checkbox01_1">고등학교</label>
+              <input type="checkbox" id="checkbox01_2">
+              <label for="checkbox01_2">대학(2,3년)</label>
+              <input type="checkbox" id="checkbox01_3" checked>
+              <label for="checkbox01_3">대학(4년)</label>
+              <input type="checkbox" id="checkbox01_4">
+              <label for="checkbox01_4">대학원</label>
+            </div>
+          </div>
+
+          <div class="basic-list-box">
+            <strong class="btit">훈장마을 대학</strong>
+            <span class="areatit">(서울)</span>
+            <ul class="list-item">
+              <li>
+                <span class="tit">전공</span>
+                <p class="tit-co">전산정보처리</p>
+              </li>
+              <li>
+                <span class="tit">부전공</span>
+                <p class="tit-co">전산전산전산처리과</p>
+              </li>
+              <li>
+                <span class="tit">학점</span>
+                <p class="tit-co">4.0 / 4.5</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+
+          <button type="button" class="circle-plusBtn">경력사항 추가</button>
+
+          <div class="basic-list-box">
+            <strong class="btit">훈장마을 대학</strong>
+            <span class="areatit">(서울)</span>
+            <ul class="list-item">
+              <li>
+                <span class="tit">전공</span>
+                <p class="tit-co">전산정보처리</p>
+              </li>
+              <li>
+                <span class="tit">부전공</span>
+                <p class="tit-co">전산전산전산처리과</p>
+              </li>
+              <li>
+                <span class="tit">학점</span>
+                <p class="tit-co">4.0 / 4.5</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+
+          <button type="button" class="circle-plusBtn">대학원 추가</button>
+
+
+        </div>
+
+
+        <!-- 경력사항  -->
+        <div class="basic-box">
+          <p class="h-resume-title">경력사항<span class="h-txt-orange ml5">*</span><span class="h-txt-pit ml5">- 경력 총 14년 11개월</span></p>
+          <div class="basic-list-box">
+            <strong class="btit">훈장마을 구로지점 1호점</strong>
+            <span class="areatit">(서울 구로구)</span>
+            <ul class="list-item">
+              <li>
+                <span class="tit">근무형태</span>
+                <p class="tit-co">파트, 단기, 알바</p>
+              </li>
+              <li>
+                <span class="tit">근무기간</span>
+                <p class="tit-co">2021.05 ~ 재직중 (1년 1개월)</p>
+              </li>
+              <li>
+                <span class="tit">과목</span>
+                <p class="tit-co">수학</p>
+              </li>
+              <li>
+                <span class="tit">강의대상</span>
+
+                <ul class="list-item-inner">
+                  <li>
+                    <p class="tit-co">유아 (전 연령)</p>
+                    <p class="tit-co"><span class="h-txt-3">수업 최대인원 :</span> 11명 ~ 20명 내외</p>
+                  </li>
+                  <li>
+                    <p class="tit-co">중등 (2학년, 3학년)</p>
+                    <p class="tit-co"><span class="h-txt-3">수업 최대인원 :</span> 11명 ~ 20명 내외</p>
+                  </li>
+                </ul>
+
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <!-- 직원전용 경력사항 -->
+          <div class="basic-list-box">
+            <strong class="btit">훈장마을 구로지점 1호점</strong>
+            <span class="areatit">(서울 구로구)</span>
+            <ul class="list-item">
+              <li>
+                <span class="tit">근무형태</span>
+                <p class="tit-co">아르바이트, 인턴</p>
+              </li>
+              <li>
+                <span class="tit">근무기간</span>
+                <p class="tit-co">2023.01 ~ 2023.04 (4개월)</p>
+              </li>
+              <li>
+                <span class="tit">직무</span>
+                <p class="tit-co">입시상담</p>
+              </li>
+              <li>
+                <span class="tit">급여</span>
+                <p class="tit-co">연봉 2,500만원</p>
+              </li>
+              <li>
+                <span class="tit">퇴사사유</span>
+                <p class="tit-co">경영악화</p>
+              </li>
+              <li class="col-block">
+                <span class="tit">담당업무 및 경력기술</span>
+                <p class="tit-co">고등, 대입 입시상담 고등, 대입 입시상담 고등, 대입 입시상담 고등, 대입 입시상담 고등, 대입 입시상담 고등, 대입 입시상담 고등, 대입 입시상담</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">경력사항 추가</button>
+        </div>
+
+
+        <!-- 시강(영상) -->
+        <div class="basic-box">
+          <p class="h-resume-title">시강(영상)</p>
+          <p class="h-resume-co">시강 영상 업로드로 내 이력서를 더 경쟁력 있게 만들어 보세요. (러닝 타임 3분 이내) 영상은 최대 2개까지 업로드 할 수 있습니다.</p>
+          <div class="mv-thumbox mt25">
+            <img src="../../../images/mobile/mv_thumb.jpg" alt="">
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">동영상 등록</button>
+        </div>
+
+
+        <!-- 자격증 -->
+        <div class="basic-box">
+          <p class="h-resume-title">자격증</p>
+          <div class="basic-list-box">
+            <strong class="btit">정보처리산업기사</strong>
+            <ul class="list-item">
+              <li>
+                <span class="tit">취득년월</span>
+                <p class="tit-co">2001.09</p>
+              </li>
+              <li>
+                <span class="tit">발급처</span>
+                <p class="tit-co">한국산업인력공단</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <div class="basic-list-box">
+            <strong class="btit">자동차운전면허1종보통</strong>
+            <ul class="list-item">
+              <li>
+                <span class="tit">취득년월</span>
+                <p class="tit-co">2001.09</p>
+              </li>
+              <li>
+                <span class="tit">발급처</span>
+                <p class="tit-co">경찰청(운전면허시험관리공단)</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">자격증 추가</button>
+        </div>
+
+
+        <!-- 수상 수료 대외활동 -->
+        <div class="basic-box">
+          <p class="h-resume-title">수상/수료/대외활동</p>
+          <div class="basic-list-box">
+            <div class="blt-txtbox flex">
+              <p class="h-txtbox-3 option-gray">수상</p>
+              <strong class="btit">한국 인터넷 디자인어워드 최우수상</strong>
+            </div>
+            <ul class="list-item">
+              <li>
+                <span class="tit">수상.수료</span>
+                <p class="tit-co">2001.09</p>
+              </li>
+              <li>
+                <span class="tit">기관명</span>
+                <p class="tit-co">훈장마을 사이트 최우수상 수상</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <div class="basic-list-box">
+            <div class="blt-txtbox flex">
+              <p class="h-txtbox-3 option-gray">대외활동</p>
+              <strong class="btit">인턴십</strong>
+            </div>
+            <ul class="list-item">
+              <li>
+                <span class="tit">일자(기간)</span>
+                <p class="tit-co">2019.11 ~ 2020.05</p>
+              </li>
+              <li>
+                <span class="tit">기관명</span>
+                <p class="tit-co">에듀베이션</p>
+              </li>
+              <li>
+                <span class="tit">활동내용</span>
+                <p class="tit-co">대학생 인턴 6개월 과정 수료</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">수상/수료/대외활동 추가</button>
+        </div>
+
+
+        <!-- 어학능력 -->
+        <div class="basic-box">
+          <p class="h-resume-title">어학능력</p>
+          <div class="basic-list-box">
+            <p class="h-txtbox-3 option-gray">회화능력</p>
+            <ul class="list-item">
+              <li>
+                <span class="tit">외국어명</span>
+                <p class="tit-co">이탈리아어</p>
+              </li>
+              <li>
+                <span class="tit">회화능력</span>
+                <p class="tit-co">일상회화 가능</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <div class="basic-list-box">
+            <p class="h-txtbox-3 option-gray">공인시험</p>
+            <ul class="list-item">
+              <li>
+                <span class="tit">외국어명</span>
+                <p class="tit-co">영어</p>
+              </li>
+              <li>
+                <span class="tit">회화능력</span>
+                <p class="tit-co">TOEIC<i>/</i>990급(점)</p>
+              </li>
+              <li>
+                <span class="tit">취득년월</span>
+                <p class="tit-co">2022.05</p>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">어학능력 추가</button>
+        </div>
+
+
+        <!-- 컴퓨터 활용능력 -->
+        <div class="basic-box">
+          <p class="h-resume-title">컴퓨터 활용능력</p>
+          <div class="basic-list-box">
+            <ul class="skill-item">
+              <li>
+                <p class="tit">파워포인트</p>
+                <strong class="grade">상</strong>
+              </li>
+              <li>
+                <p class="tit">워드/한글</p>
+                <strong class="grade">중</strong>
+              </li>
+              <li>
+                <p class="tit">엑셀</p>
+                <strong class="grade">하</strong>
+              </li>
+            </ul>
+
+            <ul class="list-item">
+              <li class="col-block">
+                <span class="tit">IT/디자인 능력</span>
+                <div class="tit-co">
+                  웹 디자인 툴 가능, 편집 디자인 툴 가능, 동영상 편집 툴 가능, 웹 에디터 편집 가능
+                  <p><span class="h-txt-5">직접입력 : </span>포토샵, 일러스트 가능</p>
+                </div>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+        </div>
+
+
+        <!-- 파일등록 -->
+        <div class="basic-box">
+          <p class="h-resume-title">파일등록</p>
+          <div class="basic-list-box">
+            <div class="file-item">
+              <p class="h-txtbox-3 option-gray">경력기술서</p>
+              <a href="" class="h-button-txt h-button-nobg h-button-underline h-button-xs">강남엄마 제휴종료에 따른 사이트 수정 포트폴리오 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</a>
+              <div class="file-info">
+                <p><span class="h-txt-5">등록일 : </span>2022.05.06</p>
+                <p><span class="h-txt-5">용량 : </span>11.1KB</p>
+              </div>
+              <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+            </div>
+          </div>
+          <div class="basic-list-box">
+            <div class="file-item">
+              <p class="h-txtbox-3 option-gray">증명서</p>
+              <a href="" class="h-button-txt h-button-nobg h-button-underline h-button-xs">강남엄마 제휴종료에 따른 사이트 수정 포트폴리오 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</a>
+              <div class="file-info">
+                <p><span class="h-txt-5">등록일 : </span>2022.05.06</p>
+                <p><span class="h-txt-5">용량 : </span>11.1KB</p>
+              </div>
+              <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+            </div>
+          </div>
+          <div class="basic-list-box">
+            <div class="file-item">
+              <p class="h-txtbox-3 option-gray">기타</p>
+              <a href="" class="h-button-txt h-button-nobg h-button-underline h-button-xs">강남엄마 제휴종료에 따른 사이트 수정 포트폴리오 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</a>
+              <div class="file-info">
+                <p><span class="h-txt-5">등록일 : </span>2022.05.06</p>
+                <p><span class="h-txt-5">용량 : </span>11.1KB</p>
+              </div>
+              <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+            </div>
+          </div>
+          <button type="button" class="circle-plusBtn">파일등록 추가</button>
+        </div>
+
+
+        <!-- 자기소개서 -->
+        <div class="basic-box">
+          <p class="h-resume-title">자기소개서</p>
+          <div class="basic-list-box">
+            <div class="doc-item">
+              <strong class="doc-tit">성장과정</strong>
+              <p class="doc-co text-subtitle5">
+                저는 어떤 일을 하든지 "성실과 근면"으로 임하려고 노력하며 제가 맡은 일에 있어서는 끈기를 갖고 유종의 미를 거둘 때까지 최선을 다합니다. 우유부단하지 않고 삶의 태도가 명확한 사람이 되기 위해 뚜렷한 주관을 가지고 생활하며 원칙을 세워 그것을 기준으로 생활하려고 노력합니다. OO업에 종사하셔서 경제관념이 뚜렷하셨던 아버지와 가족의 뒷바라지를 훌륭히 하신 어머니의 0남 0녀 장녀로 태어났습니다. 넉넉지 않은 형편
+                속에서, 건 강이 좋지 않으셨던 아버지가 외지로 발령이 나실 때에는 어머니가 아버지와 함께 하셨고, 두 분을 대신해서 제가 동생들을 돌보는 보호자 역할을 해야 했습 니다.
+              </p>
+            </div>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <div class="basic-list-box">
+            <div class="doc-item">
+              <strong class="doc-tit">성격의 장단점</strong>
+              <p class="doc-co text-subtitle5">
+                활발한 성격과 샘솟는 아이디어 덕분에, 중. 고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 활발한 성격과 샘솟는 아이디어 덕분에, 중. 고등학교 시절의 오락부장은 언제나 제 담당이었습니다활발한 성격과 샘솟는 아이디어 덕분에, 중. 고등학교 시절의 오락부장은 언제나 제 담당이었습니다. 활발한 성격과 샘솟는 아이디어 덕분에, 중. 고등학교 시절의 오락부장은 언제나 제 담당이었습니다.
+              </p>
+            </div>
+            <button class="dotmoreBtn"></button>
+          </div>
+          <button type="button" class="circle-plusBtn">자기소개서 추가</button>
+        </div>
+
+        <button type="button" class="h-button-ml h-button-teal wd100">이력서 항목 추가ㆍ수정</button>
+
+
+        <!-- 희망 근무조건 -->
+        <div class="basic-box">
+          <p class="h-resume-title">희망 근무조건<span class="h-txt-orange ml5">*</span></p>
+          <div class="basic-list-box">
+            <ul class="list-item">
+              <li class="col-block">
+                <span class="tit">희망 근무지</span>
+                <div class="tit-co">서울 전지역, 경기 김포시, 겅기 동두천 시</div>
+              </li>
+              <li class="col-block">
+                <span class="tit">근무형태</span>
+                <div class="tit-co">전임, 단기 (1개월 ~ 3개월) 파트</div>
+                <div class="tit-co">알바 (1개월 ~ 3개월 / 09:00 ~ 18:00)</div>
+              </li>
+              <li class="col-block">
+                <span class="tit">대상/과목</span>
+                <div class="tit-co">월 ~ 금 / 풀 타임 (8시간 이상) 근무</div>
+                <div class="tit-co">주5일 / 파트타임 (6시간 이내) 근무</div>
+              </li>
+              <li class="col-block">
+                <span class="tit">희망급여</span>
+                <div class="tit-co">학원 내규에 따름</div>
+              </li>
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+        </div>
+
+
+        <!-- 직원전용 희망 근무조건 -->
+        <div class="basic-box">
+          <p class="h-resume-title">희망 근무조건<span class="h-txt-orange ml5">*</span></p>
+          <div class="basic-list-box">
+            <ul class="list-item">
+              <li class="col-block">
+                <span class="tit">희망 근무지</span>
+                <div class="tit-co">서울 전지역, 경기 김포시, 겅기 동두천 시</div>
+              </li>
+
+              <li class="col-block">
+                <span class="tit">근무형태</span>
+                <div class="tit-co">정규직 인턴 (1개월 ~ 3개월)</div>
+              </li>
+
+              <li class="col-block">
+                <span class="tit">희망직무</span>
+                <div class="tit-co">입시상담</div>
+              </li>
+
+              <li class="col-block">
+                <span class="tit">근무일시</span>
+                <div class="tit-co">월 ~ 금 / 13:00 ~ 22:00</div>
+              </li>
+
+              <li class="col-block">
+                <span class="tit">희망급여</span>
+                <div class="tit-co">학원 내규에 따름</div>
+              </li>
+
+            </ul>
+            <button class="dotmoreBtn"></button>
+          </div>
+        </div>
+
+
+        <!-- 취업 우대사항 -->
+        <div class="basic-box">
+          <p class="h-resume-title">취업 우대사항</p>
+          <div class="basic-list-box">
+            <ul class="special-item">
+              <li>
+                <p class="h-txtbox-3 option-gray">국가 보훈대상</p>
+                <p class="tit-co">대상 <span class="h-txt-3">(할아버지가 한국전쟁 참전용사)</span></p>
+              </li>
+              <li>
+                <p class="h-txtbox-3 option-gray">고용지원금</p>
+                <p class="tit-co">대상 <span class="h-txt-3">(여성가장, 경력단절, 중증장애인, 기타 : 여성가장, 경력단절)</span></p>
+              </li>
+              <li>
+                <p class="h-txtbox-3 option-gray">병역여부</p>
+                <p class="tit-co">대상 <span class="h-txt-3">(면제 : 허리디스크 통증)</span></p>
+              </li>
+              <li>
+                <p class="h-txtbox-3 option-gray">장애여부</p>
+                <p class="tit-co">대상 <span class="h-txt-3">(장애등급 :1급, 정신장애)</span></p>
+              </li>
+            </ul>
+
+            <button class="dotmoreBtn"></button>
+          </div>
+        </div>
+
+
+        <!-- 공개여부 설정 -->
+        <div class="basic-box">
+          <p class="h-resume-title">공개여부 설정</p>
+          <div class="outlineBtn-wrap">
+            <div class="h-checkbox checkbox02">
+              <input type="checkbox" name="checkForm" id="check02_1">
+              <label for="check02_1">
+                <i class="material-icons">task_alt</i><span>연락처 공개</span></label>
+            </div>
+            <div class="h-checkbox checkbox02">
+              <input type="checkbox" name="checkForm" id="check02_2">
+              <label for="check02_2">
+                <i class="material-icons">task_alt</i><span>연락처만 비공개</span></label>
+            </div>
+            <div class="h-checkbox checkbox02">
+              <input type="checkbox" name="checkForm" id="check02_3" checked>
+              <label for="check02_3" class="label-intxt">
+                <i class="material-icons">task_alt</i><span>비공개</span>
+                <p class="intxt">입사지원한 기업에게만 내 이력서가 공개되고, 면접 제안은 받을 수 없습니다.</p>
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <!-- // content -->
+
+    </div>
+    <!-- // container -->
+
+    <div class="fixed-bottom">
+      <ul class="bc-orange">
+        <li><button type="button">미리보기</button></li>
+        <li><button type="button">작성완료</button></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>

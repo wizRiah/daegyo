@@ -1,23 +1,11 @@
 @charset "utf-8";
 
-.m-hunjang-wrap input[type="text"]::placeholder {font-size:var(--text-subtitle4); }
-.min-wd100px {min-width:100px;}
-.min-wd105px {min-width:105px;}
-
-.flex-none {flex:none;}
-
-.h-line-hgt18 {line-height: 18px!important;}
-.h-line-hgt20 {line-height: 20px!important;}
-
 .h-button-underline.h-fs12 {font-size:var(--text-subtitle6); padding:0; margin:0;}
-.m-hunjang-wrap textarea.h-txtfield-basic {resize: none;}
-
-/* border 두꺼운 툴팁 */
-.popup-04.solid-2px {border:2px solid var(--border-basic-1); border-radius: 2px; box-shadow: 0px 5px 10px #0000001A;}
-
-
+.h-button-underline.h-fs13 {font-size:var(--text-subtitle5); padding:0; margin:0;}
 
 /* =================== 이력서 등록 완료 ================== */
+/* 이력서 등록 컨텐츠 색깔, 간격 */
+.content.resume-regList-cont {min-height:100vh; padding:20px 20px 80px; background:var(--neutral-3);}
 
 /* 이력서 등록 네비 (슬라이드 X)*/
 .resumeReg-nav {display:flex; justify-content: space-around; width:100%;}
@@ -118,15 +106,13 @@
 
 /* 시강영상 */
 .mv-thumbox {overflow: hidden; position:relative; /*margin-top:25px;*/ margin-bottom:10px; width:100%; /*height:165px;*/ border-radius: 10px; font-size: 0; background:var(--neutral-2);}
-.mv-thumbox img {width:100%;}
+.mv-thumbox img {width:100%; height:100%;}
 .mv-thumbox .dotmoreBtn:after {background:url('../images/mobile/m_icon_dot_white.png') no-repeat center;}
 .mv-thumbox:not(img) {height:165px;}
 
 .mv-thumbox .h-progress-wrap {display: flex; align-items: center; height: 100%; width: 50%; margin: 0 auto;}
 .mv-thumbox .h-progress-wrap .h-progress .h-progress-bar-inner {height:10px;}
 .mv-thumbox .h-progress-wrap .h-progress .h-progress-bar-inner .h-progress-bar {background-color:var(--blue-3);}
-
-
 
 
 /* 텍스트 블릿 */
@@ -155,7 +141,7 @@
 /* 학력사항 버튼 */
 .circle-plusBtn + .circle-plusBtn {margin-top:5px;} 
 .circle-plusBtn {display:flex; align-items: center; padding:15px; width:100%; height:46px; border:1px solid var(--border-basic-2); border-radius:4px; text-align:left; font-size:var(--text-subtitle4); color:var(--black-2); box-sizing:border-box; background:#fff;}
-.circle-plusBtn:before {content:''; display:inline-block; margin-right:10px; background:url('../images/icon_plus_outline.png'); width:18px; height:18px;}
+.circle-plusBtn:before {content:''; display:inline-block; margin-right:10px; background:url('../images/icon_plus_outline.png') no-repeat!important; width:18px; height:18px;}
 
 .outlineBtn-wrap .h-checkbox.checkbox02 + .h-checkbox.checkbox02 {margin-top:5px;}
 .outlineBtn-wrap .h-checkbox.checkbox02 input[type="checkbox"]:checked + label:after, .icon-outlineChk .h-checkbox.checkbox02 input[type="radio"]:checked + label:after {display: none;}
@@ -218,11 +204,6 @@
 .flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(4) {border-radius: 0 4px 0 0;}
 
 
-
-
-
-
-
 /* =================== 이력서 등록 ================== */
 .resume-regList > li + li {margin-top:25px;}
 .resume-regList > li + li.basic-box {margin-top:15px;}
@@ -270,7 +251,7 @@
 .lineadd-wrap {border-top:1px solid var(--border-basic-3);}
 .lineadd-wrap .circle-plusBtn.on {}
 .circle-plusBtn.on {border:1px solid var(--blue-3); color:var(--blue-3);}
-.circle-plusBtn.on:before {background:url('../images/mobile/icon_minus_outline_blue.png');}
+.circle-plusBtn.on:before {background:url('../images/mobile/icon_minus_outline_blue.png')!important;}
 
 /* input[type="text"]에 돋보기 */
 .searchBtn-wrap {position:relative;}
@@ -299,15 +280,6 @@
 .keyword-del-squared {flex:none; background:url(../images/mobile/m_icon_close_squared_gray.png) no-repeat; width:22px; height:22px;}
 
 
-
-/* 이력서 등록 컨텐츠 색깔, 간격 */
-.content {padding:20px 20px 80px;}
-.content.resume-regList-cont {background:var(--neutral-3);}
-
-.pt30 {padding-top:30px;}
-.mr15 {margin-right:15px;}
-
-
 /* 이력서등록_경력사항(강사전용) */
 .resume-addbox .h-checkbox.checkbox01 > span + span {margin-left:15px;}
 .resume-addbox .h-checkbox.checkbox01 {display: flex;}
@@ -316,8 +288,8 @@
 .resume-addbox.gap10 .h-checkbox.checkbox01 > span + span {margin-left:0;}
 
 /* 금액 입력 (숫자만) 만원 */
-.pseudo-wrap input[type="text"] + .pseudo-txt {position:absolute; top:15px; right:15px; font-size:var(--text-subtitle4);}
-.pseudo-wrap input[type="text"] {padding:0 45px 0 15px;}
+.unit-wrap input[type="text"] + .unit-txt {position:absolute; top:15px; right:15px; font-size:var(--text-subtitle4);}
+.unit-wrap input[type="text"] {padding:0 45px 0 15px;}
 
 /* 추가선택항목 디자인 */
 .basic-box .addlist .tit {display:inline-block; min-width:60px; font-size:var(--text-subtitle4); color:var(--black-1);}
@@ -329,12 +301,8 @@
 .h-button-underline.tgl-arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_arrow_down_gray.png') no-repeat; width:12px; height:6px;}
 
 
-
-
 /* 스타일 가이드에 문법 잘못되어있는거 고치기*/
 .h-radio-01 {padding:0;}
-.h-radio-01 input[type="radio"] + * {text-indent:0 !important;}
-
 .basic-box .h-radio-01 li + li {margin-left:10px;}
 
 /* */
@@ -451,6 +419,7 @@ input[type="checkbox"]:checked + label.label-intxt .intxt {display:block; width:
 .selfIntro-cont .h-textarea-box.prv-toggle textarea {height:215px!important; margin-top:0; border-radius: 0!important; border-top-color: #000!important; font-size:var(--text-subtitle4); line-height:20px; border-width:1px 0 0!important; box-shadow: 0px 5px 10px #0000001A; box-sizing: border-box; transition: all ease 0.5s;}
 .selfIntro-cont .h-textarea-box.prv-toggle .letter-count {border-radius: 0!important;}
 
+
 /* 퀵자기소개서 토글 드롭업 버튼 */
 .prv-toggle {visibility: visible; opacity: 0; transition: all ease 0.3s; max-height: 0;}
 .prv-toggle.is-open {visibility: visible; opacity: 1; transition: all ease 0.3s; max-height: 260px;}
@@ -477,10 +446,7 @@ input[type="checkbox"]:checked + label.label-intxt .intxt {display:block; width:
 
 /* 내용보기 토글 드롭다운 버튼 */
 .tgl-arrowBox {visibility: visible; opacity: 0; transition: 0.1s; max-height: 0;}
-.tgl-arrowBox.is-open {visibility: visible; opacity: 1; transition: 0.1s; max-height: 100%;}
-
+.tgl-arrowBox.is-open {display:block!important; visibility: visible; opacity: 1; transition: 0.1s; max-height: 100%;}
 .tgl-arrowBtn.is-open::after {-webkit-transform: rotate(180deg); transform: rotate(180deg); transition: all ease 0.3s;}
 .tgl-arrowBtn:focus:before {display:none;}
-
-
 
