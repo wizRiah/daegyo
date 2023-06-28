@@ -15,6 +15,7 @@
     --grey-1: #c3cad4;
     --grey-2: #8c9197;
     --grey-3: #62666b;
+    --grey-4: #D8D8D8;
     --neutral-1: #f2f2f2;
     --neutral-2: #ebeff5;
     --neutral-3: #f5f7fa;
@@ -64,8 +65,9 @@
 .text-subtitle2 { font-size:var(--text-subtitle2); letter-spacing:var(--letter-spacing-0); line-height:24px; }
 .text-subtitle3 { font-size:var(--text-subtitle3); letter-spacing:var(--letter-spacing-0); line-height:24px; }
 .text-subtitle4 { font-size:var(--text-subtitle4); letter-spacing:var(--letter-spacing-0); line-height:24px; }
-.text-subtitle5 { font-size:var(--text-subtitle5); letter-spacing:var(--letter-spacing-0); line-height:22px; }
+.text-subtitle5 { font-size:var(--text-subtitle5); letter-spacing:var(--letter-spacing-0); line-height:20px; }
 .text-subtitle6 { font-size:var(--text-subtitle6); letter-spacing:var(--letter-spacing-0); line-height:16px; }
+.text-subtitle7 { font-size:var(--text-subtitle7); }
 .text-subtitle17 { font-size:var(--text-subtitle17); }
 
 .h-tit-26 { font-size:var(--text-h2); color:var(--black-1); font-weight:var(--text-bold); letter-spacing:var(--letter-spacing-065); }
@@ -103,6 +105,7 @@ input[type="text"] { width:100%; height:45px; padding:0 20px; border:1px solid v
 input[type="text"]:disabled { background:var(--neutral-1); color:var(--black-2); }
 .h-field-wrap input[type="text"]:disabled + .include_txt { background:var(--neutral-1); height:52px; line-height:50px; }
 input::placeholder { color:var(--black-6); }
+input[type="text"]::placeholder {font-size:var(--text-subtitle4); }
 .inp-type-basic input { padding:15px; border-radius: 4px; border: 1px solid var(--border-basic-2); }
 .inp-type-basic input:focus { outline: none !important; border-color: var(--border-basic-1); transition: all ease 0.5s; }
 .inp-type-basic { position: relative; }
@@ -123,6 +126,7 @@ select option:disabled { display: none; }
 .wd1300 {width:1300px;}
 .wd1225 {width:1225px;}
 .wd100 { width:100%; }
+.wd80 { width:80%!important; }
 .wd50 {width:50%;}
 .wd49 { width:49%; }
 
@@ -151,6 +155,7 @@ select option:disabled { display: none; }
 .flex-between { justify-content:space-between !important; }
 .flex-1 { flex:1; }
 .flex-column { flex-direction: column; }
+.flex-none {flex:none;}
 
 
 /* form */
@@ -170,12 +175,13 @@ select + [class^="h-button"] { margin-left:10px; }
 .mt50 { margin-top:50px; }
 .mt70 { margin-top:70px; }
 
-.ml5 { margin-left:5px; }
+.ml5 { margin-left:5px!important; }
 .ml10 { margin-left:10px; }
 .ml20 { margin-left:20px; }
 
 .mr5 { margin-right:5px; }
 .mr10 { margin-right:10px; }
+.mr15 {margin-right:15px;}
 
 .mb0 {margin-bottom:0 !important;}
 .mb5 { margin-bottom:5px; }
@@ -192,7 +198,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .pr10 { padding-right:10px; }
 .pb5 {padding-bottom:5px;}
 .pb10 {padding-bottom:10px;}
-
+.pt30 {padding-top:30px;}
 .p25 { padding:25px !important; }
 
 /* width, height */
@@ -210,6 +216,15 @@ select + [class^="h-button"] { margin-left:10px; }
 
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
 .height-200 {height:200px !important;}
+
+.min-wd100px {min-width:100px;}
+.min-wd105px {min-width:105px;}
+.min-wd125px {min-width:125px;}
+
+
+/* line-height */
+.h-line-hgt18 {line-height: 18px!important;}
+.h-line-hgt20 {line-height: 20px!important;}
 
 
 /* border-radius */
@@ -277,7 +292,9 @@ button
 .h-button-grey { background: var(--border-basic-1); }
 .h-button-grey1 { background: var(--grey-1); }
 .h-button-grey2 { background: var(--grey-2); }
-.h-button-neutral3 { background: var(--neutral-3); }
+.h-button-grey3 { background: var(--grey-3); }
+.h-button-grey4 { background: var(--grey-4); }
+.h-button-neutral3 { background: var(--neutral-3); color: var(--black-2); border: 1px solid var(--border-basic-3); }
 .h-button-teal { background: var(--teal); }
 .h-button-cyan { background: var(--cyan); }
 .h-button-blue { background: var(--blue-3); }
@@ -519,7 +536,8 @@ button
 /* 01 기본형 */
 .h-radio-01 {padding-left:30px;}
 .h-radio-01 input[type="radio"] + label {display:inline-block;font-size:var(--text-subtitle4);margin: 0px 0 10px;padding: 0;box-sizing:border-box;position:relative;z-index: 0;text-indent: -31px;line-height: 16px;}
-.h-radio-01 input[type="radio"] + label * {text-indent:0;}
+/* .h-radio-01 input[type="radio"] + label * {text-indent:0;} */
+.h-radio-01 input[type="radio"] + * {text-indent:0 !important;}
 .h-radio-01 input[type="radio"] + label:hover { cursor:pointer; }
 .h-radio-01 input[type="radio"] + label .rchk {display: inline-block;width: 24px;height: 24px;border-radius:100%;background:#fff;border:1px solid var(--border-basic-2);box-sizing: border-box;vertical-align: middle;margin: -3px 7px 0 0;transition: border 0.5s;position: relative;}
 .h-radio-01 input[type="radio"] + label .rchk:before { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 9px; left: 9px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: var(--grey-1); }
@@ -527,7 +545,7 @@ button
 .h-radio-01 input[type="radio"] + label .rchk + span {margin-bottom:10px;}
 .h-radio-01 input[type="radio"]:checked + label { }
 .h-radio-01 input[type="radio"]:checked + label .rchk { border-color:var(--cyan); }
-.h-radio-01 input[type="radio"]:checked + label .rchk:after {width: 12px;height: 12px;opacity: 1;left: 5px;top: 5px;}
+.h-radio-01 input[type="radio"]:checked + label .rchk:after {width: 12px;height: 12px;opacity: 1;left: 5px;top: 5px; transform: scale(1);}
 .h-radio-01 input[type="radio"]:disabled + label { }
 .h-radio-01 input[type="radio"]:focus + label .rchk { border-color:var(--cyan); }
 .h-radio-01.no-indent {padding-left:0;margin-left: -1px;}
@@ -909,7 +927,7 @@ input[type="text"]:disabled::placeholder {color:var(--black-6);}
 .h-txtfield-basic { height: 54px !important; padding: 0 19px !important; border: 1px solid var(--border-basic-2) !important; border-radius:4px !important; box-sizing: border-box; }
 .h-txtfield-basic:disabled { background-color:var(--neutral-1); }
 .h-txtfield-basic:disabled::placeholder { color:var(--black-2); }
-textarea.h-txtfield-basic { height:100px !important; padding:15px 20px !important; box-sizing:border-box; }
+textarea.h-txtfield-basic { height:100px !important; padding:15px 20px !important; box-sizing:border-box; resize: none;}
 textarea.h-txtfield-basic::placeholder { color:var(--black-6); }
 
 /*02_버튼 있는 유형*/

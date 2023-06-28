@@ -1,33 +1,34 @@
 @charset "utf-8";
 
-.m-hunjang-wrap input[type="text"]::placeholder {font-size:var(--text-subtitle4); }
-.min-wd100px {min-width:100px;}
-.min-wd105px {min-width:105px;}
-
-.flex-none {flex:none;}
-
-.h-line-hgt18 {line-height: 18px!important;}
-.h-line-hgt20 {line-height: 20px!important;}
-
 .h-button-underline.h-fs12 {font-size:var(--text-subtitle6); padding:0; margin:0;}
-
-
+.h-button-underline.h-fs13 {font-size:var(--text-subtitle5); padding:0; margin:0;}
 
 /* =================== 이력서 등록 완료 ================== */
+/* 이력서 등록 컨텐츠 색깔, 간격 */
+.content.resume-regList-cont {min-height:100vh; padding:20px 20px 80px; background:var(--neutral-3);}
 
-/* 이력서 등록 네비 */
+/* 이력서 등록 네비 (슬라이드 X)*/
 .resumeReg-nav {display:flex; justify-content: space-around; width:100%;}
 .resumeReg-nav li {display:flex; align-items: center; /*width: calc(100% / 6);*/ justify-content: center;}
 .resumeReg-nav li a {position:relative; padding:15px 3px; font-size:var(--text-subtitle3);}
 .resumeReg-nav li.active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--blue-3);}
 .resumeReg-nav li.active a {font-weight: var(--text-medium); color:var(--blue-3);}
 
+/* 이력서 등록 네비 (슬라이드 X)*/
+/* .resumeReg-slide-nav {display:flex; justify-content: space-around; width:100%;} */
+/* .resumeReg-slide-nav {padding:0 20px;} */
+.resumeReg-slide-nav {background:var(--neutral-3);}
+.resumeReg-slide-nav .swiper-slide {display:flex; align-items: center; width:auto; justify-content: center; margin-left:20px;}
+.resumeReg-slide-nav .swiper-slide a {position:relative; padding:15px 5px; font-size:var(--text-subtitle3);}
+.resumeReg-slide-nav .swiper-slide-active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--blue-3);}
+.resumeReg-slide-nav .swiper-slide-active a {font-weight: var(--text-medium); color:var(--blue-3);}
+
 /* 이력서 제목 입력 추천 */
 .resume-title {position:relative;}
 .resume-title .h-txtfield-basic {padding:18px 20px!important; height:auto!important; border:2px solid var(--border-basic-1)!important; box-shadow: 0px 5px 10px #0000001A; }
 .resume-title .my-resume-listBtn {position:absolute; right:37px; padding:20px 0; color:var(--grey-3); font-size:var(--text-subtitle5);}
 .resume-title .my-resume-listBtn:after {content: ''; position: absolute; top: 25px; margin-left: 7px; width: 0px; height: 0px; border-top: 6px solid #666666; border-left: 6px solid transparent; border-right: 6px solid transparent;}
-.resume-title .my-resume-listBtn.on:after {transform: rotate( 180deg );}
+.resume-title .my-resume-listBtn.on:after {transform: rotate(180deg);}
 
 /* .my-resume-list {display:none;} */
 .my-resume-list { position: absolute; top: 54px; left: 0; margin-top:5px; width: 100%; max-height: 300px; overflow-y: scroll; background:#fff; border:2px solid var(--grey-3); border-radius:4px; box-shadow:0px 5px 10px #0000001A; box-sizing: border-box; z-index: 1; } 
@@ -54,7 +55,7 @@
 
 /* 이력서 등록 폼 공통 */
 .squareBtn + .basic-box {margin-top:15px;}
-.basic-box {position:relative; padding:20px; background:#fff; border-radius:10px; box-sizing: border-box;}
+.basic-box {overflow:hidden; position:relative; padding:20px; background:#fff; border-radius:10px; box-sizing: border-box;}
 .basic-box + .basic-box {margin-top:15px!important;}
 .basic-box + .h-button-ml.h-button-teal {margin:15px 0 0;}
 .h-button-ml.h-button-teal + .basic-box {margin:15px 0 0;}
@@ -105,15 +106,13 @@
 
 /* 시강영상 */
 .mv-thumbox {overflow: hidden; position:relative; /*margin-top:25px;*/ margin-bottom:10px; width:100%; /*height:165px;*/ border-radius: 10px; font-size: 0; background:var(--neutral-2);}
-.mv-thumbox img {width:100%;}
+.mv-thumbox img {width:100%; height:100%;}
 .mv-thumbox .dotmoreBtn:after {background:url('../images/mobile/m_icon_dot_white.png') no-repeat center;}
 .mv-thumbox:not(img) {height:165px;}
 
 .mv-thumbox .h-progress-wrap {display: flex; align-items: center; height: 100%; width: 50%; margin: 0 auto;}
 .mv-thumbox .h-progress-wrap .h-progress .h-progress-bar-inner {height:10px;}
 .mv-thumbox .h-progress-wrap .h-progress .h-progress-bar-inner .h-progress-bar {background-color:var(--blue-3);}
-
-
 
 
 /* 텍스트 블릿 */
@@ -142,7 +141,7 @@
 /* 학력사항 버튼 */
 .circle-plusBtn + .circle-plusBtn {margin-top:5px;} 
 .circle-plusBtn {display:flex; align-items: center; padding:15px; width:100%; height:46px; border:1px solid var(--border-basic-2); border-radius:4px; text-align:left; font-size:var(--text-subtitle4); color:var(--black-2); box-sizing:border-box; background:#fff;}
-.circle-plusBtn:before {content:''; display:inline-block; margin-right:10px; background:url('../images/icon_plus_outline.png'); width:18px; height:18px;}
+.circle-plusBtn:before {content:''; display:inline-block; margin-right:10px; background:url('../images/icon_plus_outline.png') no-repeat!important; width:18px; height:18px;}
 
 .outlineBtn-wrap .h-checkbox.checkbox02 + .h-checkbox.checkbox02 {margin-top:5px;}
 .outlineBtn-wrap .h-checkbox.checkbox02 input[type="checkbox"]:checked + label:after, .icon-outlineChk .h-checkbox.checkbox02 input[type="radio"]:checked + label:after {display: none;}
@@ -205,11 +204,6 @@
 .flex-basis-even.fl-wd50 .h-checkbox.checkbox06 input[type="checkbox"] + label:nth-child(4) {border-radius: 0 4px 0 0;}
 
 
-
-
-
-
-
 /* =================== 이력서 등록 ================== */
 .resume-regList > li + li {margin-top:25px;}
 .resume-regList > li + li.basic-box {margin-top:15px;}
@@ -220,19 +214,13 @@
 .h-txtfield-inner > input[type="text"] + select {margin-left:5px;}
 .h-txtfield-inner > input + button {flex:none;}
 .h-txtfield-inner > input[type="text"] {position:relative;}
-/* .h-txtfield-inner > select {min-width:100px;} */
 
 .h-txtfield-srch {position:relative; display:flex; align-items: center;}
 .h-txtfield-srch input[type="text"] {padding:0 40px 0 15px;}
-/* .h-btn-close {position:absolute; top:50%; right:13px; width:20px; height:20px; transform:translateY(-50%); background:url(../images/icon_sm_close_gray.png);} */
-
 
 .labelArea {position:relative; padding-left:10px; margin-bottom:6px; font-size:var(--text-subtitle6); color:var(--black-2); font-weight:var(--text-medium);}
 .labelArea:before {content:''; position:absolute; top:5px; left:3px; width:2px; height:2px; background:var(--black-2);}
 .labelArea > .h-txt-orange {margin-left:3px;}
-
-/* 간격 */
-/* .labelArea + input[type="text"], .labelArea + .h-txtfield-inner, .labelArea + .h-txtfield-wrap, .labelArea + select, .labelArea + textarea.h-txtfield-basic .labelArea + .h-radio-02{margin-top:6px;} */
 
 
 /* 기본정보 */
@@ -248,20 +236,11 @@
 .h-txtfield-wrap.time select {width:calc(100% / 2 - 10px);}
 .h-txtfield-wrap.time select + select {margin-left:0;}
 
-/* 휴대폰번호 인증 */
-/* .passcode-inner {position:relative;}
-.passcode-inner > input[type="text"] {padding:0 60px 0 20px;}
-.passcode-inner .rsultTxt {position:absolute; top: 15px; right: 15px; font-size:var(--text-subtitle6); font-weight:var(--text-regular);} */
-
-
-/* 학력사항 공통 타이틀 fs17 */
-/* .resume-btit {font-size:17px; font-weight:var(--text-bold); color:var(--black-2);} */
 
 /* 학점계산기 버튼 */
 .roundBtn50 {height:42px; padding:0 20px; border:1px solid var(--border-basic-2); border-radius: 50px; background:#fff; font-size:var(--text-subtitle4); color:var(--black-2); font-weight:var(--text-regular);}
 
 /* 툴팁 버튼 */
-/* .tooltipBtn {background:url('../images/mobile/m_icon_qmark.png') no-repeat; width:20px; height:20px;} */
 .h-btn-question {width: 20px; height: 20px; border-radius: 100%; border: 1px solid #cdd2d8; margin: 0 7px; background: #fff; font-size:12px;}
 .h-btn-question:hover {cursor: pointer;}
 
@@ -272,24 +251,12 @@
 .lineadd-wrap {border-top:1px solid var(--border-basic-3);}
 .lineadd-wrap .circle-plusBtn.on {}
 .circle-plusBtn.on {border:1px solid var(--blue-3); color:var(--blue-3);}
-.circle-plusBtn.on:before {background:url('../images/mobile/icon_minus_outline_blue.png');}
+.circle-plusBtn.on:before {background:url('../images/mobile/icon_minus_outline_blue.png')!important;}
 
 /* input[type="text"]에 돋보기 */
 .searchBtn-wrap {position:relative;}
 .searchBtn-wrap .h-m-searchBtn {position:absolute; top:50%; right:15px; transform: translateY(-50%); background:url('../images/mobile/m_icon_sm_search.png') no-repeat; width:21px; height:21px;}
 .searchBtn-wrap > input[type="text"] {padding:0 40px 0 15px;}
-
-/* 툴팁 팝업 */
-.h-m-popup.popup-04 { position:absolute; padding: 20px; border: 1px solid var(--grey-3); border-radius: 2px; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0px 5px 10px #0000001A;} 
-.h-m-popup.popup-04 .pop-body { height: 100%; overflow: visible; } 
-.h-m-popup.popup-04 .pop-container { height: 100%; overflow: visible; padding:0;} 
-.h-m-popup.popup-04 .pop-title { font-size:var(--text-subtitle3); font-weight:var(--text-bold);} 
-.h-m-popup.popup-04 select { height:46px; } 
-.h-m-popup.popup-04 .h-checkbox { margin:0; } 
-.h-m-popup.popup-04 .h-checkbox.checkbox01 input[type="checkbox"] + label { font-size:var(--text-subtitle4); } 
-.h-m-popup.popup-04 button.close {background:url(../images/close_btn.svg) no-repeat; width:14px; height:14px;}
-.h-m-popup .blt-dottxt {position:relative;}
-.h-m-popup .blt-dottxt:before {content:'ㆍ'; position:absolute; top:0; left:-10px;}
 
 /* 인풋 - 키워드 자동입력 박스 (학교검색/ 자격증검색 등) */
 .keyword-Srch-Wrap { display:none; width: 100%; border: 1px solid var(--grey-3); border-radius: 4px; /*margin-top: 5px;*/ overflow: hidden; position: absolute; z-index: 1; background: #fff; top: 54px; box-sizing: border-box; } 
@@ -313,26 +280,16 @@
 .keyword-del-squared {flex:none; background:url(../images/mobile/m_icon_close_squared_gray.png) no-repeat; width:22px; height:22px;}
 
 
-
-/* 이력서 등록 컨텐츠 색깔, 간격 */
-.content {padding:20px 20px 80px;}
-.content.resume-regList-cont {/*padding:20px 20px 80px;*/ background:var(--neutral-3);}
-
-.pt30 {padding-top:30px;}
-.mr15 {margin-right:15px;}
-
-
 /* 이력서등록_경력사항(강사전용) */
 .resume-addbox .h-checkbox.checkbox01 > span + span {margin-left:15px;}
-/* .resume-addbox .h-checkbox.checkbox01 > span {width:25%;} */
 .resume-addbox .h-checkbox.checkbox01 {display: flex;}
 
 .resume-addbox.gap10 .h-checkbox.checkbox01 {display: flex; flex-wrap: wrap; gap: 12px;}
 .resume-addbox.gap10 .h-checkbox.checkbox01 > span + span {margin-left:0;}
 
 /* 금액 입력 (숫자만) 만원 */
-.pseudo-wrap input[type="text"] + .pseudo-txt {position:absolute; top:15px; right:15px; font-size:var(--text-subtitle4);}
-.pseudo-wrap input[type="text"] {padding:0 45px 0 15px;}
+.unit-wrap input[type="text"] + .unit-txt {position:absolute; top:15px; right:15px; font-size:var(--text-subtitle4);}
+.unit-wrap input[type="text"] {padding:0 45px 0 15px;}
 
 /* 추가선택항목 디자인 */
 .basic-box .addlist .tit {display:inline-block; min-width:60px; font-size:var(--text-subtitle4); color:var(--black-1);}
@@ -340,14 +297,12 @@
 .basic-box .addlist li + li {margin-top:10px;}
 
 /* 내용보기 화살표 버튼 */
-.h-button-underline.arrowBtn {margin:0;font-weight:var(--text-regular);}
-.h-button-underline.arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_icon_arrow_gray.png') no-repeat; width:12px; height:6px;}
+.h-button-underline.tgl-arrowBtn {margin:0;font-weight:var(--text-regular);}
+.h-button-underline.tgl-arrowBtn:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_arrow_down_gray.png') no-repeat; width:12px; height:6px;}
 
 
 /* 스타일 가이드에 문법 잘못되어있는거 고치기*/
 .h-radio-01 {padding:0;}
-.h-radio-01 input[type="radio"] + * {text-indent:0 !important;}
-
 .basic-box .h-radio-01 li + li {margin-left:10px;}
 
 /* */
@@ -358,7 +313,7 @@
 /* 이력서등록_파일등록 */
 .file-upload-wrap .guidetxt {margin: -20px -20px 0; padding:20px; background:var(--neutral-3); color:var(--black-3); font-size:var(--text-subtitle5); border-bottom: 1px solid var(--neutral-2);}
 .file-upload-wrap button:not(.h-button-del) {padding:0 30px;}
-/* .file-regList {margin:0 -20px; background:#fff;} */
+
 .file-regList {margin:0 -20px 20px;}
 .file-regList > li {position:relative; padding:20px; border-bottom: 1px solid var(--neutral-2);}
 .file-regList li .h-checkbox {float:left;}
@@ -412,49 +367,86 @@ input[type="checkbox"] + label.label-intxt .intxt {display:none;}
 input[type="checkbox"]:checked + label.label-intxt {overflow: hidden; display: flex; flex-wrap: wrap; flex-direction: row; height:auto!important; padding: 15px 15px 0!important;}
 input[type="checkbox"]:checked + label.label-intxt .intxt {display:block; width:100%; margin: 10px -15px 0; padding:15px; font-size:var(--text-subtitle6); color:var(--black-3); background:var(--neutral-3); text-align: left; line-height:16px; border-top:1px solid var(--neutral-2);}
 
-/*  */
 .h-bullet-01.text-subtitle6 li:after {top:7px;}
 .h-bullet-01.text-subtitle6 {line-height:18px;}
 
 
-
 /* 이력서 등록 목록 */
-/* 이력서 등록 */
 .resumebox { display: flex; flex-direction: column; } 
 .resumebox .resumbtn { position:relative; border-radius: 10px; background-color: #fff; } 
 .resumebox .resumbtn + .resumbtn {margin-top:15px;}
 .resumebox .resumbtn a { display: inline-block; height: 100%; padding: 30px; box-sizing: border-box; } 
-.resumebox .resumbtn a img {max-width:80px;}
-
-
-@keyframes imgAni { 
- 0% { opacity: 0; left: -10px; } 
- 100% { opacity: 1; left: 40px; } 
- }
-
-@keyframes imgAni-on { 
- 0% { opacity: 0; } 
- 100% { opacity: 1; right: 30px; } 
- }
-
-.resumebox .resumbtn:hover .ico_arrow,
-.resumebox .resumbtn:hover .ico_arrow:before { border-color:#fff; } 
-.resumebox .resumbtn:hover .ico_arrow:after { background:#fff; } 
-
+.resumebox .resumbtn a img {position: absolute; bottom: 20px; right: 30px; max-width:80px;}
 .resumebox .resumbtn .text-subtitle4 {margin-top: 20px;} 
-.resumebox .resumbtn img {position: absolute; bottom: 20px; right: 30px;} 
-
 .resumebox .resumbtn .ico_arrow { position:relative; margin:15px 0 20px; width:30px; height:30px; text-indent:-9999px; border-radius: 50%; border:2px solid #CCD1D7; } 
 .resumebox .resumbtn .ico_arrow:before { content:''; width:7px; height:7px; position:absolute; left:15px; top:50%; border-left:2px solid #CCD1D7; border-top:2px solid #CCD1D7; transform:translate(-50%,-50%) rotate(135deg); } 
 .resumebox .resumbtn .ico_arrow:after { content:''; width:14px; height:2px; position:absolute; right:5px; top:50%; transform:translateY(-50%); background:#CCD1D7 } 
 
-
 /* 이력서 선택 팝업 */
-/* .h-radio-01.img-radiobox {height:130px;} */
-/* .h-radio-01.img-radiobox + .h-radio-01.img-radiobox {margin-top:10px;} */
 .h-radio-01.img-radiobox .img-box {width:calc(100% - 105px);}
 .h-radio-01.img-radiobox .img-box .text-subtitle5 {line-height:1.3em;}
 .h-radio-01.img-radiobox .img-box img {position: absolute; top: 50%; right: 20px; transform: translateY(-50%);}
+.h-radio-01.img-radiobox input[type="radio"]:checked + label {border-color:var(--cyan)}
+.h-radio-01.img-radiobox input[type="radio"] + label {padding:20px; border-radius:10px; background:var(--neutral-3); border:1px solid transparent;}
+.h-popup-wrap .h-radio-01.img-radiobox + .enterBtn {display: block; margin-top:10px!important; width: calc(100% - 10px); font-size:var(--text-subtitle4); font-weight:var(--text-medium);}
 
-.h-radio-01.img-radiobox input[type="radio"]:checked + label {border:1px solid var(--cyan);}
-.h-radio-01.img-radiobox input[type="radio"] + label {padding:20px; border-radius:10px; background:var(--neutral-3);}
+
+/* ================= 퀵자기소개서 ================= */
+.selfIntro-cont .basic-box {background:var(--neutral-3);}
+.selfIntro-cont .basic-box + .basic-box {margin-top:10px!important;}
+.selfIntro-cont .h-textarea-box textarea {margin-top:10px; height:550px!important; border-radius: 3px 3px 0 0!important;}
+
+.letter-count {position: relative; margin-top: -1px; padding:15px 0; background:var(--neutral-2); border-radius: 0 0 3px 3px; border:1px solid var(--border-basic-2); z-index: 1;}
+.letter-count li + li {position:relative; padding-left: 10px; margin-left: 10px;}
+.letter-count li + li:after {content:''; position:absolute; top:0; left:0; width:1px; height:14px; background:var(--border-basic-4);}
+
+/* 접기 펼치기 토글 */
+.selfIntro-cont .basic-box .introTxt {overflow: hidden; /*position:relative;*/ width:100%; padding-right:12px; margin-top:12px; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.4em; height: 4.2em; font-size:var(--text-subtitle5); color:var(--h-txt-2);}
+.selfIntro-cont .basic-box .introTxt:after {content:''; position:absolute; width:40px; height:22px; bottom:0; right:0; border-radius:10px 0 10px 0; background-color:var(--neutral-2); transition: all ease 0.5s;} 
+.selfIntro-cont .basic-box .introTxt:before {content:''; position: absolute; right: 15px; bottom: 8px; background:url('../images/mobile/m_arrow_down_gray.png') no-repeat center; width:12px; height:6px;  z-index: 1;}
+.selfIntro-cont .basic-box .introTxt.on {height:auto!important; -webkit-line-clamp: initial!important;}
+.selfIntro-cont .basic-box .introTxt.on:before {transform: rotate(180deg); transition: all ease 0.5s;}
+
+
+/* 선택 체크박스 */
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 {margin:0;}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 label {display:inline-block; position: absolute; top: 15px; right: 15px; width:64px; height:28px; line-height:28px; border:1px solid var(--border-basic-2); border-radius: 50px; font-size:var(--text-subtitle6); background:#fff;}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 label i {margin:-5px 7px 0 0; width:14px; height:14px; font-size:var(--text-subtitle1); color:var(--grey-1);}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 input[type="checkbox"]:checked + label {border-color:var(--blue-3);}
+.selfIntro-cont .basic-box .h-checkbox.checkbox02 input[type="checkbox"]:checked + label i {color:var(--blue-3);}
+
+.selfIntro-cont .h-textarea-box.prv-toggle {position:fixed; width:100%; left:0; bottom:54px; z-index:1;}
+.selfIntro-cont .h-textarea-box.prv-toggle textarea {height:215px!important; margin-top:0; border-radius: 0!important; border-top-color: #000!important; font-size:var(--text-subtitle4); line-height:20px; border-width:1px 0 0!important; box-shadow: 0px 5px 10px #0000001A; box-sizing: border-box; transition: all ease 0.5s;}
+.selfIntro-cont .h-textarea-box.prv-toggle .letter-count {border-radius: 0!important;}
+
+
+/* 퀵자기소개서 토글 드롭업 버튼 */
+.prv-toggle {visibility: visible; opacity: 0; transition: all ease 0.3s; max-height: 0;}
+.prv-toggle.is-open {visibility: visible; opacity: 1; transition: all ease 0.3s; max-height: 260px;}
+
+.round50-btn.is-open {min-width:auto!important; width:44px; height:44px; padding:0; border-radius: 100%; text-indent: -9999px; bottom:323px; right:10px; transition: all ease 0.3s;}
+.round50-btn.is-open::after {right:22px; -webkit-transform: translate(50%,-50%) rotate(0deg); transform: translate(50%,-50%) rotate(0deg); transition: all ease 0.3s;}
+
+.round50-btn {position: fixed; bottom: 80px; right: 70px; height:44px; margin: 0; padding:0 45px 0 25px; width:167px; border-radius:50px; font-size:var(--text-subtitle6); transition: all ease 0.3s; z-index:2;}
+.round50-btn:after {content:''; position: absolute; top: 50%; right:25px; transform: translate(50%,-50%) rotate(180deg); background:url('../images/mobile/m_arrow_down_white.png') no-repeat ; width:12px; height:6px; transition: all ease 0.2s;}
+
+.h-btn-imark {background:url('../images/mobile/icon_important_mark.png') no-repeat; width:18px; height:18px;}
+
+/* 모달팝업을 감싸고 있는 최상위 부모 */
+#modalWrap {position: fixed; z-index: 1; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #00000080}
+
+/* 버튼만 있는 팝업 */
+.onlyBtn-wrap button + button {margin-top:5px;}
+.onlyBtn-wrap button.h-button-l {width:calc(100% - 20px); font-size:var(--text-subtitle4);}
+
+/* 팝업안에 테이블 */
+.h-tbl-simple {border:1px solid #E0E6EF;}
+.h-tbl-simple thead tr th {padding:13px 5px; font-size:var(--text-subtitle5); background:var(--neutral-3);}
+.h-tbl-simple tbody tr td {padding:13px 14px; border-top:1px solid #E0E6EF; border-left:1px solid #E0E6EF; font-size:var(--text-subtitle5);}
+
+/* 내용보기 토글 드롭다운 버튼 */
+.tgl-arrowBox {visibility: visible; opacity: 0; transition: 0.1s; max-height: 0;}
+.tgl-arrowBox.is-open {display:block!important; visibility: visible; opacity: 1; transition: 0.1s; max-height: 100%;}
+.tgl-arrowBtn.is-open::after {-webkit-transform: rotate(180deg); transform: rotate(180deg); transition: all ease 0.3s;}
+.tgl-arrowBtn:focus:before {display:none;}
+

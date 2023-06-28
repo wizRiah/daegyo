@@ -13,9 +13,10 @@ header.hc-green .location .closeBtn:before {background:url('../images/mobile/m_a
 header .location .arrowBtn {display: flex; align-items: center;}
 header .location .arrowBtn:before {content:''; display:inline-block; margin-right:10px; width:20px; height:16px;}
 header .location .closeBtn:before {content:''; display:inline-block; margin-right:10px; width:14px; height:14px;}
-header .location a {display: flex; align-items: center;}
+header .location a {display: flex; align-items: center; font-weight:var(--text-medium);}
 
-.m-hunjang-wrap header { display: flex; align-items: center; justify-content: space-between; border-bottom:1px solid var(--neutral-2); height:54px; padding:0 20px; /*background:var(--teal);*/ } 
+
+.m-hunjang-wrap header { display: flex; align-items: center; justify-content: space-between; border-bottom:1px solid var(--neutral-2); min-height:54px; padding:0 20px;} 
 .m-hunjang-wrap header .location {display:flex;align-items:center;justify-content: flex-start;width: 100%;/*color:#fff;*/font-size:var(--text-subtitle1);} 
 .m-hunjang-wrap header .location .tit {margin-left: 10px; color: #fff; font-size: 18px;}
 .m-hunjang-wrap header .btn-allmenu { display:flex; } 
@@ -66,10 +67,11 @@ footer .footer-inner .device-info li:last-child a { color:var(--black-2); font-w
 
 /* 최상단이동 이전버튼 홈버튼 등등 fixed 버튼 */
 .quick-btmBtn {}
-.fixedBtn {display:flex;justify-content: center;align-items: center;position:fixed;bottom:80px;width:44px;height:44px;background: #FFFFFF;border:1px solid #E0E6EF;border-radius:50%;box-sizing:border-box;}
+.fixedBtn {display:flex;justify-content: center;align-items: center;position:fixed;bottom:80px;width:44px;height:44px;background: #FFFFFF;border:1px solid #E0E6EF;border-radius:50%;box-sizing:border-box; z-index: 1;}
 .topBtn.fixedBtn {right:15px;}
 .homeBtn.fixedBtn {left:63px;}
 .prevBtn.fixedBtn {left:15px;}
+.closeBtn.fixedBtn {bottom: 130px; right:15px;}
 
 
 /* 미리보기_작성완료 버튼 */
@@ -80,6 +82,9 @@ footer .footer-inner .device-info li:last-child a { color:var(--black-2); font-w
 .fixed-bottom ul li:last-child button {color:#fff; font-weight:var(--text-bold);}
 .fixed-bottom ul.bc-orange li:last-child {background:var(--orange); }
 .fixed-bottom ul.bc-gray li:last-child {background:var(--grey-3); }
+.fixed-bottom .bc-teal .h-button-teal {height:54px; margin:0; font-size:var(--text-subtitle3); border-radius: 0;}
+.fixed-bottom .bc-teal .h-button-teal:after {content:''; display:inline-block; margin-left:10px; background:url('../images/mobile/m_arrow_right_white.png') no-repeat; width:9px; height:12px;}
+.fixed-bottom .bc-teal .h-button-prev {height:54px; margin:0; padding:0; background:#fff; color:var(--black-5); border-radius: 0;}
 
 
 /* 컨텐츠 */
