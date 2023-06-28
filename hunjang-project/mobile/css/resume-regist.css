@@ -5,7 +5,12 @@
 
 /* =================== 이력서 등록 완료 ================== */
 /* 이력서 등록 컨텐츠 색깔, 간격 */
-.content.resume-regList-cont {min-height:100vh; padding:20px 20px 80px; background:var(--neutral-3);}
+/* .pop-container .resume-regList-cont {padding:0 0 80px!important; background:var(--neutral-3);} */
+.content.resume-regList-cont {min-height:100vh; padding:20px 20px 80px;}
+
+/* 팝업 */
+.resume-regList-cont {background:var(--neutral-3);}
+.pop-container.resume-regList-cont {min-height:100vh; padding-bottom:80px;}
 
 /* 이력서 등록 네비 (슬라이드 X)*/
 .resumeReg-nav {display:flex; justify-content: space-around; width:100%;}
@@ -163,8 +168,8 @@
 .outlineBtn-wrap.calc2 .circle-plusBtn {width:calc(100% / 2 - 5px); margin:0;}
 
 /* 사각형 버튼 한줄에 여러개 */
-.h-radio-02.squareBtn {margin-left:5px;}
-.h-radio-02.squareBtn input[type="radio"] + label { display:inline-block; width:100%; height:45px; line-height:44px; border:1px solid var(--border-basic-2); font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
+/* .h-radio-02.squareBtn {margin-left:5px;} */
+.h-radio-02.squareBtn input[type="radio"] + label { display:inline-block; width:100%; height:45px; line-height:44px; border:1px solid var(--border-basic-2); font-size:var(--text-subtitle4); margin:0; padding:0 5px; margin-left:-1px; box-sizing:border-box; /* min-width:70px; */ min-width:auto; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
 .h-radio-02.squareBtn input[type="radio"] + label:before { content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
 .h-radio-02.squareBtn input[type="radio"]:checked + label { border-color:var(--cyan); background:var(--cyan); color: #fff; font-weight: var(--text-medium); }
 .h-radio-02.squareBtn input[type="radio"]:checked + label +input + label { border-left-color:var(--cyan); }
