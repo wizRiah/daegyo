@@ -96,11 +96,22 @@
 input[type="text"] { width:100%; height:45px; padding:0 20px; border:1px solid var(--border-basic-2); border-radius: 4px; box-sizing: border-box; font-size: var(--text-subtitle4); }
 input[type="text"]:disabled { background:var(--neutral-1); color:#bcbcbc; }
 .h-field-wrap input[type="text"]:disabled + .include_txt { background:var(--neutral-1); height:52px; line-height:50px; }
+.h-field-wrap.disabled,
+.h-field-wrap.disabled input[type="text"] {background:var(--neutral-1);}
 input::placeholder { color:var(--black-6); }
 .inp-type-basic input { padding:15px; border-radius: 4px; border: 1px solid var(--border-basic-2); }
 .inp-type-basic input:focus { outline: none !important; border-color: var(--border-basic-1); transition: all ease 0.5s; }
 .inp-type-basic { position: relative; }
 .inp-type-basic .inp-tit { position: absolute; top: -5px; left: 13px; padding: 0 5px; font-size: 12px; background:#fff; }
+  /*필수입력값 미입력시*/
+  .focus-Red,
+  .focus-Red.h-txtfield-basic,
+  .focus-Red.h-field-wrap,
+  input[type="text"].focus-Red {border-color:#FF5656 !important; background-color:#FFFDE2 !important;}
+  .v3dp__datepicker .v3dp__input_wrapper input[type="text"].focus-Red {border:1px solid #FF5656 !important; background-color:#FFFDE2 !important;}
+  .focus-Red .h-txtfield-inner {background-color:#FFFDE2 !important;}
+  input[type="checkbox"].focus-Red + label:before {border-color:#FF5656 !important; background-color:#FFFDE2 !important;}
+  .resume-regList>li .h-radio-01 input[type="radio"].focus-Red + label .rchk {border-color:#FF5656 !important; background-color:#FFFDE2 !important;}
 
 /* select */
 /* .slt-type-basic select { padding:15px; border-radius: 4px; border: 1px solid var(--border-basic-2); } */
@@ -344,6 +355,7 @@ button
 .h-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; }
 .h-checkbox input[type="checkbox"] + label,
 .h-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; }
+select ~ .h-checkbox {margin-left:10px;}
 
 /* checkbox01 */
  /* label:before에 체크하기 전 상태 CSS */
@@ -869,6 +881,10 @@ textarea.h-txtfield-basic::placeholder { color:#BCBCBC; }
 .h-field-wrap { /*height:54px;*/ min-height:54px; height:auto; border:1px solid var(--border-basic-2); background:#fff; border-radius:4px; box-sizing: border-box; display: inline-block; overflow: hidden; position: relative; display: flex; flex-wrap: nowrap !important; align-items: center; width: 100%; }
 .h-field-wrap .h-txtfield-inner { padding:0 19px; border:none; height:52px; border-radius: 4px; flex-shrink: 1; width: 100%; }
 .h-field-wrap .h-txtfield-inner + a { flex-shrink:0; }
+.h-field-wrap .h-txtfield-inner:focus {outline:none;}
+.h-field-wrap>button,
+.h-field-wrap>.h-button-s {margin-top:8px;}
+select + .h-field-wrap {margin-left:10px;}
 
 /*03_일정선택형*/
 .h-field-wrap.calendar { display:flex; flex-direction: row; align-items: stretch; }
@@ -876,6 +892,12 @@ textarea.h-txtfield-basic::placeholder { color:#BCBCBC; }
 .h-field-wrap.calendar a.h-btn-calndar { padding: 0 17px; position: relative; display: flex; align-items: center; }
 .h-field-wrap.calendar a.h-btn-calndar:before { content:""; width: 22px; height: 22px; display: inline-block; background: url(../images/btn_calendar.svg) no-repeat; background-position: center; }
 .h-field-wrap.calendar a.h-btn-calndar:focus { outline:auto; }
+.v3dp__datepicker {width:160px; border:1px solid var(--border-basic-2); border-radius:4px;}
+.v3dp__datepicker .v3dp__input_wrapper {height:54px; position:relative;}
+.v3dp__datepicker .v3dp__input_wrapper input[type="text"] {height:54px; text-transform:uppercase; border:none !important; padding-right:43px;}
+.v3dp__datepicker .v3dp__input_wrapper .v3dp__clearable {display:flex !important; width:54px; left:auto;  position:absolute; top:0; right:0; height:54px; line-height:54px;}
+.v3dp__datepicker .v3dp__input_wrapper .v3dp__clearable:before {content:""; width:100%; height:100%; display: inline-block; background:url(/images/btn_calendar.svg); background-position: center; background-repeat: no-repeat;}
+.v3dp__datepicker .v3dp__input_wrapper .v3dp__clearable i {display:none;}
 
 /*04_일정묶음*/
 .h-date-wrap { display:inline-flex; flex-flow:row wrap; align-items:center; vertical-align:middle; }
@@ -1117,14 +1139,15 @@ TAB
 /* .srch-detail .depth-box ul.depth1 > li:first-child:after { content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px; } */
 .srch-detail .depth-box ul.depth1 { position:relative; left:-5px; line-height:20px; }
 .srch-detail .depth-box ul.depth1 > li:first-child:before { display:none; }
-.srch-detail .depth-box ul.depth1 > li { margin:0 5px; }
+.srch-detail .depth-box ul.depth1 > li { margin:0 8px 0 5px; }
+.srch-detail .depth-box ul.depth1 > li .clear {margin-left:0;}
 .srch-detail .depth-box ul.depth1 + ul.depth1 { margin-top: 10px; }
 .srch-detail .depth-box .depth1 > li + li:before { display: none; }
 .srch-detail .depth-box .depth1 + .depth1:before { display:none; }
 .srch-detail .depth-box > li:after { display: none; }
 .srch-detail .depth-box > li { flex-direction: column; }
 .srch-detail .depth-box > li { padding: 17px; }
-.srch-detail .depth-box .depth-col + .depth-col { margin-top:6px; }
+.srch-detail .depth-box .depth-col + .depth-col {margin-top:6px;}
 .srch-detail .depth-box .depth-row {display:table;;}
 .srch-detail .depth-box .depth-row .depth-tit {display:table-cell; font-size:14px; font-weight:var(--text-medium);}
 .srch-detail .depth-box .depth-row ul.depth1 > li {font-size:14px; font-weight:var(--text-regular);}
