@@ -565,7 +565,19 @@ button
 .h-radio-02 input[type="radio"]:focus + label { border-color:var(--blue-3); }
 .h-radio-02 input[type="radio"] + label:first-of-type { margin-left:0; border-radius:4px 0 0 4px; }
 .h-radio-02 input[type="radio"] + label:last-of-type { border-radius:0 4px 4px 0; border-right-width: 1px; }
-
+    /*동일디자인 - checkbox 버전*/
+    .h-radio-02>input[type="checkbox"] + label { display:inline-block; height:45px; line-height:44px; border:1px solid var(--border-basic-2); border-right-width: 0; font-size:var(--text-subtitle4); margin:0; padding:0 19px; margin-left:-5px; box-sizing:border-box; min-width:70px; text-align:center; position:relative; overflow:hidden; transition: all 0.5s; background:#fff; }
+    .h-radio-02>input[type="checkbox"] + label:before { content:""; position:absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background:var(--blue-3); border-radius: 100%; -webkit-transform: scale(0); transform: scale(0); -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+    .h-radio-02>input[type="checkbox"] + label:hover:before ,
+    .h-radio-02>input[type="checkbox"] + label:focus:before ,
+    .h-radio-02>input[type="checkbox"] + label:checked:before { -webkit-transform: scale(2); transform: scale(2); }
+    .h-radio-02>input[type="checkbox"] + label:hover { cursor:pointer; }
+    .h-radio-02>input[type="checkbox"]:checked + label { border-color: var(--blue-3); color: var(--blue-3); font-weight:var(--text-medium); }
+    .h-radio-02>input[type="checkbox"]:checked + label +input + label { border-left-color:var(--blue-3); }
+    .h-radio-02>input[type="checkbox"]:disabled + label { background:var(--border-basic-4); }
+    .h-radio-02>input[type="checkbox"]:focus + label { border-color:var(--blue-3); }
+    .h-radio-02>input[type="checkbox"] + label:first-of-type { margin-left:0; border-radius:4px 0 0 4px; }
+    .h-radio-02>input[type="checkbox"] + label:last-of-type { border-radius:0 4px 4px 0; border-right-width: 1px; }
 
 /* 03 체크형 */
 .h-radio-03 input[type="radio"] + label { text-align: center; transition: color 0.5s; -webkit-transition: color 0.5s; color: var(--grey-2); font-size:var(--text-subtitle4); position: relative; cursor:pointer; }
