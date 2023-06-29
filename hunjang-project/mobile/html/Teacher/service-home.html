@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/styleGuide.css">
   <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/popup.css">
   <link rel="stylesheet" href="../../css/academy-service.css">
   <link rel="stylesheet" href="../../css/resume-regist.css">
 
@@ -39,7 +40,7 @@
     <!-- // -->
 
     <!-- nav -->
-    <div class="nav">
+    <div class="nav"> <!-- 스크롤되면 여기에 fixed 클래스가 추가됩니다.! 참고 :  https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/f1b14aa8-7c85-4be3-9df0-8f32708dcced/specs/ -->
       <div class="swiper nav-swiper swiper-initialized swiper-horizontal">
         <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
           <div class="swiper-slide active swiper-slide-active" role="group" aria-label="1 / 12"><a href="">강사 홈</a></div>
@@ -57,6 +58,25 @@
         </div>
       <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
       <button type="button" class="btn-tgl-allmenu"></button>
+      <!-- 2) 전체메뉴 버튼 클릭시 보여지는 내용 -->
+      <div class="m_allmenu_popup" style="display:none;">
+        <div class="allmenupopTit">전체메뉴</div>
+        <a href="">강사 홈</a>
+        <a href="">이력서 등록</a>
+        <a href="">이력서 관리</a>
+        <a href="">지원현황</a>
+        <a href="">취업활동 증명서</a>
+        <a href="">추천 채용정보</a>
+        <a href="">이력서 매칭정보</a>
+        <a href="">스크랩 채용</a>
+        <a href="">관심학원</a>
+        <a href="">내 이력서 열람학원</a>
+        <a href="">연락처 공개요청 학원</a>
+        <a href="">나의 근로계약서 관리</a>
+        <a href="">파일 관리</a>
+        <a href="">알림 수신 설정</a>
+        <a href="">로그인 관리</a>
+      </div>
     </div>
     <!-- // -->
 
@@ -72,6 +92,17 @@
 
       <!-- content -->
       <div class="content h-teacher-main">
+
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+        컨텐츠 내용이 들어갑니다.<br><br><br><br><br><br><br>
+
+        
       </div>
 
 
@@ -112,6 +143,7 @@
 
         <button type="button" class="btn-tgl-footer">에듀베이션(주)</button>
 
+        <!-- 3) 에듀베이션(주) 버튼 클릭시 보여지는 내용 -->
         <ul class="address-info">
           <li><span class="blt-tit-dot h-txt-3">대표이사 : </span>방형식</li>
           <li><span class="blt-tit-dot h-txt-3">주소 : </span>(우: 08390) 서울 구로구 디지털로 26길 123 지플러스타워 9층 906호~908호</li>
@@ -135,7 +167,114 @@
 
 
 
+
+
+    <!-- 1) 사이드메뉴열기 -->
+    <div class="m-RmenutPop">
+      <div class="bg-greenbox">
+        <button type="button" class="service-mode">강사</button>
+
+          <!-- service-mode '강사' 버튼 클릭시 보여지는 항목 -->
+          <div class="h-m-popup popup-04"> 
+            <button type="button">학원</button>
+            <button type="button">강사</button>
+          </div>
+
+        <div class="myinfoBox">
+          <div class="myprofileImg">
+            <img src="data:image/jpeg;base64,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">
+          </div>
+          <div class="myprofileInfo">
+            <strong>홍길동</strong>
+            <ul>
+              <li><a href="">정보수정</a></li>
+              <li><a href="">비밀번호 변경</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="r-myMenuList">
+        <a href="javascript:void(0);" class="h-button-m h-button-white h-button-add wd100 m0"><i class="material-symbols-outlined vert-m">add_circle</i><span class="vert-m">이력서 등록</span></a>
+        <ul>
+          <li><a href="">이력서 관리</a></li>
+          <li><a href="">지원현황</a></li>
+          <li><a href="">취업활동 증명서</a></li>
+          <li><a href="">추천 채용정보</a></li>
+          <li><a href="">이력서 매칭정보</a></li>
+          <li><a href="">스크랩 채용</a></li>
+          <li><a href="">관심학원</a></li>
+          <li><a href="">내 이력서 열람학원</a></li>
+          <li><a href="">연락처 공개제의 학원</a></li>
+          <li><a href="">나의 근로계약서 관리</a></li>
+          <li><a href="">파일관리</a></li>
+
+        </ul>
+      </div>
+      <div class="btm-icobtnBox">
+        <div class="alarmSet">알림 수신 설정</div>
+        <div class="loginAdmin">로그인 관리</div>
+        <div class="logout">로그아웃</div>
+      </div>
+      <button type="button" class="close" title="팝업 닫기"></button>
+    </div>
+    <div class="lottie-bg" style="display:none;"></div>
+
+
   </div>
+
+
+
+
+
+  <script>
+    //  1) 사이드메뉴 열기
+    $( document ).ready( function() {
+        $( '.btn-allmenu' ).click( function() {
+          $('.m-RmenutPop').toggleClass("on");
+          $('.lottie-bg').css('display','inline-block');
+        } );
+    } );
+    //  1) 사이드메뉴 닫기
+    $( document ).ready( function() {
+        $( '.close' ).click( function() {
+          $('.m-RmenutPop').removeClass("on");
+          $('.lottie-bg').css('display','none');
+        } );
+    } );
+
+    //  1-1) 사이드메뉴의 '강사' 버튼 클릭시 보여지는 레이어팝업
+    $( document ).ready( function() {
+        $( '.service-mode' ).click( function() {
+          $('.popup-04').toggleClass("on");
+        } );
+    } );
+
+
+
+
+    //  2) 전체메뉴보기 버튼 누르면
+    $( document ).ready( function() {
+        $( '.btn-tgl-allmenu' ).click( function() {
+          $('.m_allmenu_popup').toggleClass("on");
+          $(this).toggleClass("on");
+        } );
+    } );
+
+
+
+    //  3) footer 에듀베이션 버튼 누르면
+    $( document ).ready( function() {
+        $( '.btn-tgl-footer' ).click( function() {
+          $(this).toggleClass("on");
+          $('.address-info').toggleClass("on");
+        } );
+    } );
+
+
+
+  </script>
+
+
 
 
 </body>
