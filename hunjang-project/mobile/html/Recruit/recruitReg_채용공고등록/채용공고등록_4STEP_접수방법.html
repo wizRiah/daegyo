@@ -23,202 +23,226 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <!-- 데이터피커 cdn -->
+  <link rel="stylesheet" href="../../../css/jquery-ui-1.12.1.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
 
   <div class="m-hunjang-wrap">
 
-    <!-- header -->
-    <header class="bc-gradient">
-      <div class="location">
-        <ul class="top-nav">
-          <li>STEP 1</li>
-          <li>STEP 2</li>
-          <li>STEP 3</li>
-          <li class="active">STEP 4</li>
-          <li>STEP 5</li>
-        </ul>
-        <span class="flex"><a href="" class="arrowBtn"></a>접수방법은 어떻게 되나요?</span>
-      </div>
-    </header>
-    <!-- // -->
-
-
-
     <!-- container -->
     <div class="container">
+
 
       <!-- content -->
       <div class="content recruitReg-cont">
 
-        <!-- 접수기간 -->
-        <div class="basic-box">
-          <p class="labelArea">접수기간<span class="h-txt-orange ml5">*</span></p>
-          <div class="h-radio-02 squareBtn">
-            <input type="radio" id="hradio02_1" name="hradio02">
-            <label for="hradio02_1">1개월</label>
-            <input type="radio" id="hradio02_2" name="hradio02">
-            <label for="hradio02_2">2개월</label>
-            <input type="radio" id="hradio02_3" name="hradio02">
-            <label for="hradio02_3">3개월</label>
-            <input type="radio" id="hradio02_4" name="hradio02">
-            <label for="hradio02_4">상시채용</label>
+        <div class="header-gradient">
+          <div class="location">
+            <ul class="top-nav">
+              <li>STEP 1</li>
+              <li>STEP 2</li>
+              <li>STEP 3</li>
+              <li class="active">STEP 4</li>
+              <li>STEP 5</li>
+            </ul>
+            <span class="flex"><a href="" class="arrowBtn"></a>접수방법은 어떻게 되나요?</span>
           </div>
+        </div>
 
-          <div>
-            <p class="labelArea">접수 시작일/마감일</p>
-            <div class="h-txtfield-inner">
-              <select name="" id="" class="min-wd100px mr5">
-                <option value="" disabled="" selected="">연봉</option>
-                <option value="">월급</option>
-              </select>
-              <div class="unit-wrap wd100">
-                <input type="text" placeholder="금액 입력 (숫자만)" disabled="">
-                <span class="unit-txt">만원</span>
+        <!-- body -->
+        <div class="content-inner">
+
+          <!-- 접수기간 -->
+          <div class="basic-box">
+            <p class="labelArea">접수기간<span class="h-txt-orange ml5">*</span></p>
+            <div class="h-radio-02 squareBtn">
+              <input type="radio" id="hradio02_1" name="hradio02">
+              <label for="hradio02_1">1개월</label>
+              <input type="radio" id="hradio02_2" name="hradio02">
+              <label for="hradio02_2">2개월</label>
+              <input type="radio" id="hradio02_3" name="hradio02">
+              <label for="hradio02_3">3개월</label>
+              <input type="radio" id="hradio02_4" name="hradio02">
+              <label for="hradio02_4">상시채용</label>
+            </div>
+            <!-- 접수시작일 마감일 -->
+            <div class="mt25">
+              <p class="labelArea h-txt-5">접수 시작일/마감일</p>
+              <ul class="h-txtfield-inner flex-wrap">
+                <li class="date-picker wd100">
+                  <input type="text" id="datepickerStart" class="datePicker width-180" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">09:00</option>
+                  </select>
+                </li>
+                <li class="date-picker wd100 mt5">
+                  <input type="text" id="datepickerStart" class="datePicker width-180" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">09:00</option>
+                  </select>
+                </li>
+              </ul>
+
+              <div class="h-checkbox checkbox01">
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">채용 시 마감</label>
               </div>
+
             </div>
           </div>
 
-        </div>
 
+          <!-- 접수방법 -->
+          <div class="basic-box">
+            <p class="labelArea">접수방법<span class="h-txt-orange ml5">*</span></p>
+            <div class="h-checkbox checkbox01">
+              <input type="checkbox" name="checkForm2" id="check02">
+              <label for="check02" class="text-subtitle4 ml15">훈장마을 온라인 접수</label>
+            </div>
 
-        <!-- 근무지 주소 -->
-        <div class="basic-box">
-          <p class="labelArea">근무지 주소<span class="h-txt-orange ml5">*</span></p>
-          <select name="" id="" class="min-wd125px mr5">
-            <option value="" selected="">국내</option>
-            <option value="">해외</option>
-          </select>
-          <input type="text" placeholder="주소 입력" class="mt10">
-          <div class="keyword-delwrap mt10">
-            <input type="text" placeholder="상세 주소 입력">
-            <button class="keyword-del"></button>
+            <div class="blue-box onlytxt mt10">
+              <p class="h-txt-3 text-subtitle6">훈장마을 온라인 접수를 이용하시면 서류 심사, 입사지원자 관리, 면접 관리 등 채용 절차와 관련한 기능을 편리하게 이용하실 수 있습니다.</p>
+            </div>
+
+            <ul class="h-checkbox checkbox01">
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">우편 접수</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">방문 접수</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">전화 접수</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">FAX 접수</label>
+              </li>
+            </ul>
+
+            <!-- FAX 접수 선택시 번호 입력 폼 노출 -->
+            <input type="text" class="mt10">
+
           </div>
-          <div class="h-checkbox checkbox01">
-            <input type="checkbox" name="checkForm2" id="check02">
-            <label for="check02" class="text-subtitle4">재택근무 가능</label>
+
+
+          <!-- 지원서 -->
+          <div class="basic-box">
+            <p class="labelArea">지원서<span class="h-txt-orange">*</span></p>
+            <ul class="h-checkbox checkbox01">
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">훈장마을 이력서</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkForm2" id="check02">
+                <label for="check02" class="text-subtitle4">자사양식</label>
+              </li>
+            </ul>
+            <button type="button" class="circle-plusBtn mt10">파일 업로드</button>
+            <div class="bg-file-box">
+              <span class="h-txt-3 txt-ellipsis">탁동일수학학원_입사지원서.hwp</span>
+              <button type="button" class="h-button-icon h-button-nobg h-button-del "><i class="material-symbols-outlined vert-m">delete</i></button>
+            </div>
+            <div class="bg-file-box">
+              <span class="h-txt-3 txt-ellipsis">탁동일수학학원_입사지원서.hwp</span>
+              <button type="button" class="h-button-icon h-button-nobg h-button-del "><i class="material-symbols-outlined vert-m">delete</i></button>
+            </div>
+
+            <!-- 제출서류 -->
+            <div class="lineadd-wrap mt20 pt25">
+              <p class="labelArea">제출서류</p>
+              <div class="keyword-delwrap mt10">
+                <input type="text" placeholder="상세 주소 입력">
+                <button class="keyword-del"></button>
+              </div>
+              <p class="h-txt-5 text-subtitle6 mt10">입사 전, 입사 후 지원자가 제출 해야할 서류를 직접 입력해 주세요.</p>
+            </div>
+
+            <!-- 참고자료 -->
+            <div class="lineadd-wrap mt20 pt25">
+              <p class="labelArea">참고자료</p>
+              <button type="button" class="circle-plusBtn mt10">파일 업로드</button>
+              <p class="h-txt-5 text-subtitle6 mt10 mb10">입사 전, 입사 후 지원자가 제출 해야할 서류를 직접 입력해 주세요.</p>
+
+              <div class="bg-file-box">
+                <span class="h-txt-3 txt-ellipsis">탁동일수학학원_소개서.pptx</span>
+                <button type="button" class="h-button-icon h-button-nobg h-button-del "><i class="material-symbols-outlined vert-m">delete</i></button>
+              </div>
+              <div class="bg-file-box">
+                <span class="h-txt-3 txt-ellipsis">우동국영어학원_예비고1_특강_브로슈어.pdf</span>
+                <button type="button" class="h-button-icon h-button-nobg h-button-del "><i class="material-symbols-outlined vert-m">delete</i></button>
+              </div>
+
+            </div>
+
           </div>
-        </div>
 
-        <!-- 근무지역 -->
-        <div class="basic-box">
-          <p class="labelArea">근무지역<span class="h-txt-orange ml5">*</span></p>
-          <ul class="blt-depth-area mt10">
-            <li class="flex">
-              <span class="depth-tit">서울<button type="button" class="btn-close-xs"></button></span>
-              <ul class="depth-in">
-                <li>구로구<button type="button" class="btn-close-xs"></button></li>
-                <li>금천구<button type="button" class="btn-close-xs"></button></li>
-                <li>영등포구<button type="button" class="btn-close-xs"></button></li>
-                <li>관악구<button type="button" class="btn-close-xs"></button></li>
-              </ul>
-            </li>
 
-            <li class="flex">
-              <span class="depth-tit">경기<button type="button" class="area-close"></button></span>
-              <ul class="depth-in">
-                <li>고양시 일산서구<button type="button" class="area-close"></button></li>
-                <li>김포시<button type="button" class="area-close"></button></li>
-                <li>고양시 일산동구<button type="button" class="area-close"></button></li>
-              </ul>
-            </li>
-          </ul>
+          <!-- 전형절차 -->
+          <div class="basic-box inp-minus-box">
+            <p class="labelArea">전형절차<span class="h-txt-orange ml5">*</span></p>
+            <ul class="flex flex-column">
+              <li class="btn-minus-box">
+                <div>
+                  <span class="text-subtitle4 h-txt-5">1차.</span>
+                  <input type="text" value="서류전형">
+                </div>
+              </li>
+              <li class="btn-minus-box">
+                <div>
+                  <span class="text-subtitle4 h-txt-5">2차.</span>
+                  <input type="text" value="면접전형">
+                </div>
+                <button class="h-btn-minus"></button>
+              </li>
+              <li class="btn-minus-box">
+                <div>
+                  <span class="text-subtitle4 h-txt-5">3차.</span>
+                  <input type="text" value="시강">
+                </div>
+                <button class="h-btn-minus"></button>
+              </li>
+              <li class="btn-minus-box">
+                <div>
+                  <span class="text-subtitle4 h-txt-5">4차.</span>
+                  <input type="text" placeholder="전형명을 입력해 주세요">
+                </div>
+                <button class="h-btn-minus"></button>
+              </li>
+            </ul>
 
-          <div class="lineadd-wrap mt20">
-            <button type="button" class="h-button-xs h-btn-onlyplus">근무지역 추가</button>
+            <button type="button" class="h-button-xs h-btn-onlyplus">전형절차 추가</button>
+
+            <div class="btn-minus-box justify-start mt10">
+              <span class="text-subtitle4 h-txt-5">1차.</span>
+              <input type="text" value="서류전형">
+            </div>
           </div>
-        </div>
 
-        <!-- 인근 지하철 -->
-        <div class="basic-box">
-          <button type="button" class="h-btn-close"></button>
-          <p class="labelArea">인근 지하철</p>
 
-          <ul class="depth-btn-wrap">
-            <li>
-              <div class="subway-box">
-                <p class="h-subway busan line-2">2호선</p>
-                <span class="h-txt-1">구로디지털단지</span>
-                <p class="h-txt-3 text-subtitle4">2번 출구 100m (도보 1분)</p>
-              </div>
-              <button class="h-btn-minus"></button>
-            </li>
-            <li>
-              <div class="subway-box">
-                <p class="h-subway busan line-2">2호선</p>
-                <span class="h-txt-1">동대문역사문화공원</span>
-                <p class="h-txt-3 text-subtitle4">2번 출구 100m (도보 1분)</p>
-              </div>
-              <button class="h-btn-minus"></button>
-            </li>
-            <li>
-              <div class="subway-box">
-                <p class="h-subway seoul line-si">수인분당</p>
-                <span class="h-txt-1">남동인더스파크</span>
-                <p class="h-txt-3 text-subtitle4">5번 출구 500m (도보 10분)</p>
-              </div>
-              <button class="h-btn-minus"></button>
-            </li>
-          </ul>
+          <!-- 채용제목 -->
+          <div class="basic-box">
+            <p class="labelArea">채용제목<span class="h-txt-orange">*</span></p>
+            <div class="resume-title">
+              <input type="text" placeholder="채용 제목을 입력해 주세요" class="h-txtfield-basic h-txtfield-shadow">
+              <button class="keyword-del"></button>
+            </div>
+          </div>
 
-          <button type="button" class="h-button-xs h-btn-onlyplus">근무지역 추가</button>
-        </div>
 
-        <!-- 근무요일 수 -->
-        <div class="basic-box">
-          <button type="button" class="h-btn-close"></button>
-          <p class="labelArea">근무요일 수</p>
-
-          <div class="radio-half-box mt15">
-          <ul class="h-radio-01">
-            <li>
-              <input type="radio" id="hradio01_1" name="hradio01" checked="">
-              <label for="hradio01_1"><span class="rchk"></span><span>월~일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_2" name="hradio01" checked="">
-              <label for="hradio01_2"><span class="rchk"></span><span>월~토</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_3" name="hradio01" checked="">
-              <label for="hradio01_3"><span class="rchk"></span><span>월~금</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_4" name="hradio01" checked="">
-              <label for="hradio01_4"><span class="rchk"></span><span>주말(토,일)</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_5" name="hradio01" checked="">
-              <label for="hradio01_5"><span class="rchk"></span><span>주6일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_6" name="hradio01" checked="">
-              <label for="hradio01_6"><span class="rchk"></span><span>주5일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_7" name="hradio01" checked="">
-              <label for="hradio01_7"><span class="rchk"></span><span>주4일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_8" name="hradio01" checked="">
-              <label for="hradio01_8"><span class="rchk"></span><span>주3일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_9" name="hradio01" checked="">
-              <label for="hradio01_9"><span class="rchk"></span><span>주2일</span></label>
-            </li>
-            <li>
-              <input type="radio" id="hradio01_10" name="hradio01" checked="">
-              <label for="hradio01_10"><span class="rchk"></span><span>주1일</span></label>
-            </li>
-          </ul>
-        </div>
 
 
         </div>
-
-
+        <!-- //body -->
 
       </div>
 
@@ -235,7 +259,7 @@
 
     <div class="fixed-bottom">
       <ul class="bc-teal">
-        <li class="wd80"><button class="h-button-prev">이전 단계</button></li>
+        <li><button class="h-button-prev">이전 단계</button></li>
         <li><button class="h-button-teal">다음 단계</button></li>
       </ul>
     </div>
@@ -246,6 +270,30 @@
 
 
   </div>
+
+  <script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy-mm-dd',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+      monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      showMonthAfterYear: true,
+      yearSuffix: '.',
+      showMonthAfterYear: true,
+      showOn: "button",
+      buttonImage: "../../../images/btn_calendar.svg",
+      buttonImageOnly: true,
+      minDate: 0,
+    });
+
+    $(function() {
+      $("#datepickerStart, #datepickerEnd").datepicker();
+    });
+  </script>
 
 
 </body>

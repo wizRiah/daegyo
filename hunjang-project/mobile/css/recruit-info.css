@@ -4,14 +4,14 @@
 .h-button-copy {background:var(--grey-2);}
 .h-button-copy.h-button-off {background:var(--grey-4)}
 
-
-.recruitReg-cont {padding:20px 20px 185px!important; background:var(--neutral-3);}
-
 /* 채용공고 최상단 네비 */
-header.bc-gradient {height:100px; background-image: linear-gradient(to right, #26B2C8 0%, #43A986 100%);}
-header.bc-gradient .location {flex-direction: column; color:#fff;}
-header.bc-gradient .location a {color:#fff; font-size:var(--text-subtitle1);}
-header.bc-gradient .location .arrowBtn:before {position: absolute; left: 20px; background:url('../images/mobile/m_arrow_left_white.png') no-repeat;}
+.header-gradient {display: flex; align-items: center; justify-content: space-between; min-height:54px; margin:0 -20px 20px; /*height:100px;*/ padding:23px 0; background-image: linear-gradient(to right, #26B2C8 0%, #43A986 100%);}
+.header-gradient .location {display:flex;align-items:center; width: 100%; font-size:var(--text-subtitle1); flex-direction: column; color:#fff;}
+.header-gradient .location span {display:flex; align-items: center; color:#fff; font-size:var(--text-subtitle1);}
+.header-gradient .location .arrowBtn {position: absolute; left: 20px; background:url('../images/mobile/m_arrow_left_white.png') no-repeat; width:22px; height:16px;}
+
+.recruitReg-cont {padding:0 20px 185px!important; background:var(--neutral-3);}
+.recruitReg-cont .resume-title .h-txtfield-basic {height:46px!important; padding:0 15px!important;}
 
 .top-nav {display: flex; justify-content: center; width:100%; margin-bottom:10px;}
 .top-nav li {position:relative; display: flex; align-items: center; padding:0 10px; height:23px; font-size:var(--text-subtitle7); opacity: 0.5; box-sizing: border-box;}
@@ -24,13 +24,9 @@ header.bc-gradient .location .arrowBtn:before {position: absolute; left: 20px; b
 /* 채용공고등록 1STEP 모집부문 */
 .step-box > li + li  {margin-top:25px; padding-bottom: 25px; border-bottom:1px solid var(--neutral-2);}
 .step-box > li:first-child + li {border:0; padding-bottom:0;}
-.step-box .resume-title .h-txtfield-basic {padding:0 15px!important;}
-.step-box .resume-title .h-txtfield-basic {height:46px!important;}
 .step-box .h-resume-title {font-size:var(--text-subtitle6);}
-
 .step-box .h-checkbox.checkbox01 input[type="checkbox"] + label {display: inline-block; height: 24px; line-height: 24px; font-size:var(--text-subtitle4);}
 .step-box .h-checkbox.checkbox01 {display: flex; flex-direction: column; margin:15px 0 0 15px;}
-.step-box .h-checkbox.checkbox01 li + li {margin-top:15px;}
 .step-box .h-radio-01 {margin-top:15px; margin-left:0;}
 .step-box .h-radio-01 li + li {margin:15px 0 0;}
 .step-box .h-radio-01 input[type="radio"] + label {line-height:24px; height:24px; margin:0 0 0 15px;}
@@ -53,6 +49,7 @@ header.bc-gradient .location .arrowBtn:before {position: absolute; left: 20px; b
 
 /* 채용공고등록의 blue-box */
 .recruitReg-cont .blue-box {background:var(--neutral-3);}
+.recruitReg-cont .blue-box.onlytxt {padding:15px;}
 .h-radio-01 .blue-box .labelArea {padding-left:0; color:var(--black-5);}
 .h-radio-01 .blue-box .labelArea:before {display:none;}
 .h-radio-01 .blue-box .h-checkbox.checkbox01 {margin:0;}
@@ -60,12 +57,12 @@ header.bc-gradient .location .arrowBtn:before {position: absolute; left: 20px; b
 .h-radio-01 .blue-box {margin-top:15px;}
 
 /* 과목 뎁스 */
-.depth-btn-wrap {display:flex; flex-direction: column;}
-.depth-btn-wrap li {display:flex; align-items: center; justify-content: space-between; /*height:46px;*/ padding:12px 15px; border:1px solid var(--border-basic-3); border-radius: 4px;}
-.depth-btn-wrap li + li {margin-top:4px;}
-.depth-btn-wrap span {font-size:var(--text-subtitle4);}
-.depth-btn-wrap span + span {position:relative; padding-left: 15px;}
-.depth-btn-wrap span + span:after {position:absolute; content:'>'; top:0; left:2px; color:var(--black-6); font-size:14px;}
+/* .depth-btn-wrap {display:flex; flex-direction: column;} */
+.btn-minus-box {display:flex; align-items: center; justify-content: space-between; /*height:46px;*/ padding:12px 15px; border:1px solid var(--border-basic-3); border-radius: 4px;}
+.btn-minus-box + .btn-minus-box {margin-top:4px;}
+.btn-minus-box span {font-size:var(--text-subtitle4);}
+.btn-minus-box span + span {position:relative; padding-left: 15px;}
+.btn-minus-box span + span:after {position:absolute; content:'>'; top:0; left:2px; color:var(--black-6); font-size:14px;}
 
 .h-btn-minus {position:relative; top:0; display:inline-block; border:2px solid var(--border-basic-2); border-radius:50%; width:20px; height:20px;}
 .h-btn-minus:after {content:''; display:block; width:10px; height:2px; margin:0 auto; background:var(--border-basic-2);}
@@ -81,6 +78,9 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 .recruitReg-cont .basic-box {position:relative;}
 .recruitReg-cont .h-checkbox.checkbox01 {margin:10px 0 0;}
+.recruitReg-cont ul.h-checkbox.checkbox01 input[type="checkbox"] + label {margin-left:15px;}
+.recruitReg-cont ul.h-checkbox.checkbox01 li + li {margin-top:15px;}
+
 .h-btn-close {position:absolute; top:15px; right:15px; width:12px; height:12px; line-height:12px;}
 .h-btn-close:after {content:''; display:inline-block; width:12px; height:12px; background:url('../images/close_btn.svg') no-repeat center; background-size:cover;}
 
@@ -105,10 +105,56 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .blt-depth-area .btn-close-xs {display:inline-block; margin-left:7px; background:url('../images/icon-btn-close.png') no-repeat center; width:8px; height:8px; background-size:cover; vertical-align: 1px;}
 
 /* 인근 지하철 */
-.depth-btn-wrap .subway-box + .h-btn-minus {top:-10px;}
+.btn-minus-box .subway-box + .h-btn-minus {top:-10px;}
 
 /* 근무요일 수 */
 .radio-half-box .h-radio-01 input[type="radio"] + label {margin:0; line-height: 25px;}
 .radio-half-box .h-radio-01 {display: flex; flex-wrap: wrap; gap: 15px; margin-left:15px;}
 .radio-half-box .h-radio-01 li {display:flex; width:40%;}
 .radio-half-box .h-radio-01 li + li {margin-left:0;}
+
+/* 업로드된 파일 */
+.circle-plusBtn + .bg-file-box {margin-top:10px;}
+.bg-file-box {display: flex; align-items: center; justify-content: space-between; height:46px; padding:0 15px; background:var(--neutral-3); border-radius: 4px;}
+.bg-file-box + .bg-file-box {margin-top:5px;}
+.bg-file-box span {font-size:var(--text-subtitle5);}
+.bg-file-box .h-button-icon {width:auto; height:auto; margin:0;}
+
+/* 전형절차 안에 input txt */
+.inp-minus-box .btn-minus-box input[type="text"] {width:auto; height:24px; border:0;}
+.inp-minus-box .btn-minus-box {padding:10px 15px;}
+/* .inp-minus-box .btn-minus-box:not(button) {justify-content: flex-start!important;} */
+
+/* 키워드 검색 안에 keyword-del + 버튼 */
+.keyword-delwrap input[type="text"]:only-child {padding:0 15px;}
+.keyword-innerbtn {position:absolute; top:8px; right:8px; margin:0;}
+.keyword-innerbtn + .keyword-del {right:80px;}
+
+
+
+/* ========================== 서비스 신청 ======================= */
+.header-gradient .top-title {position:relative; width:100%; height:100%; margin:0 20px; padding:20px; border-radius:10px 10px 0 0; background:var(--neutral-3); box-sizing: border-box;}
+.header-gradient .top-title:after {content:''; position:absolute; bottom:0; left: 50%; width: calc(100% - 40px); height: 1px; background: #e0e6ef; transform: translateX(-50%);}
+.header-gradient .top-title .btxt {font-size:var(--text-subtitle6); font-weight:var(--text-medium);}
+.header-gradient .top-title .stxt {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; line-height: 1.3em; height: 2.6em;}
+
+.gradient-basic {flex-wrap:wrap; padding:0;}
+.gradient-basic .location {display:block; padding:17px 0;}
+.gradient-basic .location span {margin-left:55px;}
+
+.basic-box .date-picker {min-width:auto;}
+.basic-box .strong-tit strong {font-size:var(--text-subtitle3); color:var(--black-1); font-weight:var(--text-bold);}
+.basic-box .strong-tit span {font-size:var(--text-subtitle6); color:var(--black-3); }
+
+.checkbox07 {}
+.checkbox07 input[type="checkbox"] + label {position:relative; z-index:0; display:inline-flex; justify-content:center; align-items:center; height:46px; font-size:var(--text-subtitle4); color:var( --black-2); padding:15px 20px 15px 45px; background-color:#fff; border:1px solid var(--border-basic-2); border-radius:4px; box-sizing:border-box;}
+.checkbox07 input[type="checkbox"] + label::before {position:absolute; top:12px; left:20px; font-family:'Material Icons'; content:'check_circle_outline'; width:18px; height:18px; font-style:normal; font-size:22px; color:var(--grey-1);}
+.checkbox07 input[type="checkbox"]:checked + label,
+.checkbox07 input[type="checkbox"]:checked + label::before {border-color:var(--blue-3); color:var(--blue-3);}
+.checkbox07.bg-cyan input[type="checkbox"] + label {padding-left:43px;}
+.checkbox07.bg-cyan input[type="checkbox"] + label::before {left:16px;}
+.checkbox07.bg-cyan input[type="checkbox"]:checked + label,
+.checkbox07.bg-cyan input[type="checkbox"]:checked + label::before {color:#fff; background:var(--cyan2); border-color:var(--cyan2);}
+
+
+
