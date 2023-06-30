@@ -15,13 +15,13 @@ header .location .arrowBtn {display: flex; align-items: center;}
 header .location .arrowBtn:before {content:''; display:inline-block; margin-right:10px; width:20px; height:16px;}
 header .location .closeBtn:before {content:''; display:inline-block; margin-right:10px; width:14px; height:14px;}
 header .location a {display: flex; align-items: center; font-weight:var(--text-medium);}
-header .location a.toplogoBtn {font-size:18px; color:#ffffff;}
+header .location a.toplogoBtn {font-size:var(--text-subtitle1); color:#ffffff;}
 header .location a.toplogoBtn:before {content:""; width:30px; height:23px; display:inline-block; background:url(../images/mobile/m_icon_h-logo.png); vertical-align: middle; margin-right: 10px;}
 
 .m-hunjang-wrap {height: 100vh;display: flex; flex-direction: column; justify-content: space-between;}
 .m-hunjang-wrap header { display: flex; align-items: center; justify-content: space-between; border-bottom:1px solid var(--neutral-2); min-height:54px; padding:0 20px;} 
 .m-hunjang-wrap header .location {display:flex;align-items:center;justify-content: flex-start;width: 100%;/*color:#fff;*/font-size:var(--text-subtitle1);} 
-.m-hunjang-wrap header .location .tit {margin-left: 10px; color: #fff; font-size: 18px;}
+.m-hunjang-wrap header .location .tit {margin-left: 10px; color: #fff; font-size:var(--text-subtitle1);}
 .m-hunjang-wrap header .btn-allmenu { display:flex; } 
 
 .nav { display:flex; border-bottom:1px solid var(--neutral-2); height:48px; background:#fff; box-sizing:border-box; position:relative;} 
@@ -34,7 +34,7 @@ header .location a.toplogoBtn:before {content:""; width:30px; height:23px; displ
 .nav .nav-swiper .swiper-slide.active a { position:relative; color:var(--teal); font-weight:var(--text-medium); } 
 .nav .nav-swiper .swiper-slide.active a:after { content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--teal); } 
 
-.m-hunjang-wrap footer { /*position:fixed;*/ width:100%; padding-bottom:70px; bottom:64px; background:#fff; } 
+.m-hunjang-wrap footer { /*position:fixed;*/ width:100%; padding-bottom:70px; bottom:64px; background:#fff; z-index:2;} 
 .m-hunjang-wrap footer .mypage-info {box-sizing:border-box;display:flex;justify-content: center;align-items: center;height:45px;padding: 0px 25px;border-top:1px solid var(--border-basic-3);border-bottom:1px solid var(--border-basic-3);background:var(--neutral-2);font-size:var(--text-subtitle6);} 
 .m-hunjang-wrap footer .mypage-info li { display:flex; position:relative; } 
 .m-hunjang-wrap footer .mypage-info li + li { margin-left:22px; padding-left:22px; } 
@@ -62,40 +62,40 @@ header .location a.toplogoBtn:before {content:""; width:30px; height:23px; displ
     /*전체메뉴 펼침시*/
     .m_allmenu_popup {top:48px; z-index:1; padding:12px 12px 5px; display:flex; flex-wrap:wrap; position:absolute; background:#fff; width:100%; box-sizing:border-box; box-shadow:0px 3px 10px #00000008;}
     .m_allmenu_popup.on {display:flex !important;}
-    .m_allmenu_popup .allmenupopTit {font-size:15px; font-weight:500; color:#003333; padding:15px 20px; widtH:calc(100% - 52px); position: absolute; left: 0; top: -49px; background: #fff; box-sizing: border-box;}
-    .m_allmenu_popup a {border-radius:4px; background:#F5F7FA; border:1px solid #E0E6EF; font-size:14px; padding:11px 20px; margin:0 7px 7px 0;}
+    .m_allmenu_popup .allmenupopTit {font-size:var(--text-subtitle3); font-weight:var(--text-medium); color:#003333; padding:15px 20px; widtH:calc(100% - 52px); position: absolute; left: 0; top: -49px; background: #fff; box-sizing: border-box;}
+    .m_allmenu_popup a {border-radius:4px; background:var(--neutral-3); border:1px solid var(--border-basic-3); font-size:var(--text-subtitle4); padding:11px 20px; margin:0 7px 7px 0;}
     /*사이드메뉴*/
     .m-RmenutPop {/*display:none;*/ width: calc(100% - 60px);height: 100vh;position: fixed;top: 0;right:-100%;background: #fff; flex-direction: column;justify-content: space-between;z-index: 999; transition: right 0.5s;}
     .m-RmenutPop.on {display:flex; right:0;}
-    .m-RmenutPop .bg-greenbox {background:#43A986;padding: 12px 12px 20px;}
-    .m-RmenutPop .bg-greenbox .service-mode {height:30px;border-radius:30px;border:1px solid #FFFFFF4D;color:#ffffff;font-size:13px;background:transparent;width: auto;min-width: auto;padding: 0 30px 0 10px; position: relative;}
+    .m-RmenutPop .bg-greenbox {background:var(--teal);padding: 12px 12px 20px;}
+    .m-RmenutPop .bg-greenbox .service-mode {height:30px;border-radius:30px;border:1px solid #FFFFFF4D;color:#ffffff;font-size:var(--text-subtitle5);background:transparent;width: auto;min-width: auto;padding: 0 30px 0 10px; position: relative;}
     .m-RmenutPop .bg-greenbox .service-mode:after {content: ""; width: 8px; height: 8px; display: inline-block; background: url(../images/mobile/m_arrow_down_white.png) no-repeat; background-size: 100%; transition: transform 0.5s; position: absolute; right: 11px; top: 44%;}
     .m-RmenutPop .bg-greenbox .service-mode.on:after {transform:rotate(180deg); margin-top: -3px;}
     .m-RmenutPop .bg-greenbox .popup-04 {display: none; flex-direction: column;top: 44px; border-radius: 6px; padding: 10px 0;}
     .m-RmenutPop .bg-greenbox .popup-04.on {display:flex;}
-    .m-RmenutPop .bg-greenbox .popup-04 button {font-size:14px; color:#7e7e7e; line-height:16px; padding:8px 20px;}
+    .m-RmenutPop .bg-greenbox .popup-04 button {font-size:var(--text-subtitle4); color:var(--black-3); line-height:16px; padding:8px 20px;}
     .m-RmenutPop .bg-greenbox .myinfoBox {display: flex; margin-top: 15px; padding-left: 18px; align-items: center;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileImg {width:67px; height:67px; border-radius:100%; overflow:hidden;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileImg img {width: 100%;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo {padding-left: 15px; flex-grow: 2;}
-    .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo strong {font-size: 18px; color: #fff; line-height: 21px; font-weight: 500; margin-bottom: 10px;}
+    .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo strong {font-size:var(--text-subtitle1); color: #fff; line-height: 21px; font-weight:var(--text-medium); margin-bottom: 10px;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul {display: flex; flex-direction: row; margin-top: 7px;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul li {margin-right: 12px;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul li:after {content:"";width:1px;height:13px;display:inline-block;border-right: 1px solid #FFFFFF33;vertical-align: middle;}
     .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul li:last-child:after {display:none;}
-    .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul li a {color: #fff; font-size: 12px; line-height: 15px; padding-right: 12px;}
+    .m-RmenutPop .bg-greenbox .myinfoBox .myprofileInfo ul li a {color: #fff; font-size:var(--text-subtitle6); line-height: 15px; padding-right: 12px;}
     .m-RmenutPop .r-myMenuList {flex-grow: 3; padding: 20px; box-sizing: border-box; overflow-y: scroll; max-height: calc(100% - 216px);}
-    .m-RmenutPop .r-myMenuList .h-button-add {font-size: 15px; font-weight: 500;}
+    .m-RmenutPop .r-myMenuList .h-button-add {font-size:var(--text-subtitle3); font-weight:var(--text-medium);}
     .m-RmenutPop .r-myMenuList ul {padding: 10px 0 0;}
     .m-RmenutPop .r-myMenuList ul li {padding: 10px;}
-    .m-RmenutPop .r-myMenuList ul li a {font-size:15px; color:#333333;}
-    .m-RmenutPop .btm-icobtnBox {display: flex; height: 72px; color: #8B8B8B; border-top: 1px solid #F5F7FA;}
-    .m-RmenutPop .btm-icobtnBox div {font-size:12px;width:33.333%;text-align:center;display: flex;align-items: center;justify-content: center;flex-direction: column;border-right: 1px solid #F5F7FA;}
+    .m-RmenutPop .r-myMenuList ul li a {font-size:var(--text-subtitle3); color:var(--black-2);}
+    .m-RmenutPop .btm-icobtnBox {display: flex; height: 72px; color: var(--black-4); border-top: 1px solid var(--neutral-3);}
+    .m-RmenutPop .btm-icobtnBox div {font-size:var(--text-subtitle6);width:33.333%;text-align:center;display: flex;align-items: center;justify-content: center;flex-direction: column;border-right: 1px solid var(--neutral-3);}
     .m-RmenutPop .btm-icobtnBox div:before {content:"";width: 22px;height: 22px;margin-bottom: 6px;background:url(../images/mobile/btm-icobtnBox.png);background-size: 22px;}
     .m-RmenutPop .btm-icobtnBox .alarmSet:before   {}
     .m-RmenutPop .btm-icobtnBox .loginAdmin:before {background-position-y:-22px;}
     .m-RmenutPop .btm-icobtnBox .logout:before     {background-position-y:-44px;}
-    .m-RmenutPop .btm-icobtnBox .logout {background: #F5F7FA;color: #333333;border-right: none;}
+    .m-RmenutPop .btm-icobtnBox .logout {background: var(--neutral-3);color: var(--black-2);border-right: none;}
     .m-RmenutPop .close {position: absolute;right: 10px;top: 10px;background: url(../images/mobile/m_arrow_close_white.png) no-repeat center;background-size: 14px;z-index: 999;width: 30px;height: 30px;}
 
 
@@ -114,7 +114,7 @@ header .location a.toplogoBtn:before {content:""; width:30px; height:23px; displ
 
 /* 최상단이동 이전버튼 홈버튼 등등 fixed 버튼 */
 .quick-btmBtn {}
-.fixedBtn {display:flex;justify-content: center;align-items: center;position:fixed;bottom:80px;width:44px;height:44px;background: #FFFFFF;border:1px solid #E0E6EF;border-radius:50%;box-sizing:border-box; z-index: 1;}
+.fixedBtn {display:flex;justify-content: center;align-items: center;position:fixed;bottom:80px;width:44px;height:44px;background: #FFFFFF;border:1px solid var(--border-basic-3);border-radius:50%;box-sizing:border-box; z-index: 1;}
 .topBtn.fixedBtn {right:15px;}
 .homeBtn.fixedBtn {left:63px;}
 .prevBtn.fixedBtn {left:15px;}
@@ -138,7 +138,7 @@ header .location a.toplogoBtn:before {content:""; width:30px; height:23px; displ
 .m-hunjang-wrap .container {/*padding-bottom:160px;*/ /* background:var(--neutral-3);*/ flex-grow: 4;} 
 .m-hunjang-wrap .content {padding:20px 20px 0;}
 .m-hunjang-wrap .content.white-nopadding {background:#fff; padding:0;}
-.m-hunjang-wrap .content.bg-lightgrey {background:#F5F7FA;}
+.m-hunjang-wrap .content.bg-lightgrey {background:var(--neutral-3);}
 
 .m-hunjang-wrap input[type="text"] {padding:0 15px;}
 .m-hunjang-wrap select {padding:0 15px;}

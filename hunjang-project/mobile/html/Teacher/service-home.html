@@ -95,143 +95,368 @@
 
 
         
-        <div class="list-topBox">
+        <div class="m-academy-home">
           
-          <div class="tit">
-            <strong>이력서 관리</strong>
-            <a href="이력서 관리안내_pop.html" class="i-guideBtn"><img src="../../images/mobile/i-guideBtn.svg"></a>
-          </div>
-          
-          <div class="bluebgBox myresumeInfoBox myResmeAdmin">
-            <div class="flex flex-between">
-              <div class="left-box">
-                <div class="dl">
-                  <div class="dt">최근 수정일 : </div>
-                  <div class="dd">2022.05.12</div>
-                  <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i class="fa fa-refresh" aria-hidden="true"></i><span>오늘 날짜로 업데이트</span></a>
+          <!-- 1. 상단 개인정보 -->
+          <div class="myresumeInfoBox myResmeAdmin">
+            <div class="tch-prfile">
+              <div class="timgbox">
+                <img src="https://i.namu.wiki/i/2CgJPSvoXuX7qReA-m3vOgM-DaZtvkJKjldMRMay3ipm8evXgYZM6_cHpNDmPCM_-QlTOx-RbYvdB1_p_XDlZKu3bSLrriNz-b9MGly_HHo8NzKwuVWdYRMFHVu1HAb3Mm9R2I7dt_fv8L7Q5f0gbA.webp">
+                <button type="button">사진변경</button>
+              </div>
+              <div class="tInfo">
+                <div class="tNmBox">
+                  <strong>홍길동</strong>
+                  <span>(남, 45세)</span>
+                  <a href="javascript:void(0);" class="h-button-xxs h-button-white">프로필 수정</a>
                 </div>
-                <div class="titbox">
-                  <strong class="tit">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!!</strong>
+                <div class="tStateBox">
+                  <div class="tState"><i class="h-emoticon type01 material-symbols-outlined">sentiment_satisfied</i>즉출가능</div>
+                  <!-- 
+                    내 구직상태 설정전 !
+                    <div class="tState"><i class="h-emoticon type06 material-symbols-outlined">sentiment_satisfied</i>내 구직 상태는</div> 
+                  -->
+                  <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">설정변경</a>
+                </div>
+                <div class="tPoint">
+                  통통통 Point :
+                  <strong class="h-txt-orange">55,300 P</strong>
                 </div>
               </div>
-              <div class="fidelity">
-                <p>충실도</p>
-                <strong>50</strong>
-                <span>%</span>
-              </div>
-            </div>
-            <div class="dlbox straightUl">
-              <div class="dl">
-                <div class="dt">경력 : </div>
-                <div class="dd">9년 11개월</div>
-              </div>
-              <div class="dl">
-                <div class="dt">과목 : </div>
-                <div class="dd">영어, 기타 외국어</div>
-              </div>
-              <div class="dl">
-                <div class="dt">희망급여 : </div>
-                <div class="dd">월급 200만원~300만원</div>
-              </div>
-            </div>
-            <div class="btnbox">
-              <a href="javascript:void(0);" class="h-button-xs0 h-button-white">이력서 수정</a>
-              <a href="javascript:void(0);" class="h-button-xs0 h-button-white">이력서 복사</a>
             </div>
             <div class="applyStatus4">
               <a href="#">
                 <strong>5</strong>
-                <p>연락처<br>공개제의</p>
+                <p>지원<br>현황</p>
               </a>
 
               <a href="#">
                 <strong class="h-txt-pit">0</strong>
-                <p>이력서<br>열람학원</p>
+                <p>이력서<br>관리</p>
               </a>
 
               <a href="#">
                 <strong class="h-txt-pit">2</strong>
-                <p>입사지원<br>현황</p>
+                <p>연락처<br>공개제의</p>
+              </a>
+
+              <a href="#">
+                <strong class="h-txt-pit">189</strong>
+                <p>스크랩<br>공고</p>
               </a>
 
               <a href="#">
                 <strong class="h-txt-pit">48</strong>
-                <p>스크랩<br>공고</p>
+                <p>관심<br>학원</p>
               </a>
             </div>
           </div>
 
-        </div>
-
-
-
-
-
-
-        <div class="myresumeList">
-
-          <!--이력서가 있는 경우 -->
-          <div class="libox">
-            <div class="myresumeInfoBox myResmeAdmin">
-              <div class="flex flex-between">
-                <div class="left-box">
-                  <div class="dl">
-                    <div class="dt">최근 수정일 : </div>
-                    <div class="dd">2022.05.12</div>
-                    <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i class="fa fa-refresh" aria-hidden="true"></i><span>업데이트</span></a>
+          <!-- 2. 이력서 관리 -->
+          <div class="myresumeInfoBox myResmeAdmin">
+            <div class="flex flex-between flex-center">
+              <strong class="homeBlockTit">이력서 관리</strong>
+              <a href="javascript:void(0);" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+            </div>
+                  <!-- 1)이력서 있을때(기본) -->
+                  <div>
+                    <div class="bluebgBox mb15">
+                      <div class="left-box">
+                        <div class="dl">
+                          <div class="dt">최근 수정일 : </div>
+                          <div class="dd">2022.05.12</div>
+                          <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i class="fa fa-refresh mr5" aria-hidden="true"></i><span>업데이트</span></a>
+                        </div>
+                        <div class="titbox">
+                          <strong class="tit">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!!
+                            <span>파일</span>
+                            <span>링크</span>
+                          </strong>
+                        </div>
+                      </div>
+                      <div class="btnbox">
+                        <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">이력서 수정</a>
+                        <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">이력서 복사</a>
+                      </div>
+                    </div>
+                    <div class="btmArea flex flex-between">
+                      <div class="dlbox straightUl pb0">
+                        <div class="dl">
+                          <div class="dt">경력 : </div>
+                          <div class="dd">9년 11개월</div>
+                        </div>
+                        <div class="dl">
+                          <div class="dt">과목 : </div>
+                          <div class="dd">영어, 기타 외국어</div>
+                        </div>
+                        <div class="dl">
+                          <div class="dt">희망급여 : </div>
+                          <div class="dd">월급 200만원~300만원</div>
+                        </div>
+                      </div>
+                      <div class="fidelity">
+                        <p>충실도</p>
+                        <strong>50</strong>
+                        <span>%</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="titbox">
-                    <strong class="tit">
-                      <a href="#">
-                        <!-- <span class="h-txt-pit">[복사]</span> 복사버튼 클릭시 삽입됨. -->
-                        인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!!</a>
-                    </strong>
+
+                  <!-- 참고 : https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/16215eda-3cd4-4da9-9430-e1f8dbc7c37c/specs/ -->
+                  <!-- 2)개인서비스 홈_이력서 관리 영역_이력서 작성전 (PPT 8) -->
+                  <div>
+                    <div class="bluebgBox h-txt-c">
+                      <strong class="h-txt-1 text-subtitle3"><span class="h-txt-pit">홍길동</span> 강사님<br>
+                        등록된 이력서가 없습니다.</strong>
+                      <span class="h-txt-3 text-subtitle5 mt20 block mt10 wd100 h-txt-l">지금 이력서를 등록하시면 <span class="h-txt-pit">2,000개</span>의 학원공고에 지원하실 수 있습니다. 이력서 작성 버튼을 클릭 후 채용공고에 지원해 주세요.</span>
+                    </div>
+                    <a href="javascript:void(0);" class="h-button-ml h-button-teal wd100"><i class="material-symbols-outlined vert-m mr5">add_circle</i>이력서 작성</a>
+                  </div>
+
+
+                  <!-- 3)개인서비스 홈_이력서 관리 영역_이력서 작성 중 (임시저장 시) (PPT 9) -->
+                  <div>
+                    <div class="bluebgBox mb15">
+                      <div class="left-box">
+                        <div class="dl">
+                          <div class="dt">최근 작성일 : </div>
+                          <div class="dd">2022.05.12</div>
+                        </div>
+                        <div class="titbox">
+                          <strong class="tit">
+                            <span class="h-txt-pit">[미완성]</span>
+                            인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!!
+                          </strong>
+                        </div>
+                      </div>
+                      <div class="btnbox">
+                        <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">이어서 작성하기</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- 4) 개인서비스 홈_이력서 관리 영역_이력서 등록 완료 파일 이력서 & 링크 이력서 (PPT 10) -->
+                  <div>
+                    <div class="bluebgBox mb15">
+                      <div class="left-box">
+                        <div class="dl">
+                          <div class="dt">최근 수정일 : </div>
+                          <div class="dd">2022.05.12</div>
+                          <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-refresh h-button-xs"><i class="fa fa-refresh mr5" aria-hidden="true"></i><span>오늘 날짜로 업데이트</span></a>
+                        </div>
+                        <div class="titbox">
+                          <strong class="tit">인내와 성실을 무기로 장착한 이세상 단 하나뿐인 웹기획자~!!
+                            <span>파일</span>
+                            <span>링크</span>
+                          </strong>
+                        </div>
+                      </div>
+                      <div class="btnbox">
+                        <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">이력서 수정</a>
+                        <a href="javascript:void(0);" class="h-button-txt h-button-nobg h-button-underline h-button-xs">이력서 보기</a>
+                      </div>
+                    </div>
+                    <div class="btmArea flex flex-between">
+                      <div class="dlbox straightUl pb0">
+                        <div class="dl">
+                          <div class="dt">경력 : </div>
+                          <div class="dd">9년 11개월</div>
+                        </div>
+                        <div class="dl">
+                          <div class="dt">최종학력 : </div>
+                          <div class="dd">대학교 4년 졸업</div>
+                        </div>
+                      </div>
+                      <div class="fidelity">
+                        <p>충실도</p>
+                        <strong>50</strong>
+                        <span>%</span>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+
+
+
+
+
+
+          <!-- 3. 지원현황 -->
+          <div class="applyStateBox">
+            <div class="flex flex-between flex-center">
+              <strong class="homeBlockTit">지원현황</strong>
+              <a href="javascript:void(0);" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+            </div>
+
+            <div class="swiper applyList-swiper swiper-initialized swiper-horizontal">
+              <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+                <div class="swiper-slide active swiper-slide-active" role="group">
+                  <div class="rcrut-summaryView">
+                    <a href="">
+                      <p class="text-subtitle5 mb5">서울아카데미 수학학원</p>
+                      <strong class="text-subtitle2">강동구 서울아카데미에서 수학 선생님을 모십니다. 강동구 서울아카데미에서 수학 선생님을 모십니다.</strong>
+                      <span class="text-subtitle5">입사지원일 : 2022.05.12</span>
+                    </a>
                   </div>
                 </div>
-                <div class="r-box">
-                  <a href="#" class="h-button-icon h-button-nobg h-button-del"><i class="material-symbols-outlined vert-m">delete</i></a>
+                <div class="swiper-slide swiper-slide-next" role="group">
+                  <div class="rcrut-summaryView">
+                    <a href="">
+                      <p class="text-subtitle5 mb5">서울아카데미 수학학원</p>
+                      <strong class="text-subtitle2">강동구 서울아카데미에서 수학 선생님을 모십니다. 강동구 서울아카데미에서 수학 선생님을 모십니다.</strong>
+                      <span class="text-subtitle5">입사지원일 : 2022.05.12</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group">
+                  <div class="rcrut-summaryView">
+                    <a href="">
+                      <p class="text-subtitle5 mb5">서울아카데미 수학학원</p>
+                      <strong class="text-subtitle2">강동구 서울아카데미에서 수학 선생님을 모십니다. 강동구 서울아카데미에서 수학 선생님을 모십니다.</strong>
+                      <span class="text-subtitle5">입사지원일 : 2022.05.12</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group">
+                  <div class="rcrut-summaryView">
+                    <a href="">
+                      <p class="text-subtitle5 mb5">서울아카데미 수학학원</p>
+                      <strong class="text-subtitle2">강동구 서울아카데미에서 수학 선생님을 모십니다. 강동구 서울아카데미에서 수학 선생님을 모십니다.</strong>
+                      <span class="text-subtitle5">입사지원일 : 2022.05.12</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="dlbox straightUl">
-                <div class="dl">
-                  <div class="dt">경력 : </div>
-                  <div class="dd">9년 11개월</div>
+            </div>
+
+                <!-- 개인서비스 홈_지원현황 영역_지원현황 없는 경우 (PPT 11) -->
+                <div class="rcrut-summaryView no-data">
+                    <strong class="text-subtitle2">입사지원한 내역이 없습니다.</strong>
+                    <span class="text-subtitle5">채용공고를 검색하시고 입사지원을 진행해 주세요. <br>
+                      훈장마을이 강사님의 구직활동에 도움이 되겠습니다.</span>
+                      <a href="javascript:void(0);" class="h-button-ml h-button-white wd100">채용공고 보러가기</a>
                 </div>
-                <div class="dl">
-                  <div class="dt">과목 : </div>
-                  <div class="dd">영어, 기타 외국어</div>
+          </div>
+
+
+          <!-- 4. 추천채용정보 -->
+          <div class="rcmndRcrtBox">
+            <div class="flex flex-between flex-center">
+              <strong class="homeBlockTit">추천 채용정보</strong>
+              <a href="javascript:void(0);" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+            </div>
+            <div class="rcmdRcrutList">
+              <div class="list-mbasic mb20">
+                <div class="libox">
+                    <div class="txtdiv">
+                      <p class="subco mb5">서울아카데미 수학학원</p>
+                      <a href="" class="trTit">강동구 서울아카데미에서 수학 선생님을 모십니다. ^^ ^^ ^^ ^^</a>
+                      <div class="dl straightDl">
+                        <p class="dt">서울 양천구</p>
+                        <p class="dt">경력</p>
+                        <p class="dt">대학교(4년)</p>
+                        <p class="dt">~01/30</p>
+                      </div>
+                    </div>
+                    <div class="r-btnbox">
+                      <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                    </div>
                 </div>
-                <div class="dl">
-                  <div class="dt">최종학력 : </div>
-                  <div class="dd">대학교(4년)졸업</div>
+      
+                <!-- 아래 동일 목록구조 반복 총 4개 -->
+                <div class="libox">
+                  <div class="txtdiv">
+                    <p class="subco mb5">서울아카데미 수학학원</p>
+                    <a href="" class="trTit">강동구 서울아카데미에서 수학 선생님을 모십니다. ^^ ^^ ^^ ^^</a>
+                    <div class="dl straightDl">
+                      <p class="dt">서울 양천구</p>
+                      <p class="dt">무관</p>
+                      <p class="dt">대학교(2,3년)</p>
+                      <p class="dt">채용시마감</p>
+                    </div>
+                  </div>
+                  <div class="r-btnbox">
+                    <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                  </div>
                 </div>
-              </div>
-              <div class="btnbox">
-                <a href="javascript:void(0);" class="h-button-xs0 h-button-white">이력서 수정</a>
-                <a href="javascript:void(0);" class="h-button-xs0 h-button-white">이력서 복사</a>
-                <a href="javascript:void(0);" class="h-button-xs0 h-button-white">공개설정</a>
+                <div class="libox">
+                  <div class="txtdiv">
+                    <p class="subco mb5">구로디지털단지 수학/과학 강사채용</p>
+                    <a href="" class="trTit">훈장마을 수학학원 구로1호점</a>
+                    <div class="dl straightDl">
+                      <p class="dt">서울 양천구</p>
+                      <p class="dt">수학</p>
+                      <p class="dt">~채용시까지</p>
+                    </div>
+                  </div>
+                  <div class="r-btnbox">
+                    <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                  </div>
+                </div>
+                <div class="libox">
+                  <div class="txtdiv">
+                    <p class="subco mb5">구로디지털단지 수학/과학 강사채용</p>
+                    <a href="" class="trTit">훈장마을 수학학원 구로1호점</a>
+                    <div class="dl straightDl">
+                      <p class="dt">서울 양천구</p>
+                      <p class="dt">수학</p>
+                      <p class="dt">~채용시까지</p>
+                    </div>
+                  </div>
+                  <div class="r-btnbox">
+                    <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
 
 
+          <!-- 5. 훈장마을 편리기능 Tool -->
+          <div class="hnjg-toolBox">
+            <div class="flex flex-between flex-center">
+              <strong class="homeBlockTit">훈장마을 편리기능 Tool</strong>
+            </div>
+            <div class="block4">
+              <div class="txtcount"><a href="">글자수<br>세기</a></div>
+              <div class="salaryCal"><a href="">급여<br>계산기</a></div>
+              <div class="scoreCal"><a href="">학점<br>계산기</a></div>
+              <div class="graduCal"><a href="">졸업/전역<br>계산기</a></div>
+              <div class="langCal"><a href="">어학점수<br>변환</a></div>
+              <div class="photoSet"><a href="">사진크기<br>조정</a></div>
+              <div class="certifict"><a href="">취업활동<br>증명서</a></div>
+              <div class="quickresm"><a href="">퀵<br>자소서</a></div>
+            </div>
+          </div>
+
+
+
+          <!-- 6. 배너영역 (최대 3개 슬라이드 !) -->
+          <div class="main-slideBnrList">
+            <div class="swiper mainBnr-swiper swiper-initialized swiper-horizontal">
+              <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+                <div class="swiper-slide active swiper-slide-active" role="group">
+                  <div class="m-mainslideBnrImg">
+                    <img src="https://eduvation.s3.ap-northeast-2.amazonaws.com/uploadFile/MAIN_IMG/2023/5/26/b7552da0-e43b-4a4f-8504-91954afa15fd.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-next" role="group">
+                  <div class="m-mainslideBnrImg">
+                    <img src="https://eduvation.s3.ap-northeast-2.amazonaws.com/uploadFile/MAIN_IMG/2023/5/25/0b3f38a2-d1a2-4d20-91dc-e4edff97fa69.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group">
+                  <div class="m-mainslideBnrImg">
+                    <img src="https://www.hunjang.com//databank/jobtalk/webtoon/0.1(39).jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -404,6 +629,17 @@
         } );
     } );
 
+
+
+    // 지원현황 슬라이드
+    var swiper = new Swiper(".applyList-swiper", {
+      slidesPerView: "auto",
+    });
+
+    // 배너영역 슬라이드
+    var swiper = new Swiper(".mainBnr-swiper", {
+      slidesPerView: "auto",
+    });
 
 
   </script>
