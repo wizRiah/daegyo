@@ -173,42 +173,67 @@
 
     <!-- 1) 사이드메뉴열기 -->
     <div class="m-RmenutPop acdmy-srvic">
-      <div class="bg-greenbox">
-        <button type="button" class="service-mode">강사</button>
+      <div class="bg-bluebox">
+        <button type="button" class="service-mode">학원</button>
+        <button type="button" class="service-mode">원장</button>
+        <!-- 
+          <button type="button" class="service-mode only-one">학원</button> 
+          활성화된 값이 1개일 경우 only-one 클래스가 추가됩니다.    
+        -->
 
-          <!-- service-mode '강사' 버튼 클릭시 보여지는 항목 -->
+          <!-- service-mode '학원/원장' 버튼 클릭시 보여지는 항목 -->
           <div class="h-m-popup popup-04"> 
             <button type="button">학원</button>
             <button type="button">강사</button>
           </div>
 
-        <div class="myinfoBox">
-          <div class="myprofileImg">
-            <img src="data:image/jpeg;base64,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">
+          <div class="h-m-popup popup-04"> 
+            <button type="button">원장</button>
+            <button type="button">직원</button>
           </div>
+
+        <div class="myinfoBox">
           <div class="myprofileInfo">
-            <strong>홍길동</strong>
+            <div class="myNm">
+              <strong>에듀베이션</strong>님
+              <button type="button" class="moreNm"><img src="../../images/icon_mypage_arrow_big.png"></button>
+
+              <!-- 학원이름 클릭시 보여지는 팝업 -->
+              <div class="h-m-popup popup-04 m-acadmy-nmPOP"> 
+                <button type="button" class="on">에듀베이션</button>
+                <button type="button">광개토대왕 수학학원</button>
+                <button type="button">근초고왕 과학학원</button>
+                <button type="button">고구려 태권도학원</button>
+                <button type="button">고구려 구로 태권도학원</button>
+                <button type="button">광개토대왕 수학학원</button>
+                <button type="button">근초고왕 과학학원</button>
+                <button type="button">고구려 태권도학원</button>
+                <button type="button">고구려 구로 태권도학원</button>
+              </div>
+
+            </div>
             <ul>
-              <li><a href="">정보수정</a></li>
+              <li><a href="">개인정보 수정</a></li>
               <li><a href="">비밀번호 변경</a></li>
             </ul>
+            <button type="button" class="mypage-setBtn"><img src="../../images/mobile/m_icon_setting.png"></button>
           </div>
         </div>
       </div>
       <div class="r-myMenuList">
-        <a href="javascript:void(0);" class="h-button-m h-button-white h-button-add wd100 m0"><i class="material-symbols-outlined vert-m">add_circle</i><span class="vert-m">이력서 등록</span></a>
         <ul>
-          <li><a href="">이력서 관리</a></li>
-          <li><a href="">지원현황</a></li>
-          <li><a href="">취업활동 증명서</a></li>
-          <li><a href="">추천 채용정보</a></li>
-          <li><a href="">이력서 매칭정보</a></li>
-          <li><a href="">스크랩 채용</a></li>
-          <li><a href="">관심학원</a></li>
-          <li><a href="">내 이력서 열람학원</a></li>
-          <li><a href="">연락처 공개제의 학원</a></li>
-          <li><a href="">나의 근로계약서 관리</a></li>
-          <li><a href="">파일관리</a></li>
+          <li><a href=""><a href="">학원 홈</a></li>
+          <li><a href="">채용공고 등록</a></li>
+          <li><a href="">채용공고 관리<span class="grey-num">20</span></a></li>
+          <li><a href="">인재정보</a></li>
+          <li><a href="">인재매칭<span class="grey-num">20</span></a></li>
+          <li><a href="">스크랩 인재<span class="grey-num">120</span></a></li>
+          <li><a href="">공개 제의한 인재<span class="grey-num">220</span></a></li>
+          <li><a href="">전자근로계약 관리</a></li>
+          <li><a href="">결제내역 관리</a></li>
+          <li><a href="">학원정보 관리</a></li>
+          <li><a href="">채용광고 안내</a></li>
+          <li><a href="">이력서 열람서비스</a></li>
 
         </ul>
       </div>
@@ -248,6 +273,14 @@
     $( document ).ready( function() {
         $( '.service-mode' ).click( function() {
           $('.popup-04').toggleClass("on");
+        } );
+    } );
+
+
+    //  1-1) 사이드메뉴의 '강사' 버튼 클릭시 보여지는 레이어팝업
+    $( document ).ready( function() {
+        $( '.moreNm' ).click( function() {
+          $('.m-acadmy-nmPOP').toggleClass("on");
         } );
     } );
 
