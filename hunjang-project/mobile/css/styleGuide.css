@@ -50,6 +50,7 @@
     --text-subtitle5: 13px;
     --text-subtitle6: 12px;
     --text-subtitle7: 11px;
+    --text-subtitle8: 10px;
     --letter-spacing-0: 0;
     --letter-spacing-065: -0.65px;
     --letter-spacing-1: -1px;
@@ -68,6 +69,7 @@
 .text-subtitle5 { font-size:var(--text-subtitle5); letter-spacing:var(--letter-spacing-0); line-height:20px; }
 .text-subtitle6 { font-size:var(--text-subtitle6); letter-spacing:var(--letter-spacing-0); line-height:16px; }
 .text-subtitle7 { font-size:var(--text-subtitle7); }
+.text-subtitle8 { font-size:var(--text-subtitle8); }
 .text-subtitle17 { font-size:var(--text-subtitle17); }
 
 .h-tit-26 { font-size:var(--text-h2); color:var(--black-1); font-weight:var(--text-bold); letter-spacing:var(--letter-spacing-065); }
@@ -168,6 +170,7 @@ select + [class^="h-button"] { margin-left:10px; }
 /* 간격 */
 .m0 { margin:0!important; }
 .mt3-mb6 { margin-top:3px; margin-bottom:6px; }
+.mt3 { margin-top:3px; }
 .mt5 { margin-top:5px; }
 .mt10 { margin-top:10px; }
 .mt15 { margin-top:15px; }
@@ -183,6 +186,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .ml15 { margin-left:15px; }
 .ml20 { margin-left:20px; }
 
+.mr3 {margin-right:3px;}
 .mr5 { margin-right:5px; }
 .mr10 { margin-right:10px; }
 .mr15 {margin-right:15px;}
@@ -199,7 +203,9 @@ select + [class^="h-button"] { margin-left:10px; }
 .p0 { padding:0!important; }
 .pl5 {padding-left:5px;}
 .pl10 { padding-left:10px; }
+.pl30 { padding-left:30px; }
 .pr10 { padding-right:10px; }
+.pr30 { padding-right:30px; }
 .pb5 {padding-bottom:5px;}
 .pb10 {padding-bottom:10px;}
 .pt25 {padding-top:25px;}
@@ -210,6 +216,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .min-width-auto {min-width:auto !important;}
 .width-100 {width:100px !important;}
 .width-120 {width:120px !important; min-width:auto;}
+.width-150 {width:150px !important;}
 .width-160 {width:160px !important;}
 .width-180 {width:180px !important;}
 .width-200 {width:200px !important;}
@@ -924,6 +931,7 @@ button
 /* 임시 데이터피커 */
 .date-picker {display: flex; align-items: center; min-width:420px;}
 .date-picker input.datePicker {float:left;width:200px;padding: 15px 37px 15px 15px;/*background:url('../images/btn_calendar.svg') no-repeat 163px #fff;*/text-align: left;}
+.date-picker input.datePicker::placeholder {font-size:var(--text-subtitle4);}
 .date-picker > input.datePicker {margin-right:-15px;}
 .date-picker img.ui-datepicker-trigger {float: left; position: relative; right: 20px; cursor: pointer;}
 .date-picker img.ui-datepicker-trigger + input.datePicker {margin-left:4px;}
