@@ -2,6 +2,7 @@
 /* @latest 2023.06.15 YHY */
 /* @latest 2023.06.28 SSJ */
 /* @latest 2023.06.29 SSJ */
+/* @latest 2023.07.04 SSJ */
 
 
 /***** 팝업 공통 (layout) *****/
@@ -335,22 +336,23 @@
 
 /* 채용공고 등록*/
  /* 쿠폰함 */
- .recruit-coupon .h-tbl-basic-1 { max-height: 486px; box-sizing: border-box; overflow: hidden; overflow-y: auto; display: block; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td:nth-child(2) { padding: 20px 0; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td { padding: 20px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-image { border-radius:10px; overflow:hidden; width: 170px; height: 80px; background-image: url(../images/coupon_wrap.png); position: relative; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-info { position: absolute; right: 20px; bottom: 15px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-price { font-size: 20px; line-height: 24px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-price.percent-num { font-size: 30px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-unit { padding-left: 2px; font-size: var(--text-subtitle5); vertical-align: bottom; line-height: 24px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-title { font-size: var(--text-subtitle2); line-height: 19px; margin-bottom: 9px; }
- .recruit-coupon .pop-container .h-tbl-basic-1 tbody tr td .coupon-sub { font-size: var(--text-subtitle5); line-height: 20px; }
+ .pc-recruit-coupon .h-tbl-basic-1 { max-height: 486px; box-sizing: border-box; overflow: hidden; overflow-y: auto; display: block; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td:first-child {padding:0 20px !important;}
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td:nth-child(2) { padding: 20px 0; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td { padding: 20px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-image { border-radius:10px; overflow:hidden; width: 170px; height: 80px; background-image: url(../images/coupon_wrap.png); position: relative; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-info { position: absolute; right: 20px; bottom: 15px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-price { font-size: 20px; line-height: 24px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-price.percent-num { font-size: 30px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-unit { padding-left: 2px; font-size: var(--text-subtitle5); vertical-align: bottom; line-height: 24px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-title { font-size: var(--text-subtitle2); line-height: 19px; margin-bottom: 9px; }
+ .pc-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-sub { font-size: var(--text-subtitle5); line-height: 20px; }
  /* 쿠폰 사용완료 */
- .use-complete .coupon-image:after { content: ''; position: absolute; left: 0; top: 0; background: #fff; z-index: 2; width: 100%; height: 100%; opacity: 0.8; border-radius: 10px; }
- .use-complete .coupon-image:before { content: '사용\A완료'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3; width: 52px; border: 2px solid #FF5656; border-radius: 100%; height: 52px; word-break: break-all; color: #FF5656; font-weight: bold; line-height: 15px; font-size: 14px; text-align: center; box-sizing: border-box; display: flex; white-space: pre; justify-content: center; align-items: center; }
- .use-complete .h-radio-01 input[type="radio"] + label:hover { outline: 0 !important; cursor: not-allowed !important; }
- .use-complete .h-radio-01 input[type="radio"] + label:hover .rchk:before { transform:none; }
- .use-complete .h-radio-01 input[type="radio"] + label .rchk { background: #F2F2F2; }
+ .pc-recruit-coupon .use-complete .coupon-image:after { content: ''; position: absolute; left: 0; top: 0; background: #fff; z-index: 2; width: 100%; height: 100%; opacity: 0.8; border-radius: 10px; }
+ .pc-recruit-coupon .use-complete .coupon-image:before { content: '사용\A완료'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3; width: 52px; border: 2px solid #FF5656; border-radius: 100%; height: 52px; word-break: break-all; color: #FF5656; font-weight: bold; line-height: 15px; font-size: 14px; text-align: center; box-sizing: border-box; display: flex; white-space: pre; justify-content: center; align-items: center; }
+ .pc-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label:hover { outline: 0 !important; cursor: not-allowed !important; }
+ .pc-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label:hover .rchk:before { transform:none; }
+ .pc-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label .rchk { background: #F2F2F2; }
 
  /* 약관보기 */
  .terms-view .h-item-hyphen li { position: relative; padding-left: 10px; }
