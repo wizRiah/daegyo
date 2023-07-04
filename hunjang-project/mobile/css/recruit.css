@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 채용공고모집분야 팝업 레이아웃 여백 없음 설정 */
+.h-m-popup.popup-01 .pop-body {height: calc(100% - 55px);}
+.h-m-popup.popup-01 .full-size {padding: 0; overflow: hidden;}
+
+/* 스크롤바 삭제 버전 */
+.h-m-popup .full-size *::-webkit-scrollbar {width: 0 !important; height: 0 !important;}
+.h-m-popup .full-size *::-webkit-scrollbar-thumb {background: none;}
+
+/* 키워드 검색창 */
+.h-m-popup .search-wrap {display: flex; width: 100%; box-sizing: border-box; justify-content: space-between; align-items: center; background: var(--neutral-3); border-bottom: 1px solid var(--border-basic-3);}
+.h-m-popup .search-wrap .search-input {width: 100%;}
+.h-m-popup .search-wrap .search-input input[type="text"] {padding: 0; border: none; background: var(--neutral-3);}
+.h-m-popup .search-wrap .search-input input::placeholder {color: #bcbcbc;}
+.h-m-popup .search-btn {text-align: center;}
+.h-m-popup .search-btn button {width: 50px; height: 21px; background: url(../images/mobile/m_icon_search_btn.png) no-repeat 50% 50%;}
+.h-m-popup .del-text-wrap {width: 50px; text-align: center;}
+
+/* 모집분야 검색영역 및 자동입력 박스 */
+.h-m-popup .subject-search-wrap {display: none; width: 100%; border: 1px; border-style: solid none none none; border-color: var(--grey-3); overflow: hidden; position: absolute; z-index: 2; background: #fff; top: 45px; box-sizing: border-box;}
+.h-m-popup .subject-search-wrap.on {display: block; overflow-y: auto;}
+.h-m-popup .subject-search-wrap .search-keyword {color: var(--blue-3);}
+.h-m-popup .subject-search-wrap > .subject-list {height: 360px; overflow-y: scroll; scrollbar-width: none; /* Firefox */}
+.h-m-popup .subject-search-wrap > .subject-list::-webkit-scrollbar {display: none; /* Chrome, Safari, Opera*/}
+
+.h-m-popup .subject-search-wrap > .subject-list > li {font-size: 14px; color: var(--black-2); padding: 9px 19px; border-bottom: 1px solid #e0e6ef;}
+.h-m-popup .subject-search-wrap > .subject-list > li .h-checkbox.checkbox04 label {color: var(--black-2);}
+.h-m-popup .subject-search-wrap > .subject-list > li.no-data {text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%; box-sizing: border-box; padding: 281px 0 0; background: #fff !important; border-bottom: none;}
+.h-m-popup .subject-search-wrap > .subject-list > li.no-data b {width: 100%; font-weight: var(--text-medium); font-size: var(--text-subtitle4);}
+.h-m-popup .subject-search-wrap > .subject-list > li.no-data span {width: 100%; color: var(--black-3); font-size: var(--text-subtitle4);}
+.h-m-popup .subject-search-wrap > .subject-list > li:hover {background: var(--neutral-3);}
+.h-m-popup .subject-search-wrap > .subject-list > li.checked {background: var(--neutral-3);}
+.h-m-popup .subject-search-wrap .directinput {background: var(--neutral-3); border-top: 1px solid var(--border-basic-4); text-align: center;}
+.h-m-popup .subject-search-wrap .directinput button {font-size: var(--text-subtitle4); color: var(--black-2); width: 100%; padding: 17px 5px;}
+.h-m-popup .subject-search-wrap .directunput button:after {content: ""; display: inline-block; width: 5px; height: 5px; border: 1px solid var(--grey-3); transform: rotate(45deg); border-width: 1px 1px 0 0; vertical-align: middle; margin-top: -1px; margin-left: 4px;}
+
+/* 키워드 지우기 */
+.h-m-popup .subject-delwrap {width: 100%; position: relative;}
+.h-m-popup .subject-delwrap > input[type="text"] {padding: 0 40px 0 15px;}
+.h-m-popup .subject-del {position: absolute; top: 13px; right: 13px; background: url(../images/icon_sm_close_gray.png) no-repeat; width: 20px; height: 20px;}
+.h-m-popup .subject-del-squared {flex: none; background: url(../images/mobile/m_icon_close_squared_gray.png) no-repeat; width: 22px; height: 22px;}
+
+.h-m-popup .subject-wrap {display: flex; height: 100%;}
+.h-m-popup .subject-wrap .list-depth {width: 50%; height: 100%;}
+.h-m-popup .subject-wrap .list-depth.one {border-right: 1px solid #e0e6ef;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox {display: block; margin: 0;}
+.h-m-popup .subject-wrap .list-depth.one ul {overflow-y: auto; height: 100%;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox.checkbox04 input[type="checkbox"] + label {display: block; padding: 0 15px; line-height: 46px; width: 100%; box-sizing: border-box; height: 46px; text-align: left;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox.checkbox04 input[type="checkbox"] + label:before {content: ""; display: inline-block; width: 18px; height: 18px; margin-right: 5px; border: none; vertical-align: middle; box-sizing: border-box; margin-top: -3px; background: url(../images/mobile/m_icon_checkbox_off.png) no-repeat 0 0;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox.checkbox04 input[type="checkbox"] + label:after {border: 1px solid #e0e6ef; transform: rotate(0); position: absolute; left: -1px; top: -1px; z-index: 1; width: 100%; height: 45px;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox.checkbox04 input[type="checkbox"]:checked + label:before {background: url(../images/mobile/m_icon_checkbox_on.png) no-repeat 0 0;}
+.h-m-popup .subject-wrap .list-depth.one .h-checkbox.checkbox04 input[type="checkbox"]:checked + label:after {z-index: 5; content: ""; border: 1px solid #61a6ff; transform: rotate(0); position: absolute; left: 0; top: 0; width: calc(100% - 2px); height: 45px;}
+.h-m-popup .subject-wrap .list-depth.two ul {height: 100%; overflow-y: auto;}
+.h-m-popup .subject-wrap .list-depth.two .h-checkbox.checkbox04 {margin: 11px 15px;}
+.h-m-popup .subject-wrap .list-depth.two > .subject-list > li.no-data span {display: block; padding: 20px 20px; color: var(--black-6); font-size: var(--text-subtitle5);}
+
+.h-m-popup.popup-01 .pop-body .fixed-wrap {position: fixed; width: 100%; z-index: 1; background: #fff;}
+.h-m-popup.popup-01 .pop-body .fixed-wrap.btm {bottom: 0; left: 0;}
+
+/* 선택항목 박스 */
+.h-m-popup .select-item-box {width: auto; border-top: 1px solid var(--border-basic-3); box-shadow: 0px 15px 20px 0;}
+.h-m-popup .select-item-box .text-box {padding: 20px 15px; display: flex; justify-content: space-between;}
+.h-m-popup .select-item-box .text-box p {font-size: 14px;}
+.h-m-popup .select-item-box .text-box p .select-num {color: var(--blue-3);}
+.h-m-popup .select-item-box .text-box p.description {font-size: 12px; color: #9a9a9a;}
+.h-m-popup .select-item-box .box-selected-list {display: none; overflow-y: auto; max-height: 93px; padding-left: 15px; margin-bottom: 55px;}
+.h-m-popup .select-item-box .box-selected-list::-webkit-scrollbar-thumb {height: 50px;}
+.h-m-popup .select-item-box .box-selected-list .list {display: flex; flex-flow: row wrap; align-items: center;}
+.h-m-popup .select-item-box .box-selected-list .list .select-all {display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 7px;}
+.h-m-popup .select-item-box .box-selected-list .list .select-all .inner {display: inline-block; padding: 0 10px 0 10px; height: 26px; border-radius: 13px; color: #fff; font-size: 14px; line-height: 26px; background-color: #61a6ff;}
+.h-m-popup .select-item-box .box-selected-list .list .select-detail {margin: 0 5px 7px 0;}
+.h-m-popup .select-item-box .box-selected-list .list .select-detail .inner {display: inline-block; padding: 0 10px 0 10px; height: 26px; border-radius: 13px; color: #7e7e7e; font-size: 14px; line-height: 26px; background-color: #f5f7fa;}
+.h-m-popup .select-item-box .box-selected-list .list .btn-delete {position: relative; width: 11px; height: 11px; margin-left: 5px;}
+.h-m-popup .select-item-box .box-selected-list .list .btn-delete:before {content: ""; position: absolute; left: 0; top: 4px; transform: rotate(-45deg); width: 11.3px; height: 1px; background: #fff;}
+.h-m-popup .select-item-box .box-selected-list .list .btn-delete:after {content: ""; position: absolute; left: 0; top: 4px; transform: rotate(45deg); width: 11.3px; height: 1px; background: #fff;}
+
+.h-m-popup .select-item-box .box-selected-list .list .btn-delete.category-2depth:before {background: #7e7e7e;}
+.h-m-popup .select-item-box .box-selected-list .list .btn-delete.category-2depth:after {background: #7e7e7e;}
+
+.h-m-popup .select-item-box .box-selected-list .list .arrow {position: relative; display: inline-block; width: 18px; height: 8px; vertical-align: top;}
+.h-m-popup .select-item-box .box-selected-list .list .arrow:after {content: ""; position: absolute; left: 4px; top: 0; display: inline-block; width: 6px; height: 6px; border: 1px solid #bcbcbc; border-width: 1px 1px 0 0; transform: rotate(45deg);}
+.h-m-popup .select-item-box .box-selected-list.expand {display: block;}
+.h-m-popup .resetbtn {color: var(--black-2); background: #fff; border-top: 1px solid var(--border-basic-3);}
+.h-m-popup .resetbtn span {display: inline-block; position: relative; padding-left: 26px;}
+.h-m-popup .resetbtn span:before {display: block; clear: both; content: ""; position: absolute; left: 0; top: calc(50% - 7px); width: 19px; height: 15px; background: url(../images/icon_reset.png) no-repeat 50% 50%; background-size: 100%;}
+.h-m-popup.popup-01 .btmbtnbox .sendRespon.unselect {color: #fff; background-color: #d8d8d8;}
+.h-m-popup.popup-01 .btmbtnbox .sendRespon.select {color: #fff; background-color: var(--border-basic-1);}

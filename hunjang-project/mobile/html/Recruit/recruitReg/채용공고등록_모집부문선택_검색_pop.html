@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>채용공고등록 (popup)</title>
+    <link rel="stylesheet" href="../../../css/font.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/styleGuide.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/popup.css" />
+    <link rel="stylesheet" href="../../../css/recruit.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <!-- popup 디자인 01 -->
+      <div class="h-popup-wrap">
+        <div class="h-m-popup popup-01 ui-draggable">
+          <div class="pop-header ui-draggable-handle" style="cursor: move">
+            <p class="pop-title text-h3">모집부문 선택</p>
+          </div>
+
+          <div class="pop-body">
+            <!-- 검색영역 [s]-->
+            <div class="search-wrap">
+              <div class="search-btn"><button type="button" class="text-none"></button></div>
+              <div class="search-input"><input type="text" name="" id="" placeholder="찾으시는 과목명을 입력해 주세요." /></div>
+              <div class="del-text-wrap">
+                <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+              </div>
+            </div>
+            <!-- 검색영역 [e]-->
+
+            <!-- 검색시 노출되는 검색결과 [s] -->
+            <div class="subject-search-wrap on">
+              <ul class="subject-list">
+                <!-- 체크 됐을때 class="checked" 추가 -->
+                <li class="checked">
+                  <div class="h-checkbox checkbox04">
+                    <input type="checkbox" id="checkbox01" checked name="" class="" />
+                    <label for="checkbox01">보습/속셈 &gt; <span class="search-keyword">과학</span>계열</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="h-checkbox checkbox04">
+                    <input type="checkbox" id="checkbox02" name="" class="" />
+                    <label for="checkbox02">입시/고시 &gt; 지구<span class="search-keyword">과학</span></label>
+                  </div>
+                </li>
+                <li>
+                  <div class="h-checkbox checkbox04">
+                    <input type="checkbox" id="checkbox03" name="" class="" />
+                    <label for="checkbox03">보습/속셈 &gt; <span class="search-keyword">과학</span>계열</label>
+                  </div>
+                </li>
+
+                <!-- 검색한 내용이 없는 경우 -->
+                <li class="no-data">
+                  <span>검색하신 과목명이 없습니다.</span>
+                </li>
+              </ul>
+            </div>
+            <!-- 검색시 노출되는 검색결과 [e] -->
+
+            <div class="pop-container full-size">
+              <!-- 모집부문 선택 [s] -->
+              <!-- 모집부문 선택 [e] -->
+            </div>
+
+            <!-- 선택항목 박스 [s] -->
+            <div class="select-item-box">
+              <div class="text-box">
+                <p>선택된 항목 <span class="select-num">0</span></p>
+                <p class="description">최대 3개까지 선택 가능</p>
+              </div>
+              <div class="box-selected-list"></div>
+            </div>
+            <!-- 선택항목 박스 [e] -->
+
+            <!-- 버튼박스 [s] -->
+            <div class="btmbtnbox">
+              <a href="#" class="resetbtn"><span>초기화</span></a>
+
+              <a href="#" class="sendRespon select">
+                <!-- 선택완료 전 unselect, 선택완료 select class 추가 -->
+                선택완료
+              </a>
+            </div>
+            <!-- 버튼박스 [e] -->
+          </div>
+          <button type="button" class="close" title="팝업 닫기"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
