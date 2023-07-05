@@ -107,7 +107,7 @@ input[type="text"] { width:100%; height:45px; padding:0 15px; border:1px solid v
 input[type="text"]:disabled { background:var(--neutral-1); color:var(--black-2); }
 .h-field-wrap input[type="text"]:disabled + .include_txt { background:var(--neutral-1); height:52px; line-height:50px; }
 input::placeholder { color:var(--black-6); }
-input[type="text"]::placeholder {font-size:var(--text-subtitle4); }
+input[type="text"]::placeholder {font-size:var(--text-subtitle4);}
 .inp-type-basic input { padding:15px; border-radius: 4px; border: 1px solid var(--border-basic-2); }
 .inp-type-basic input:focus { outline: none !important; border-color: var(--border-basic-1); transition: all ease 0.5s; }
 .inp-type-basic { position: relative; }
@@ -181,6 +181,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .mt50 { margin-top:50px; }
 .mt70 { margin-top:70px; }
 
+.ml3 { margin-left:3px; }
 .ml5 { margin-left:5px!important; }
 .ml10 { margin-left:10px; }
 .ml15 { margin-left:15px; }
@@ -208,6 +209,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .pr30 { padding-right:30px; }
 .pb5 {padding-bottom:5px;}
 .pb10 {padding-bottom:10px;}
+.pb150 {padding-bottom:150px;}
 .pt25 {padding-top:25px;}
 .pt30 {padding-top:30px;}
 .p25 { padding:25px !important; }
@@ -382,6 +384,8 @@ button
 /* Bullet List Type 01 - font-size, color는 class로 같이 넣어줘야함 */
 .h-bullet-01 li {position:relative; padding-left:10px;}
 .h-bullet-01 li:after {position:absolute; top:10px; left:4px; content:''; width:2px; height:2px; background-color:currentColor; border-radius:50%;}
+.h-bullet-02 li {position:relative; padding-left:10px;}
+.h-bullet-02 li:after {position:absolute; top:0; left:0; content:'-';}
 
 /* 체크박스 */
 .h-checkbox { display: inline-block; vertical-align: middle; -webkit-user-select: none !important; user-select: none !important; margin: 3px; /* z-index: 0; */ }
@@ -676,7 +680,7 @@ button
 
 /* size */
 .h-pagination.wh30 .h-btn {min-width:30px; min-height:30px; font-size:var(--text-subtitle6);}
-.h-pagination.wh40 .h-btn {width: 38px;height: 38px;}
+.h-pagination.wh40 .h-btn {background:#fff; width: 38px;height: 38px;}
 
 
 
