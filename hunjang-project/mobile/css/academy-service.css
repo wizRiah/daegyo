@@ -1,5 +1,6 @@
 @charset "utf-8"; 
 /*2023-06-29 SSJ*/
+/*2023-07-04 SSJ*/
 
 /*리스트 상단 기간 검색바*/
 .m-hunjang-wrap .list-topBox {background: var(--neutral-3);width: 100%; padding:20px 15px 11px;box-sizing:border-box;border-bottom: 1px solid var(--border-basic-3);}
@@ -388,6 +389,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 학원서비스 홈 */
 .m-academy-home {background:var(--neutral-3);; padding:10px 0;}
 .m-academy-home .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
@@ -493,25 +511,53 @@
 
 
 
+/* 학원서비스 -채용공고관리 */
+.m-hunjang-wrap .acdmy-listWrap {}
+.m-hunjang-wrap .acadmy-topBlock {display:flex; justify-content:space-between; padding-bottom:15px;}
+.m-hunjang-wrap .acadmy-topBlock li {text-align:center; width:15%; margin-right:5px; flex-grow:1;}
+.m-hunjang-wrap .acadmy-topBlock li:last-child {margin-right:0;}
+.m-hunjang-wrap .acadmy-topBlock li button {width:100%; background: #EBEFF5; border-radius:4px; overflow:hidden; padding:10px 0 13px;}
+.m-hunjang-wrap .acadmy-topBlock li button.on {background:#43A986;}
+.m-hunjang-wrap .acadmy-topBlock li button strong {font-size:22px; color:#61A6FF; font-family:'SUIT';}
+.m-hunjang-wrap .acadmy-topBlock li button p {font-size:12px; color:#333333; margin-top:5px;}
+.m-hunjang-wrap .acadmy-topBlock li button.on * {color:#fff;}
+.m-hunjang-wrap .acadmy-topSrchbox {border:1px solid #CCD1D7; border-radius:4px; height:46px; width:100%; display:flex; justify-content:space-between; overflow:hidden; box-sizing:border-box;}
+.m-hunjang-wrap .acadmy-topSrchbox input[type="text"] {border:none; width:50%; flex-grow:2;}
+.m-hunjang-wrap .acadmy-topSrchbox button {padding:0 25px; height:100%; background:url(../images/mobile/m_icon_sm_search.png) #fff center no-repeat;}
+.m-hunjang-wrap .acadmy-TopbtnBox {display: flex; flex-wrap: nowrap; width: 100%; margin-top:10px;}
+.m-hunjang-wrap .acadmy-TopbtnBox a {min-width:auto !important; margin:0; height:35px; flex-shrink:0;}
+.m-hunjang-wrap .acadmy-TopbtnBox select {height:35px; flex-shrink: 2; margin: 0; flex-basis: 60%; min-width: auto; margin: 0 5px; font-size:13px;}
+.m-hunjang-wrap .acadmy-TopbtnBox select + select {margin-left:0;}
 
+.m-hunjang-wrap .myGonggoList {padding:5px 15px 15px;}
+.m-hunjang-wrap .myGonggoList .list-whitebox {position:relative;}
+.m-hunjang-wrap .myGonggoList .statebox {margin-bottom:10px;}
+.m-hunjang-wrap .myGonggoList .statebox span {font-size:12px; color:#333333;}
+.m-hunjang-wrap .myGonggoList .statebox div {display:inline-block; font-size:12px; color:#ffffff; padding:4px 10px; font-weight:500; border-radius:30px; margin-right:10px;}
+.m-hunjang-wrap .myGonggoList .statebox div.ongoing {background:#26B2C8;}
+.m-hunjang-wrap .myGonggoList .statebox div.fin {background:#C3CAD4;}
+.m-hunjang-wrap .myGonggoList .ggTitle {font-weight:600; font-size:16px; color:#151515; margin-bottom:10px;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock {margin-top:15px;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock li {border-right:1px solid #E0E6EF; margin:0;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock li:not(:first-child) strong {color:#333333;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock li:not(:first-child) p {color:#9A9A9A;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock li:last-child {border-right:none;}
+.m-hunjang-wrap .myGonggoList .acadmy-topBlock li button {background:transparent; padding:0;}
+.m-hunjang-wrap .myGonggoList .btnbox {display:flex;}
+.m-hunjang-wrap .myGonggoList .btnbox a {width:40%; flex-grow:1; margin:0;}
+.m-hunjang-wrap .myGonggoList .btnbox a:first-child {margin-right:5px;}
+.m-hunjang-wrap .myGonggoList .btnbox a.h-txt-cyan   {background:#fff; border:1px solid #26B2C8; color:#26B2C8;}
+.m-hunjang-wrap .myGonggoList .btnbox a.h-txt-orange {background:#fff; border:1px solid #FF6000; color:#FF6000;}
+.m-hunjang-wrap .myGonggoList .btnbox a.h-button-grey {margin-top:20px; width:49%; flex-grow:0;}
+.m-hunjang-wrap .myGonggoList .btnbox a.h-button-grey + .h-button-white {width:auto; margin-top:20px; flex-grow:0; min-width: auto !important; width: 62px;}
+.m-hunjang-wrap .myGonggoList .more_toggleBox {overflow: hidden;position: absolute;right: 13px;top: 13px;width: 20px;height: 20px;cursor: pointer;}
+.m-hunjang-wrap .myGonggoList .more_toggleBox .more_toggle {width:100%; height:100%;}
+.m-hunjang-wrap .guideTxt-list {padding:0 15px 20px;}
+.m-hunjang-wrap .guideTxt-list li {position: relative; text-indent: -6px; padding-left: 8px;}
+.m-hunjang-wrap .guideTxt-list li:before {content:"\b7"; margin-right: 3px;}
 
-
-/*쿠폰함*/
- /* 쿠폰함 */
-.m-recruit-coupon .h-tbl-basic-1 { max-height: 486px; box-sizing: border-box; overflow: hidden; overflow-y: auto; display: block; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td:first-child {padding:0 20px !important;}
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td:nth-child(2) { padding: 20px 0; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td { padding: 20px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-image { border-radius:10px; overflow:hidden; width: 170px; height: 80px; background-image: url(../images/coupon_wrap.png); position: relative; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-info { position: absolute; right: 20px; bottom: 15px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-price { font-size: 20px; line-height: 24px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-price.percent-num { font-size: 30px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-unit { padding-left: 2px; font-size: var(--text-subtitle5); vertical-align: bottom; line-height: 24px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-title { font-size: var(--text-subtitle2); line-height: 19px; margin-bottom: 9px; }
-.m-recruit-coupon .h-tbl-basic-1 tbody tr td .coupon-sub { font-size: var(--text-subtitle5); line-height: 20px;}
-
-.m-recruit-coupon .use-complete .coupon-image:after { content: ''; position: absolute; left: 0; top: 0; background: #fff; z-index: 2; width: 100%; height: 100%; opacity: 0.8; border-radius: 10px; }
-.m-recruit-coupon .use-complete .coupon-image:before { content: '사용\A완료'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3; width: 52px; border: 2px solid #FF5656; border-radius: 100%; height: 52px; word-break: break-all; color: #FF5656; font-weight: bold; line-height: 15px; font-size: 14px; text-align: center; box-sizing: border-box; display: flex; white-space: pre; justify-content: center; align-items: center; }
-.m-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label:hover { outline: 0 !important; cursor: not-allowed !important; }
-.m-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label:hover .rchk:before { transform:none; }
-.m-recruit-coupon .use-complete .h-radio-01 input[type="radio"] + label .rchk { background: #F2F2F2; }
+.m-hunjang-wrap .common-nodata {display:flex; flex-direction:column; align-items:center;}
+.m-hunjang-wrap .common-nodata strong {font-size:15px; color:#151515; line-height:22px;}
+.m-hunjang-wrap .common-nodata span {font-size:13px; color:#7E7E7E; line-height:20px; margin:10px 0 15px; text-align:center;}
+.m-hunjang-wrap .common-nodata a {width:60%; max-width:200px; font-size:15px;}
+.m-hunjang-wrap .common-nodata a img {transform:rotate(180deg); margin-left:5px; width:16px;}
