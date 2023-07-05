@@ -86,7 +86,9 @@
 /* 강사 홈*/
 .m-teacher-home {background:var(--neutral-3);; padding:10px 0;}
 .m-hunjang-wrap .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
-.m-hunjang-wrap .homeBlockTit.p15 {padding:20px 15px 0; display:block;}
+.m-hunjang-wrap .homeBlockTit .apply-guidePopbtn img {vertical-align:middle;}
+.m-hunjang-wrap .homeBlockTit.p15 {padding:0 15px 0; display:block; position:relative; margin-top:20px;}
+.m-hunjang-wrap .homeBlockTit.p15 .popup-04 {top:28px; font-weight:400;}
 .m-teacher-home .h-button-more {font-size:var(--text-subtitle6); line-height:normal; margin:0; padding:0;}
 .m-teacher-home .h-button-more:after {width:15px; height:15px; content:""; background:url(../images/mobile/m_icon_outline_plus_gray15.png); border:none; margin-top:0;}
 .m-teacher-home .tch-prfile {display:flex; padding-bottom:5px;}
@@ -408,6 +410,8 @@
 
 
 /* 학원서비스 홈 */
+.m-hunjang-wrap .blockTitbox {position:relative;}
+.m-hunjang-wrap .blockTitbox .popup-04 {padding:30px 50px 30px 30px; top:32px;}
 .m-academy-home {background:var(--neutral-3);; padding:10px 0;}
 .m-academy-home .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
 .m-academy-home .homeBlockTit img {vertical-align:middle;}
@@ -453,8 +457,6 @@
 .m-academy-home .applyStateBox {padding:10px 0 20px 20px;}
 .m-academy-home .applyStateBox .blockTitbox {position:relative; margin-bottom:6px;}
 .m-academy-home .applyStateBox .h-button-more {padding-right:20px;}
-.m-academy-home .applyStateBox .popup-04 {padding:30px; top:32px;}
-.m-academy-home .applyStateBox .popup-04.on {display:block !important;}
 .m-academy-home .applyStateBox .popup-04 button.close {top:20px; right:20px;}
 .m-academy-home .applyStateBox .swiper-slide {width:55%; max-width:160px; margin-right:10px; background:#fff; border-radius:10px; padding:15px; box-sizing:border-box; box-shadow: 2px 2px 8px #0000000D; margin-bottom: 10px;}
 .m-academy-home .applyStateBox .rcrut-summaryView {}
@@ -532,9 +534,12 @@
 .m-hunjang-wrap .acadmy-TopbtnBox select + select {margin-left:0;}
 
 .m-hunjang-wrap .myGonggoList {padding:5px 15px 15px; flex-grow: 2; align-items: center; justify-content: center; display: flex; flex-direction: column;}
-.m-hunjang-wrap .myGonggoList .list-whitebox {position:relative;}
+.m-hunjang-wrap .myGonggoList .list-whitebox {position:relative; flex-wrap:wrap;}
+.m-hunjang-wrap .myGonggoList .list-whitebox:last-child {margin-bottom:10px;}
 .m-hunjang-wrap .myGonggoList .statebox {margin-bottom:10px;}
 .m-hunjang-wrap .myGonggoList .statebox span {font-size:12px; color:#333333;}
+.m-hunjang-wrap .myGonggoList .statebox span.h-txt-orange {color:var(--orange);}
+.m-hunjang-wrap .myGonggoList .statebox span.h-txt-5 {color:var(--black-5);}
 .m-hunjang-wrap .myGonggoList .statebox div {display:inline-block; font-size:12px; color:#ffffff; padding:4px 10px; font-weight:500; border-radius:30px; margin-right:10px;}
 .m-hunjang-wrap .myGonggoList .statebox div.ongoing {background:#26B2C8;}
 .m-hunjang-wrap .myGonggoList .statebox div.fin {background:#C3CAD4;}
@@ -571,31 +576,66 @@
 
 
 /* 학원서비스 -지원자 관리*/
-.applyerAdminList {padding:15px 0;}
+.applyerAdminList {padding:15px 0 0;}
 .applyerAdminList .top-OngoingList {border:1px solid #C3CAD4; background:#fff; width: calc(100% - 30px); margin: 0 15px; box-sizing: border-box; border-radius: 10px; padding:0; box-shadow: 1px 5px 5px #0000000D; overflow: hidden;}
-.applyerAdminList .top-OngoingList .list-whitebox {margin-bottom:0; border-radius:0; padding:20px 20px 15px;}
+.applyerAdminList .top-OngoingList .list-whitebox {margin-bottom:0 !important; border-radius:0; padding:17px 20px 15px;}
 .applyerAdminList .top-OngoingList .list-whitebox .flex .list-mbasic {width:50%; flex-grow:2;}
 .applyerAdminList .top-OngoingList .list-whitebox .list-mbasic .txtdiv {width:100%;}
-.applyerAdminList .top-OngoingList .list-whitebox .ggTitle {margin-bottom:5px;}
+.applyerAdminList .top-OngoingList .list-whitebox .ggTitle {margin-bottom:5px; line-height:22px;}
 .applyerAdminList .top-OngoingList .morelist-BTN {}
 .applyerAdminList .top-OngoingList .morelist-BTN img {transition:transform 0.5s;}
 .applyerAdminList .top-OngoingList .morelist-BTN.on img {transform:rotate(180deg);}
-.applyerAdminList .top-OngoingList .hiddenList {padding:20px 0 0; display:none;}
-.applyerAdminList .top-OngoingList .hiddenList.on {display:block;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01 {}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label {width:50%; height:46px; font-size:14px; line-height:46px; color:#333333;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label span {font-weight:500; color:#26B2C8;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:first-of-type {border-radius:4px 0 0 4px;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:last-of-type {border-radius:0 4px 4px 0;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label {color:#fff;}
-.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label span {color:#fff;}
+.applyerAdminList .hiddenList {padding:20px 0 0; display:none;}
+.applyerAdminList .hiddenList.on {display:block; box-shadow: 1px 5px 5px #0000000D; background: #fff; position: absolute; border: 1px solid #C3CAD4; border-top: none; width: calc(100% - 30px); left: 15px; margin-top: -10px; box-sizing: border-box; padding: 0 20px 0; z-index: 1; border-radius: 0 0 10px 10px;}
+.applyerAdminList .hiddenList .hidnlisthgt {padding-top:10px; max-height: 377px; overflow-y: scroll; box-sizing: border-box;}
+.applyerAdminList .hiddenList .h-tab-Contents-01 {}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"] + label {width:50%; height:46px; font-size:14px; line-height:46px; color:#333333;}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"] + label span {font-weight:500; color:#26B2C8;}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:first-of-type {border-radius:4px 0 0 4px;}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:last-of-type {border-radius:0 4px 4px 0;}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label {color:#fff;}
+.applyerAdminList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label span {color:#fff;}
+.applyerAdminList .hiddenList .myrcrtBox {width:100%; text-align:left; padding:10px 0;}
+.applyerAdminList .hiddenList .myrcrtBox .rcrtTit {font-size:15px; font-weight:500; color:#333333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.applyerAdminList .hiddenList .myrcrtBox .rcrtTit i {color:#C3CAD4; font-size:16px; margin:-2px 5px 0 0; vertical-align:middle;}
+.applyerAdminList .hiddenList .myrcrtBox .rcrtProd {font-size:12px; color:#BCBCBC; margin-top:6px; padding-left:26px;}
+.applyerAdminList .hiddenList .myrcrtBox.on .rcrtTit {color:#61A6FF;}
+.applyerAdminList .hiddenList .myrcrtBox.on .rcrtTit i {color:#61A6FF;}
 
 .applyerAdminList .list-topBox {padding-top:10px;}
 .applyerAdminList .list-topBox .checkbox05 {margin:0;}
 .applyerAdminList .list-topBox .checkbox05 input[type="checkbox"] + label {height:35px;  padding: 0 15px 0 33px;}
 .applyerAdminList .list-topBox .checkbox05 input[type="checkbox"] + label::before {font-size: 17px; left: 11px; top: 8px;}
 
+.myGonggoList .l-prfbox {display: flex; flex-direction: column; align-items: center; padding-right: 15px;}
+.myGonggoList .l-prfbox .pfImgbox {width:65px; height:65px; border-radius:100%; overflow:hidden; border:1px solid var(--neutral-2); box-sizing:border-box;}
+.myGonggoList .l-prfbox .pfImgbox img {width:100%;}
+.myGonggoList .l-prfbox strong {font-size:13px; color:#333333; margin:7px 0 3px;}
+.myGonggoList .l-prfbox span {font-size:12px; color:#7E7E7E;}
+.myGonggoList .r-txtbox {width:50%; flex-grow:2;}
+.myGonggoList .r-txtbox .statebox .h-txt-medium:before {content:""; width:1px; height:14px; display:inline-block; background:#E0E6EF; vertical-align:middle; margin:0 7px;}
+.myGonggoList .r-txtbox .list-mbasic .txtdiv {width:100%;}
+.myGonggoList .r-txtbox .ggTitle {}
+.myGonggoList .r-txtbox .ggTitle a {    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;}
+.myGonggoList .r-txtbox .ggTitle .h-txtbox-1 {font-size:11px; font-weight:500; height:19px;}
+.myGonggoList .r-txtbox .ggTitle .h-button-file {width:98px; font-size:13px; margin:5px 0 0 0;}
+.myGonggoList .r-txtbox .ggTitle .h-button-file:after {vertical-align:middle;}
+.myGonggoList .rcrtPart {width:100%; margin-top:14px;}
+.myGonggoList .rcrtPart .leftPart {background:#F5F7FA; width:50%; flex-grow:2; margin-right:5px; font-size:13px;padding: 0 15px; display: flex; align-items: center;}
+.myGonggoList .rcrtPart .leftPart span {color:#9A9A9A;}
+.myGonggoList .rcrtPart .leftPart div {color:#333333;}
+.myGonggoList .rcrtPart select {height:35px; width:105px; min-width: auto; font-size:13px;}
+.myGonggoList .wnt-location {font-size:12px; width:100%; display:flex; padding:3px 0 0 5px;}
+.myGonggoList .wnt-location .dpt1 {}
+.myGonggoList .wnt-location .dpt1:after {content:">"; color:#BCBCBC; margin:0 2px;}
+.myGonggoList .wnt-location .dpt2:not(:last-child):after {content:","; margin-right:2px;}
 
-
-
-
+.m-hunjang-wrap .myGonggoList.p0 {margin-top:10px; background:#fff; padding-bottom:20px !important;}
+.m-hunjang-wrap .myGonggoList.p0 .list-whitebox {border-radius:0; border-bottom: 1px solid #E7EDF5; margin-bottom:0;}
+.m-hunjang-wrap .myGonggoList.p0 .list-whitebox .ggTitle {white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.m-hunjang-wrap .myGonggoList.p0 .list-mbasic .txtdiv .dl {flex-wrap:wrap;}
