@@ -65,7 +65,7 @@
 .m-hunjang-wrap .bg-lightblue-List {background:var(--neutral-3); padding:20px 15px; width:100%; box-sizing:border-box;}
 .m-hunjang-wrap .bg-lightblue-List .list-topBox {border-bottom:none; padding:0 0 3px;}
 /*기본 화이트박스 리스트*/
-.m-hunjang-wrap .list-whitebox {background:#fff; border-radius:10px; box-sizing:border-box; padding:20px; margin-bottom:10px;}
+.m-hunjang-wrap .list-whitebox {width:100%; background:#fff; border-radius:10px; box-sizing:border-box; padding:20px; margin-bottom:10px;}
 .m-hunjang-wrap .list-whitebox .trTit {font-size:var(--text-subtitle3); font-weight:var(--text-bold); line-height:18px; color:var(--black-1); margin-bottom:5px; display:block;}
 .m-hunjang-wrap .list-whitebox .subco {font-size:var(--text-subtitle5); color:var(--black-3); line-height:20px; margin-bottom:10px;}
 .m-hunjang-wrap .list-whitebox .select_check {margin-top:20px;}
@@ -85,7 +85,8 @@
 
 /* 강사 홈*/
 .m-teacher-home {background:var(--neutral-3);; padding:10px 0;}
-.m-teacher-home .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
+.m-hunjang-wrap .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
+.m-hunjang-wrap .homeBlockTit.p15 {padding:20px 15px 0; display:block;}
 .m-teacher-home .h-button-more {font-size:var(--text-subtitle6); line-height:normal; margin:0; padding:0;}
 .m-teacher-home .h-button-more:after {width:15px; height:15px; content:""; background:url(../images/mobile/m_icon_outline_plus_gray15.png); border:none; margin-top:0;}
 .m-teacher-home .tch-prfile {display:flex; padding-bottom:5px;}
@@ -512,8 +513,9 @@
 
 
 /* 학원서비스 -채용공고관리 */
-.m-hunjang-wrap .acdmy-listWrap {}
+.m-hunjang-wrap .acdmy-listWrap {display: flex; flex-direction: column; height: inherit;}
 .m-hunjang-wrap .acadmy-topBlock {display:flex; justify-content:space-between; padding-bottom:15px;}
+.m-hunjang-wrap .acadmy-topBlock:only-child {padding-bottom:0;}
 .m-hunjang-wrap .acadmy-topBlock li {text-align:center; width:15%; margin-right:5px; flex-grow:1;}
 .m-hunjang-wrap .acadmy-topBlock li:last-child {margin-right:0;}
 .m-hunjang-wrap .acadmy-topBlock li button {width:100%; background: #EBEFF5; border-radius:4px; overflow:hidden; padding:10px 0 13px;}
@@ -529,7 +531,7 @@
 .m-hunjang-wrap .acadmy-TopbtnBox select {height:35px; flex-shrink: 2; margin: 0; flex-basis: 60%; min-width: auto; margin: 0 5px; font-size:13px;}
 .m-hunjang-wrap .acadmy-TopbtnBox select + select {margin-left:0;}
 
-.m-hunjang-wrap .myGonggoList {padding:5px 15px 15px;}
+.m-hunjang-wrap .myGonggoList {padding:5px 15px 15px; flex-grow: 2; align-items: center; justify-content: center; display: flex; flex-direction: column;}
 .m-hunjang-wrap .myGonggoList .list-whitebox {position:relative;}
 .m-hunjang-wrap .myGonggoList .statebox {margin-bottom:10px;}
 .m-hunjang-wrap .myGonggoList .statebox span {font-size:12px; color:#333333;}
@@ -552,6 +554,10 @@
 .m-hunjang-wrap .myGonggoList .btnbox a.h-button-grey + .h-button-white {width:auto; margin-top:20px; flex-grow:0; min-width: auto !important; width: 62px;}
 .m-hunjang-wrap .myGonggoList .more_toggleBox {overflow: hidden;position: absolute;right: 13px;top: 13px;width: 20px;height: 20px;cursor: pointer;}
 .m-hunjang-wrap .myGonggoList .more_toggleBox .more_toggle {width:100%; height:100%;}
+.m-hunjang-wrap .myGonggoList .more_toggleBox .h-m-popup.popup-02 {width: calc(100% - 100px); top: 50%; transform: translateY(-50%);}
+.m-hunjang-wrap .myGonggoList .more_toggleBox .h-m-popup.popup-02 .editbtnbox {padding:20px 12px 0 6px;}
+.m-hunjang-wrap .myGonggoList .more_toggleBox .h-m-popup.popup-02 a {margin:0 0 5px; font-size:14px;}
+.m-hunjang-wrap .myGonggoList .more_toggleBox .h-m-popup.popup-02 a:last-child {margin-bottom:0;}
 .m-hunjang-wrap .guideTxt-list {padding:0 15px 20px;}
 .m-hunjang-wrap .guideTxt-list li {position: relative; text-indent: -6px; padding-left: 8px;}
 .m-hunjang-wrap .guideTxt-list li:before {content:"\b7"; margin-right: 3px;}
@@ -561,3 +567,35 @@
 .m-hunjang-wrap .common-nodata span {font-size:13px; color:#7E7E7E; line-height:20px; margin:10px 0 15px; text-align:center;}
 .m-hunjang-wrap .common-nodata a {width:60%; max-width:200px; font-size:15px;}
 .m-hunjang-wrap .common-nodata a img {transform:rotate(180deg); margin-left:5px; width:16px;}
+
+
+
+/* 학원서비스 -지원자 관리*/
+.applyerAdminList {padding:15px 0;}
+.applyerAdminList .top-OngoingList {border:1px solid #C3CAD4; background:#fff; width: calc(100% - 30px); margin: 0 15px; box-sizing: border-box; border-radius: 10px; padding:0; box-shadow: 1px 5px 5px #0000000D; overflow: hidden;}
+.applyerAdminList .top-OngoingList .list-whitebox {margin-bottom:0; border-radius:0; padding:20px 20px 15px;}
+.applyerAdminList .top-OngoingList .list-whitebox .flex .list-mbasic {width:50%; flex-grow:2;}
+.applyerAdminList .top-OngoingList .list-whitebox .list-mbasic .txtdiv {width:100%;}
+.applyerAdminList .top-OngoingList .list-whitebox .ggTitle {margin-bottom:5px;}
+.applyerAdminList .top-OngoingList .morelist-BTN {}
+.applyerAdminList .top-OngoingList .morelist-BTN img {transition:transform 0.5s;}
+.applyerAdminList .top-OngoingList .morelist-BTN.on img {transform:rotate(180deg);}
+.applyerAdminList .top-OngoingList .hiddenList {padding:20px 0 0; display:none;}
+.applyerAdminList .top-OngoingList .hiddenList.on {display:block;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01 {}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label {width:50%; height:46px; font-size:14px; line-height:46px; color:#333333;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label span {font-weight:500; color:#26B2C8;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:first-of-type {border-radius:4px 0 0 4px;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"] + label:last-of-type {border-radius:0 4px 4px 0;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label {color:#fff;}
+.applyerAdminList .top-OngoingList .hiddenList .h-tab-Contents-01>input[type="radio"]:checked + label span {color:#fff;}
+
+.applyerAdminList .list-topBox {padding-top:10px;}
+.applyerAdminList .list-topBox .checkbox05 {margin:0;}
+.applyerAdminList .list-topBox .checkbox05 input[type="checkbox"] + label {height:35px;  padding: 0 15px 0 33px;}
+.applyerAdminList .list-topBox .checkbox05 input[type="checkbox"] + label::before {font-size: 17px; left: 11px; top: 8px;}
+
+
+
+
+

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>학원 서비스 홈</title>
+  <title></title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/styleGuide.css">
@@ -146,12 +146,14 @@
 
 
           <div class="myGonggoList">
-                  <!-- 없을때 -->
+                  <!-- 
+                  진행중 공고 없을때 
                   <div class="common-nodata">
                     <strong>진행중인 채용공고가 없습니다.</strong>
                     <span>채용공고를 등록하면유능한 강사들에게<br>지원받을 수 있습니다.</span>
                     <a href="" class="h-button-ml h-button-orange">채용공고 등록<img src="../../../images/mobile/m_arrow_left_white.png"></a>
                   </div>
+                  -->
 
 
                   <!-- 진행중 -->
@@ -304,6 +306,25 @@
                     </div>
                     <div class="more_toggleBox">
                       <button type="button" class="h-button-icon h-button-nobg h-button-menu more_toggle m0"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+
+                          <!-- 쩜쩜쩜 클릭하면 보이는 팝업 -->
+                          <div class="h-popup-wrap SampleScript" style="display:none;">
+                            <div class="h-m-popup popup-02 popup-02-1 ui-draggable"> 
+                              <div class="pop-body">
+                                <div class="pop-container">
+                                  <div class="editbtnbox">
+                                    <a href="javascript:void(0);" class="h-button-l h-button-white wd100">수정하기</a>
+                                    <a href="javascript:void(0);" class="h-button-l h-button-white wd100">복사하기</a>
+                                    <a href="javascript:void(0);" class="h-button-l h-button-white wd100">마감하기</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="close" title="팝업 닫기"></button>
+                            </div>
+                          </div>
+                          <div class="lottie-bg" style="display:none;"></div>
+
+
                     </div>
                   </div>
 
@@ -675,6 +696,13 @@
     } );
 
 
+    // 쩜쩜쩜버튼 누르면 나오는 팝업
+    $( document ).ready( function() {
+        $( '.more_toggle' ).click( function() {
+          $('.SampleScript').css("display","block");
+          $('.lottie-bg').css("display","block");
+        } );
+    } );
 
 
 
