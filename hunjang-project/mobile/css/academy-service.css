@@ -640,6 +640,17 @@
 /* 학원서비스 -인재정보 */
 .m-injae-home {padding:10px 20px;}
 
+.injae-TopSrchWrap {margin-bottom:20px; position:relative;}
+.injae-TopSrchWrap .h-button-icon-refresh {border-radius:100%; margin:0;}
+.injae-TopSrchWrap .srch-detailBtn {width:46px; height:42px; border:1px solid #25B2C8; background:url(../images/mobile/m-srch-detailBtn.png) #fff center no-repeat; border-radius:50px; background-size: 14px;}
+.injae-TopSrchWrap .cmn-detailSrch {position:absolute; top:0; right:-2px; z-index: 2; padding-left: 20px; background-image: linear-gradient(to right, transparent , #F5F7FA 30%) !important;}
+
+.srchSet-swiper .swiper-slide {display: flex; align-items: flex-end; width: auto; margin-right:3px;}
+.srchSet-swiper .swiper-slide button:not(.h-button-icon-refresh) {border:1px solid #CCD1D7; height:42px; line-height:40px; padding:0 16px; border-radius:50px; box-sizing:border-box; font-size:14px; font-weight:500; background:#fff;} 
+.srchSet-swiper .swiper-slide button:not(.h-button-icon-refresh):after {content:""; width:6px; height:6px; display:inline-block; transform:rotate(-45deg); border:1.5px solid #C3CAD4; border-width:0 0 1px 1px; vertical-align:middle; margin:-5px 0 0 10px;}
+.srchSet-swiper .swiper-slide button.on {background:#25B2C8; color:#fff; border-color:#25B2C8;}
+.srchSet-swiper .swiper-slide button.on:after {border-color:#fff;}
+
 .teacher-slideWrap {width: 100%;height:534px;margin-left: auto;margin-right: auto; padding-left: 20px !important;box-sizing: border-box;}
 .teacher-slideWrap .swiper-slide { text-align: center; font-size: 18px; background: #fff; height: calc((100% - 30px) / 2) !important; display: flex; justify-content: center; align-items: center; border: 1px solid #D4DAE2; border-radius: 10px; box-shadow: 1px 3px 9px #0000000D}
 .teacher-slideWrap .view-aplyrThumb {padding-bottom:0;}
@@ -654,6 +665,9 @@
 .view-aplyrThumb .myGonggoList .sort {font-size:12px; color:#333333;}
 .view-aplyrThumb .myGonggoList .wnt-location {line-height:20px;}
 .view-aplyrThumb .myGonggoList .btnbox {margin-top:10px;}
+.view-aplyrThumb.lastBox {background:url(../images/mobile/aplyslide-nodataImg.png)#618ab0 no-repeat; height:100%; display:flex; flex-direction:column; justify-content: space-between; width:100%; padding:30px 15px 15px; box-sizing:border-box; border-radius:10px;}
+.view-aplyrThumb.lastBox p {font-size:13px; line-height:20px; color:#fff;}
+.view-aplyrThumb.lastBox a {font-size:13px; height:34px; line-height:34px; margin:0;}
 .m-hunjang-wrap .small-rdsBtn {border:1px solid #C3CAD4; border-radius:50px; padding:4px 10px; font-size:12px;}
 .m-hunjang-wrap .small-rdsBtn.stateBtn {color:#26B2C8; margin-right:5px;}
 .m-hunjang-wrap .small-rdsBtn.sigangBtn {color:#7E7E7E;}
@@ -666,10 +680,18 @@
 .m-injae-home .myGonggoList .list-whitebox .statebox button + .sigangBtn {margin-left:-5px;}
 
 .m-injae-home .injaeInfo-Titbox {}
-.m-injae-home .injaeInfo-Titbox .totlaNum {}
-.m-injae-home .injaeInfo-Titbox .totlaNum span {}
-.m-injae-home .injaeInfo-Titbox .view-modeBox {}
-.m-injae-home .injaeInfo-Titbox .view-modeBox select {}
-.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select {}
-.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-03 {}
-.m-injae-home .injaeInfo-Titbox .view-modeBox .h-button-icon-refresh {}
+.m-injae-home .injaeInfo-Titbox .homeBlockTit {display:flex; padding-bottom:5px;}
+.m-injae-home .injaeInfo-Titbox .totlaNum {font-size:13px; color:#9A9A9A; margin-left:8px;}
+.m-injae-home .injaeInfo-Titbox .totlaNum span {font-weight:500; color:#333333;}
+
+.m-injae-home .injaeInfo-Titbox .view-modeBox {display:flex; position: relative; width: 100%; padding:10px 15px 0; box-sizing:border-box;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox select { height: 35px; font-size: 13px; width: 115px; min-width: auto; margin-right:5px;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select {position:relative; width:50%; flex-grow:2;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-04 {margin-left: 0; height: 35px;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-04 input[type="radio"] + label {padding: 10px 15px; font-size: 13px; height: 35px;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-04 input[type="radio"] + label:after {top: 14px; left: 19px;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-button-icon-refresh {margin: 0; width: 35px; height: 35px;}
+
+    @media (max-width:450px){
+        .m-injae-home .injaeInfo-Titbox .view-modeBox select {position: absolute; right: 15px; margin-right: 0; margin-top: -45px;}
+    }
