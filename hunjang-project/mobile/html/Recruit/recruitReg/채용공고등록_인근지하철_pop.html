@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>채용공고등록 인근지하철 팝업</title>
+  <link rel="stylesheet" href="../../../css/font.css" />
+  <link rel="stylesheet" href="../../../css/common.css" />
+  <link rel="stylesheet" href="../../../css/styleGuide.css" />
+  <link rel="stylesheet" href="../../../css/layout.css" />
+  <link rel="stylesheet" href="../../../css/popup.css" />
+  <link rel="stylesheet" href="../../../css/recruit.css" />
+  <link rel="stylesheet" href="../../../css/recruit-info.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<div>
+  <div class="wrap">
+    <!-- popup 디자인 01 -->
+    <div class="h-popup-wrap">
+      <div class="h-m-popup popup-01 ui-draggable">
+        <div class="pop-header ui-draggable-handle">
+          <p class="pop-title text-h3">인근 지하철 선택</p>
+        </div>
+
+        <div class="pop-body">
+          <!-- 검색영역 [s]-->
+          <div class="search-wrap">
+            <div class="search-btn"><button type="button" class="text-none"></button></div>
+            <div class="search-input"><input type="text" name="" id="" placeholder="역명을 입력해 주세요." /></div>
+            <div class="del-text-wrap">
+              <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+            </div>
+          </div>
+          <!-- 검색영역 [e]-->
+
+          <!-- 검색시 노출되는 검색결과 [s] -->
+          <div class="subject-search-wrap on" style="border-color:#E0E6EF">
+            <ul class="subject-list">
+              <!-- 체크 됐을때 class="checked" 추가 -->
+              <li class="checked">
+                <div class="h-checkbox checkbox04">
+                  <input type="checkbox" id="checkbox01_1" name="checkbox01" checked />
+                  <label for="checkbox01_1"><span class="search-keyword">강남</span>역 <p class="h-subway seoul line-2">2호선</p></label>
+                </div>
+              </li>
+              <li>
+                <div class="h-checkbox checkbox04">
+                  <input type="checkbox" id="checkbox01_2" name="checkbox01" />
+                  <label for="checkbox01_2"><span class="search-keyword">강남</span>구청역 <p class="h-subway seoul line-7">7호선</p></label>
+                </div>
+              </li>
+              <li>
+                <div class="h-checkbox checkbox04">
+                  <input type="checkbox" id="checkbox01_3" name="checkbox01" />
+                  <label for="checkbox01_3"><span class="search-keyword">강남</span>구청역 <p class="h-subway seoul line-sb">신분당</p></label>
+                </div>
+              </li>
+              <li>
+                <div class="h-checkbox checkbox04">
+                  <input type="checkbox" id="checkbox01_4" name="checkbox01" />
+                  <label for="checkbox01_4"><span class="search-keyword">강남</span>대역 <p class="h-subway seoul line-ev">에버라인</p></label>
+                </div>
+              </li>
+              <li>
+                <div class="h-checkbox checkbox04">
+                  <input type="checkbox" id="checkbox01_5" name="checkbox01" />
+                  <label for="checkbox01_5"><span class="search-keyword">강남</span>구청역 <p class="h-subway seoul line-si">수인분당</p></label>
+                </div>
+              </li>
+
+              <!-- 검색한 내용이 없는 경우 -->
+              <li class="no-data" style="display:none;">
+                <span>검색하신 과목명이 없습니다.</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 검색시 노출되는 검색결과 [e] -->
+
+          <div class="pop-container full-size">
+            <!-- 모집부문 선택 [s] -->
+            <!-- 모집부문 선택 [e] -->
+          </div>
+
+          <!-- 선택항목 박스 [s] -->
+          <div class="select-item-box">
+            <div class="text-box">
+              <p>선택 항목 <span class="select-num">0</span></p>
+              <p class="description">최대 2개까지 선택 가능</p>
+            </div>
+            <div class="box-selected">
+              <ul>
+                <li class="blue-box">
+                  <p class="text-subtitle4 flex flex-center"><span class="h-subway seoul line-2 mr5">2호선</span> 강남역</p>
+                  <div class="flex flex-center text-subtitle4 mt15">
+                    <input type="text" class="mr5" style="width:60px;">
+                    번 출구
+                    <select name="" id="" class="ml5 mr5">
+                      <option value="">500m (도보 7분)</option>
+                    </select> 이내
+                  </div>
+                  <button type="button" class="small-closeBtn"></button>
+                </li>
+
+                <li class="blue-box">
+                  <p class="text-subtitle4 flex flex-center"><span class="h-subway seoul line-2 mr5">2호선</span> 강남역</p>
+                  <div class="flex flex-center text-subtitle4 mt15">
+                    <input type="text" class="mr5" style="width:60px;">
+                    번 출구
+                    <select name="" id="" class="ml5 mr5">
+                      <option value="">500m (도보 7분)</option>
+                    </select> 이내
+                  </div>
+                  <button type="button" class="small-closeBtn"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <!-- 선택항목 박스 [e] -->
+
+          <!-- 버튼박스 [s] -->
+          <div class="btmbtnbox">
+            <a href="#" class="resetbtn"><span>초기화</span></a>
+
+            <a href="#" class="sendRespon select">
+              <!-- 선택완료 전 unselect, 선택완료 select class 추가 -->
+              선택완료
+            </a>
+          </div>
+          <!-- 버튼박스 [e] -->
+        </div>
+        <button type="button" class="close" title="팝업 닫기"></button>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+
+</html>
