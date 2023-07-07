@@ -43,7 +43,8 @@
     <!-- // -->
 
     <!-- nav -->
-    <div class="nav"> <!-- 스크롤되면 여기에 fixed 클래스가 추가됩니다.! 참고 :  https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/f1b14aa8-7c85-4be3-9df0-8f32708dcced/specs/ -->
+    <div class="nav">
+      <!-- 스크롤되면 여기에 fixed 클래스가 추가됩니다.! 참고 :  https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/f1b14aa8-7c85-4be3-9df0-8f32708dcced/specs/ -->
       <div class="swiper nav-swiper swiper-initialized swiper-horizontal">
         <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
           <div class="swiper-slide active swiper-slide-active" role="group" aria-label="1 / 12"><a href="">학원 홈</a></div>
@@ -59,23 +60,24 @@
           <div class="swiper-slide" role="group" aria-label="11 / 12"><a href="">채용광고 안내</a></div>
           <div class="swiper-slide" role="group" aria-label="12 / 12"><a href="">이력서 열람서비스</a></div>
         </div>
-      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
       <button type="button" class="btn-tgl-allmenu"></button>
       <!-- 2) 전체메뉴 버튼 클릭시 보여지는 내용 -->
       <div class="m_allmenu_popup" style="display:none;">
         <div class="allmenupopTit">전체메뉴</div>
-          <a href="">학원 홈</a>
-          <a href="">채용공고 등록</a>
-          <a href="">채용공고 관리</a>
-          <a href="">인재정보</a>
-          <a href="">인재매칭</a>
-          <a href="">스크랩 인재</a>
-          <a href="">공개 제의한 인재</a>
-          <a href="">전자근로계약 관리</a>
-          <a href="">결제내역 관리</a>
-          <a href="">학원정보 관리</a>
-          <a href="">채용광고 안내</a>
-          <a href="">이력서 열람서비스</a>
+        <a href="">학원 홈</a>
+        <a href="">채용공고 등록</a>
+        <a href="">채용공고 관리</a>
+        <a href="">인재정보</a>
+        <a href="">인재매칭</a>
+        <a href="">스크랩 인재</a>
+        <a href="">공개 제의한 인재</a>
+        <a href="">전자근로계약 관리</a>
+        <a href="">결제내역 관리</a>
+        <a href="">학원정보 관리</a>
+        <a href="">채용광고 안내</a>
+        <a href="">이력서 열람서비스</a>
       </div>
     </div>
     <script>
@@ -93,6 +95,36 @@
 
               <div class="m-injae-home">
               
+
+                <!-- 상단 검색필터 영역
+                참고링크 : https://xd.adobe.com/view/4ace161a-8bb0-4b73-a4e2-a08671e6fdbc-1f9d/screen/397d084a-26da-48f7-8396-f0316c3c2da7/specs/
+                -->
+                <div class="injae-TopSrchWrap">
+                  <div class="swiper srchSet-swiper swiper-initialized swiper-horizontal">
+                    <div class="swiper-wrapper" aria-live="polite">
+                      <div class="swiper-slide" role="group">
+                        <!-- 새로고침버튼은 선택된 검색값이 있을때에만 보여집니다. -->
+                        <button type="button" class="h-button-m h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></button>
+                      </div>
+                      <div class="swiper-slide active swiper-slide-active" role="group"><button type="button" class="on">지역</button></div>
+                      <div class="swiper-slide swiper-slide-next" role="group"><button type="button">과목/직무</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">학력</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">경력</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">급여</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">근무형태</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">근무기간</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">근무일수</button></div>
+                      <div class="swiper-slide" role="group"><button type="button">근무요일</button></div> 
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                  </div>
+                  <div class="cmn-detailSrch">
+                    <button type="button" class="srch-detailBtn h-button-m"></button>
+                  </div>  
+                </div>
+
+
+
                   <!-- 스페셜 강사 -->
                   <div class="flex flex-between flex-center blockTitbox">
                     <strong class="homeBlockTit">스페셜 강사</strong>
@@ -130,16 +162,122 @@
                                       </div>
                                     </label>
                                   </div>
-
                                 </div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide">
+                                  <div class="view-aplyrThumb">
+                                    <input type="radio" id="thumb-Slide01" class="scrap-radio" name="aplrSelect">
+                                    <label for="thumb-Slide01">
+                                      <div class="prfilBox"><img src="../../../images/dummy-man.svg"></div>
+                                      <div class="prfilInfo">
+                                        <strong>홍길순
+                                          <span>(여, 33세)</span>
+                                        </strong>
+                                        <p class="h-txt-pit">5년 5개월</p>
+                                      </div>
+                                      <div class="myGonggoList">
+                                        <strong class="rsmTit">두번째 인재가 보여집니다~~</strong>
+                                        <div class="wnt-location p0">
+                                          <div class="dpt1">서울</div>
+                                          <div class="dpt2">구로구</div>
+                                          <div class="dpt2">종로구</div>
+                                        </div>
+                                        <div class="sort">파트, 단기, 알바</div>
+                                        <div class="btnbox">
+                                          <button type="button" class="small-rdsBtn stateBtn">이직고려</button>
+                                          <button type="button" class="small-rdsBtn sigangBtn">시강</button>
+                                        </div>
+                                      </div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="view-aplyrThumb">
+                                    <input type="radio" id="thumb-Slide01" class="scrap-radio" name="aplrSelect">
+                                    <label for="thumb-Slide01">
+                                      <div class="prfilBox"><img src="../../../images/dummy-woman.svg"></div>
+                                      <div class="prfilInfo">
+                                        <strong>홍길삼
+                                          <span>(여, 33세)</span>
+                                        </strong>
+                                        <p class="h-txt-pit">5년 5개월</p>
+                                      </div>
+                                      <div class="myGonggoList">
+                                        <strong class="rsmTit">세번째 인재 ~~ㅊ 333 ~~~</strong>
+                                        <div class="wnt-location p0">
+                                          <div class="dpt1">서울</div>
+                                          <div class="dpt2">구로구</div>
+                                          <div class="dpt2">종로구</div>
+                                        </div>
+                                        <div class="sort">파트, 단기, 알바</div>
+                                        <div class="btnbox">
+                                          <button type="button" class="small-rdsBtn stateBtn">즉출가능</button>
+                                        </div>
+                                      </div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="view-aplyrThumb">
+                                    <input type="radio" id="thumb-Slide01" class="scrap-radio" name="aplrSelect">
+                                    <label for="thumb-Slide01">
+                                      <div class="prfilBox"><img src="../../../images/dummy-man.svg"></div>
+                                      <div class="prfilInfo">
+                                        <strong>홍길순
+                                          <span>(여, 33세)</span>
+                                        </strong>
+                                        <p class="h-txt-pit">5년 5개월</p>
+                                      </div>
+                                      <div class="myGonggoList">
+                                        <strong class="rsmTit">학강마 이벤트 테스트 이력서 두줄까지 보여집니다.</strong>
+                                        <div class="wnt-location p0">
+                                          <div class="dpt1">서울</div>
+                                          <div class="dpt2">구로구</div>
+                                          <div class="dpt2">종로구</div>
+                                        </div>
+                                        <div class="sort">파트, 단기, 알바</div>
+                                        <div class="btnbox">
+                                          <button type="button" class="small-rdsBtn stateBtn">이직고려</button>
+                                          <button type="button" class="small-rdsBtn sigangBtn">시강</button>
+                                        </div>
+                                      </div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="view-aplyrThumb">
+                                    <input type="radio" id="thumb-Slide01" class="scrap-radio" name="aplrSelect">
+                                    <label for="thumb-Slide01">
+                                      <div class="prfilBox"><img src="../../../images/dummy-man.svg"></div>
+                                      <div class="prfilInfo">
+                                        <strong>홍길순
+                                          <span>(여, 33세)</span>
+                                        </strong>
+                                        <p class="h-txt-pit">5년 5개월</p>
+                                      </div>
+                                      <div class="myGonggoList">
+                                        <strong class="rsmTit">학강마 이벤트 테스트 이력서 두줄까지 보여집니다.</strong>
+                                        <div class="wnt-location p0">
+                                          <div class="dpt1">서울</div>
+                                          <div class="dpt2">구로구</div>
+                                          <div class="dpt2">종로구</div>
+                                        </div>
+                                        <div class="sort">파트, 단기, 알바</div>
+                                        <div class="btnbox">
+                                          <button type="button" class="small-rdsBtn stateBtn">이직고려</button>
+                                          <button type="button" class="small-rdsBtn sigangBtn">시강</button>
+                                        </div>
+                                      </div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <!-- 빈구좌가 있을경우 - 슬라이드가 홀수일경우 표시됨  : lastBox-->
+                                  <div class="view-aplyrThumb lastBox">
+                                    <p><span class="h-txt-medium">훈장마을 영역을<br> 클릭</span>하시고<br>인재정보 영역의<br>주인이 되어주세요.</p>
+                                    <a href="" class="h-button-xms h-button-teal">스페셜 강사 결제</a>
+                                  </div>
+                                </div>
+                                
                               </div>
                               <div class="swiper-pagination"></div>
                             </div>
@@ -153,21 +291,24 @@
                   <strong class="homeBlockTit p15">인재정보
                     <div class="totlaNum">총 <span>11,111</span>건</div>
                   </strong>
-                  <div clas="view-modeBox">
+                  <div class="view-modeBox">
                     <select>
                       <option>업데이트 순</option>
                     </select>
-                    <div class="view-select">
-                      <div class="h-radio-03 h-radio-04">
-                        <input type="radio" name="hradio04" id="hradio04_1">
-                        <label for="hradio04_1">전체공개만 보기</label>
+                    <div class="view-select flex flex-between">
+                      <div>
+                        <div class="h-radio-03 h-radio-04">
+                          <input type="radio" name="hradio04" id="hradio04_1">
+                          <label for="hradio04_1">전체공개만</label>
+                        </div>
+                        <div class="h-radio-03 h-radio-04">
+                          <input type="radio" name="hradio04" id="hradio04_2">
+                          <label for="hradio04_2">연락처만 비공개</label>
+                        </div>
                       </div>
-                      <div class="h-radio-03 h-radio-04">
-                        <input type="radio" name="hradio04" id="hradio04_2">
-                        <label for="hradio04_2">연락처 비공개만 보기</label>
-                      </div>
+                      <button type="button" class="h-button-xs h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></button>
                     </div>
-                    <button type="button" class="h-button-xs h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></button>
+                    
                   </div>
                 </div>    
                 
@@ -433,6 +574,20 @@
         clickable: true,
       },
     });
+
+
+    // 티츄 슬라이드
+    var swiper = new Swiper(".srchSet-swiper", {
+      slidesPerView: "auto",
+    });
+
+
+
+
+
+
+
+
   </script>
 </body>
 
