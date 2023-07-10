@@ -1,6 +1,7 @@
 @charset "utf-8"; 
 /*2023-06-29 SSJ*/
 /*2023-07-04 SSJ*/
+/*2023-07-07 SSJ*/
 
 /*리스트 상단 기간 검색바*/
 .m-hunjang-wrap .list-topBox {background: var(--neutral-3);width: 100%; padding:20px 15px 11px;box-sizing:border-box;border-bottom: 1px solid var(--border-basic-3);}
@@ -411,7 +412,8 @@
 
 /* 학원서비스 홈 */
 .m-hunjang-wrap .blockTitbox {position:relative;}
-.m-hunjang-wrap .blockTitbox .popup-04 {padding:30px 50px 30px 30px; top:32px;}
+.m-hunjang-wrap .blockTitbox .popup-04 {padding:30px 30px 30px 30px; top:32px;}
+.m-hunjang-wrap .blockTitbox .popup-04.on {display:block !important;}
 .m-academy-home {background:var(--neutral-3);; padding:10px 0;}
 .m-academy-home .homeBlockTit {font-size:var(--text-subtitle17); line-height:20px;}
 .m-academy-home .homeBlockTit img {vertical-align:middle;}
@@ -677,6 +679,8 @@
 .m-injae-home .myGonggoList .rcrtPart .leftPart {flex-grow: 0; width: 75px; padding: 0; text-align: center; align-items: center; justify-content: center;}
 .m-injae-home .myGonggoList .rcrtPart a:last-child {margin-left:5px;}
 .m-injae-home .myGonggoList .list-mbasic .txtdiv .dd .h-txt-pit:before {content:"|"; color:#E0E6EF; display:inline-block; margin:0 7px; }
+.m-injae-home .myGonggoList .list-mbasic .txtdiv .dd .h-txt-pit.bull-l-none:before {display:none;}
+.m-injae-home .myGonggoList .list-mbasic .txtdiv .dd .h-txt-pit.bull-l-none:after {content:"|"; color:#E0E6EF; display:inline-block; margin:0 7px; }
 .m-injae-home .myGonggoList .list-whitebox .statebox button + .sigangBtn {margin-left:-5px;}
 
 .m-injae-home .injaeInfo-Titbox {}
@@ -691,7 +695,54 @@
 .m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-04 input[type="radio"] + label {padding: 10px 15px; font-size: 13px; height: 35px;}
 .m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-radio-04 input[type="radio"] + label:after {top: 14px; left: 19px;}
 .m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .h-button-icon-refresh {margin: 0; width: 35px; height: 35px;}
+.m-injae-home .injaeInfo-Titbox .view-modeBox .view-select .popup-04 .basic-popup-list li {font-size:12px;}
 
     @media (max-width:450px){
         .m-injae-home .injaeInfo-Titbox .view-modeBox select {position: absolute; right: 15px; margin-right: 0; margin-top: -45px;}
     }
+
+/*인재매칭*/
+.list-mbasic .txtdiv .dl.all-dd .dd {font-size:12px; color:#9A9A9A}
+.list-mbasic .txtdiv .dl.all-dd .dd:not(:last-child):after {content: "|"; color: #E0E6EF; display: inline-block; margin: 0 7px;}
+.now-myservc {background: #43A986; border-radius:10px; padding:20px; box-sizing:border-box; box-shadow: 1px 5px 5px #0000000D; width:calc(100% - 30px); margin:15px 15px 30px;}
+.now-myservc .thisTit {font-size:12px; color:#fff; line-height:24px; margin-bottom:8px;}
+.now-myservc .wrtNum {font-size:13px; color:#fff;}
+.now-myservc .wrtNum b {font-size:26px; color:#FFF700; font-family:'SUIT'; margin-right:3px;}
+.now-myservc .flex.flex-between {align-items:flex-end;}
+.now-myservc .goBuy {background:rgba(255,255,255,0.15); font-size:12px; border-radius:90px; padding:8px 15px; color:#fff;}
+.now-myservc .goBuy:after {content:""; width:13px; height:10px; display:inline-block; background:url(../images/mobile/m_arrow_left_white.png) no-repeat; background-size:100%; transform:rotate(180deg); margin-left:5px;}
+.now-myservc .deadDate {font-size:12px; color:#fff; opacity:0.5; line-height:24px;}
+
+/*스크랩*/
+.m-scrapWrap {width:100%; float:left; display: flex; flex-direction: column; height: 100%;}
+.m-scrapWrap .m-injae-home {flex-grow:2; justify-content:center; display: flex; flex-direction:column;}
+.m-scrapWrap .m-injae-home .common-nodata {margin-top:-30px;}
+.m-scrapWrap .injaeInfo-Titbox .select-set {padding-right:15px;}
+.m-scrapWrap .injaeInfo-Titbox .homeBlockTit {margin-top:8px;}
+.m-scrapWrap .injaeInfo-Titbox .select-set button {font-size:13px; padding: 0px 15px; min-width: auto !important; margin: 0;}
+.m-scrapWrap .myGonggoList .list-whitebox .h-checkbox {position: absolute; right: 20px; bottom: 20px; margin: 0;}
+.m-scrapWrap .list-mbasic .txtdiv .dd .week-day:before {content: "|"; color: #E0E6EF; display: inline-block; margin: 0 7px;}
+
+
+/*공개제의한 인재 목록*/
+.m-hunjang-wrap .openSuggestHrList {padding:5px 0 15px; background:#fff;}
+.m-hunjang-wrap .openSuggestHrList .list-whitebox {border-radius:0; margin-bottom:0; border-bottom:1px solid #E7EDF5;}
+.m-hunjang-wrap .openSuggestHrList .list-mbasic .txtdiv {display:flex; margin-bottom:8px;}
+.m-hunjang-wrap .openSuggestHrList .list-mbasic .txtdiv .dl {}
+.m-hunjang-wrap .openSuggestHrList .list-mbasic .txtdiv .dl:first-child:after {content:""; width:1px; height:12px; border-right:1px solid #E0E6EF;    display: inline-block; vertical-align: middle; margin: 3px 7px 0 -6px;}
+.m-hunjang-wrap .openSuggestHrList .statebox {margin-bottom:0;}
+.m-hunjang-wrap .openSuggestHrList .statebox .h-txt-pit {color:var(--blue-3);}
+.m-hunjang-wrap .openSuggestHrList .rcrtPart {margin:8px 0 10px; height: 35px;}
+.m-hunjang-wrap .openSuggestHrList .rcrtPart .leftPart {border-radius: 4px;}
+.m-hunjang-wrap .openSuggestHrList .btnbox {position:relative;}
+.m-hunjang-wrap .openSuggestHrList .btnbox button {margin:0;}
+.m-hunjang-wrap .openSuggestHrList .btnbox .h-checkbox {margin: 0; position: absolute; right: 0; bottom: 0;}
+
+
+
+
+
+
+
+
+
