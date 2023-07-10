@@ -1,7 +1,7 @@
 @charset "utf-8";
-/*2023-07-04 SSJ*/
 /*2023-07-06 SSJ*/
 /*2023-07-07 SSJ*/
+/*2023-07-10 SSJ*/
 
 /***** 모바일 팝업 공통 (layout) *****/
 .h-popup-wrap {display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; }
@@ -612,9 +612,108 @@
 
 
 /*공개제의한 인재 - 가이드팝업*/
-.openSuggestHr_guidePop {padding:0 0 30px;}
+.openSuggestHr_guidePop {padding:0 0 25px;}
 .openSuggestHr_guidePop .cyan-bgBox {background:#30B5CA; color:#fff; line-height:20px; font-size:13px; border-radius:10px; height:110px; display:flex; align-items:center; justify-content:center; text-align:center;}
 .openSuggestHr_guidePop .imgbox {width:100%; text-align:center;}
 .openSuggestHr_guidePop .imgbox img {max-width:275px;}
 .openSuggestHr_guidePop .swiper-pagination-bullet {width:10px; height:10px; background:#000000; opacity:0.1; margin:0 2px !important;}
 .openSuggestHr_guidePop .swiper-pagination-bullet-active {background:#43A986; opacity:1;}
+.openSuggestHr_guidePop .swiper-pagination {position:relative;}
+
+/* 공개제의한 인재 답변 팝업 */
+.h-m-popup .suggestion_status { width: 50%; display: inline-block; vertical-align: middle; font-weight: var(--text-regular); }
+.h-m-popup .suggestion_status>span { font-size:17px; display: flex; align-items: center; }
+.h-m-popup .suggestion_status>span.acceptance { color:var(--blue-3) }
+.h-m-popup .suggestion_status>span.refusal { color:#BCBCBC }
+.h-m-popup .suggestion_status>span span {font-size:20px; }
+
+.h-m-popup .openOffer-POPUP {background: #F5F7FA; padding: 20px; box-sizing: border-box; width: 100%;}
+.h-m-popup .openOffer-POPUP .employeeInfo { display: flex; margin-bottom: 30px; }
+.h-m-popup .openOffer-POPUP .employeeInfo .profileArea { width:85px; padding-right:20px; box-sizing: border-box; padding-top: 5px; }
+.h-m-popup .openOffer-POPUP .employeeInfo .profileArea .imgbox { width:65px; height:65px; overflow:hidden; border-radius:100%; }
+.h-m-popup .openOffer-POPUP .employeeInfo .profileArea .imgbox img { width:100%; height:100%; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea { width:calc(100% - 85px); }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul { display:flex; flex-direction: column; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li { margin-bottom: 8px; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li:last-child { margin-bottom:0; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li .em-name { font-size:13px; font-weight: 600; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li .gen-old { font-size:12px; color:var(--black-3) }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li.text-subtitle1 {font-size:16px; color: var(--black-1); font-weight: 700; line-height: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul { margin-top: 0; }
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li { padding-left:0; font-size:12px; margin-left:0;}
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li:before {display:none;}
+.h-m-popup .openOffer-POPUP .employeeInfo .infoArea>ul>li>ul>li:first-child:after {content:""; width:1px; height:14px; display:inline-block ; border-right:1px solid #E0E6EF; margin:0 7px; vertical-align:middle;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold { padding:20px; font-size:var(--text-subtitle4); color: var(--black-2); margin-bottom:15px; background: #EBEFF5; border-radius: 10px;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .h-bullet-list {display:flex; background:#fff; justify-content: center; padding: 20px 10px; border-radius: 10px; margin-top: 11px; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox { margin-top:15px; display: flex; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .circle { width:40px; height:40px; line-height: 40px; text-align: center; background:var(--cyan); color:#fff; font-size:var(--text-subtitle5); border-radius:100%; margin-right:15px; margin-top: 3px; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox {width: 30%; flex-grow: 2; line-height: 20px; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .date { font-size:12px; color:var(--black-5); }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox .rightBox .co { font-size:var(--text-subtitle5); }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox + .h-pagination { margin-top:20px; border-top: 1px solid var(--border-basic-4); padding-top: 20px; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide-bold .answerBox + .h-pagination .h-btn { background-color:#fff; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide {padding: 20px; margin-bottom: 20px; background: #fff; border-radius: 10px;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .text-subtitle5 {color:#7e7e7e;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .text-subtitle3 { margin-bottom: 11px; color:#333333; font-weight:500; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list { flex-direction: column; align-items: flex-start; display: flex; border: 1px solid #E7EDF5; border-width: 1px 0; padding: 15px 0; margin-bottom:15px;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li { margin: 0 0 7px 2px !important; font-size:var(--text-subtitle5); display: flex; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit { color: var(--black-5); width: 56px; margin-right: 10px; }
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit:after {display:none;}
+.h-m-popup .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li a { text-decoration:underline; }
+.h-m-popup .openOffer-POPUP .applyTxt { color:var(--black-2) !important; line-height:22px; }
+.h-m-popup .openOffer-POPUP .h-bullet-list li { position:relative; padding-left:6px; font-size:13px; font-weight:var(--text-medium); color:var(--black-2); }
+.h-m-popup .openOffer-POPUP .h-bullet-list li:not(:first-child) { margin-left:20px; }
+.h-m-popup .openOffer-POPUP .h-bullet-list li::before { position:absolute; top:8px; left:0; content:''; width:2px; height:2px; border-radius:50%; background-color:var(--black-3); }
+.h-m-popup .openOffer-POPUP .h-bullet-list li .tit:not(.h-txt-pit) { font-weight:var(--text-regular); color:var(--black-3); }
+.h-m-popup .openOffer-POPUP .h-bullet-list li .tit:not(.h-txt-pit):after { content:':'; margin-left:5px; margin-right:5px; }
+  /*제안보내기*/
+  .h-m-popup .openOffer-POPUP .send-sgst {border-top:1px solid #D4DAE2; margin-top: -5px; padding-top: 15px;}
+  .h-m-popup .openOffer-POPUP .send-sgst p {font-size:14px; line-height:24px; margin-bottom:5px; color:#7E7E7E;}
+  .h-m-popup .openOffer-POPUP .send-sgst textarea {width:100%; border:1px solid #CCD1D7; padding:15px; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:22px; height:195px;}
+  .h-m-popup .openOffer-POPUP .send-sgst div {font-size:13px; color:#333333; line-height:22px; margin-top:15px; margin-bottom:15px;}
+
+/* 결제내역관리 - 납입증명서 발급 신청 팝업 */
+.m-paymentPop {background: #F5F7FA; padding:20px;}
+.m-paymentPop .white-bgBox .h-radio-01 {padding-left:0;}
+.m-paymentPop .white-bgBox .h-radio-01:first-child {margin-bottom:10px;}
+.m-paymentPop .white-bgBox .h-radio-01 input[type="radio"] + label {margin-bottom:0;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl:first-child:not(:only-of-type) {border-bottom:1px solid #E0E6EF; padding-bottom:15px; margin-bottom:20px;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl {margin-bottom:5px; display: flex; justify-content: space-between; align-items: center;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl .dt {margin-bottom: 0;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl .dt:before {display:none;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl .dt span {margin-left:2px; vertical-align:middle;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl .dd {width: 220px;}
+.m-paymentPop .white-bgBox .basic-popup-inputdl .dl .dd input {height:46px !important; padding:0 15px !important;}
+.m-paymentPop .white-bgBox .h-button-ml.wd100 {margin-top:15px !important;}
+
+/*결제내역관리 - 상세이용내역*/
+.m-paymentPop .paydetail-Tit {font-size:16px; color:#151515; font-weight:600; line-height:22px;letter-spacing: -0.5px; border:1px solid #C3CAD4; box-shadow: 0px 5px 8px #0000000D;}
+.m-paymentPop .paydetail-Tit a:after {content:""; width:15px; height:15px; display:inline-block; background:#333; background:url(../images/mobile/m-link-jump.png) no-repeat; background-size:100%; vertical-align:middle; margin:-3px 0 0 5px;}
+
+.m-paymentPop .white-bgBox .prdctNm {font-size:16px; line-height:22px; color:#151515;}
+.m-paymentPop .white-bgBox .period {font-size:12px; color:#9A9A9A; margin-top:3px;}
+.m-paymentPop .mainpayInfoWrap { border-top:1px solid #EBEFF5; margin-top: 15px; }
+.m-paymentPop .mainpayInfoWrap:only-child {margin-top:0; border-top:none;}
+.m-paymentPop .mainpayInfoWrap:only-child li:first-child {padding-top:3px;}
+.m-paymentPop .mainpayInfoWrap>li { border-bottom: 1px solid var(--border-basic-3); display: flex; justify-content: space-between; padding:10px; align-items: center; flex-wrap: wrap; }
+.m-paymentPop .mainpayInfoWrap>li:last-child { border-bottom:none; padding-bottom:3px;}
+.m-paymentPop .mainpayInfoWrap>li .leftTit { font-size:12px; color:#9A9A9A; width: 41%; }
+.m-paymentPop .mainpayInfoWrap>li .leftTit.h-txt-2 {color:#333333;}
+.m-paymentPop .mainpayInfoWrap>li>.num { width: 59%; text-align: right; font-weight:800; }
+.m-paymentPop .mainpayInfoWrap>li>.num .won { font-size:12px; color:var(--black-2); margin-left: 2px; font-weight:400;}
+.m-paymentPop .mainpayInfoWrap>li>.num.h-txt-regular {font-weight:400;}
+.m-paymentPop .mainpayInfoWrap>li>.num .readmoreBnt {margin-left:2px;}
+.m-paymentPop .mainpayInfoWrap>li>.num .readmoreBnt img {transition:0.5s;}
+.m-paymentPop .mainpayInfoWrap>li>.num .readmoreBnt.on img {transform:rotate(180deg);}
+.m-paymentPop .mainpayInfoWrap .detailUl { width: 100%; margin-top:8px; }
+.m-paymentPop .mainpayInfoWrap .detailUl li { font-size:var(--text-subtitle6); color: var(--black-3); display: flex; justify-content: flex-end; margin:6px 0; }
+.m-paymentPop .mainpayInfoWrap .detailUl li:first-child { margin-top:0; }
+.m-paymentPop .mainpayInfoWrap .detailUl li:only-child {margin:-5px 0 0;}
+.m-paymentPop .mainpayInfoWrap .detailUl .litit { }
+.m-paymentPop .mainpayInfoWrap .detailUl .litit strong { font-size:13px; color:var(--black-2); margin-left: 2px; }
+.m-paymentPop .mainpayInfoWrap .detailUl .num { margin-left: 15px; font-size:var(--text-subtitle4); font-weight: 600; }
+.m-paymentPop .mainpayInfoWrap .detailUl .num .won { font-size:var(--text-subtitle6); color: var(--black-3); margin-left: 1px; font-weight: 400; }
+.m-paymentPop .text-subtitle6 + .white-bgBox {margin-bottom:25px;}
+.m-paymentPop .mainpayInfoWrap.inner {width:100%;}
+.m-paymentPop .mainpayInfoWrap.inner li {border-bottom:none; padding:0;}
+.m-paymentPop .mainpayInfoWrap.inner .detailUl.on {border-bottom: 1px solid var(--border-basic-3); padding-bottom: 10px; margin-bottom: 10px; margin-left: -10px; width: calc(100% + 20px);}

@@ -96,205 +96,175 @@
       <div class="content p0">
 
 
-
+        <div class="m-paymentList_Wrap">
           <div class="list-topBox">
             <div class="blockTitbox">
-              <strong class="homeBlockTit">공개 제의한 인재
+              <strong class="homeBlockTit">결제내역 관리
                 <button type="button" class="apply-guidePopbtn"><img src="../../../images/mobile/i-guideBtn.svg"></button>
               </strong>
+
+              <!-- ? 버튼 누르면 나오는 팝업 -->
+              <div class="h-m-popup popup-04 wd100" style="display:none;"> 
+                <p class="h-txt-3 text-subtitle6">
+                  최근 5년 이내 결제 내역 조회가 가능합니다. <br>
+                  신용카드, 휴대폰, 비대면 결제 시 세금계산서가 발행되지 않습니다.
+                </p>
+                <button type="button" class="close" title="팝업 닫기"></button>
+              </div>
+
             </div>
             
             <ul class="acadmy-topBlock mt10">
               <li>
                 <button type="button" class="on"> <!-- 활성화된 탭은 on클래스가 들어갑니다. -->
-                  <strong>5</strong>
+                  <strong>14</strong>
                   <p>전체</p>
                 </button>
               </li>
               <li>
                 <button type="button">
-                  <strong>0</strong>
-                  <p>수락</p>
+                  <strong>10</strong>
+                  <p>결제완료</p>
                 </button>
               </li>
               <li>
                 <button type="button">
                   <strong>2</strong>
-                  <p>거절</p>
+                  <p>미결제</p>
                 </button>
               </li>
               <li>
                 <button type="button">
                   <strong>2</strong>
-                  <p>미응답</p>
+                  <p>결제취소</p>
                 </button>
               </li>
             </ul>
-            <div class="acadmy-topSrchbox">
-              <input type="text" placeholder="이력서 제목, 이름, 요청자 이름">
-              <button type="button"></button>
+            <div class="h-radio-02">
+              <input type="radio" id="hradio02_1" name="hradio02" checked="">
+              <label for="hradio02_1">일주일</label>
+              <input type="radio" id="hradio02_2" name="hradio02">
+              <label for="hradio02_2">1개월</label>
+              <input type="radio" id="hradio02_4" name="hradio02">
+              <label for="hradio02_4">3개월</label>
+              <input type="radio" id="hradio02_5" name="hradio02">
+              <label for="hradio02_5">6개월</label>
             </div>
-            <div class="acadmy-TopbtnBox flex flex-between flex-end">
+            <div class="periodBlock flex flex-between">
               <div>
-                <span class="h-txt-3 text-subtitle4">공개 제의한 인재 가이드</span>
-                <button type="button" onclick="location.href='공개 제의한 인재_가이드팝업(pop).html'" class="apply-guidePopbtn" style="padding-left:0 !important;"><img src="../../../images/mobile/i-guideBtn.svg"></button>
+                <span class="date-picker">
+                  <input type="text" id="datepickerStart" class="datePicker hasDatepicker" value="2022.07.18"><img class="ui-datepicker-trigger" src="../../../images/btn_calendar.svg" alt="..." title="...">
+                  ~
+                  <input type="text" id="datepickerEnd" class="datePicker hasDatepicker" value="2022.07.18"><img class="ui-datepicker-trigger" src="../../../images/btn_calendar.svg" alt="..." title="...">
+                </span>
               </div>
-              <div>
-                <a href="javascript:void(0);" class="h-button-xs0">전체선택</a>
-                <a href="javascript:void(0);" class="h-button-xs0 h-button-grey1">선택삭제</a>
+              <div class="btnbox">
+                <button type="button" class="h-button-xs0">검색</button>
+                <button type="button" class="h-button-xs h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></button>
               </div>
             </div>
           </div>
 
 
 
-          
-          <div class="myGonggoList openSuggestHrList">
-            <div class="list-whitebox flex">
-              <div class="l-prfbox">
-                <div class="pfImgbox">
-                  <img src="https://i.namu.wiki/i/2CgJPSvoXuX7qReA-m3vOgM-DaZtvkJKjldMRMay3ipm8evXgYZM6_cHpNDmPCM_-QlTOx-RbYvdB1_p_XDlZKu3bSLrriNz-b9MGly_HHo8NzKwuVWdYRMFHVu1HAb3Mm9R2I7dt_fv8L7Q5f0gbA.webp">
+
+
+
+          <div class="mypaymentList">
+            <div class="list-whitebox">
+              <p class="text-subtitle4 h-txt-2">훈장마을 구로디지털단지 과학/수학 강사 모집</p>
+              <strong class="text-subtitle2 h-txt-1">스페셜 TOP</strong>
+              <p class="text-subtitle6 h-txt-5">(2023.03.06 ~ 2023.03.12 - 10일)</p>
+              <div class="lightblue-bgbox flex flex-between">
+                <div class="txtdiv">
+                  <div class="dl">
+                    <div class="dt">· 결제상태 : </div>
+                    <div class="dd"><span class="h-txt-pit">결제완료</span></div>
+                    <!-- <div class="dd"><span class="h-txt-2 h-txt-medium">미결제</span></div> -->
+                    <!-- <div class="dd"><span class="h-txt-6 h-txt-medium">결제취소</span></div> -->
+                  </div>
+                  <div class="dl">
+                    <div class="dt">· 결제일자 : </div>
+                    <div class="dd">2023.03.17</div>
+                  </div>
                 </div>
-                <strong>홍길동</strong>
-                <span>(남, 30세)</span>
-              </div>
-              <div class="r-txtbox">
-                <div class="list-mbasic">
+                <div>
                   <div class="txtdiv">
-                    <div class="dl straightUl">
-                      <div class="dt">요청일 : </div>
-                      <div class="dd">
-                        <span>2023.03.11</span>
-                      </div>
-                    </div>
-                    <div class="dl straightUl">
-                      <div class="dt">요청자 : </div>
-                      <div class="dd">고길동</div>
+                    <div class="dl">
+                      <div class="dt">· 결제금액</div>
+                      <div class="dd"><strong class="h-txt-orange">770,000</strong>원</div>
                     </div>
                   </div>
                 </div>
-                <div class="ggTitle"><a href="지원자 이력서 보기 페이지">밝은 미소를 바탕으로 고객 응대에 있습니다. 무슨말인지..</a></div>
-                <div class="list-mbasic">
-                  <div class="statebox">
-                    <span class="h-txt-pit">8년 1개월</span>
-                    <span class="h-txt-medium">대학교(4년) 졸업</span>
-                  </div>
-                  <div class="rcrtPart flex flex-between">
-                    <div class="leftPart">
-                      <span>· 승인상태 :</span>
-                      <div class="h-txt-pit">수락</div>
-                      <span>(2023.03.16)</span>
-                    </div>
-                  </div>
-                  <div class="btnbox">
-                    <button type="button" class="h-button-xs0 h-button-white">답변보기</button>
-                    <div class="h-checkbox checkbox01">
-                      <label>
-                        <input type="checkbox" name="checkForm" checked/><span class="spanLabel"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div class="btnbox">
+                <button type="button" class="h-button-xs0 h-button-white">카드전표</button>
+                <a href="결제내역 상세보기 페이지" class="h-button-xs0 h-button-grey2">상세보기</a>
               </div>
             </div>
 
-            <div class="list-whitebox flex">
-              <div class="l-prfbox">
-                <div class="pfImgbox">
-                  <img src="../../../images/dummy-man.svg">
+            <div class="list-whitebox">
+              <p class="text-subtitle4 h-txt-2">훈장마을 구로디지털단지 과학/수학 강사 모집</p>
+              <strong class="text-subtitle2 h-txt-1">스페셜 TOP</strong>
+              <p class="text-subtitle6 h-txt-5">(2023.03.06 ~ 2023.03.12 - 10일)</p>
+              <div class="lightblue-bgbox flex flex-between">
+                <div class="txtdiv">
+                  <div class="dl">
+                    <div class="dt">· 결제상태 : </div>
+                    <div class="dd"><span class="h-txt-2 h-txt-medium">미결제</span></div>
+                  </div>
+                  <div class="dl">
+                    <div class="dt">· 결제일자 : </div>
+                    <div class="dd">2023.03.17</div>
+                  </div>
                 </div>
-                <strong>홍길동</strong>
-                <span>(남, 30세)</span>
-              </div>
-              <div class="r-txtbox">
-                <div class="list-mbasic">
+                <div>
                   <div class="txtdiv">
-                    <div class="dl straightUl">
-                      <div class="dt">요청일 : </div>
-                      <div class="dd">
-                        <span>2023.03.11</span>
-                      </div>
-                    </div>
-                    <div class="dl straightUl">
-                      <div class="dt">요청자 : </div>
-                      <div class="dd">고길동</div>
+                    <div class="dl">
+                      <div class="dt">· 결제금액</div>
+                      <div class="dd"><strong class="h-txt-orange">770,000</strong>원</div>
                     </div>
                   </div>
                 </div>
-                <div class="ggTitle"><a href="지원자 이력서 보기 페이지">밝은 미소를 바탕으로 고객 응대에 있습니다. 무슨말인지..</a></div>
-                <div class="list-mbasic">
-                  <div class="statebox">
-                    <span class="h-txt-pit">8년 1개월</span>
-                    <span class="h-txt-medium">대학교(4년) 졸업</span>
-                  </div>
-                  <div class="rcrtPart flex flex-between">
-                    <div class="leftPart">
-                      <span>· 승인상태 :</span>
-                      <div class="h-txt-pit">수락</div>
-                      <span>(2023.03.16)</span>
-                    </div>
-                  </div>
-                  <div class="btnbox">
-                    <button type="button" class="h-button-xs0 h-button-white">답변보기</button>
-                    <div class="h-checkbox checkbox01">
-                      <label>
-                        <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div class="btnbox">
+                <button type="button" class="h-button-xs0 h-button-white h-txt-6">영수증</button>
+                <a href="결제내역 상세보기 페이지" class="h-button-xs0 h-button-grey2">상세보기</a>
               </div>
             </div>
 
-            <div class="list-whitebox flex">
-              <div class="l-prfbox">
-                <div class="pfImgbox">
-                  <img src="../../../images/dummy-man.svg">
+            <div class="list-whitebox">
+              <p class="text-subtitle4 h-txt-2">훈장마을 구로디지털단지 과학/수학 강사 모집</p>
+              <strong class="text-subtitle2 h-txt-1">스페셜 TOP</strong>
+              <p class="text-subtitle6 h-txt-5">(2023.03.06 ~ 2023.03.12 - 10일)</p>
+              <div class="lightblue-bgbox flex flex-between">
+                <div class="txtdiv">
+                  <div class="dl">
+                    <div class="dt">· 결제상태 : </div>
+                    <div class="dd"><span class="h-txt-6 h-txt-medium">결제취소</span></div>
+                  </div>
+                  <div class="dl">
+                    <div class="dt">· 결제일자 : </div>
+                    <div class="dd">2023.03.17</div>
+                  </div>
                 </div>
-                <strong>홍길동</strong>
-                <span>(남, 30세)</span>
-              </div>
-              <div class="r-txtbox">
-                <div class="list-mbasic">
+                <div>
                   <div class="txtdiv">
-                    <div class="dl straightUl">
-                      <div class="dt">요청일 : </div>
-                      <div class="dd">
-                        <span>2023.03.11</span>
-                      </div>
-                    </div>
-                    <div class="dl straightUl">
-                      <div class="dt">요청자 : </div>
-                      <div class="dd">고길동</div>
+                    <div class="dl">
+                      <div class="dt">· 결제금액</div>
+                      <div class="dd"><strong class="h-txt-orange">770,000</strong>원</div>
                     </div>
                   </div>
                 </div>
-                <div class="ggTitle"><a href="지원자 이력서 보기 페이지">밝은 미소를 바탕으로 고객 응대에 있습니다. 무슨말인지..</a></div>
-                <div class="list-mbasic">
-                  <div class="statebox">
-                    <span class="h-txt-pit">8년 1개월</span>
-                    <span class="h-txt-medium">대학교(4년) 졸업</span>
-                  </div>
-                  <div class="rcrtPart flex flex-between">
-                    <div class="leftPart">
-                      <span>· 승인상태 :</span>
-                      <div class="h-txt-pit">수락</div>
-                      <span>(2023.03.16)</span>
-                    </div>
-                  </div>
-                  <div class="btnbox">
-                    <button type="button" class="h-button-xs0 h-button-white">답변보기</button>
-                    <div class="h-checkbox checkbox01">
-                      <label>
-                        <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div class="btnbox">
+                <button type="button" class="h-button-xs0 h-button-white h-txt-6">영수증</button>
+                <a href="결제내역 상세보기 페이지" class="h-button-xs0 h-button-grey2">상세보기</a>
               </div>
             </div>
-            
-            <div class="h-pagination wh40 flex-set mt10" aria-disabled="false" role="navigation">
+
+
+            <div class="h-pagination wh40 flex-set mt20" aria-disabled="false" role="navigation">
               <div class="h-pagination-content flex no-wrap items-center">
           
                 <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
@@ -339,13 +309,8 @@
           
               </div>
             </div>
-        
           </div>
-
-
-
-
-
+        </div>
 
 
 
@@ -428,8 +393,8 @@
   <script>
     //  1) 사이드메뉴 열기
     $( document ).ready( function() {
-        $( '.btn-allmenu' ).click( function() {
-          $('.m-RmenutPop').toggleClass("on");
+        $( '.apply-guidePopbtn' ).click( function() {
+          $('.popup-04').toggleClass("on");
           $('.lottie-bg').css('display','inline-block');
         } );
     } );
