@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>채용정보 홈</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../../css/layout.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/resume-regist.css">
+  <link rel="stylesheet" href="../../../css/recruit-info.css">
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+
+  <div class="m-hunjang-wrap">
+
+    <!-- header -->
+    <header class="hc-white">
+      <div class="location">
+        <span><a href="" class="toplogoBtn">채용정보</a></span>
+      </div>
+      <button type="button" class="btn-allmenu">
+        <img src="../../../images/mobile/m_icon_allmenu_gray.png" alt="">
+      </button>
+    </header>
+    <!-- // -->
+
+    <!-- nav -->
+    <div class="nav">
+      <!-- 스크롤되면 여기에 fixed 클래스가 추가됩니다.! 참고 :  https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/f1b14aa8-7c85-4be3-9df0-8f32708dcced/specs/ -->
+      <div class="swiper nav-swiper swiper-initialized swiper-horizontal">
+        <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+          <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 12"><a href="">홈</a></div>
+          <div class="swiper-slide active" role="group" aria-label="2 / 12"><a href="">오늘의 채용정보</a></div>
+          <div class="swiper-slide" role="group" aria-label="3 / 12"><a href="">TOP100</a></div>
+          <div class="swiper-slide" role="group" aria-label="4 / 12"><a href="">지역별</a></div>
+          <div class="swiper-slide" role="group" aria-label="5 / 12"><a href="">과목/직무별</a></div>
+          <div class="swiper-slide" role="group" aria-label="6 / 12"><a href="">학력별</a></div>
+          <div class="swiper-slide" role="group" aria-label="7 / 12"><a href="">경력별</a></div>
+          <div class="swiper-slide" role="group" aria-label="8 / 12"><a href="">근무형태별</a></div>
+          <div class="swiper-slide" role="group" aria-label="9 / 12"><a href="">급여별</a></div>
+          <div class="swiper-slide" role="group" aria-label="10 / 12"><a href="">채용광고 안내</a></div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+      <button type="button" class="btn-tgl-allmenu"></button>
+      <!-- 2) 전체메뉴 버튼 클릭시 보여지는 내용 -->
+      <div class="m_allmenu_popup" style="display:none;">
+        <div class="allmenupopTit">채용정보 전체메뉴</div>
+        <a href="">채용정보 홈</a>
+        <a href="">오늘의 채용정보</a>
+        <a href="">TOP100</a>
+        <a href="">지역별</a>
+        <a href="">과목/직무별</a>
+        <a href="">학력별</a>
+        <a href="">경력별</a>
+        <a href="">근무형태별</a>
+        <a href="">급여별</a>
+        <a href="">채용광고 안내</a>
+      </div>
+    </div>
+    <!-- // -->
+
+    <!-- nav Swiper -->
+    <script>
+      var swiper = new Swiper(".nav-swiper", {
+        slidesPerView: "auto",
+      });
+    </script>
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- content -->
+      <div class="content p0">
+
+        <div class="TopSrchWrap_guidetxt">
+          <p class="h-txt-5 text-subtitle5 mb10">최근에 업데이트된 최신 채용정보만 모았습니다.</p>
+          <div class="TopSrchWrap">
+            <div class="swiper srchSet-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+              <div class="swiper-wrapper" aria-live="polite" id="swiper-wrapper-ef957ca5fe34c0bc" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10">
+                  <!-- 새로고침버튼은 선택된 검색값이 있을때에만 보여집니다. -->
+                  <button type="button" class="h-button-m h-btn-sqre h-button-icon-refresh h-button-grey1"><i class="material-symbols-outlined" aria-hidden="true">cached</i></button>
+                </div>
+                <div class="swiper-slide active swiper-slide-next" role="group" aria-label="2 / 10"><button type="button" class="on" onclick="location.href='search_검색_지역.html' ">지역</button></div>
+                <div class="swiper-slide" role="group" aria-label="3 / 10"><button type="button">과목/직무</button></div>
+                <div class="swiper-slide" role="group" aria-label="4 / 10"><button type="button">학력</button></div>
+                <div class="swiper-slide" role="group" aria-label="5 / 10"><button type="button">경력</button></div>
+                <div class="swiper-slide" role="group" aria-label="6 / 10"><button type="button">급여</button></div>
+                <div class="swiper-slide" role="group" aria-label="7 / 10"><button type="button">근무형태</button></div>
+                <div class="swiper-slide" role="group" aria-label="8 / 10"><button type="button">근무기간</button></div>
+                <div class="swiper-slide" role="group" aria-label="9 / 10"><button type="button">근무일수</button></div>
+                <div class="swiper-slide" role="group" aria-label="10 / 10"><button type="button">근무요일</button></div>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+            <div class="cmn-detailSrch">
+              <button type="button" class="srch-detailBtn h-button-m"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="recruitInfo-main">
+          
+
+          <!-- 오늘의 채용정보 -->
+          <div class="list-mbasic-wrap article-todays" style="display:none;">
+            <div class="list-mbasic mb20">
+              <div class="libox">
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_1" checked="">
+                    <label for="notice-scrap1_1" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+
+              <div class="libox">
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_2" checked="">
+                    <label for="notice-scrap1_2" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+
+            <!-- pagination -->
+            <div class="h-pagination wh40 flex-set" aria-disabled="false" role="navigation">
+              <div class="h-pagination-content flex no-wrap items-center">
+
+                <button class="h-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="h-btn non-selectable h-btn-outline h-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                    <span class="h-btn-content items-center flex">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="h-btn non-selectable h-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                  <span class="h-btn-content items-center flex">
+                    <i class="h-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- TOP100 -->
+          <div class="list-mbasic-wrap article-top100">
+            <div class="list-mbasic mb15">
+              <div class="libox">
+                <div class="number">1</div>
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_1" checked="">
+                    <label for="notice-scrap1_1" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+
+              <div class="libox">
+                <div class="number">2</div>
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_2" checked="">
+                    <label for="notice-scrap1_2" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+
+              <div class="libox">
+                <div class="number">3</div>
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_2" checked="">
+                    <label for="notice-scrap1_2" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+
+              <div class="libox">
+                <div class="number">4</div>
+                <div class="txtdiv">
+                  <p class="subco mb5">파란수학학원</p>
+                  <a href="javascript:void(0);" class="trTit">훈장마을 수학학원 구로1호점 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. </a>
+                  <div class="dl straightDl">
+                    <p class="dt">서울 송파구</p>
+                    <p class="dt">신입/경력</p>
+                    <p class="dt">대학(2,3년)↑</p>
+                  </div>
+                  <div class="dl straightDl">
+                    <p class="dt">내규에 따름</p>
+                    <p class="dt">~6/10(일)</p>
+                  </div>
+                </div>
+                <div class="r-btnbox">
+                  <div class="scrap_star">
+                    <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_2" checked="">
+                    <label for="notice-scrap1_2" onclick="">채용공고 스크랩</label>
+                  </div>
+                  <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
+                </div>
+              </div>
+
+            </div>
+            <!-- // -->
+            <div class="h-txt-c">
+              <a href="javascript:void(0);" class="h-button-ml h-button-orange text-subtitle3 qlink-Btn m0">이력서 작성하고 <b class="ml5"> TOP100 보기</b></a>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+      <!-- // content -->
+
+    </div>
+    <!-- // container -->
+
+
+
+
+    <!-- footer -->
+    <footer>
+      <!-- 상단으로 이동하기 버튼 -->
+      <div class="quick-btmBtn">
+        <a href="" class="topBtn fixedBtn"><img src="../../../images/mobile/m_arrow_top.png" alt=""></a>
+        <a href="" class="prevBtn fixedBtn"><img src="../../../images/mobile/m_arrow_left.png" alt=""></a>
+        <a href="" class="homeBtn fixedBtn"><img src="../../../images/mobile/m_icon_home.png" alt=""></a>
+      </div>
+
+
+      <ul class="mypage-info">
+        <li><a href="">로그아웃</a></li>
+        <li><a href="">회원정보</a></li>
+        <li><a href="">고객센터</a></li>
+        <li><a href="">상품안내</a></li>
+      </ul>
+
+      <div class="footer-inner">
+
+        <ul class="device-info">
+          <li><a href="">PC버전</a></li>
+          <li><a href="">안드로이드 APP 설치</a></li>
+          <li><a href="">아이폰 APP 설치</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보 처리방침</a></li>
+        </ul>
+
+        <button type="button" class="btn-tgl-footer">에듀베이션(주)</button>
+
+        <!-- 3) 에듀베이션(주) 버튼 클릭시 보여지는 내용 -->
+        <ul class="address-info">
+          <li><span class="blt-tit-dot h-txt-3">대표이사 : </span>방형식</li>
+          <li><span class="blt-tit-dot h-txt-3">주소 : </span>(우: 08390) 서울 구로구 디지털로 26길 123 지플러스타워 9층 906호~908호</li>
+          <li><span class="blt-tit-dot h-txt-3">사업자등록번호 : </span>220-81-51475</li>
+          <li><span class="blt-tit-dot h-txt-3">직업정보제공사업 신고번호 : </span>서울관악 2004-10호</li>
+          <li><span class="blt-tit-dot h-txt-3">통신판매업 : </span>제1684호</li>
+        </ul>
+      </div>
+
+      <div class="footer-fixed">
+        <ul>
+          <li><a href=""><img src="../../images/mobile/m_icon_writing_gray.png" alt=""><span>공고관리</span></a></li>
+          <li><a href=""><img src="../../images/mobile/m_icon_applyer_gray.png" alt=""><span>인재매칭</span></a></li>
+          <li><a href=""><img src="../../images/mobile/m_icon_star_gray.png" alt=""><span>스크랩</span></a></li>
+          <li><a href=""><img src="../../images/mobile/m_icon_people_gray.png" alt=""><span>지원자 관리</span></a></li>
+        </ul>
+        <button type="button" class="btn-q-mypage"><img src="../../images/mobile/m_icon_mypage.png" alt=""></button>
+      </div>
+    </footer>
+    <!-- // -->
+
+
+
+
+
+    <!-- 1) 사이드메뉴열기 -->
+    <div class="m-RmenutPop acdmy-srvic">
+      <div class="bg-bluebox">
+        <button type="button" class="service-mode">학원</button>
+        <button type="button" class="service-mode">원장</button>
+        <!--
+          <button type="button" class="service-mode only-one">학원</button>
+          활성화된 값이 1개일 경우 only-one 클래스가 추가됩니다.
+          참고링크 : https://xd.adobe.com/view/4ace161a-8bb0-4b73-a4e2-a08671e6fdbc-1f9d/screen/90c0d728-8f3d-41f2-8ec3-461d04b76e74/specs/
+        -->
+
+        <!-- service-mode '학원/원장' 버튼 클릭시 보여지는 항목 -->
+        <div class="h-m-popup popup-04">
+          <button type="button">학원</button>
+          <button type="button">강사</button>
+        </div>
+
+        <div class="h-m-popup popup-04">
+          <button type="button">원장</button>
+          <button type="button">직원</button>
+        </div>
+
+        <div class="myinfoBox">
+          <div class="myprofileInfo">
+            <div class="myNm">
+              <strong>에듀베이션</strong>님
+              <button type="button" class="moreNm"><img src="../../images/icon_mypage_arrow_big.png"></button>
+
+              <!-- 학원이름 클릭시 보여지는 팝업 -->
+              <div class="h-m-popup popup-04 m-acadmy-nmPOP">
+                <button type="button" class="on">에듀베이션</button>
+                <button type="button">광개토대왕 수학학원</button>
+                <button type="button">근초고왕 과학학원</button>
+                <button type="button">고구려 태권도학원</button>
+                <button type="button">고구려 구로 태권도학원</button>
+                <button type="button">광개토대왕 수학학원</button>
+                <button type="button">근초고왕 과학학원</button>
+                <button type="button">고구려 태권도학원</button>
+                <button type="button">고구려 구로 태권도학원</button>
+              </div>
+
+            </div>
+            <ul>
+              <li><a href="">개인정보 수정</a></li>
+              <li><a href="">비밀번호 변경</a></li>
+            </ul>
+            <button type="button" class="mypage-setBtn"><img src="../../images/mobile/m_icon_setting.png"></button>
+          </div>
+        </div>
+      </div>
+      <div class="r-myMenuList">
+        <ul>
+          <li><a href=""><a href="">학원 홈</a></li>
+          <li><a href="">채용공고 등록</a></li>
+          <li><a href="">채용공고 관리<span class="grey-num">20</span></a></li>
+          <li><a href="">인재정보</a></li>
+          <li><a href="">인재매칭<span class="grey-num">20</span></a></li>
+          <li><a href="">스크랩 인재<span class="grey-num">120</span></a></li>
+          <li><a href="">공개 제의한 인재<span class="grey-num">220</span></a></li>
+          <li><a href="">전자근로계약 관리</a></li>
+          <li><a href="">결제내역 관리</a></li>
+          <li><a href="">학원정보 관리</a></li>
+          <li class="btnType"><a href="javascript:void(0);" class="h-button-ml h-button-white wd100">채용광고 안내</a></li>
+          <li class="btnType"><a href="javascript:void(0);" class="h-button-ml h-button-white wd100">이력서 열람서비스</a></li>
+
+        </ul>
+      </div>
+      <div class="btm-icobtnBox">
+        <div class="alarmSet">알림 수신 설정</div>
+        <div class="loginAdmin">로그인 관리</div>
+        <div class="logout">로그아웃</div>
+      </div>
+      <button type="button" class="close" title="팝업 닫기"></button>
+    </div>
+    <div class="lottie-bg" style="display:none;"></div>
+
+
+  </div>
+
+
+
+
+
+  <script>
+    //  1) 사이드메뉴 열기
+    $(document).ready(function() {
+      $('.btn-allmenu').click(function() {
+        $('.m-RmenutPop').toggleClass("on");
+        $('.lottie-bg').css('display', 'inline-block');
+      });
+    });
+    //  1) 사이드메뉴 닫기
+    $(document).ready(function() {
+      $('.close').click(function() {
+        $('.m-RmenutPop').removeClass("on");
+        $('.lottie-bg').css('display', 'none');
+      });
+    });
+
+    //  1-1) 사이드메뉴의 '강사' 버튼 클릭시 보여지는 레이어팝업
+    $(document).ready(function() {
+      $('.service-mode').click(function() {
+        $('.popup-04').toggleClass("on");
+      });
+    });
+
+
+    //  1-1) 사이드메뉴의 '강사' 버튼 클릭시 보여지는 레이어팝업
+    $(document).ready(function() {
+      $('.nmPopBtn').click(function() {
+        $('.m-acadmy-nmPOP2').toggleClass("on");
+      });
+    });
+
+
+
+
+    //  2) 전체메뉴보기 버튼 누르면
+    $(document).ready(function() {
+      $('.btn-tgl-allmenu').click(function() {
+        $('.m_allmenu_popup').toggleClass("on");
+        $(this).toggleClass("on");
+      });
+    });
+
+
+
+    //  3) footer 에듀베이션 버튼 누르면
+    $(document).ready(function() {
+      $('.btn-tgl-footer').click(function() {
+        $(this).toggleClass("on");
+        $('.address-info').toggleClass("on");
+      });
+    });
+
+
+    // 지원자 관리 ! 누르면 보이는 짝은 팝업
+    $(document).ready(function() {
+      $('.apply-guidePopbtn').click(function() {
+        $('.popup-04').toggleClass("on");
+      });
+    });
+
+
+
+
+
+    // 지원현황 슬라이드
+    var swiper = new Swiper(".applyList-swiper", {
+      slidesPerView: "auto",
+    });
+
+    // 티츄 슬라이드
+    var swiper = new Swiper(".teachu-swiper", {
+      slidesPerView: "auto",
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>
