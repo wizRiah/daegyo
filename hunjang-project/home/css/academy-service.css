@@ -1,5 +1,7 @@
 @charset "utf-8"; 
 /*2023-06-28 SSJ*/
+/*2023-07-04 SSJ*/
+/*2023-07-11 SSJ*/
 
 /* 학원서비스 */
 
@@ -17,6 +19,7 @@
 
 .input-wd-160 { width:160px !important; min-width:160px; }
 .input-wd-200 { width:200px !important; min-width:200px; }
+.input-wd-314 { width:314px !important; min-width:314px; }
 .input-wd-350 { width:350px !important; min-width:350px; }
 .input-wd-250 { width:250px !important; min-width:250px; }
 .input-wd-400 { width:400px !important; min-width:400px; }
@@ -36,6 +39,7 @@
  .paymentList.h-tbl-basic-1 tbody tr:hover td { background:transparent; }
  .paymentList.h-tbl-basic-1 td { padding: 18px 7.5px; }
  .paymentList.h-tbl-basic-1 td a.h-button-ml { width: 120px; margin: 0; padding:0 5px; }
+ .paymentList.h-tbl-basic-1 td:nth-last-child(2) a.h-button-ml {width:130px;}
  .paymentList.h-tbl-basic-1 td a.disabled { color:var(--black-6) !important; }
  .paymentList.h-tbl-basic-1 td a.downarrowBtn { width: 20px; height: 20px; display: inline-block; border-radius: 100%; border: 1.5px solid #9b9a9b; position: relative; box-sizing: border-box; margin-left: 4px; }
  .paymentList.h-tbl-basic-1 td a.downarrowBtn:before { content:""; display: inline-block; width: 6px; height: 6px; border: 1px solid #9b9a9b; transform: rotate(45deg); border-width: 1.5px 0 0 1.5px; margin: 0px -1px 1px 0; }
@@ -473,6 +477,8 @@
 .my-subtxtbox .h-basic-formList>li .formArea.btmLine { padding-bottom:20px; border-bottom:1px solid #E0E6EF; margin-bottom:10px; }
 .my-subtxtbox .h-basic-formList>li .h-radio-01 { margin-right:10px; }
 .my-subtxtbox .h-basic-formList>li .h-radio-01 input[type="radio"] + label .rchk { margin-left:0; }
+.my-subtxtbox .h-basic-formList>li .formArea .include-pencilBtn input {padding-right:45px;}
+.my-subtxtbox .h-basic-formList>li .formArea .include-pencilBtn .logo-inputFileBtn {position:absolute; right:12px;}
 
 .checkbox01Ul { display:flex; flex-direction:row; flex-wrap:wrap; }
 .checkbox01Ul li { margin-right:30px; }
@@ -494,7 +500,10 @@
  .academyIMG-list li.academyIMG-none { background-color:#fff; }
  .academyIMG-list li.academyIMG-none [class^="h-button"] { flex-flow:column wrap; width:100%; height:100%; line-height:normal; font-size:var(--text-subtitle5); margin:0; border:0; }
  .academyIMG-list li.academyIMG-none [class^="h-button"] i { color:var(--grey-1); margin-bottom:3px; }
-
+ /*동영상인경우*/
+ .academyIMG-list.videoUl li {background: #000000;}
+ .academyIMG-list.videoUl li:before {content: "play_circle_outline"; font-family: 'Material Icons'; color: #fff; font-size:40px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;}
+ .academyIMG-list.videoUl li img {opacity:0.5;}
 
 
 /* ==================================== 채용공고관리 ==================================== */

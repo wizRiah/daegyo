@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../..1/css/layout.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+  <link rel="stylesheet" href="../../../css/academy-service.css">
+  <link rel="stylesheet" href="../../../css/resume-regist.css">
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- swiper slide cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrap">
+
+
+
+
+
+
+
+          <!-- popup 디자인 01 (뒤로가기버튼)-->
+          <div class="h-popup-wrap">
+            <div class="h-m-popup popup-goback ui-draggable"> 
+              <div class="pop-header ui-draggable-handle" style="cursor:move;">
+                <p class="pop-title text-h3">학원정보 관리</p>
+              </div>
+
+              <div class="pop-body">
+                <div class="pop-container p0">
+              
+              
+              <!-- 참고 URL : https://xd.adobe.com/view/4ace161a-8bb0-4b73-a4e2-a08671e6fdbc-1f9d/screen/91e81fa9-06f4-4ca4-994e-0fc5553a5c32/specs/ -->
+              
+                  <div class="m-acdmyInfoMdfy-Wrap">
+              
+                    <!-- 상단 메뉴 : 스크롤시 상단에 고정됨. -->
+                    <!-- 스크롤되면 top-anchor 부분에 fixed 클래스가 추가됩니다! -->
+                    <div class="top-anchor fixed">
+                      <a href="#anchor01" class="on">사업자 정보</a>
+                      <a href="#anchor02">학원 정보</a>
+                      <a href="#anchor03">학원 부가정보</a>
+                    </div>
+              
+              
+                    <div class="modify-Info">
+              
+                      <strong class="text-subtitle3 h-txt-2 mb10 h-txt-medium block" id="anchor01">ㆍ사업장 정보</strong>
+                      <div class="white-bgBox mb20">
+                        <div class="flexdl">
+                          <div class="dt">사업자등록번호</div>
+                          <div class="dd">220-00-00000</div>
+                        </div>
+                        <div class="flexdl">
+                          <div class="dt">사업자등록번호</div>
+                          <div class="dd">
+                            <span class="h-txt-6 text-subtitle4 mr10">사업자등록증 미 제출</span>
+                            <a href="javascript:void(0);" class="h-button-xxs h-button-grey2 m0">서류제출</a>
+                          </div>
+                        </div>
+                        <div class="flexdl">
+                          <div class="dt">개업연월일</div>
+                          <div class="dd">2023년 3월 5일</div>
+                        </div>
+                        <div class="flexdl">
+                          <div class="dt">사업장명</div>
+                          <div class="dd">솔입학원</div>
+                        </div>
+                        <div class="flexdl">
+                          <div class="dt">대표자</div>
+                          <div class="dd">김학원</div>
+                        </div>
+                      </div>
+              
+                      <strong class="text-subtitle3 h-txt-2 mb10 h-txt-medium flex flex-between flex-center" id="anchor02">ㆍ학원 정보
+                        <a href="javascript:void(0);" class="h-button-xxs">상호추가</a>
+                      </strong>
+                      <div class="white-bgBox mb20">
+                        <div class="basic-popup-inputdl">
+                          <div class="dl">
+                            <div class="dt">학원명</div>
+                            <div class="dd">
+                              <input type="text" class="h-txtfield-basic wd100" value="솔입학원 (로그인 ID : BI-UID 00000XX0)" disabled />
+                            </div>
+                          </div>
+                          <div class="dl">
+                            <div class="dt">학원장명</div>
+                            <div class="dd">
+                              <input type="text" class="h-txtfield-basic wd100" value="김학원" disabled />
+                            </div>
+                          </div>
+                          <div class="dl">
+                            <div class="dt">학원 전화번호</div>
+                            <div class="dd">
+                              <input type="text" class="h-txtfield-basic wd100" value="02-0000-0000">
+                            </div>
+                          </div>
+                          <div class="dl">
+                            <div class="dt">학원로고</div>
+                            <div class="dd">
+                              <div class="h-field-wrap">
+                                <input type="text" id="txtNm" class="h-txtfield-inner" value="hunjang_logo.jpg">
+                                <a href="javascript:void(0);" class="h-button-xxs h-button-grey2">수정하기</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dl">
+                            <div class="dt">학원 주소</div>
+                            <div class="dd">
+                              <div class="h-field-wrap">
+                                <input type="text" id="txtNm" class="h-txtfield-inner" value="서울 구로구 디지털로26길 123 (구로동, 지플러스타워)">
+                                <a href="javascript:void(0);" class="h-button-xxs h-button-grey2">주소검색</a>
+                              </div>
+                              <input type="text" class="h-txtfield-basic wd100 mt5" value="9층 906호 에듀베이션">
+                            </div>
+                          </div>
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">학원 유형</div>
+                            <div class="dd">
+                              <ul>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory1">
+                                    <label for="acdmycategory1">입시/보습/속셈</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory2">
+                                    <label for="acdmycategory2">외국어/어학원</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory3">
+                                    <label for="acdmycategory3">독서/논술</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory4">
+                                    <label for="acdmycategory4">학습지/방문교사</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory5">
+                                    <label for="acdmycategory5">유치원/어린이집</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory6">
+                                    <label for="acdmycategory6">온라인 교육</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory7">
+                                    <label for="acdmycategory7">국가고시학원</label>
+                                  </div>
+                                </li>
+              
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory8">
+                                    <label for="acdmycategory8">편입학원</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory9">
+                                    <label for="acdmycategory9">예체능/컴퓨터/기술</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmycategory" id="acdmycategory10">
+                                    <label for="acdmycategory10">기타</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">교육대상</div>
+                            <div class="dd">
+                              <ul>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="forwho" id="forwho1">
+                                    <label for="forwho1">유아</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="forwho" id="forwho2">
+                                    <label for="forwho2">초등</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="forwho" id="forwho3">
+                                    <label for="forwho3">중등</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="forwho" id="forwho4">
+                                    <label for="forwho4">고등</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="forwho" id="forwho5">
+                                    <label for="forwho5">기타</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+              
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">홈페이지</div>
+                            <div class="dd">
+                              <input type="text" class="h-txtfield-basic wd100" value="https://www.naver.com">
+                            </div>
+                          </div>
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">수업과목</div>
+                            <div class="dd">
+                              <input type="text" class="h-txtfield-basic wd100" value="국어, 영어, 수학">
+                              <div class="wd100 h-txt-r mt5"><a href="javascript:void(0);"
+                                  class="h-button-xxs h-button-grey2 m0">수정하기</a></div>
+                            </div>
+                              <!-- 수업과목 수정 후 -->
+                              <div class="dd">
+                                <div class="inputField">
+                                  <ul class="myselect">
+                                    <li class="dpt1">
+                                      <button type="button">입시/고시</button>
+                                    </li>
+                                    <li class="dpt2">
+                                      <button type="button">과학계열</button>
+                                    </li>
+                                    <li class="dpt2">
+                                      <button type="button">국어</button>
+                                    </li>
+                                  </ul>
+                                  <ul class="myselect">
+                                    <li class="dpt1">
+                                      <button type="button">외국어</button>
+                                    </li>
+                                    <li class="dpt2">
+                                      <button type="button">영어</button>
+                                    </li>
+                                    <li class="dpt2">
+                                      <button type="button">프랑스어</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="wd100 h-txt-r mt5"><a href="javascript:void(0);" class="h-button-xxs h-button-grey2 m0">수정하기</a></div>
+                              </div>
+                          </div>
+              
+              
+                          <div class="dl">
+                            <div class="dt">학원규모</div>
+                            <div class="dd">
+                              <ul>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize1">
+                                    <label for="acmySize1">30명 미만</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize2">
+                                    <label for="acmySize2">30명 이상 ~ 100명 미만</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize3">
+                                    <label for="acmySize3">100명 이상 ~ 200명 미만</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize4">
+                                    <label for="acmySize4">200명 이상 ~ 500명 미만</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize5">
+                                    <label for="acmySize5">500명 이상 ~ 1,000명 미만</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acmySize" id="acmySize6">
+                                    <label for="acmySize6">1,000명 이상</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+              
+              
+                        </div>
+                      </div>
+              
+              
+              
+              
+              
+              
+                      <strong class="text-subtitle3 h-txt-2 mb10 h-txt-medium flex flex-between flex-center" id="anchor03">ㆍ학원 부가정보</strong>
+                      <div class="white-bgBox">
+                        <div class="basic-popup-inputdl">
+                          <div class="dl btmBorder">
+                            <div class="dt">학원의 인재상 (3개까지 선택 가능)</div>
+                            <div class="dd">
+                              <ul>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp1">
+                                    <label for="acdmywantpp1">성실하고 책임감이 강한 믿음직한 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp2">
+                                    <label for="acdmywantpp2">처음 하는 업무도 의욕적으로 임하는 도전적인 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp3">
+                                    <label for="acdmywantpp3">항상 밝고 긍정적인 태도를 가진 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp4">
+                                    <label for="acdmywantpp4">직무 전문성과 업무 역량이 뛰어난 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp5">
+                                    <label for="acdmywantpp5">열심히 배우고 끊임없이 노력하는 희생적인인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp6">
+                                    <label for="acdmywantpp6">위기에도 침착하고 스트레스 상황에 강한 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp7">
+                                    <label for="acdmywantpp7">새로운 업무와 조직에 빠르게 적응하는 인재</label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-03 h-radio-04">
+                                    <input type="checkbox" name="acdmywantpp" id="acdmywantpp8">
+                                    <label for="acdmywantpp8">다양한 의견을 수용할 수 있는 인재</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+              
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">학원복지, 혜택</div>
+                            <div class="dd">
+                              <div class="inputField">
+                                <ul class="myselect">
+                                  <li class="dpt1">
+                                    <button type="button">급여제도</button>
+                                  </li>
+                                  <li class="dpt2">
+                                    <button type="button">창립일 행사</button>
+                                  </li>
+                                </ul>
+                                <ul class="myselect">
+                                  <li class="dpt1">
+                                    <button type="button">근무환경</button>
+                                  </li>
+                                  <li class="dpt2">
+                                    <button type="button">에어컨</button>
+                                  </li>
+                                  <li class="dpt2">
+                                    <button type="button">커피</button>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="wd100 h-txt-r mt5"><a href="javascript:void(0);"
+                                  class="h-button-xxs h-button-grey2 m0">수정하기</a></div>
+                            </div>
+                          </div>
+              
+                          <div class="dl btmBorder">
+                            <div class="dt">학원 콘텐츠</div>
+                            <div class="dd">
+                              <ul>
+                                <li>
+                                  <div class="h-radio-01">
+                                    <input type="radio" id="acdmyCo1" name="acdmyCo" checked="">
+                                    <label for="acdmyCo1"><span class="rchk"></span><span>사진</span></label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="h-radio-01">
+                                    <input type="radio" id="acdmyCo2" name="acdmyCo">
+                                    <label for="acdmyCo2"><span class="rchk"></span><span>영상</span></label>
+                                  </div>
+                                </li>
+                              </ul>
+
+                              <!-- 사진 클릭시 ! -->
+                              <p class="text-subtitle6 h-txt-5">
+                                최대 <span class="h-txt-2 h-txt-medium">10개</span>까지 등록 가능 -
+                                <span class="h-txt-2">사진 첨부 최대용량</span> :
+                                <span class="h-txt-orange">12MB</span>
+                              </p>
+                              <ul class="acadmy-ImgUl">
+                                <li>
+                                  <img src="https://newsimg.sedaily.com/2021/01/03/22H43OXAH6_1.jpg">
+                                  <button type="button" class="deleteBtn"><img src="../../../images/icon_sm_close_gray.png"></button>
+                                </li>
+                                <li>
+                                  <img src="https://newsimg.sedaily.com/2021/01/03/22H43OXAH6_1.jpg">
+                                  <button type="button" class="deleteBtn"><img src="../../../images/icon_sm_close_gray.png"></button>
+                                </li>
+                                <li>
+                                  <img src="https://newsimg.sedaily.com/2021/01/03/22H43OXAH6_1.jpg">
+                                  <button type="button" class="deleteBtn"><img src="../../../images/icon_sm_close_gray.png"></button>
+                                </li>
+                                <li>
+                                  <button type="button" class="addBtn">
+                                    사진추가
+                                  </button>
+                                </li>
+                              </ul>
+
+
+                              <!-- 영상 클릭시 ! -->
+                                <input type="text" class="h-txtfield-basic wd100 mb5" placeholder="영상 URL을 입력해 주세요.">
+                                <div class="wd100 h-txt-l mt5"><a href="javascript:void(0);" class="h-button-xxs h-button-grey2 m0">영상추가</a></div>
+
+                                  <!-- 영상 등록 후 -->
+                                  <ul class="acadmy-ImgUl videoUl">
+                                    <li>
+                                      <img src="https://newsimg.sedaily.com/2021/01/03/22H43OXAH6_1.jpg">
+                                      <button type="button" class="deleteBtn"><img src="../../../images/icon_sm_close_gray.png"></button>
+                                    </li>
+                                    <li>
+                                      <img src="https://newsimg.sedaily.com/2021/01/03/22H43OXAH6_1.jpg">
+                                      <button type="button" class="deleteBtn"><img src="../../../images/icon_sm_close_gray.png"></button>
+                                    </li>
+                                  </ul>
+                                  <input type="text" class="h-txtfield-basic wd100 mb5 mt15" value="https://www.youtube.com/watadkt11345234wsdf2352345">
+                                  <div class="video-list">
+                                    <input type="text" class="h-txtfield-basic wd100" placeholder="영상 URL을 입력해 주세요.">
+                                    <button class="file-delete ml15"><img src="../../../images/mobile/m_icon_minus_squared_gray.png"></button>
+                                  </div>
+                                  <div class="wd100 h-txt-l mt5"><a href="javascript:void(0);" class="h-button-xxs h-button-grey2 m0">영상추가</a></div>
+                              
+                              
+                            </div>
+                          </div>
+              
+                          <div class="dl">
+                            <div class="dt">학원소개 및 연혁</div>
+                            <div class="dd">
+                              <textarea>
+솔입학원은 2023년 3월 5일에 개원하여 1년 이상 학원을 운영중인 입시/보습/속셈 전문학원 입니다. 
+유아, 초등을 대상으로 국어, 미술, 수학을 전문으로 교육하고 있으며, 원생은 30명~100명 미만의 원생이 솔입학원을 등원하고 있습니다.
+              
+              
+              
+              
+                                            </textarea>
+                            </div>
+                          </div>
+              
+                        </div>
+                      </div>
+              
+              
+              
+              
+              
+              
+              
+              
+                    </div>
+              
+              
+              
+              
+                  </div>
+                  <div class="btmbtnbox">
+                    <a href="#" class="canclebtn">취소</a>
+                    <a href="#" class="sendRespon">학원정보 수정</a>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="goback" title="뒤로가기"></button>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+          <script>
+
+
+
+          </script>
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -220,15 +220,16 @@
               <tr>
                 <th>사업자등록증</th>
                 <td>220-00-00000</td>
-                <th>개업일</th>
+                <th>개업연월일</th>
                 <td>2023년 3월 5일</td>
               </tr>
               <tr>
-                <th>사업장명</th>
-                <td>솔입학원 (%타입상태%)</td>
+                <th>법인명</th>
+                <td>훈장마을 [법인]</td>
                 <th>대표자</th>
-                <td>양쌤</td>
+                <td>홍길동</td>
               </tr>
+              <!--  2023.07.05 디자인 수정되면서 사라짐.
               <tr>
                 <th>학원로고</th>
                 <td colspan="3">
@@ -242,7 +243,7 @@
 
                   </div>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -258,7 +259,18 @@
                   학원명
                 </div>
                 <div class="formArea">
-                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-350" disabled="" placeholder="솔입학원">
+                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-314" disabled="" value="솔입학원">
+                </div>
+              </li>
+              <li>
+                <div class="labelArea">
+                  로고
+                </div>
+                <div class="formArea">
+                  <div class="h-field-wrap include-pencilBtn input-wd-314">
+                    <input type="text" id="txtNm" class="h-txtfield-inner" readonly="" disabled="">
+                    <button type="button" class="logo-inputFileBtn"><img src="../../../images/icon-circle-edit.png"></button>
+                  </div>
                 </div>
               </li>
               <li>
@@ -266,7 +278,7 @@
                   학원장명
                 </div>
                 <div class="formArea">
-                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-200" disabled="" placeholder="양쌤">
+                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-314" disabled="" value="양쌤">
                 </div>
               </li>
               <li>
@@ -274,7 +286,7 @@
                   학원 전화번호
                 </div>
                 <div class="formArea">
-                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-200" placeholder="02-2006-0000">
+                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-314" placeholder="02-2006-0000">
                 </div>
               </li>
 
@@ -287,7 +299,7 @@
                     <input type="text" id="txtNm" class="h-txtfield-inner" value="(12345) 서울시 구로구 디지털로 26길 123">
                     <a href="javascript:void(0);" class="h-button-xs">우편번호 찾기</a>
                   </div>
-                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-500">
+                  <input type="text" id="txtNm" class="h-txtfield-basic input-wd-314">
                 </div>
               </li>
               
@@ -491,6 +503,16 @@
               </li>
               <li class="line2">
                 <div class="labelArea" style="padding-top:3px;">
+                  홈페이지
+                </div>
+                <div class="formArea btmLine">
+                  
+                  <input type="text" id="txtNm" class="h-txtfield-basic wd100" value="https://www.naver.com">
+                </div>
+                
+              </li>
+              <li class="line2">
+                <div class="labelArea" style="padding-top:3px;">
                   학원의 인재상
                 </div>
                 <div class="formArea">
@@ -619,12 +641,12 @@
                       </div>
                     </li>
                   </ul>
+                  <!-- 사진 선택했을때 -->
                   <p class="text-subtitle5 h-txt-3 block mt20">
                     사진 파일은 최대 <span class="h-txt-2">10개</span>까지 등록할 수 있습니다 
                     <span class="h-txt-2">- 사진 첨부 최대용량 : </span>
                     <span class="h-txt-orange ">12MB</span>
                   </p>
-
                   <ul class="academyIMG-list">
                     <!-- 파일 있는 경우 -->
                     <li class="flex-set">
@@ -649,6 +671,32 @@
                     </li>
     
                   </ul>
+
+                  <!-- 영상 선택했을때 -->
+                  <div class="video-list flex flex-between mt20">
+                    <input type="text" class="h-txtfield-basic wd100" value="https://www.youtube.com/watch?v=DaZlqJcg-AU">
+                    <button class="file-delete ml10"><img src="../../../images/icon_plus_squared_gray.png"></button>
+                  </div>
+                  <div class="video-list flex flex-between mt10">
+                    <input type="text" class="h-txtfield-basic wd100" placeholder="영상 URL을 입력해 주세요.">
+                    <button class="file-delete ml10"><img src="../../../images/icon_minus_squared_gray.png"></button>
+                  </div>
+                  <ul class="academyIMG-list videoUl">
+                    <li class="flex-set">
+                      <div class="academyIMG-btn-wrap">
+                        <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+                      </div>
+                      <img src="../../../images/info-modify-sampleImg01.jpg">
+                    </li>
+                    <li class="flex-set">
+                      <div class="academyIMG-btn-wrap">
+                        <a href="javascript:void(0);" class="h-button-circle-20 remove h-button-grey1"></a>
+                      </div>
+                      <img src="../../../images/info-modify-sampleImg02.jpg">
+                    </li>
+                  </ul>
+
+
 
                 </div>
               </li>
