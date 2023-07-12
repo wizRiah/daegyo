@@ -43,7 +43,7 @@
 .h-m-popup.popup-goback .btmbtnbox .canclebtn {color:var(--black-2);background: #fff;border-top:1px solid var(--border-basic-3);}
 .h-m-popup.popup-goback .btmbtnbox .sendRespon {color:#fff; background-color:var(--border-basic-1);}
 .h-m-popup.popup-goback .btmbtnbox a:first-child {width:44%;}
-.h-m-popup.popup-goback .btmbtnbox a:last-child {flex-grow:2;}
+.h-m-popup.popup-goback .btmbtnbox a:last-child {flex-grow:2; margin:0;}
 .h-m-popup.popup-goback .btmbtnbox a:only-child {margin:0; width:100% !important; border-radius:0;}
 .h-m-popup.popup-goback .btmbtnbox a.nextpage img {transform:rotate(180deg); margin-left:10px; width:20px; height:14px;}
 .h-m-popup.popup-goback .btmbtnbox .h-button-orange {border-radius:0;}
@@ -922,12 +922,71 @@
 .m-recruitAddPrdct-Pop .checkbox01 {margin:20px 0 0;}
 .m-recruitAddPrdct-Pop .lightblue-bgbox2 {background:#EBEFF5; border-radius:10px; width:100%; padding:20px; box-sizing:border-box; margin-top:10px;}
 .h-m-popup.popup-01 .btmbtnbox a.nextpage img.plane {transform:none; width:auto; height:auto;}
-.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox {display:flex; padding:20px 15px; justify-content:space-between;}
-.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox a {margin:0;}
+.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox {display:flex; padding:20px 15px;justify-content:space-between; flex-wrap:nowrap;}
+.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox div {display:flex; flex-shrink:1; flex-wrap:nowrap;}
+.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox div a {width:105px; flex-shrink:1; margin:0 5px 0 0;}
+.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox .zoomIcon {margin:0; width:111px; flex-shrink:1; padding:0;}
+.m-recruitAddPrdct-Wrap .prdct-BtmFixBar .myselect-Prct .btnbox .zoomIcon:before {content:url('../images/mobile/m_zoomIcon.png'); position: relative; z-index: 0; opacity: 1; background-color: transparent; vertical-align: middle; margin-right: 7px; line-height: normal;}
 .m-recruitAddPrdct-Wrap .top-estimateTit {background:#F5F7FA; padding:16px 0; justify-content:center; display:flex; align-items:center;}
 .m-recruitAddPrdct-Wrap .ucanZoom {padding:20px 15px 0; font-size:13px; color:#333333; justify-content:center; display:flex; align-items:center;}
 .m-recruitAddPrdct-Wrap .ucanZoom div {border-bottom:1px solid #E0E6EF; text-align:center; width:100%; padding-bottom:20px;}
 .m-recruitAddPrdct-Wrap .ucanZoom img {margin:0 3px -4px 0;}
-.h-m-popup .popup-btnbox a.h-button-teal {margin:0; border-radius:0; background:var(--teal) !important;}
+.h-m-popup .popup-btnbox 1a.h-button-teal {margin:0; border-radius:0; background:var(--teal) !important;}
+
+
+/* 이력서 열람 서비스 신청 팝업 */
+.h-m-popup .btmbtnbox .nextpage.h-button-grey {color:#fff;}
+.h-m-popup .btmbtnbox .nextpage.h-button-teal {color:#fff;}
+.h-m-popup .btmbtnbox .nextpage.h-button-grey1 {background:#C3CAD4; color:#fff;}
+.rsmeRdSrvc-PopWrap {padding:20px 10px 20px 20px; box-sizing: border-box;}
+.rsmeRdSrvc-PopWrap .top-stateArea {font-size:15px; line-height:22px; padding-bottom: 20px; border-bottom: 1px solid #E0E6EF; margin-bottom: 20px; text-align: center;}
+.rsmeRdSrvc-PopWrap .stepGuide {}
+.rsmeRdSrvc-PopWrap .stepGuide .popuplist-Titbig {font-size:15px; padding-bottom:15px;}
+.rsmeRdSrvc-PopWrap .stepGuide ul {}
+.rsmeRdSrvc-PopWrap .stepGuide ul li {display:flex; justify-content:space-between; padding:0 20px; height:80px; align-items:center; box-shadow: 0px 1px 7px #0000000D; background: #fff; border-radius: 10px; margin-bottom: 10px;}
+.rsmeRdSrvc-PopWrap .stepGuide ul li span {background:#c3cad3; color:#fff; border-radius:30px; height:22px; line-height:22px; margin-right:7px; font-size:13px; font-weight:300; width:33px; text-align:center;}
+.rsmeRdSrvc-PopWrap .stepGuide ul li div {flex-grow:1; font-size:14px; color:#333333;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl {margin-bottom:5px; display: flex; justify-content: space-between; align-items: center;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl .dt {margin-bottom: 0;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl .dt:before {display:none;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl .dt span {margin-left:2px; vertical-align:middle;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl .dd {width: 220px;}
+.rsmeRdSrvc-PopWrap .white-bgBox .basic-popup-inputdl .dl .dd input {height:46px !important; padding:0 15px !important;}
+.rsmeRdSrvc-PopWrap .checkbox01 {margin:20px 0 0;}
+.rsmeRdSrvc-PopWrap .lightblue-bgbox2 {background:#EBEFF5; border-radius:10px; width:100%; padding:20px; box-sizing:border-box; margin-top:10px;}
+.rsmeRdSrvc-PopWrap .prdctList {margin-top:10px;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox {margin-bottom:10px;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox div {text-align:right;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox div strong {font-size:18px;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox div .won {font-size:14px; color:#7E7E7E; margin-left:2px;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox button {width:75px; min-width:auto !important; margin:0 0 0 10px;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox button:before {content:"\e876"; font-family:'Material Icons'; position: relative; z-index: 0; opacity: 1; display: inline-block; margin-right: 5px; opacity: 0.3;}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox button.on {background:var(--teal);}
+.rsmeRdSrvc-PopWrap .prdctList .white-bgBox button.on:before {opacity:1;}
+.rsmeRdSrvc-PopWrap .basic-popup-list {margin-left: -7px; letter-spacing: -0.5px; margin-bottom: 50px;}
+
+/*2단계인증내역, 로그인관리 팝업*/
+.acdmySrvc-cmnPop {background:#fff; padding:20px 10px 20px 20px; box-sizing:border-box; display:flex; height:100%; flex-direction:column;    overflow-y: scroll;}
+.acdmySrvc-cmnPop .basic-popup-inputdl .dl {margin-bottom:0; display:flex; align-items:center;}
+.acdmySrvc-cmnPop .basic-popup-inputdl .dl .dt {font-size:13px; color:#9A9A9A; line-height:22px; margin:0 20px 0 0;}
+.acdmySrvc-cmnPop .basic-popup-inputdl .dl .dd {font-size:14px; color:#333333; flex-grow:2;}
+.acdmySrvc-cmnPop .history_crtf .basic-popup-inputdl .dl .dt {width:135px;}
+.acdmySrvc-cmnPop .history_login .basic-popup-inputdl .dl .dt {width:60px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
