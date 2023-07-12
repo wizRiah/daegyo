@@ -224,6 +224,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .pt15 {padding-top:15px;}
 .pt25 {padding-top:25px;}
 .pt30 {padding-top:30px;}
+.pt40 {padding-top:40px;}
 .p20 {padding:20px;}
 .p25 { padding:25px !important; }
 .box-border {box-sizing:border-box;}
@@ -246,6 +247,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .height-46 {height:46px !important; font-size:ver(--text-subtitle4);}
 .height-200 {height:200px !important;}
 
+.min-wdAuto {min-width:auto;}
 .min-wd100px {min-width:100px;}
 .min-wd105px {min-width:105px;}
 .min-wd125px {min-width:125px;}
@@ -777,7 +779,9 @@ button
 .h-th-tit { width:250px; }
 .h-th-tit strong + p { margin-top:10px; }
 
-.h-job-info { min-width:420px; box-sizing:border-box; }
+.pc-hunjang-wrap .h-job-info { min-width:420px; box-sizing:border-box; }
+.m-hunjang-wrap .h-job-info { box-sizing:border-box; }
+
 .h-job-info .academy-wrap { display:flex; align-items:center; box-sizing:border-box; }
 .h-job-info .academy-wrap .academy { display:flex; align-items:center; flex:1; width:1px; }
 .h-job-info .academy-wrap .academy .txt-ellipsis { display:inline-block; width:auto; max-width:calc(100% - 33px); }
@@ -788,13 +792,15 @@ button
 .h-job-info .recruit-cate .cate-wrap .cate-name::after {display:inline-block; content:':'; margin-left:3px;}
 .h-job-info .recruit-cate .cate-wrap .cate-item {color:var(--black-2);}
 .h-job-info .recruit-cate .cate-wrap .cate-item:not(:last-child)::after {display:inline-block; content:',';}
-.h-job-info .option-academy {color:#334EFF; font-weight:var(--text-medium);}
-.h-job-info .option-title-1 {color:#334EFF;}
+.h-job-info .option-academy {color:#334EFF!important; font-weight:var(--text-medium);}
+.h-job-info .option-title-1 {color:#334EFF!important;}
 .h-job-info .option-title-2 {background-color:#FFF700;}
-.h-job-info .option-title-3 {color:#fff; background-color:var(--cyan);}
+.h-job-info .option-title-3 {color:#fff!important; background-color:var(--cyan);}
 /* 근무지 나열 되는 경우 */
 .h-tbl-basic-1 .work-place {font-size:var(--text-subtitle5); color:var(--black-2); line-height:22px;}
 .h-tbl-basic-1 .work-place p:not(:last-child)::after {display:inline-block; content:',';}
+
+
 
 
 /***** 목록 유형 1 - dl dt dd *****/
@@ -1125,7 +1131,7 @@ TAB
 
  /* txtbox (배경색은 버튼 컬러 클래스 추가) */
 .h-txtbox-1 {display:inline-flex; justify-content:center; align-items:center; height:22px; padding-left:10px; padding-right:10px; font-size:var(--text-subtitle6); font-weight:var(--text-medium); color:#fff; border-radius:13px; box-sizing:border-box;}
-.h-txtbox-2 {display:inline-flex; justify-content:center; align-items:center; height:19px; padding-left:8px; padding-right:8px; font-size:var(--text-subtitle7); font-weight:var(--text-medium); color:#fff; line-height:normal; border-radius:30px; box-sizing:border-box;}
+.h-txtbox-2 {display:inline-flex; justify-content:center; align-items:center; height:19px; padding-left:8px; padding-right:8px; font-size:var(--text-subtitle7); font-weight:var(--text-medium); color:#fff; line-height:normal; border-radius:30px; box-sizing:border-box; word-break: keep-all;}
 .h-txtbox-2.option-hurry {background-color:#E4AB22;}
 .h-txtbox-2.option-hot {background-color:var(--red);}
 
@@ -1229,13 +1235,13 @@ TAB
 
 
 /* 선택한 값이 인풋부분 내용 들어오는 디자인 */
-.clear { background:url('../images/icon_xs_close.png') no-repeat center; width:15px; height:15px; margin-left: 5px; vertical-align: -2px; }
-.srch-detail {padding:14px 0 14px 15px;}
-.srch-detail .depth-box {display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; padding:17px; font-size:var(--text-subtitle4);}
-.srch-detail .depth-box .depth-col {display: flex; align-items: center;}
-.srch-detail .depth-box .depth-tit:after { content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px; } 
-.srch-detail .depth-box .clear {width: 15px!important; height: 15px!important;}
-.rcmnd-InfoSet .h-field-wrap .srch-detail + button {flex:none;}
+.m-hunjang-wrap .clear { background:url('../images/icon_xs_close.png') no-repeat center; width:15px; height:15px; margin-left: 5px; vertical-align: -2px; }
+.m-hunjang-wrap .srch-detail {padding:14px 0 14px 15px;}
+.m-hunjang-wrap .srch-detail .depth-box {display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; padding:17px; font-size:var(--text-subtitle4);}
+.m-hunjang-wrap .srch-detail .depth-box .depth-col {display: flex; align-items: center;}
+.m-hunjang-wrap .srch-detail .depth-box .depth-tit:after { content: '>'; padding: 0 5px; color: var(--black-6); vertical-align: 1px; } 
+.m-hunjang-wrap .srch-detail .depth-box .clear {width: 15px!important; height: 15px!important;}
+.m-hunjang-wrap .rcmnd-InfoSet .h-field-wrap .srch-detail + button {flex:none;}
 
 
 /* 툴팁 */

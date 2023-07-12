@@ -281,7 +281,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 
 /* =================================== 채용정보 뷰 =============================== */
-.recruitInfo-cont {padding:0 20px 75px!important;}
+.recruitInfo-cont {padding:0 20px 50px!important;}
 .recruitInfo-cont .content-inner {margin:0 -20px; /*padding-top:10px;*/ /*background:var(--neutral-3);*/}
 .recruitInfo-cont .header-gradient {margin:0 -20px;}
 
@@ -295,13 +295,18 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .top-roundInfo .icon-businessbox .imgbox {display: flex; align-items: center; justify-content: center; width:60px; height:60px; margin-bottom:10px; background:var(--neutral-3); border-radius: 50%;}
 
 .recruit-nav-wrap {background:var(--neutral-3);}
-.recruit-nav {display: flex; justify-content: center; width: 100%; border-top:1px solid var(--neutral-2); background:#fff;}
+.recruit-nav {display: flex; justify-content: center; width: 100%; background:#fff; border-bottom:1px solid var(--neutral-2); border-top:1px solid var(--neutral-2);}
 .recruit-nav li {display: flex; align-items: center; justify-content: center; /*min-width:108px;*/ width:calc(100% / 3); font-size:var(--text-subtitle3);}
 .recruit-nav li.active a {display:inline-block; position:relative; padding:19px 28px; color:var(--teal); font-weight:var(--text-medium);}
 .recruit-nav li.active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--teal);}
 
+/* 모바일 채용공고 템플릿 */
 .icon_tip_detail {display: flex; align-items: center; justify-content: center; margin-bottom:30px; font-size:var(--text-subtitle5);}
 .icon_tip_detail:before {content:''; display: inline-block; margin-right:7px; background:url('../images/mobile/m_icon_hand.png') no-repeat; width:31px; height:29px; }
+
+.employment-wrap {border-bottom:1px solid var(--border-basic-3); padding:20px 20px 15px;}
+
+
 
 /* .article-white {padding:20px 20px 15px; border-top:1px solid var(--border-basic-3); border-bottom:1px solid var(--border-basic-3); background:#fff;} */
 /* .article-white + .article-white {margin-top:10px;} */
@@ -402,7 +407,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .productView-popup .pop-body {margin-top:30px; overflow-y: scroll!important; height:500px!important;}
 .productView-popup .min-50px {display:inline-block; min-width:50px;}
 .productView-popup .blue-box2 .infoTxt + .infoTxt {margin-top:20px;}
-.blue-box2 {padding:20px; border:1px solid var(--border-basic-2); border-radius:4px; background:#F2F2F2;}
+
 
 /* 접기 펼치기 토글 */
 .productView-popup .tgl-downBtn {background:url('../images/mobile/icon_s_arrow_circle.png') no-repeat; margin-left:7px; width:17px; height:17px; text-indent:-9999px; transition: all ease 0.5s;}
@@ -411,16 +416,17 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .productView-popup .tgl-downtxt li a {display:block; width:100%; padding:10px 0 10px 20px; font-size:var(--text-subtitle4); color:var(--black-2); font-weight:var(--text-bold); box-sizing:border-box;}
 .productView-popup .tgl-downtxt.on {display:block!important; position:absolute; top: 40px; left: 30px; z-index:1;}
 
-/* ============================= 채용정보 홈 ======================== */
+/* ============================= 채용정보 하위 페이지 ======================== */
 .TopSrchWrap_guidetxt {padding:15px;}
 .TopSrchWrap_guidetxt .TopSrchWrap {margin-bottom:0;}
 .TopSrchWrap_guidetxt .topTitle select {height:35px;}
 
 .recruitInfo-main {background:#fff;}
 .recruitInfo-main .list-mbasic-wrap {box-sizing: border-box; background:var(--neutral-3);}
+.recruitInfo-main .list-mbasic-wrap.article-todays {border-top: 1px solid var(--neutral-2);}
 .recruitInfo-main .list-mbasic-wrap.article-todays .libox {border-radius: 10px; border:1px solid var(--border-basic-4); box-shadow: 5px 5px 5px #0000000D;}
 .recruitInfo-main .list-mbasic-wrap.article-todays .libox + .libox {margin-top:10px;}
-.recruitInfo-main .list-mbasic-wrap.article-todays .list-mbasic {padding: 15px 15px 0; box-sizing: border-box;}
+.recruitInfo-main .list-mbasic-wrap.article-todays .list-mbasic {padding: 15px 15px 20px; box-sizing: border-box;}
 
 .recruitInfo-main .list-mbasic-wrap.article-top100 .libox .number {display: flex; justify-content: center; align-items: center; width:60px; margin-left:-15px; font-size:var(--text-subtitle1); font-weight:var(--text-bold);}
 .recruitInfo-main .list-mbasic-wrap.article-top100 .libox:nth-child(-n+3) .number {color:var(--blue-3);}
@@ -444,14 +450,75 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .card-logo-wrap ul li .btn-star {position:absolute; top:20px; right:20px; width:23px; height:23px; z-index:1;}
 .card-logo-wrap ul li .btn-star label {margin:0;}
 
-
-
-
 .recruitInfo-main .list-mbasic-wrap .imgbox {position:absolute; bottom:20px; right:25px; width: 80px; height: 34px;}
 .recruitInfo-main .list-mbasic-wrap .imgbox img {max-width:80px; max-height:34px;} 
 .recruitInfo-main .list-mbasic-wrap .list-mbasic .r-btnbox {min-width:auto;}
-.recruitInfo-main .list-mbasic-wrap .list-mbasic .libox {position:relative;}
+.recruitInfo-main .list-mbasic-wrap .list-mbasic .libox {position:relative; z-index: 1;}
 .recruitInfo-main .list-mbasic-wrap .list-mbasic {background:#fff;}
-
-
 .recruitInfo-main .h-pagination {background:#fff;}
+
+
+/* ============================= 채용정보 메인 ======================== */
+.recruit-MvSwiper-wrap {position:relative; /*padding:20px 20px 75px;*/ background: linear-gradient( to top, #FFFFFF, #F5F5F5 ); margin-bottom: -1px;}
+.recruit-MvSwiper-wrap:after {content:''; position:absolute; bottom:0; display:inline-block; background:url('../images/mobile/recruitInfo_mv_pt01.png') no-repeat center; background-size:110%; width:100%; height:186px;}
+
+.recruit-MvSwiper {padding:20px 14px 75px!important; box-sizing:border-box;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide {position:relative; height:320px; padding:40px; border-radius:10px; background:var(--cyan); box-sizing: border-box;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide .q-arrowBtn {position: absolute; bottom:40px; left:40px; font-size:var(--text-subtitle6); color:#fff;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide .q-arrowBtn:after {content:''; display:inline-block; margin-left:7px; background:url('../images/btn_white_arrow.svg') no-repeat; width:14px; height:10px;}
+
+.recruit-MvSwiper .swiper-wrapper .swiper-slide:nth-child(1) {background:var(--cyan);}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide:nth-child(2) {background:var(--teal);}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide:nth-child(3) {background:var(--blue-3);}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide:nth-child(4) {background:#A27AC1;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide:nth-child(5) {background:#4ACB4A;}
+
+.recruit-MvSwiper .swiper-wrapper .swiper-slide .mv-stit {margin-bottom:15px; font-size:var(--text-subtitle2); font-weight:var(--text-medium); color:#fff; opacity: 0.7;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide .mv-btit {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.3em; height: 3.9em; font-size:var(--text-h3); font-weight:var(--text-bold); color:#fff;}
+.recruit-MvSwiper .swiper-wrapper .swiper-slide .imgbox {position:absolute; right:30px; bottom:30px;}
+
+.recruit-MvSwiper-wrap .swiper-pagination {bottom:45px!important;}
+.recruit-MvSwiper-wrap .swiper-pagination-bullet {width:10px; height:10px;}
+
+.recruit-MvSwiper-wrap .swiper-pagination-bullet-active {background:var(--teal)!important;}
+.recruit-MvSwiper-wrap .swiper-pagination-bullet {background:#666;}
+
+.recruitInfo-main .round10-plusbtn {display: flex; align-items: center; justify-content: center; margin-top:10px; height:54px; border-radius:10px; border:1px solid var(--border-basic-4); font-size:var(--text-subtitle4); font-weight:var(--text-medium); box-shadow: 5px 5px 5px #0000000D; background:#fff;}
+.recruitInfo-main .round10-plusbtn:after {content:''; display:inline-block; background:url('../images/mobile/m_icon_circle_plus_neutral.png') no-repeat; margin-left:7px; width:20px; height:20px;}
+
+
+/* 마감 예정 채용정보 */
+.todaySwiper-wrap {position:relative;}
+.todaySwiper-wrap:after {content:''; position:absolute; top:40px; display:inline-block; background:url('../images/mobile/recruitInfo_mv_pt02.png') no-repeat center; width:100%; height:130px;}
+.todaySwiper-wrap .list-mbasic-wrap .list-mbasic {background:#FBFAF8;}
+.todaySwiper-wrap .list-mbasic-wrap .list-mbasic .libox {background:#fff;}
+.todaySwiper-wrap .list-mbasic-wrap .list-mbasic .txtbox {margin-bottom:15px; z-index: 1;}
+
+.todaySwiper-wrap .list-mbasic-wrap .list-mbasic .libox-wrap {overflow-y: scroll; height:200px;}
+.todaySwiper-wrap .list-mbasic-wrap .list-mbasic .libox-wrap::-webkit-scrollbar {display: none;}
+/* .todaySwiper-wrap .list-mbasic-wrap .list-mbasic .libox-wrap:after {content:''; display: inline-block; background: rgb(255 0 0 / 30%);} */
+
+
+
+
+
+/* 추천 콘텐츠 C */
+.recommend-Cwrap {position:relative; overflow: hidden;}
+.recommend-Cwrap:after {content:''; position:absolute; top:40px; right:-50px; display:inline-block; background:url('../images/mobile/recruitInfo_mv_pt03.png') no-repeat right; width:100%; height:165px;}
+.recommend-Cwrap .list-mbasic-wrap.article-recommend .list-mbasic {background:#F9F2F2;}
+
+.list-mbasic-wrap.article-recommend .list-mbasic {padding: 15px 15px 20px; box-sizing: border-box;}
+.list-mbasic-wrap.article-recommend .list-mbasic .libox-wrap {display:flex; flex-wrap: wrap; gap:10px}
+.list-mbasic-wrap.article-recommend .list-mbasic .libox {width: calc(100% / 2 - 5px); padding:15px; box-sizing: border-box; border:1px solid var(--border-basic-4); border-radius:10px; background:#fff;}
+.list-mbasic-wrap.article-recommend .list-mbasic .libox .scrap_star {position: absolute; top: 15px; right: 15px;}
+.list-mbasic-wrap.article-recommend .list-mbasic .txtbox {margin-bottom:15px; z-index: 1;}
+.list-mbasic-wrap.article-recommend .list-mbasic .txtdiv .subco {margin-top:20px;}
+.list-mbasic-wrap.article-recommend .list-mbasic .txtdiv .trTit {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; line-height: 1.3em; height: 2.6em; white-space: normal;}
+.list-mbasic-wrap.article-recommend .list-mbasic .r-btnbox .h-button-teal {position:absolute; bottom:15px; right:15px;}
+
+
+.recommend-Dwrap {position:relative; overflow: hidden;}
+.recommend-Dwrap:after {content:''; position:absolute; top:-50px; background:url('../images/mobile/recruitInfo_mv_pt04.png') no-repeat center; background-size:120%; width:100%; height:206px;}
+.recommend-Dwrap .list-mbasic-wrap.article-recommend .list-mbasic {background:#EEF2F8;}
+
+
