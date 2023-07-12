@@ -1,8 +1,7 @@
 @charset "utf-8";
-/* @latest 2023.06.28 SSJ */
-/* @latest 2023.06.29 SSJ */
 /* @latest 2023.07.04 SSJ */
 /* @latest 2023.07.05 SSJ */
+/* @latest 2023.07.12 SSJ */
 
 
 /***** 팝업 공통 (layout) *****/
@@ -632,6 +631,13 @@
 .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li .tit:after { display:none; }
 .openOffer-POPUP .h-subbox-basic-guide .h-bullet-list li a { text-decoration:underline; }
 .openOffer-POPUP .applyTxt { color:var(--black-2); line-height:22px; }
+/*제안보내기*/
+.h-popup .openOffer-POPUP .send-sgst {margin-top: -5px;}
+.h-popup .openOffer-POPUP .send-sgst p {font-size:14px; line-height:24px; margin-bottom:5px; color:#7E7E7E;}
+.h-popup .openOffer-POPUP .send-sgst textarea {width:100%; border:1px solid #CCD1D7; padding:15px; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:22px; height:195px;}
+.h-popup .openOffer-POPUP .send-sgst div {font-size:13px; color:#333333; line-height:22px; margin-top:15px; margin-bottom:15px;}
+
+
 
 /*학원서비스 - 인터뷰 메시지전송 */
 .interview-messagePOP { }
@@ -777,9 +783,45 @@
 .popup-balloon .lightblueBox.no-dataBox {padding:30px; text-align:center;}
 .popup-balloon .lightblueBox.no-dataBox a {font-weight: 400 !important; width: auto !important;}
 
+/*세금계산서 팝업*/
+.h-popup .h-subbox-basic-guide.likeTBL {border-radius:0; border-bottom:1px solid #E0E6EF; border-top:1px solid #62666B}
+.h-popup .h-subbox-basic-guide.likeTBL .h-textfield>label {color:#7E7E7E; font-size:14px;}
 
-
-
+/*사업자등록증 팝업*/
+.bsinsLicns-CoWrap {display:flex; height:90vh; max-height: 652px; flex-direction:column;}
+.bsinsLicns-CoWrap .bsinsLicns-Step {margin-bottom:25px;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul {display:flex; padding-top:5px;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li {padding:14px 80px 0 0; position:relative; line-height:18px; border-top:1px solid #E0E6EF; border-top-color:#7E7E7E;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li:last-child {flex-grow:1;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li span {font-weight:500; font-size:13px; color:#333333;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li div { font-size:13px; color:#333333;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li:after {content:""; width: 10px;height: 10px; display: inline-block; border-radius: 100%; border:1px solid #7E7E7E; box-sizing: border-box; position: absolute; left: 0; top: 0; margin-top: -6px; background:#fff;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on ~ li  {border-top-color:#E0E6EF;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on ~ li:after {border:1px solid #E0E6EF;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on:before {content:"";}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on:after {border:2px solid #333;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on span {font-weight:800;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on div {font-weight:600;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on ~ li span {color:#7E7E7E; font-weight:500;}
+.bsinsLicns-CoWrap .bsinsLicns-Step ul li.on ~ li div {color:#7E7E7E; font-weight:400;}
+.bsinsLicns-CoWrap .stepCoArea {flex-grow:1;}
+.bsinsLicns-CoWrap .stepCoArea.step01 {}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 {}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 input[type="radio"] + label {width:100%; background:#F5F7FA; border-radius:10px; padding:20px; box-sizing:border-box; margin:0 0 10px 0; display:flex; line-height:19px; align-items:center;}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 input[type="radio"] + label .r-area {}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 input[type="radio"] + label .r-area .cotitle {font-size:14px; color:#333333; font-weight:500;}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 input[type="radio"] + label .r-area .cosub {font-size:14px; color:#7E7E7E;}
+.bsinsLicns-CoWrap .stepCoArea.step01 .h-radio-01 input[type="radio"] + label .r-area .cosub span {color:#333333;}
+.bsinsLicns-CoWrap .stepCoArea .h-subtxtbox-01 {background:#F5F7FA; padding:16px 20px; width:100%; box-sizing:border-box; border-radius:10px;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 {border-top:none;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 tr:first-child th,
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 tr:first-child td {border-top:1px solid #62666B;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 th {width:150px; color:#9A9A9A; font-size:13px; font-weight:400; padding:18px 20px;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 td {font-size:13px; padding:12px 20px; border-left:none;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 th .h-txt-orange {vertical-align:middle;}
+.bsinsLicns-CoWrap .stepCoArea .h-tbl-basic-2 td:only-child {text-align:center; padding:20px;}
+.bsinsLicns-CoWrap .btmbtnbox {width:100%; text-align:center; padding-top:20px;}
+.bsinsLicns-CoWrap .btmbtnbox button:after {content:url(../images/icon_htMatch-arr.png); margin-left:10px;}
 
 
 
