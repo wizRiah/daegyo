@@ -2,6 +2,7 @@
 /*2023-07-06 SSJ*/
 /*2023-07-07 SSJ*/
 /*2023-07-10 SSJ*/
+/*2023-07-12 SSJ*/
 
 /***** 모바일 팝업 공통 (layout) *****/
 .h-popup-wrap {display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; }
@@ -32,7 +33,7 @@
 .h-m-popup.popup-01 .btmbtnbox .sendRespon.h-button-orange {background:var(--orange) !important;}
 /*popup-01 -뒤로가기*/
 .h-m-popup.popup-goback {width: 100%;top: 0;height: 100vh;}
-.h-m-popup.popup-goback .pop-header {padding:17px 17px 17px 50px;border-bottom: 1px solid var(--neutral-2);}
+.h-m-popup.popup-goback .pop-header {display:flex; justify-content: space-between; padding:17px 17px 17px 50px;border-bottom: 1px solid var(--neutral-2);}
 .h-m-popup.popup-goback .pop-header .pop-title {font-weight:var(--text-medium); width:auto; display:inline-block; margin-bottom:0;}
 .h-m-popup.popup-goback .pop-header .pop-title:only-child {width:100%; display:block;}
 .h-m-popup.popup-goback .pop-body {height: calc(100% - 55px);display: flex;flex-direction: column;justify-content: space-between;background: var(--neutral-3);}
@@ -47,6 +48,10 @@
 .h-m-popup.popup-goback .btmbtnbox a:only-child {margin:0; width:100% !important; border-radius:0;}
 .h-m-popup.popup-goback .btmbtnbox a.nextpage img {transform:rotate(180deg); margin-left:10px; width:20px; height:14px;}
 .h-m-popup.popup-goback .btmbtnbox .h-button-orange {border-radius:0;}
+  /*훈장마을 메인 전체메뉴팝업 3개버튼*/
+  .h-m-popup .pop-header .menuBtnBox {margin: -2px 0 -3px 0;}
+  .h-m-popup .pop-header .menuBtnBox button {width:24px; height:24px; margin-left:18px;}
+  .h-m-popup button.srchPopClose {left:20px;top: 20px;}
 
 .h-m-popup.popup-goback button.goback {left:20px;top: 20px;}
 .h-m-popup button.goback {height: 14px;top: 15px;right: 15px;width: 20px;height: 14px;position: absolute;background:url(../images/mobile/m_arrow_left.png);border: none;cursor: pointer;text-align: center;box-sizing: border-box;background-size: 100%;background-repeat: no-repeat;/* background-position: top right; *//* background-color: #ccc; */}
