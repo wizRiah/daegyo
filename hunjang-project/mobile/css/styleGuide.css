@@ -2,6 +2,7 @@
 
 :root {
     /* Color */
+    --white: #fff;
     --teal: #43a986;
     --cyan: #26b2c8;
     --cyan2:#31B5CA;
@@ -86,6 +87,7 @@
 .h-txt-teal { color:var(--teal); }
 .h-txt-orange { color:var(--orange)!important; }
 .h-txt-red { color:var(--red); }
+.h-txt-white { color:var(--white);}
 
 .h-txt-light { font-weight:var(--text-light); }
 .h-txt-medium { font-weight:var(--text-medium); }
@@ -106,7 +108,7 @@
 
 /* input */
 input[type="text"] { width:100%; height:45px; padding:0 15px; border:1px solid var(--border-basic-2); border-radius: 4px; box-sizing: border-box; font-size: var(--text-subtitle4); }
-input[type="text"]:disabled { background:var(--neutral-1); color:var(--black-2); }
+input[type="text"]:disabled { background:var(--neutral-1)!important; color:var(--black-2); }
 .h-field-wrap input[type="text"]:disabled + .include_txt { background:var(--neutral-1); height:52px; line-height:50px; }
 input::placeholder { color:var(--black-6); }
 input[type="text"]::placeholder {font-size:var(--text-subtitle4);}
@@ -212,6 +214,7 @@ select + [class^="h-button"] { margin-left:10px; }
 .mb15 { margin-bottom:15px; }
 .mb20 { margin-bottom:20px; }
 .mb30 { margin-bottom: 30px; }
+.mb40 { margin-bottom:40px; }
 .mb50 { margin-bottom:50px; }
 .mb70 { margin-bottom:70px; }
 
@@ -221,23 +224,30 @@ select + [class^="h-button"] { margin-left:10px; }
 .pl15 { padding-left:15px; }
 .pl20 {padding-left:20px;}
 .pl30 { padding-left:30px; }
+
 .pr10 { padding-right:10px; }
 .pr20 {padding-right:20px;}
 .pr30 { padding-right:30px; }
+
 .pb0 {padding-bottom:0;}
 .pb5 {padding-bottom:5px;}
 .pb10 {padding-bottom:10px;}
 .pb15 {padding-bottom:15px;}
+.pb20 {padding-bottom:20px;}
 .pb40 {padding-bottom:40px;}
 .pb150 {padding-bottom:150px;}
+
 .pt5 {padding-top:5px;}
 .pt10 {padding-top:10px;}
 .pt15 {padding-top:15px;}
+.pt20 {padding-top:20px;}
 .pt25 {padding-top:25px;}
 .pt30 {padding-top:30px;}
 .pt40 {padding-top:40px;}
+
 .p20 {padding:20px;}
 .p25 { padding:25px !important; }
+
 .box-border {box-sizing:border-box;}
 
 /* width, height */
@@ -261,11 +271,13 @@ select + [class^="h-button"] { margin-left:10px; }
 .min-wdAuto {min-width:auto;}
 .min-wd100px {min-width:100px;}
 .min-wd105px {min-width:105px;}
+.min-wd110px {min-width:110px;}
 .min-wd125px {min-width:125px;}
 
 
 /* line-height */
 .h-line-hgt18 {line-height: 18px!important;}
+.h-line-hgt19 {line-height: 19px!important;}
 .h-line-hgt20 {line-height: 20px!important;}
 
 
@@ -339,7 +351,7 @@ button
 .h-button-neutral3 { background: var(--neutral-3); color: var(--black-2); border: 1px solid var(--border-basic-3); }
 .h-button-teal { background: var(--teal); }
 .h-button-cyan { background: var(--cyan); }
-.h-button-blue { background: var(--blue-3); }
+.h-button-blue { background: var(--blue-3)!important; }
 .h-button-orange { background: var(--orange); }
 
 /* 특수디자인 */
