@@ -138,7 +138,7 @@
             <!-- 결제 수단 -->
             <p class="labelArea">결제 수단</p>
             <div class="h-radio-02 squareBtn block pb150">
-              <div class="h-tab-Contents-four">
+              <div class="h-tab-Contents-pay">
                 <input type="radio" id="hradio02_1" name="hradio02">
                 <label for="hradio02_1">신용카드</label>
 
@@ -153,7 +153,7 @@
 
                 <div class="tabCo-Wrap">
                   <!-- 첫번째 탭 클릭했을때 활성화되는 내용들 -->
-                  <div class="tabCo-CommonBox">
+                  <div class="tabCo-CommonBox tabCo-overlapp">
 
                     <div class="basic-list-box">
                       <ul class="list-item">
@@ -202,7 +202,7 @@
                   </div>
 
                   <!-- 두번째 탭 클릭했을때 활성화되는 내용들 -->
-                  <div class="tabCo-CommonBox">
+                  <div class="tabCo-CommonBox tabCo-overlapp">
 
                     <p class="h-txt-1 h-txt-medium mt25">ㆍ납입증명 발급 신청</p>
                     <div class="basic-list-box">
@@ -297,7 +297,7 @@
                   </div>
 
                   <!-- 3번째 탭 클릭했을때 활성화되는 내용들 -->
-                  <div class="tabCo-CommonBox">
+                  <div class="tabCo-CommonBox tabCo-overlapp">
 
                     <p class="h-txt-1 h-txt-medium mt25">ㆍ납입증명 발급 신청</p>
                     <div class="basic-list-box">
@@ -361,7 +361,7 @@
                   </div>
 
                   <!-- 4번째 탭 클릭했을때 활성화되는 내용들 -->
-                  <div class="tabCo-CommonBox">
+                  <div class="tabCo-CommonBox tabCo-overlapp">
 
                     <!-- 카드 등록 전 -->
                     <div class="card-setting">
@@ -437,12 +437,13 @@
           </li>
         </ul>
 
-        <div class="tgl-guidetxt" style="position:relative;">
+        <div class="tgl-guidetxt agr-checkbox" style="position:relative;">
           <div class="h-checkbox checkbox01 m0">
-            <input type="checkbox" name="checkForm" id="check01" checked="">
-            <label for="check01" class="text-subtitle4">환불 정책을 확인하였으며 구매에 동의</label>
+            <label>
+              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+            </label>
+            <p class="agrtxt text-subtitle4"><span class="mr10">환불 정책을 확인하였으며 구매에 동의</span><button type="button" id="txtToggle" onclick='change()' class="h-button-txt h-button-nobg h-button-underline m0 p0 tgl-arrowBtn">내용보기</button></p>
           </div>
-          <button type="button" id="txtToggle" onclick='change()' class="h-button-txt h-button-nobg h-button-underline tgl-arrowBtn">내용보기</button>
 
           <div id="tgl-dropDown" class="blue-box tgl-arrowBox mt15" style="display:none;">
             <strong class="h-txt-bold btit">환불 정책 안내</strong>
