@@ -32,9 +32,18 @@ header.hc-white .location a.toplogoBtn:before {content:""; width:30px; height:23
 .m-hunjang-wrap header .btn-allmenu { display:flex; } 
 .m-hunjang-wrap header .btn-m-alarm {width:25px; height:22px; background:url(../images/mobile/alarm.png) no-repeat; background-size: 21px; margin-right: 20px; position: relative; padding-right: 10px;}
 .m-hunjang-wrap header .btn-m-alarm span {position:absolute; font-size:10px; padding:2px 5px; background:#fff; border-radius:50px; color:#30B5CA; top: 0px; right: -11px;}
+/*검색바 추가되는 경우*/
+.m-hunjang-wrap header .srchBoxArea {display: flex; padding:0 15px; align-items: center; background: #F5F7FA; border-radius: 10px; margin-right:15px; flex-grow:1; margin-top:12px;}
+.m-hunjang-wrap header .srchBoxArea button {margin-right: 15px;}
+.m-hunjang-wrap header .srchBoxArea button img {vertical-align: middle;}
+.m-hunjang-wrap header .srchBoxArea input[type="text"] { flex-grow: 1; background: transparent; border: none; outline: none; font-size: 14px; color: #333333; padding: 0; height:42px;}
+.m-hunjang-wrap header .location:nth-last-child(3) {width:auto; margin-top:12px;}
+.m-hunjang-wrap header .location:nth-last-child(3) .hunjangLogo {width: 30px; height: 23px; background: url(../images/mobile/logo_hj_simple.png) no-repeat; margin-right: 15px;}
+.m-hunjang-wrap header .srchBoxArea ~ .btn-allmenu {margin-top:12px;}
+.m-hunjang-wrap header .srchBoxArea:after {content:"";width: 100%; height: 1px; position: absolute; left: 0; top: 54px; background: #fff;}
 
-.nav { display:flex; border-bottom:1px solid var(--neutral-2); height:48px; background:#fff; box-sizing:border-box; position:relative;} 
-.nav.fixed {position:fixed; width:100%; top:0;}
+.nav { display:flex; border-bottom:1px solid var(--neutral-2); height:48px; background:#fff; box-sizing:border-box; position:relative; z-index:2;} 
+.nav.fixed {position:fixed; width:100%; top:0; z-index:2;}
 .nav .swiper-wrapper { padding:0 15px; } 
 .nav .swiper-slide { display:flex; align-items: flex-end; width:auto; } 
 .nav .nav-swiper { width:100%; } 
@@ -44,6 +53,15 @@ header.hc-white .location a.toplogoBtn:before {content:""; width:30px; height:23
 .nav .nav-swiper .swiper-slide.active a:after { content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--teal); } 
 header.hc-blue ~ .nav .nav-swiper .swiper-slide.active a {color:#30B5CA;}
 header.hc-blue ~ .nav .nav-swiper .swiper-slide.active a:after {background:#30B5CA;}
+
+    /*2dpt menu*/
+    .menu_2dpt {background:#fff; padding:0 20px; display:flex; align-items:center; border-bottom:1px solid #EBEFF5; margin-top: -43px; z-index: -1; transition: all 0.5s;}
+    .menu_2dpt.on {margin-top: 0; z-index: 1;}
+    .menu_2dpt .menu2dpt-swiper .swiper-slide {width:auto; margin-right:18px; height:42px; line-height:42px;}
+    .menu_2dpt .menu2dpt-swiper .swiper-slide a {font-size:14px; color:#7E7E7E;}
+    .nav.fixed ~ .menu_2dpt {position: fixed; top: 48px; z-index: 1;}
+
+
 
 .m-hunjang-wrap footer { /*position:fixed;*/ width:100%; padding-bottom:70px; bottom:64px; background:#fff; z-index:2;} 
 .m-hunjang-wrap footer .mypage-info {box-sizing:border-box;display:flex;justify-content: center;align-items: center;height:45px;padding: 0px 25px;border-top:1px solid var(--border-basic-3);border-bottom:1px solid var(--border-basic-3);background:var(--neutral-2);font-size:var(--text-subtitle6);} 
