@@ -42,8 +42,11 @@
               <div class="pop-header">
                 <p class="pop-title text-h3">파란수학학원</p>
                 <div class="menuBtnBox">
+                  <button type="button" class="btn-share">
+                    <img src="../../images/mobile/m_icon_share_gray.png" alt="">
+                  </button>
                   <button type="button" class="btn-allmenu">
-                    <img src="../../../images/mobile/m_icon_allmenu_gray.png" alt="">
+                    <img src="../../images/mobile/m_icon_allmenu_gray.png" alt="">
                   </button>
                 </div>
               </div>
@@ -53,24 +56,128 @@
                   
                   <!-- 내용 -->
 
-                  <div class="m-brnd_detail-Wrap">
+                  <div class="m-brnd_detail-Wrap m-acdmy_detail-Wrap">
 
-                    <div class="bgImgbox bg-01"></div>
+                    <div class="bgImgbox bg02"><!-- bg01 을 bg02, bg03, bg04, bg05 까지 1~5의 숫자로 변경하면 배경이미지가 바뀜. -->
+                    </div>
 
                     <div class="brndrcrt-CoBox">
                       <!-- 상단 제목/소개영역 -->
                       <div class="brndInfo">
                         <strong class="brndNm">파란수학학원</strong>
                         <div class="brndInfoCo">
-                          <div class="logoBox">
-                            <img src="../../images/logo_dummy01.jpg">
+                          <div class="logoWrap">
+                            <div class="logoBox">
+                              <img src="../../images/logo_dummy01.jpg">
+                            </div>
+                            <div class="likeIt">
+                              <div class="scrap_star">
+                                <input type="checkbox" class="btn-tgl btn-like" id="like-thisAcdmy" name="like-thisAcdmy">
+                                <label for="like-thisAcdmy" onclick="">관심학원</label>
+                              </div>
+                            </div>
                           </div>
                           <div class="coBox">
-                            파란수학학원은 2023년 3월 5일에 개원하여 1년 이상 학원을 운영중인 입시/보습/속셈 전문학원 입니다.<br>
-                            유아, 초등을 대상으로 국어, 미술, 수학을 전문으로 교육하고 있으며, 원생은 30명~100명 미만의 원생이 파란수학학원을 등원하고 있습니다.
+                            <b>파란수학학원</b>은 <b>2023년 3월 5일</b>에 개원하여 <b>1년 이상</b> 학원을 운영중인 <b>입시/보습/속셈</b> 전문학원 입니다. 
+                            <b>유아, 초등</b>을 대상으로 <b>국어, 미술, 수학</b>을 전문으로 교육하고 있으며, 원생은 <b>30명~100명 미만</b>의 원생이 파란수학<b>학원</b>을 등원하고 있습니다.
+                          </div>
+
+                          <div class="moreInfoArea">
+                            <div class="dl">
+                              <div class="dt">학원형태</div>
+                              <div class="dd">보습/속셈</div>
+                            </div>
+                            <div class="dl">
+                              <div class="dt">주요과목</div>
+                              <div class="dd">수학, 과학</div>
+                            </div>
+                            <div class="dl">
+                              <div class="dt">원장(대표자)</div>
+                              <div class="dd">홍길동</div>
+                            </div>
+                            <div class="dl">
+                              <div class="dt">학원 설립일</div>
+                              <div class="dd">2023년 3월 10일</div>
+                            </div>
+                            <div class="dl">
+                              <div class="dt">학원주소</div>
+                              <div class="dd">(00000) 서울 구로구 디지털로26길 123<br>
+                                지플러스타워9층 906호</div>
+                            </div>
+                            <a href="학원지도 보기(카카오맵 연동)" class="h-button-ml h-button-white wd100 m0">지도보기 <img src="../../images/mobile/m_arrow_right_gray.png"></a>
                           </div>
                         </div>
                       </div>
+
+
+                      <div class="acdmyInfo-ImgSlideWrap">
+                        <div class="TopSrchWrap_guidetxt">
+                          <p class="h-txt-5"><strong class="h-txt-1 text-subtitle17 h-txt-bold">학원정보</strong></p>
+                        </div>
+                        <div class="swiper acdmyImg-swiper swiper-initialized swiper-horizontal">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide active swiper-slide-active"><img src="https://interiorbay.co.kr:54306/design/upload_file/BD38940/aaeb54d6ae947e1a33dded22d7bdd1eb_13931_1.jpg"></div>
+                            <div class="swiper-slide swiper-slide-next"><img src="https://interiorbay.co.kr:54306/design/upload_file/BD38940/aaeb54d6ae947e1a33dded22d7bdd1eb_13931_1.jpg"></div>
+                            <div class="swiper-slide"><img src="https://www.qplace.kr/data/portfolio/1948/6a4e2b50e506ac9c1bf0f7d6080a9b64_w800.jpg"></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <script>
+                              var swiper = new Swiper(".acdmyImg-swiper", {
+                                  pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                      },
+                                  loop: true,  //무제한 롤링!!
+                                  navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                  }
+                                  
+                                });
+                        </script>
+                        <!-- 무제한 롤링 참고 슬라이드 데모뷰
+                        https://codesandbox.io/p/sandbox/756jz5?file=%2Fsrc%2FApp.vue%3A1%2C1 -->
+                      </div>
+
+
+
+
+                      <div class="acdmyInfo-bnftBox">
+                        <div class="TopSrchWrap_guidetxt">
+                          <p class="h-txt-5"><strong class="h-txt-1 text-subtitle17 h-txt-bold">복지.혜택</strong></p>
+                        </div>
+                        <ul class="academyInfo-benefit">
+                          <li>연금.보험 - 국민연금, 고용보험, 산재보험, 건강보험</li>
+                          <li>휴무, 휴가, 행사 - 주5일제</li>
+                          <li>편의, 여가, 건강 - 점심 식사 지원</li>
+                          <li>보상.수당.지원 - 퇴직금, 장기근속 포상, 휴일근로수당, 연월차제도수당, 명절선물/명절상여</li>
+                        </ul>
+                      </div>
+
+
+
+
+
+                      <div class="acdmyInfo-bnftBox">
+                        <div class="TopSrchWrap_guidetxt">
+                          <p class="h-txt-5"><strong class="h-txt-1 text-subtitle17 h-txt-bold">인재상</strong></p>
+                        </div>
+                        <ul class="academyInfo-person">
+                          <li><div>성실하고 책임감이 강한 믿음직한 인재</div><div class="bedgeBox"></div></li>
+                          <li><div>의욕적으로 임하는 도전적 인재</div><div class="bedgeBox"></div></li>
+                          <li><div>항상 밝고 긍정적인 태도를 가진 인재</div><div class="bedgeBox"></div></li>
+                          <li><div>전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재 전문성과 업무 역량이 뛰어난 인재</div><div class="bedgeBox"></div></li>
+                          <li><div>전문성과 업무 역량이 뛰어난 인재</div><div class="bedgeBox"></div></li>
+                        </ul>
+                      </div>
+
+
+
+
+
 
                       <!-- 중간 배너 -->
                       <div class="titleSlidearea">
@@ -80,15 +187,11 @@
 
                       <!-- 목록시작 상단부분 -->
                       <div class="TopSrchWrap_guidetxt">
-                        <div class="flex flex-between flex-center topTitle mb10">
-                          <p class="h-txt-5"><strong class="h-txt-1 text-subtitle17 h-txt-bold mr5">채용공고</strong></p>
-                        </div>
+                        <p class="h-txt-5"><strong class="h-txt-1 text-subtitle17 h-txt-bold">채용공고</strong></p>
                       </div>
-
 
                       <!-- 채용정보 페이지의 리스트와 동일 -->
                       <div class="recruitInfo-main hunjangMainList">
-                        <!-- 과목/직무 리스트 -->
                         <div class="list-mbasic-wrap">
                           
                           <div class="list-mbasic">
@@ -114,30 +217,6 @@
                                 <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
                               </div>
                             </div>
-                            <div class="libox">
-                              <div class="txtdiv">
-                                <p class="subco mb5">파란수학학원</p>
-                                <a href="javascript:void(0);" class="trTit">수학/초등/중등/고등부 선생님 각 초빙합니다.</a>
-                                <div class="dl straightDl">
-                                  <p class="dt">서울 송파구</p>
-                                  <p class="dt">신입/경력</p>
-                                  <p class="dt">대학(2,3년)↑</p>
-                                </div>
-                                <div class="dl straightDl">
-                                  <p class="dt">내규에 따름</p>
-                                  <p class="dt">~6/10(일)</p>
-                                </div>
-                              </div>
-                              <div class="r-btnbox">
-                                <div class="scrap_star">
-                                  <input type="checkbox" class="btn-tgl btn-scrap" id="notice-scrap1_1">
-                                  <label for="notice-scrap1_1" onclick="">채용공고 스크랩</label>
-                                </div>
-                                <a href="javascript:void(0);" class="h-button-xxs0 h-button-teal">즉시지원</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="list-mbasic">
                             <div class="libox">
                               <div class="txtdiv">
                                 <p class="subco mb5">파란수학학원</p>
