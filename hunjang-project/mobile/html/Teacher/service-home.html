@@ -420,7 +420,8 @@
 
 
 
-          <!-- 5. 훈장마을 편리기능 Tool -->
+          <!-- 5. 훈장마을 편리기능 Tool 
+            //^^^ 7월 11일자로 컨텐츠 삭제되었습니다. ^^ 
           <div class="hnjg-toolBox">
             <div class="flex flex-between flex-center">
               <strong class="homeBlockTit">훈장마을 편리기능 Tool</strong>
@@ -436,6 +437,80 @@
               <div class="quickresm"><a href="">퀵<br>자소서</a></div>
             </div>
           </div>
+          -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- 티츄스토리 -->
+          <div class="main-teachuStry">
+            <div class="flex flex-between flex-center">
+              <strong class="homeBlockTit">티츄의 좌충우돌 학원강사 생존기</strong>
+              <a href="javascript:void(0);" class="h-button-more h-button-nobg h-button-xs">더보기</a>
+            </div>
+            <div class="swiper mainteachu-swiper swiper-initialized swiper-horizontal">
+              <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+                <div class="swiper-slide active swiper-slide-active" role="group">
+                  <div class="tchuSlideCo">
+                    <a href="">
+                      <div class="thumnailbox"><img src="../../images/img_toon04.jpg"></div>
+                      <div class="txtBox">저녁식사</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-next" role="group">
+                  <div class="tchuSlideCo">
+                    <a href="">
+                      <div class="thumnailbox"><img src="../../images/img_toon02.jpg"></div>
+                      <div class="txtBox">수업이 시작되었숨다 수업이 시작되었숨다 수업이 시작되었숨다 수업이 시작되었숨다 </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group">
+                  <div class="tchuSlideCo">
+                    <a href="">
+                      <div class="thumnailbox"><img src="../../images/img_toon03.jpg"></div>
+                      <div class="txtBox">저녁식사</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- 3개 배너블록 -->
+          <div class="bottom-bnrBlock">
+            <a href="" class="bnrBox bluebox">
+              <strong>Clean 훈장마을</strong>
+              <div class="flex">
+                <p>강사취업활동에 피해가 없도록~ <br>
+                  강사취업이 Clean해질 그날까지 훈장마을이 함께 합니다.</p>
+              </div>
+              
+            </a>
+          </div>
+
+
+
+
+
 
 
 
@@ -460,6 +535,7 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
 
         </div>
@@ -637,15 +713,24 @@
     } );
 
 
-
     // 지원현황 슬라이드
     var swiper = new Swiper(".applyList-swiper", {
+      slidesPerView: "auto",
+    });
+
+
+    // 티츄스토리 슬라이드
+    var swiper = new Swiper(".mainteachu-swiper", {
       slidesPerView: "auto",
     });
 
     // 배너영역 슬라이드
     var swiper = new Swiper(".mainBnr-swiper", {
       slidesPerView: "auto",
+      pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            }
     });
 
 
