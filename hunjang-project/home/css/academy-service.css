@@ -2,6 +2,7 @@
 /*2023-07-04 SSJ*/
 /*2023-07-11 SSJ*/
 /*2023-07-17 SSJ*/
+/*2023-07-18 SSJ*/
 
 /* 학원서비스 */
 
@@ -1016,16 +1017,24 @@
 .h-teacher-main .h-appli-wrap .h-tit-box-1 p { color: #fff; } 
 .h-teacher-main .h-appli-wrap .h-tit-box-1 .h-button-more { color: #fff; } 
 .h-teacher-main .h-appli-wrap .h-tit-box-1 .h-button-more::after { color: #fff; } 
-.h-teacher-main .h-appli-wrap .my-apply { border-top: 1px solid #FFFFFF26; } 
+.h-teacher-main .h-appli-wrap .my-apply {flex-grow:1; border-top: 1px solid #FFFFFF26; } 
+.h-teacher-main .h-appli-wrap .my-apply .acmainApp-swiper {height:100%;}
 .h-teacher-main .h-appli-wrap .h-apply { padding: 25px 0 0 0; } 
 .h-teacher-main .h-appli-wrap .h-apply .txt1 { font-size: var(--text-subtitle2); color: #ffffff; } 
 .h-teacher-main .h-appli-wrap .h-apply .txt2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; margin: 10px 0 0 0; line-height: 26px; color: #FFFFFF; } 
 .h-teacher-main .h-appli-wrap .h-apply .h-app-date { color: #FFFFFF99; margin-top: 28px; font-size: var(--text-subtitle4); } 
-.h-teacher-main .h-appli-wrap .h-apply .btn-area { margin: 35px 0 0 0; height: 28px; width: 100%; display: flex; justify-content: center; align-items: center; } 
-.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-appli-btn { width:28px; height:28px; background:url(../images/ico_service_arrow.png); display: block; } 
-.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-appli-btn.after { transform: rotate(180deg); } 
-.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-pg-num { padding: 0 12px; font-weight: bold; font-size: 14px; font-family: 'SUIT'; color: #fff; } 
-.h-teacher-main .h-appli-wrap .h-apply .btn-area .h-pg-num .h-no-active { color: #A2B1FF; } 
+.h-teacher-main .h-appli-wrap .my-apply .btn-area {display: flex; align-items: center; width: 100%; justify-content: center; position: relative; margin-top: -28px;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-next, 
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-prev {width:28px; height:28px; background:url(../images/ico_service_arrow.png); opacity:1 !important; top: auto; bottom: auto; margin-top: 0; position: relative;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-next {transform: rotate(180deg); order:3}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-prev {order:1;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-next:after, 
+.h-teacher-main .h-appli-wrap .my-apply .swiper-button-prev:after {display:none;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-pagination {margin: 0 12px; padding:0 12px; font-weight: bold; font-size: 14px; font-family: 'SUIT'; color:#A2B1FF; width: auto; order: 2; position: relative; top: auto; bottom: auto;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-pagination .swiper-pagination-current {font-weight: 500; color:#fff;}
+.h-teacher-main .h-appli-wrap .my-apply .swiper-pagination .swiper-pagination-total:before,
+.h-teacher-main .h-appli-wrap .my-apply .swiper-pagination .swiper-pagination-current:before {content:"0";}
+
 .h-teacher-main .h-add-info .h-txt-2 { font-size: var(--text-subtitle4); } 
 .h-teacher-main .h-add-info .h-button-txt { height: 16px; line-height: 16px; padding: 0; } 
 
@@ -1457,6 +1466,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* 강사서비스 홈 하단 컨텐츠 - 티츄스토리 */
+.pcmain-teachuStry {position:relative;}
+.pcmain-teachuStry .mainteachu-swiper {padding-bottom:60px;}
+.pcmain-teachuStry .mainteachu-swiper .swiper-wrapper { padding-bottom:10px;}
+.pcmain-teachuStry .mainteachu-swiper .swiper-slide {border-radius: 10px; overflow: hidden; box-shadow: 0px 5px 10px #0000000D;}
+.pcmain-teachuStry .tchuSlideCo {width: 100%; border-radius: 10px;}
+.pcmain-teachuStry .tchuSlideCo .thumnailbox {width: 100%; height: 143px;}
+.pcmain-teachuStry .tchuSlideCo .thumnailbox img {width: 100%; min-height: 100%;}
+.pcmain-teachuStry .tchuSlideCo .txtBox {font-size: 15px; color: #333333; background: #fff; line-height: 22px; width: 100%; box-sizing: border-box; padding: 15px 20px 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.pcmain-teachuStry .swiper-button-next, 
+.pcmain-teachuStry .swiper-button-prev {width: 64px; height: 64px; top:90px; background:url(../images/slide-arrow-circleBtn.png); opacity:1 !important;}
+.pcmain-teachuStry .swiper-button-next {right:-33px; background-position-x: -64px;} 
+.pcmain-teachuStry .swiper-button-prev {left:-33px;}
+.pcmain-teachuStry .swiper-button-next:after, 
+.pcmain-teachuStry .swiper-button-prev:after {display:none;}
+
+/* 강사서비스 홈 하단 컨텐츠 - 배너3 */
+.h-teacher-main .bottom-bnrBlock {display: flex; padding-bottom:70px;}
+.h-teacher-main .bottom-bnrBlock .bnrBox {height:238px; width:30%; border-radius: 10px; margin-bottom: 10px; padding: 30px 30px 30px; box-sizing: border-box; width: 100%; margin-right:15px; flex-grow: 1; display:flex; flex-direction:column;}
+.h-teacher-main .bottom-bnrBlock .bnrBox.bluebox {background: #26B2C8;}
+.h-teacher-main .bottom-bnrBlock .bnrBox.greenbox {background: #43A986;}
+.h-teacher-main .bottom-bnrBlock .bnrBox.greybox {background: #62666B; margin-right:0;}
+.h-teacher-main .bottom-bnrBlock .bnrBox .bnrTit { font-size: 22px; color: #FFFFFF; padding-bottom: 15px; display: block;}
+.h-teacher-main .bottom-bnrBlock .bnrBox .flex {flex-grow:1;flex-direction:column; justify-content: space-between; align-items:right;}
+.h-teacher-main .bottom-bnrBlock .bnrBox .flex p {font-size: 14px; color: #FFFFFF; line-height: 22px;}
+.h-teacher-main .bottom-bnrBlock .bnrBox .flex p strong { color: #FFEE00; font-weight: 500;}
+.h-teacher-main .bottom-bnrBlock .bnrBox img {width:42px;}
+
+/* 강사서비스 홈 하단 컨텐츠 - 팝업슬라이드배너 */
+.h-teacher-main .homeBtm-popupBnrWrap {}
+.h-teacher-main .homeBtm-popupBnrWrap .btmpopBnr-swiper {width:636px; padding-bottom:40px;}
+.h-teacher-main .homeBtm-popupBnrWrap a {width:636px; height:126px;}
+.h-teacher-main .homeBtm-popupBnrWrap a img {display: block;}
+.h-teacher-main .homeBtm-popupBnrWrap .btn-area {display: flex; align-items: center; width: 100%; justify-content: center; position: relative; position:absolute; bottom:0;}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-next, 
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-prev {width:28px; height:28px; background:url(../images/ico_service_arrow_grey.png); opacity:1 !important; top: auto; bottom: auto; margin-top: 0; position: relative;}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-next {transform: rotate(180deg); order:3}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-prev {order:1;}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-next:after, 
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-button-prev:after {display:none;}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-pagination {margin: 0 12px; padding:0 12px; font-weight: bold; font-size: 14px; font-family: 'SUIT'; color:#BCBCBC; width: auto; order: 2; position: relative; top: auto; bottom: auto;}
+.h-teacher-main .homeBtm-popupBnrWrap .swiper-pagination .swiper-pagination-current {font-weight: 500; color:#333333;}
 
 
 

@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="../../css/layout.css">
   <link rel="stylesheet" href="../../css/academy-service.css">
   <link rel="stylesheet" href="../../css/reseum-regist.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 
 <body>
@@ -266,17 +267,45 @@
               <a href="javascript:void(0);" class="h-txt-regular h-button-more h-button-nobg">더보기</a>
             </div>
             <div class="my-apply">
-              <div class="h-apply">
-                <p class="txt1 txt-ellipsis">서울아카데미 수학학원</p>
-                <p class="txt2 h-txt-bold">강동구 서울아카데미에서 수학 선생님을 모십니다.</p>
-                <p class="h-app-date">입사지원일 : <span>2022.05.12</span></p>
+              <div class="swiper acmainApp-swiper swiper-initialized swiper-horizontal">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide active swiper-slide-active">
+                    <div class="h-apply">
+                      <p class="txt1 txt-ellipsis">서울아카데미 수학학원</p>
+                      <p class="txt2 h-txt-bold">강동구 서울아카데미에서 수학 선생님을 모십니다.</p>
+                      <p class="h-app-date">입사지원일 : <span>2022.05.12</span></p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-slide-next">
+                    <div class="h-apply">
+                      <p class="txt1 txt-ellipsis">홍대아카데미에서 수학학원</p>
+                      <p class="txt2 h-txt-bold">마포구 홍대아카데미에서 수학 선생님을 모십니다.</p>
+                      <p class="h-app-date">입사지원일 : <span>2022.05.12</span></p>
+                    </div>
+                  </div>
+                </div>
                 <div class="btn-area">
-                  <a href="javascript:void(0);" title="왼쪽보기" class="h-appli-btn before"></a>
-                  <div class="h-pg-num">01<span class="h-no-active" style=""> / <span>05</span></span></div>
-                  <a href="javascript:void(0);" title="오른쪽보기" class="h-appli-btn after"></a>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
                 </div>
               </div>
+              
             </div>
+            <script>
+                  // 티츄스토리 슬라이드
+                  var swiper = new Swiper(".acmainApp-swiper", {
+                    slidesPerView: 1,
+                    pagination: {
+                      el: ".swiper-pagination",
+                      type: "fraction",
+                    },
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                  });
+            </script>
           </div>
           <!-- // -->
         </div>
@@ -429,8 +458,166 @@
         </div>
         <!-- // -->
 
+
+        <!-- 4. 학원공감 스토리 티츄~-->
+        <div class="h-tit-box-1 pt40">
+          <div class="mt10">
+            <p class="i-block h-tit-26">학원공감 스토리 티츄</p>
+            <a href="javascript:void(0);" class="h-button-more h-button-nobg">더보기</a>
+          </div>
+        </div>
+        <div class="pcmain-teachuStry">
+          <div class="swiper mainteachu-swiper swiper-initialized swiper-horizontal">
+            <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+              <div class="swiper-slide active swiper-slide-active" role="group">
+                <div class="tchuSlideCo">
+                  <a href="">
+                    <div class="thumnailbox"><img src="../../images/img_toon04.jpg"></div>
+                    <div class="txtBox">저녁식사</div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-next" role="group">
+                <div class="tchuSlideCo">
+                  <a href="">
+                    <div class="thumnailbox"><img src="../../images/img_toon02.jpg"></div>
+                    <div class="txtBox">수업이 시작되었숨다 수업이 시작되었숨다 수업이 시작되었숨다 수업이 시작되었숨다 </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide" role="group">
+                <div class="tchuSlideCo">
+                  <a href="">
+                    <div class="thumnailbox"><img src="../../images/img_toon03.jpg"></div>
+                    <div class="txtBox">저녁식사</div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide" role="group">
+                <div class="tchuSlideCo">
+                  <a href="">
+                    <div class="thumnailbox"><img src="../../images/img_toon03.jpg"></div>
+                    <div class="txtBox">저녁식사</div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide" role="group">
+                <div class="tchuSlideCo">
+                  <a href="">
+                    <div class="thumnailbox"><img src="../../images/img_toon03.jpg"></div>
+                    <div class="txtBox">저녁식사</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <script>
+                // 티츄스토리 슬라이드
+                var swiper = new Swiper(".mainteachu-swiper", {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+          </script>
+        </div>
+
+
+        <!-- 배너3개 -->
+        <div class="bottom-bnrBlock">
+          <a href="공통영역 임금체불업주 조회 페이지로 이동" class="bnrBox bluebox">
+            <strong class="bnrTit">Clean 훈장마을</strong>
+            <div class="flex">
+              <p>강사취업활동에 피해가 없도록~ <br>
+                <strong>강사취업이 Clean해질 그날까지 훈장마을</strong>이 함께 합니다.
+              </p>
+              <div class="h-txt-r"><img src="../../images/arrow-inCircle.png"></div>
+            </div>
+          </a>
+          <a href="공통영역 면접제의 페이지로 이동" class="bnrBox greenbox">
+            <strong class="bnrTit">찾아오는 면접제의</strong>
+            <div class="flex">
+              <p>인재정보에 이력서 공개 시 <strong>"연락처만 비공개“</strong> 하시면 강사님과 인터뷰 하고 싶은 학원에서 면접제의를 받을 수 있습니다.
+              </p>
+              <div class="h-txt-r"><img src="../../images/arrow-inCircle.png"></div>
+            </div>
+          </a>
+          <a href="훈장플러스 스마트 취업툴 페이지로 이동" class="bnrBox greybox">
+            <strong class="bnrTit">스마트 취업 Tool</strong>
+            <div class="flex">
+              <p>이력서 작성하실 때, 경력기간, 졸업년월 기억하기 힘드셨죠. <strong>스마트 취업Tool</strong>로 쉽게, 스마트하게 계산해 보세요.
+              </p>
+              <div class="h-txt-r"><img src="../../images/arrow-inCircle.png"></div>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+
+
+        <!-- 하단 팝업배너 -->
+        <div class="homeBtm-popupBnrWrap">
+          <div class="swiper btmpopBnr-swiper swiper-initialized swiper-horizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide active swiper-slide-active">
+                <a href="#"><img src="../../images/acdmyMain-dummyBnr01.png"></a>
+              </div>
+              <div class="swiper-slide swiper-slide-next">
+                <a href="#"><img src="../../images/acdmyMain-dummyBnr01.png"></a>
+              </div>
+            </div>
+            <div class="btn-area">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+          
+        </div>
+        <script>
+              // 티츄스토리 슬라이드
+              var swiper = new Swiper(".btmpopBnr-swiper", {
+                slidesPerView: 1,
+                pagination: {
+                  el: ".swiper-pagination",
+                  type: "fraction",
+                },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+        </script>
+
+
+
+
+
+
       </div>
       <!-- // -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!-- footer -->
       <footer>
