@@ -1,0 +1,44 @@
+@charset "utf-8"; 
+
+/* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
+/* 간격 */
+.mt60 {margin-top:60;}
+.mb40 {margin-bottom:40px;}
+.ml0 {margin-left:0 !important;}
+
+/* 공간 */
+.pdb60 {padding-bottom:60px !important;}
+
+/* layout 넓이 */
+.wrap-w950 {width:950px !important;}
+
+/* width */
+.w191 {width:191px !important;}
+.w20ps {width:20% !important;}
+
+.partition {border:1px solid #DCDCDC;}
+
+/* 서비스 신청 */
+.service-menu {display:flex;justify-content:space-between;flex-wrap: wrap;}
+.service-menu > li {display:flex;overflow:hidden;position:relative;width:530px;height:131px;background:#fff;border:1px solid #D4DAE2;border-radius:10px;box-sizing:border-box;}
+.service-menu > li:nth-child(n+3) {margin-top:20px;}
+.service-menu > li .logo {display:flex;justify-content:center;align-items:center;width:140px;}
+.service-menu > li div {max-width:330px;}
+.service-menu > li p {margin-top:10px;font-size:13px;line-height:20px;color:#7E7E7E;}
+.service-menu > li .label {position:absolute;right:0;bottom:0;display:block;width:95px;height:34px;line-height:34px;border-radius:4px 0 0 0;font-size:12px;color:#fff;text-align:center;}
+.service-menu > li .label.green {background:#43A986;}
+.service-menu > li .label.purple {background:#5F5991;}
+.service-menu > li .label.limegreen {background:#50D8B2;}
+.service-menu li.using {overflow:visible;align-items:center;}
+.service-menu li.using > div {position:relative;}
+.service-menu li.using > div p {width:250px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.service-menu li.using > div input[type="checkbox"] {position:absolute;display:none;width:1px;height:1px;text-indent:-999px;overflow:hidden;}
+.service-menu li.using > div label {position:relative;display:block;padding-right:34px;width:250px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;margin-top:10px;font-size:13px;line-height:20px;color:#7E7E7E;}
+.service-menu li.using > div input[type="checkbox"] + label::after {position: absolute;right: -5px;top: 50%;transform:translate(-50%, -50%) rotate(0deg);content:'';width:20px;height:20px;background: url(../images/arrow_dropdown.svg) center/100% no-repeat;transition: transform 0.5s;}
+.service-menu li.using > div input[type="checkbox"]:checked + label::after {transform: translate(-50%, -50%) rotate(180deg);}
+.service-menu li.using > div .dropdown {overflow-y: auto;display: block;position: absolute;top: 40px;right: 5px;z-index: -1;width: 220px;height: 0;padding:20px;opacity: 0;border-style: solid;border-color: #7e7e7e;border-width:1px;background: #fff;box-sizing: border-box;box-shadow: 0 5px 10px #0000001A;transition: all 0.3s;}
+.service-menu li.using > div .dropdown .drop-tit {font-size:16px;font-weight:500;}
+.service-menu li.using > div .dropdown ul li {position:relative;padding-left:10px;font-size:13px;line-height:20px;color:#7E7E7E;}
+.service-menu li.using > div .dropdown ul li:after {position: absolute;top: 10px;left: 4px;content: '';width: 2px;height: 2px;background-color: currentColor;border-radius: 50%;}
+.service-menu li.using > div input[type="checkbox"]:checked ~ .dropdown {height:auto;top:50px;z-index:3;opacity:1;visibility:visible;margin-bottom:0;}
+.service-menu li.using .label {top:calc(50% - 35px);right:30px;width:71px;height:71px;height:71px;background:#FF6000;border-radius:50%;line-height:71px;font-size:14px;color:#fff;text-align:center;}
