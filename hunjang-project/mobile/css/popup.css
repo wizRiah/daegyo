@@ -1,8 +1,7 @@
 @charset "utf-8";
-/*2023-07-07 SSJ*/
-/*2023-07-10 SSJ*/
 /*2023-07-12 SSJ*/
 /*2023-07-17 SSJ*/
+/*2023-07-19 SSJ*/
 
 /***** 모바일 팝업 공통 (layout) *****/
 .h-popup-wrap {display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; }
@@ -647,7 +646,7 @@
 .h-m-popup .suggestion_status>span.refusal { color:#BCBCBC }
 .h-m-popup .suggestion_status>span span {font-size:20px; }
 
-.h-m-popup .openOffer-POPUP {background: #F5F7FA; padding: 20px; box-sizing: border-box; width: 100%;}
+.h-m-popup .openOffer-POPUP {background: #F5F7FA; padding: 20px; box-sizing: border-box; width: 100%; height:100%;}
 .h-m-popup .openOffer-POPUP .employeeInfo { display: flex; margin-bottom: 30px; }
 .h-m-popup .openOffer-POPUP .employeeInfo .profileArea { width:85px; padding-right:20px; box-sizing: border-box; padding-top: 5px; }
 .h-m-popup .openOffer-POPUP .employeeInfo .profileArea .imgbox { width:65px; height:65px; overflow:hidden; border-radius:100%; }
@@ -688,9 +687,30 @@
 .h-m-popup .openOffer-POPUP .h-bullet-list li .tit:not(.h-txt-pit):after { content:':'; margin-left:5px; margin-right:5px; }
   /*제안보내기*/
   .h-m-popup .openOffer-POPUP .send-sgst {border-top:1px solid #D4DAE2; margin-top: -5px; padding-top: 15px;}
+  .h-m-popup .openOffer-POPUP .send-sgst ~ .send-sgst {border-top:none; padding-top:20px;}
   .h-m-popup .openOffer-POPUP .send-sgst p {font-size:14px; line-height:24px; margin-bottom:5px; color:#7E7E7E;}
   .h-m-popup .openOffer-POPUP .send-sgst textarea {width:100%; border:1px solid #CCD1D7; padding:15px; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:22px; height:195px;}
   .h-m-popup .openOffer-POPUP .send-sgst div {font-size:13px; color:#333333; line-height:22px; margin-top:15px; margin-bottom:15px;}
+
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap {width:100%; background:#fff; box-sizing:border-box; position:relative;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap button {width:100%; font-size:14px; color:#333333; padding:14px 50px 14px 15px; background:#fff; text-align:left; position:relative; border:1px solid #CCD1D7; border-radius:4px;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap button:after {content:""; width:11px; height:6px; background:url(../images/icon_select_arrow.png); display:inline-block; position:absolute; right:17px; top:50%; margin-top:-3px; transition:transform 0.5s;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap button.on {border-radius:4px 4px 0 0;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap button.on:after {transform:rotate(180deg);}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list {margin:0; height:0; opacity:0; transition:height 1s; max-height: 258px; overflow-y: scroll; border:1px solid #CCD1D7; border-radius:0 0 4px 4px; position:absolute; left:0; top:45px; box-sizing:border-box; border-top-color:#fff;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list.on {height:auto; opacity:1;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul {}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li {}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li .h-radio-02 {margin:0; line-height:normal;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label {display:flex; padding:14px 14px; border:none; height:auto;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label:before {display:none;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label i {font-size:17px; color:#C3CAD4;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label .myresume-item {padding-left:10px; margin:0; text-align:left;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label .btit {font-size:15px; color:#333333; -webkit-line-clamp:2;-webkit-box-orient:vertical; display:-webkit-box; white-space:normal; line-height:18px; height:36px; overflow:hidden;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li label .bdate {font-size:12px; color:#bcbcbc; line-height:17px; margin-bottom:0;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li input:checked + label {background:#F5F7FA;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li input:checked + label .btit {color:#61A6FF;font-weight:500;}
+  .h-m-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li input:checked + label i {color:#61A6FF;}
 
 /* 결제내역관리 - 납입증명서 발급 신청 팝업 */
 .m-paymentPop {background: #F5F7FA; padding:20px;}

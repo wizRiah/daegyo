@@ -1,8 +1,8 @@
 @charset "utf-8";
-/* @latest 2023.07.04 SSJ */
 /* @latest 2023.07.05 SSJ */
 /* @latest 2023.07.12 SSJ */
 /* @latest 2023.07.18 SSJ */
+/* @latest 2023.07.19 SSJ */
 
 
 /***** 팝업 공통 (layout) *****/
@@ -638,7 +638,17 @@
 .h-popup .openOffer-POPUP .send-sgst textarea {width:100%; border:1px solid #CCD1D7; padding:15px; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:22px; height:195px;}
 .h-popup .openOffer-POPUP .send-sgst div {font-size:13px; color:#333333; line-height:22px; margin-top:15px; margin-bottom:15px;}
 
-
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap {width:100%; background:#fff; box-sizing:border-box; position: relative;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap button {width:100%; font-size:14px; color:#333333; padding:14px 50px 14px 20px; background:#fff; text-align:left; position:relative; border: 1px solid #CCD1D7; border-radius: 4px;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap button:after {content:""; width:11px; height:6px; background:url(../images/icon_select_arrow.png); display:inline-block; position:absolute; right:17px; top:50%; margin-top:-3px; transition:transform 0.5s;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap button.on {border-radius:4px 4px 0 0;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap button.on:after {transform:rotate(180deg);}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list {margin:0; height:0; opacity:0; transition:height 1s; max-height:144px; overflow-y: scroll; position: absolute; top: 44px; left:0px; width: 100%; background: #fff; border: 1px solid #CCD1D7; border-radius: 0 0 4px 4px; box-sizing:border-box; border-top-color:#fff;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list.on {height:auto; opacity:1;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul {}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li {padding:9px 19px;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li:hover {background:#F5F7FA;}
+.h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li .btit {font-size:14px; color:#333333; margin-bottom:0; line-height:16px;}
 
 /*학원서비스 - 인터뷰 메시지전송 */
 .interview-messagePOP { }
