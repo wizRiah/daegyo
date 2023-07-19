@@ -1,5 +1,6 @@
 @charset "utf-8"; 
 /* @latest 2023.07.18 SSJ */
+/* @latest 2023.07.19 SSJ */
 
 /* 훈장마을 메인 */
 .hunjang-main-wrap .main-visual-wrap { background-color: #F6F7F8; } 
@@ -22,8 +23,9 @@
 .hunjang-main-wrap .login-contents li { flex: 50%; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; } 
 .hunjang-main-wrap .login-contents li:last-child { border-width: 0 0 1px 0; } 
 .hunjang-main-wrap .login-contents li a { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; } 
-.hunjang-main-wrap .login-contents li a .login-icon { width: 36px; height: 32px; text-align: center; margin: 0 auto; background: url(../images/main_visual_ico_01.png) no-repeat center/contain; } 
-.hunjang-main-wrap .login-contents li a .login-icon.acad { width: 32px; height: 32px; background: url(../images/main_visual_ico_02.png) no-repeat center/contain; } 
+.hunjang-main-wrap .login-contents li a .login-icon {text-align: center; margin: 0 auto; } 
+.hunjang-main-wrap .login-contents li a .login-icon.teach{ width: 36px; height: 32px; background: url(../images/main_visual_ico_grey01.png) no-repeat center/contain;}
+.hunjang-main-wrap .login-contents li a .login-icon.acad { width: 32px; height: 32px; background: url(../images/main_visual_ico_grey02.png) no-repeat center/contain; } 
 .hunjang-main-wrap .login-contents li a p { font-size: 14px; line-height: 16px; } 
 .hunjang-main-wrap .join-info { width: 100%; display: flex; } 
 .hunjang-main-wrap .join-info li { flex: 33%; border-right: 1px solid #E0E6EF; box-sizing: border-box; } 
@@ -42,8 +44,11 @@
     .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-width: 0 0 1px 0; } 
     .hunjang-main-wrap .login-wrap.no-service .login-contents li a p { font-size: 13px; } 
     .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon { margin: 7px auto 0; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon.teach {background: url(../images/main_visual_ico_01.png) no-repeat center/contain;}
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li a .login-icon.acad {background: url(../images/main_visual_ico_02.png) no-repeat center/contain;}
     .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox { margin: 0; } 
-    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label { height: 116px; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; border-radius: 10px 0 0 0; padding: 15px; flex-direction: column; width: 100%; } 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label { height: 116px; border: 1px solid #E0E6EF; box-sizing: border-box; border-width: 0 1px 1px 0; border-radius: 10px 0 0 0; padding: 15px; flex-direction: column; width: 100%; transition:background 0.5s;} 
+    .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox label:hover {background:#F6FBFE;}
     .hunjang-main-wrap .login-wrap.no-service .login-contents li:last-child .h-checkbox label { border-radius: 0 10px 0 0; } 
     .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"] + label::before { top: 13px; left: 13px; opacity: 0.5; } 
     .hunjang-main-wrap .login-wrap.no-service .login-contents li .h-checkbox input[type="checkbox"]:checked + label, 
@@ -59,29 +64,30 @@
 
 
     /* 강사회원 로그인 */
-    .hunjang-main-wrap .login-wrap.login-after { padding: 25px; } 
-    .hunjang-main-wrap .login-wrap.login-after .login-name { font-size: 13px; line-height: 21px; } 
+    .hunjang-main-wrap .login-wrap.login-after { padding: 20px 0 0; } 
+    .hunjang-main-wrap .login-wrap.login-after .login-name { font-size: 13px; line-height: 21px; padding:0 25px;} 
     .hunjang-main-wrap .login-wrap.login-after .login-name span { display: inline-block; width: auto; max-width: calc(100% - 15px); vertical-align: text-bottom; } 
-    .hunjang-main-wrap .login-wrap.login-after .modify-info { font-size: 13px; line-height: 20px; } 
-    .hunjang-main-wrap .login-wrap.login-after .button-group { margin: 8px 0; } 
+    .hunjang-main-wrap .login-wrap.login-after .modify-info { font-size: 13px; line-height: 20px; padding:0 25px;} 
+    .hunjang-main-wrap .login-wrap.login-after .button-group { margin:5px 0 0 ; padding:0 25px 14px; } 
     .hunjang-main-wrap .login-wrap.login-after .button-group .ac { margin-left: 0; } 
     .hunjang-main-wrap .login-wrap.login-after .button-group .rf { margin-right: 0; } 
-    .hunjang-main-wrap .login-wrap.login-after .add-info-link li { position:relative; padding: 0 15px; } 
-    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:first-child { padding-left:0; } 
-    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:after { content: ''; width: 1px; height: 13px; position: absolute; right: 0; top: 50%; margin-top: -6.5px; background: #E0E6EF; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link {display: flex; height: 42px; align-items: center; border-top: 1px solid #E0E6EF; overflow:hidden;}
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li {flex-grow: 1; text-align: center; height: 100%; position:relative; border-left:1px solid #E0E6EF;} 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:first-child { border:none; } 
+    /* .hunjang-main-wrap .login-wrap.login-after .add-info-link li:after { content: ''; width: 1px; height: 13px; position: absolute; right: 0; top: 50%; margin-top: -6.5px; background: #E0E6EF; }  */
     .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child:after { content:none; } 
-
-
-    /* 학원회원 로그인 */
-    .hunjang-main-wrap .acad-login .modify-info .info-num { color: #0E97FF; text-decoration: underline; } 
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li a {width:100%; height:100%; line-height:40px; display:block;}
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child a {background:#F6FBFE; border-radius:0 0 10px 0;}
+    .hunjang-main-wrap .login-wrap.login-after .add-info-link li:last-child a.go-on {color:#0E97FF;}
+    .hunjang-main-wrap .modify-info .info-num { color: #0E97FF; text-decoration: underline; } 
 
     /* 학원회원 로그인 - 상호가 2개 이상인 경우 */
-    .hunjang-main-wrap .acad-login .h-notice-wrap { margin-bottom: 2px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap { margin-bottom: 2px; padding:0 25px;} 
     .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label { font-size: 13px; padding-right: 20px; color: #7E7E7E; font-weight: var(--text-regular); line-height: 21px; } 
     .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"] + label::after { right: -9px; background-size: contain; width: 20px; height: 20px; } 
     .hunjang-main-wrap .acad-login .add-info-link li a { font-size: var(--text-subtitle5); } 
     .hunjang-main-wrap .acad-login .dropdown ul li:hover { background: var(--neutral-3); transition: all 0.2s ease; } 
-    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown { display:block; width: 210px; height: 160px; top: 28px; } 
+    .hunjang-main-wrap .acad-login .h-notice-wrap > input[type="checkbox"]:checked ~ .dropdown { display:block; width: 210px; height: 160px; top: 28px; left:25px;} 
     .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown { display:none; outline-width: 1px; border-radius: 6px; } 
     .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul { margin: 6px 0; } 
     .hunjang-main-wrap .acad-login .h-notice-wrap .dropdown ul li a { display: block; padding: 10px 20px; font-size: var(--text-subtitle4); color: var(--black-3); line-height: 16px; } 
