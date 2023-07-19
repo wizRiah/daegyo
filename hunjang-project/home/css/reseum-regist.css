@@ -854,3 +854,98 @@
     .template-05 .tpl-list-step li .num-box .step {font-weight:var(--text-medium);}
     .template-05 .tpl-list-dot-1 li {padding-left:8px !important;}
     .template-05 .tpl-list-dot-1 li::before {left:0 !important;}
+
+
+/* ========================== 이력서강조상품 ===================== */
+.hunjang-wrap .my-subtxtbox .blt-state-txt {display:inline-block; height:33px; line-height:33px; margin-left:20px; margin-right:10px; padding:0 15px; background:#D1D7DF; border-radius: 20px; font-size:var(--text-subtitle5); color:#fff; flex:none; border:1px solid var(--border-basic-2);}
+.hunjang-wrap .my-subtxtbox .blt-state-txt.h-button-blue {border:1px solid var(--blue-3);}
+
+/* 지원이력서 리스트 arrow btn */
+.hunjang-wrap .myresume-list { position: absolute; top: 73px; left:70px; width:100%; background:#fff; z-index: 1; border:2px solid var(--grey-3); border-radius: 4px; box-sizing: border-box; box-shadow: 0px 5px 10px #0000001A; }
+.hunjang-wrap .myresume-list .myresume-item { margin: 0; border-radius: 0; background:transparent; box-sizing: border-box; }
+.hunjang-wrap .myresume-list ul { overflow-y: auto; overflow-x: hidden; height: 180px; padding:12px 0; box-sizing: border-box; transition: height 0.5s; }
+.hunjang-wrap .myresume-list ul li {position:relative; display: flex;}
+.hunjang-wrap .myresume-list ul li:before {content:''; position:absolute; top:20px; left:30px; width:2px; height:2px; border-radius: 50%; background:#333;}
+.hunjang-wrap .myresume-list ul li:hover {background:var(--neutral-3);}
+.hunjang-wrap .myresume-list ul li a {width: 100%; padding: 9px 15px 9px 40px; box-sizing: border-box;}
+
+.hunjang-wrap .myresume-box .myresume-list{ display: block; height: 0; overflow: hidden; transition: height 0.5s; width: calc(100% - 178px); z-index: 1; box-sizing: border-box; visibility: collapse; }
+.hunjang-wrap .myresume-box > input[type="checkbox"] { display: none; width: 1px; height: 1px; position: absolute; text-indent: -999px; overflow: hidden; }
+.hunjang-wrap .myresume-box > input[type="checkbox"] + label { position: relative; padding-right: 30px; font-size:var(--text-subtitle4); cursor: pointer; display: block; line-height: 22px; }
+.hunjang-wrap .myresume-box > input[type="checkbox"] + label:after { content: ""; position: absolute; width: 28px; height: 28px; right: 0; top: 0; background: url('../images/arrow_dropdown.svg') no-repeat; background-size: 28px; transition: transform 0.5s; cursor: pointer; }
+.hunjang-wrap .myresume-box > input[type="checkbox"] #tglArrow + label { display: block; width: 100%; padding-right: 30px; box-sizing: border-box; }
+.hunjang-wrap .myresume-box > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
+.hunjang-wrap .myresume-box > input[type="checkbox"]:checked ~ .myresume-list { height: auto; visibility: visible; margin-bottom: 0; }
+.hunjang-wrap .my-subtxtbox .round80-btn {position: absolute; top: 50%; right: 30px; height:38px; border-radius: 80px; transform: translateY(-50%);}
+.hunjang-wrap .my-subtxtbox .round80-btn:before {content:''; display:inline-block; position:initial; background:url('../images/icon_option_outline_white.png') no-repeat; margin-right:5px; width:20px; height:20px; opacity: 1; animation: none;}
+
+.hunjang-wrap .myresume-wrap {padding:31px 30px 31px 40px; border-radius:15px; background:var(--neutral-2); border:1px solid var(--border-basic-2)!important;}
+.hunjang-wrap .myresume-wrap2 {padding:45px 50px; border-radius:15px; background:var(--neutral-2); border:1px solid var(--border-basic-3)!important;}
+.hunjang-wrap .myresume-wrap > .btit-ellipsis {width:calc(100% - 360px); text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+/* 이력서 강조상품 공개설정 변경 팝업 */
+.resume-settpop li {display:flex; align-items: baseline;}
+.resume-settpop li .tit {min-width:88px; margin-right:15px;}
+.resume-settpop li .h-radio-01 {display:flex; gap:10px; flex-wrap: wrap;}
+.resume-settpop li .h-radio-01 label {font-size:var(--text-subtitle4);}
+.resume-settpop li + li {margin-top:15px;}
+
+.resume-settpop .fieldset-inputul ul li {width: 100%; display: flex; align-items: center; position:relative; overflow:hidden;}
+.resume-settpop .fieldset-inputul ul li + li {margin-top:7px;}
+.resume-settpop .fieldset-inputul ul li .innerline {height: 46px; border: 1px solid var(--border-basic-3); border-radius: 4px; display: flex; align-items: center; background: #fff; box-sizing: border-box;}
+.resume-settpop .fieldset-inputul ul li .innerline.disabled {background: var(--neutral-1); border-color: var(--border-basic-2);}
+.resume-settpop .fieldset-inputul ul li .lTit { width: 75px; font-size: var(--text-subtitle4); color:var(--black-6); padding-left: 20px; /*box-sizing: border-box;*/}
+.resume-settpop .fieldset-inputul ul li input[type="text"] { border: none; background: transparent; font-size: var(--text-subtitle4); color: var(--black-2);; width:100%; padding-left: 0; flex-grow: 3;}
+.resume-settpop .fieldset-inputul ul li input[type="text"]::placeholder {font-size: var(--text-subtitle4);}
+.resume-settpop .fieldset-inputul ul li input[type="text"]:first-child {padding-left:20px;}
+
+.specialTalent-wrap {margin-top:70px;}
+.specialTalent-wrap .imgbox-sample {margin-right:50px;}
+.specialTalent-wrap .Applct-box {margin-top:15px; padding-top:15px; border-top:2px solid #eaeef4;}
+.specialTalent-wrap .btn-view {min-width:80px!important; height:27px;}
+
+/* 환불규정 모달 팝업 */
+.hunjang-wrap .Refund-box {display:flex; flex-wrap: wrap; gap:5px;}
+.hunjang-wrap .Refund-box li {display:flex; align-items: center; justify-content: center; min-width:100px; height:55px; background:var(--neutral-3); border-radius: 4px; text-align: center;}
+.hunjang-wrap .indent-ex {position:relative;}
+.hunjang-wrap .indent-ex:before {content:'예)'; position:absolute; top:3px; font-size:var(--text-subtitle5); color:var(--black-3);}
+.hunjang-wrap .indent-ex li {position:relative; padding-left:20px;}
+
+/* 이력서 강조상품 주문결제 */
+.orderPayment-box {padding:50px 50px 60px; border-radius: 15px; border:1px solid var(--border-basic-3); background:#fff; box-sizing: border-box;}
+.orderPayment-box .my-subtxtbox {position:relative; margin-top:15px!important; background-color:#fff!important; border-color:#ECECEC;}
+
+.orderPayment-box .myresume-wrap .btn-resumeview {position:absolute; right:20px; top:50%; transform:translateY(-50%);}
+.orderPayment-box .myresume-box .myresume-list {width:100%; left:0;}
+.orderPayment-box .myresume-wrap > .txt-ellipsis {width:calc(100% - 145px);}
+
+
+.h-bullet-01.h-fs12 li:after {top:8px;}
+.blue-box1 {padding:30px; border-radius:10px; background:var(--neutral-3); box-sizing:border-box;}
+.h-field-wrap.height-46 {min-height:46px; height: 46px !important;}
+
+.h-tab-Contents-payment>input[type="radio"] + label {margin-right:5px; padding:0 25px; height:46px; line-height:46px; border:1px solid var(--border-basic-3); border-radius:90px; font-size:var(--text-subtitle4);}
+.h-tab-Contents-payment>input[type="radio"]:checked + label {background: var(--cyan); border-color:var(--cyan); color:#fff; font-weight:var(--text-medium);}
+
+.select-cardOpt li + li {margin-left:30px;}
+.select-cardOpt li .tit {margin-right:30px;}
+
+.orderPayment-box:nth-of-type(1) {width:720px;}
+.orderPayment-box:nth-of-type(2) {width:330px; padding:40px;}
+.orderPayment-box:nth-of-type(2) .blue-box1 {height: 100px; overflow-y: scroll; padding:15px; border-radius: 4px;}
+.orderPayment-box:nth-of-type(2) .blue-box1::-webkit-scrollbar-thumb {height: 30%;}
+
+.cashReceipt-txt {border-top:1px solid var(--border-basic-4);}
+.cashReceipt-txt .blue-box1 ul li .tit {display:inline-block; min-width:115px; margin-left:20px;}
+.cashReceipt-txt .blue-box1 ul li + li {margin-top:8px;}
+
+.paylistBox {border-top:1px solid var(--border-basic-1);}
+.paylistBox li + li {border-top:1px solid var(--border-basic-3);}
+.paylistBox li {display: flex; align-items: center; justify-content: space-between; padding:12px 0; box-sizing:border-box;}
+
+/* 결제완료 */
+.blt-resumePoint {flex:none; display:inline-block; height:33px; line-height:33px; padding:0 15px; margin-right:15px; border-radius:20px; color:#fff;}
+.resumePoint-box {display:flex; align-items: center; padding-left:30px; width:calc(100% - 190px); border-left:1px solid #CCD1D7;}
+.resumePoint-box .txt-ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+
+.white-box {gap:30px; padding:40px; background:#fff; border-radius:15px; border:1px solid var(--border-basic-3);}
