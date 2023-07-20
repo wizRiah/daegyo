@@ -13,6 +13,7 @@
 .recruitReg-cont {padding:0 20px 90px!important; background:var(--neutral-3);}
 .recruitReg-cont .resume-title .h-txtfield-basic {height:46px!important; padding:0 15px!important;}
 
+
 .top-nav {display: flex; justify-content: center; width:100%; margin-bottom:10px;}
 .top-nav li {position:relative; display: flex; align-items: center; padding:0 10px; height:23px; font-size:var(--text-subtitle7); opacity: 0.5; box-sizing: border-box;}
 .top-nav li.active {border-radius:15px; border:1px solid rgb(255 255 255 / 42%); opacity: 1; color:#FFFF17;}
@@ -133,6 +134,8 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 
 /* ========================== 서비스 신청 ======================= */
+
+
 .header-gradient .top-title {position:relative; width:100%; height:100%; margin:0 20px; padding:20px; border-radius:10px 10px 0 0; background:var(--neutral-3); box-sizing: border-box;}
 .header-gradient .top-title:after {content:''; position:absolute; bottom:0; left: 50%; width: calc(100% - 80px); height: 1px; background: #e0e6ef; transform: translateX(-50%);}
 .header-gradient .top-title .btxt {font-size:var(--text-subtitle6); font-weight:var(--text-medium);}
@@ -142,8 +145,6 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .gradient-basic .location {display:flex; justify-content: space-between; padding:16px 20px;}
 
 .basic-box .date-picker {min-width:auto;}
-/* .basic-box .strong-tit strong {font-size:var(--text-subtitle3); color:var(--black-1); font-weight:var(--text-bold);}
-.basic-box .strong-tit span {font-size:var(--text-subtitle6); color:var(--black-3); } */
 
 .checkbox07 input[type="checkbox"] + label {position:relative; z-index:0; display:inline-flex; justify-content:center; align-items:center; width:75px; height:38px; font-size:var(--text-subtitle4); color:#fff; padding:0 18px 0 10px; background-color:var(--grey-3); border-radius:4px; box-sizing:border-box;}
 .checkbox07 input[type="checkbox"] + label .material-symbols-outlined {display: flex; align-items: center; width: 22px; height: 10px; font-size:21px; color:#919498;}
@@ -154,6 +155,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .txt-bubble {background:url('../images/mobile/m_icon_txtbubble.png') no-repeat; width:45px; height:21px; margin-bottom:2px; text-indent: -9999px;}
 
 .srv-pricebox-wrap li + li {margin-top:15px;}
+.srv-pricebox-wrap .strong-tit {display:block; font-weight:var(--text-bold); font-size:var(--text-subtitle17); color:var(--black-1); background:#fff;}
 .srv-pricebox {position:relative; display: flex; justify-content: flex-end; align-items: center;}
 .srv-pricebox .price-won + .h-checkbox {margin-left:15px;}
 .srv-txtbox {display: flex; flex-direction: column; align-items: flex-end; margin-right:10px;}
@@ -279,6 +281,8 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .recruitReg-cont .product-qnav li.on {background:var(--cyan); border-color:var(--cyan);}
 .recruitReg-cont .product-qnav li.on a {color:#fff; font-weight:var(--text-medium);}
 .recruitReg-cont .product-qnav li a {display:inline-block; display: flex; align-items: center; justify-content: center; height:42px;font-size:var(--text-subtitle4);}
+/* 상단고정 */
+.recruitReg-cont .product-qnav.fixed {position: fixed; top: 0; left: 0; width: 100%; background: var(--neutral-3); padding: 20px; box-sizing: border-box; z-index: 2;}
 
 
 /* =================================== 채용정보 뷰 =============================== */
@@ -296,10 +300,13 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .top-roundInfo .icon-businessbox .imgbox {display: flex; align-items: center; justify-content: center; width:60px; height:60px; margin-bottom:10px; background:var(--neutral-3); border-radius: 50%;}
 
 .recruit-nav-wrap {background:var(--neutral-3);}
+/* 상단고정 */
+.recruit-nav-wrap .recruit-nav.fixed {position: fixed; top: 0;}
 .recruit-nav {display: flex; justify-content: center; width: 100%; background:#fff; border-bottom:1px solid var(--neutral-2); border-top:1px solid var(--neutral-2);}
 .recruit-nav li {display: flex; align-items: center; justify-content: center; /*min-width:108px;*/ width:calc(100% / 3); font-size:var(--text-subtitle3);}
 .recruit-nav li.active a {display:inline-block; position:relative; padding:19px 28px; color:var(--teal); font-weight:var(--text-medium);}
 .recruit-nav li.active a:after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--teal);}
+/* 상단고정 */
 
 /* 모바일 채용공고 템플릿 */
 .icon_tip_detail {display: flex; align-items: center; justify-content: center; margin-bottom:30px; font-size:var(--text-subtitle5);}
@@ -349,10 +356,6 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 .bc-neutral-3 .blt-round-txt + .blt-round-txt {margin-top:8px;}
 .bc-neutral-3 .blt-round-txt {font-size:var(--text-subtitle4);}
-.strong-tit {display:block; padding:30px 0 15px 20px; font-weight:var(--text-bold); font-size:var(--text-subtitle17); color:var(--black-1); border-bottom:1px solid var(--border-basic-3); border-top:1px solid var(--border-basic-3); background:#fff;}
-
-
-
 
 .blt-circleBlue {display: flex; align-items: center; margin-bottom:10px; font-size:var(--text-subtitle2);}
 .subject-bg-blue {padding:15px; background:var(--neutral-4); border-radius: 4px; font-size:var(--text-subtitle3); font-weight:var(--text-medium);}
@@ -426,6 +429,8 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 .recruitInfo-main {background:#fff;}
 .recruitInfo-main .list-mbasic-wrap {box-sizing: border-box; background:var(--neutral-3);}
+.recruitInfo-main .list-mbasic-wrap .strong-tit {display:block; padding:30px 0 15px 20px; font-weight:var(--text-bold); font-size:var(--text-subtitle17); color:var(--black-1); border-bottom:1px solid var(--border-basic-3); border-top:1px solid var(--border-basic-3); background:#fff;}
+
 .recruitInfo-main .list-mbasic-wrap.article-todays {border-top: 1px solid var(--neutral-2);}
 .recruitInfo-main .list-mbasic-wrap.article-todays .libox {border-radius: 10px; border:1px solid var(--border-basic-4); box-shadow: 5px 5px 5px #0000000D;}
 .recruitInfo-main .list-mbasic-wrap.article-todays .libox + .libox {margin-top:10px;}
@@ -437,6 +442,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .recruitInfo-main .list-mbasic-wrap.article-top100 .qlink-Btn:after {content:''; background:url('../images/sett_arrow_white.png') no-repeat; width:18px; height:16px; margin-left:10px;}
 
 .recruitInfo-main .list-mbasic-wrap.article-top100 .list-mbasic .r-btnbox {min-width:70px;}
+
 
 /* 카드형 UI */
 .card-logo-wrap ul {display:flex; flex-wrap: wrap; /*border-top:1px solid var(--border-basic-3);*/ border-bottom:1px solid var(--border-basic-3);}
@@ -457,6 +463,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .recruitInfo-main .list-mbasic-wrap .imgbox img {max-width:80px; max-height:34px;} 
 .recruitInfo-main .list-mbasic-wrap .list-mbasic .r-btnbox {min-width:auto;}
 .recruitInfo-main .list-mbasic-wrap .list-mbasic .libox {position:relative; z-index: 1;}
+.recruitInfo-main .list-mbasic-wrap .list-mbasic .libox {padding:20px 15px 20px 20px}
 .recruitInfo-main .list-mbasic-wrap .list-mbasic {background:#fff;}
 .recruitInfo-main .h-pagination {background:#fff;}
 
@@ -526,7 +533,7 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .recommend-Dwrap .list-mbasic-wrap.article-recommend .list-mbasic {background:#EEF2F8;}
 
 
-/* ===================== 강사서비스 > 이력서강조상품 ================== */
+/* =================================== 강사서비스 > 이력서강조상품 =================================== */
 .solidLine-wrap li + li {padding-top:15px; margin-top:15px; border-top:1px solid var(--border-basic-3);}
 .h-radio-02.squareBtn.hgt35 input[type="radio"] + label {height:35px!important; line-height:35px!important;}
 
@@ -596,7 +603,6 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .myresume-box > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); }
 .myresume-box > input[type="checkbox"]:checked ~ .myresume-list { height: auto; visibility: visible; margin-bottom: 0; }
 
-
 .h-plusBtn-left {}
 .h-plusBtn-left:before {content:''; position: initial; display:inline-block; margin-right:7px; background:url('../images/mobile/m_icon_outline_plus_white.png') no-repeat; width:18px; height:18px; opacity: 1;}
 
@@ -605,24 +611,20 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 .m-resume-settpop .fieldset-inputul ul li {margin-bottom:0;}
 .m-resume-settpop .fieldset-inputul ul li + li {margin-top:5px;}
 
-/* 티츄 스토리 */
-.tchoo-imgBox {position:relative; /*overflow:hidden; height:140px;*/}
-.tchoo-imgTxt {position:absolute; top:0; left:0; top: 50%; left: 20px; transform: translateY(-50%);}
 
+/* =================================== 훈장플러스 > 티츄 스토리 =================================== */
+.tchoo-imgBox {position:relative; /*overflow:hidden; height:140px;*/}
+.tchoo-imgTxt {position:absolute; top: 50%; left: 20px; transform: translateY(-50%);}
 .tchooStory-wrap li + li {border-top:1px solid var(--neutral-2); box-sizing: border-box;}
 .tchooStory-wrap li {padding:15px 20px;}
-
-.tchoo_thumbox {overflow:hidden; border-radius: 10px; width:125px; height:78px;}
-.tchoo_thumbox img {width:125px; height:78px;}
-
-/* .promise-imgbox {position:relative;}
-.promise-imgbox img {position:absolute; right:0; bottom:0;} */
-.promise-markBox .imgbox {margin-right:-20px;}
+.tchoo-thumbox {overflow:hidden; position:relative; border-radius: 10px; width:125px; height:78px;}
+.tchoo-thumbox img {width:125px; height:78px;}
+.icon-updateNew:after {content: ''; position: absolute; top: 5px; left: 5px; background: url(../images/mobile/m_icon_newtxt_teal.png) no-repeat; background-size: contain; width: 44px; height: 18px;}
 
 
+/* 전자근로계약서 */
 .step-writingWrap {padding:0 20px;}
-
-
+.step-writingWrap .promise-markBox .imgbox {margin-right:-20px;}
 .step-writingBox > ul {padding:20px; border:1px solid var(--neutral-2); border-radius: 10px 10px 0 0;}
 .step-writingBox .blue-box4 {border-radius: 0 0  10px 10px;}
 .step-writingBox .stepNumber span {width:70px; height:25px; line-height:25px; font-size:var(--text-subtitle6); color:#fff; border-radius:15px; background:#333; text-align:center; box-sizing:border-box;}

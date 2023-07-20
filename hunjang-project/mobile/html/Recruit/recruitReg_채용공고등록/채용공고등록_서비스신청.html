@@ -53,13 +53,14 @@
 
         <!-- body -->
         <div class="content-inner mt20">
+          <!-- 스크롤시작시 탭영역 상단고정하려면 product-qnav에 fixed 클래스 추가 -->
           <ul class="product-qnav">
-            <li class="on"><a href="">메인 상품</a></li>
-            <li><a href="">서브 상품</a></li>
-            <li><a href="">아이템 상품</a></li>
+            <li class="on"><a href="#productMain">메인 상품</a></li>
+            <li><a href="#productSub">서브 상품</a></li>
+            <li><a href="#productItem">아이템 상품</a></li>
           </ul>
           <ul class="srv-pricebox-wrap">
-            <li>
+            <li id="productMain">
               <p class="labelArea">상품선택</p>
               <div class="basic-box">
                 <p class="strong-tit mb10">
@@ -101,10 +102,48 @@
               </div>
             </li>
 
-            <li>
+            <li id="productSub">
               <div class="basic-box">
                 <p class="strong-tit mb10">
-                  <strong class="text-subtitle3 h-txt-1">스페셜 TOP</strong>
+                  <strong class="text-subtitle3 h-txt-1">지역 스페셜 TOP</strong>
+                  <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
+                </p>
+                <div class="date-picker wd100">
+                  <input type="text" id="datepickerStart" class="datePicker width-150" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">2일</option>
+                    <option value="">3일</option>
+                    <option value="">4일</option>
+                    <option value="">5일(3%↓)</option>
+                    <option value="">7일(8%↓)</option>
+                    <option value="">10일(10%↓)</option>
+                    <option value="">15일(12%↓)</option>
+                    <option value="">20일(15%↓)</option>
+                    <option value="">30일(20%↓)</option>
+                    <option value="">35일(25%↓)</option>
+                    <option value="">40일(30%↓)</option>
+                    <option value="">50일(35%↓)</option>
+                    <option value="">60일(40%↓)</option>
+                    <option value="">90일(45%↓)</option>
+                    <option value="">120일(50%↓)</option>
+                  </select>
+                </div>
+                <div class="srv-pricebox mt15">
+                  <div class="srv-txtbox">
+                    <span class="txt-bubble">할인적용</span>
+                    <span class="txt-thline text-subtitle5">220,000원</span>
+                  </div>
+                  <strong class="price-won">200,000<span>원</span></strong>
+                  <div class="h-checkbox checkbox07">
+                    <input type="checkbox" name="checkForm" id="check07_2" checked>
+                    <label for="check07_2"><span class="material-symbols-outlined">check</span> 선택</label>
+                  </div>
+                </div>
+                <button type="button" class="circle-fplusBtn"></button>
+              </div>
+              <div class="basic-box">
+                <p class="strong-tit mb10">
+                  <strong class="text-subtitle3 h-txt-1">지역 스페셜 TOP</strong>
                   <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
                 </p>
                 <div class="date-picker wd100">
@@ -142,10 +181,124 @@
               </div>
             </li>
 
-            <li>
+            <li id="productItem">
               <div class="basic-box">
                 <p class="strong-tit mb10">
-                  <strong class="text-subtitle3 h-txt-1">스페셜 TOP</strong>
+                  <strong class="text-subtitle3 h-txt-1">점프 업(8회)</strong>
+                  <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
+                </p>
+                <div class="date-picker wd100">
+                  <input type="text" id="datepickerStart" class="datePicker width-150" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">2일</option>
+                    <option value="">3일</option>
+                    <option value="">4일</option>
+                    <option value="">5일(3%↓)</option>
+                    <option value="">7일(8%↓)</option>
+                    <option value="">10일(10%↓)</option>
+                    <option value="">15일(12%↓)</option>
+                    <option value="">20일(15%↓)</option>
+                    <option value="">30일(20%↓)</option>
+                    <option value="">35일(25%↓)</option>
+                    <option value="">40일(30%↓)</option>
+                    <option value="">50일(35%↓)</option>
+                    <option value="">60일(40%↓)</option>
+                    <option value="">90일(45%↓)</option>
+                    <option value="">120일(50%↓)</option>
+                  </select>
+                </div>
+                <div class="srv-pricebox mt15">
+                  <div class="srv-txtbox">
+                    <span class="txt-bubble">할인적용</span>
+                    <span class="txt-thline text-subtitle5">220,000원</span>
+                  </div>
+                  <strong class="price-won">200,000<span>원</span></strong>
+                  <div class="h-checkbox checkbox07">
+                    <input type="checkbox" name="checkForm" id="check07_3">
+                    <label for="check07_3"><span class="material-symbols-outlined">check</span> 선택</label>
+                  </div>
+                </div>
+                <button type="button" class="circle-fplusBtn"></button>
+              </div>
+              <div class="basic-box">
+                <p class="strong-tit mb10">
+                  <strong class="text-subtitle3 h-txt-1">점프 업(8회)</strong>
+                  <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
+                </p>
+                <div class="date-picker wd100">
+                  <input type="text" id="datepickerStart" class="datePicker width-150" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">2일</option>
+                    <option value="">3일</option>
+                    <option value="">4일</option>
+                    <option value="">5일(3%↓)</option>
+                    <option value="">7일(8%↓)</option>
+                    <option value="">10일(10%↓)</option>
+                    <option value="">15일(12%↓)</option>
+                    <option value="">20일(15%↓)</option>
+                    <option value="">30일(20%↓)</option>
+                    <option value="">35일(25%↓)</option>
+                    <option value="">40일(30%↓)</option>
+                    <option value="">50일(35%↓)</option>
+                    <option value="">60일(40%↓)</option>
+                    <option value="">90일(45%↓)</option>
+                    <option value="">120일(50%↓)</option>
+                  </select>
+                </div>
+                <div class="srv-pricebox mt15">
+                  <div class="srv-txtbox">
+                    <span class="txt-bubble">할인적용</span>
+                    <span class="txt-thline text-subtitle5">220,000원</span>
+                  </div>
+                  <strong class="price-won">200,000<span>원</span></strong>
+                  <div class="h-checkbox checkbox07">
+                    <input type="checkbox" name="checkForm" id="check07_3">
+                    <label for="check07_3"><span class="material-symbols-outlined">check</span> 선택</label>
+                  </div>
+                </div>
+                <button type="button" class="circle-fplusBtn"></button>
+              </div>
+              <div class="basic-box">
+                <p class="strong-tit mb10">
+                  <strong class="text-subtitle3 h-txt-1">점프 업(8회)</strong>
+                  <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
+                </p>
+                <div class="date-picker wd100">
+                  <input type="text" id="datepickerStart" class="datePicker width-150" placeholder="YYYY-MM-DD">
+                  <select name="" id="" class="min-wd100px wd100">
+                    <option value="">2일</option>
+                    <option value="">3일</option>
+                    <option value="">4일</option>
+                    <option value="">5일(3%↓)</option>
+                    <option value="">7일(8%↓)</option>
+                    <option value="">10일(10%↓)</option>
+                    <option value="">15일(12%↓)</option>
+                    <option value="">20일(15%↓)</option>
+                    <option value="">30일(20%↓)</option>
+                    <option value="">35일(25%↓)</option>
+                    <option value="">40일(30%↓)</option>
+                    <option value="">50일(35%↓)</option>
+                    <option value="">60일(40%↓)</option>
+                    <option value="">90일(45%↓)</option>
+                    <option value="">120일(50%↓)</option>
+                  </select>
+                </div>
+                <div class="srv-pricebox mt15">
+                  <div class="srv-txtbox">
+                    <span class="txt-bubble">할인적용</span>
+                    <span class="txt-thline text-subtitle5">220,000원</span>
+                  </div>
+                  <strong class="price-won">200,000<span>원</span></strong>
+                  <div class="h-checkbox checkbox07">
+                    <input type="checkbox" name="checkForm" id="check07_3">
+                    <label for="check07_3"><span class="material-symbols-outlined">check</span> 선택</label>
+                  </div>
+                </div>
+                <button type="button" class="circle-fplusBtn"></button>
+              </div>
+              <div class="basic-box">
+                <p class="strong-tit mb10">
+                  <strong class="text-subtitle3 h-txt-1">점프 업(8회)</strong>
                   <span class="text-subtitle6 h-txt-3">(PC+Mobile)</span>
                 </p>
                 <div class="date-picker wd100">
