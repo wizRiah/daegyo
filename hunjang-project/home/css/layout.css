@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import 'styleGuide.css';
 /*2023-07-12 SSJ*/
+/*2023-07-19 SSJ*/
 
 /* 헤더 */
 .hunjang-wrap header {position:fixed; right:0; top:0; z-index:10; width:100%; height:85px; background:#43A986F2; box-sizing:border-box;}
@@ -322,7 +323,8 @@
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item a::before { content: ""; position: absolute; left: 0px; width: 21px; height: 19px; background-image: url(../images/main_ico_01.png); background-size: cover; top: 50%; transform: translateY(-50%); }
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.vip a::before { width: 21px; height: 18px; background-image: url(../images/main_ico_02.png); }
 .hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.membership a::before { width: 25px; left: -2px; height: 24px; background-image: url(../images/main_ico_03.png); }
-.hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.search a::before { width: 21px; height: 17px; background-image: url(../images/main_ico_04.png); }
+.hunjang-main-wrap header .header-menu-inner .gnb-wrap .lnb-expand-wrap .main-links .item.search a::before { width: 21px; height: 19px; background-image: url(../images/main_ico_04.png); }
+.hunjang-main-wrap header .header-menu-inner .gnb-wrap .h-all-menu .lnb-expand-wrap .lnb-expand-inwrap .item:hover .dep1 {color:var(--blue-4)!important;}
 
 /* 헤더부분 강사서비스 로그인 */
 .hunjang-main-wrap .serv-login-drop.h-listbox-wrap > input[type="checkbox"] + label { padding: 11px 38px 11px 45px; border-color: #26B2C8; color: #26B2C8; }
@@ -376,16 +378,32 @@
 /* footer */
 .hunjang-main-wrap footer { border-top: 1px solid #dedede; background: #fff; }
 .hunjang-main-wrap footer .f-menu-wrap { border-bottom: 1px solid #dedede; }
-.hunjang-main-wrap footer .f-menu-wrap .footer-inner { height: 72px; display: flex; align-items: center; }
-.hunjang-main-wrap footer .f-menu-wrap .f-menu-list a { display: block; width: 100%; padding: 0 20px; font-size: var(--text-subtitle3); font-weight: var(--text-medium); color: var(--black-1); box-sizing: border-box; height: 72px; line-height: 72px; }
+.hunjang-main-wrap footer .f-menu-wrap .footer-inner { height: 62px; display: flex; align-items: center; justify-content:center;}
+.hunjang-main-wrap footer .f-menu-wrap .f-menu-list a { display: block; width: 100%; font-size: var(--text-subtitle3); color:#7E7E7E; box-sizing: border-box; }
+.hunjang-main-wrap footer .f-menu-wrap .f-menu-list li:nth-child(2) a {font-weight:600; color:#333333;}
+.hunjang-main-wrap footer .f-menu-wrap .f-menu-list li:not(:last-child) a:after {content:""; width:1px; height:13px; background:#C3CAD4; display:inline-block; vertical-align:middle; margin:0 30px;}
 .hunjang-main-wrap footer .family-site select { width: 164px; height: 36px; border-radius: 0; line-height: 34px; }
-.hunjang-main-wrap footer .footer-info { display: flex; }
-.hunjang-main-wrap footer .info-contents { padding: 30px 0; align-items: center; }
+.hunjang-main-wrap footer .footer-info { display: flex; background:#F6F7F8;}
+.hunjang-main-wrap footer .info-contents { padding: 40px 0; align-items:stretch; }
 .hunjang-main-wrap footer .info-contents .callcenter { display: flex; margin: 0 0 0 37px; flex-direction: column; font-size: var(--text-subtitle5); font-weight: var(--text-medium); color: var(--black-3); }
 .hunjang-main-wrap footer .info-contents .callcenter .call { font-family: "SUIT"; margin-top: 5px; color: var(--teal); font-size: var(--text-h3); letter-spacing: var(--letter-spacing-1); font-weight: var(--text-bold); line-height: 1.2em; }
 .hunjang-main-wrap footer .info-contents .callcenter .time { margin-top: 7px; font-weight: var(--text-bold); }
 .hunjang-main-wrap footer .info-contents .callcenter .contact { margin-top: 5px; }
-.hunjang-main-wrap footer .info-contents .addr-info { font-size: 12px; color: var(--black-3); line-height: 22px; }
+.hunjang-main-wrap footer .info-contents .addr-info { font-size: 12px; color: var(--black-3); line-height: 22px; padding-left:50px; flex-grow:1;}
+.hunjang-main-wrap footer .info-contents .addr-info p {}
+.hunjang-main-wrap footer .info-contents .addr-info ul {display:flex; flex-wrap:wrap; margin:5px 0 15px;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li {color:#7E7E7E; font-size:13px;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li span:before {content:""; width:1px; height:13px; display:inline-block; vertical-align:middle; background:#C3CAD4; margin:0 15px;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li:nth-child(5) {margin-bottom:10px;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li:nth-child(6) {width:100%;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li:first-child span:before,
+.hunjang-main-wrap footer .info-contents .addr-info ul li:nth-child(5) span:before,
+.hunjang-main-wrap footer .info-contents .addr-info ul li:nth-child(6) span:before,
+.hunjang-main-wrap footer .info-contents .addr-info ul li:nth-child(7) span:before {display:none;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li span {color:#333333;}
+.hunjang-main-wrap footer .info-contents .addr-info ul li b {color:#333333;}
+.hunjang-main-wrap footer .info-contents .family-site {display:flex; align-items:flex-end;}
+.hunjang-main-wrap footer .info-contents .family-site select {height:46px; line-height:44px;}
 
 /*컨텐츠단 배경색이 흰색이여야하는 경우*/
 .h-bgWhiteWrap.hunjang-wrap .container {background:#fff;}

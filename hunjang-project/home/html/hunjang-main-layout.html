@@ -3,20 +3,36 @@
 
 <head>
   <meta charset="utf-8">
-  <title>훈장마을_메인_레이아웃</title>
+  <title>훈장마을_메인</title>
   <link rel="stylesheet" href="../css/font.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/styleGuide.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/hunjang-main.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+  <!-- 충돌나는지만 확인 -->
+  <link rel="stylesheet" href="../css/recruit-info.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../css/mypage.css">
+  <link rel="stylesheet" href="../css/resume-view.css">
+  <link rel="stylesheet" href="../css/reseum-regist.css">
+  <link rel="stylesheet" href="../css/recruit-view.css">
+  <link rel="stylesheet" href="../css/academy-service.css">
+  <link rel="stylesheet" href="../css/human_srch.css">
+  <link rel="stylesheet" href="../css/hunjang-main_ssj.css">
+  <link rel="stylesheet" href="../css/osoo.css">
+  <!-- // -->
+
+
 </head>
 
 <body>
@@ -35,7 +51,7 @@
                 <div class="item"><a href="#">공지사항</a></div>
                 <div class="item"><a href="#">FAQ</a></div>
                 <div class="item"><a href="#">이벤트</a></div>
-                <div class="item"><a href="#">온라인 상담</a></div>
+                <div class="item"><a href="#">1:1문의</a></div>
               </div>
             </div>
           </div>
@@ -316,8 +332,10 @@
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
               <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
             </div>
+            
 
-            <!-- 강사서비스 로그인 -->
+            <!-- 강사서비스 로그인 시 -->
+            <!-- style="display: none;" 를 삭제하여 이용하세요 -->
             <div class="h-listbox-wrap serv-login-drop" style="display: none;">
               <input type="checkbox" id="list-box-02" class="list-box">
               <label for="list-box-02">강사서비스</label>
@@ -328,6 +346,9 @@
                 </p>
                 <ul>
                   <li>
+                    <a href="javascript:void(0);">서비스 신청</a>
+                  </li>
+                  <li>
                     <a href="javascript:void(0);">이력서 등록</a>
                   </li>
                   <li>
@@ -337,13 +358,13 @@
                     <a href="javascript:void(0);">지원 현황</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">메일 수신설정</a>
+                    <a href="javascript:void(0);">알림 수신설정</a>
                   </li>
                   <li>
                     <a href="javascript:void(0);">비밀번호 변경</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">개인정보 수정</a>
+                    <a href="javascript:void(0);">회원정보 관리</a>
                   </li>
                   <li>
                     <a href="javascript:void(0);">로그인 관리</a>
@@ -352,7 +373,8 @@
               </div>
             </div>
 
-            <!-- 학원서비스 로그인 -->
+            <!-- 학원서비스 로그인 시 -->
+            <!-- style="display: none;" 를 삭제하여 이용하세요 -->
             <div class="h-listbox-wrap serv-login-drop academy" style="display: none;">
               <input type="checkbox" id="list-box-03" class="list-box">
               <label for="list-box-03">학원서비스</label>
@@ -363,22 +385,28 @@
                 </p>
                 <ul>
                   <li>
-                    <a href="javascript:void(0);">채용공고 등록</a>
+                    <a href="javascript:void(0);">서비스 신청</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">채용공고 관리</a>
+                    <a href="javascript:void(0);">채용광고 안내</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">인재정보</a>
+                    <a href="javascript:void(0);">이력서 열람서비스</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">채용상품안내</a>
+                    <a href="javascript:void(0);">알림 수신관리</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">마케팅 수신관리</a>
+                    <a href="javascript:void(0);">비밀번호 변경</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);">학원 정보 수정</a>
+                    <a href="javascript:void(0);">회원정보 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">2단계 인증</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">로그인 관리</a>
                   </li>
                 </ul>
                 <button type="button" class="btn-log">로그아웃</button>
@@ -427,23 +455,21 @@
                             <ul class="dep2">
                             </ul>
                           </div>
-                          <div class="item haktalk" style="flex: 0 0 250px;"><a href="#" class="dep1">학원톡톡</a>
+                          <div class="item haktalk" style="flex: 0 0 250px;"><a href="#" class="dep1">훈장플러스</a>
                             <ul class="dep2">
-                              <li><a href="#">티츄 웹툰</a></li>
-                              <li><a href="#">전자근로계약</a></li>
                               <li><a href="#">스마트취업 TOOL</a></li>
-                              <li><a href="#">학원노무 / 세무 FAQ</a></li>
-                              <li><a href="#">우리동네 학원검색</a></li>
-                              <li><a href="#">Poll</a></li>
-                              <li><a href="#">학원생활 꿀팁</a></li>
+                              <li><a href="#">티츄 스토리</a></li>
+                              <li><a href="#">근로계약서</a></li>
+                              <!-- <li><a href="#">취업지원금</a></li> 7/18 일자로 삭제됨 -->
+                              <li><a href="#">연락처 공개제의</a></li>
                             </ul>
                           </div>
                         </div>
                         <div class="main-links">
-                          <div class="item product"><a href="#">유료 상품 안내</a></div>
-                          <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
-                          <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
-                          <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                          <div class="item product"><a href="#">행사.이벤트</a></div>
+                          <div class="item vip"><a href="#">Clean 훈장마을</a></div>
+                          <div class="item membership"><a href="#">훈장마을 멤버십</a></div>
+                          <div class="item search"><a href="#">채용광고 상품안내</a></div>
                         </div>
                       </div>
                     </div>
@@ -534,12 +560,23 @@
                                 </ul>
                               </div>
                             </div>
+                            <!-- 7/18 일자로 삭제됨^^
+                            <div class="cell" style="flex: 0 0 218px;">
+                              <div class="item"><a href="#" class="dep1">테마별 채용정보</a>
+                                <ul class="dep2">
+                                  <li><a href="#">급여 높은 채용공고</a></li>
+                                  <li><a href="#">복지 좋은 학원공고</a></li>
+                                  <li><a href="#">신입만 지원할 수 있는 공고</a></li>
+                                  <li><a href="#">학원 직원 공고</a></li>
+                                </ul>
+                              </div>
+                            </div> -->
                           </div>
                           <div class="main-links">
-                            <div class="item product"><a href="#">유료 상품 안내</a></div>
-                            <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
-                            <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
-                            <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                            <div class="item product"><a href="#">행사.이벤트</a></div>
+                            <div class="item vip"><a href="#">Clean 훈장마을</a></div>
+                            <div class="item membership"><a href="#">훈장마을 멤버십</a></div>
+                            <div class="item search"><a href="#">채용광고 상품안내</a></div>
                           </div>
                         </div>
                       </div>
@@ -557,7 +594,7 @@
                   </li>
                   <li class="list talktalk on">
                     <a href="#" class="gnb-button">
-                      학원톡톡
+                      훈장플러스
                     </a>
                     <div class="panel-all-menu panel-lnb-wrap">
                       <div class="layout-inner">
@@ -565,29 +602,27 @@
                           <div class="lnb-expand-inwrap lnb-all flex">
                             <div class="cell flex">
                               <div class="item">
-                                <p class="dep1 lnb-tit">학원톡톡</p>
+                                <p class="dep1 lnb-tit">훈장플러스</p>
                                 <div class="ch-img"></div>
                               </div>
                             </div>
                             <div class="cell">
                               <div class="item">
                                 <ul class="dep2" style="margin-top: 0;">
-                                  <li><a href="#">티츄 웹툰</a></li>
-                                  <li><a href="#">전자근로계약</a></li>
                                   <li><a href="#">스마트취업 TOOL</a></li>
-                                  <li><a href="#">학원노무 / 세무 FAQ</a></li>
-                                  <li><a href="#">우리동네 학원검색</a></li>
-                                  <li><a href="#">Poll</a></li>
-                                  <li><a href="#">학원생활 꿀팁</a></li>
-                                </ul>
+                                  <li><a href="#">티츄 스토리</a></li>
+                                  <li><a href="#">근로계약서</a></li>
+                                  <!-- <li><a href="#">취업지원금</a></li> 7/18일자로삭제됨 -->
+                                  <li><a href="#">연락처 공개제의</a></li>
+                                </ul>   
                               </div>
                             </div>
                           </div>
                           <div class="main-links">
-                            <div class="item product"><a href="#">유료 상품 안내</a></div>
-                            <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
-                            <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
-                            <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                            <div class="item product"><a href="#">행사.이벤트</a></div>
+                            <div class="item vip"><a href="#">Clean 훈장마을</a></div>
+                            <div class="item membership"><a href="#">훈장마을 멤버십</a></div>
+                            <div class="item search"><a href="#">채용광고 상품안내</a></div>
                           </div>
                         </div>
                       </div>
@@ -604,17 +639,30 @@
             </div>
             <div class="spacer"></div>
 
-            <!-- 슬라이드 배너 -->
-            <div class="right slide">
-              <div class="link-more">
-                <a href="#">
-                  <img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
-                <a href="#">
-                  <img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧">
-                </a>
+
+            <!-- Swiper -->
+            <div class="swiper r-auto-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../images/main-banner01.png" alt="학원생활 큐레이션 에딧"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="link-more"><img src="../images/main-banner02.png" alt="스마트한 학원관리 통통통"></a>
+                </div>
               </div>
             </div>
+
+            <script>
+              var swiper = new Swiper(".r-auto-slide", {
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false
+                },
+              });
+            </script>
+
+
+
           </div>
         </div>
       </div>
@@ -641,14 +689,37 @@
               <ul class="f-menu-list flex">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">이메일 무단 수집거부</a></li>
                 <li><a href="#">찾아오시는길</a></li>
                 <li><a href="#">고객센터</a></li>
                 <li><a href="#">채용상품안내</a></li>
                 <li><a href="#">광고상품안내</a></li>
                 <li><a href="#">제휴문의</a></li>
               </ul>
-              <div class="spacer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-info flex">
+          <div class="layout-inner">
+            <div class="info-contents flex">
+              <div class="f-logo">
+                <img src="../images/footer_logo2.png" alt="하단로고">
+              </div>
+              <div class="addr-info">
+                <p><b class="text-subtitle2 h-txt-2">에듀베이션(주)</b></p>
+                <ul>
+                  <li><span>대표이사 : </span>방형식</li>
+                  <li><span>사업자번호 : </span>220-81-51475</li>
+                  <li><span>통신판매업 : </span>제 1684</li>
+                  <li><span>직업정보제공사업 신고번호 : </span>서울관악 2004-10</li>
+                  <li><span>주소 : </span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</li>
+                  <li><span>훈장마을 고객센터 : </span><b>02-858-0429</b> (평일 09:00~18:00, 주말.공휴일 휴무, 점심시간 12:30~13:30)</li>
+                  <li><span>Fax : </span>02-858-6956</li>
+                  <li><span>이메일 : </span>hunjang@daekyo.co.kr</li>
+                </ul>
+                <p class="text-subtitle5 h-txt-6">ⓒ EDUVATION INC.</p>
+              </div>
               <div class="family-site">
                 <select name="" id="">
                   <option value="" disabled="" selected="">Family service</option>
@@ -662,36 +733,6 @@
             </div>
           </div>
         </div>
-
-        <div class="footer-info flex">
-          <div class="layout-inner">
-            <div class="info-contents flex">
-              <div class="f-logo">
-                <img src="../images/footer_logo.png" alt="하단로고">
-              </div>
-              <div class="callcenter">
-                <p class="tit">훈장마을 고객센터</p>
-                <p class="call">02-858-0492</p>
-                <p class="time">평일 09:00~18:00 (점심시간 12:30~13:30)</p>
-                <p class="contact mt5">
-                  <span class="mail">이메일 : hunjang@daekyo.co.kr</span>
-                  <span class="fax" style="padding: 0 0 0 20px;">Fax : 02-858-6956</span>
-                </p>
-              </div>
-              <div class="spacer">
-              </div>
-              <div class="addr-info">
-                <p><span>에듀베이션(주)</span><span style="padding: 0 0 0 18px;">대표이사 : 방형식</span></p>
-                <p><span>사업자번호 : 220-81-51475</span><span style="padding: 0 0 0 18px;">통신판매업 : 제 1684</span>
-                  <span style="padding: 0 0 0 18px;">직업정보제공사업 신고번호 : 서울관악 2004-10</span>
-                </p>
-                <p><span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</span></p>
-                <p>ⓒ EDUVATION INC.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </footer>
       <!-- // -->
 
