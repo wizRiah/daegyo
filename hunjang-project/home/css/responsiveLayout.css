@@ -1,0 +1,70 @@
+@charset "utf-8"; 
+
+/* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
+/* 간격 */
+.mt60 {margin-top:60;}
+.ml0 {margin-left:0 !important;}
+
+/* 공간 */
+.pdb60 {padding-bottom:60px !important;}
+
+/* width */
+.w-max {width:100%;}
+.w191 {width:191px !important;}
+.w20ps {width:20% !important;}
+
+/* layout 넓이 */
+.wrap-w950 {width:950px !important;}
+
+
+
+/* 반응형웹 전용 layout */
+.hunjang-wrap.h-auth-wrap header {display:flex;justify-content:center;height:100px;background:#000;}
+.hunjang-wrap.h-auth-wrap header .logo-wrap {display:flex;justify-content:space-between;align-items:center;width:100%;max-width:580px;background:#000;}
+.hunjang-wrap.h-auth-wrap header .logo-wrap .logo-item .logo-text {display:block;font-size:11px;color:#fff;}
+.hunjang-wrap.h-auth-wrap header .logo-wrap .logo-item .logo-text span {color:#FFEE00;}
+.hunjang-wrap.h-auth-wrap .container {position:unset;padding-top:170px;}
+.hunjang-wrap.h-auth-wrap .home-menu {display:flex;justify-content:right;align-items:center;width:100%;max-width:580px;margin:0 auto;box-sizing:border-box;}
+.hunjang-wrap.h-auth-wrap .home-menu .m-tit {display:none;justify-content:left;align-items:center;font-size:18px;}
+.hunjang-wrap.h-auth-wrap .home-menu .m-tit .closeBtn {width:14px;height:14px;margin-right:15px;background:url(../images/auth/btn_close.png) no-repeat 0 0;}
+.hunjang-wrap.h-auth-wrap .home-menu ul {display:flex;justify-content:end;}
+.hunjang-wrap.h-auth-wrap .home-menu ul li {padding:0 12px;}
+.hunjang-wrap.h-auth-wrap .home-menu ul li:first-child {position:relative;}
+.hunjang-wrap.h-auth-wrap .home-menu ul li:first-child::after {display:block;content:"";position:absolute;right:0;top:calc(50% - 7px);width:1px;height:13px;background:#E0E6EF;}
+.hunjang-wrap.h-auth-wrap .home-menu ul li a {display:block;font-size:13px;}
+.hunjang-wrap.h-auth-wrap .content {max-width:580px;margin-top:15px;background:#fff;border:1px solid #E0E6EF;border-radius:10px;}
+.hunjang-wrap.h-auth-wrap .content .auth-tit {display:block;font-size:30px;text-align:center;}
+.hunjang-wrap.h-auth-wrap .content .auth-tit > span {font-size:24px;}
+.hunjang-wrap.h-auth-wrap .content .auth-tit strong {display:block;font-size:30px;font-weight:500;}
+.hunjang-wrap.h-auth-wrap .content .form-box {max-width:360px;margin:0 auto;}
+.hunjang-wrap.h-auth-wrap footer {margin-top:100px;}
+
+  
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px) */
+@media all and (max-width:767px) {
+    .hunjang-wrap.h-auth-wrap header .logo-wrap {max-width:100%;padding:0 30px;}
+    .hunjang-wrap.h-auth-wrap .container {background:#fff;}
+    .hunjang-wrap.h-auth-wrap .home-menu {width:100%;max-width:100%;padding-right:30px;}
+    .hunjang-wrap.h-auth-wrap .content {max-width:100%;padding:0 20px;margin-top:35px;border:none;border-radius:0;}
+    footer {display:none;}
+} 
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .hunjang-wrap.h-auth-wrap header {display:none;}
+    .hunjang-wrap.h-auth-wrap .home-menu {position:fixed;z-index:1;top:0;justify-content:space-between;height:54px;padding:0 20px;background:#F5F7FA;border-bottom:1px solid #ebfff5;}
+    .hunjang-wrap.h-auth-wrap .home-menu .m-tit {display:flex;}
+    .hunjang-wrap.h-auth-wrap .home-menu ul li {padding:0;}
+    .hunjang-wrap.h-auth-wrap .home-menu ul li:first-child::after {display:none;}
+    .hunjang-wrap.h-auth-wrap .home-menu ul li:nth-child(2) {margin-left:15px;}
+    .hunjang-wrap.h-auth-wrap .home-menu ul li a {position:relative;width:25px;height:22px;font-size:0;line-height:0;}
+    .hunjang-wrap.h-auth-wrap .home-menu ul li a:after {display:block;content:"";position:absolute;left:0;top:0;width:25px;height:22px;}
+    .hunjang-wrap.h-auth-wrap .home-menu .home-link:after {background:url(../images/auth/icon_home_link.png) no-repeat 50% 50%;}
+    .hunjang-wrap.h-auth-wrap .home-menu .customer-link:after {background:url(../images/auth/icon_customer_link.png) no-repeat 50% 50%;}
+    .hunjang-wrap.h-auth-wrap .container {padding-top:104px;}
+    .hunjang-wrap.h-auth-wrap .content {margin-top:0;}
+    .hunjang-wrap.h-auth-wrap .content .auth-tit {font-size:26px;}
+    .hunjang-wrap.h-auth-wrap .content .auth-tit > span {font-size:20px;}
+    .hunjang-wrap.h-auth-wrap .content .auth-tit strong {font-size:26px;}
+    .hunjang-wrap.h-auth-wrap .content .form-box {max-width:100%;}
+}
