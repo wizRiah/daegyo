@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../../css/layout.css">
+  <link rel="stylesheet" href="../../../css/popup.css">
+
+  <link rel="stylesheet" href="../../../css/recruit-info.css">
+
+  <link rel="stylesheet" href="../../../../mobile/css/recruit-info.css">
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- 윈도우팝업 크기 740px -->
+
+
+<div class="h-winpop-wrap bg-white">
+  <div class="hunjang-wrap previewPOPUP" style="width:950px;">
+
+    <!-- container -->
+    <div class="container">
+      <!-- contents -->
+      <div class="content">
+
+        <div class="btnbox flex flex-between flex-start">
+          <div>
+            <h2 class="text-h2 pt5 mb30">채용공고 미리보기
+              <span class="h-txt-3 text-subtitle5 h-txt-regular">현재까지 작성된 내용을 토대로 미리보기가 가능합니다. PC버전, 모바일 버전을 함께 확인하실 수
+                있습니다.</span>
+            </h2>
+          </div>
+          <button type="button" class="close" title="팝업 닫기">
+            <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+          </button>
+        </div>
+
+
+        <div class="h-tab-Contents-02 mt20">
+          <input type="radio" id="tabBtn02_1" name="tab02" checked="" />
+          <label for="tabBtn02_1">PC 미리보기</label>
+          <input type="radio" id="tabBtn02_2" name="tab02" />
+          <label for="tabBtn02_2">Mobile 미리보기</label>
+          <div class="tabCo-Wrap">
+            <!-- 01-PC 미리보기 탭 -->
+            <div class="tabCo-CommonBox">
+
+              <!-- pc 채용정보뷰 쪽 소스.  -->
+              <div class="container-view">
+                <div class="top-recruitView-Title">
+                  <div class="wd-1164">
+                    <div class="rcrt-View-Left">
+                      <div class="flex">
+                        <span class="academyNm">훈장마을 구로학원</span>
+                        <div>
+                          <input type="checkbox" class="btn-tgl btn-like" id="btn-like2">
+                          <label for="btn-like2" onclick=""></label>
+                        </div>
+                      </div>
+                      <h2 class="h-tit-26">[훈장마을 구로학원] 학원관리 및 수학/과학 고등부선 생님을 모십니다. (최고대우/ 월350/경력무관)</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-recruit-ViewWrap">
+                  <div class="recruitView-Contents rcrt-View-Left">
+                    <div class="info-summary">
+                      <ul class="titgreybrderUl">
+                        <li>
+                          <span class="tit">경력</span>
+                          <span class="co">신입, 경력</span>
+                        </li>
+                        <li>
+                          <span class="tit">급여</span>
+                          <span class="co">연봉 (면접 후 결정)</span>
+                        </li>
+                        <li>
+                          <span class="tit">학력</span>
+                          <span class="co">대학교(4년) 졸업, 졸업예정자 가능</span>
+                        </li>
+                        <li>
+                          <span class="tit">근무일수</span>
+                          <span class="co">주6일</span>
+                        </li>
+                        <li>
+                          <span class="tit">근무형태</span>
+                          <span class="co">
+                            <ul>
+                              <li><strong>전임</strong>13:00~22:00</li>
+                              <li><strong>단기</strong>13:00~22:00
+                                <button type="button" class="addCategory">+</button>
+
+                                <!-- 근무형태의 + 버튼 클릭시 노출 팝업  -->
+                                <div class="h-popup popup-04 ui-draggable" style="width:230px;">
+                                  <div class="pop-body">
+                                    <div class="pop-container">
+                                      <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                        <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00
+                                        </li>
+                                        <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">단기</span> 13:00~22:00
+                                        </li>
+                                        <li class="text-subtitle4 h-txt-5"><span class="h-txt-3">파트.알바</span>
+                                          18:00~20:00</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="close" title="팝업 닫기">
+                                    <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tit">근무지역</span>
+                          <span class="co">
+                            경기 안산시 단원구, 경기전체, 안산시 상록구, 시흥시, 화성시, 서울전체
+                            <button type="button" class="addCategory">+</button>
+                            <button type="button" class="more-small-btn">지도보기</button>
+
+                            <!-- 근무형지역의 + 버튼 클릭시 노출 팝업 -->
+                            <div class="h-popup popup-04 ui-draggable" style="width:220px;">
+                              <div class="pop-body">
+                                <div class="pop-container">
+                                  <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                    <li class="text-subtitle4 h-txt-3">경기 안산시 단원</li>
+                                    <li class="text-subtitle4 h-txt-3">경기전체</li>
+                                    <li class="text-subtitle4 h-txt-3">경기 안산시 상록구</li>
+                                    <li class="text-subtitle4 h-txt-3">경기 화성시</li>
+                                    <li class="text-subtitle4 h-txt-3">서울전체</li>
+                                    <li class="text-subtitle4 h-txt-3">서울 강남구</li>
+                                    <li class="text-subtitle4 h-txt-3">서울 노원구</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <button type="button" class="close" title="팝업 닫기">
+                                <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                              </button>
+                            </div>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+
+                    <h3 class="text-h3 mb15">상세모집요강</h3>
+                    <div class="acdemy-rcrtOutline-Wrap">
+                      <img src="../../../images/recruit-view-coSample.png">
+                    </div>
+
+
+
+
+                    <h3 class="text-h3 underLineTit">근무지 위치</h3>
+                    <ul class="greybrderUl acdemy-place-Wrap">
+                      <li class="wd100">
+                        <span class="tit">근무지 주소</span>
+                        <span class="co">(00000) 서울 구로구 디지털로26길 123 지플러스타워9층 906호
+                          <button type="button" class="more-small-btn">지도보기</button>
+                        </span>
+                      </li>
+                      <li class="wd100">
+                        <span class="tit">인근 지하철</span>
+                        <span class="co">
+                          <ul>
+                            <li class="mb5">
+                              서울
+                              <p class="ml5 mr5 h-subway seoul line-2">2호선</p>
+                              구로디지털단지역 3번 출구 500m 이내
+                            </li>
+                            <li>
+                              서울
+                              <p class="ml5 mr5 h-subway seoul line-7">7호선</p>
+                              남구로 8번 출구 1km 이내
+                            </li>
+                          </ul>
+                        </span>
+                      </li>
+                    </ul>
+
+
+
+                    <h3 class="text-h3 mb15" id="rcrut-method">접수기간 및 방법</h3>
+                    <div class="lr-blockBox acdemy-method-Wrap">
+                      <div class="leftBoxWrap">
+                        <strong class="text-subtitle1"><span class="h-txt-orange">채용 시 마감</span>되는<br>공고입니다.</strong>
+                        <p>시작일 :
+                          <span>2023.03.14 14:00</span>
+                        </p>
+                        <a href="" class="h-button-ml h-button-teal">즉시지원</a>
+                      </div>
+                      <ul class="rightBoxWrap greybrderUl">
+                        <li class="wd100">
+                          <span class="tit">지원방법</span>
+                          <span class="co h-txt-teal"><strong>훈장마을 입사지원</strong></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">접수양식</span>
+                          <span class="co h-txt-2">
+                            <ul>
+                              <li>훈장마을 이력서</li>
+                              <li><a href="" class="download-btn">자사양식</a></li>
+                            </ul>
+                            <div>
+                              <a href="" class="guide-i-btn">제출서류 보기</a>
+
+                              <!-- 접수 기간 및 방법 - 제출서류보기 클릭시 노출 팝업 -->
+                              <div class="h-popup popup-04 ui-draggable" style="width:260px;">
+                                <div class="pop-body">
+                                  <div class="pop-container">
+                                    <ul class="text-subtitle6 h-txt-3 top-list-box" style="line-height: 18px;">
+                                      <li class="text-subtitle4 h-txt-3" style="color:#333;">졸업 증명서, 주민등록등본</li>
+                                    </ul>
+                                    <p class="text-subtitle6 h-txt-5 ml10">입사 전/후 지원서류를 확인해 주세요.</p>
+                                  </div>
+                                </div>
+                                <button type="button" class="close" title="팝업 닫기">
+                                  <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+                                </button>
+                              </div>
+                            </div>
+                          </span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">참고서류</span>
+                          <span class="co"><a href="" class="download-btn">훈장마을 학원 브로셔.pdf</a></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">담당자</span>
+                          <span class="co h-txt-5">로그인 후 담당자 명을 확인할 수 있습니다.
+                            <button type="button" class="more-small-btn">로그인</button>
+                          </span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">연락처</span>
+                          <span class="co h-txt-5">로그인 후 연락처을 확인할 수 있습니다.
+                            <button type="button" class="more-small-btn">로그인</button>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="lr-blockBox acdemy-method-Wrap">
+                      <div class="leftBoxWrap">
+                        <strong class="text-subtitle1">
+                          <strong class="h-txt-orange">12</strong><span class="day">일</span>
+                          <strong class="h-txt-orange">20:51:29</strong>
+                        </strong>
+                        <p>시작일 :
+                          <span>2023.03.14 14:00</span>
+                        </p>
+                        <p>마감일 :
+                          <span>2023.03.14 24:00</span>
+                        </p>
+                        <a href="" class="h-button-ml h-button-teal">즉시지원</a>
+                      </div>
+                      <ul class="rightBoxWrap greybrderUl">
+                        <li class="wd100">
+                          <span class="tit">지원방법</span>
+                          <span class="co h-txt-teal"><strong>훈장마을 입사지원</strong></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">접수양식</span>
+                          <span class="co h-txt-2">
+                            <ul>
+                              <li>훈장마을 이력서</li>
+                              <li><a href="" class="download-btn">자사양식</a></li>
+                            </ul>
+                            <div>
+                              <a href="" class="guide-i-btn">제출서류 보기</a>
+                            </div>
+                          </span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">참고서류</span>
+                          <span class="co"><a href="" class="download-btn">훈장마을 학원 브로셔.pdf</a></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">담당자</span>
+                          <span class="co h-txt-5">로그인 후 담당자 명을 확인할 수 있습니다.
+                            <button type="button" class="more-small-btn bg-teal">입사지원</button>
+                          </span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">연락처</span>
+                          <span class="co h-txt-5">로그인 후 연락처을 확인할 수 있습니다.
+                            <button type="button" class="more-small-btn bg-teal">입사지원</button>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="lr-blockBox acdemy-method-Wrap">
+                      <div class="leftBoxWrap">
+                        <strong class="text-subtitle1"><span class="h-txt-orange">상시채용</span><br>공고입니다.</strong>
+                        <p>시작일 :
+                          <span>2023.03.14 14:00</span>
+                        </p>
+                        <a href="" class="h-button-ml h-button-teal">즉시지원</a>
+                      </div>
+                      <ul class="rightBoxWrap greybrderUl">
+                        <li class="wd100">
+                          <span class="tit">지원방법</span>
+                          <span class="co h-txt-teal"><strong>훈장마을 입사지원</strong></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">접수양식</span>
+                          <span class="co h-txt-2">
+                            <ul>
+                              <li>훈장마을 이력서</li>
+                              <li><a href="" class="download-btn">자사양식</a></li>
+                            </ul>
+                            <div>
+                              <a href="" class="guide-i-btn">제출서류 보기</a>
+                            </div>
+                          </span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">참고서류</span>
+                          <span class="co"><a href="" class="download-btn">훈장마을 학원 브로셔.pdf</a></span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">담당자</span>
+                          <span class="co h-txt-2">채용담당자</span>
+                        </li>
+                        <li class="wd100">
+                          <span class="tit">연락처</span>
+                          <span class="co h-txt-2">
+                            <ul>
+                              <li>02-2006-1234</li>
+                              <li>takdi78@daekyo.co.kr</li>
+                            </ul>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+
+
+
+                    <h3 class="text-h3 mb15" id="rcrut-acdmyInfo">학원정보</h3>
+                    <div class="lr-blockBox acdemy-info-Wrap">
+                      <div class="leftBoxWrap">
+                        <div>
+                          <p>훈장마을 구로학원</p>
+                          <button type="button" class="more-small-btn">학원정보 보기</button>
+                        </div>
+                      </div>
+                      <ul class="rightBoxWrap greybrderUl">
+                        <li class="wd50">
+                          <span class="tit">원장(대표자)</span>
+                          <span class="co h-txt-teal">홍길동</span>
+                        </li>
+                        <li class="wd50">
+                          <span class="tit">학원형태</span>
+                          <span class="co h-txt-2">보습/속셈</span>
+                        </li>
+                        <li class="wd50">
+                          <span class="tit">학원 설립일</span>
+                          <span class="co h-txt-2">2023년 3월 10일</span>
+                        </li>
+                        <li class="wd50">
+                          <span class="tit">주요과목</span>
+                          <span class="co h-txt-2">수학, 과학</span>
+                        </li>
+
+                        <li class="wd100">
+                          <span class="tit">복지.혜택</span>
+                          <span class="co h-txt-2">
+                            <ul>
+                              <li class="h-txt-3">
+                                <span class="h-txt-2">연금.보험</span>
+                                - 국민연금, 고용보험, 산재보험, 건강보험
+                              </li>
+                              <li class="h-txt-3">
+                                <span class="h-txt-2">휴무, 휴가, 행사</span>
+                                - 주5일제
+                              </li>
+                              <li class="h-txt-3">
+                                <span class="h-txt-2">편의, 여가, 건강</span>
+                                - 점심 식사 지원
+                              </li>
+                            </ul>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- pc 채용정보뷰 쪽 소스. END -->
+
+            </div>
+
+
+
+
+
+
+            <!-- 02-Mobile 미리보기 탭 -->
+            <div class="tabCo-CommonBox">
+              <div class="mobileBG">
+                <div class="innerBox">
+
+                <!-- Mobile 채용정보뷰 쪽 소스.  -->
+                <div class="content recruitInfo-cont">
+
+                  <div class="header-gradient gradient-basic">
+                    <div class="location">
+                      <div class="flex flex-center ml35"><button type="button" class="arrowBtn"></button>채용 정보</div>
+                      <div>
+                        <button type="button" class="btn-share"><img src="../../../images/mobile/m_icon_share.png" alt=""></button>
+                        <button type="button" class="btn-allmenu"><img src="../../../images/mobile/m_icon_allmenu.png" alt=""></button>
+                      </div>
+                    </div>
+          
+                    <div class="top-roundInfo">
+                      <ul>
+                        <li>
+                          <span>
+                            <input type="checkbox" class="btn-tgl btn-like" id="tbl-btn-like3">
+                            <label for="tbl-btn-like3" onclick="" class="m0"></label>
+                          </span>
+                          <span class="h-txt-3 text-subtitle3">훈장종합학원</span>
+                          <p class="h-txt-1 h-txt-bold mt5 txt-ellipsis2">[경력] 고3/N수반 수학 선생님 모집 (요일 협의 가능, 업계 최고 대우 가능) 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</p>
+                        </li>
+          
+                        <li>
+                          <div class="list-txt">
+                            <p class="h-button-grey2 blt-btxt">마감일</p>
+                            <span class="text-subtitle4">~05/04(목)</span>
+                            <p class="h-button-orange blt-stxt">D-5</p>
+                          </div>
+                          <div class="list-txt flex">
+                            <p class="h-button-grey2 blt-btxt">근무형태</p>
+                            <button type="button" class="tgl-downBtn">토글버튼</button>
+                            <ul class="tgl-downtxt">
+                              <li><span class="text-subtitle4">전임(13:00~22:00)</span></li>
+                              <li><span class="text-subtitle4">단기(13:00~22:00)</span></li>
+                              <li><span class="text-subtitle4">파트 · 알바(13:00~22:00)</span></li>
+                            </ul>
+          
+                            <script>
+                              $(".tgl-downBtn").click(function() {
+                                $(this).toggleClass("on");
+                                $(".tgl-downtxt").toggleClass("on");
+                              });
+                            </script>
+                          </div>
+          
+                          <div class="list-txt flex">
+                            <p class="h-button-grey2 blt-btxt">근무지역</p>
+                            <button type="button" class="tgl-downBtn">토글버튼</button>
+                            <ul class="tgl-downtxt">
+                              <li><span class="text-subtitle4">서울 구로구 외 4</span></li>
+                              <li><span class="text-subtitle4">서울 구로구, 서울 금천구</span></li>
+                              <li><span class="text-subtitle4">서울 관악구, 서울 동작구</span></li>
+                            </ul>
+                          </div>
+                        </li>
+          
+                        <li class="flex flex-wrap">
+                          <div class="icon-businessbox">
+                            <div class="imgbox">
+                              <img src="../../../images/mobile/m_icon_business01.png" alt="">
+                            </div>
+                            <span class="text-subtitle5">신입/경력</span>
+                          </div>
+          
+                          <div class="icon-businessbox">
+                            <div class="imgbox">
+                              <img src="../../../images/mobile/m_icon_business02.png" alt="">
+                            </div>
+                            <span class="text-subtitle5">대학교(4년)</span>
+                          </div>
+          
+                          <div class="icon-businessbox">
+                            <div class="imgbox">
+                              <img src="../../../images/mobile/m_icon_business03.png" alt="">
+                            </div>
+                            <span class="text-subtitle5">면접 후 결정</span>
+                          </div>
+          
+                          <div class="icon-businessbox">
+                            <div class="imgbox">
+                              <img src="../../../images/mobile/m_icon_business04.png" alt="">
+                            </div>
+                            <span class="text-subtitle5">주6일</span>
+                          </div>
+          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+          
+                  <!-- body -->
+                  <div class="content-inner">
+          
+          
+                    <div class="recruit-nav-wrap pt10">
+                      <!-- 스크롤시작시 탭영역 상단고정하려면 recruit-nav에 fixed 클래스 추가 -->
+                      <ul class="recruit-nav">
+                        <li class="active"><a href="javascript:void(0);">채용정보</a></li>
+                        <li><a href="#tab02">접수방법</a></li>
+                        <li><a href="#tab03">학원정보</a></li>
+                      </ul>
+                    </div>
+                    <!-- // -->
+          
+                    <!-- 모바일 채용공고 템플릿 -->
+                    <div class="employment-wrap">
+                      <p class="icon_tip_detail text-subtitle5">상세요강을 <span class="h-txt-orange">확대</span>하여 볼 수 있습니다.</p>
+                      <p class="h-txt-bold text-h3 h-txt-pit h-txt-c">[경력] 고3/N수반 수학 선생님 모집<br> (요일 협의 가능, 업계 최고 대우 가능)</p>
+                      <p class="text-subtitle5 h-txt-3 mt15 h-txt-c mb30">
+                        <span class="h-txt-2 h-txt-medium">훈장마을 구로디지털2호점 학원</span>은
+                        <span class="h-txt-2 h-txt-medium">2023년 3월</span>에 개원한 학원입니다.
+                        <span class="h-txt-2 h-txt-medium">서울 구로구 디지털로 26길 123</span>에 위치하고 있으며,
+                        <span class="h-txt-2 h-txt-medium">국어, 논술</span> 학원 입니다.
+                      </p>
+          
+                      <!-- 모집부문 -->
+                      <div class="subject-section">
+                        <strong class="blt-circleBlue h-txt-pit"><span class="material-symbols-outlined mr5">trip_origin</span> 모집부문</strong>
+                        <ul>
+                          <li>
+                            <p class="subject-bg-blue">ㆍ수학 (0명)</p>
+                          </li>
+                          <li class="txtbox ml10 mt20 mb20">
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">담당과목 및 업무</strong>
+                              <p class="h-txt-1 text-subtitle4">- 담당업무를 입력해주세요.</p>
+                              <p class="h-txt-1 text-subtitle4">- 담당업무를 입력해주세요.</p>
+                            </div>
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">근무형태</strong>
+                              <p class="h-txt-1 text-subtitle4">- 전임 (09:00 ~ 18:00)</p>
+                            </div>
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">자격요건</strong>
+                              <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">- 학력 : </span>대학교4년</p>
+                              <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">- 경력 : </span>신입, 경력</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <p class="subject-bg-blue">ㆍ과학 (0명)</p>
+                          </li>
+                          <li class="txtbox ml10 mt20 mb20">
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">담당과목 및 업무</strong>
+                              <p class="h-txt-1 text-subtitle4">- 담당업무를 입력해주세요.</p>
+                              <p class="h-txt-1 text-subtitle4">- 담당업무를 입력해주세요.</p>
+                            </div>
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">근무형태</strong>
+                              <p class="h-txt-1 text-subtitle4">- 전임 (09:00 ~ 18:00)</p>
+                            </div>
+                            <div class="depth-txt">
+                              <strong class="h-txt-1 text-subtitle4 block">자격요건</strong>
+                              <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">- 학력 : </span>대학교4년</p>
+                              <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">- 경력 : </span>신입, 경력</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+          
+          
+                      <!-- 우대사항 -->
+                      <div class="subject-section">
+                        <strong class="blt-circleBlue h-txt-pit"><span class="material-symbols-outlined mr5">trip_origin</span> 우대사항</strong>
+                        <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">ㆍ우대전공 : </span>경영학, 경제학, 국문학</p>
+                        <p class="h-txt-1 text-subtitle4"><span class="h-txt-5">ㆍ우대조건 : </span>영어가능, 일본어가능, 중국어가능</p>
+                      </div>
+          
+          
+                      <!-- 전형절차 -->
+                      <div class="subject-section">
+                        <strong class="blt-circleBlue h-txt-pit"><span class="material-symbols-outlined mr5">trip_origin</span> 우대사항</strong>
+                        <ul class="stepBox-round">
+                          <li>
+                            <span class="step-number">STEP1</span>
+                            <span class="step-txt">서류전형</span>
+                          </li>
+                          <li>
+                            <span class="step-number">STEP2</span>
+                            <span class="step-txt">1차-실무자 면접</span>
+                          </li>
+                          <li>
+                            <span class="step-number">STEP3</span>
+                            <span class="step-txt">2차-임원면접</span>
+                          </li>
+                          <li>
+                            <span class="step-number">STEP4</span>
+                            <span class="step-txt">최종합격</span>
+                          </li>
+                        </ul>
+          
+                        <div class="mt20">
+                          <p class="text-subtitle4 h-txt-5">· 면접일정은 추후 통보됩니다.</p>
+                          <p class="text-subtitle4 h-txt-5">· 허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>
+                        </div>
+                      </div>
+          
+          
+                      <div class="h-txt-r">
+                        <button type="button" class="btn-dtailview mt20">확대보기</button>
+                      </div>
+          
+                    </div>
+          
+          
+                    <!-- 근무지 위치 -->
+                    <div class="bc-neutral-3 pt10">
+                      <div class="workplace-wrap">
+                        <strong class="text-subtitle2">근무지 위치</strong>
+                        <div class="blue-box text-subtitle4 mt10 mb15">(00000) 서울 구로구 디지털로26길 123 지플러스타워9층 906호</div>
+                        <ul class="h-subway-wrap">
+                          <li>
+                            <p class="text-subtitle4"><span class="h-subway seoul line-2">2호선</span> 구로디지털단지역 2번 출구 500m <span class="h-txt-3 ml5">(도보7분)</span></p>
+                          </li>
+                          <li>
+                            <p class="text-subtitle4"><span class="h-subway seoul line-2">2호선</span> 동대문역사문화공원 2번 출구 500m <span class="h-txt-3 ml5">(도보7분)</span></p>
+                          </li>
+                          <li>
+                            <p class="text-subtitle4"><span class="h-subway seoul line-si">수인분당</span> 남동인더스파크 2번 출구 500m <span class="h-txt-3 ml5">(도보7분)</span></p>
+                          </li>
+                        </ul>
+                        <button type="button" class="text-subtitle4 arrow-rightBtn mt20 h-txt-medium wd100">지도보기</button>
+                      </div>
+                    </div>
+          
+          
+                    <!-- 접수방법 -->
+                    <div class="bc-neutral-3 pt10" id="tab02">
+                      <div class="receipt-wrap">
+                        <div class="endTimebox"><b>12</b>일 <b>20:51:29</b></div>
+                        <ul class="mt15">
+                          <li>
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">시작일</span>2023.04.10(월) 09:00</p>
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">종료일</span>2023.04.10(월) 09:00</p>
+                            <p class="h-txt-5 text-subtitle5 mt15">* 채용일정은 조기 마감 또는 변경될 수 있습니다.</p>
+                          </li>
+                          <li>
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">지원방법</span><span class="h-txt-teal">훈장마을 입사지원</span></p>
+                            <div class="blt-round-txt flex">
+                              <span class="blt-state-txt mr10">접수양식</span>
+                              <ul>
+                                <li>훈장마을 이력서, <a href="" class="h-button-txt h-button-nobg h-button-underline h-line-download">자사양식</a></li>
+                                <li style="position:relative;">제출서류 보기 <button type="button" class="h-btn-imark laypopup_ScriptSample03"></button>
+          
+                                  <!-- 툴팁 -->
+                                  <div class="h-m-popup popup-04 ui-draggable sampleClss03" style="display:none; left: 0; top: 25px; min-width: 245px;">
+                                    <div class="pop-body">
+                                      <div class="pop-container">
+                                        <p class="pop-stitle h-txt-5">입사 전/후 지원서류를 확인해 주세요.</p>
+                                        <p class="text-subtitle5 ml10 h-txt-2 blt-dottxt">졸업 증명서</p>
+                                        <p class="text-subtitle5 ml10 h-txt-2 blt-dottxt">주민등록등본</p>
+                                      </div>
+                                    </div>
+                                    <button type="button" class="close" title="팝업 닫기"></button>
+                                  </div>
+                                  <!-- // -->
+          
+                                </li>
+                              </ul>
+          
+          
+          
+          
+          
+          
+                            </div>
+        
+          
+          
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">참고서류</span><a href="" class="h-button-txt h-button-nobg h-button-underline h-line-download">훈장마을 학원 브로셔.pdf</a></p>
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">담당자</span>입사 지원 후 확인 가능합니다.</p>
+                            <p class="blt-round-txt"><span class="blt-state-txt mr10">연락처</span>입사 지원 후 확인 가능합니다.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+          
+          
+                    <!-- 학원정보 -->
+                    <div class="bc-neutral-3 pt10 pb5" id="tab03">
+                      <ul class="acdInfo-wrap">
+                        <li class="flex flex-center">
+                          <div class="logo-imgbox">
+                            <img src="../../../images/logo_dummy02.jpg" alt="">
+                          </div>
+                          <div class="logo-txtbox">
+                            <span class="block h-txt-2 text-subtitle2 h-txt-medium txt-ellipsis">훈장학원훈장학원훈장학원 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다. 점점 더 길어집니다.</span>
+                            <button type="button" class="s-arrow-rightBtn text-subtitle6 h-txt-3 mt10">학원정보 보기</button>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="blt-round-txt"><span class="blt-state-txt mr10">학원형태</span>보습/속셈</p>
+                          <p class="blt-round-txt"><span class="blt-state-txt mr10">주요과목</span>수학, 과학</p>
+                          <p class="blt-round-txt"><span class="blt-state-txt mr10">원장(대표자)</span>홍길동</p>
+                          <p class="blt-round-txt"><span class="blt-state-txt mr10">학원 설립일</span>2023년 3월 10일</p>
+                          <div class="blt-round-txt flex">
+                            <span class="blt-state-txt mr10">복지.혜택</span>
+                            <ul>
+                              <li>연금.보험 <span class="h-txt-3">- 국민연금, 고용보험, 산재보험, 건강보험</span></li>
+                              <li>휴무, 휴가, 행사 <span class="h-txt-3">- 주5일제</span></li>
+                              <li>편의, 여가, 건강 <span class="h-txt-3">- 점심 식사 지원</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                  <!-- //body -->
+          
+                </div>
+
+                <!-- Mobile 채용정보뷰 쪽 소스. END -->
+              </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+      <!-- //contents -->
+    </div>
+    <!-- //container -->
+
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>

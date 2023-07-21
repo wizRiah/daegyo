@@ -1,8 +1,7 @@
 @charset "utf-8"; 
-/*2023-07-04 SSJ*/
-/*2023-07-11 SSJ*/
 /*2023-07-17 SSJ*/
 /*2023-07-18 SSJ*/
+/*2023-07-21 SSJ*/
 
 /* 학원서비스 */
 
@@ -60,6 +59,15 @@
  .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide>p>strong { color:#333; font-weight:500; }
  .payFine.paymentView.my-subtxtbox>div:nth-child(2) { display:flex; flex-direction:column; margin-top:30px; }
  .payFine.paymentView.my-subtxtbox .btnbox { margin-top:38px; }
+ /*가상계좌입금 결제시*/
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l {text-align:left; padding:35px 40px;}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l .topLine {display:flex; font-size:20px; line-height:24px; color:#333333}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l .topLine strong {margin-left:4px;}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l .topLine .deadline {font-size:16px; margin-left:5px; margin:0 12px 0 10px;}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l .topLine .deadline span {}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l .topLine .h-button-xxs {margin:0 5px 0 0; color:#333333;}
+ .payFine.paymentView.my-subtxtbox .h-subbox-basic-guide.h-txt-l>p {margin-top:5px;}
+
 
  .payBlock { margin-top:50px; }
  .payBlock h4 { width: 100%; padding-bottom: 20px; color: #151515; font-weight: normal; }
@@ -1354,7 +1362,7 @@
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:checked + label.label-prvwmobile:before {background-position-y: -60px;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:checked + label {background:#43A986; color:#ffffff; border-bottom-color:#43A986;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox {width:100%; height:645px;}
-    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox [class^="tabbox-"] {display:none; width:100%; height:100%; transition:background-position 1s;}
+    .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox [class^="tabbox-"] {display:none; width:100%; height:100%; transition:background-position 1s, background 0.5s;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox .active {display:block;}
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:first-of-type:checked ~ .previewBox .tabbox-pc,
     .rcrt-adv-Listbox .exposureArea .pcnmobileTAB input[type="radio"]:nth-of-type(2):checked ~ .previewBox .tabbox-mobile {display:block;}
@@ -1375,28 +1383,22 @@
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_1 .tabbox-pc {background:url(../images/product_screenshot/pc/screenshot_main03_1.jpg); background-position-y:0;}
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_2 .tabbox-pc {background:url(../images/product_screenshot/pc/screenshot_main03_2.jpg); background-position-y:0;}
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_3 .tabbox-pc {background:url(../images/product_screenshot/pc/screenshot_main03_3.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_4 .tabbox-pc {background:url(../images/product_screenshot/pc/screenshot_main03_4.jpg); background-position-y:0;}
         
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct4_1 .tabbox-pc {background:url(../images/product_screenshot/pc/screenshot_main04_1.jpg); background-position-y:0;}
 
 
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_1 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_1.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_2 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_2.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_3 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_3.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_4 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_4.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_5 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_5.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_6 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_6.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_7 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_7.jpg); background-position-y:0;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_2 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_2.jpg); background-position-y:-158px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_3 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_3.jpg); background-position-y:-379px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_4 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_4.jpg); background-position-y:-590px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_5 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_5.jpg); background-position-y:-795px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_6 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_6.jpg); background-position-y:-1131px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct1_7 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main01_7.jpg); background-position-y:-1405px;}
 
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_1 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_1.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_2 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_2.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_3 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_3.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_4 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_4.jpg); background-position-y:0;}
-
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_1 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main03_1.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_2 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main03_2.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_3 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main03_3.jpg); background-position-y:0;}
-        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct3_4 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main03_4.jpg); background-position-y:0;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_1 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_1.jpg); background-position-y:-13px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_2 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_2.jpg); background-position-y:-213px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_3 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_3.jpg); background-position-y:-15px;}
+        .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct2_4 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main02_4.jpg); background-position-y:-107px;}
         
         .rcrt-adv-Listbox .exposureArea .pcnmobileTAB .previewBox.adProduct4_1 .tabbox-mobile {background:url(../images/product_screenshot/mobile/screenshot_main04_1.jpg); background-position-y:0;}
 
