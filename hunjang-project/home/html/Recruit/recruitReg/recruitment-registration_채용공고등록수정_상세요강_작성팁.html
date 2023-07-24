@@ -948,11 +948,90 @@
 
 
         <!-- 상세요강 템플릿 반영 -->
-        <div id="anchor-title06" class="resume-reg-basicBox">
+        <div id="anchor-title06" class="resume-reg-basicBox" style="position:relative;">
           <h2 class="text-h2 h2-line h-txt-5 h-txt-light">
             <span>지금까지 입력한<b class="h-txt-2 ml5">상세요강</b>을 <b class="h-txt-2 ml5">템플릿에 반영</b>해 보세요.</span>
-            <a href="" class="txt-tip">상세요강 작성 팁</a>
+            <a href="" class="txt-tip laypopup_ScriptSample01">상세요강 작성 팁</a>
           </h2>
+
+          <!-- 모달팝업 -->
+          <div class="h-popup popup-01 ui-draggable sampleClss01" style="top:0; left:0; width: 636px;">
+
+            <div class="pop-body">
+              <div class="pop-container">
+
+                <!-- Swiper -->
+                <div class="swiper imgTipSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="text-subtitle2 h-txt-c mb20">훈장마을이 제시한 <b>5가지 템플릿 중 원하시는 템플릿을 선택</b>해 주세요.</p>
+                      <div class="imgbox">
+                        <img src="../../../images/img_slide_tip01.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="text-subtitle2 h-txt-c mb20">모집부문 추가 / 항목추가를 활용 해 <b>상세 모집요강을 추가</b>할 수 있습니다.</p>
+                      <div class="imgbox">
+                        <img src="../../../images/img_slide_tip02.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="text-subtitle2 h-txt-c mb20">템플릿 이용 시 <b>모바일에 최적화된 상태</b>로 상세 모집내용이 보여집니다.</p>
+                      <div class="imgbox">
+                        <img src="../../../images/img_slide_tip03.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+
+                
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                
+
+                </div>
+                <!-- // -->
+
+
+              </div>
+            </div>
+            <button type="button" class="close" title="팝업 닫기">
+              <img src="../../../images/close_btn.svg" alt="팝업 닫기">
+            </button>
+          </div>
+          <!-- //모달팝업 -->
+
+          <script>
+            $(document).ready(function() {
+              $('.laypopup_ScriptSample01').click(function() {
+                $('.sampleClss01').css("display", "inline-block");
+                $('.lottie-bg').css("display", "inline-block");
+              });
+            });
+
+            $(document).ready(function() {
+              $('.close').click(function() {
+                $('.sampleClss01').css("display", "none");
+                $('.lottie-bg').css("display", "none");
+              });
+            });
+          </script>
+
+          <script>
+            var swiper = new Swiper(".imgTipSwiper", {
+              cssMode: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              mousewheel: true,
+              keyboard: true,
+            });
+          </script>
 
           <!-- 채용제목 -->
           <ul class="resume-regList">
@@ -1137,6 +1216,7 @@
     </div>
     <!-- //container -->
 
+    <div class="lottie-bg"></div>
   </div>
 
   <script>
