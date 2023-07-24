@@ -1,0 +1,67 @@
+@charset "utf-8"; 
+
+/* width */
+
+
+/* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
+.h-auth-wrap .auth-txt {display:block;margin-top:10px;font-size:14px;line-height:20px;color:#7E7E7E;text-align:center;}
+.h-auth-wrap .auth-txt strong {display:block;font-size:14px;font-weight:400;color:#333;}
+.h-auth-wrap .content .form-box {padding-bottom:90px;}
+.h-auth-wrap .form-box .labelArea {position: relative;padding-left: 10px;font-size:12px;color:#333;}
+.h-auth-wrap .form-box .labelArea:before {content: '';position: absolute;top: calc(50% - 1px);left: 3px;width: 2px;height: 2px;background: var(--black-2);}
+.h-auth-wrap .form-box .input-set.birthday-sex {display:flex;justify-content:space-between;align-items:center;}
+.h-auth-wrap .form-box .input-set .hyphen {width:26px;text-align:center;}
+.h-auth-wrap .form-box input.blind-input {position:relative;display:block;font-size: 15px;color: #BCBCBC;text-align:center;}
+.h-auth-wrap .form-box input.blind-input.error {border:1px solid #FF5656 !important;background:#FFFDE2;}
+.h-auth-wrap .form-box .auth-info-box {display:flex;justify-content:space-between;align-items:center;flex-wrap: wrap;position:relative;margin-top:15px;}
+.h-auth-wrap .form-box .auth-info-box .text-subtitle4 {color:#333;}
+.h-auth-wrap .form-box .input-btn-set {position:relative;}
+.h-auth-wrap .form-box .input-btn-set input.h-txtfield-basic {padding:0 130px 0 19px !important;}
+.h-auth-wrap .form-box .input-btn-set button {position:absolute;right:8px;top:calc(50% - 18px);margin:0;}
+.h-auth-wrap .form-box .input-btn-set.password input.h-txtfield-basic {padding:0 60px 0 19px !important;}
+.h-auth-wrap .form-box .input-btn-set.password .btn-blind {position:absolute;right:20px;top:calc(50% - 8px);margin:0;display:block;width:22px;height:16px;background: url(../images/auth/icon_pw_off.png) no-repeat 50% 50%;}
+.h-auth-wrap .form-box .input-btn-set .include_txt.timer {position:absolute;right:15px;top:calc(50% - 7px);margin:0;font-size:12px;color:#FF5656;}
+
+/* input 입력시 안내 텍스트 */
+.h-auth-wrap .form-box .alert-column {display:flex;align-items:center;font-size:12px;}
+.h-auth-wrap .form-box .alert-column.good {color:#61A6FF;}
+.h-auth-wrap .form-box .alert-column.bad {color:#FF5656;}
+.h-auth-wrap .form-box .alert-column.bang {position:relative;}
+.h-auth-wrap .form-box .alert-column .btn-bang {width:20px;height:20px;margin-right:7px;}
+.h-auth-wrap .form-box .alert-column.security-good {padding:0 0 0 27px;background: url(../images/auth/icon_security_good.png) no-repeat 0 50%;font-size:13px;line-height:20px;color:#61A6FF;text-decoration: underline;}
+.h-auth-wrap .form-box .alert-column.security-bad {padding:0 0 0 27px;background: url(../images/auth/icon_security_bad.png) no-repeat 0 50%;font-size:13px;line-height:20px;color:#FF5656;text-decoration: underline;}
+
+/* 미니팝업 */
+.h-auth-wrap .form-box .mini-popup {position: absolute;top: 25px;z-index: 1;padding: 30px;border: 1px solid var(--grey-3);box-sizing: border-box;min-height: auto;max-height:none;box-shadow: 0px 5px 10px #0000001A;background-color:#fff;}
+.mini-popup .pop-body {height: calc(100% - 47px);box-sizing: border-box;position: relative;overflow: hidden;}
+.mini-popup .pop-container {width:100%;height:100%;box-sizing:border-box;position:relative;word-wrap:break-word;overflow-y:auto;overflow:visible;text-align: left;}
+.mini-popup button.close {height:54px;top:0px;right:0px;width:54px;position:absolute;border:none;cursor:pointer;text-align:center;border-radius:0 15px 0 0;box-sizing:border-box;}
+.mini-popup button.close img {vertical-align: middle;max-width: 14px;}
+
+.h-auth-wrap .form-box .input-btn-set input[type="checkbox"] {overflow: hidden;position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;padding: 0;visibility:hidden;}
+.h-auth-wrap .form-box .input-btn-set #blindPw:checked + .btn-blind {background: url(../images/auth/icon_pw_on.png) no-repeat 50% 50%;}
+.h-auth-wrap .roul-check li:first-child {padding-bottom:23px;background:url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 bottom;}
+.h-auth-wrap .roul-check li:nth-child(4) {padding-bottom:23px;background:url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 bottom;}
+.h-auth-wrap .roul-check li:nth-child(5) {padding-bottom:23px;background:url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 bottom;}
+.h-auth-wrap .form-box .auth-info-box .h-checkbox {position:relative;margin:0;font-size:14px;}
+.h-auth-wrap .form-box .auth-info-box .h-checkbox .readmore-Arrowbtn {display: inline-block;width: 19px;height: 19px;border-radius: 100%;border: 1px solid var(--grey-2);text-indent: -999px;overflow: hidden;position: absolute;right:0;top:0;  box-sizing: border-box;}
+.h-auth-wrap .form-box .auth-info-box .h-checkbox .readmore-Arrowbtn:before {content: "";display: inline-block;width: 6px;height: 6px;border: 1px solid var(--grey-2);border-width: 0 1.5px 1.5px 0;position: absolute;left: 5px;top: 4px;transform: rotate(45deg);transition: 0.5s;}
+.h-auth-wrap .form-box .auth-info-box .h-checkbox .readmore-Arrowbtn.on:before {transform: rotate(225deg);top: 7px;}
+.h-auth-wrap .form-box .auth-info-box .dropdown {display:none;overflow-y:auto;height:150px;padding:20px;background:#F5F7FA;font-size:12px;line-height:18px;color:#7E7E7E;}
+.h-auth-wrap .form-box .auth-info-box .dropdown.on {display:block;}
+.h-auth-wrap .form-box .h-radio-01 input[type="radio"] + label .rchk {display: inline-block;width: 24px;height: 24px;border-radius: 100%;background: #fff;border: 1px solid var(--border-basic-2);box-sizing: border-box;vertical-align: middle;margin: 0 10px 0 0;transition: border 0.5s;position: relative;}
+.h-auth-wrap .form-box .dropdown::-webkit-scrollbar-thumb {height:30%;}
+.h-auth-wrap .form-box .btm-btn {height:64px;line-height:64px;margin-top:40px;border-radius:4px;font-size:15px;color:#fff;}
+
+/* (해상도 480px ~ 767px) */
+@media all and (max-width:767px) {
+
+} 
+
+/* (해상도 ~ 479px) */
+@media all and (max-width:479px) {
+    .h-auth-wrap .content .form-box {padding-bottom:104px;}
+    .h-auth-wrap .form-box .btm-btn {position:fixed;left:0;bottom:0;z-index:5;width:100%;height:54px;line-height:54px;margin-top :0;border-radius:0;font-size:15px;color:#fff;}
+    .h-auth-wrap .sns-login {width:100%;max-width:300px;}
+}
+
