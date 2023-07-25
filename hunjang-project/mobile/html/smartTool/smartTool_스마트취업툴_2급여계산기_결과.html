@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>급여계산기_4대보험적용 결과</title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/popup.css">
+  <link rel="stylesheet" href="../../css/academy-service.css">
+  <link rel="stylesheet" href="../../css/resume-regist.css">
+  <link rel="stylesheet" href="../../css/recruit-info.css">
+  <link rel="stylesheet" href="../../css/hunjang-main.css">
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- swiper slide cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+
+  <div class="m-hunjang-wrap">
+
+    <!-- header -->
+    <header class="hc-white">
+      <div class="location">
+        <span><a href="" class="toplogoBtn">훈장플러스</a></span>
+      </div>
+      <button type="button" class="btn-allmenu">
+        <img src="../../images/mobile/m_icon_allmenu_gray.png" alt="">
+      </button>
+    </header>
+    <!-- // -->
+
+    <!-- nav -->
+    <div class="nav">
+      <!-- 스크롤되면 여기에 fixed 클래스가 추가됩니다.! 참고 :  https://xd.adobe.com/view/d620cc9b-7962-4561-8335-191cf92212f5-8373/screen/f1b14aa8-7c85-4be3-9df0-8f32708dcced/specs/ -->
+      <div class="swiper nav-swiper swiper-initialized swiper-horizontal">
+        <div class="swiper-wrapper" id="swiper-wrapper-596c7ad90ef271014" aria-live="polite">
+          <div class="swiper-slide active swiper-slide-active" role="group" aria-label="1 / 3"><a href="">스마트 취업 TOOL</a></div>
+          <div class="swiper-slide" role="group" aria-label="2 / 3"><a href="">티츄스토리</a></div>
+          <div class="swiper-slide" role="group" aria-label="3 / 3"><a href="">전자근로계약</a></div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+      <button type="button" class="btn-tgl-allmenu"></button>
+      <!-- 2) 전체메뉴 버튼 클릭시 보여지는 내용 -->
+      <div class="m_allmenu_popup" style="display:none;">
+        <div class="allmenupopTit">훈장플러스 전체메뉴</div>
+        <a href="">스마트 취업TOOL</a>
+        <a href="">티츄스토리</a>
+        <a href="">전자근로계약</a>
+        <a href="">연락처 공개제의</a>
+        <a href="">취업축하금</a>
+      </div>
+    </div>
+    <div class="menu_2dpt on"> <!-- 1뎁스 메뉴를 클릭하면 여기에 on 클래스가 추가됩니다!! --> 
+      <div class="swiper menu2dpt-swiper swiper-initialized swiper-horizontal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide active swiper-slide-active"><a href="">급여계산기</a></div>
+          <div class="swiper-slide swiper-slide-next"><a href="">학점계산기</a></div>
+          <div class="swiper-slide"><a href="">졸업/전역계산기</a></div>
+          <div class="swiper-slide"><a href="">어학점수 변환</a></div>
+          <div class="swiper-slide"><a href="">사진크기 조정</a></div>
+          <div class="swiper-slide"><a href="">취업활동 증명서</a></div>
+          <div class="swiper-slide"><a href="">퀵 자소서</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- // -->
+
+    <!-- nav Swiper -->
+    <script>
+      var swiper = new Swiper(".nav-swiper", {
+        slidesPerView: "auto",
+      });
+
+      var swiper = new Swiper(".menu2dpt-swiper", {
+        slidesPerView: "auto",
+      });
+
+    </script>
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- content -->
+      <div class="content white-nopadding">
+
+
+        <div class="smrtTool salaryCalc">
+          <div class="pageTAPWrap">
+            <a class="pageTAP wd50 activeTAB" href="">4대보험 적용</a>
+            <a class="pageTAP wd50" href="">프리랜서</a>
+          </div>
+
+          <div class="innerWrap">
+            <div class="basic-popup-inputdl">
+              <div class="dl">
+                <div class="dt">세금 공제한 실 수령액</div>
+                <div class="dd">
+                  <div class="expect-resultBox">
+                    <div class="Top-rslt">
+                      <div class="dl">
+                        <strong>예상 소득액 (월)</strong>
+                        <strong>2,400,000 원</strong>
+                      </div>
+                      <div class="dl">
+                        <span>공제액 합계</span>
+                        <span>246,510 원</span>
+                      </div>
+                    </div>
+                    
+                    <div class="rslt-detail">
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>국민연금</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+                          
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">국민연금 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>월 소득액 (비과세액 제외)에서 4.5%를 공제합니다 </li>
+                              <li>근로자, 기업 각각 4.5%씩 부담합니다. </li>
+                              <li>최저금액 350,000원, 최고금액 5,530,000원으로 과세합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+
+                        </div>
+                        <div class="rCo">
+                          <b>103,500</b>원
+                        </div>
+                      </div>
+
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>건강보험</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">건강보험 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>월 소득액 (비과세액 제외)에서 3.495%를 공제합니다. </li>
+                              <li>근로자, 기업 각각 3.495%씩 부담합니다. </li>
+                              <li>최저금액 279,256원, 최고금액 104,536,481원으로 과세합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+                        </div>
+                        <div class="rCo">
+                          <b>83,500</b>원
+                        </div>
+                      </div>
+
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>장기요양</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">장기요양보험 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>건강보험 금액에서 12.27%를 공제합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+                        </div>
+                        <div class="rCo">
+                          <b>9,500</b>원
+                        </div>
+                      </div>
+
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>고용보험</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+                          
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">고용보험 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>월 소득액 (비과세액 제외)에서 0.9%를 공제합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+                        </div>
+                        <div class="rCo">
+                          <b>20,700</b>원
+                        </div>
+                      </div>
+
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>소득세</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">소득세 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>급여와 부양가족수, 7세 이상 20세 이하 자녀 수에 따라 국세청의 근로소득 간이 세액표 자료를 기준으로 공제합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+                        </div>
+                        <div class="rCo"> 
+                          <b>29,160</b>원
+                        </div>
+                      </div>
+
+                      <div class="dl">
+                        <div class="lTit">
+                          <span>지방소득세</span>
+                          <button type="button" class="helpBtn"><img src="../../images/mobile/m_icon_qmark2.png"></button>
+
+                          <!-- ? 버튼 누르면 나오는 팝업 -->
+                          <div class="h-m-popup popup-04"> 
+                            <strong class="h-txt-1 text-subtitle3">지방소득세 공제</strong>
+                            <ul class="basic-popup-list">
+                              <li>소득세의 10%를 공제합니다.</li>
+                            </ul>
+                            <button type="button" class="close" title="팝업 닫기"></button>
+                          </div>
+                        </div>
+                        <div class="rCo">
+                          <b>2,910</b>원
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="all-rslt">
+                      <div class="lTit">예상 실 수령액</div>
+                      <div class="rCo">
+                        <b>2,153,490</b>원
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="smrtTool-btnbox">
+            <button type="button" class="h-button-ml h-button-cyan">다시 계산하기</button>
+          </div>
+
+        </div>
+
+
+
+
+
+      </div><!-- // content -->
+
+    </div><!-- // container -->
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+      <!-- 상단으로 이동하기 버튼 -->
+      <div class="quick-btmBtn">
+        <a href="" class="topBtn fixedBtn"><img src="../../images/mobile/m_arrow_top.png" alt=""></a>
+        <a href="" class="prevBtn fixedBtn"><img src="../../images/mobile/m_arrow_left.png" alt=""></a>
+        <a href="" class="homeBtn fixedBtn"><img src="../../images/mobile/m_icon_home.png" alt=""></a>
+      </div>
+
+
+      <ul class="mypage-info">
+        <li><a href="">로그아웃</a></li>
+        <li><a href="">회원정보</a></li>
+        <li><a href="">고객센터</a></li>
+        <li><a href="">상품안내</a></li>
+      </ul>
+
+      <div class="footer-inner">
+
+        <ul class="device-info">
+          <li><a href="">PC버전</a></li>
+          <li><a href="">안드로이드 APP 설치</a></li>
+          <li><a href="">아이폰 APP 설치</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보 처리방침</a></li>
+        </ul>
+
+        <button type="button" class="btn-tgl-footer">에듀베이션(주)</button>
+
+        <!-- 3) 에듀베이션(주) 버튼 클릭시 보여지는 내용 -->
+        <ul class="address-info">
+          <li><span class="blt-tit-dot h-txt-3">대표이사 : </span>방형식</li>
+          <li><span class="blt-tit-dot h-txt-3">주소 : </span>(우: 08390) 서울 구로구 디지털로 26길 123 지플러스타워 9층 906호~908호</li>
+          <li><span class="blt-tit-dot h-txt-3">사업자등록번호 : </span>220-81-51475</li>
+          <li><span class="blt-tit-dot h-txt-3">직업정보제공사업 신고번호 : </span>서울관악 2004-10호</li>
+          <li><span class="blt-tit-dot h-txt-3">통신판매업 : </span>제1684호</li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+
+
+  </div>
+
+
+<script>
+    
+    // ? 팝업
+    $( document ).ready( function() {
+        $( '.helpBtn' ).click( function() {
+          $('.popup-04').addClass('on');
+        } );
+    } );
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
