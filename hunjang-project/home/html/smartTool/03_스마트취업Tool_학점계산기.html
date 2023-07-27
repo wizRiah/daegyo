@@ -716,7 +716,7 @@
             <strong class="text-h3 mr15">학점 변환기</strong>
           </div>
 
-          <div class="payCal-wrap">
+          <div class="smartCal-wrap">
             <ul class="flex wd100">
               <!-- 첫번째 -->
               <li class="creditChange-box">
@@ -731,14 +731,10 @@
                         <option value="">100만점</option>
                       </select>
                     </div>
-                    <div class="flex flex-center h-textfield-round">
-                      <input type="text" class="width-200" value="3.9">
-                      <span class="text-subtitle4 h-txt-3 flex-none ml5">점</span>
-                    </div>
                   </div>
                 </div>
 
-                <div class="h-txt-c flex flex-set">
+                <div class="flex flex-set btn-center-wrap">
                   <button type="button" class="h-button-sm h-button-cyan" style="width:134px;">변환</button>
                   <a href="#" class="resetBtn ml10 flex-none">초기화</a>
                 </div>
@@ -747,21 +743,278 @@
               <!-- 두번째 -->
               <li class="creditResult-box">
                 <p class="h-txt-1 text-h3 h-txt-medium mb30">학점변환 결과</p>
-                <div class="h-textfield-bottom">
-                  <p class="">
-                    <input type="text"><span class="h-txt-3 font-fam-suit">/</span><span class="h-txt-3 text-subtitle4">4.0 만점</span></p>
-                  
+                <div class="flex flex-between mb40">
+                  <div>
+                    <p class="h-textfield-solid"><input type="text"><span class="h-txt-3 font-fam-suit blt-slash">/</span><span class="h-txt-3 text-subtitle4">4.0 만점</span></p>
+                    <p class="h-textfield-solid"><input type="text"><span class="h-txt-3 font-fam-suit blt-slash">/</span><span class="h-txt-3 text-subtitle4">4.3 만점</span></p>
+                  </div>
+                  <div>
+                    <p class="h-textfield-solid"><input type="text"><span class="h-txt-3 font-fam-suit blt-slash">/</span><span class="h-txt-3 text-subtitle4">4.5 만점</span></p>
+                    <p class="h-textfield-solid"><input type="text"><span class="h-txt-3 font-fam-suit blt-slash">/</span><span class="h-txt-3 text-subtitle4">100 만점</span></p>
+                  </div>
                 </div>
-         
 
-                <div class="h-txt-c mt30">
+                <div class="btn-center-wrap">
                   <button class="h-line-cyan h-button-sm">결과 복사하기</button>
                 </div>
-                
-              </li>
 
+              </li>
             </ul>
           </div>
+
+
+
+          <div class="mt50 mb20">
+            <strong class="text-h3 mr15">학점 계산기</strong>
+          </div>
+
+          <div class="smartCal-wrap">
+            <ul class="flex wd100">
+              <!-- 첫번째 -->
+              <li class="creditCalc-box">
+                <div class="innerCal">
+                  <p class="text-h3 h-txt-1 h-txt-medium mb35">내 점수 입력</p>
+                  <div class="flex flex-center flex-end2">
+                    <div class="flex flex-center h-textfield-round mr20">
+                      <select name="" id="" style="width:230px">
+                        <option value="">4.0만점</option>
+                        <option value="">4.3만점</option>
+                        <option value="">4.5만점</option>
+                        <option value="">100만점</option>
+                      </select>
+                    </div>
+                    <div class="h-checkbox checkbox01">
+                      <input type="checkbox" name="checkForm" id="check01" checked="">
+                      <label for="check01" class="h-txt-3 text-subtitle4">F학점 포함</label>
+                    </div>
+                  </div>
+
+                  <!-- 테이블 -->
+                  <div class="mt20">
+                    <table class="tbl-scoreCalc scrolltbody">
+                      <thead>
+                        <tr>
+                          <th style="width:200px;">과목명</th>
+                          <th style="width:180px;">학점</th>
+                          <th style="width:140px;">성적</th>
+                          <th style="width:40px;">전공</th>
+                          <th style="width:45px;"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                        <tr>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round"><input type="text"></td>
+                          <td class="h-textfield-round">
+                            <select name="" id="">
+                              <option value="" disabled="" selected="">선택</option>
+                              <option value="">A+</option>
+                              <option value="">A</option>
+                              <option value="">B+</option>
+                              <option value="">B</option>
+                              <option value="">C+</option>
+                              <option value="">C</option>
+                              <option value="">D+</option>
+                              <option value="">D</option>
+                              <option value="">F</option>
+                              <option value="">P</option>
+                              <option value="">NP</option>
+                            </select>
+                          </td>
+                          <td class="h-checkbox checkbox01">
+                            <label>
+                              <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+                            </label>
+                          </td>
+                          <td><button type="button" class="btn-delet-outline"></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="h-txt-r mt10 mb5">
+                      <button type="button" class="btn-subjectAdd">과목추가</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-set btn-center-wrap mb30">
+                  <button type="button" class="h-button-sm h-button-cyan" style="width:150px;">계산하기</button>
+                  <a href="#" class="resetBtn ml10 flex-none">초기화</a>
+                </div>
+              </li>
+
+              <!-- 두번째 -->
+              <li class="creditSum-box">
+                <p class="h-txt-1 text-h3 h-txt-medium mb30">총 평점</p>
+                <div class="flex flex-end2">
+                  <div class="topScore wontxt-type h-textfield-bottom width-160">
+                    <input type="text" class="h-txt-r">
+                    <span class="unitTxt">점</span>
+                  </div>
+                </div>
+                <ul class="bottomScore">
+                  <li class="flex flex-between">
+                    <span class="text-subtitle4 h-txt-3">전공 평점</span>
+                    <div class="wontxt-type h-textfield-bottom width-140">
+                      <input type="text" class="h-txt-r" value="0">
+                      <span class="unitTxt">점</span>
+                    </div>
+                  </li>
+                  <li class="flex flex-between">
+                    <span class="text-subtitle4 h-txt-3">총 이수학점</span>
+                    <div class="wontxt-type h-textfield-bottom width-140">
+                      <input type="text" class="h-txt-r" value="0">
+                      <span class="unitTxt">점</span>
+                    </div>
+                  </li>
+                  <li class="flex flex-between">
+                    <span class="text-subtitle4 h-txt-3">전공 이수학점</span>
+                    <div class="wontxt-type h-textfield-bottom width-140">
+                      <input type="text" class="h-txt-r" value="0">
+                      <span class="unitTxt">점</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="btn-center-wrap">
+                  <button class="h-line-cyan h-button-sm">결과 복사하기</button>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+
 
         </div>
       </div>

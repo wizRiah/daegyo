@@ -40,28 +40,23 @@
 .h-radio-05 input[type="radio"]:checked + label {color:#43C1D5; font-weight:var(--text-medium); background:#DFF7FB; border-color:#43C1D5;}
 
 
-.smartTool-wrap .payCal-wrap {margin-bottom:50px;}
-.smartTool-wrap .payCal-wrap > ul {border:1px solid var(--border-basic-3);}
-.smartTool-wrap .payCal-wrap > ul > li {width:50%; padding:40px;}
-.smartTool-wrap .payCal-wrap > ul > li:first-child {border-right:1px solid var(--border-basic-3); box-sizing: border-box;}
-.smartTool-wrap .payCal-wrap > ul > li:last-child {border-top:2px solid var(--black-1); box-sizing: border-box;}
+.smartTool-wrap .smartCal-wrap {margin-bottom:50px;}
+.smartTool-wrap .smartCal-wrap > ul {border:1px solid var(--border-basic-3);}
+.smartTool-wrap .smartCal-wrap > ul > li {width:50%; padding:40px;}
+.smartTool-wrap .smartCal-wrap > ul > li:first-child {border-right:1px solid var(--border-basic-3); box-sizing: border-box;}
+.smartTool-wrap .smartCal-wrap > ul > li:last-child {border-top:2px solid var(--black-1); box-sizing: border-box;}
 
-.smartTool-wrap .payCal-wrap .currentPay-box {}
-.smartTool-wrap .payCal-wrap .currentPay-box li {display: flex; justify-content: space-between; align-items: center;}
-.smartTool-wrap .payCal-wrap .currentPay-box li .h-radio-05 {gap:15px;}
-.smartTool-wrap .payCal-wrap .currentPay-box > ul > li + li {margin-top:20px;}
-.smartTool-wrap .payCal-wrap .currentPay-box .sumResult-box {justify-content: flex-start; margin-top:40px;}
-.smartTool-wrap .payCal-wrap .currentPay-box .sumResult-box .wontxt-type {margin-right:40px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box {}
+.smartTool-wrap .smartCal-wrap .currentPay-box li {display: flex; justify-content: space-between; align-items: center;}
+.smartTool-wrap .smartCal-wrap .currentPay-box li .h-radio-05 {gap:15px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box > ul > li + li {margin-top:20px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box .sumResult-box {justify-content: flex-start; margin-top:40px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box .sumResult-box .wontxt-type {margin-right:40px;}
 
-.smartTool-wrap .payCal-wrap .netPay-box {padding:40px; margin-top:-1px;}
+.smartTool-wrap .smartCal-wrap .netPay-box {padding:40px; margin-top:-1px;}
 
 
-.smartTool-wrap .wontxt-type {display: flex; align-items: center;}
-.smartTool-wrap .unitTxt {color:var(--black-3); font-size:var(--text-subtitle4);}
-.smartTool-wrap .updown-type {margin:0 10px;}
 
-.smartTool-wrap .h-textfield-bottom {border-bottom:1px solid #EAEAEC;}
-.smartTool-wrap .h-textfield-bottom input[type="text"] {border:0; border-radius: 0; padding:0 10px; font-family: 'SUIT'; font-size:var(--text-subtitle2);}
 
 .smartTool-wrap .circleBtn {width:42px; height:42px;}
 .smartTool-wrap .circleBtn.iconUp {background:url('../images/icon_circleUp.png') no-repeat;}
@@ -84,18 +79,30 @@
 .tooltip .tooltip-bottom {top: 25px; left: 0;}
 
 /* 졸업 전역 계산기 */
-.smartTool-wrap  .graduateCal-box .h-radio-05 input[type="radio"] + label {width:120px}
-.smartTool-wrap  .graduateCal-box .h-radio-05 {gap:15px; flex-wrap: wrap;}
-
-/* 군 입대년월 */
-.smartTool-wrap  .graduateCal-box .innerCal-last {margin-top:30px; padding-top:30px; border-top:1px solid var(--border-basic-2); box-sizing: border-box;}
+.smartTool-wrap .graduateCal-box {position:relative;}
+.smartTool-wrap .graduateCal-box .h-radio-05 input[type="radio"] + label {width:120px}
+.smartTool-wrap .graduateCal-box .h-radio-05 {gap:15px; flex-wrap: wrap;}
+.smartTool-wrap .graduateCal-box .btn-center-wrap {position:absolute; bottom:40px; left: 50%; transform: translateX(-50%);}
+.smartTool-wrap .graduateCal-box .innerCal-last {margin-top:30px; padding-top:30px; border-top:1px solid var(--border-basic-2); box-sizing: border-box;}
 
  /* 공통 */
- .smartTool-wrap .icon-qmark {display:inline-block; margin-left:5px; background:url('../images/icon_question.png') no-repeat; width:14px; height:14px; vertical-align: middle;}
- .smartTool-wrap  .h-textfield-round input[type="text"] {border-radius:22px; border-color:#EAEAEC;}
- .smartTool-wrap  .h-textfield-round select {border-radius:22px; background: url(../images/icon_selectBox_arrow.png) no-repeat right 16px center #fff; border-color:#EAEAEC;}
- .smartTool-wrap  .h-line-cyan {padding:0 40px; border:1px solid var(--cyan); border-radius:3px; color:var(--cyan); font-size:var(--text-subtitle2);}
- .smartTool-wrap  .innerCal + .innerCal {margin-top:30px}
+.smartTool-wrap .btn-center-wrap {text-align:center;}
+.smartTool-wrap .wontxt-type {display: flex; align-items: center;}
+.smartTool-wrap .unitTxt {color:var(--black-3); font-size:var(--text-subtitle4);}
+.smartTool-wrap .updown-type {margin:0 10px;}
+
+.smartTool-wrap .icon-qmark {display:inline-block; margin-left:5px; background:url('../images/icon_question.png') no-repeat; width:14px; height:14px; vertical-align: middle;}
+.smartTool-wrap .h-textfield-bottom {border-bottom:1px solid #EAEAEC;}
+.smartTool-wrap .h-textfield-bottom input[type="text"] {border:0; border-radius: 0; padding:0 10px; font-family: 'SUIT'; font-size:var(--text-subtitle2);}
+.smartTool-wrap .h-textfield-round input[type="text"] {border-radius:22px; border-color:#EAEAEC;}
+.smartTool-wrap .h-textfield-round select {border-radius:22px; background: url(../images/icon_selectBox_arrow.png) no-repeat right 16px center #fff; border-color:#EAEAEC;}
+.smartTool-wrap .h-textfield-solid input[type="text"] {border-width: 0 0 1px; border-radius: 0; border-color:#EAEAEC;}
+.smartTool-wrap .h-line-cyan {padding:0 40px; border:1px solid var(--cyan); border-radius:3px; color:var(--cyan); font-size:var(--text-subtitle2); background:#fff;}
+.smartTool-wrap .innerCal + .innerCal {margin-top:30px}
+.smartTool-wrap .btn-delet-outline {display:inline-block; background:url('../images/icon_delete_outline.png') no-repeat; width:16px; height:19px;}
+.smartTool-wrap .btn-subjectAdd {padding-right: 8px; padding-left: 6px; height:24px; line-height:24px; border:1px solid var(--black-3); font-size:var(--text-subtitle6); font-weight:var(--text-medium); border-radius: 3px; background:#fff;}
+.smartTool-wrap .btn-subjectAdd:before {content:''; display:inline-block; background:url('../images/icon_small_plus.png') no-repeat right center; width:16px; height:16px; vertical-align: middle;}
+ 
 
 /* 졸업 전역연도 */
 .smartTool-wrap .graduateResult-box .school-year > li + li {margin-top:20px;}
@@ -105,12 +112,65 @@
 .smartTool-wrap .military-year {border-top:1px solid var(--border-basic-2);}
 
 /* 어학점수 변환*/
+.smartTool-wrap .languageScore-box {position:relative;}
 .smartTool-wrap .languageScore-box ul.h-radio-05 {gap:15px;}
 .smartTool-wrap .languageScore-box ul.h-radio-05 input[type="radio"] + label {width:157px;}
+.smartTool-wrap .languageScore-box .btn-center-wrap {position:absolute; bottom:40px; left: 50%; transform: translateX(-50%);}
 
-/* 학점 변환기 */
+/* 학점 변환기-내 점수 입력 */
 .smartTool-wrap .creditChange-box {width:728px!important; background:#F7F9FB;}
+.smartTool-wrap .creditChange-box {position:relative;}
+.smartTool-wrap .creditChange-box .btn-center-wrap {position:absolute; bottom:40px; left: 50%; transform: translateX(-50%);}
 
-/* 학점변환 결과 계산기 */
-.creditResult-box {}
+
+/* 학점 변환기-학점변환 결과 계산기 */
+.smartTool-wrap .creditResult-box {width: calc(100% - 728px)!important;}
+.smartTool-wrap .creditResult-box .h-textfield-solid input[type="text"] {width:70px;}
+.smartTool-wrap .creditResult-box .blt-slash {margin:0 18px;}
+
+/* 학점 계산기-내 점수 입력 */
+.creditCalc-box {width:728px!important; background:#F7F9FB;}
+
+table.tbl-scoreCalc {width:100%; height:100%; border-bottom:none !important; background:#fff;}
+table.tbl-scoreCalc tr {display:table; width:100%; box-sizing:border-box;}
+table.tbl-scoreCalc thead {display:table; width:100%;}
+table.tbl-scoreCalc thead tr th {padding:12px 0; font-size:var(--text-subtitle4); color:var(--black-3); background:#F7F9FB; border-top:1px solid var(--black-1); border-bottom:1px solid var(--border-basic-3); font-weight:var(--text-regular); text-align: center;}
+table.tbl-scoreCalc tbody {display:block; height:225px; overflow-y:auto;}
+table.tbl-scoreCalc tbody tr td {padding:7px 5px; line-height:31px; text-align:center;}
+table.tbl-scoreCalc tbody tr:first-child td {padding-top:20px;}
+table.tbl-scoreCalc tbody tr:last-child td {padding-bottom:20px;}
+table.tbl-scoreCalc tbody tr td:first-child {padding-left:18px;}
+table.tbl-scoreCalc tbody tr td:last-child {padding-right:18px;}
+table.tbl-scoreCalc .h-textfield-round input[type="text"],
+table.tbl-scoreCalc .h-textfield-round select {height:38px;}
+table.tbl-scoreCalc .btn-delet-outline {vertical-align: -3px;}
+table.tbl-scoreCalc .h-checkbox {display:block!important;}
+
+
+/* 학점 계산기-총 평점 */
+.creditSum-box {position:relative; width: calc(100% - 728px)!important;}
+.creditSum-box .topScore {border-color:var(--black-1);}
+.creditSum-box .topScore .unitTxt {color:var(--black-1);}
+.creditSum-box .bottomScore .h-textfield-bottom input[type="text"] {font-family: "SUIT"; font-weight:var(--text-medium); font-size: var(--text-subtitle1);}
+.creditSum-box .bottomScore li + li {margin-top:12px;}
+.creditSum-box .bottomScore {margin-top:70px;}
+.creditSum-box .btn-center-wrap {position:absolute; bottom:60px; left: 50%; transform: translateX(-50%);}
+
+
+/* 취업활동증명서 가이드 */
+.certificate-guide {border-top:2px solid var(--black-1); border-left:1px solid var(--border-basic-3); border-right:1px solid var(--border-basic-3); border-bottom:1px solid var(--border-basic-3);}
+.certificate-guide .txt-guide {padding:76px 0;}
+.certificate-guide .step-guide {padding:30px 45px; border-top:1px solid var(--border-basic-3); box-sizing:border-box; background:#F7F9FB;}
+.certificate-guide .step-guide .imgbox img {width:100%; }
+
+/* 퀵자소서 */
+
+/* 사진크기 조정 */
+/* .imgsize-editor {} */
+.imgsize-before {position:relative; height:570px; background:#F7F9FB;}
+.imgsize-before .btn-center-wrap {position:absolute; bottom:40px; left: 50%; transform: translateX(-50%);}
+.imgsize-before .guideTxt {display: flex; justify-content: center; align-items: center; height: calc(100% - 65px);}
+.imgsize-editor {height: calc(100% - 65px); display: flex; justify-content: center;  align-items: center;}
+.imgsize-px {padding:25px 0; background:#F7F9FB; box-sizing: border-box;}
+
 
