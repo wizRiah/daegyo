@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>훈장마을 &gt; 계정정보 수정 &gt; 비밀번호 확인</title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">      
+  <link rel="stylesheet" href="../../css/styleGuide.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/common-service.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="hunjang-main-wrap common-service">
+
+    <!-- header -->
+    <header>
+
+      <div class="header-top">
+        
+        <div class="layout-inner">
+          <div class="header-top-inner flex">
+
+            <!-- 로고 -->
+            <div class="top-logo-inner flex">
+              <a class="top-logo" href="#">
+                <img src="../../images/top_logo.png" alt="훈장마을로고">
+              </a>
+              <span class="service-name h-txt-5 ml15">회원정보 관리</span>
+            </div>
+            
+
+            <div class="header-menu-inner">
+              <div class="left">
+                <div class="gnb-wrap">
+                  <div class="all-menu">
+                    <!-- 전체보기 버튼 클릭시 클래스 on 추가-->
+                    <button type="button" class="btn-all-menu" href="javascript:void(0);">
+                      <div class="btn-image"></div>
+                    </button>
+  
+                    <div class="panel-all-menu h-all-menu">
+                      <div class="layout-inner">
+                        <div class="lnb-expand-wrap flex">
+                          <div class="lnb-expand-inwrap lnb-all flex">
+                            <div class="item job">
+                              <a href="#" class="dep1">채용정보</a>
+                              <ul class="dep2">
+                                <li><a href="#">오늘의 채용정보</a></li>
+                                <li><a href="#">지역별</a></li>
+                                <li><a href="#">과목별</a></li>
+                                <li><a href="#">직무별</a></li>
+                                <li><a href="#">근무형태별</a></li>
+                                <li><a href="#">학력별</a></li>
+                                <li><a href="#">경력별</a></li>
+                                <li><a href="#">급여별</a></li>
+                              </ul>
+                            </div>
+                            <div class="item top100"><a href="#" class="dep1">TOP 100</a>
+                              <ul class="dep2">
+                                <li><a href="#">오늘의 TOP 100</a></li>
+  
+                              </ul>
+                            </div>
+                            <div class="item pool"><a href="#" class="dep1">브랜드 채용관</a>
+                              <ul class="dep2">
+                              </ul>
+                            </div>
+                            <div class="item haktalk" style="flex: 0 0 250px;"><a href="#" class="dep1">학원톡톡</a>
+                              <ul class="dep2">
+                                <li><a href="#">티츄 웹툰</a></li>
+                                <li><a href="#">전자근로계약</a></li>
+                                <li><a href="#">스마트취업 TOOL</a></li>
+                                <li><a href="#">학원노무 / 세무 FAQ</a></li>
+                                <li><a href="#">우리동네 학원검색</a></li>
+                                <li><a href="#">Poll</a></li>
+                                <li><a href="#">학원생활 꿀팁</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="main-links">
+                            <div class="item product"><a href="#">유료 상품 안내</a></div>
+                            <div class="item vip"><a href="#">훈장마을 우수회원 안내</a></div>
+                            <div class="item membership"><a href="#">멤버십 혜택 안내</a></div>
+                            <div class="item search"><a href="#">채용정보 상세검색</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 메인메뉴 -->
+                  <ul class="gnb-list">
+                    <li class="list">
+                      <a href="#" class="gnb-button" style="color: var(--blue-4);">계정정보 수정</a>
+                    </li>
+                    <li class="list">
+                      <a href="#" class="gnb-button">비밀번호 변경</a>
+                    </li>
+                    <li class="list">
+                      <a href="#" class="gnb-button">서비스 탈퇴</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="spacer"></div>
+            </div>
+            
+
+            <!-- 로그인,회원가입 버튼 -->
+            <div class="button-group flex"  style="display: none;">
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan">로그인</button>
+              <button type="button" href="javascript:void(0);" class="h-button-m h-button-cyan join-btn">회원가입</button>
+            </div>
+
+            <!-- 강사서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop">
+              <input type="checkbox" id="list-box-02" class="list-box">
+              <label for="list-box-02">강사서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">홍길동</span>님
+                </p>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);">이력서 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">이력서 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">지원 현황</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">메일 수신설정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">비밀번호 변경</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">개인정보 수정</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">로그인 관리</a>
+                  </li>
+                </ul><button type="button" class="btn-log">로그아웃</button>
+              </div>
+            </div>
+
+            <!-- 학원서비스 로그인 -->
+            <div class="h-listbox-wrap serv-login-drop academy" style="display: none;">
+              <input type="checkbox" id="list-box-03" class="list-box">
+              <label for="list-box-03">학원서비스</label>
+              <!-- dropdown -->
+              <div class="dropdown">
+                <p class="h-txt-1 user-name">
+                  <span class="h-txt-bold txt-ellipsis">광개토대왕수학학원</span>님
+                </p>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 등록</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용공고 관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">채용상품안내</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">마케팅 수신관리</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">학원 정보 수정</a>
+                  </li>
+                </ul>
+                <button type="button" class="btn-log">로그아웃</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="header-menu">
+        <div class="layout-inner">
+          
+        </div>
+      </div>
+
+    </header>
+    <!-- // -->
+
+    <!-- container -->
+    <div class="container membership">
+
+      <!-- 컨텐츠 -->
+      <div class="content wrap-w640">
+        <ul class="page-location">
+          <li class="on">01. 비밀번호 확인</li>
+          <li>02. 계정정보 수정</li>
+        </ul>
+        <span class="auth-tit mt50">
+          <strong>비밀번호 확인</strong>
+        </span>
+        <span class="auth-txt">안전한 정보보호를 위해 비밀번호를 다시 한 번 입력해 주세요</span>
+
+        <!-- form -->
+        <div class="form-box wrap-w360">
+
+          <!-- 아이디 -->
+          <div class="input-item">
+            <p class="labelArea mt40">아이디</p>
+            <input type="text" id="" name="" class="h-txtfield-basic w-max mt5" placeholder="" disabled="">
+          </div>
+
+          <!-- 비밀번호 -->
+          <div class="input-item">
+            <p class="labelArea mt20">비밀번호</p>
+            <input type="text" id="" name="" class="h-txtfield-basic w-max mt5" placeholder="비밀번호를 입력해 주세요.">
+            <div class="alert-column bad mt10" id="pwCheckMsgCant">비밀번호가 틀립니다. 확인 후 다시 입력해 주세요.</div>
+          </div>
+
+          <button type="button" class="btm-btn btn-membership h-button-grey wd100 mt30">확인</button>
+
+        </div>
+        <!-- // form -->
+        
+      </div>
+
+    </div>
+    <!-- container // -->
+
+
+    <!-- footer -->
+    <footer>
+      <div class="f-menu-wrap">
+        <div class="layout-inner">
+          <div class="footer-inner">
+            <ul class="f-menu-list flex">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">찾아오시는길</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">채용상품안내</a></li>
+              <li><a href="#">광고상품안내</a></li>
+              <li><a href="#">제휴문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-info flex">
+        <div class="layout-inner">
+          <div class="info-contents flex">
+            <div class="f-logo">
+              <img src="../../images/footer_logo2.png" alt="하단로고">
+            </div>
+            <div class="addr-info">
+              <p><b class="text-subtitle2 h-txt-2">에듀베이션(주)</b></p>
+              <ul>
+                <li><span>대표이사 : </span>방형식</li>
+                <li><span>사업자번호 : </span>220-81-51475</li>
+                <li><span>통신판매업 : </span>제 1684</li>
+                <li><span>직업정보제공사업 신고번호 : </span>서울관악 2004-10</li>
+                <li><span>주소 : </span>(우) 08390 서울 구로구 디지털로26길 123 지플러스타워 제9층 906호~908호</li>
+                <li><span>훈장마을 고객센터 : </span><b>02-858-0429</b> (평일 09:00~18:00, 주말.공휴일 휴무, 점심시간 12:30~13:30)</li>
+                <li><span>Fax : </span>02-858-6956</li>
+                <li><span>이메일 : </span>hunjang@daekyo.co.kr</li>
+              </ul>
+              <p class="text-subtitle5 h-txt-6">ⓒ EDUVATION INC.</p>
+            </div>
+            <div class="family-site">
+              <select name="" id="">
+                <option value="" disabled="" selected="">Family service</option>
+                <option value="">에듀베이션</option>
+                <option value="">통통통</option>
+                <option value="">앤써통</option>
+                <option value="">훈장EDU</option>
+                <option value="">에-딧</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    <!-- footer // -->
+
+
+  </div>
+
+
+
+  <div class="lottie-bg" style="display: none;">
+    <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22"
+        preserveAspectRatio="xMidYMid meet"
+        style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+        <defs>
+          <clipPath id="__lottie_element_35">
+            <rect width="32" height="22" x="0" y="0"></rect>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#__lottie_element_35)">
+          <g transform="matrix(1,0,0,1,8.75,8.653697967529297)" opacity="1" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.75,1.75)">
+              <path fill="rgb(91,86,147)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+          <g transform="matrix(1,0,0,1,15,8.271718978881836)" opacity="0.8" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
+              <path fill="rgb(233,82,131)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+          <g transform="matrix(1,0,0,1,21,10.43514347076416)" opacity="0.5" style="display: block;">
+            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
+              <path fill="rgb(243,154,0)" fill-opacity="1"
+                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
+              </path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+
+  <div id="dim" style="display: none;"></div>
+
+  <script>
+
+
+    $(document).ready(function () {
+
+          // 헤더 공통함수
+          var headerFunction = function () {
+          
+            // header 전체메뉴
+            // 전체메뉴 창 뒤 어두운 배경
+            var $dim = document.getElementById('dim');
+            // 전체메뉴 클릭시 나오는 메뉴
+            var $allMenu = $('.hunjang-main-wrap .h-all-menu');
+            // 메인메뉴 클릭시 나오는 메뉴
+            var $subMenu = $('.hunjang-main-wrap .panel-lnb-wrap');
+            // 메인메뉴
+            var $mainMenu = $('.hunjang-main-wrap .gnb-list>li');
+
+
+            // 전체메뉴 창 뒤 어두운 배경 추가
+            var darkBackground = function () {
+
+              if ($dim.style.display == "none") {
+                $dim.style.display = "block";
+              } else {
+                $dim.style.display = "none";
+              }
+
+            };
+
+
+            // header 전체메뉴 클릭시
+            $('.hunjang-main-wrap .btn-all-menu').click(function () {
+
+              // 전체메뉴 버튼 close버튼으로 변경
+              $(this).toggleClass("on");
+
+              // 전체메뉴 창 활성화
+              $allMenu.toggleClass("on");
+
+              // 전체메뉴 창 뒤 어두운 배경 추가
+              darkBackground();
+
+              // 전체메뉴 클릭상태시 메인메뉴 hover 기능 x
+              // ????
+
+            });
+
+
+            // 메인메뉴 호버시 어두운 배경 추가
+            $('.hunjang-main-wrap .gnb-list>li.on').hover(function () {
+
+              darkBackground();
+
+            });
+
+          }
+
+
+          headerFunction();
+
+       
+    });
+
+  </script>
+
+</body>
+
+</html>
