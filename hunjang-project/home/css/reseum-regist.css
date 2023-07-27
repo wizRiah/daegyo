@@ -74,6 +74,8 @@
 .hunjang-wrap ul.resume-regList.addRegList.on {display:none;}
 
 
+
+
 /* 타이틀입력부분 */
 .resume-reg-title {position:relative;}
 .resume-reg-title .h-field-wrap.titleSize.typenm label {padding: 0 0px 0 30px; width: 120px; font-size: 15px; color: #9A9A9A;}
@@ -163,6 +165,7 @@
 
 
 
+
 /*경력사항 - career*/
 .resume-registForm .resume-reg-basicBox.career {}
 .resume-registForm .resume-reg-basicBox.career [class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox {}
@@ -199,6 +202,8 @@
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>.resume-regList>li:last-child {align-items: flex-start;}
     .resume-registForm .resume-reg-basicBox.career .career_old_coWrap>.resume-regList>li:last-child .labelArea {padding-top: 18px;}
     .resume-registForm .resume-reg-basicBox.career .addRegList + .btnArea {padding-top:20px;}
+
+
 
 
 
@@ -264,6 +269,8 @@
 .resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 + .labelBlock2 .labelArea {width: auto; padding-right: 30px; margin-left: 2px;}
 .resume-registForm .resume-reg-basicBox.activity .resume-regList>li.labelBlock2 + .labelBlock2 .labelArea2 {width: 10px; padding-right: 10px; padding-left: 10px;}
 .resume-registForm .resume-reg-basicBox.activity .addRegList + .btnArea {margin-top:20px;}
+
+
 
 
 
@@ -353,6 +360,7 @@
 .resume-registForm .resume-reg-basicBox.introduce .resume-regList li input[type="text"] {width:760px; margin-bottom:12px;}
 .resume-registForm .resume-reg-basicBox.introduce .btnArea {padding: 20px 0 0 0;}
 .resume-registForm .resume-reg-basicBox.introduce .btnArea button {margin:0;}
+.resume-registForm .resume-reg-basicBox.introduce .resume-regList>li {padding:0;}
 
     /*자기소개입력 에디터*/
     .introduceBox {width:100%;border:1px solid #CCD1D7;border-radius: 4px;}
@@ -385,8 +393,11 @@
 .resume-registForm .resume-reg-basicBox.preferential .innerbox-blue {margin-top: 20px; justify-content: space-between; display: flex; align-items: center; padding: 22px 30px;}
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li {margin-bottom: 3px;}
 .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li>ul>li {min-height: 46px;}
-.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(2) .hiddenList, .resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(3) .hiddenList {margin-top: 0; padding-top: 3px;}
+.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(2) .hiddenList, 
+.resume-registForm .resume-reg-basicBox.preferential ul.resume-regList>li:nth-child(3) .hiddenList {margin-top: 0; padding-top: 3px;}
 .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li>ul.on + .hiddenList {display: flex; margin-top: 7px; margin-bottom: 15px;}
+.resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList {display: flex; margin-top: 7px; margin-bottom: 15px;}
+.resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList .h-checkbox {margin:0;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList {width: 100%;display: none;flex-direction: row;flex-wrap: wrap;box-sizing: border-box;padding:5px 0 40px 116px;border-bottom: 1px solid #62666B;margin-bottom: 5px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList.on {display: flex;margin-top: 7px;margin-bottom: 15px;}
 .resume-registForm .resume-reg-basicBox.preferential .hiddenList>li {width: auto; min-height:46px;}
@@ -396,6 +407,12 @@
 .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li:last-child .hiddenList {border-bottom: none; padding-bottom: 0;}
 .resume-registForm .resume-reg-basicBox.preferential input[type="text"],
 .resume-registForm .resume-reg-basicBox.preferential select {height:46px !important;}
+  /* 고용지원금 부분*/
+  .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList.goyong {margin-left: -2px;}
+  .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList.goyong .wzForm {display: flex; flex-wrap: wrap;}
+  .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList.goyong .wzForm li {min-height: 46px; display: flex; align-items: center; justify-content: center; font-size: 15px;}
+  .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList.goyong .wzForm li:last-child {width: 100%; text-align: left; justify-content: flex-start;}
+  .resume-registForm .resume-reg-basicBox.preferential .resume-regList>li .hiddenList.army .h-radio-01 {line-height:46px;}
 
 
 
@@ -434,7 +451,7 @@
     .resume-registForm .resume-reg-basicBox.disclosure .hiddenList .resume-regList .h-txt-orange {font-size:12px; margin-left:11px;}
 
 
-/*과외 이력서 활용 동의 - agreement*/
+/*과외 이력서 활용 동의 - agreement*//*과외 이력서 활용 동의 - agreement*/
 .resume-registForm .resume-reg-basicBox.agreement {}
 .resume-registForm .resume-reg-basicBox.agreement .detailInfo strong {font-weight: 600;}
 .resume-registForm .resume-reg-basicBox.agreement .detailInfo ul {margin-top: 5px;}
@@ -683,7 +700,7 @@
 
 /* ==================================== Template ==================================== */
 /* 공통 */
-.h-recruitment-page {width:850px; margin-left:auto; margin-right:auto; padding-bottom:50px;}
+.h-recruitment-page {max-width:850px; margin-left:auto; margin-right:auto; padding-bottom:50px;}
 .h-recruitment-page .template-wrap {width:100%;}
 .h-recruitment-page .template-wrap .tpl-section {margin-top:50px;}
 .h-recruitment-page .template-wrap .tpl-section .section-title {position:relative; margin-bottom:20px; font-size:var(--text-h4); font-weight:var(--text-bold); line-height:24px;}
@@ -701,7 +718,7 @@
 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .subject {display:block; font-size:var(--text-subtitle3); font-weight:var(--text-medium); color:var(--black-2); line-height:24px;}
 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .period {display:block; font-size:var(--text-subtitle3); color:var(--black-3); line-height:24px;}
 /* 전형절차 */
-.h-recruitment-page .template-wrap .tpl-list-step {display:inline-flex; align-items:center;}
+.h-recruitment-page .template-wrap .tpl-list-step {display:inline-flex; align-items:center; flex-wrap:wrap;}
 .h-recruitment-page .template-wrap .tpl-list-step li {position:relative; display:inline-flex; justify-content:center; align-items:center;}
 .h-recruitment-page .template-wrap .tpl-list-step .step {font-size:var(--text-subtitle3); line-height:20px;}
 /* list type 1 - hyphen */
@@ -743,6 +760,8 @@
     .template-01 .tpl-list-step li:not(:first-child) {margin-left:40px;}
     .template-01 .tpl-list-step li:not(:last-child)::after {position:absolute; left:calc(100% + 4px); content:''; display:inline-flex; justify-content:center; align-items:center; width:40px; height:20px; background:url(../images/template_arrow_01.svg) center no-repeat; box-sizing:border-box;}
     .template-01 .tpl-list-step li .num-box {position:absolute; top:16px; display:flex; justify-content:center; align-items:center; font-size:var(--text-subtitle5); color:#79A5FC;}
+    .template-01 .tpl-list-step li:nth-child(5) ~ li {margin-top:10px;}
+    .template-01 .tpl-list-step li:nth-child(5n+1) {margin-left:0 !important;}
     .template-01 .tpl-list-step + .bullet-dot {display:none;}
 
     /* 템플릿 디자인 #2 - template-02 */
@@ -766,7 +785,9 @@
     .template-02 .tpl-section .section-title::before {position:absolute; top:0; left:0; content:''; width:24px; height:24px; background:url(../images/template_bullet_02.svg) center no-repeat; background-size:24px;}
     .template-02 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step),
     .template-02 .tpl-section .bullet-dot {margin-left:34px;}
-    .template-02 .tpl-list-step li {width:160px; height:80px; border-radius:10px; color:var(-black-2); background-color:#94FDD1;}
+    .template-02 .tpl-list-step li {width:160px; height:80px; border-radius:10px; color:var(--black-2); background-color:#94FDD1;}
+    .template-02 .tpl-list-step li:nth-child(4) ~ li {margin-top:10px;}
+    .template-02 .tpl-list-step li:nth-child(4n+1) {margin-left:0 !important;}
     .template-02 .tpl-list-step li:not(:first-child) {margin-left:10px;}
     .template-02 .tpl-list-step .num-box {position:absolute; top:15px; left:10px; width:17px; height:17px; display:inline-flex; justify-content:center; align-items:center; border:2px solid #333; border-radius:50%; box-sizing:border-box;}
     .template-02 .tpl-list-step .num-box .num {font-size:11px; font-weight:var(--text-bold);}
@@ -820,6 +841,8 @@
     .template-04 .tpl-list-step li:not(:last-child)::after {position:absolute; left:calc(100% + 14px); content:''; display:inline-block; width:11px; height:21px; background:url(../images/template_arrow_01.svg) center no-repeat; background-size:contain;}
     .template-04 .tpl-list-step li .step {display:flex; flex-flow:column wrap; justify-content:center; align-items:center; width:120px; height:120px; background-color:#1AA882; border-radius:50%; color:#fff;}
     .template-04 .tpl-list-step li .num-box {display:none;}
+    .template-04 .tpl-list-step li:nth-child(4) ~ li {margin-top:10px;}
+    .template-04 .tpl-list-step li:nth-child(4n+1) {margin-left:0 !important;}
     .template-04 .tpl-list-dot-1 li {padding-left:8px !important;}
     .template-04 .tpl-list-dot-1 li::before {left:0 !important;}
 
@@ -846,15 +869,14 @@
     .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .title::before {position:absolute; top:8px; left:4px; content:''; display:inline-block; width:2px; height:2px; background-color:currentcolor; border-radius:50%;}
     .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .tpl-list-hyphen-1 {margin-left:8px;}
     .template-05 .tpl-tbl-recruit .recruit-group + .recruit-group {margin-top:30px;}
-    .template-05 .tpl-list-step li {padding:20px 30px; color:#fff; background-color:#446585; border-radius:30px; box-sizing:border-box;}
-    .template-05 .tpl-list-step li:not(:first-child) {margin-left:10px;}
+    .template-05 .tpl-list-step li {padding:20px 30px; color:#fff; background-color:#446585; border-radius:30px; box-sizing:border-box; margin:0 10px 10px 0;}
     .template-05 .tpl-list-step li br {display:none;}
     .template-05 .tpl-list-step li .num-box {display:flex; font-size:var(--text-subtitle3);}
     .template-05 .tpl-list-step li .num-box::after {display:inline-block; content:'-'; color:inherit; margin-left:4px; margin-right:4px;}
     .template-05 .tpl-list-step li .num-box .step {font-weight:var(--text-medium);}
     .template-05 .tpl-list-dot-1 li {padding-left:8px !important;}
     .template-05 .tpl-list-dot-1 li::before {left:0 !important;}
-
+    .template-05 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step) ~ .bullet-dot {margin-top:5px;}
 
 
 
@@ -891,7 +913,6 @@
 .hunjang-wrap .h-popup .resume-settpop li .h-radio-01 {display:flex; gap:10px; flex-wrap: wrap;}
 .hunjang-wrap .h-popup .resume-settpop li .h-radio-01 label {font-size:var(--text-subtitle4);}
 .hunjang-wrap .h-popup .resume-settpop li + li {margin-top:15px;}
-.hunjang-wrap .h-popup 
 .hunjang-wrap .h-popup .resume-settpop .fieldset-inputul ul li {width: 100%; display: flex; align-items: center; position:relative; overflow:hidden;}
 .hunjang-wrap .h-popup .resume-settpop .fieldset-inputul ul li + li {margin-top:7px;}
 .hunjang-wrap .h-popup .resume-settpop .fieldset-inputul ul li .innerline {height: 46px; border: 1px solid var(--border-basic-3); border-radius: 4px; display: flex; align-items: center; background: #fff; box-sizing: border-box;}

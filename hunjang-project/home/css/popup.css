@@ -868,8 +868,16 @@
 .previewPOPUP .mobileBG {width:391px; height:700px; background:url(../images/preview-mobileBG.png); margin:0 auto; padding: 8px; box-sizing: border-box;}
 .previewPOPUP .mobileBG .innerBox {overflow-y: scroll; height: 100%; border-radius: 21px;}
 .previewPOPUP *::-webkit-scrollbar { width:0px; }
-
-
+    /* 상세요강 미리보기*/
+    .previewPOPUP.popup-01 {overflow-y:hidden !important; padding:50px;}
+    .previewPOPUP.popup-01 .h-tab-Contents-02>input[type="radio"]:checked + label {background:#fff; border-bottom: 1px solid #F9F9FB; box-sizing: border-box; height: 55px;}
+    .previewPOPUP.popup-01 [class^="h-tab-Contents"]>input[type="radio"] + label:before {display:none;}
+    .previewPOPUP.popup-01 .h-tab-Contents-02>.tabCo-Wrap {height:70vh; overflow-y: scroll; border-top: 1px solid #606060;}
+    .previewPOPUP.popup-01 .h-tab-Contents-02>.tabCo-Wrap .tabCo-CommonBox {padding-top: 50px; margin-top: 0;}
+    .previewPOPUP.popup-01 .h-tab-Contents-02>.tabCo-Wrap:before {display:none;}
+    /* 스크롤 공통 디자인 */
+    .previewPOPUP.popup-01 .h-tab-Contents-02>.tabCo-Wrap::-webkit-scrollbar { width: 8px; }
+    .previewPOPUP.popup-01 .h-tab-Contents-02>.tabCo-Wrap::-webkit-scrollbar-thumb { background-color: #E1E1E1; height:150px; } 
 
 /* 상세요강 작성팁 슬라이드 모달 팝업 */
 .imgTipSwiper .imgbox {overflow: hidden; max-height: 350px; width: calc(100% - 90px); margin: 0 auto; text-align: center;}
