@@ -10,15 +10,18 @@
 
 /* 공간 */
 .pdb60 {padding-bottom:60px !important;}
+.pdb30 {padding:30px !important;}
 
 /* layout 넓이 */
-.wrap-w950 {width:950px !important;}
-.wrap-w640 {width:640px !important;}
-.wrap-w360 {width:360px !important;}
-.wrap-w420 {width:420px !important;}
+.wrap-w950 {width:950px !important;box-sizing:border-box;}
+.wrap-w640 {width:640px !important;box-sizing:border-box;}
+.wrap-w460 {width:460px !important;box-sizing:border-box;}
+.wrap-w420 {width:420px !important;box-sizing:border-box;}
+.wrap-w360 {width:360px !important;box-sizing:border-box;}
 
 /* width */
 .w191 {width:191px !important;}
+.w360 {width:360px;}
 .w20ps {width:20% !important;}
 
 /* 공통서비스, 멤버서비스 전용 layout custome */
@@ -81,7 +84,7 @@
 .service-roul-wrap .list.hyphen > li:before {display:inline-block;content:"-";position:absolute;left:0;top:0;}
 .service-roul-wrap .page-buttons {padding:30px;border:1px solid #E0E6EF;margin-top:16px;border-radius:4px;background:#FBFBFB;}
 
-/* 회원정보 관리 */
+/* 회원정보 관리 - 계정정보 수정, 비밀번호 변경, 서비스 탈퇴 */
 .auth-tit {display:block;font-size:30px;text-align:center;}
 .auth-tit > span {font-size:24px;}
 .auth-tit strong {display:block;font-size:30px;font-weight:500;}
@@ -110,5 +113,26 @@
 .common-service .form-box .alert-column.good {color:#61A6FF;}
 .common-service .form-box .alert-column.bad {color:#FF5656;}
 .common-service .form-box .alert-column.bang {position:relative;}
+.common-service .info-box.detaile-roul {padding:28px 0;background-image: url(../images/auth/bg_diagonal_pattern.png), url(../images/auth/bg_diagonal_pattern.png);background-position: top center, bottom center;background-repeat: repeat-x, repeat-x;text-align:center;}
 .common-service .form-box .btm-btn {height:64px;line-height:64px;border-radius:4px;font-size:15px;color:#fff;}
 .h-button-teal.xm-arrow:after {display:inline-block;content:'';width:20px;height:14px;margin-left: 10px;background: url(../images/icon-xm-arrow.png) no-repeat;}
+
+/* 서비스탈퇴 -tab */
+.h-tab-Contents-01.secession {justify-content: center;}
+.h-tab-Contents-01.secession .tabBtn01_1 {border-radius:4px 0 0 0;}
+.h-tab-Contents-01.secession .tabBtn01_2 {border-radius:0 4px 0 0;}
+.h-tab-Contents-01.secession > input[type="radio"] + label {width:180px;color:#333;}
+.h-tab-Contents-01.secession > input[type="radio"]:checked + label {background:#151515;border:1px solid #151515;color: #fff;}
+
+/* 서비스탈퇴 - 박스 */
+.common-service .point-box {display:flex;justify-content:space-around;align-items:center;height:110px;padding:0 20px;background:#EBEFF5;border-radius:10px;}
+.common-service .point-box .point-item {text-align:center;}
+.common-service .point-box .point-item .point-num {font-size:22px;font-weight:600;color:#61A6FF;}
+.common-service .point-box .point-item .point-num span {margin-left:4px;font-weight:400;}
+.common-service .point-box .point-item .point-tit {margin-top:6px;font-size:12px;line-height:14px;color:#333;}
+
+.common-service .secession-input-box {padding:40px 50px;background:#F5F7FA;border-radius:10px;}
+.common-service .secession-text-box {padding:38px 0;background: url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 0;}
+.withdrawal-account li {position:relative;color: var(--black-2); padding-left: 10px;line-height: 24px;}
+.withdrawal-account li:after {content:'';position:absolute;top:10px;left:0;width:2px;height:2px;background-color:var(--black-3);}
+.withdrawal-account li .h-txt-3 {display:inline-block;width:110px;margin-right:6px;}
