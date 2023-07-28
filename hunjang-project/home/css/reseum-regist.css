@@ -878,6 +878,223 @@
     .template-05 .tpl-list-dot-1 li::before {left:0 !important;}
     .template-05 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step) ~ .bullet-dot {margin-top:5px;}
 
+    /* - 모바일에서 등록된 채용공고를 PC에서 보여질 때 - template-06 */
+    .template-06 .tpl-header {display:flex; flex-flow:column wrap; align-items:center;}
+    .template-06 .tpl-header .tpl-intro-title {color:#61A6FF;}
+    .template-06 .tpl-header .tpl-intro-title + .tpl-intro-text {margin-top:20px;}
+    .template-06 .tpl-header .tpl-intro-text {color:#7E7E7E; text-align:center;}
+    .template-06 .tpl-header .tpl-intro-text strong {font-weight:var(--text-medium) !important; color:#333333;}
+    .template-06 .tpl-section .section-title {width:100%; padding-left:28px; color:#61A6FF; box-sizing:border-box;}
+    .template-06 .tpl-section .section-title::before {position: absolute;top: 3px;left: 0;content: '';width: 19px;height: 19px;border: 3px solid #61A6FF;border-radius: 100%;box-sizing: border-box;}
+    .template-06 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step),
+    .template-06 .tpl-section .bullet-dot {margin-left:15px; font-size:15px;}
+    .template-06 .tpl-tbl-recruit {margin-top:0 !important;}
+    .template-06 .tpl-tbl-recruit .recruit-group {flex-flow:column wrap;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate {display:flex; flex-flow:row wrap; align-items:center; padding:20px 25px; background-color:#EBF4FF; border-radius:10px; box-sizing:border-box;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .title {display:none;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .title + .text {}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .text {display:flex; flex-flow:row wrap; align-items:center;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .text :is(.subject, .period) {line-height:normal;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .text :is(.subject, .period):before {content:"\b7"; margin-right:3px;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .text .subject::after {display:none;}
+    .template-06 .tpl-tbl-recruit .recruit-group > .cate .text .period {display:none;}
+    .template-06 .tpl-tbl-recruit .recruit-group .group-align {display:flex; flex-flow:column wrap; margin:20px 25px 0 25px;}
+    .template-06 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:17px;}
+    .template-06 .tpl-tbl-recruit .recruit-group .group-align .cate .title {position:relative; padding-left:11px; margin-bottom:9px; font-weight:var(--text-bold); color:var(--black-1);}
+    .template-06 .tpl-tbl-recruit .recruit-group .group-align .cate .title::before {display:none;}
+    .template-06 .tpl-tbl-recruit .recruit-group .group-align .cate .tpl-list-hyphen-1 {margin-left:8px;}
+    .template-06 .tpl-tbl-recruit .recruit-group + .recruit-group {margin-top:30px;}
+    .template-06 .tpl-list-step {display:flex; flex-direction:column; width:100%;}
+    .template-06 .tpl-list-step li {display: flex !important; justify-content: flex-start !important; width: 100%; margin-bottom:15px; position:relative;}
+    .template-06 .tpl-list-step li br {display:none;}
+    .template-06 .tpl-list-step li .num-box {display:flex; font-size:var(--text-subtitle3);}
+    .template-06 .tpl-list-step li .num-box .num {color:#61A6FF; font-size:12px; background:#EBF4FF; border-radius:30px; width:64px; height:22px; line-height:22px; text-align:center;}
+    .template-06 .tpl-list-step li .num-box .num:before {content:"STEP";}
+    .template-06 .tpl-list-step li .num-box .step {font-weight:var(--text-medium);}
+    .template-06 .tpl-list-step li .num-box .txt {display:none;}
+    .template-06 .tpl-list-step li .step {margin-left:10px;}
+    .template-06 .tpl-list-step li:not(:last-child):after {content:""; width:1px; height:15px; background:#61A5FF; display:inline-block; position:absolute; left:32px; top:22px;}
+    .template-06 .tpl-list-dot-1 li {padding-left:8px !important;}
+    .template-06 .tpl-list-dot-1 li::before {left:0 !important; color:#9A9A9A;}
+    .template-06 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step) ~ .bullet-dot {margin-top:5px;}
+    .template-06 .tpl-section:not(:last-child) { padding-bottom:30px; border-bottom:1px solid #EBEFF5;}
+    
+
+    /* 템플릿 디자인- 반응형 CSS */
+    @media (max-width:870px) {
+        .h-recruitment-page {padding:10px; box-sizing:border-box;}
+        .h-recruitment-page .template-wrap .tpl-section .section-title {display:block; font-size:16px; margin-bottom:10px;}
+        .h-recruitment-page .template-wrap .tpl-section .section-title span {font-size:16px;}
+        .h-recruitment-page .template-wrap .tpl-header .tpl-intro-title {font-size:22px; line-height:30px; min-height: auto; padding: 22px 20px; background-position: right bottom;}
+        .h-recruitment-page .template-wrap .tpl-header .tpl-intro-text {margin-top:10px; padding:0 5px;}
+        .h-recruitment-page .template-wrap .tpl-header .tpl-intro-text br {display:none;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit {margin-top:0; border-top:none;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group {flex-direction: column; width: 100%;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate {width:100% !important; border:none !important;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .title {display:none !important;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .text {display: flex; padding:17px 25px; border-radius:4px; margin-bottom:20px; box-sizing:border-box;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .text .subject:after {content:","; margin-right:3px;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .group-align {display:flex; flex-direction:column; border:none; padding-bottom:8px;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .title {display:flex; height:auto; padding:0 0 10px; background:transparent; border-bottom:none; justify-content: flex-start; color:#151515; font-weight:500; margin-bottom:0;}
+        .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .title:before {content:"\b7"; margin-right:3px;}
+        .h-recruitment-page .template-wrap .tpl-list-hyphen-1 {padding:0 0 22px !important;}
+
+        .template-01 .tpl-tbl-recruit .recruit-group>.cate .text {background:#79A5FC;}
+        .template-01 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+        .template-01 .tpl-section .section-title span::before {display:none;}
+        .template-01 .tpl-header + .tpl-section .section-title span:before {position: absolute; bottom: 3px; left: 0; z-index: -1; content: ''; width: 100%; height: 4px; background-color: #F8D061; display:inline-block;}
+        .template-01 .tpl-list-step li {width:110px; height:110px; margin-left:0 !important;}
+        .template-01 .tpl-list-step li:not(:last-child) {margin-right:29px;}
+        .template-01 .tpl-list-step li:not(:last-child)::after {width:30px;}
+        .template-01 .tpl-list-step li:nth-child(2) ~ li {margin-top:10px;}
+        .template-01 .tpl-list-step li .num-box {line-height:20px;}
+        .template-01 .tpl-list-step li .step {margin-top:15px;}
+
+        .template-02 .tpl-header .tpl-intro-title {background-position: right center !important; background-size: cover;}
+        .template-02 .tpl-header .tpl-intro-text {text-align:center;}
+        .template-02 .tpl-header + .tpl-section .section-title,
+        .template-02 .tpl-section .section-title {padding-left:28px;}
+        .template-02 .tpl-section .section-title::before {width:19px; height:19px; background-size:19px; top:2px;}
+        .template-02 .tpl-tbl-recruit .recruit-group>.cate .text {background:#94FDD1;}
+        .template-02 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-02 .tpl-section .bullet-dot {margin-left:0;}
+        .template-02 .tpl-list-step li:nth-child(2) ~ li {margin-top:10px;}
+        .template-02 .tpl-list-step li {margin-left:0 !important; margin-right:10px;}
+
+        .template-03 .tpl-header {min-height:auto; padding: 0; background: none;}
+        .template-03 .tpl-header .tpl-intro-title {padding: 29px 20px !important; font-size: 22px !important; border-radius: 10px; position: relative; overflow: hidden; background: rgba(0,0,0,0.5);}
+        .template-03 .tpl-header .tpl-intro-title:after {content: ""; width: 100%; height: 100%; display: block; background: #1b1e3d url(../images/template_bnr_03.jpg) bottom center no-repeat; position: absolute; left: 0; top: 0; background-size: contain; z-index: -1;}
+        .template-03 .tpl-header .tpl-intro-title + .tpl-intro-text {color:#7E7E7E; margin-top:20px; text-align:center;}
+        .template-03 .tpl-header .tpl-intro-text strong {color:#333333;}
+        .template-03 .tpl-section .section-title {padding-left:29px;}
+        .template-03 .tpl-section .section-title::before {width:22px; height:19px; background-size: 22px; top:2px;}
+        .template-03 .tpl-tbl-recruit {margin-top:0 !important;}
+        .template-03 .tpl-tbl-recruit .recruit-group>.cate .text {background:#606AB7; width: 100%; flex-direction: row; justify-content: flex-start;}
+        .template-03 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+        .template-03 .tpl-tbl-recruit .recruit-group .group-align {padding:0;}
+        .template-03 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+        .template-03 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-03 .tpl-section .bullet-dot {margin-left:0;}
+        .template-03 .tpl-list-step li {width:130px; height:110px; background-size: contain;}
+
+        .template-04 .tpl-header .tpl-intro-title {padding:37px 20px !important; text-align:center;}
+        .template-04 .tpl-section .section-title::before {width:19px; height:19px; background-size:19px; top:1px;}
+        .template-04 .tpl-section .section-title {padding-left:28px;}
+        .template-04 .tpl-tbl-recruit {margin-top:0 !important;}
+        .template-04 .tpl-tbl-recruit .recruit-group > .cate .text {width:100%; background:#1AA882; margin-bottom: 0 !important; flex-direction: row; justify-content: flex-start;}
+        .template-04 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+        .template-04 .tpl-tbl-recruit .recruit-group .group-align {padding:20px 0 8px;}
+        .template-04 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+        .template-04 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-04 .tpl-section .bullet-dot {margin-left:0;}
+        .template-04 .tpl-list-step li {width:110px; height:110px; margin-left: 0 !important; margin-right: 29px;}
+        .template-04 .tpl-list-step li .step {width:100px; height:100px;}
+        .template-04 .tpl-list-step li:not(:last-child)::after {left:calc(100% + 10px);}
+
+        .template-05 .tpl-header {min-height:auto; padding: 0; background: none;}
+        .template-05 .tpl-header .tpl-intro-title {padding:37px 20px !important; background:#0e151b url(../images/template_bnr_05.jpg) bottom center no-repeat; border-radius: 10px; background-size: cover; text-align:center;}
+        .template-05 .tpl-header .tpl-intro-title + .tpl-intro-text {color:#7E7E7E; margin-top:20px; text-align:center;}
+        .template-05 .tpl-header .tpl-intro-text strong {color:#333333;}
+        .template-05 .tpl-section .section-title::before {width:19px; height:19px; top:2px;}
+        .template-05 .tpl-section .section-title {padding-left:28px;}
+        .template-05 .tpl-tbl-recruit {border-bottom:1px solid #EBEBEB;}
+        .template-05 .tpl-tbl-recruit .recruit-group > .cate .text {margin: 0 !important; padding: 0 !important; }
+        .template-05 .tpl-tbl-recruit .recruit-group .group-align {padding:0; margin:20px 0 0;}
+        .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .title::before {position:relative; top:auto; left:auto; width: auto; height: auto; background: transparent;}
+        .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .tpl-list-hyphen-1 {margin:0;}
+        .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+        .template-05 .tpl-tbl-recruit .recruit-group + .recruit-group {margin-top:0;}
+        .template-05 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-05 .tpl-section .bullet-dot {margin-left:0;}
+        .template-05 .tpl-list-step li {padding:16px 20px; margin-right:5px;}
+    }
+    /* 상세요강 미리보기 */
+    .popup-01 .h-recruitment-page {padding:10px; box-sizing:border-box;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-section .section-title {display:block; font-size:16px; margin-bottom:10px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-section .section-title span {font-size:16px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-header .tpl-intro-title {font-size:22px; line-height:30px; min-height: auto; padding: 22px 20px; background-position: right bottom;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-header .tpl-intro-text {margin-top:10px; padding:0 5px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-header .tpl-intro-text br {display:none;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit {margin-top:0; border-top:none;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group {flex-direction: column; width: 100%;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate {width:100% !important; border:none !important;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .title {display:none !important;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .text {display: flex; padding:17px 25px; border-radius:4px; margin-bottom:20px; box-sizing:border-box;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group>.cate .text .subject:after {content:","; margin-right:3px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .group-align {display:flex; flex-direction:column; border:none; padding-bottom:8px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .title {display:flex; height:auto; padding:0 0 10px; background:transparent; border-bottom:none; justify-content: flex-start; color:#151515; font-weight:500; margin-bottom:0;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-tbl-recruit .recruit-group .cate .title:before {content:"\b7"; margin-right:3px;}
+    .popup-01 .h-recruitment-page .template-wrap .tpl-list-hyphen-1 {padding:0 0 22px !important;}
+
+    .popup-01 .template-01 .tpl-tbl-recruit .recruit-group>.cate .text {background:#79A5FC;}
+    .popup-01 .template-01 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+    .popup-01 .template-01 .tpl-section .section-title span::before {display:none;}
+    .popup-01 .template-01 .tpl-header + .tpl-section .section-title span:before {position: absolute; bottom: 3px; left: 0; z-index: -1; content: ''; width: 100%; height: 4px; background-color: #F8D061; display:inline-block;}
+    .popup-01 .template-01 .tpl-list-step li {width:110px; height:110px; margin-left:0 !important;}
+    .popup-01 .template-01 .tpl-list-step li:not(:last-child) {margin-right:29px;}
+    .popup-01 .template-01 .tpl-list-step li:not(:last-child)::after {width:30px;}
+    .popup-01 .template-01 .tpl-list-step li:nth-child(2) ~ li {margin-top:10px;}
+    .popup-01 .template-01 .tpl-list-step li .num-box {line-height:20px;}
+    .popup-01 .template-01 .tpl-list-step li .step {margin-top:15px;}
+
+    .popup-01 .template-02 .tpl-header .tpl-intro-title {background-position: right center !important; background-size: cover;}
+    .popup-01 .template-02 .tpl-header .tpl-intro-text {text-align:center;}
+    .popup-01 .template-02 .tpl-header + .tpl-section .section-title,
+    .popup-01 .template-02 .tpl-section .section-title {padding-left:28px;}
+    .popup-01 .template-02 .tpl-section .section-title::before {width:19px; height:19px; background-size:19px; top:2px;}
+    .popup-01 .template-02 .tpl-tbl-recruit .recruit-group>.cate .text {background:#94FDD1;}
+    .popup-01 .template-02 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-02 .tpl-section .bullet-dot {margin-left:0;}
+    .popup-01 .template-02 .tpl-list-step li:nth-child(2) ~ li {margin-top:10px;}
+    .popup-01 .template-02 .tpl-list-step li {margin-left:0 !important; margin-right:10px;}
+
+    .popup-01 .template-03 .tpl-header {min-height:auto; padding: 0; background: none;}
+    .popup-01 .template-03 .tpl-header .tpl-intro-title {padding: 29px 20px !important; font-size: 22px !important; border-radius: 10px; position: relative; overflow: hidden; background: rgba(0,0,0,0.5);}
+    .popup-01 .template-03 .tpl-header .tpl-intro-title:after {content: ""; width: 100%; height: 100%; display: block; background: #1b1e3d url(../images/template_bnr_03.jpg) bottom center no-repeat; position: absolute; left: 0; top: 0; background-size: contain; z-index: -1;}
+    .popup-01 .template-03 .tpl-header .tpl-intro-title + .tpl-intro-text {color:#7E7E7E; margin-top:20px; text-align:center;}
+    .popup-01 .template-03 .tpl-header .tpl-intro-text strong {color:#333333;}
+    .popup-01 .template-03 .tpl-section .section-title {padding-left:29px;}
+    .popup-01 .template-03 .tpl-section .section-title::before {width:22px; height:19px; background-size: 22px; top:2px;}
+    .popup-01 .template-03 .tpl-tbl-recruit {margin-top:0 !important;}
+    .popup-01 .template-03 .tpl-tbl-recruit .recruit-group>.cate .text {background:#606AB7; width: 100%; flex-direction: row; justify-content: flex-start;}
+    .popup-01 .template-03 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+    .popup-01 .template-03 .tpl-tbl-recruit .recruit-group .group-align {padding:0;}
+    .popup-01 .template-03 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+    .popup-01 .template-03 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-03 .tpl-section .bullet-dot {margin-left:0;}
+    .popup-01 .template-03 .tpl-list-step li {width:130px; height:110px; background-size: contain;}
+
+    .popup-01 .template-04 .tpl-header .tpl-intro-title {padding:37px 20px !important; text-align:center;}
+    .popup-01 .template-04 .tpl-section .section-title::before {width:19px; height:19px; background-size:19px; top:1px;}
+    .popup-01 .template-04 .tpl-section .section-title {padding-left:28px;}
+    .popup-01 .template-04 .tpl-tbl-recruit {margin-top:0 !important;}
+    .popup-01 .template-04 .tpl-tbl-recruit .recruit-group > .cate .text {width:100%; background:#1AA882; margin-bottom: 0 !important; flex-direction: row; justify-content: flex-start;}
+    .popup-01 .template-04 .tpl-tbl-recruit .recruit-group>.cate .text * {color:#fff !important;}
+    .popup-01 .template-04 .tpl-tbl-recruit .recruit-group .group-align {padding:20px 0 8px;}
+    .popup-01 .template-04 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+    .popup-01 .template-04 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-04 .tpl-section .bullet-dot {margin-left:0;}
+    .popup-01 .template-04 .tpl-list-step li {width:110px; height:110px; margin-left: 0 !important; margin-right: 29px;}
+    .popup-01 .template-04 .tpl-list-step li .step {width:100px; height:100px;}
+    .popup-01 .template-04 .tpl-list-step li:not(:last-child)::after {left:calc(100% + 10px);}
+
+    .popup-01 .template-05 .tpl-header {min-height:auto; padding: 0; background: none;}
+    .popup-01 .template-05 .tpl-header .tpl-intro-title {padding:37px 20px !important; background:#0e151b url(../images/template_bnr_05.jpg) bottom center no-repeat; border-radius: 10px; background-size: cover; text-align:center;}
+    .popup-01 .template-05 .tpl-header .tpl-intro-title + .tpl-intro-text {color:#7E7E7E; margin-top:20px; text-align:center;}
+    .popup-01 .template-05 .tpl-header .tpl-intro-text strong {color:#333333;}
+    .popup-01 .template-05 .tpl-section .section-title::before {width:19px; height:19px; top:2px;}
+    .popup-01 .template-05 .tpl-section .section-title {padding-left:28px;}
+    .popup-01 .template-05 .tpl-tbl-recruit {border-bottom:1px solid #EBEBEB;}
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group > .cate .text {margin: 0 !important; padding: 0 !important; }
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group .group-align {padding:0; margin:20px 0 0;}
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .title::before {position:relative; top:auto; left:auto; width: auto; height: auto; background: transparent;}
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate .tpl-list-hyphen-1 {margin:0;}
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group .group-align .cate:nth-child(2) {margin-top:0;}
+    .popup-01 .template-05 .tpl-tbl-recruit .recruit-group + .recruit-group {margin-top:0;}
+    .popup-01 .template-05 .tpl-section .section-title + :is(.tpl-list-dot-1, .tpl-list-step), .template-05 .tpl-section .bullet-dot {margin-left:0;}
+    .popup-01 .template-05 .tpl-list-step li {padding:16px 20px; margin-right:5px;}
+
+
+
+
+
+
+
+
+
 
 
 /* =============================================== 이력서강조상품 =============================================== */
