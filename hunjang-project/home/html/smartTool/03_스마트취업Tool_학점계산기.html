@@ -731,6 +731,10 @@
                         <option value="">100만점</option>
                       </select>
                     </div>
+                    <div class="flex flex-center h-textfield-round">
+                      <input type="text" value="3.9">
+                      <span class="h-txt-3 text-subtitle4 ml5">점</span>
+                    </div>
                   </div>
                 </div>
 
@@ -755,12 +759,52 @@
                 </div>
 
                 <div class="btn-center-wrap">
-                  <button class="h-line-cyan h-button-sm">결과 복사하기</button>
+                  <button class="h-line-cyan h-button-sm laypopup_ScriptSample01">결과 복사하기</button>
                 </div>
 
               </li>
             </ul>
           </div>
+
+          <!-- 모달팝업 (학점계산 결과 복사도 동일) -->
+          <div class="h-popup-wrap sampleClss01" style="display:none;">
+            <div class="h-popup popup-01 ui-draggable" style="width: 610px; min-height:auto;">
+              <div class="pop-header ui-draggable-handle">
+                <p class="pop-title text-h3">학점변환 결과 복사</p>
+              </div>
+
+              <div class="pop-body">
+                <div class="pop-container">
+                  <p class="h-txt-3 text-subtitle5 mb10">Ctrl-C를 눌러 복사하신 후 필요한 것에 Ctrl-V 를 눌러 붙여넣기 해주세요.</p>
+                  <input type="text" readonly value="[훈장마을 학점 변환기 결과] 3.34/4.0 만점, 3.59/4.3 만점, 3.76/4.5 만점, 4.18/5.0 만점, 5.85/7.0 만점, 91.5/100점 만점,">
+                </div>
+                <div class="h-txt-c mt20">
+                  <button type="button" class="h-button-s">확인</button>
+                  <button type="button" class="h-button-s h-button-grey1 m0">취소</button>
+                </div>
+              </div>
+              <button type="button" class="close" title="팝업 닫기">
+                <img src="../../images/close_btn.svg" alt="팝업 닫기">
+              </button>
+            </div>
+          </div>
+          <!-- //모달팝업 -->
+
+          <script>
+            $(document).ready(function() {
+              $('.laypopup_ScriptSample01').click(function() {
+                $('.sampleClss01').css("display", "inline-block");
+                $('.lottie-bg').css("display", "inline-block");
+              });
+            });
+
+            $(document).ready(function() {
+              $('.close').click(function() {
+                $('.sampleClss01').css("display", "none");
+                $('.lottie-bg').css("display", "none");
+              });
+            });
+          </script>
 
 
 
@@ -777,10 +821,10 @@
                   <div class="flex flex-center flex-end2">
                     <div class="flex flex-center h-textfield-round mr20">
                       <select name="" id="" style="width:230px">
-                        <option value="">4.0만점</option>
-                        <option value="">4.3만점</option>
-                        <option value="">4.5만점</option>
-                        <option value="">100만점</option>
+                        <option value="">4.0 만점</option>
+                        <option value="">4.3 만점</option>
+                        <option value="">4.5 만점</option>
+                        <option value="">100 만점</option>
                       </select>
                     </div>
                     <div class="h-checkbox checkbox01">
@@ -1090,40 +1134,7 @@
 
 
 
-  <div class="lottie-bg" style="display: none;">
-    <div style="width: 100px; height: 100px; overflow: hidden; margin: 0px auto;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22" width="32" height="22" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-        <defs>
-          <clipPath id="__lottie_element_35">
-            <rect width="32" height="22" x="0" y="0"></rect>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#__lottie_element_35)">
-          <g transform="matrix(1,0,0,1,8.75,8.653697967529297)" opacity="1" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.75,1.75)">
-              <path fill="rgb(91,86,147)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-          <g transform="matrix(1,0,0,1,15,8.271718978881836)" opacity="0.8" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
-              <path fill="rgb(233,82,131)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-          <g transform="matrix(1,0,0,1,21,10.43514347076416)" opacity="0.5" style="display: block;">
-            <g opacity="1" transform="matrix(1,0,0,1,1.5,1.5)">
-              <path fill="rgb(243,154,0)" fill-opacity="1"
-                d=" M0,-1.5 C0.8289999961853027,-1.5 1.5,-0.8289999961853027 1.5,0 C1.5,0.828000009059906 0.8289999961853027,1.5 0,1.5 C-0.8289999961853027,1.5 -1.5,0.828000009059906 -1.5,0 C-1.5,-0.8289999961853027 -0.8289999961853027,-1.5 0,-1.5z">
-              </path>
-            </g>
-          </g>
-        </g>
-      </svg>
-    </div>
-  </div>
+  <div class="lottie-bg" style="display: none;"></div>
 
 
   <div id="dim" style="display: none;"></div>
