@@ -634,10 +634,53 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 
 /* 채용상품 안내 home */
-.recruit-productInfo-wrap .quick-btmBtn .fixedBtn {bottom:15px;}
-.h-m-popup.popup-goback.recruit-productInfo-wrap .pop-body {height: calc(100% - 85px);}
-.recruit-productInfo .imgbox {width:190px; padding:20px; box-sizing: border-box; border-radius: 10px; background:#fff;}
-.recruit-productInfo .imgbox img {width:100%;}
+/* .recruit-productInfo-wrap .quick-btmBtn .fixedBtn {bottom:15px;} */
+.h-m-popup.popup-goback .recruit-productInfo {height: calc(100% - 85px);}
+.productImg-wrap .imgbox {width:190px; padding:20px; box-sizing: border-box; border-radius: 10px; background:#fff;}
+.productImg-wrap .imgbox img {width:100%;}
+.productImg-wrap {position:relative;}
+
+.triangleLayer-wrap .triangleLayer:before {content:''; position:absolute; left:-19px; top:20px; background:url('../images/mobile/img_bltTriangle.png') no-repeat; background-size: cover; width:20px; height:20px;}
+.triangleLayer-wrap .triangleLayer .arrowBtn {display:block; padding:12px 0; font-size:var(--text-subtitle5); background:var(--neutral-3); text-align:center; border-radius: 0 0 9px 9px;}
+.triangleLayer-wrap .triangleLayer .arrowBtn:after{content:''; display:inline-block; margin-left:7px; background:url('../images/mobile/m_arrow_s_gray.png') no-repeat; background-size: cover; width: 6px; height: 9px;}
+.triangleLayer-wrap .triangleLayer .triangle-body {padding:20px 20px 15px;}
+
+.triangleLayer-wrap {position:absolute; top:0; left:125px; width: calc(100% - 125px);}
+.triangleLayer-wrap .triangleLayer {position: relative; display:block; /*min-width:190px;*/ border:1px solid var(--grey-3); border-radius:10px; background:#fff; box-sizing: border-box; box-shadow: 0px 5px 10px #0000001A;}
+.triangleLayer-wrap .triangleLayer:nth-child(1) {margin-top:160px;}
+.triangleLayer-wrap .triangleLayer:nth-child(2) {margin-top:46px;}
+.triangleLayer-wrap .triangleLayer:nth-child(3) {margin-top:75px;}
+.triangleLayer-wrap .triangleLayer:nth-child(4) {margin-top:30px;}
+.triangleLayer-wrap .triangleLayer:nth-child(5) {margin-top:70px;}
+.triangleLayer-wrap .triangleLayer:nth-child(6) {margin-top:114px;}
+.triangleLayer-wrap .triangleLayer:nth-child(7) {margin-top:144px;}
+
+/* 지역별 */
+.triangleLayer-wrap.proArealogo .triangleLayer:nth-child(1) {margin-top:118px;}
+.triangleLayer-wrap.proArealogo .triangleLayer:nth-child(2) {margin-top:45px;}
+
+/* 과목 직무 LOGO */
+.triangleLayer-wrap.proSubject .triangleLayer:nth-child(1) {margin-top:118px;}
+.triangleLayer-wrap.proSubject .triangleLayer:nth-child(2) {margin-top:45px;}
+
+/* 채용상품안내_우수회원 */
+.recruit-productInfo .imgboxBnr {margin:-10px -20px 0;}
+.productTxt-wrap {padding:0 20px 80px; margin: -5px -20px 0; background:#fff;}
+.productTxt-wrap .bodytxt > li + li {margin-top:15px;}
+/* .productTxt-wrap .productTxt-inner > li + li {margin-top:20px;} */
+.productTxt-wrap .productTxt-box {margin-top:20px; border:1px solid var(--neutral-2); }
+.productTxt-wrap .productTxt-box:first-child {margin-top:0;}
+.productTxt-wrap .productTxt-box .headtxt {padding:12px 20px; background:var(--neutral-3); font-weight:var(--text-bold);}
+.productTxt-wrap .productTxt-box .bodytxt {padding:15px; border-top:1px solid var(--neutral-2);}
+
+.tbl-productTxt {border:1px solid var(--neutral-2); }
+.tbl-productTxt thead tr th {padding:12px 0; border-bottom:1px solid var(--neutral-2); background:var(--neutral-3); font-size:var(--text-subtitle5); font-weight:var(--text-regular); color:#4D4D4D;}
+.tbl-productTxt tbody tr td {padding:15px; border-right:1px solid var(--neutral-2);}
+.tbl-productTxt tbody tr td:last-child {border-right:0;}
+/* .tbl-productTxt tbody tr td .h-bullet-01 {padding:15px;} */
+
+/* 팝업형태인데 footer 하단에 아무버튼이 없는 경우 */
+.fixedBtn-bottom .fixedBtn {bottom:15px;}
 
 
 
