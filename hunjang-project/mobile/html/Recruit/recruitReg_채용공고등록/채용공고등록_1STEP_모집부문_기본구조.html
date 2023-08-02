@@ -32,7 +32,7 @@
     <!-- container -->
     <div class="container">
 
-      
+
       <!-- content -->
       <div class="content recruitReg-cont">
 
@@ -51,176 +51,199 @@
 
         <!-- body -->
         <div class="content-inner">
-          <div class="basic-box">
-            <ul class="step-box mt10">
+          <div class="basic-box tgl-stepBtn-wrap">
+            <button type="button" class="tgl-stepBtn"></button>
 
-              <!-- 모집부문 -->
-              <li>
-                <p class="h-resume-title">모집부문<span class="h-txt-orange ml5">*</span></p>
-                <div class="resume-title">
-                  <input type="text" placeholder="ex) 수학강사" class="h-txtfield-basic h-txtfield-shadow">
-                  <button class="keyword-del"></button>
-                </div>
-              </li>
+            <div class="recrutInfo" style="max-height: max-content;">
+              <!-- recrutInfo가 접혔을때 모집부문 텍스트만 띄움 -->
+              <!-- <p class="recrutTit">수학강사</p> -->
 
-              <!-- 과목 -->
-              <li>
-                <p class="labelArea">과목<span class="h-txt-orange">*</span></p>
-                <!-- 검색 -->
-                <!-- <div class="searchBtn-wrap">
+              <ul class="step-box mt10">
+
+                <!-- 모집부문 -->
+                <li>
+                  <p class="h-resume-title">모집부문<span class="h-txt-orange ml5">*</span></p>
+                  <div class="resume-title">
+                    <input type="text" placeholder="ex) 수학강사" class="h-txtfield-basic h-txtfield-shadow">
+                    <button class="keyword-del"></button>
+                  </div>
+                </li>
+
+                <!-- 과목 -->
+                <li>
+                  <p class="labelArea">과목<span class="h-txt-orange">*</span></p>
+                  <!-- 검색 -->
+                  <!-- <div class="searchBtn-wrap">
                   <input type="text" placeholder="과목을 입력해 주세요.">
                   <button class="h-m-searchBtn"></button>
                 </div> -->
 
-                <ul class="flex flex-column">
-                  <li class="btn-minus-box">
-                    <div>
-                      <span class="">입시/고시</span>
-                      <span class="h-txt-pit h-txt-medium">국어</span>
-                    </div>
-                    <button class="h-btn-minus"></button>
-                  </li>
-                  <li class="btn-minus-box">
-                    <div>
-                      <span class="">입시/고시</span>
-                      <span class="h-txt-pit h-txt-medium">국어</span>
-                    </div>
-                    <button class="h-btn-minus"></button>
-                  </li>
-                </ul>
-                <button type="button" class="h-button-xs h-btn-onlyplus">과목추가</button>
-              </li>
+                  <ul class="flex flex-column">
+                    <li class="btn-minus-box">
+                      <div>
+                        <span class="">입시/고시</span>
+                        <span class="h-txt-pit h-txt-medium">국어</span>
+                      </div>
+                      <button class="h-btn-minus"></button>
+                    </li>
+                    <li class="btn-minus-box">
+                      <div>
+                        <span class="">입시/고시</span>
+                        <span class="h-txt-pit h-txt-medium">국어</span>
+                      </div>
+                      <button class="h-btn-minus"></button>
+                    </li>
+                  </ul>
+                  <button type="button" class="h-button-xs h-btn-onlyplus">과목추가</button>
+                </li>
 
-              <!-- 경력 -->
-              <li>
-                <p class="labelArea">경력<span class="h-txt-orange">*</span></p>
-                <ul class="h-checkbox checkbox01">
-                  <li>
-                    <input type="checkbox" name="checkForm" id="check01_1" checked>
-                    <label for="check01_1">신입</label>
-                  </li>
-                  <li class="flex flex-center">
-                    <input type="checkbox" name="checkForm" id="check01_2">
-                    <label for="check01_2">경력</label>
-                    <div class="input-etcAdd flex flex-center ml20">
-                      <input type="text" style="width:60px; height:38px;">
-                      <label for="" class="ml5">년 이상</label>
-                    </div>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="checkForm" id="check01_3">
-                    <label for="check01_3">경력무관</label>
-                  </li>
-                </ul>
-              </li>
+                <!-- 경력 -->
+                <li>
+                  <p class="labelArea">경력<span class="h-txt-orange">*</span></p>
+                  <ul class="h-checkbox checkbox01">
+                    <li>
+                      <input type="checkbox" name="checkForm" id="check01_1" checked>
+                      <label for="check01_1">신입</label>
+                    </li>
+                    <li class="flex flex-center">
+                      <input type="checkbox" name="checkForm" id="check01_2">
+                      <label for="check01_2">경력</label>
+                      <div class="input-etcAdd flex flex-center ml20">
+                        <input type="text" style="width:60px; height:38px;">
+                        <label for="" class="ml5">년 이상</label>
+                      </div>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="checkForm" id="check01_3">
+                      <label for="check01_3">경력무관</label>
+                    </li>
+                  </ul>
+                </li>
 
-              <!-- 근무형태 -->
-              <li>
-                <p class="labelArea">근무형태<span class="h-txt-orange">*</span></p>
-                <ul class="h-radio-01">
-                  <li>
-                    <input type="radio" id="hradio01_1" name="hradio01" checked="">
-                    <label for="hradio01_1"><span class="rchk"></span><span>전임</span></label>
+                <!-- 근무형태 -->
+                <li>
+                  <p class="labelArea">근무형태<span class="h-txt-orange">*</span></p>
+                  <ul class="h-radio-01">
+                    <li>
+                      <input type="radio" id="hradio01_1" name="hradio01" checked="">
+                      <label for="hradio01_1"><span class="rchk"></span><span>전임</span></label>
 
-                    <div class="blue-box">
-                      <ul>
-                        <li>
-                          <p class="labelArea">근무기간<span class="h-txt-orange">*</span></p>
-                          <div class="h-txtfield-inner mt5">
-                            <select name="" id="" class="wd100 mr10" style="width:138px;">
-                              <option value="">선택</option>
-                            </select>
-                            <div class="h-checkbox checkbox01">
-                              <input type="checkbox" name="checkForm" id="check01" checked="">
-                              <label for="check01">협의 가능</label>
+                      <div class="blue-box">
+                        <ul>
+                          <li>
+                            <p class="labelArea">근무기간<span class="h-txt-orange">*</span></p>
+                            <div class="h-txtfield-inner mt5">
+                              <select name="" id="" class="wd100 mr10" style="width:138px;">
+                                <option value="">선택</option>
+                              </select>
+                              <div class="h-checkbox checkbox01">
+                                <input type="checkbox" name="checkForm" id="check01" checked="">
+                                <label for="check01">협의 가능</label>
+                              </div>
                             </div>
-                          </div>
-                        </li>
-                        <li class="mt20">
-                          <p class="labelArea">근무시간<span class="h-txt-orange">*</span></p>
-                          <div class="h-txtfield-inner mt5">
-                            <select name="" id="" class="mr5 min-wd100px">
-                              <option value="">선택</option>
-                            </select>
-                            ~
-                            <select name="" id="" class="ml5 min-wd100px">
-                              <option value="">선택</option>
-                            </select>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+                          </li>
+                          <li class="mt20">
+                            <p class="labelArea">근무시간<span class="h-txt-orange">*</span></p>
+                            <div class="h-txtfield-inner mt5">
+                              <select name="" id="" class="mr5 min-wd100px">
+                                <option value="">선택</option>
+                              </select>
+                              ~
+                              <select name="" id="" class="ml5 min-wd100px">
+                                <option value="">선택</option>
+                              </select>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
 
-                  </li>
+                    </li>
 
-                  <li>
-                    <input type="radio" id="hradio01_2" name="hradio01" checked="">
-                    <label for="hradio01_2"><span class="rchk"></span><span>단기</span></label>
-                  </li>
-                  <li>
-                    <input type="radio" id="hradio01_3" name="hradio01" checked="">
-                    <label for="hradio01_3"><span class="rchk"></span><span>파트타임·아르바이트</span></label>
-                  </li>
-                </ul>
-              </li>
-
-
-              <!-- 직원 채용 선택시 -->
-              <li>
-                <p class="labelArea">근무형태<span class="h-txt-orange">*</span></p>
-                <ul class="h-radio-01">
-                  <li>
-                    <input type="radio" id="hradio03_1" name="hradio03" checked="">
-                    <label for="hradio03_1"><span class="rchk"></span><span>정규직</span></label>
-                  </li>
-                  <li>
-                    <input type="radio" id="hradio03_2" name="hradio03">
-                    <label for="hradio03_2"><span class="rchk"></span><span>계약직</span></label>
-                  </li>
-                  <li>
-                    <input type="radio" id="hradio03_3" name="hradio03">
-                    <label for="hradio03_3"><span class="rchk"></span><span>아르바이트</span></label>
-                  </li>
-                  <li>
-                    <input type="radio" id="hradio03_4" name="hradio03">
-                    <label for="hradio03_4"><span class="rchk"></span><span>인턴</span></label>
-                  </li>
-                </ul>
-              </li>
+                    <li>
+                      <input type="radio" id="hradio01_2" name="hradio01" checked="">
+                      <label for="hradio01_2"><span class="rchk"></span><span>단기</span></label>
+                    </li>
+                    <li>
+                      <input type="radio" id="hradio01_3" name="hradio01" checked="">
+                      <label for="hradio01_3"><span class="rchk"></span><span>파트타임·아르바이트</span></label>
+                    </li>
+                  </ul>
+                </li>
 
 
-              <!-- 모집인원 -->
-              <li>
-                <p class="labelArea">모집인원<span class="h-txt-orange">*</span></p>
-                <ul class="h-radio-01">
-                  <li>
-                    <input type="radio" id="hradio02_1" name="hradio02" checked="">
-                    <label for="hradio02_1"><span class="rchk"></span><span>0명</span></label>
-                  </li>
-                  <li>
-                    <input type="radio" id="hradio02_2" name="hradio02" checked="">
-                    <label for="hradio02_2"><span class="rchk"></span><span>00명</span></label>
-                  </li>
-                  <li class="flex flex-center">
-                    <input type="radio" id="hradio02_3" name="hradio02" checked="">
-                    <label for="hradio02_3"><span class="rchk"></span><span>직접입력</span></label>
-                    <div class="input-etcAdd flex flex-center">
-                      <input type="text" style="width:60px; height:38px;">
-                      <label for="" class="ml5">명</label>
-                    </div>
-                  </li>
-                </ul>
-              </li>
+                <!-- 공고등록 > 직원 채용 선택시 문구 다르게 적용 됨 -->
+                <li>
+                  <p class="labelArea">근무형태<span class="h-txt-orange">*</span></p>
+                  <ul class="h-radio-01">
+                    <li>
+                      <input type="radio" id="hradio03_1" name="hradio03" checked="">
+                      <label for="hradio03_1"><span class="rchk"></span><span>정규직</span></label>
+                    </li>
+                    <li>
+                      <input type="radio" id="hradio03_2" name="hradio03">
+                      <label for="hradio03_2"><span class="rchk"></span><span>계약직</span></label>
+                    </li>
+                    <li>
+                      <input type="radio" id="hradio03_3" name="hradio03">
+                      <label for="hradio03_3"><span class="rchk"></span><span>아르바이트</span></label>
+                    </li>
+                    <li>
+                      <input type="radio" id="hradio03_4" name="hradio03">
+                      <label for="hradio03_4"><span class="rchk"></span><span>인턴</span></label>
+                    </li>
+                  </ul>
+                </li>
 
-            </ul>
 
-            <button type="button" class="tgl-stepBtn"></button>
+                <!-- 모집인원 -->
+                <li>
+                  <p class="labelArea">모집인원<span class="h-txt-orange">*</span></p>
+                  <ul class="h-radio-01">
+                    <li>
+                      <input type="radio" id="hradio02_1" name="hradio02" checked="">
+                      <label for="hradio02_1"><span class="rchk"></span><span>0명</span></label>
+                    </li>
+                    <li>
+                      <input type="radio" id="hradio02_2" name="hradio02" checked="">
+                      <label for="hradio02_2"><span class="rchk"></span><span>00명</span></label>
+                    </li>
+                    <li class="flex flex-center">
+                      <input type="radio" id="hradio02_3" name="hradio02" checked="">
+                      <label for="hradio02_3"><span class="rchk"></span><span>직접입력</span></label>
+                      <div class="input-etcAdd flex flex-center">
+                        <input type="text" style="width:60px; height:38px;">
+                        <label for="" class="ml5">명</label>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
 
-            <div class="h-txt-r mt20">
-              <button type="button" class="h-button-s h-button-grey1 m0">삭제</button>
-              <button type="button" class="h-button-s h-button-copy m0">복사</button>
+              <div class="h-txt-r mt20">
+                <button type="button" class="h-button-s h-button-grey1 m0">삭제</button>
+                <button type="button" class="h-button-s h-button-copy m0">복사</button>
+              </div>
             </div>
+
           </div>
+
+          <script>
+            var coll = document.getElementsByClassName("tgl-stepBtn");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var recrutInfo = this.nextElementSibling;
+                if (recrutInfo.style.maxHeight) {
+                  recrutInfo.style.maxHeight = null;
+                } else {
+                  recrutInfo.style.maxHeight = recrutInfo.scrollHeight + "px";
+                }
+              });
+            }
+          </script>
+
           <button type="button" class="circle-plusBtn flex-set h-button-ml mt20">모집부분 추가</button>
         </div>
         <!-- //body -->
@@ -232,7 +255,7 @@
         <a href="" class="closeBtn fixedBtn"><img src="../../../images/mobile/m_arrow_close.png" alt=""></a>
         <a href="" class="topBtn fixedBtn"><img src="../../../images/mobile/m_arrow_top.png" alt=""></a>
       </div>
-      
+
 
 
     </div>

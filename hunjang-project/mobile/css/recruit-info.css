@@ -36,9 +36,12 @@
 .step-box .h-radio-01 input[type="radio"] + label + .input-etcAdd,
 .step-box .h-checkbox.checkbox01 input[type="checkbox"] + label + .input-etcAdd {margin:-10px 0 -10px 20px;}
 
-/* 접혔다 펼쳐졌다 step-box */
+/* 채용공고등록 모집부문 토글 */
 .tgl-stepBtn {position:absolute; top:11px; right:11px; width: 28px; height:28px; border-radius:50%; background:var(--neutral-3);}
-.tgl-stepBtn:after {content:''; display:inline-block; background:url('../images/mobile/m_arrow_down_on.png') no-repeat center; width:13px; height:7px; vertical-align: middle;}
+.tgl-stepBtn:after {content:''; display:inline-block; background:url('../images/mobile/m_arrow_down_on.png') no-repeat center; width:12px; height:7px; vertical-align: middle;}
+.recruitReg-cont .tgl-stepBtn-wrap .tgl-stepBtn.active:after {background:url('../images/mobile/m_arrow_down_off.png') no-repeat center; transform: rotate(180deg); transition: all ease 0.5s;}
+.recruitReg-cont .tgl-stepBtn-wrap .recrutInfo {padding:0; max-height: 10px; overflow: hidden; transition: max-height 0.2s ease-out;}
+.recruitReg-cont .recrutTit {position:absolute; top:16px; font-size:var(--text-subtitle3); font-weight:var(--text-medium);}
 
 /* 기타 직접입력 input[type="text"] */
 .h-checkbox.checkbox01 .input-etcAdd input[type="text"] {display:block; position:relative; opacity: 1;}
@@ -681,12 +684,6 @@ input[type="radio"].focus-Red + label .rchk {border-color:var(--red)!important; 
 
 /* 팝업형태인데 footer 하단에 아무버튼이 없는 경우 */
 .fixedBtn-bottom .fixedBtn {bottom:15px;}
-
-
-
-
-
-
 
 
 
