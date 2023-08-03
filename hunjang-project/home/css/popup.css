@@ -7,7 +7,7 @@
 
 /***** 팝업 공통 (layout) *****/
 .h-popup-wrap { display: none; z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%; }
-.h-popup { height: fit-content; top: 10%; /*transform:translateY(-50%);*/ white-space: normal; display: block; word-wrap: break-word; min-height: 300px; border-radius: 15px; position: relative; margin: 0 auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; padding: 40px; background-color: #fff; box-sizing: border-box; max-height: calc(100vh - 150px); }
+.h-popup { height: fit-content; top:10%; /*transform:translateY(calc(-50% + 0.5px));*/ white-space: normal; display: block; word-wrap: break-word; min-height: 300px; border-radius: 15px; position: relative; margin: 0 auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; padding: 40px; background-color: #fff; box-sizing: border-box; max-height: calc(100vh - 150px); }
 .h-popup .pop-header { width: 100%; text-align: left; box-sizing: border-box; padding-bottom: 20px; }
 .h-popup .pop-body { height: calc(100% - 47px); box-sizing: border-box; position: relative; overflow: hidden; }
 .h-popup .pop-container { width: 100%; height: 100%; box-sizing: border-box; position: relative; word-wrap: break-word; overflow-y: auto; }
@@ -652,7 +652,7 @@
 .h-popup .openOffer-POPUP .send-sgst .select_listWrap .myresume-list ul li .btit {font-size:14px; color:#333333; margin-bottom:0; line-height:16px;}
 
 /*학원서비스 - 인터뷰 메시지전송 */
-.interview-messagePOP { }
+.interview-messagePOP {position:relative;}
 .interview-messagePOP .h-tab-Contents-02>input[type="radio"] + label { width:200px; }
 .interview-messagePOP .h-tab-Contents-02>input[type="radio"]:checked + label { font-weight:600; }
 .interview-messagePOP [class^="h-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox { padding-top:30px; }
@@ -667,7 +667,25 @@
 .interview-messagePOP2 .container {padding:40px; top:0; left:0; background:#fff; width:100%; box-sizing:border-box;}
 .interview-messagePOP2 .h-tab-Contents-02 {align-items:center;}
 .interview-messagePOP2 .h-tab-Contents-02>.tabCo-Wrap .tabCo-CommonBox {padding-top:30px; align-items:center;}
+/* 채용공고관리 면접메시지 미리보기 팝업 */
+.msgPop-previewWrap {display:none; position:absolute; top: 30px; background: #fff;}
+.msgPop-previewWrap.on {display:block;}
+.msgPop-previewWrap .h-button-ml.close-previewBtn {margin:0; position:absolute; right:0;}
+.msgPop-previewWrap .h-button-ml.close-previewBtn:before {content:"\e5cd"; font-family:'Material Icons'; position: relative; z-index: 0; opacity: 1; margin-right: 6px;}
+.msgPop-previewWrap .h-tab-Contents-02 {justify-content:flex-start;}
+.msgPop-previewWrap .h-tab-Contents-02 label {border: 1px solid #CCD1D7 !important; border-radius: 4px; width: auto !important; height: 46px !important; line-height: 44px !important; font-size: 14px !important; padding: 0 20px; margin-right: 10px; background:#fff !important; color:#333333 !important; box-sizing:border-box;}
+.msgPop-previewWrap .h-tab-Contents-02 label:before {content:"";display: inline-block; width: 18px; height: 18px; margin-right: 5px; border: none; vertical-align: middle; box-sizing: border-box; margin-top: -3px; margin-right:6px; background: url(../images/mobile/m_icon_checkbox_off.png) no-repeat 0 0 !important; position: relative !important; z-index: 0 !important; opacity: 1 !important; transform: none !important;}
+.msgPop-previewWrap .h-tab-Contents-02 input:checked + label {border:1px solid #61A6FF !important; color:#61A6FF !important; font-weight:500 !important;}
+.msgPop-previewWrap .h-tab-Contents-02 input:checked + label:before {background: url(../images/mobile/m_icon_checkbox_on2.png) no-repeat 0 0 !important; margin-right:7px;}
+.msgPop-previewWrap .h-tab-Contents-02>.tabCo-Wrap {height:660px; overflow-y:scroll; margin-top:15px; background:#fff; padding-right:5px;}
+.msgPop-previewWrap .h-tab-Contents-02>.tabCo-Wrap::before {display:none;}
+.msgPop-previewWrap .h-tab-Contents-02>.tabCo-Wrap>.tabCo-CommonBox {padding-top:0;}
 
+.email-previewArea {}
+.kakaotalk-previewArea {width:400px; height:500px; background:url(../images/mobile-kakaotalkBG.jpg) no-repeat; margin:50px auto 0; box-sizing:border-box; padding:115px 65px 0 92px;}
+.kakaotalk-previewArea .innerBox {overflow-y: scroll; height:316px;}
+.kakaotalk-previewArea p {font-size:13px; color:#333333; line-height:21px; margin-bottom:10px;}
+.kakaotalk-previewArea .kakao-list span {color:#9A9A9A;}
 
 
 
@@ -892,9 +910,6 @@
 .imgTipSwiper .swiper-button-next:after, .swiper-button-prev:after {content:''; display:inline-block; background:url('../images/icon_arrow_gray2.png') no-repeat; width:10px; height:17px;}
 .imgTipSwiper .swiper-button-prev:after {transform: rotate(-180deg);}
 .imgTipSwiper .swiper-wrapper {margin-bottom:50px;}
-
-
-
 
 
 
