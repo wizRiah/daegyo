@@ -1231,3 +1231,27 @@ TAB
 
 /* 툴팁 */
 .h-popup .tooltip-body button.close {width:40px; height:40px;}
+
+
+/* 404 500 에러페이지 반응형 */
+.h-error-wrap {max-width:650px; width:100%; margin:0 auto; box-sizing: border-box;}
+.h-error-wrap .errorImg {display: flex; flex-direction: column; flex-wrap: wrap; margin-top:100px;}
+.h-error-wrap .errorImg .h-logoimg {display:flex; justify-content: flex-start; margin-bottom:20px;}
+.h-error-wrap .errorImg .h-logoimg img {width:142px; height:42px;}
+.h-error-wrap .errorImg .errorNumber {max-width:500px; max-height:330px; width:100%; margin:0 auto;}
+
+.h-error-wrap .errorTxt {padding:40px; background:var(--neutral-3); border-radius:15px; box-sizing:border-box;}
+.h-error-wrap .errorTxt .btit {margin-bottom:20px; color:var(--cyan); font-size:var(--text-h2); font-weight:var(--text-bold); letter-spacing: -1px;}
+.h-error-wrap .errorTxt .stit {font-size:var(--text-subtitle2); font-weight:var(--text-medium); color:var(--black-2); line-height: 23px;}
+
+@media (max-width: 650px){ 
+    .h-error-inner {padding:0 20px;}
+    .h-error-wrap .errorTxt .btit {font-size:var(--text-h4);}
+    .h-error-wrap .errorTxt .stit {font-size:var(--text-subtitle4); line-height: 21px;}
+    .h-error-wrap .errorTxt {padding:30px;}
+
+    .h-error-wrap .errorImg {margin-top:0;}
+    .h-error-wrap .errorImg .h-logoimg {padding: 13px 20px; margin-bottom:50px; border-bottom:1px solid var(--neutral-2); box-sizing: border-box;}
+    .h-error-wrap .errorImg .h-logoimg img {width: 93px; height: fit-content;}
+    .h-error-wrap .errorImg .errorNumber {max-width:250px;}
+}
