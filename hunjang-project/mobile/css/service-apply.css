@@ -1,0 +1,54 @@
+@charset "utf-8"; 
+
+/* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
+/* 간격 */
+.mt60 {margin-top:60;}
+.mb40 {margin-bottom:40px;}
+.ml0 {margin-left:0 !important;}
+
+/* 공간 */
+.pdb60 {padding-bottom:60px !important;}
+
+/* layout 넓이 */
+.wrap-w950 {width:950px !important;}
+
+/* width */
+.w191 {width:191px !important;}
+.w20ps {width:20% !important;}
+
+/* 서비스 신청 */
+.service-menu {display:flex;justify-content:space-between;flex-wrap: wrap;}
+.service-menu > li {overflow:hidden;position:relative;width:calc(50% - 7.5px);padding:35px 30px 43px;background:#fff;border:1px solid #D4DAE2;border-radius:10px;box-sizing:border-box;box-shadow: 0 5px 10px #0000001A;text-align:center;}
+.service-menu > li:nth-child(n+3) {margin-top:20px;}
+.service-menu > li .logo {display:flex;justify-content:center;align-items:center;}
+.service-menu > li p {margin-top:10px;font-size:13px;line-height:20px;color:#7E7E7E;}
+.service-menu > li .label {position:absolute;left:0;bottom:0;display:block;width:100%;height:31px;line-height:31px;border-radius:4px 0 0 0;font-size:12px;color:#fff;text-align:center;}
+.service-menu > li .label.green {background:#43A986;}
+.service-menu > li .label.purple {background:#5F5991;}
+.service-menu > li .label.limegreen {background:#50D8B2;}
+.service-menu > li .label span {display:inline-block;padding-right:13px;background:url(../images/service_apply/arrow_white.png) no-repeat right 50%;}
+.service-menu-active {display:flex;justify-content:space-between;flex-wrap: wrap;}
+.service-menu-active li.using {display:flex;justify-content:space-between;align-items:center;position:relative;width:100%;padding:20px 30px;background:#fff;border:1px solid #D4DAE2;border-radius:10px;box-sizing:border-box;box-shadow: 0 5px 10px #0000001A;}
+.service-menu-active li.using > .using-info {position:relative;width:calc(100% - 100px);text-align:left;}
+.service-menu-active li.using > .using-info p {width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.service-menu-active li.using > .using-info input[type="checkbox"] {position:absolute;display:none;width:1px;height:1px;text-indent:-999px;overflow:hidden;}
+.service-menu-active li.using > .using-info .label {position:unset;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;margin-top:10px;background:none;width:100%;height:auto;font-size:13px;line-height:20px;text-align:left;color:#7E7E7E;}
+.service-menu-active li.using > .using-info .label.green {color:#43A986;}
+.service-menu-active li.using > .using-info .label.purple {color:#5F5991;}
+.service-menu-active li.using > .using-info .label.limegreen {color:#50D8B2;}
+.service-menu-active li.using > .using-info strong {display:block;}
+.service-menu-active li.using > .using-info label {position:relative;display:block;width:100%;padding-right:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.service-menu-active li.using > .using-info input[type="checkbox"] + label::after {position: absolute;right: -5px;top: 50%;transform:translate(-50%, -50%) rotate(0deg);content:'';width:20px;height:20px;background: url(../images/arrow_dropdown.svg) center/100% no-repeat;transition: transform 0.5s;}
+.service-menu-active li.using > .using-info input[type="checkbox"]:checked + label::after {transform: translate(-50%, -50%) rotate(180deg);}
+.service-menu-active li.using > .using-info input[type="checkbox"]:checked ~ .dropdown {height:auto;top:80px;z-index:3;opacity:1;visibility:visible;margin-bottom:0;}
+.service-menu-active li.using > .using-info .dropdown {overflow-y: auto;display: block;position: absolute;top:90px;right:-25px;z-index: -1;width: 204px;height: 0;padding:20px;opacity: 0;border-style: solid;border-color: #7e7e7e;border-width:1px;background: #fff;box-sizing: border-box;box-shadow: 0 5px 10px #0000001A;transition: all 0.3s;}
+.service-menu-active li.using > .using-info .dropdown .drop-tit {font-size:12px;font-weight:400;color:#9A9A9A;}
+.service-menu-active li.using > .using-info .dropdown ul li {position:relative;padding-left:10px;font-size:13px;line-height:20px;color:#333;}
+.service-menu-active li.using > .using-info .dropdown ul li:after {position: absolute;top: 10px;left: 4px;content: '';width: 2px;height: 2px;background-color: currentColor;border-radius: 50%;}
+.service-menu-active li.using > .using-info .dropdown .close {position:absolute;top:20px;right:15px;}
+.service-menu-active li.using > .logo {display:flex;justify-content:center;align-items:center;width:54px;height:54px;}
+.service-menu-active li.using > .logo img {width:auto;}
+.service-menu-active li.using > .btn-popup {position:absolute;top:15px;right:15px;}
+.available-service-area {padding:25px 20px 30px;background:#fff;}
+.active-service-area {padding:30px 20px 30px;background:#F5F7FA;}
+.h-subtxtbox-01 {padding:20px;border-radius:10px;background:#EBEFF5;}
