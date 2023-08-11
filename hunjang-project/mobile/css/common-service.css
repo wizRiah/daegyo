@@ -15,6 +15,7 @@
 .pdt15 {padding-top:15px !important;}
 .pdt20 {padding-top:20px !important;}
 .pdr20 {padding-right:20px !important;}
+.pdr90 {padding-right:90px !important;}
 .pd0 {padding:0 !important;}
 .pd15 {padding:15px !important;}
 .pd20 {padding:20px !important;}
@@ -46,7 +47,11 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 
 /* [공통] 페이지 좌우여백 색상 삭제 버전 레이아웃 */
 .m-hunjang-wrap.customer .content.p0 {padding:0;background:#F5F7FA;}
-.m-hunjang-wrap.content.p0 {padding:0;background:#F5F7FA;}
+.m-hunjang-wrap .content.p0 {padding:0;background:#F5F7FA;}
+
+/* [공통] wide 하단 버튼 style */
+.m-hunjang-wrap .btmbtnbox {}
+.m-hunjang-wrap .btmbtnbox a:only-child, .m-hunjang-wrap .btmbtnbox button:only-child {margin:0;width:100% !important;border-radius:0;}
 
 /* [공통] tab menu */
 .h-tab-Contents-01.secession {display:flex;justify-content:center;}
@@ -63,7 +68,6 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 
 
 /* 모바일 이용약관 탭 디자인 */
-.tab-termsCndt {}
 .tab-termsCndt .tab_inner {display: none;}
 .tab-termsCndt .tab_inner.active {display: block;}
 
@@ -99,7 +103,6 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 .m-hunjang-wrap.customer .homeBlockTit {display:flex;font-size: var(--text-subtitle17);line-height:20px;}
 .m-hunjang-wrap.customer .homeBlockTit .totlaNum {font-size: 13px;color: #9A9A9A;margin-left:8px;}
 .m-hunjang-wrap.customer .homeBlockTit .totlaNum span {font-weight: 500;color: #333333;}
-.m-hunjang-wrap.customer .select-set {}
 
 /* 서비스 탈퇴 - 포인트 현황 */
 .commonFormWrap .point-box {padding:25px;border-radius:10px;}
@@ -220,11 +223,34 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 .event-wrap .event-list .event-body .service-name.orange-label {background: #EA7A2F;}
 
 /* layer popup */
-.h-popup.popup-01.service-apply {position:fixed;left:20px;top:calc(50% / 2);width:calc(100% - 40px);padding:40px;border-radius:10px;box-sizing:border-box;z-index:200;background:#fff;}
-.h-popup.popup-01.service-apply .close {position:absolute;right:15px;top:15px;}
-.h-popup.popup-01.service-apply .btn-confirm {background:#EA7A2F;}
+.popup-01.service-apply {position:fixed;left:20px;top:calc(50% / 2);width:calc(100% - 40px);padding:40px;border-radius:10px;box-sizing:border-box;z-index:200;background:#fff;}
+.popup-01.service-apply .close {position:absolute;right:15px;top:15px;}
+.popup-01.service-apply .btn-confirm {background:#EA7A2F;}
 
-/* 클린 훈장마을 */
+/* layer popup - 서비스(신청, 미완료, 약관동의) */
+.popup-01 .pop-title.service-apply-tit {font-size:20px;}
+.popup-01 .pop-title.service-apply-tit strong {display:block;}
+.popup-01 ul.service-apply li {position:relative;}
+.popup-01 ul.service-apply li p:before {display:block;content:"";position:absolute;right:20px;top:20px;width: 81px;height: 81px;background: #fff;border-radius: 50%;}
+.popup-01 ul.service-apply li:first-child p::before {background:#fff url(../images/icon_apply_teacher.png) no-repeat 50% 50%;}
+.popup-01 ul.service-apply li:nth-child(2) p::before {background:#fff url(../images/icon_apply_academy.png) no-repeat 50% 50%;}
+.popup-01 ul.service-apply .h-subbox-basic-guide {padding:20px;background: var(--neutral-3);border-radius:10px;}
+.popup-01 .today-close {position:relative;padding-right:15px;}
+.popup-01 .today-close:before {display: block;content: "";width:8px;height:8px;position:absolute;right:0;top:4px;background: url(../images/icon_close8.png) no-repeat 0 0;}
+
+.popup-01.service-apply.wide {position:unset;width:100%;padding:0;}
+.popup-01.service-apply.wide .pop-body {height:100%;}
+.popup-01.service-apply.wide .roul-check li:first-child {padding-bottom:23px;background: url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 bottom;}
+.popup-01.service-apply.wide .roul-check li:nth-child(4) {padding-bottom: 23px;background: url(../images/auth/bg_diagonal_pattern.png) repeat-x 0 bottom;}
+.popup-01.service-apply.wide .auth-info-box .h-checkbox {position:relative;margin:0;font-size:14px;}
+.popup-01.service-apply.wide .auth-info-box .h-checkbox .readmore-Arrowbtn {display: inline-block;width: 19px;height: 19px;border-radius: 100%;border: 1px solid var(--grey-2);text-indent: -999px;overflow: hidden;position: absolute;right: 0;top: 0;box-sizing: border-box;}
+.popup-01.service-apply.wide .auth-info-box .h-checkbox .readmore-Arrowbtn:before {content:"";display:inline-block;width:6px;height:6px;border:1px solid var(--grey-2);border-width:0 1.5px 1.5px 0;position:absolute;left:5px;top:4px;transform:rotate(45deg);transition:0.5s;}
+.popup-01.service-apply.wide .auth-info-box .h-checkbox .readmore-Arrowbtn.on:before {transform:rotate(225deg);top:7px;}
+.popup-01.service-apply.wide .auth-info-box .dropdown {display:none;overflow-y:auto;height:150px;padding:20px;background:#F5F7FA;font-size:12px;line-height:18px;color:#7E7E7E;}
+.popup-01.service-apply.wide .auth-info-box .dropdown.on {display:block;}
+.popup-01.service-apply.wide .close {left:auto;top:20px;right:20px;left:auto;}
+
+/* 클린 훈장마을 */ 
 .clean-text-box {padding:20px;background:#fff;border-top:1px solid #E0E6EF;}
 .bg-grey-box {background: #F5F7FA;}
 .clean-text-box .grey-box {width:100%;padding:20px;border-radius:10px;box-sizing:border-box;background:#F5F7FA;font-size:12px;color:#7E7E7E;}
