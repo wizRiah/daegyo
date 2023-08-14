@@ -5,6 +5,7 @@
 
 /* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
 /* [공통] 간격 */
+.mt15 {margin-top:15px;}
 .mt60 {margin-top:60px;}
 .mr20 {margin-right:20px;}
 .ml0 {margin-left:0 !important;}
@@ -50,8 +51,8 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 .m-hunjang-wrap .content.p0 {padding:0;background:#F5F7FA;}
 
 /* [공통] wide 하단 버튼 style */
-.m-hunjang-wrap .btmbtnbox {}
 .m-hunjang-wrap .btmbtnbox a:only-child, .m-hunjang-wrap .btmbtnbox button:only-child {margin:0;width:100% !important;border-radius:0;}
+.m-hunjang-wrap .btmbtnbox a {font-size:var(--text-subtitle3);width:50%;height:54px;line-height:54px;text-align:center;display:inline-flex;justify-content:center;box-sizing:border-box;}
 
 /* [공통] tab menu */
 .h-tab-Contents-01.secession {display:flex;justify-content:center;}
@@ -274,3 +275,27 @@ header.hc-white .location a.toplogoBtn.goback:before {display:inline-block;conte
 .service-roul-wrap .list.depth1 > li span {position:absolute;left:0;top:0;}
 .service-roul-wrap .list.hyphen > li {position:relative;padding-left:10px;margin-left:0;}
 .service-roul-wrap .list.hyphen > li:before {display:inline-block;content:"-";position:absolute;left:0;top:0;}
+
+/* 학원서비스 신청 - 사업자 구분 */
+.business-type-content  {padding:30px 20px;}
+.business-type-content .business-type-box label {display:flex !important;width:100%;padding:22px 20px 16px 48px !important;background:#fff;border:1px solid #E0E6EF;border-radius:10px;box-sizing:border-box;}
+.business-type-content .business-type-box input + label:before {position:absolute;left:20px;margin-top:0;}
+.business-type-content .business-type-box input + label:after {left:24px;top:27px;}
+.business-type-content .business-type-box label .r-area {text-align:left;}
+.business-type-content .business-type-box label .type-sub {width:180px;font-size:12px;line-height:18px;color:#7E7E7E;}
+.business-type-content .business-type-box.typeimg01 label {background:#fff url(../images/service_apply/icon_business_type01.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg02 label {background:#fff url(../images/service_apply/icon_business_type02.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg03 label {background:#fff url(../images/service_apply/icon_business_type03.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg04 label {background:#fff url(../images/service_apply/icon_business_type04.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box input:checked + label {border:1px solid #61A6FF;background:#fff;border-radius:10px;}
+.business-type-content .business-type-box.typeimg01 input:checked + label {background:#fff url(../images/service_apply/icon_business_type01_on.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg02 input:checked + label {background:#fff url(../images/service_apply/icon_business_type02_on.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg03 input:checked + label {background:#fff url(../images/service_apply/icon_business_type03_on.png) no-repeat calc(100% - 20px) 50%;}
+.business-type-content .business-type-box.typeimg04 input:checked + label {background:#fff url(../images/service_apply/icon_business_type04_on.png) no-repeat calc(100% - 20px) 50%;}
+
+.business-type-content .basic-inputdl .dl {margin-bottom: 25px;}
+.business-type-content .basic-inputdl .dt {font-size: var(--text-subtitle6);color: var(--black-1);font-weight: var(--text-medium);line-height:14px;margin-bottom:6px;}
+.business-type-content .basic-inputdl .dt:before {content: "\b7";margin-right: 3px;}
+.business-type-content .h-txtfield-basic {height:45px !important;}
+.business-type-content .checkbox05.bg-blue input[type="checkbox"]:checked + label,
+.business-type-content .checkbox05.bg-blue input[type="checkbox"]:checked + label::before {background:#26B2C8;border-color:#26B2C8;color:#fff;}
