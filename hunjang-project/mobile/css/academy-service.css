@@ -1,7 +1,7 @@
 @charset "utf-8"; 
-/*2023-07-10 SSJ*/
 /*2023-07-14 SSJ*/
 /*2023-07-18 SSJ*/
+/*2023-08-23 jra*/
 
 /*리스트 상단 기간 검색바*/
 .m-hunjang-wrap .list-topBox {background: var(--neutral-3);width: 100%; padding:20px 15px 11px;box-sizing:border-box;border-bottom: 1px solid var(--border-basic-3);}
@@ -315,9 +315,18 @@
 .m-hunjang-wrap .apply_topbox .applyStatus4 div {background:var(--neutral-2);;border-radius:4px;text-align:center;margin-right: 5px;flex-grow: 1;padding: 10px 0;}
 .m-hunjang-wrap .apply_topbox .applyStatus4 div strong {font-family:'SUIT'; font-size:22px;}
 .m-hunjang-wrap .apply_topbox .applyStatus4 div p {font-size:var(--text-subtitle6); line-height:14px; margin-top:5px;}
-.m-hunjang-wrap .apply_topbox .applyStatus4 div:first-child {background:var(--cyan);;}
+.m-hunjang-wrap .apply_topbox .applyStatus4 div:first-child {background:var(--cyan);}
 .m-hunjang-wrap .apply_topbox .applyStatus4 div:first-child * {color:#fff;}
 .m-hunjang-wrap .apply_topbox .applyStatus4 div:last-child {margin-right:0;}
+
+/* 탭 클릭시 활성화 or 해제 */
+.m-hunjang-wrap .apply_topbox .applyStatus4 div.active{ background: var(--cyan);  color: #fff; }
+.m-hunjang-wrap .apply_topbox .applyStatus4 div.active strong{ color:#fff; }
+.m-hunjang-wrap .apply_topbox .applyStatus4 div.noactive{ background: var(--neutral-2); }
+.m-hunjang-wrap .apply_topbox .applyStatus4 div.noactive p{ color: #000!important; }
+.m-hunjang-wrap .apply_topbox .applyStatus4 div.noactive strong{ color: var(--blue-3) }
+
+
 .m-hunjang-wrap .apply_topbox .h-m-popup.popup-04 {position: relative; width: 100%; clear: both; border-radius: 4px; margin: 10px 0 0; padding:15px;}
 .m-hunjang-wrap .apply_topbox .h-m-popup.popup-04 .periodBox {display:flex;line-height:22px;}
 .m-hunjang-wrap .apply_topbox .h-m-popup.popup-04 .periodBox .period {color:var(--black-5);font-size:var(--text-subtitle5);margin-right: 15px;min-width:51px;}
