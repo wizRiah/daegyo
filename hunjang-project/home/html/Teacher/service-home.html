@@ -264,8 +264,9 @@
           <div class="h-appli-wrap">
             <div class="h-tit-box-1 flex-end">
               <p class="i-block h-tit-26">지원현황</p>
-              <a href="javascript:void(0);" class="h-txt-regular h-button-more h-button-nobg">더보기</a>
+              <a href="javascript:void(0);" class="h-txt-regular h-button-more h-button-nobg">더보기</a>  <!--데이터 없을시에는 보이지 않습니다. -->
             </div>
+            <!-- 
             <div class="my-apply">
               <div class="swiper acmainApp-swiper swiper-initialized swiper-horizontal">
                 <div class="swiper-wrapper">
@@ -283,6 +284,7 @@
                       <p class="h-app-date">입사지원일 : <span>2022.05.12</span></p>
                     </div>
                   </div>
+
                 </div>
                 <div class="btn-area">
                   <div class="swiper-button-next"></div>
@@ -291,7 +293,17 @@
                 </div>
               </div>
               
-            </div>
+            </div> -->
+              <!-- 지원현황 없을 시  -->
+              <div class="h-appli-nodata">
+                <div class="h-apply">
+                  <strong>입사지원한 내역이 없습니다.</strong>
+                  <p>채용공고를 검색하시고 입사지원을진행해 주세요. 훈장마을이 강사님의 구직활동에<br>도움이 되겠습니다.</p>
+                  <button type="button" class="h-button-l">채용공고 보러가기</button>
+                </div>
+              </div>
+
+
             <script>
                   // 티츄스토리 슬라이드
                   var swiper = new Swiper(".acmainApp-swiper", {
