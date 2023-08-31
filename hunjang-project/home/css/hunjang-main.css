@@ -220,10 +220,12 @@
 /* 브랜드채용관 상세 */
 
 .subVisual { position:relative; top:-5px; } 
-.subVisual:after { content:''; display:block; position:absolute; top:0; left:0; width:100%; height:250px; background:url('../images/bg_brandRecruit01.jpg') no-repeat; background-size:cover; z-index: -1; } 
+/* .subVisual:after { content:''; display:block; position:absolute; top:0; left:0; width:100%; height:250px; background:url('../images/bg_brandRecruit01.jpg') no-repeat; background-size:cover; z-index: -1; }  */
+.subVisual .bgbox {position: absolute; width: 100%; height: 100%; z-index: -1; overflow:hidden;}
+.subVisual .bgbox img {position: absolute; top: -999px; bottom: -999px; left: -999px; right: -999px; margin: auto; min-width: 100%; min-height: 100%; }
 .subVisual .content { padding-top:0; } 
 
-.txtVisual { height:250px; } 
+.txtVisual { height:250px; position:relative;} 
 .txtVisual ul { max-width: 1164px; width: 100%; margin: 0 auto; display: flex; align-items: center; height:100%; } 
 .txtVisual .imgbox { display: flex; align-items: center; justify-content: center; margin-right:30px; width:220px; height:94px; background:#fff; border-radius:10px; box-sizing: border-box; } 
 .txtVisual .imgbox img { width:140px; height:58px; } 
