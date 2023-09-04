@@ -3,93 +3,500 @@
 
 <head>
   <meta charset="utf-8">
-  <title>풀_레이아웃</title>
+  <title>컴포넌트 모음</title>
   <link rel="stylesheet" href="../../css/font.css">
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/mngr_contents.css">
   <link rel="stylesheet" href="../../css/mngr_component.css">
+  <link rel="stylesheet" href="../../css/jquery-ui-1.12.1.css">
 </head>
 
 <style>
-  .academy-mngr-Wrap {display: block;}
+  .academy-mngr-Wrap {
+    display: block;
+    padding: 20px;
+  }
 </style>
+
 <body>
-<div class="academy-mngr-Wrap">
-          
+  <div class="academy-mngr-Wrap">
+
 
 
   
-          <h2>탭버튼</h2>
-          <div class="tab-menu">
-            <ul class="col t-tab-01">
-              <li class="active">
-                <a href="javascript:void(0);">
-                  <span class="status">기본</span>
-          
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="status">상세</span>
-          
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="status">수납</span>
-          
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="status">반</span>
-          
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="status">출결</span>
-          
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="status">성적</span>
-          
-                </a>
-              </li>
-            </ul>
-          </div>
+    <h2>탭버튼</h2>      
+    <!-- li에 클래스 'active'추가시 활성화 -->
+    
+    <!-- 탭버튼 시작 -->
+    <div class="tab-menu">
+      <ul class="col tab-01">
+        <li class="active">
+          <a href="javascript:void(0);">
+            <span class="status">기본</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <span class="status">상세</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <span class="status">수납</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <span class="status">반</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <span class="status">출결</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <span class="status">성적</span>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- // -->
+
+
+   
+    <br><br><br>
+    <h2>체크박스</h2>
+    <!-- 체크박스 시작 -->
+    <div class="t-checkbox checkbox01">
+      <input type="checkbox" name="checkForm" id="check01" checked="">
+      <label for="check01">체크박스 디자인 01</label>
+    </div>
+    <div class="t-checkbox checkbox01">
+      <label>
+        <input type="checkbox" name="checkForm"><span class="spanLabel"></span>
+      </label>
+    </div>
+    <!-- // -->
+
+    
+
+ 
+    <br><br><br>
+    <h2>라디오</h2>
+    <!-- 라디오버튼 시작 -->
+    <div class="t-radio-01">
+      <input type="radio" id="hradio01" name="hradio01" checked="">
+      <label for="hradio01"><span class="rchk"></span>Line</label>
+
+      <input type="radio" id="hradio01_2" name="hradio01">
+      <label for="hradio01_2"><span class="rchk"></span>Rectangle</label>
+
+      <input type="radio" id="hradio01_3" name="hradio01">
+      <label for="hradio01_3"><span class="rchk"></span>Ellipse</label>
+
+      <input type="radio" id="hradio01_4" name="hradio01">
+      <label for="hradio01_4"><span class="rchk"></span></label>
+    </div>
+    <!-- // -->
 
 
 
 
-          <br><br><br>
-          <h2>체크박스</h2>
+    
+    <br><br><br>
+    <h2>셀렉트</h2>
+    <!-- 셀렉트 시작 -->
+    <select name="" id="">
+      <option value="" disabled="" selected="">대분류(전체)</option>
+      <option value="">20개씩 보기</option>
+      <option value="">40개씩 보기</option>
+      <option value="">60개씩 보기</option>
+      <option value="">80개씩 보기</option>
+      <option value="">100개씩 보기</option>
+    </select>
+    <!-- // -->
+
+
+
+
+  
+    <br><br><br>
+    <h2>인풋</h2>
+    <!-- 인풋 시작 -->
+    <input type="text" id="txtNmm" class="txtfield-basic" placeholder="이름">
+
+    <br><br>
+
+    <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="비활성화">
+    <!-- // -->
+
+
+
+
+
+    <br><br><br>
+    <h2>버튼</h2>
+    <!-- 버튼 시작 -->
+    <a href="javascript:void(0);" class="t-button-xs t-button-bora1">선택 문자발송 (36h)</a>
+    <a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a>
+    <a href="javascript:void(0);" class="t-button-sm">할인등록 (40h)</a>
+    <a href="javascript:void(0);" class="t-button-sm t-button-red">선택 미사용 처리 (40h)</a>
+    <a href="javascript:void(0);" class="t-button-sm t-button-green">엑셀 받기</a>
+    <!-- // -->
+
+
+
+
+    <br><br><br><br>
+    <h2>페이지네이션</h2>
+    <!-- 페이지네이션 시작 -->
+    <div class="t-pagination" aria-disabled="false" role="navigation">
+      <div class="t-pagination-content">
+
+        <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false"
+          disabled="" aria-disabled="true">
+          <span class="t-btn-content">
+            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+          </span>
+        </button>
+        <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false"
+          disabled="" aria-disabled="true">
+          <span class="t-btn-content">
+            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+          </span>
+        </button>
+
+        <div class="h-pagination-middle flex justify-center">
+          <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1"
+            aria-current="true">
+            <span class="t-btn-content">
+              <span class="block">1</span>
+            </span>
+          </button>
+          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+            aria-current="false">
+            <span class="t-btn-content">
+              <span class="block">2</span>
+            </span>
+          </button>
+          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3"
+            aria-current="false">
+            <span class="t-btn-content">
+              <span class="block">3</span>
+            </span>
+          </button>
+          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4"
+            aria-current="false">
+            <span class="t-btn-content">
+              <span class="block">4</span>
+            </span>
+          </button>
+          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5"
+            aria-current="false">
+            <span class="t-btn-content">
+              <span class="block">5</span>
+            </span>
+          </button>
+          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6"
+            aria-current="false">
+            <span class="t-btn-content">
+              <span class="block">6</span>
+            </span>
+          </button>
+        </div>
+
+        <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+          aria-current="false">
+          <span class="t-btn-content">
+            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+          </span>
+        </button>
+        <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
+          aria-current="false">
+          <span class="t-btn-content">
+            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+          </span>
+        </button>
+
+      </div>
+    </div>
+    <!-- // -->
+
+
+
+
+
+    <br><br><br>
+    <h2>테이블</h2>
+    <!-- 테이블 시작 -->
+    <table class="t-basic-1">
+      <thead>
+        <tr>
+          <th style="width:68px;">
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_all">
+              <label for="tbl_check_all"></label>
+            </div>
+          </th>
+          <th>No</th>
+          <th>수납금액</th>
+          <th>수납금액</th>
+          <th>환불금액</th>
+          <th>원생 휴대폰</th>
+          <th>귀가</th>
+        </tr>
+      </thead>
+      <tbody class="text-subtitle4">
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_01">
+              <label for="tbl_check_01"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_02">
+              <label for="tbl_check_02"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_03">
+              <label for="tbl_check_03"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_04">
+              <label for="tbl_check_04"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_05">
+              <label for="tbl_check_05"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_06">
+              <label for="tbl_check_06"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_07">
+              <label for="tbl_check_07"></label>
+            </div>
+          </td>
+          <td>
+            <p>경기도 오산시 외1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <br><br>
+
+    <table class="t-basic-2">
+      <colgroup>
+        <col style="width:155px;">
+        <col style="width:315px;">
+        <col style="width:155px;">
+        <col style="width:315px;">
+        <col style="width:155px;">
+        <col style="width:315px;">
+        <col style="width:155px;">
+        <col style="width:315px;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>종강기간</th>
+          <td colspan="8">
+            <div class="date-wrap">
+              <div class="t-field-wrap calendar">
+                <input type="text" id="txtNm" class="t-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+
+              </div>
+              ~
+              <div class="t-field-wrap calendar">
+                <input type="text" id="txtNm" class="t-txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
+
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>대분류</th>
+          <td><select name="" id="">
+              <option value="" disabled="" selected="">대분류(전체)</option>
+              <option value="">20개씩 보기</option>
+              <option value="">40개씩 보기</option>
+              <option value="">60개씩 보기</option>
+              <option value="">80개씩 보기</option>
+              <option value="">100개씩 보기</option>
+            </select></td>
+          <th>중분류</th>
+          <td><select name="" id="">
+              <option value="" disabled="" selected="">리스트 수</option>
+              <option value="">20개씩 보기</option>
+              <option value="">40개씩 보기</option>
+              <option value="">60개씩 보기</option>
+              <option value="">80개씩 보기</option>
+              <option value="">100개씩 보기</option>
+            </select></td>
+          <th>소분류</th>
+          <td><select name="" id="">
+              <option value="" disabled="" selected="">리스트 수</option>
+              <option value="">20개씩 보기</option>
+              <option value="">40개씩 보기</option>
+              <option value="">60개씩 보기</option>
+              <option value="">80개씩 보기</option>
+              <option value="">100개씩 보기</option>
+            </select></td>
+          <th>전체</th>
+          <td><input type="text" id="txtNmm" class="t-txtfield-basic" placeholder="검색어를 입력하세요."></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- // -->
 
 
 
 
 
 
-          <br><br><br>
-          <h2>라디오</h2>
-
-
-
-
-
-
-
-          <br><br><br>
-          <h2>버튼</h2>
-
-          <a href="javascript:void(0);" class="t-button-xs t-button-bora4">검색</a>
-
-
-
-
-</div>
+  </div>
 </body>
 
 </html>
