@@ -128,7 +128,7 @@
 
         <!-- 로그인 학원명 표시 시작 -->
         <div class="login-wrap">
-          <!--  -->
+          <!-- 드롭다운 시작 -->
           <div class="login-contents">
             <div class="flex items-center">
               <div class="login-icon">
@@ -139,8 +139,11 @@
             <div class="login-arrow">
             </div>
           </div>
+          <!-- 드롭다운 끝 -->
+
           <!-- 로그아웃 버튼 -->
           <button class="logout-btn" type="button"></button>
+          <!-- // -->
         </div>
         <!-- 로그인 확원명 표시 끝 -->
 
@@ -151,7 +154,7 @@
 
 
 
-    <!-- ●●●●●●●●●●● container 페이지 반복틀  ●●●●●●●●●●● -->
+    <!-- ●●●●●●●●●●● container 페이지 반복틀 시작 ●●●●●●●●●●● -->
     <div class="container">
 
 
@@ -159,333 +162,341 @@
       <!-- 페이지 컨텐츠 시작 : 클래스 추가되면서 페이지 발생예정 -->
       <div class="content sub">
 
+        <!-- 메인 컨텐츠 시작 -->
+        <div class="main-cont">
+          <!-- 서브 탭메뉴 -->
+          <div class="tab-menu">
+            <ul class="col tab-01">
+              <li class="active">
+                <a href="javascript:void(0);">
+                  <span class="status">기본</span>
 
-        <!-- 서브 탭메뉴 -->
-        <div class="tab-menu">
-          <ul class="col tab-01">
-            <li class="active">
-              <a href="javascript:void(0);">
-                <span class="status">기본</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="status">상세</span>
 
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <span class="status">상세</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="status">수납</span>
 
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <span class="status">수납</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="status">반</span>
 
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <span class="status">반</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="status">출결</span>
 
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <span class="status">출결</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="status">성적</span>
 
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <span class="status">성적</span>
-
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- // -->
-
-        <div class="layout-wrap">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 서브 탭메뉴 끝 -->
 
 
-          <div class="box-bg">
-            <table class="t-basic-2">
-              <colgroup>
-                <col style="width:155px;">
-                <col style="width:315px;">
-                <col style="width:155px;">
-                <col style="width:315px;">
-                <col style="width:155px;">
-                <col style="width:315px;">
-                <col style="width:155px;">
-                <col style="width:315px;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>종강기간</th>
-                  <td colspan="8"><div class="date-wrap">
-                <div class="t-field-wrap calendar">
-                  <input type="text" id="txtNm" class="txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
-                  
-                </div>
-                ~
-                <div class="t-field-wrap calendar">
-                  <input type="text" id="txtNm" class="txtfield-inner" placeholder="YYYY-MM-DD" readonly="">
-                  
-                </div>
-              </div></td>
-                </tr>
-                <tr>
-                  <th>대분류</th>
-                  <td><select name="" id="">
-                      <option value="" disabled="" selected="">대분류(전체)</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                      <option value="">60개씩 보기</option>
-                      <option value="">80개씩 보기</option>
-                      <option value="">100개씩 보기</option>
-                    </select></td>
-                  <th>중분류</th>
-                  <td><select name="" id="">
-                      <option value="" disabled="" selected="">리스트 수</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                      <option value="">60개씩 보기</option>
-                      <option value="">80개씩 보기</option>
-                      <option value="">100개씩 보기</option>
-                    </select></td>
-                  <th>소분류</th>
-                  <td><select name="" id="">
-                      <option value="" disabled="" selected="">리스트 수</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                      <option value="">60개씩 보기</option>
-                      <option value="">80개씩 보기</option>
-                      <option value="">100개씩 보기</option>
-                    </select></td>
-                  <th>전체</th>
-                  <td><input type="text" id="txtNmm" class="txtfield-basic" placeholder="검색어를 입력하세요."></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="button-wrap flex-end2">
-              <a href="javascript:void(0);" class="t-button-xs">검색조건 초기화</a>
-              <a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a>
+          <div class="layout-wrap">
+
+            <!-- 테이블 box 시작 -->
+            <div class="box-bg">
+              <table class="t-basic-2">
+                <colgroup>
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>종강기간</th>
+                    <td colspan="8"><div class="date-wrap">
+                  <div class="t-field-wrap calendar">
+                    <input type="text" id="txtNm" class="txtfield-inner" placeholder="YYYY-MM-DD" readonly=""/>
+                    
+                  </div>
+                  ~
+                  <div class="t-field-wrap calendar">
+                    <input type="text" id="txtNm" class="txtfield-inner" placeholder="YYYY-MM-DD" readonly=""/>
+                    
+                  </div>
+                </div></td>
+                  </tr>
+                  <tr>
+                    <th>대분류</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">대분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>중분류</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">리스트 수</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>소분류</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">리스트 수</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>전체</th>
+                    <td><input type="text" id="txtNmm" class="txtfield-basic" placeholder="검색어를 입력하세요."/></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="button-wrap flex-end2">
+                <a href="javascript:void(0);" class="t-button-xs">검색조건 초기화</a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a>
+              </div>
             </div>
+            <!-- 테이블 box 끝 -->
+
+
+            <!-- 하단 내용 시작 -->
+            <div class="content-section">
+
+              <div class="button-wrap flex-end2">
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora1 m0">선택 문자발송</a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora2 ml5">검색</a>
+                <select name="" id="">
+                  <option value="" disabled="" selected="">10건</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">40개씩 보기</option>
+                  <option value="">60개씩 보기</option>
+                  <option value="">80개씩 보기</option>
+                  <option value="">100개씩 보기</option>
+                </select>
+              </div>
+
+              <table class="t-basic-1">
+                <thead>
+                  <tr>
+                    <th style="width:68px;">
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_all"/>
+                        <label for="tbl_check_all"></label>
+                      </div>
+                    </th>
+                    <th>No</th>
+                    <th>수납금액</th>
+                    <th>수납금액</th>
+                    <th>환불금액</th>
+                    <th>원생 휴대폰</th>
+                    <th>귀가</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01"/>
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_02"/>
+                        <label for="tbl_check_02"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_03"/>
+                        <label for="tbl_check_03"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_04"/>
+                        <label for="tbl_check_04"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_05"/>
+                        <label for="tbl_check_05"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_06"/>
+                        <label for="tbl_check_06"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_07"/>
+                        <label for="tbl_check_07"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>경기도 오산시 외1</p>
+                    </td>
+                    <td class="txt-r">
+                      <p>300,000</p>
+                    </td>
+                    <td>
+                      <p>대학교(4년)</p>
+                    </td>
+                    <td>
+                      <p>채용시 마감</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 하단 내용 끝 -->
+
           </div>
 
-
-          <div class="content-section">
-
-            <div class="button-wrap flex-end2">
-              <a href="javascript:void(0);" class="t-button-xs t-button-bora1">선택 문자발송</a>
-              <a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a><select name="" id="" style="margin-left: 5px;">
-                <option value="" disabled="" selected="">10건</option>
-                <option value="">20개씩 보기</option>
-                <option value="">40개씩 보기</option>
-                <option value="">60개씩 보기</option>
-                <option value="">80개씩 보기</option>
-                <option value="">100개씩 보기</option>
-              </select>
-            </div>
-
-            <table class="t-basic-1">
-              <thead>
-                <tr>
-                  <th style="width:68px;">
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_all">
-                      <label for="tbl_check_all"></label>
-                    </div>
-                  </th>
-                  <th>No</th>
-                  <th>수납금액</th>
-                  <th>수납금액</th>
-                  <th>환불금액</th>
-                  <th>원생 휴대폰</th>
-                  <th>귀가</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_01">
-                      <label for="tbl_check_01"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_02">
-                      <label for="tbl_check_02"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_03">
-                      <label for="tbl_check_03"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_04">
-                      <label for="tbl_check_04"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_05">
-                      <label for="tbl_check_05"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_06">
-                      <label for="tbl_check_06"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="tbl_check_07">
-                      <label for="tbl_check_07"></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p>경기도 오산시 외1</p>
-                  </td>
-                  <td class="txt-r">
-                    <p>300,000</p>
-                  </td>
-                  <td>
-                    <p>대학교(4년)</p>
-                  </td>
-                  <td>
-                    <p>채용시 마감</p>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
         </div>
-
+        <!-- 메인 컨텐츠 끝 -->
 
       </div>
       <!-- 페이지 컨텐츠 끝 -->
 
       
     </div>
-    <!-- ●●●●●●●●●●● // ●●●●●●●●●●● -->
+    <!-- ●●●●●●●●●●● container 페이지 반복틀 끝 ●●●●●●●●●●● -->
 
 
     <!-- 푸터 시작 -->
