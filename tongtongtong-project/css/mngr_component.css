@@ -276,14 +276,13 @@ select
 
 /* 드롭다운 */
 /* checkbox - dropdown type 1 */
-.listbox-wrap {z-index:2;vertical-align:middle;margin-right: 30px;padding: 10px 20px 10px 10px;height: 56px;min-width: 200px;border-radius: 40px;box-sizing: border-box;border: 1px solid var(--pc-border-5);background-color: #ffffff;position: relative;box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%);} 
-.listbox-wrap > input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; } 
-.listbox-wrap > input[type="checkbox"]:focus + label:before { border-color:#000; } 
-.listbox-wrap > input[type="checkbox"] + label {display: flex;align-items: center;font-size: 13px;font-weight: 500;color: var(--pc-bora-1);cursor: pointer;position: relative;} 
-.listbox-wrap > input[type="checkbox"] + label:after {position:absolute;content:'';right: 0;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);background: transparent url(../images/login-arrow.png) center no-repeat;transition:transform 0.5s;cursor:pointer;width: 13px;height: 8px;} 
+.listbox-wrap {z-index:2;vertical-align:middle;margin-right: 30px; height: 56px;min-width: 200px;border-radius: 40px;box-sizing: border-box;border: 1px solid var(--pc-border-5);background-color: #ffffff;position: relative;box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%);} 
+.listbox-wrap > input[type="checkbox"] {position:absolute;display:none;width:1px;height:1px;text-indent:-999px;overflow:hidden;} 
+.listbox-wrap > input[type="checkbox"] + label {display: flex;align-items: center;font-size: 13px;font-weight: 500;color: var(--pc-bora-1);cursor: pointer;position: relative;padding: 10px 41px 10px 10px;} 
+.listbox-wrap > input[type="checkbox"] + label:after {position:absolute;content:'';right: 20px;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);background: transparent url(../images/login-arrow.png) center no-repeat;transition:transform 0.5s;cursor:pointer;width: 13px;height: 8px;transform-origin: center 20%;} 
 .listbox-wrap > input[type="checkbox"]:checked + label:after { transform: rotate(180deg); } 
 .listbox-wrap > input[type="checkbox"]:checked ~ .dropdown {top:calc(100% + 5px);height:auto;opacity:1;visibility:visible;margin-bottom:0;outline: 1px solid var(--pc-border-5);} 
-.listbox-wrap .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; } 
+.listbox-wrap .dropdown {overflow-y:auto;display:block;position:absolute;top:100%;right:0;z-index:1;width:100%;height:0;min-width:80px;max-height:160px;opacity:0;border-radius:6px;background:#fff;text-align:center;box-sizing:border-box;box-shadow:0 5px 10px #0000001A;transition:all 0.3s;} 
 .listbox-wrap .dropdown ul { margin:10px 0; text-align:left; } 
 .listbox-wrap .dropdown ul li a {display:block;padding:9px 20px;font-size: var(--pc-fs14);line-height:16px;color: var(--pc-bora-1);} 
 .listbox-wrap .dropdown ul li:hover {background: #efedfc;transition:all 0.2s ease;} 
@@ -302,7 +301,7 @@ select
 .academy-mngr-Wrap input.txtfield-basic.notEnter:placeholder-shown { background-color: #FFFDE2; border:1px solid #FF5656!important; } 
 
 /* input text에 값이 들어가면 */
-.academy-mngr-Wrap input:valid { background-color:#fff; } 
+.academy-mngr-Wrap input:valid {background-color:#fff;} 
 .academy-mngr-Wrap input[type="text"].txtfield-basic.notEnter:not(:placeholder-shown) { background-color:#fff!important; } 
 .academy-mngr-Wrap input[type="text"].notEnter { border:1px solid #FF5656; background-color:#FFFDE2; } 
 
