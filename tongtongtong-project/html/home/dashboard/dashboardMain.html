@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/mngr_contents.css">
   <link rel="stylesheet" href="../../../css/mngr_component.css">
-
-
-
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 
 <body>
@@ -132,23 +130,35 @@
         </div>
         <!-- 메뉴 끝 -->
 
-        <!-- 로그인 학원명 표시 시작 -->
-        <div class="login-wrap">
-          <!--  -->
-          <div class="login-contents">
-            <div class="flex items-center">
+         <!-- 로그인/로그아웃 영역 시작 -->
+         <div class="login-wrap">
+
+          <!-- 로그인 학원명 표시 시작 -->
+          <div class="listbox-wrap">
+            <input type="checkbox" id="list-box-01" class="list-box">
+            <label for="list-box-01">
               <div class="login-icon">
                 <img src="../../../images/icon_academy.png" alt="">
-              </div>
-              <span class="login-info">에듀베이션 학원</span>
-            </div>
-            <div class="login-arrow">
+              </div>에듀베이션 학원
+            </label>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li>
+                  <a href="javascript:void(0);">에듀베이션 학원</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">학원2</a>
+                </li>
+              </ul>
             </div>
           </div>
+          <!-- 로그인 학원명 표시 끝 -->
+
           <!-- 로그아웃 버튼 -->
           <button class="logout-btn" type="button"></button>
         </div>
-        <!-- 로그인 확원명 표시 끝 -->
+        <!-- 로그인/로그아웃 영역 끝 -->
 
       </div>
 
