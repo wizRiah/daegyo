@@ -831,7 +831,9 @@
 .m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dl .dd ul li { margin:0 7px 7px 0; } 
 .m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dl .dd textarea { width:100%; padding:15px 3px 15px 15px; box-sizing:border-box; font-size:14px; color:#333333; line-height:22px; border:1px solid #CCD1D7; border-radius:4px; height:220px; overflow-y:scroll; } 
 .m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dl .h-radio-04 { margin:0; height:auto; } 
-.m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dd input[type="text"] { overflow: hidden; text-overflow: ellipsis; } 
+.m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dd input[type="text"] { overflow: hidden; text-overflow: ellipsis; outline:none;} 
+.m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dd input[type="file"] {display:none; overflow: hidden; text-overflow: ellipsis; height: 46px !important; line-height: 46px; font-size: var(--text-subtitle4);}
+.m-acdmyInfoMdfy-Wrap .basic-popup-inputdl .dd input[type="file"] + label {flex-shrink:0;}
 .m-acdmyInfoMdfy-Wrap .h-radio-04 input[type="checkbox"] + label { height:auto; padding:10px 15px 10px 38px; min-height:42px; text-align: left; line-height: 18px; text-indent: -23px; letter-spacing:-0.5px;; } 
 .m-acdmyInfoMdfy-Wrap .h-radio-03 input[type="checkbox"] + label:after { left: 19px; top: 15px; } 
 .m-acdmyInfoMdfy-Wrap .h-radio-04 input[type="checkbox"]:checked + label { background: #26B2C8; border-color: #26B2C8; color: #fff; font-weight: 500; } 
@@ -865,6 +867,20 @@
 .m-acdmyInfoMdfy-Wrap .flexdl .dd { font-size:14px; color:#333333; } 
 .m-acdmyInfoMdfy-Wrap .video-list { display:flex; align-items:center; justify-content:space-between; } 
 .m-acdmyInfoMdfy-Wrap .video-list input[type="text"] { } 
+    /*상호2개이상시*/
+    .myacdemyList-wrap {width:100%; margin-bottom:25px;}
+    .myacdemyList-wrap button {width:100%; border:1px solid #CCD1D7; border-radius:4px; height:46px; line-height:46px; background:#fff; display:flex; align-items:center;}
+    .myacdemyList-wrap button input {color:#BCBCBC; font-size:16px; border:none; height:auto;}
+    .myacdemyList-wrap button:after {content:""; width:24px; height:24px; display:inline-block; background: url(../images/mobile/m_arrow_circle24.png) no-repeat; margin-right: 15px; background-size: 100%; transition:transform 0.5s;}
+    .myacdemyList-wrap button.on:after {content:""; transform: rotate(180deg);}
+    .myacdemyList-wrap .myacdemyList {display:none; width: 100%; background: #fff; border: 1px solid #CCD1D7; border-top: none; box-sizing: border-box; border-radius: 0 0 4px 4px; padding:0 15px; margin-top: -2px; max-height: 204px; overflow-y: scroll;}
+    .myacdemyList-wrap .myacdemyList>ul {border-top:1px solid #E7EDF5; padding:15px 0;}
+    .myacdemyList-wrap .myacdemyList>ul>li {font-size:14px; font-weight:500; color:#333333;}
+    .myacdemyList-wrap .myacdemyList>ul>li ~ li {margin-top:10px;}
+    .myacdemyList-wrap .myacdemyList>ul>li>ul {padding-left:10px; margin-top:7px;}
+    .myacdemyList-wrap .myacdemyList>ul>li>ul>li {font-size:14px; color:#7E7E7E; padding:7px 0;}
+    .myacdemyList-wrap button.on + .myacdemyList {display:block;}
+
 
 
 /* 채용광고등록 */
