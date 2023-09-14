@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>원생_레이아웃</title>
+  <title>원생 등록 form</title>
   <link rel="stylesheet" href="../../../../../css/font.css">
   <link rel="stylesheet" href="../../../../../css/common.css">
   <link rel="stylesheet" href="../../../../../css/mngr_contents.css">
@@ -173,15 +173,14 @@
       <div class="content sub studentMg">
 
         <!-- 왼쪽컨텐츠 시작 -->
-        <div class="left-cont">
+        <div class="left-cont stu-regist-form">
 
           <div class="left-cont-wrap">
 
             <!-- 검색창 부분 시작 -->
             <div class="searh-wrap">
               <input type="text" id="txtNmm" class="txtfield-basic" placeholder="원생/학부모 이름,휴대폰">
-              <div class="button-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a><a
-                  href="javascript:void(0);" class="t-button-xs t-button-bora6">상세검색</a></div>
+              <div class="button-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a><a href="javascript:void(0);" class="t-button-xs t-button-bora6">상세검색</a></div>
             </div>
             <!-- 검색창 부분 끝 -->
 
@@ -190,49 +189,40 @@
               <div class="flex mb20">
 
                 <div class="photo">
-                  <img src="../../../../../images/testP.jpg" alt="">
+                  <img src="../../../../../images/profie-df.jpg" alt="">
                 </div>
 
                 <div class="profile-txt-list">
                   <div class="profile-txt inclu-btn">
                     <p class="pro-tit">이름</p>
-                    <p class="pro-txt">홍길동<span class="sb-txt stu-status">(재)</span></p>
-                    <a href="javascript:void(0);" class="t-button-xxs t-button-grey-bd m0"><i
-                        class="i-print"></i><span>인쇄</span></a>
+                    <p class="pro-txt">-<span class="sb-txt stu-status"></span></p>
+                    <a href="javascript:void(0);" class="t-button-xxs t-button-grey-bd m0"><i class="i-print"></i><span>인쇄</span></a>
                   </div>
                   <div class="profile-txt inclu-btn">
                     <p class="pro-tit">닉네임</p>
-                    <p class="pro-txt">홍초길동</p>
+                    <p class="pro-txt">-</p>
                     <a href="javascript:void(0);" class="t-button-xxs t-button-red-bd m0">퇴원처리</a>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">학교</p>
-                    <p class="pro-txt">구로중학교 2학년</p>
+                    <p class="pro-txt">-</p>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">휴대폰</p>
-                    <p class="pro-txt">010-1234-5678</p>
+                    <p class="pro-txt">-</p>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">학부모</p>
-                    <p class="pro-txt">(모) 010-1234-5678<br>이정희 (leejunghee)</p>
+                    <p class="pro-txt">-</p>
                   </div>
                 </div>
 
               </div>
 
-              <div class="button-wrap mb20 flex-between">
-                <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd m0">사진 설정</a>
-                <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd">시간표 인쇄</a>
-                <a href="javascript:void(0);" id="add-close" class="t-button-xs t-button-bora2 flex-1 m0 add-close">
-                  <span class="add-txt-ch">추가정보 닫기</span><i class="more-arrow"></i>
-                </a>
-              </div>
+              
               <div class="button-wrap flex-between">
-                <a href="javascript:void(0);" class="t-button-xs t-button-bora6 flex-1 ml0"><i
-                    class="i-regist"></i><span>원생 등록</span></a>
-                <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd flex-1"><i
-                    class="i-modify"></i><span>수정</span></a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd flex-1 ml0">사진 설정</a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora6 flex-1 ml0"><i class="i-regist"></i><span>원생 등록</span></a>
               </div>
 
             </div>
@@ -241,32 +231,108 @@
             <!-- 원생정보 시작 -->
             <ul class="info-wrap mt30">
               <li>
+                <p class="info-tit">이름</p>
+                <p class="info-txt" style="
+    display: none;
+">남</p><div class="result-wrap" style="
+"><input type="text" id="txtNmm" class="txtfield-basic wd120" placeholder="" style=""></div>
+              </li>
+              <li>
+                <p class="info-tit">닉네임</p>
+                <p class="info-txt" style="
+    display: none;
+">중등부 2학년</p><div class="result-wrap" style="
+"><input type="text" id="txtNmm" class="txtfield-basic" placeholder=""></div>
+              </li>
+              <li>
+                <p class="info-tit">휴대폰</p>
+                <p class="info-txt" style="
+    display: none;
+">구로중학교 2학년</p>
+<div class="result-wrap" style="
+"><input type="text" id="txtNmm" class="txtfield-basic wd120" placeholder="" style="">
+<span class="alert-txt ml10">"-" 제외 입력</span></div>
+              </li>
+              <li>
                 <p class="info-tit">성별</p>
-                <p class="info-txt">남</p>
-              </li>
-              <li>
-                <p class="info-tit">학부/학년</p>
-                <p class="info-txt">중등부 2학년</p>
-              </li>
-              <li>
-                <p class="info-tit">학교</p>
-                <p class="info-txt">구로중학교 2학년</p>
-              </li>
-              <li>
+                <p class="info-txt" style="
+    display: none;
+">이정희 (leejung123)</p>
+<div class="t-radio-01 result-wrap">
+      <input type="radio" id="hradio01" name="hradio01" checked="">
+      <label for="hradio01"><span class="rchk"></span>남</label>
+
+      <input type="radio" id="hradio01_2" name="hradio01">
+      <label for="hradio01_2"><span class="rchk"></span>여</label>
+
+      
+      
+
+      
+      
+    </div>
+              </li><li>
                 <p class="info-tit">학부모 앱</p>
-                <p class="info-txt">이정희 (leejung123)</p>
+                <p class="info-txt" style="
+    display: none;
+">이정희 (leejung123)</p>
+<div class="result-wrap">
+    <span class="result-txt">-</span></div>
               </li>
               <li>
                 <p class="info-tit">(모)휴대폰</p>
-                <p class="info-txt">010-1234-5678</p>
+                <p class="info-txt" style="
+    display: none;
+">010-1234-5678</p>
+<div class="result-wrap" style="
+"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
               </li>
               <li>
                 <p class="info-tit">(부)휴대폰</p>
-                <p class="info-txt">010-1234-5678</p>
+                <p class="info-txt" style="
+    display: none;
+">010-1234-5678</p>
+<div class="result-wrap" style="
+"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
               </li>
               <li>
-                <p class="info-tit">등록일</p>
-                <p class="info-txt">2023-07-14</p>
+                <p class="info-tit">학부/학년</p>
+                <p class="info-txt" style="
+    display: none;
+">2023-07-14</p>
+<div class="result-wrap" style="
+">
+    <select name="" id="" style="
+    margin-right: 10px;
+    width: 120px;
+">
+      <option value="" disabled="" selected="">학부</option>
+      <option value="">20개씩 보기</option>
+      <option value="">40개씩 보기</option>
+      <option value="">60개씩 보기</option>
+      <option value="">80개씩 보기</option>
+      <option value="">100개씩 보기</option>
+    </select><select name="" id="" style="
+    width: 89px;
+">
+      <option value="" disabled="" selected="">학년</option>
+      <option value="">20개씩 보기</option>
+      <option value="">40개씩 보기</option>
+      <option value="">60개씩 보기</option>
+      <option value="">80개씩 보기</option>
+      <option value="">100개씩 보기</option>
+    </select></div>
+              </li><li style="
+    align-items: flex-start;
+">
+                <p class="info-tit">학교</p>
+                <p class="info-txt" style="
+    display: none;
+">구로중학교 2학년</p>
+<div class="result-wrap" style="
+"><input type="text" id="txtNmm" class="txtfield-basic wd120" placeholder="" style="">
+<a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a><input type="text" id="txtNmm" class="mt5 txtfield-basic" placeholder="직접입력">
+</div>
               </li>
               <li>
                 <p class="info-tit">출결번호</p>
@@ -302,7 +368,7 @@
 
 
           <!-- 원생 추가정보 -->
-          <div class="add-info-wrap active">
+          <div class="add-info-wrap">
             <!-- 상단 타이틀 영역 -->
             <div class="add-title"><span class="i-stuInfo"></span><span class="main-tit ml10">원생 추가 정보</span></div>
             <!-- // -->
@@ -329,8 +395,7 @@
                         <td>홍길동<span class="sb-txt stu-status">(재)</span></td>
                         <td>닉네임</td>
                         <td>중등부 3학년</td>
-                        <td><a href="javascript:void(0);" class="t-button-circle btn-del t-button-grey" title="삭제"><i
-                              class="i-del"></i></a></td>
+                        <td><a href="javascript:void(0);" class="t-button-circle btn-del t-button-grey" title="삭제"><i class="i-del"></i></a></td>
                       </tr>
                       <tr>
                         <td>홍길동<span class="sb-txt stu-status">(휴)</span></td>
@@ -338,8 +403,7 @@
                           닉네임
                         </td>
                         <td>고등부 1학년</td>
-                        <td><a href="javascript:void(0);" class="t-button-circle btn-del t-button-grey" title="삭제"><i
-                              class="i-del"></i></a></td>
+                        <td><a href="javascript:void(0);" class="t-button-circle btn-del t-button-grey" title="삭제"><i class="i-del"></i></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -390,9 +454,7 @@
                         <th>가상계좌</th>
                         <td>
                           <div class="tb-btnset">
-                            <div><span>010-1234-5678</span><a href="javascript:void(0);"
-                                class="t-button-circle t-button-circle-16 remove t-button-red-bd"></a></div><a
-                              href="javascript:void(0);" class="t-button-xms m0 t-button-grey">설정</a>
+                            <div><span>010-1234-5678</span><a href="javascript:void(0);" class="t-button-circle t-button-circle-16 remove t-button-red-bd"></a></div><a href="javascript:void(0);" class="t-button-xms m0 t-button-grey">설정</a>
                           </div>
                         </td>
                       </tr>
@@ -700,7 +762,7 @@
 
           <!-- 문자 발송 영역 시작 -->
           <div class="message-wrap">
-            <input type="text" id="txtNmm" class="txtfield-basic" placeholder="발송 문자를 입력하세요.">
+            <input type="text" id="txtNmm" class="txtfield-basic flex-1" placeholder="발송 문자를 입력하세요.">
             <div class="button-wrap">
               <a href="javascript:void(0);" class="t-button-xs t-button-bora6">문자 발송</a>
               <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd ml0">상세 문자 발송</a>
@@ -754,8 +816,7 @@
               <div class="tit-wrap">
                 <p class="main-tit">출결</p>
                 <div class="button-wrap items-end">
-                  <a href="javascript:void(0);" class="t-button-xms t-button-grey-bd"><i
-                      class="i-print"></i><span>인쇄</span></a>
+                  <a href="javascript:void(0);" class="t-button-xms t-button-grey-bd"><i class="i-print"></i><span>인쇄</span></a>
                   <a href="javascript:void(0);" class="t-button-xms"><i class="i-clock"></i><span>보기</span></a>
                 </div>
               </div>
@@ -1079,23 +1140,7 @@
 
   <script>
 
-    // 원생정보 더보기 버튼 클릭시 
-    document.getElementById("add-close").onclick = function () {
-
-      $(this).toggleClass("add-close");
-
-      if ($(".add-txt-ch").text() == "추가정보 닫기") {
-        $(".add-txt-ch").text('원생정보 더보기');
-      } else {
-        $(".add-txt-ch").text('추가정보 닫기');
-      }
-
-      $(".add-info-wrap").toggleClass("active");
-
-
-    };
-
-
+    
     // 공통 스크립트
     // 로그인 학원명 드롭다운메뉴 클릭시 
     document.getElementById("login-contents").onclick = function () {
