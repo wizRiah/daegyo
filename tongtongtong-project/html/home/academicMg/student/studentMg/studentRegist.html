@@ -172,7 +172,10 @@
       <!-- 페이지 컨텐츠 시작 : 클래스 추가되면서 페이지 발생예정 -->
       <div class="content sub studentMg">
 
+
+
         <!-- 왼쪽컨텐츠 시작 -->
+        <!-- left-cont에 클래스 'stu-regist-form' 추가시 인풋 형태로 변경. 삭제시 데이터만 보임. -->
         <div class="left-cont stu-regist-form">
 
           <div class="left-cont-wrap">
@@ -180,7 +183,9 @@
             <!-- 검색창 부분 시작 -->
             <div class="searh-wrap">
               <input type="text" id="txtNmm" class="txtfield-basic" placeholder="원생/학부모 이름,휴대폰">
-              <div class="button-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a><a href="javascript:void(0);" class="t-button-xs t-button-bora6">상세검색</a></div>
+              <div class="button-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora6">상세검색</a>
+              </div>
             </div>
             <!-- 검색창 부분 끝 -->
 
@@ -189,38 +194,59 @@
               <div class="flex mb20">
 
                 <div class="photo">
+                  <!-- 사진 등록시 등록한 이미지로 변경되어야함. -->
                   <img src="../../../../../images/profie-df.jpg" alt="">
                 </div>
 
                 <div class="profile-txt-list">
                   <div class="profile-txt inclu-btn">
                     <p class="pro-tit">이름</p>
-                    <p class="pro-txt">-<span class="sb-txt stu-status"></span></p>
+                    <p class="pro-txt">홍길동<span class="sb-txt stu-status">(재)</span></p>
+                    <div class="result-wrap">
+                      -
+                    </div>
                     <a href="javascript:void(0);" class="t-button-xxs t-button-grey-bd m0"><i class="i-print"></i><span>인쇄</span></a>
                   </div>
                   <div class="profile-txt inclu-btn">
                     <p class="pro-tit">닉네임</p>
-                    <p class="pro-txt">-</p>
+                    <p class="pro-txt">홍초길동</p>
+                    <div class="result-wrap">-</div>
                     <a href="javascript:void(0);" class="t-button-xxs t-button-red-bd m0">퇴원처리</a>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">학교</p>
-                    <p class="pro-txt">-</p>
+                    <p class="pro-txt">구로중학교 2학년</p>
+                    <div class="result-wrap">-</div>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">휴대폰</p>
-                    <p class="pro-txt">-</p>
+                    <p class="pro-txt">010-1234-5678</p>
+                    <div class="result-wrap">-</div>
                   </div>
                   <div class="profile-txt">
                     <p class="pro-tit">학부모</p>
-                    <p class="pro-txt">-</p>
+                    <p class="pro-txt">(모) 010-1234-5678<br>이정희(leejunghee)</p>
+                    <div class="result-wrap">-</div>
                   </div>
                 </div>
 
               </div>
 
-              
-              <div class="button-wrap flex-between">
+
+              <div class="btn-set-box">
+                <div class="button-wrap mb20 flex-between">
+                  <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd m0">사진 설정</a>
+                  <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd">시간표 인쇄</a>
+                  <a href="javascript:void(0);" id="add-close" class="t-button-xs t-button-bora2 flex-1 m0">
+                    <span class="add-txt-ch">원생정보 더보기</span><i class="more-arrow"></i>
+                  </a>
+                </div>
+                <div class="button-wrap flex-between">
+                  <a href="javascript:void(0);" class="t-button-xs t-button-bora6 flex-1 ml0"><i class="i-regist"></i><span>원생 등록</span></a>
+                  <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd flex-1"><i class="i-modify"></i><span>수정</span></a>
+                </div>
+              </div>
+              <div class="regist-button-set button-wrap flex-between">
                 <a href="javascript:void(0);" class="t-button-xs t-button-grey2-bd flex-1 ml0">사진 설정</a>
                 <a href="javascript:void(0);" class="t-button-xs t-button-bora6 flex-1 ml0"><i class="i-regist"></i><span>원생 등록</span></a>
               </div>
@@ -228,237 +254,180 @@
             </div>
             <!-- 사진 및 원생 요약정보 끝 -->
 
-            <!-- 원생정보 시작 -->
+
+
+            <!-- 원생정보 시작 (인풋 나오는 곳) -->
             <ul class="info-wrap mt30">
               <li>
                 <p class="info-tit">이름</p>
-                <p class="info-txt" style="
-    display: none;
-">남</p><div class="result-wrap" style="
-"><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="" style=""></div>
+                <p class="info-txt">홍길동</p>
+                <div class="result-wrap">
+                  <input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="">
+                </div>
               </li>
               <li>
                 <p class="info-tit">닉네임</p>
-                <p class="info-txt" style="
-    display: none;
-">중등부 2학년</p><div class="result-wrap" style="
-"><input type="text" id="txtNmm" class="txtfield-basic" placeholder=""></div>
+                <p class="info-txt">홍초길동</p>
+                <div class="result-wrap">
+                  <input type="text" id="txtNmm" class="txtfield-basic" placeholder="">
+                </div>
               </li>
               <li>
                 <p class="info-tit">휴대폰</p>
-                <p class="info-txt" style="
-    display: none;
-">구로중학교 2학년</p>
-<div class="result-wrap" style="
-"><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="" style="">
-<span class="alert-txt ml10">"-" 제외 입력</span></div>
+                <p class="info-txt">010-1234-5678</p>
+                <div class="result-wrap"><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="">
+                  <span class="alert-txt ml10">"-" 제외 입력</span>
+                </div>
               </li>
               <li>
                 <p class="info-tit">성별</p>
-                <p class="info-txt" style="
-    display: none;
-">이정희 (leejung123)</p>
-<div class="t-radio-01 result-wrap">
-      <input type="radio" id="hradio01" name="hradio01" checked="">
-      <label for="hradio01"><span class="rchk"></span>남</label>
+                <p class="info-txt">남</p>
+                <div class="t-radio-01 result-wrap">
+                  <input type="radio" id="tradio01" name="tradio01" checked="">
+                  <label for="tradio01"><span class="rchk"></span>남</label>
 
-      <input type="radio" id="hradio01_2" name="hradio01">
-      <label for="hradio01_2"><span class="rchk"></span>여</label>
-
-    </div>
-              </li><li>
+                  <input type="radio" id="tradio01_2" name="tradio01">
+                  <label for="tradio01_2"><span class="rchk"></span>여</label>
+                </div>
+              </li>
+              <li>
                 <p class="info-tit">학부모 앱</p>
-                <p class="info-txt" style="
-    display: none;
-">이정희 (leejung123)</p>
-<div class="result-wrap">
-    <span class="result-txt">-</span></div>
+                <p class="info-txt">(모) 이정희 (leejung123)</p>
+                <div class="result-wrap">
+                  <span class="result-txt">-</span>
+                </div>
               </li>
               <li>
                 <p class="info-tit">(모)휴대폰</p>
-                <p class="info-txt" style="
-    display: none;
-">010-1234-5678</p>
-<div class="result-wrap" style="
-"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
+                <p class="info-txt">010-1234-5678</p>
+                <div class="result-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
               </li>
               <li>
                 <p class="info-tit">(부)휴대폰</p>
-                <p class="info-txt" style="
-    display: none;
-">010-1234-5678</p>
-<div class="result-wrap" style="
-"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
+                <p class="info-txt">010-1234-5678</p>
+                <div class="result-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
               </li>
               <li>
                 <p class="info-tit">학부/학년</p>
-                <p class="info-txt" style="
-    display: none;
-">2023-07-14</p>
-<div class="result-wrap">
-    <select name="" id="" style="
-">
-      <option value="" disabled="" selected="">학부</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select><select name="" id="">
-      <option value="" disabled="" selected="">학년</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select></div>
-              </li><li class="flex-start">
+                <p class="info-txt">중등부 2학년</p>
+                <div class="result-wrap">
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">학부</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">60개씩 보기</option>
+                    <option value="">80개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select><select name="" id="">
+                    <option value="" disabled="" selected="">학년</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">60개씩 보기</option>
+                    <option value="">80개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select>
+                </div>
+              </li>
+              <li class="flex-start">
                 <p class="info-tit">학교</p>
-                <p class="info-txt" style="
-    display: none;
-">구로중학교 2학년</p>
-<div class="result-wrap" style="
-"><input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder=""><a href="javascript:void(0);" class="t-button-xs t-button-bora2 mr0">검색</a><input type="text" id="txtNmm" class="mt5 txtfield-basic" placeholder="직접입력"></div>
-              </li><li>
+                <p class="info-txt">구로중학교 2학년</p>
+                <div class="result-wrap"><input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder=""><a href="javascript:void(0);" class="t-button-xs t-button-bora2 mr0">검색</a><input type="text" id="txtNmm" class="mt5 txtfield-basic" placeholder="직접입력"></div>
+              </li>
+              <li>
                 <p class="info-tit">학년</p>
-                <p class="info-txt" style="
-    display: none;
-">2023-07-14</p>
-<div class="result-wrap">
-    <select name="" id="" style="
-">
-      <option value="" disabled="" selected="">선택</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select></div>
+                <p class="info-txt">2학년</p>
+                <div class="result-wrap">
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">선택</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">60개씩 보기</option>
+                    <option value="">80개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <p class="info-tit">등록일</p>
-                <p class="info-txt" style="
-    display: none;
-">123456</p>
-<div class="result-wrap" style="
-"><span class="date-picker">
-      <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="" style="
-    width: 140px!important;
-">
-      <img class="ui-datepicker-trigger" src="../../../../../images/datepicker.png" alt="" title=""></span>
-
-</div>
-              </li><li>
+                <p class="info-txt">2023-07-14</p>
+                <div class="result-wrap">
+                  <span class="date-picker">
+                    <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="" style="width: 140px!important;">
+                    <img class="ui-datepicker-trigger" src="../../../../../images/datepicker.png" alt="" title=""></span>
+                </div>
+              </li>
+              <li>
                 <p class="info-tit">출결번호</p>
-                <p class="info-txt" style="
-    display: none;
-">123456</p>
-<div class="result-wrap" style="
-"><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="" style="">
-</div>
+                <p class="info-txt">123456</p>
+                <div class="result-wrap"><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="">
+                </div>
               </li>
               <li>
                 <p class="info-tit">재원형제</p>
-                <p class="info-txt t-line-hgt21" style="
-    display: none;
-">홍이삼<span class="sb-txt stu-status">(재)</span> / 중등부 3학년<br>홍삼삼<span class="sb-txt stu-status">(휴)</span> / 고등부 2학년</p>
-<div class="result-wrap" style="
-"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a></div>
+                <p class="info-txt t-line-hgt21">홍이삼<span class="sb-txt stu-status">(재)</span> / 중등부 3학년<br>홍삼삼<span class="sb-txt stu-status">(휴)</span> / 고등부 2학년
+                </p>
+                <div class="result-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a>
+                </div>
               </li>
-              
               <li class="flex-start">
                 <p class="info-tit">특성</p>
                 <div class="info-txt">
                   <ul class="t-bullet-01">
-                    <li><span class="info-tit">유입경로</span><span class="info-txt" style="
-    display: none;
-">홈페이지</span><div class="result-wrap" style=""><select name="" id="" style="
-">
-      <option value="" disabled="" selected="">홈페이지</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select>
-</div></li>
-                    <li><span class="info-tit">입학레벨</span><span class="info-txt" style="
-    display: none;
-">A급</span>
-<div class="result-wrap" style="
-"><select name="" id="" style="
-">
-      <option value="" disabled="" selected="">A급</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select>
-</div></li>
-                    <li><span class="info-tit">특별관리</span><span class="info-txt" style="
-    display: none;
-">★★★</span>
-<div class="result-wrap" style="
-"><select name="" id="" style="
-">
-      <option value="" disabled="" selected="">★★★</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select>
-</div></li>
-                    <li><span class="info-tit">어머니관심사</span><span class="info-txt" style="
-    display: none;
-">내신성적</span>
-<div class="result-wrap" style="
-"><select name="" id="" style="
-">
-      <option value="" disabled="" selected="">내신성적</option>
-      <option value="">20개씩 보기</option>
-      <option value="">40개씩 보기</option>
-      <option value="">60개씩 보기</option>
-      <option value="">80개씩 보기</option>
-      <option value="">100개씩 보기</option>
-    </select>
-</div></li>
+                    <li><span class="info-tit">유입경로</span><span class="info-txt">홈페이지</span>
+                      <div class="result-wrap"><select name="" id="">
+                          <option value="" disabled="" selected="">홈페이지</option>
+                          <option value="">20개씩 보기</option>
+                          <option value="">40개씩 보기</option>
+                          <option value="">60개씩 보기</option>
+                          <option value="">80개씩 보기</option>
+                          <option value="">100개씩 보기</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li><span class="info-tit">입학레벨</span><span class="info-txt">A급</span>
+                      <div class="result-wrap"><select name="" id="">
+                          <option value="" disabled="" selected="">A급</option>
+                          <option value="">20개씩 보기</option>
+                          <option value="">40개씩 보기</option>
+                          <option value="">60개씩 보기</option>
+                          <option value="">80개씩 보기</option>
+                          <option value="">100개씩 보기</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li><span class="info-tit">특별관리</span><span class="info-txt">★★★</span>
+                      <div class="result-wrap"><select name="" id="">
+                          <option value="" disabled="" selected="">★★★</option>
+                          <option value="">20개씩 보기</option>
+                          <option value="">40개씩 보기</option>
+                          <option value="">60개씩 보기</option>
+                          <option value="">80개씩 보기</option>
+                          <option value="">100개씩 보기</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li><span class="info-tit">어머니관심사</span><span class="info-txt">내신성적</span>
+                      <div class="result-wrap"><select name="" id="">
+                          <option value="" disabled="" selected="">내신성적</option>
+                          <option value="">20개씩 보기</option>
+                          <option value="">40개씩 보기</option>
+                          <option value="">60개씩 보기</option>
+                          <option value="">80개씩 보기</option>
+                          <option value="">100개씩 보기</option>
+                        </select>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </li>
               <li class="flex-start">
                 <p class="info-tit">메모</p>
-                <p class="info-txt t-line-hgt21" style="
-    display: none;
-">지속적으로 성적이 향상필요한 원생으로 특히 중등 수학이많이 떨어져 있음.</p><div class="result-wrap" style="
-"><div class="h-text-field_slot" style="
-    position: relative;
-    display: flex!important;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    background: #fff;
-">
-                          <textarea id="" rows="4" style="
-    color: var(--black-2);
-    flex: 1 1 auto;
-    line-height: 22px;
-    max-width: 100%;
-    min-height: 60px;
-    resize: none;
-    border-style: none;
-    background-color: transparent;
-    padding: 10px;
-    align-self: stretch;
-    box-sizing: border-box;
-    font-size: 14px;
-"></textarea>
-                        </div></div>
+                <p class="info-txt t-line-hgt21">지속적으로 성적이 향상필요한 원생으로 특히 중등 수학이많이 떨어져 있음.</p>
+                <div class="result-wrap">
+                  <div class="t-text-field_slot">
+                    <textarea id="" rows="4"></textarea>
+                  </div>
+                </div>
               </li>
             </ul>
             <!-- 원생정보 끝 -->
@@ -466,7 +435,7 @@
           </div>
 
 
-          <!-- 원생 추가정보 -->
+          <!-- 원생 추가정보 창 시작-->
           <div class="add-info-wrap">
             <!-- 상단 타이틀 영역 -->
             <div class="add-title"><span class="i-stuInfo"></span><span class="main-tit ml10">원생 추가 정보</span></div>
@@ -812,7 +781,7 @@
               </ul>
             </div>
           </div>
-          <!-- // -->
+          <!-- 원생 추가정보 창 끝 -->
 
         </div>
         <!-- 왼쪽컨텐츠 끝 -->
@@ -903,8 +872,7 @@
                       중학교&gt;수학<br>중등부2학년수학
                     </td>
                     <td>
-                      <p class="opt-attend" style="
-">출석</p>
+                      <p class="opt-attend">출석</p>
                     </td>
                     <td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td>
                     <td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td>
@@ -1239,8 +1207,22 @@
   <!-- PC 전체 Wrap 끝 -->
 
   <script>
+    // 원생정보 더보기 버튼 클릭시 
+    document.getElementById("add-close").onclick = function () {
 
-    
+      $(this).toggleClass("add-close");
+
+      if ($(".add-txt-ch").text() == "추가정보 닫기") {
+        $(".add-txt-ch").text('원생정보 더보기');
+      } else {
+        $(".add-txt-ch").text('추가정보 닫기');
+      }
+
+      $(".add-info-wrap").toggleClass("active");
+
+
+    };
+
     // 공통 스크립트
     // 로그인 학원명 드롭다운메뉴 클릭시 
     document.getElementById("login-contents").onclick = function () {
