@@ -176,7 +176,7 @@
 
         <!-- 왼쪽컨텐츠 시작 -->
         <!-- left-cont에 클래스 'stu-regist-form' 추가시 인풋 형태로 변경. 삭제시 데이터만 보임. -->
-        <div class="left-cont stu-regist-form">
+        <div class="left-cont">
 
           <div class="left-cont-wrap">
 
@@ -201,7 +201,7 @@
                 <div class="profile-txt-list">
                   <div class="profile-txt inclu-btn">
                     <p class="pro-tit">이름</p>
-                    <p class="pro-txt">홍길동<span class="sb-txt stu-status">(재)</span></p>
+                    <p class="pro-txt">홍길동<span class="opt-regist">(재)</span></p>
                     <div class="result-wrap">
                       -
                     </div>
@@ -367,7 +367,7 @@
               </li>
               <li>
                 <p class="info-tit">재원형제</p>
-                <p class="info-txt t-line-hgt21">홍이삼<span class="sb-txt stu-status">(재)</span> / 중등부 3학년<br>홍삼삼<span class="sb-txt stu-status">(휴)</span> / 고등부 2학년
+                <p class="info-txt t-line-hgt21">홍이삼<span class="sb-txt">(재)</span> / 중등부 3학년<br>홍삼삼<span class="sb-txt">(휴)</span> / 고등부 2학년
                 </p>
                 <div class="result-wrap"><a href="javascript:void(0);" class="t-button-xs t-button-bora6 m0">설정</a>
                 </div>
@@ -413,13 +413,13 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>홍길동<span class="sb-txt stu-status">(재)</span></td>
+                        <td>홍길동<span class="opt-regist">(재)</span></td>
                         <td>닉네임</td>
                         <td>중등부 3학년</td>
                         <td><a href="javascript:void(0);" class="t-button-circle btn-del t-button-grey" title="삭제"><i class="i-del"></i></a></td>
                       </tr>
                       <tr>
-                        <td>홍길동<span class="sb-txt stu-status">(휴)</span></td>
+                        <td>홍길동<span class="opt-absence">(휴)</span></td>
                         <td>
                           닉네임
                         </td>
@@ -826,40 +826,40 @@
               </table>
             </div>
             <div class="box-bg">
-        <div class="tit-wrap">
-          <p class="main-tit">출결</p>
-          <div class="button-wrap items-end">
-            <a href="javascript:void(0);" class="t-button-xms t-button-grey-bd"><i class="i-print"></i><span>인쇄</span></a>
-            <a href="javascript:void(0);" class="t-button-xms"><i class="i-clock"></i><span>보기</span></a>
-          </div>
-        </div>
-        <table class="t-basic-1 bora4">
-          <thead>
-            <tr>
-              <th>요일</th>
-              <th>수강반(보강)</th>
-              <th>시간</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>월</td>
-              <td class="txt-l">중등 2학년 수학반</td>
-              <td><b>[오후] </b>1:00 ~ 2:30</td>
-            </tr>
-            <tr>
-              <td>수</td>
-              <td class="txt-l">중등 2학년 수학반</td>
-              <td><b>[오후] </b>1:00 ~ 2:30</td>
-            </tr>
-            <tr>
-              <td>금</td>
-              <td class="txt-l">중등 2학년 수학반</td>
-              <td><b>[오후] </b>1:00 ~ 2:30</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <div class="tit-wrap">
+                <p class="main-tit">출결</p>
+                <div class="button-wrap items-end">
+                  <a href="javascript:void(0);" class="t-button-xms t-button-grey-bd"><i class="i-print"></i><span>인쇄</span></a>
+                  <a href="javascript:void(0);" class="t-button-xms"><i class="i-clock"></i><span>보기</span></a>
+                </div>
+              </div>
+              <table class="t-basic-1 bora4">
+                <thead>
+                  <tr>
+                    <th>요일</th>
+                    <th>수강반(보강)</th>
+                    <th>시간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>월</td>
+                    <td class="txt-l">중등 2학년 수학반</td>
+                    <td><b>[오후] </b>1:00 ~ 2:30</td>
+                  </tr>
+                  <tr>
+                    <td>수</td>
+                    <td class="txt-l">중등 2학년 수학반</td>
+                    <td><b>[오후] </b>1:00 ~ 2:30</td>
+                  </tr>
+                  <tr>
+                    <td>금</td>
+                    <td class="txt-l">중등 2학년 수학반</td>
+                    <td><b>[오후] </b>1:00 ~ 2:30</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="box-bg">
               <div class="tit-wrap">
                 <p class="main-tit">수납정보</p>
@@ -1062,8 +1062,10 @@
 
     <!-- 팝업 시작 -->
 
+
+
     <!-- 원생 간편검색 결과 팝업 시작 -->
-    <div class="t-popup-wrap" style="/* display: none; */">
+    <div class="t-popup-wrap" style="display: none;">
       <div class="t-popup ui-draggable" style="width: 800px;">
 
         <div class="pop-header ui-draggable-handle" style="cursor: move;">
@@ -1073,112 +1075,166 @@
         <div class="pop-body">
           <div class="pop-container">
 
-            
-
             <div class="tit-wrap">
-        <span class="main-text"><b>[재]</b> : 재원생 / <b>[예]</b> : 예비생 / <b>[미]</b> : 미등록생 / <b>[퇴]</b> : 퇴원생 / <b>[휴]</b> : 휴원생</span>
-        <div class="button-wrap items-end">
-          
-          
-          
-          
-          <select name="" id="">
-      <option value="" disabled="" selected="">10건</option>
-      <option value="">100건</option>
-      <option value="">200건</option>
-      
-      
-      
-    </select>
-        </div>
-      </div>
+              <span class="main-text">
+                <span class="opt-regist">[재]</span> : 재원생 / <span class="opt-reserve">[예]</span> :
+                예비생 / <span class="opt-nonregi">[미]</span> : 미등록생 / <span class="opt-discharge">[퇴]</span> : 퇴원생 / <span class="opt-absence">[휴]</span> : 휴원생
+              </span>
+              <div class="button-wrap items-end">
+                <select name="" id="">
+                  <option value="" disabled="" selected="">10건</option>
+                  <option value="">100건</option>
+                  <option value="">200건</option>
+                </select>
+              </div>
+            </div>
 
-            
-            <table class="t-basic-1 bora4">
-        <thead>
-          <tr>
-            <th>원생명</th>
-            <th>휴대폰</th>
-            <th>학부모(모)</th>
-            <th>학부모(부)</th>
-          <th>학부모(부)</th><th>학부모(부)</th><th>학부모(부)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="txt-l">
-              중학교&gt;수학<br>중등부2학년수학
-            </td>
-            <td>
-              <p class="opt-attend">출석</p>
-            </td>
-            <td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td>
-            <td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td>
-          <td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td><td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td><td>오전 9:56<br><span class="sb-txt">(오후 6:00)</span></td></tr>
-          
-          
-          
-        </tbody>
-      </table>
+
+            <table class="t-basic-1 bora3">
+              <thead>
+                <tr>
+                  <th>원생명</th>
+                  <th>휴대폰</th>
+                  <th>학부모(모)</th>
+                  <th>학부모(부)</th>
+                  <th>가족</th>
+                  <th>학부/학년</th>
+                  <th>수강반</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="opt-regist">[재]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-reserve">[예]</span> 홍길동
+                    <br>(홍초길동)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-nonregi">[미]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-discharge">[퇴]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-absence">[휴]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+              </tbody>
+            </table>
 
             <div class="t-pagination mt30" aria-disabled="false" role="navigation">
-      <div class="t-pagination-content">
-        <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
-          <span class="t-btn-content">
-            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
-          </span>
-        </button>
-        <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
-          <span class="t-btn-content">
-            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
-          </span>
-        </button>
+              <div class="t-pagination-content">
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
 
-        <div class="h-pagination-middle flex justify-center">
-          <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
-            <span class="t-btn-content">
-              <span class="block">1</span>
-            </span>
-          </button>
-          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
-            <span class="t-btn-content">
-              <span class="block">2</span>
-            </span>
-          </button>
-          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
-            <span class="t-btn-content">
-              <span class="block">3</span>
-            </span>
-          </button>
-          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
-            <span class="t-btn-content">
-              <span class="block">4</span>
-            </span>
-          </button>
-          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
-            <span class="t-btn-content">
-              <span class="block">5</span>
-            </span>
-          </button>
-          <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
-            <span class="t-btn-content">
-              <span class="block">6</span>
-            </span>
-          </button>
-        </div>
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                    <span class="t-btn-content">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
 
-        <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
-          <span class="t-btn-content">
-            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
-          </span>
-        </button>
-        <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
-          <span class="t-btn-content">
-            <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
-          </span>
-        </button>
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
 
-      </div>
-    </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -1190,6 +1246,287 @@
       </div>
     </div>
     <!-- 원생 간편검색 결과 팝업 끝 -->
+
+
+    <!-- 원생 상세검색 팝업 시작 -->
+    <div class="t-popup-wrap" style="display: none;">
+      <div class="t-popup ui-draggable" style="width: 1200px;">
+
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">원생 상세 검색</p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <div class="box-bg mb40">
+              <table class="t-basic-2 bora4">
+                <colgroup style="
+    display: none;
+">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                  <col style="width:155px;">
+                  <col style="width:315px;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>학부</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">초등부</option>
+                        <option value="">중등부</option>
+                        <option value="">고등부</option>
+                        
+                        
+                      </select></td>
+                  <th>학년</th><td><select name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">1학년</option>
+                        <option value="">2학년</option>
+                        <option value="">3학년</option>
+                        
+                        
+                      </select></td><th>학교</th><td><select name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">A학교</option>
+                        <option value="">B학교</option>
+                        <option value="">C학교</option>
+                        
+                        
+                      </select></td><th>전체</th><td><select class="mr5" name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">원생명</option>
+                        <option value="">원생닉네임</option>
+                        <option value="">원생휴대폰번호</option>
+                        
+                        
+                      <option value="">학부모명</option><option value="">학부모아이디</option><option value="">학부모휴대폰번호</option></select><input type="text" id="txtNmm" class="txtfield-basic wd-Auto" placeholder="검색어를 입력하세요."></td></tr>
+                  <tr>
+                    <th>대분류</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">대분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>중분류</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">중분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        
+                      </select></td>
+                    <th>반 선택</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        
+                      </select></td>
+                    <th>원생선택</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">전체</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="button-wrap flex-end2 mt17">
+                <a href="javascript:void(0);" class="t-button-xs">검색조건 초기화</a>
+                <a href="javascript:void(0);" class="t-button-xs t-button-bora2">검색</a>
+              </div>
+            </div><div>
+<p class="sub-tit mb10">최근 검색 목록<span class="pc-bora2 t-bullet-02 ml10" style="
+">로그아웃 하면 최근 검색 목록이 초기화 됩니다.</span></p>
+
+<ul><li><a href="#">#홍길동(길동닉네임)</a></li></ul>
+    
+</div><div class="tit-wrap flex-end">
+              <span class="sum">
+                총 10명</span>
+              <div class="button-wrap items-end">
+                <select name="" id="">
+                  <option value="" disabled="" selected="">10건</option>
+                  <option value="">100건</option>
+                  <option value="">200건</option>
+                </select>
+              </div>
+            </div>
+
+
+            <table class="t-basic-1 bora3">
+              <thead>
+                <tr>
+                  <th>원생명</th>
+                  <th>휴대폰</th>
+                  <th>학부모(모)</th>
+                  <th>학부모(부)</th>
+                  <th>가족</th>
+                  <th>학부/학년</th>
+                  <th>수강반</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="opt-regist">[재]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-reserve">[예]</span> 홍길동
+                    <br>(홍초길동)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-nonregi">[미]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-discharge">[퇴]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+                <tr>
+                  <td><span class="opt-absence">[휴]</span> 홍길동
+                    <br>(닉네임)
+                  </td>
+                  <td>
+                    010-1234-5678
+                  </td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>장원영<br>010-1234-5678</td>
+                  <td>-</td>
+                  <td>중등부/2학년</td>
+                  <td class="txt-l">
+                    중학교&gt;수학<br>중등부2학년수학반</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="t-pagination mt30" aria-disabled="false" role="navigation">
+              <div class="t-pagination-content">
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                    <span class="t-btn-content">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+
+      </div>
+    </div>
+    <!-- 원생 상세검색 팝업 끝 -->
+
+
 
 
 
@@ -1214,7 +1551,7 @@
             </div>
 
             <p class="mt15 main-text">카카오페이 청구서 수신 설정된 학부모님께 카카오페이 청구서 서비스 안내 무료 알림톡이 발송됩니다.</p>
-            <p class="t-bullet-02 mt15 sub-tit">알림톡 내용</p>
+            <p class="mt15 t-bullet-02 text-medium">알림톡 내용</p>
             <div class="txt-box mt5 main-text">통통통본원<br>&lt;카카오페이 청구서 발송 안내문&gt;<br><br>
               학원비,<br>
               카카오톡으로 확인하고 납부해요!
