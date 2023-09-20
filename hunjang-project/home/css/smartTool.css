@@ -47,11 +47,13 @@
 .smartTool-wrap .smartCal-wrap > ul > li:last-child {border-top:2px solid var(--black-1); box-sizing: border-box;}
 
 .smartTool-wrap .smartCal-wrap .currentPay-box {}
-.smartTool-wrap .smartCal-wrap .currentPay-box li {display: flex; justify-content: space-between; align-items: center;}
+.smartTool-wrap .smartCal-wrap .currentPay-box li {display: flex; justify-content: space-between; align-items: center; position:relative;}
 .smartTool-wrap .smartCal-wrap .currentPay-box li .h-radio-05 {gap:15px;}
 .smartTool-wrap .smartCal-wrap .currentPay-box > ul > li + li {margin-top:20px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box > ul > li:nth-child(4) {margin-top:30px;}
 .smartTool-wrap .smartCal-wrap .currentPay-box .sumResult-box {justify-content: flex-start; margin-top:40px;}
 .smartTool-wrap .smartCal-wrap .currentPay-box .sumResult-box .wontxt-type {margin-right:40px;}
+.smartTool-wrap .smartCal-wrap .currentPay-box .sumResult-box .error-txt {right: auto; left: 0; width: 255px; text-align: right;}
 .smartTool-wrap .smartCal-wrap .netPay-box {padding:40px; margin-top:-1px;}
 
 .smartTool-wrap .circleBtn {width:42px; height:42px;}
@@ -224,3 +226,8 @@ table.tbl-scoreCalc .h-checkbox {display:block!important;}
 .smartTool-wrap .check-resumeList .check-resumeTxt {display: inline-flex; flex-direction: column; width: calc(100% - 43px); margin-left: 5px;}
 .smartTool-wrap .check-resumeList {margin-top:10px; padding:20px; background:var(--neutral-3); border-radius:4px; box-sizing:border-box;}
 .smartTool-wrap .check-resumeList li + li {margin-top:15px;}
+
+
+/*오류메세지*/
+.smartTool-wrap .h-textfield-bottom.errorBox {border-bottom:1px solid #FF6000;}
+.smartTool-wrap .h-textfield-bottom.errorBox + .error-txt {font-size:12px; color:#FF6000; position:absolute; right:0; bottom:-18px;}

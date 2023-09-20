@@ -750,10 +750,11 @@
                   </li>
                   <li>
                     <p class="text-subtitle4 h-txt-3">비과세액(식대포함)</p>
-                    <div class="wontxt-type h-textfield-bottom width-200">
+                    <div class="wontxt-type h-textfield-bottom width-200 errorBox"> <!-- 09/20 errorBox 클래스가 추가됩니다. -->
                       <input type="text" class="h-txt-r" value="200,000">
                       <span class="unitTxt">원</span>
                     </div>
+                    <div class="error-txt">비과세가 급여보다 높게 입력되었습니다.</div> <!--09/20 오류문구 -->
                   </li>
                   <li>
                     <p class="text-subtitle4 h-txt-3">부양가족수(본인포함)</p>
@@ -778,11 +779,13 @@
                     </div>
                   </li>
                   <li class="sumResult-box">
-                    <div class="wontxt-type h-textfield-bottom" style="width:257px;">
+                    <div class="wontxt-type h-textfield-bottom errorBox" style="width:257px;"> <!-- 09/20 errorBox 클래스가 추가됩니다. -->
                       <span class="text-subtitle4 h-txt-3 flex-none">급여</span>
                       <input type="text" class="h-txt-r" value="200,000">
                       <span class="unitTxt">원</span>
                     </div>
+                    <div class="error-txt">급여를 입력해 주세요.</div><!--09/20 오류문구 -->
+                    
                     <button type="button" class="h-button-sm h-button-cyan" style="width:134px;">계산하기</button>
                     <a href="#" class="resetBtn ml10 flex-none">초기화</a>
                   </li>
