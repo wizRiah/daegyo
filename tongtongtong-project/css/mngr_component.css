@@ -89,14 +89,17 @@
 /* 옵션 상태 */
 .academy-mngr-Wrap [class^="opt-"] { font-weight: var(--text-medium); } 
 .academy-mngr-Wrap .opt-attend { color: var(--pc-bora-7); } 
+.academy-mngr-Wrap .opt-accepting { color: var(--pc-bora-7); } 
 .academy-mngr-Wrap .opt-absent { color: var(--pc-red); } 
 .academy-mngr-Wrap .opt-late { color: var(--pc-bora-6); } 
+.academy-mngr-Wrap .opt-dead { color: var(--pc-bora-6); } 
 .academy-mngr-Wrap .opt-leave { color: var(--pc-bora-8); } 
 .academy-mngr-Wrap .opt-regist { color: #15038C; } 
 .academy-mngr-Wrap .opt-reserve { color: #447EF2; } 
 .academy-mngr-Wrap .opt-nonregi { color: #035AA6; } 
 .academy-mngr-Wrap .opt-discharge { color: #F24B59; } 
 .academy-mngr-Wrap .opt-absence { color: #89B3D9; } 
+.academy-mngr-Wrap .opt-set { color: #b2b2b2; } 
 
 
 .num { font-family:"SUIT"; } 
@@ -374,7 +377,7 @@ select
 .academy-mngr-Wrap [class^="t-button"] span:last-child:nth-last-child(1) { margin-left: 6px; } 
 .academy-mngr-Wrap [class^="t-button"] img { vertical-align:middle; } 
 .academy-mngr-Wrap [class^="t-button"] i.material-symbols-outlined { font-weight:var(--text-light); } 
-.academy-mngr-Wrap [class^="t-button"]:not(.t-button-xxs,.t-button-circle,.t-button-xms) { min-width:60px; text-align:center; } 
+.academy-mngr-Wrap [class^="t-button"]:not(.t-button-xxs,.t-button-circle) { min-width:60px; text-align:center; } 
 .academy-mngr-Wrap .t-button-circle { border-radius: 100%; padding: 0; } 
 .academy-mngr-Wrap .t-button-circle-16 { width: 16px; height: 16px; line-height:14px; } 
 .academy-mngr-Wrap [class^="t-button-circle"]::after { display: inline-flex; flex-flow: row wrap; justify-content: center; align-items: center; font-family: 'Material Icons'; font-style: normal; width: 100%; height: 100%; color: #fff; border-radius: 50%; box-sizing: border-box; } 
@@ -382,7 +385,13 @@ select
 .academy-mngr-Wrap [class^="t-button-circle"].remove::after { content: 'close'; font-size: 14px; color:red; } 
 
 .academy-mngr-Wrap .btn-del { width: 30px; height: 30px; line-height: 30px; } 
-.academy-mngr-Wrap .t-button-underline { color: var(--pc-border-5)!important; padding: 0; margin: 0; height: auto; line-height: inherit; font-size: var(--pc-fs13); text-decoration: underline !important; font-weight: var(--text-medium); } 
+.academy-mngr-Wrap .t-button-underline { color: var(--pc-border-5)!important; padding: 0; margin: 0; height: auto; line-height: inherit; font-size: var(--pc-fs13); text-underline-position: from-font; text-decoration: underline !important; font-weight: var(--text-medium); } 
+
+
+/* 괄호안 밑줄 버튼 */
+.academy-mngr-Wrap .bracket-btn {color: var(--pc-border-5)!important;}
+.academy-mngr-Wrap .bracket-btn .t-button-underline{ min-width: auto; margin:0!important; padding:0!important;}
+
 
 
 /* 사이즈별 */
@@ -603,6 +612,7 @@ text field
 .academy-mngr-Wrap .i-del { background: url(../images/icon-del.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-close { background: url(../images/icon-close.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-stuInfo { background: url(../images/stu_info.png) no-repeat center/100%; width: 18px; height: 18px; display:inline-block; } 
+.academy-mngr-Wrap .i-money { background: url(../images/icon-money.png) no-repeat center/100%; width: 12px; height: 12px; margin-bottom:1px;} 
 .academy-mngr-Wrap .p-close { background: url(../images/icon-pclose.png) no-repeat center/100%; width: 14px; height: 14px; display:inline-block; } 
 
 
