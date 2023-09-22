@@ -1,6 +1,4 @@
-@charset "utf-8";/* 컨텐츠 내용을 담은 CSS */
-
-
+@charset "utf-8"; /* 컨텐츠 내용을 담은 CSS */
 /* 
 로그인 페이지
 */
@@ -24,11 +22,6 @@
 .academy-mngr-Wrap .dashboard { width: 100%; margin: 0 auto; background-color: #fff; } 
 .academy-mngr-Wrap .dashboard .menu-section { width: 100%; height: 54px; box-sizing: border-box; background: linear-gradient(to right, #6359e8 0%, #7e4ef7 60%, #894fe2 100%); position: relative; } 
 .academy-mngr-Wrap .dashboard .menu-section:after { position: absolute; left: 0; top: 0; background: #fff; width: 100%; content: ''; opacity: 0.1; height: 100%; } 
-
-
-
-
-
 
 /*
 원생관리
@@ -66,8 +59,6 @@
 .academy-mngr-Wrap .studentMg .left-cont .photo-info .profile-txt-list .profile-txt .result-wrap { display: none; } 
 
 
-
-
 /* 원생 등록 form */
 /* 원생 등록 form 일때 안보여야하는 데이터들 */
 .academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .left-cont-wrap .info-wrap .result-wrap { display: block; } 
@@ -89,47 +80,37 @@
 .academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .t-bullet-01>li .info-tit:after { display: none; } 
 
 
-
-
-
 /*
 기본서브
 */
-.academy-mngr-Wrap .sub { padding-top: 54px; min-width: 1280px; margin: 0 auto; width: 100%; background-color: #fff; display:flex; } 
+.academy-mngr-Wrap .sub { padding-top: 54px; min-width: 1280px; margin: 0 auto; width: 100%; background-color: #fff; display: flex; } 
 .academy-mngr-Wrap .sub .layout-wrap { padding: 35px 20px; margin: 0 auto; box-sizing: border-box; } 
 .academy-mngr-Wrap .sub .box-bg { margin-bottom: 40px; } 
 .academy-mngr-Wrap .sub .main-cont { width: 100%; } 
 .academy-mngr-Wrap .sub .main-tit .tit { padding-left: 5px; } 
-.academy-mngr-Wrap .sub .page-tit { color: var(--pc-bora-1); font-size: 20px; font-weight:var(--text-bold); padding: 0 23px; margin-bottom: 16px; } 
-
-
-
-
+.academy-mngr-Wrap .sub .page-tit { color: var(--pc-bora-1); font-size: 20px; font-weight: var(--text-bold); padding: 0 23px; margin-bottom: 16px; } 
 
 
 /* 왼쪽영역 */
 .academy-mngr-Wrap .sub .left-cont { flex-basis: 350px; height: 100%; flex-shrink: 0; box-sizing: border-box; position: relative; } 
 .academy-mngr-Wrap .sub .left-cont .left-cont-wrap { height: 100%; padding: 20px; background: #333952; z-index: 3; position: relative; box-sizing: border-box; box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%); } 
 
-
-
-
-
-
 /*
 반
 */
-
 .academy-mngr-Wrap .list-cnt-box { border: 1px solid var(--pc-border-2); border-radius: 2px; padding: 20px; background: #fff; } 
-
-
-
-
-
-
-
-
-
-
-
-
+.academy-mngr-Wrap .class-list { display: block; position: relative; margin: 0; padding: 0; } 
+.academy-mngr-Wrap .class-item { display: block; position: relative; margin: 0; padding: 0; min-height: 20px; line-height: 20px; } 
+.academy-mngr-Wrap .class-item > button { display: block; position: absolute; height: 34px; overflow: hidden; z-index: 1; } 
+.academy-mngr-Wrap .class-item-cnt .class-name { word-break: break-all; color: var(--pc-text-color-1); } 
+.academy-mngr-Wrap .class-list .class-item .class-list { padding-left: 27px; } 
+.academy-mngr-Wrap .class-item > .class-item-cnt.group + .class-list { padding-bottom: 15px; } 
+.academy-mngr-Wrap .class-list .class-item .class-list .class-item:before { content: ""; width: 18px; height: 1px; display: inline-block; border-top: 1px solid #ccc; position: absolute; left: -18px; top: 19.5px; } 
+.academy-mngr-Wrap .class-item-cnt { height: auto; padding: 7px 10px 7px 28px; font-size: 15px; font-weight: 600; text-decoration: none; background: #fff; box-sizing: border-box; overflow: hidden; position: relative; } 
+.academy-mngr-Wrap .class-item > button:before { content: url( "../images/icon-folder.png" ); display: block; width: 20px; height: 16px; } 
+.academy-mngr-Wrap .class-list .class-item .class-list:before { content: ""; width: 1px; height: calc(100% + 5px); display: inline-block; left: 9px; top: -18px; border-left: 1px solid #ccc; position: absolute; } 
+.academy-mngr-Wrap .class-list .class-item .class-list .class-item:last-child:after { content: ""; width: 30px; height: 100%; display: inline-block; position: absolute; left: -30px; top: 20px; background: #fff; } 
+.academy-mngr-Wrap .class-item > button[data-action="collapse"]:before { content: url( "../images/icon-open-f.png" ); width: 22px; } 
+.academy-mngr-Wrap .class-item > .last-item { position: absolute; height: 34px; overflow: hidden; z-index: 1; display: flex; align-items: center; } 
+.academy-mngr-Wrap .class-item > .last-item:before { content: url( "../images/icon-d.png" ); position:relative; width: 16px; height: 20px; display:block; } 
+.academy-mngr-Wrap .class-item > .last-item ~ .class-item-cnt>.class-name { font-size:14px; } 
