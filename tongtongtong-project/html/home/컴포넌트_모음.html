@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/mngr_contents.css">
   <link rel="stylesheet" href="../../css/mngr_component.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <style>
@@ -20,7 +22,19 @@
 <body>
   <div class="academy-mngr-Wrap">
 
-    <h2>탭버튼</h2>
+
+    <h2>0. 레이아웃 종류</h2><br>
+    <p>*레이아웃 폴더내에서 확인해주세요~<br><br></p>
+    <p> 1) full-width 레이아웃 (기본형태)</p>
+    <p> 2) 원생 레이아웃 (왼쪽영역 있음) </p>
+    <p> 3) 반 레이아웃 (왼쪽 영역 없다가 나오는) </p>
+    <p> 4) 대시보드 레이아웃 (대시보드용) </p>
+    <br><br>
+
+
+
+
+    <h2>1. 탭버튼</h2><br>
     <!-- li에 클래스 'active'추가시 활성화 -->
 
     <!-- 탭버튼 시작 -->
@@ -62,7 +76,7 @@
 
 
     <br><br><br>
-    <h2>체크박스</h2>
+    <h2>2. 체크박스</h2><br>
 
     <!-- 체크박스 시작 -->
     <div class="t-checkbox checkbox01">
@@ -113,7 +127,7 @@
 
 
     <br><br><br>
-    <h2>라디오</h2>
+    <h2>3. 라디오</h2><br>
     <!-- 라디오버튼 시작 -->
     <div class="t-radio-01">
       <input type="radio" id="hradio01" name="hradio01" checked="" />
@@ -131,7 +145,7 @@
 
 
     <br><br><br>
-    <h2>셀렉트</h2>
+    <h2>4. 셀렉트</h2><br>
     <!-- 셀렉트 시작 -->
     <select name="" id="">
       <option value="" disabled="" selected="">대분류(전체)</option>
@@ -148,7 +162,7 @@
 
 
     <br><br><br>
-    <h2>인풋</h2>
+    <h2>5. 인풋</h2><br>
     <!-- 인풋 시작 -->
     <input type="text" id="txtNmm" class="txtfield-basic" placeholder="이름" />
 
@@ -160,7 +174,7 @@
 
 
     <br><br>
-    <h2>datepicker 디자인만</h2>
+    <h2>6. datepicker 디자인만</h2><br>
     <!-- datepicker 시작 -->
     <span class="date-picker">
       <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="" />
@@ -175,7 +189,7 @@
 
 
     <br><br>
-    <h2>버튼</h2>
+    <h2>7. 버튼</h2><br>
     <!-- 버튼 시작 -->
     <button type="button" class="t-button-xxs t-button-white t-button-grey-bd"><i class="i-print"></i><span>인쇄 (22h)</span></button>
     <button type="button" class="t-button-xxs t-button-bora7">출석</button>
@@ -186,6 +200,8 @@
     <button type="button" class="t-button-xms"><i class="i-regist2"></i><span>등록</span></button>
     <button type="button" class="t-button-xms"><i class="i-save"></i><span>저장</span></button>
     <button type="button" class="t-button-xms t-button-grey2"><i class="i-close"></i><span>닫기</span></button>
+    <button type="button" class="t-button-xms t-button-grey2-bd ml0"><i class="i-arrow-b"></i><span>전체 펼치기</span></button>
+    <button type="button" class="t-button-xms t-button-grey2-bd tr180 ml0"><i class="i-arrow-b tr180"></i><span>전체 닫기</span></button>
     <button type="button" class="t-button-xms"><i class="i-clock"></i><span>보기</span></button>
     <button type="button" class="t-button-xms"><i class="i-paste"></i><span>반 복사</span></button>
     <button type="button" class="t-button-xms t-button-bora6"><i class="i-money"></i><span>수납</span></button>
@@ -214,7 +230,7 @@
 
 
     <br><br><br><br>
-    <h2>페이지네이션</h2>
+    <h2>8. 페이지네이션</h2><br>
     <!-- 페이지네이션 시작 -->
     <div class="t-pagination" aria-disabled="false" role="navigation">
       <div class="t-pagination-content">
@@ -289,11 +305,13 @@
 
 
     <br><br><br>
-    <h2>테이블</h2>
-
+    <h2>9. 테이블</h2><br>
+    <p>- 클래스 "col2" 추가시 2열</p>
+    <p>- 클래스 "bora3" 혹은 "bora4" 추가시 컬러변경 가능</p>
+    <br>
     <!-- 테이블 시작 -->
     <!-- 테이블 box 2열 시작 -->
-    <!-- 클래스 "col2" 추가시 2열 -->
+    
     <div class="layout-wrap col2">
       <div class="box-bg">
         <div class="tit-wrap">
@@ -384,9 +402,6 @@
     </div>
     <!-- 2열 테이블 끝 -->
 
-
-
-
     <!-- 박스배경 테이블 시작 -->
     <div class="box-bg">
       <div class="tit-wrap">
@@ -445,7 +460,7 @@
     <!-- 박스배경 테이블 끝 -->
 
 
-
+    <br><br>
     <!-- 체크박스 있는 테이블 시작 -->
     <table class="t-basic-1 bora3">
       <thead>
