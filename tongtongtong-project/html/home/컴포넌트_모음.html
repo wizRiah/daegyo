@@ -309,9 +309,9 @@
 
     <br><br><br>
     <h2>9. 테이블</h2><br>
-    <p>- 테이블 태그 class "t-basic-1" 혹은 "t-basic-2"에 "<b>bora3</b>" 혹은 "<b>bora4</b>" 추가시 컬러변경 가능</p>
-    <p>- class "layout-wrap" 에 "<b>col2</b>" 추가시 2열</p>
-    <br>
+    <p>- 테이블 태그 class "t-basic-1" 혹은 "t-basic-2"에 "<b>bora3</b>" 혹은 "<b>bora4</b>" 추가시 컬러변경 가능</p><br>
+    <p>- class "layout-wrap" 에 "<b>col2</b>" 추가시 2열, 너비 1:1 비율</p>
+    
     <!-- 테이블 시작 -->
     <!-- 테이블 box 2열 시작 -->
     
@@ -405,6 +405,153 @@
     </div>
     <!-- 2열 테이블 끝 -->
 
+    <br><br>
+    <p>- class "layout-wrap col2" 에 "<b>colauto</b>" 추가시 2열,너비 auto</p>
+    <p>- class "box-bg" 에 "<b>flex-grow-1,flex-grow-2</b>" 너비 1:2 비율</p>
+
+    <!-- 테이블 box 2열 - 너비 auto 시작 -->
+
+    <div class="layout-wrap col2 colauto">
+      <div class="box-bg flex-grow-1">
+        <div class="tit-wrap">
+          
+          <div class="button-wrap items-end">
+            <button type="button" class="t-button-xxs t-button-bora7 m0">출석</button>
+            <button type="button" class="t-button-xxs t-button-red">결석</button>
+            <button type="button" class="t-button-xxs t-button-bora6 m0">지각</button>
+            <button type="button" class="t-button-xxs t-button-bora8">조퇴</button>
+            <button type="button" class="t-button-xms"><i class="i-set"></i><span>설정</span></button>
+          </div>
+        </div>
+        <table class="t-basic-1 bora3">
+      <thead>
+        <tr>
+          <th style="width:68px;">
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_all">
+              <label for="tbl_check_all"></label>
+            </div>
+          </th>
+          <th style="width: 68px;">No</th>
+          
+          
+          <th>환불금액</th>
+          <th>수강<br>상태</th>
+          <th>관리</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_01">
+              <label for="tbl_check_01"></label>
+            </div>
+          </td>
+          <td>
+            <p>1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          
+          
+          <td>
+            <p class="opt-be-course">수강전</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_02">
+              <label for="tbl_check_02"></label>
+            </div>
+          </td>
+          <td>
+            <p>2</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          
+          
+          <td>
+            <p class="opt-course">수강</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_03">
+              <label for="tbl_check_03"></label>
+            </div>
+          </td>
+          <td>
+            <p>3</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          
+          
+          <td>
+            <p class="opt-end">종강</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+
+      </tbody>
+    </table>
+      </div>
+      <div class="box-bg flex-grow-2">
+        <div class="tit-wrap">
+          <p class="main-tit">시간표</p>
+          <div class="button-wrap items-end">
+            <button type="button" class="t-button-xms t-button-white t-button-green-bd m0">엑셀받기</button>
+            <button type="button" class="t-button-xms t-button-white t-button-grey-bd"><i class="i-print"></i><span>인쇄</span></button>
+            <button type="button" class="t-button-xms"><i class="i-clock"></i><span>보기</span></button>
+          </div>
+        </div>
+        <table class="t-basic-1 bora4">
+          <thead>
+            <tr>
+              <th>요일</th>
+              <th>수강반(보강)</th>
+              <th>시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>월</td>
+              <td class="txt-l">중등 2학년 수학반</td>
+              <td><b>[오전] </b>1:00 ~ 2:30</td>
+            </tr>
+            <tr>
+              <td>수</td>
+              <td class="txt-l">중등 2학년 수학반</td>
+              <td><b>[오후] </b>1:00 ~ 2:30</td>
+            </tr>
+            <tr>
+              <td>금</td>
+              <td class="txt-l">중등 2학년 수학반</td>
+              <td><b>[오후] </b>1:00 ~ 2:30</td>
+            </tr>
+          <tr>
+              <td>2023-08-21</td>
+              <td class="txt-l"><b>[보강]</b> 중등 2학년 수학반</td>
+              <td><b>[오후] </b>1:00 ~ 2:30</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 테이블 box 2열 - 너비 auto 끝 -->  
+
+
+
+    <br><br>
     <!-- 박스배경 테이블 시작 -->
     <div class="box-bg">
       <div class="tit-wrap">

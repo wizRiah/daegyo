@@ -1,52 +1,12 @@
 @charset "utf-8"; /* 공통 스타일 CSS */
 
 
-:root {/* pc */
+:root { /* pc */
 
-    /* Color */
-    --pc-bora-1: #292e41;
-    --pc-bora-2: #9678f1;
-    --pc-bora-3: #6d57b3;
-    --pc-bora-4: #4641ab;
-    --pc-bora-5: #c4afda;
-    --pc-bora-6: #5b5693;
-    --pc-bora-7: #5d39ff;
-    --pc-bora-8: #c1b9dd;
-    --pc-red: #dd346d;
-    --pc-border-1: #62666B;
-    --pc-border-2: #CCD1D7;
-    --pc-border-3: #E0E6EF;
-    --pc-border-4: #d7dce5;
-    --pc-border-5: #3b2989;
-    --pc-text-color-1: #333;
-    /* Font */
-    --pc-text-h1: 36px;
-    --pc-text-h2: 24px;
-    --pc-text-h3: 16px;
-    --pc-text-h4: 15px;
-    --pc-text-h5: 14px;
-    --pc-text-h6: 13px;
-    --pc-fs20: 20px;
-    --pc-fs18: 18px;
-    --pc-fs17: 17px;
-    --pc-fs16: 16px;
-    --pc-fs15: 15px;
-    --pc-fs14: 14px;
-    --pc-fs13: 13px;
-    --pc-fs12: 12px;
-    --pc-fs11: 11px;
-    --pc-fs10: 10px;
-    /* pc,m 공용*/
-    --text-light: 300;
-    --text-regular: 400;
-    --text-medium: 500;
-    --text-bold: 700;
-    --text-extrabold: 800;
-    --letter-spacing-0: 0;
-    --letter-spacing-065: -0.65px;
-    --letter-spacing-1: -1px;
-    --letter-spacing-2: -2px;
-}
+ /* Color */
+ --pc-bora-1: #292e41; --pc-bora-2: #9678f1; --pc-bora-3: #6d57b3; --pc-bora-4: #4641ab; --pc-bora-5: #c4afda; --pc-bora-6: #5b5693; --pc-bora-7: #5d39ff; --pc-bora-8: #c1b9dd; --pc-red: #dd346d; --pc-border-1: #62666B; --pc-border-2: #CCD1D7; --pc-border-3: #E0E6EF; --pc-border-4: #d7dce5; --pc-border-5: #3b2989; --pc-text-color-1: #333; /* Font */
+ --pc-text-h1: 36px; --pc-text-h2: 24px; --pc-text-h3: 16px; --pc-text-h4: 15px; --pc-text-h5: 14px; --pc-text-h6: 13px; --pc-fs20: 20px; --pc-fs18: 18px; --pc-fs17: 17px; --pc-fs16: 16px; --pc-fs15: 15px; --pc-fs14: 14px; --pc-fs13: 13px; --pc-fs12: 12px; --pc-fs11: 11px; --pc-fs10: 10px; /* pc,m 공용*/
+ --text-light: 300; --text-regular: 400; --text-medium: 500; --text-bold: 700; --text-extrabold: 800; --letter-spacing-0: 0; --letter-spacing-065: -0.65px; --letter-spacing-1: -1px; --letter-spacing-2: -2px; } 
 .text-light { font-weight: var(--text-light) !important; } 
 .text-regular { font-weight: var(--text-regular)!important; } 
 .text-medium { font-weight: var(--text-medium)!important; } 
@@ -90,14 +50,14 @@
 
 /* 옵션 상태 */
 .academy-mngr-Wrap [class^="opt-"] { font-weight: var(--text-medium); } 
-.academy-mngr-Wrap .opt-attend{ color: var(--pc-bora-7); } 
+.academy-mngr-Wrap .opt-attend { color: var(--pc-bora-7); } 
 .academy-mngr-Wrap .opt-accepting,
-.academy-mngr-Wrap .opt-be-course  { color: var(--pc-bora-7); } 
+.academy-mngr-Wrap .opt-be-course { color: var(--pc-bora-7); } 
 .academy-mngr-Wrap .opt-absent { color: var(--pc-red); } 
 .academy-mngr-Wrap .opt-late,
-.academy-mngr-Wrap .opt-dead  { color: var(--pc-bora-6); } 
+.academy-mngr-Wrap .opt-dead { color: var(--pc-bora-6); } 
 .academy-mngr-Wrap .opt-leave,
-.academy-mngr-Wrap .opt-course  { color: var(--pc-bora-8); } 
+.academy-mngr-Wrap .opt-course { color: var(--pc-bora-8); } 
 .academy-mngr-Wrap .opt-regist { color: #15038C; } 
 .academy-mngr-Wrap .opt-reserve { color: #447EF2; } 
 .academy-mngr-Wrap .opt-nonregi { color: #035AA6; } 
@@ -159,6 +119,10 @@
 .flex-row { flex-direction: row!important; } 
 .justify-start { justify-content: flex-start!important; } 
 .justify-center { justify-content: center!important; } 
+
+.flex-grow-1 { flex-grow: 1!important; } 
+.flex-grow-2 { flex-grow: 2!important; } 
+
 
 /* line-height */
 .t-line-hgt18 { line-height: 18px!important; } 
@@ -643,7 +607,7 @@ text field
 .academy-mngr-Wrap .i-regist2 { background: url(../images/regist-btn2.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-modify { background: url(../images/icon-modify.png) no-repeat center/100%; width: 13px; height: 13px; margin-bottom:2px; } 
 .academy-mngr-Wrap .i-set { background: url(../images/icon-set.png) no-repeat center/100%; width: 11px; height: 12px; } 
-.academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 14px; height: 15px; margin-bottom: 1px;} 
+.academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 14px; height: 15px; margin-bottom: 1px; } 
 .academy-mngr-Wrap .i-clock { background: url(../images/icon-clock.png) no-repeat center/100%; width: 12px; height: 12px; margin-bottom:1px; } 
 .academy-mngr-Wrap .i-save { background: url(../images/icon-save.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-del { background: url(../images/icon-del.png) no-repeat center/100%; width: 13px; height: 13px; } 
@@ -665,7 +629,7 @@ text field
 박스 
 */
 .academy-mngr-Wrap .box-bg { flex:auto; padding: 23px; box-sizing: border-box; border: 1px solid var(--pc-border-4); box-shadow: 1px 2px 8px 0px rgb(0 0 0 / 28%); border-radius: 20px; background-color: #f7f7fa; } 
-
+.academy-mngr-Wrap .box-bg-02 { border-color: #36336b; border-width: 3px; } 
 
 /* 텍스트박스 */
 .academy-mngr-Wrap .txt-box { background: #f5f7fa; padding: 15px; box-sizing: border-box; } 
@@ -679,6 +643,18 @@ text field
 .academy-mngr-Wrap .layout-wrap.col2 .box-bg { width: 49%; margin-bottom: 20px; } 
 .academy-mngr-Wrap .layout-wrap.col2 .box-bg:nth-child(odd) { margin-right: 14px; } 
 .academy-mngr-Wrap .layout-wrap.col2 { display:flex; } 
+
+
+/* 2열인데 너비 auto */
+.academy-mngr-Wrap .layout-wrap.col2.colauto .box-bg { width:auto; } 
+
+
+
+
+
+
+
+
 
 /* 불렛 */
 .academy-mngr-Wrap .t-bullet-01 { line-height: 21px; } 
@@ -753,9 +729,9 @@ text field
 
 
 /* 학원 1개이하인 경우 화살표 제거 */
-.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive {min-width: auto;}
-.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive .dropdown{display:none;}
-.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive:after {display:none;}
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive { min-width: auto; } 
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive .dropdown { display:none; } 
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive:after { display:none; } 
 
 
 
