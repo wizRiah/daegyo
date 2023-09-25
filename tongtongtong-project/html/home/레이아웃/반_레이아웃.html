@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/mngr_contents.css">
   <link rel="stylesheet" href="../../../css/mngr_component.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -134,6 +132,12 @@
         <!-- 로그인/로그아웃 영역 시작 -->
         <div class="login-wrap">
 
+
+          <!--  
+            1) 로그인 학원명 클릭시  id "login-contents" 클릭시 class "active" 추가
+            2) 학원 1개이하인 경우 화살표,dropdown 제거 : class "noactive" 추가
+          -->
+
           <!-- 로그인 학원명 표시 시작 -->
           <div class="login-contents" id="login-contents">
             <div class="flex items-center">
@@ -178,7 +182,6 @@
 
 
         <!-- 왼쪽컨텐츠 시작 -->
-
         <div class="left-cont" style="/* display: none; */">
 
           <div class="left-cont-wrap">
@@ -352,9 +355,10 @@
           <div class="layout-wrap">
             <div class="page-tit-wrap">
               <p class="page-tit mb0">반 관리</p>
-              <button type="button" id="class-open" class="t-button-xs t-button-bora2 m0">
+              <!-- 반 분류 전체 펼치기 버튼은 2차개발 영역 -->
+              <!-- <button type="button" id="class-open" class="t-button-xs t-button-bora2 m0">
                 <span>반 분류 전체 펼치기</span><i class="more-arrow"></i>
-              </button>
+              </button> -->
             </div>
             <!-- 테이블 box 시작 -->
             <div class="box-bg">
@@ -498,113 +502,118 @@
             <!-- 하단 내용 시작 -->
             <div class="content-section">
 
-              <div class="tit-wrap flex-end"><div class="t-checkbox checkbox01">
-      <input type="checkbox" name="checkForm" id="count-class">
-      <label for="count-class">회차반</label>
-    </div><div class="button-wrap flex-end2">
-                <button type="button" class="t-button-xs t-button-bora1 m0">반 등록</button>
-                <button type="button" class="t-button-xs t-button-white t-button-grey-bd"><i class="i-print"></i><span>결과 인쇄</span></button><button type="button" class="t-button-xs t-button-white t-button-green-bd ml0">엑셀 받기</button>
-                <select name="" id="">
-                  <option value="" disabled="" selected="">10건</option>
-                  <option value="">20개씩 보기</option>
-                  <option value="">40개씩 보기</option>
-                  <option value="">60개씩 보기</option>
-                  <option value="">80개씩 보기</option>
-                  <option value="">100개씩 보기</option>
-                </select>
-              </div></div>
+              <div class="tit-wrap flex-end">
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="count-class">
+                  <label for="count-class">회차반</label>
+                </div>
+                <div class="button-wrap flex-end2">
+                  <button type="button" class="t-button-xs t-button-bora1 m0">반 등록</button>
+                  <button type="button" class="t-button-xs t-button-white t-button-grey-bd"><i class="i-print"></i><span>결과 인쇄</span></button><button type="button" class="t-button-xs t-button-white t-button-green-bd ml0">엑셀 받기</button>
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">10건</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">60개씩 보기</option>
+                    <option value="">80개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
 
-              <table class="t-basic-1">
-                <thead>
-                  <tr>
-                    <th style="width:68px;">
-                      <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="tbl_check_all">
-                        <label for="tbl_check_all"></label>
-                      </div>
-                    </th>
-                    <th>No</th>
-                    <th>수납금액</th>
-                    <th>수납금액</th>
-                    <th>환불금액</th>
-                    <th>수강<br>상태</th>
-                    <th>관리</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="tbl_check_01">
-                        <label for="tbl_check_01"></label>
-                      </div>
-                    </td>
-                    <td>
-                      <p>1</p>
-                    </td>
-                    <td class="txt-r">
-                      <p>300,000</p>
-                    </td>
-                    <td>
-                      <p>대학교(4년)</p>
-                    </td>
-                    <td>
-                      <p>채용시 마감</p>
-                    </td>
-                    <td><p class="opt-be-course">수강전</p></td>
-                    <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="tbl_check_02">
-                        <label for="tbl_check_02"></label>
-                      </div>
-                    </td>
-                    <td>
-                      <p>2</p>
-                    </td>
-                    <td class="txt-r">
-                      <p>300,000</p>
-                    </td>
-                    <td>
-                      <p>대학교(4년)</p>
-                    </td>
-                    <td>
-                      <p>채용시 마감</p>
-                    </td>
-                    <td><p class="opt-course">수강</p></td>
-                    <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="tbl_check_03">
-                        <label for="tbl_check_03"></label>
-                      </div>
-                    </td>
-                    <td>
-                      <p>3</p>
-                    </td>
-                    <td class="txt-r">
-                      <p>300,000</p>
-                    </td>
-                    <td>
-                      <p>대학교(4년)</p>
-                    </td>
-                    <td>
-                      <p>채용시 마감</p>
-                    </td>
-                    <td><p class="opt-end">종강</p></td>
-                    <td>
-                    </td>
-                  </tr>
-                  
-                  
-                  
-                  
-                </tbody>
-              </table>
+              <table class="t-basic-1 bora3">
+      <thead>
+        <tr>
+          <th style="width:68px;">
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_all">
+              <label for="tbl_check_all"></label>
+            </div>
+          </th>
+          <th style="width: 68px;">No</th>
+          <th>수납금액</th>
+          <th>수납금액</th>
+          <th>환불금액</th>
+          <th>수강<br>상태</th>
+          <th>관리</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_01">
+              <label for="tbl_check_01"></label>
+            </div>
+          </td>
+          <td>
+            <p>1</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+            <p class="opt-be-course">수강전</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_02">
+              <label for="tbl_check_02"></label>
+            </div>
+          </td>
+          <td>
+            <p>2</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+            <p class="opt-course">수강</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="t-checkbox checkbox01">
+              <input type="checkbox" name="checkForm" id="tbl_check_03">
+              <label for="tbl_check_03"></label>
+            </div>
+          </td>
+          <td>
+            <p>3</p>
+          </td>
+          <td class="txt-r">
+            <p>300,000</p>
+          </td>
+          <td>
+            <p>대학교(4년)</p>
+          </td>
+          <td>
+            <p>채용시 마감</p>
+          </td>
+          <td>
+            <p class="opt-end">종강</p>
+          </td>
+          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button></td>
+        </tr>
+
+      </tbody>
+    </table>
             </div>
             <!-- 하단 내용 끝 -->
 
@@ -647,42 +656,6 @@
   <!-- PC 전체 Wrap 끝 -->
 
 
-
-
-
-  <script>
-
-
-    // 반 분류 전체 닫기,펼치기 버튼 클릭시 
-    document.getElementById("class-open").onclick = function () {
-
-      $(this).css('display', 'none');
-
-      $(".left-cont").addClass("active");
-
-    };
-
-
-    document.getElementById("class-close").onclick = function () {
-
-      $("#class-open").css('display', 'inline-flex');
-
-      $(".left-cont").removeClass("active");
-
-    };
-
-
-
-    // 공통 스크립트
-    // 로그인 학원명 드롭다운메뉴 클릭시 
-    document.getElementById("login-contents").onclick = function () {
-
-      $(this).toggleClass("active");
-    };
-
-
-
-  </script>
 
 </body>
 
