@@ -349,20 +349,16 @@
         <!-- 메인 컨텐츠 시작 -->
         <div class="main-cont">
 
-
-          <!-- 서브 탭메뉴 끝 -->
-
-
           <div class="layout-wrap">
-
-            <div class="page-tit-wrap"><p class="page-tit mb0">반 관리</p>
-              <button type="button" id="class-open" class="t-button-xs t-button-bora2 m0" style="display: inline-flex;">
+            <div class="page-tit-wrap">
+              <p class="page-tit mb0">반 관리</p>
+              <button type="button" id="class-open" class="t-button-xs t-button-bora2 m0">
                 <span>반 분류 전체 펼치기</span><i class="more-arrow"></i>
-              </button></div>
+              </button>
+            </div>
             <!-- 테이블 box 시작 -->
             <div class="box-bg">
               <table class="t-basic-2 bora4">
-                
                 <tbody>
                   <tr>
                     <th>대분류</th>
@@ -375,18 +371,20 @@
                         <option value="">100개씩 보기</option>
                       </select></td>
                     <th>중분류</th>
-                    <td><select name="" id="">
+                    <td>
+                      <select name="" id="">
                         <option value="" disabled="" selected="">중분류 (전체)</option>
                         <option value="">20개씩 보기</option>
                         <option value="">40개씩 보기</option>
                         <option value="">60개씩 보기</option>
                         <option value="">80개씩 보기</option>
                         <option value="">100개씩 보기</option>
-                      </select></td><th>반 명</th><td colspan="3"><input type="text" id="txtNmm" class="txtfield-basic" placeholder="반 명을 입력해주세요."></td>
-                    
-                    
-                    
-                    
+                      </select>
+                    </td>
+                    <th>반 명</th>
+                    <td colspan="3">
+                      <input type="text" id="txtNmm" class="txtfield-basic" placeholder="반 명을 입력해주세요.">
+                    </td>
                   </tr>
                   <tr>
                     <th>강사명</th>
@@ -438,50 +436,74 @@
               </div>
             </div>
             <!-- 테이블 box 끝 -->
-<div class="box-bg">
-              <table class="t-basic-2 bora4">
-                
+            <div class="box-bg">
+              <table class="t-basic-2 bora3">
                 <tbody>
                   <tr>
-                    <th style="
-    width: 125px;
-">선택 일괄처리</th>
-                    <td style="
-"><div class="t-radio-01 mr20 i-block">
-      <input type="radio" id="hradio01" name="hradio01" checked="">
-      <label for="hradio01"><span class="rchk"></span>수강료 배정</label>
-      <input type="radio" id="hradio01_2" name="hradio01">
-      <label for="hradio01_2"><span class="rchk"></span>담당강사 배정</label>
-      <input type="radio" id="hradio01_3" name="hradio01">
-      <label for="hradio01_3"><span class="rchk"></span>수강상태</label>
-      <input type="radio" id="hradio01_4" name="hradio01">
-      
-    </div>
-<div class="i-block">
-                <span for="txtNm">- 수강료 :</span>
-                <input type="text" id="txtNmm" class="txtfield-basic" placeholder="">
-              </div></td>
+                    <th style="width: 125px;">선택 일괄처리</th>
+                    <td>
+                      <!-- 선택일괄처리 영역 시작-->
+                      <div class="t-tab-Contents flex-center t-radio-01 mr20 i-block">
+                        <input type="radio" id="tuition" name="process01">
+                        <label for="tuition"><span class="rchk"></span>수강료 배정</label>
+                        <input type="radio" id="teacher" name="process01">
+                        <label for="teacher"><span class="rchk"></span>담당강사 배정</label>
+                        <input type="radio" id="course" name="process01">
+                        <label for="course"><span class="rchk"></span>수강상태</label>
 
-                    
-                    
-                    
-                    
-                    
-                    
+                        <!-- 일괄처리 데이터 영역 시작 -->
+                        <div class="tabCo-Wrap process-data">
+                          <!-- 수강료 배정 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 수강료 :</span>
+                            <input type="text" id="txtNmm" class="txtfield-basic mr5 ml5">
+                            <span class="mr10">원</span>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /수강료 배정 선택시 -->
+
+                          <!-- 담당강사 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 담당강사 선택 :</span>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /담당강사 선택시 -->
+
+                          <!-- 수강상태 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 수강상태 :</span>
+                            <select class="ml5" name="" id="">
+                              <option value="" disabled="" selected="">수강상태</option>
+                              <option value="">수강전</option>
+                              <option value="">수강</option>
+                              <option value="">종강</option>
+                            </select>
+                            <button type="button" class="t-button-xs t-button-bora6">저장</button>
+                          </div>
+                          <!-- /수강상태 선택시 -->
+
+                        </div>
+                        <!-- 일괄처리 데이터 영역 끝 -->
+
+                      </div>
+                      <!-- 선택일괄처리 영역 끝-->
+                    </td>
                   </tr>
-                  
                 </tbody>
               </table>
-              
+
             </div>
 
 
             <!-- 하단 내용 시작 -->
             <div class="content-section">
 
-              <div class="button-wrap flex-end2">
-                <button type="button" class="t-button-xs t-button-bora1 m0">선택 문자발송</button>
-                <button type="button" class="t-button-xs t-button-bora2 ml5">검색</button>
+              <div class="tit-wrap flex-end"><div class="t-checkbox checkbox01">
+      <input type="checkbox" name="checkForm" id="count-class">
+      <label for="count-class">회차반</label>
+    </div><div class="button-wrap flex-end2">
+                <button type="button" class="t-button-xs t-button-bora1 m0">반 등록</button>
+                <button type="button" class="t-button-xs t-button-white t-button-grey-bd"><i class="i-print"></i><span>결과 인쇄</span></button><button type="button" class="t-button-xs t-button-white t-button-green-bd ml0">엑셀 받기</button>
                 <select name="" id="">
                   <option value="" disabled="" selected="">10건</option>
                   <option value="">20개씩 보기</option>
@@ -490,7 +512,7 @@
                   <option value="">80개씩 보기</option>
                   <option value="">100개씩 보기</option>
                 </select>
-              </div>
+              </div></div>
 
               <table class="t-basic-1">
                 <thead>
@@ -727,22 +749,22 @@
 
   <script>
 
-    
+
     // 반 분류 전체 닫기,펼치기 버튼 클릭시 
     document.getElementById("class-open").onclick = function () {
 
-    $(this).css('display','none') ;
-     
-    $(".left-cont").addClass("active");
+      $(this).css('display', 'none');
+
+      $(".left-cont").addClass("active");
 
     };
 
 
     document.getElementById("class-close").onclick = function () {
 
-    $("#class-open").css('display','inline-flex') ;
-    
-    $(".left-cont").removeClass("active");
+      $("#class-open").css('display', 'inline-flex');
+
+      $(".left-cont").removeClass("active");
 
     };
 

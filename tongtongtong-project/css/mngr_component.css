@@ -3,52 +3,12 @@
 
 :root { /* pc */
 
-    /* Color */
-    --pc-bora-1: #292e41;
-    --pc-bora-2: #9678f1;
-    --pc-bora-3: #6d57b3;
-    --pc-bora-4: #4641ab;
-    --pc-bora-5: #c4afda;
-    --pc-bora-6: #5b5693;
-    --pc-bora-7: #5d39ff;
-    --pc-bora-8: #c1b9dd;
-    --pc-red: #dd346d;
-    --pc-border-1: #62666B;
-    --pc-border-2: #CCD1D7;
-    --pc-border-3: #E0E6EF;
-    --pc-border-4: #d7dce5;
-    --pc-border-5: #3b2989;
-    --pc-text-color-1: #333;
-    /* Font */
-    --pc-text-h1: 36px;
-    --pc-text-h2: 24px;
-    --pc-text-h3: 16px;
-    --pc-text-h4: 15px;
-    --pc-text-h5: 14px;
-    --pc-text-h6: 13px;
-    --pc-fs20: 20px;
-    --pc-fs18: 18px;
-    --pc-fs17: 17px;
-    --pc-fs16: 16px;
-    --pc-fs15: 15px;
-    --pc-fs14: 14px;
-    --pc-fs13: 13px;
-    --pc-fs12: 12px;
-    --pc-fs11: 11px;
-    --pc-fs10: 10px;
-    /* pc,m 공용*/
-    --text-light: 300;
-    --text-regular: 400;
-    --text-medium: 500;
-    --text-bold: 700;
-    --text-extrabold: 800;
-    --letter-spacing-0: 0;
-    --letter-spacing-065: -0.65px;
-    --letter-spacing-1: -1px;
-    --letter-spacing-2: -2px;
-}
+ /* Color */
+ --pc-bora-1: #292e41; --pc-bora-2: #9678f1; --pc-bora-3: #6d57b3; --pc-bora-4: #4641ab; --pc-bora-5: #c4afda; --pc-bora-6: #5b5693; --pc-bora-7: #5d39ff; --pc-bora-8: #c1b9dd; --pc-red: #dd346d; --pc-border-1: #62666B; --pc-border-2: #CCD1D7; --pc-border-3: #E0E6EF; --pc-border-4: #d7dce5; --pc-border-5: #3b2989; --pc-text-color-1: #333; /* Font */
+ --pc-text-h1: 36px; --pc-text-h2: 24px; --pc-text-h3: 16px; --pc-text-h4: 15px; --pc-text-h5: 14px; --pc-text-h6: 13px; --pc-fs20: 20px; --pc-fs18: 18px; --pc-fs17: 17px; --pc-fs16: 16px; --pc-fs15: 15px; --pc-fs14: 14px; --pc-fs13: 13px; --pc-fs12: 12px; --pc-fs11: 11px; --pc-fs10: 10px; /* pc,m 공용*/
+ --text-light: 300; --text-regular: 400; --text-medium: 500; --text-bold: 700; --text-extrabold: 800; --letter-spacing-0: 0; --letter-spacing-065: -0.65px; --letter-spacing-1: -1px; --letter-spacing-2: -2px; } 
 
-.text-light { font-weight: var(--text-light) !important;}
+.text-light { font-weight: var(--text-light) !important; } 
 .text-regular { font-weight: var(--text-regular)!important; } 
 .text-medium { font-weight: var(--text-medium)!important; } 
 .text-bold { font-weight: var(--text-bold)!important; } 
@@ -119,7 +79,7 @@
 
 
 
-.tr180 {transform: rotate(180deg)}
+.tr180 { transform: rotate(180deg) } 
 
 
 
@@ -265,6 +225,17 @@ select
 탭
 */
 .academy-mngr-Wrap .tab-menu { width: 100%; height: 48px; display: flex; align-items: center; padding: 0 20px; box-sizing: border-box; border-bottom: 1px solid var(--pc-bora-5); } 
+
+[class^="t-tab-Contents"] { display: flex; flex-direction: row; flex-wrap: wrap; } 
+[class^="t-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox { display: none; } 
+[class^="t-tab-Contents"]>input[type="radio"] { display: none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; } 
+[class^="t-tab-Contents"]>input[type="radio"]:first-of-type:checked ~ .tabCo-Wrap>.tabCo-CommonBox:first-child, 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(2):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(2), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(3):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(3), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(4):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(4), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(5):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(5), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(6):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(6), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(7):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(7) { display: flex; align-items: center; } 
 
 /* tab menu 1 */
 .academy-mngr-Wrap .tab-01 { display:flex; flex-flow:row wrap; align-items:center; } 
@@ -412,7 +383,7 @@ select
 
 
 /* 컬러 */
-.academy-mngr-Wrap .t-button-white{background:#fff;}
+.academy-mngr-Wrap .t-button-white { background:#fff; } 
 .academy-mngr-Wrap .t-button-nobg { background: transparent !important; color: var(--pc-text-color-1); transition: background ease 1.5s; } 
 .academy-mngr-Wrap .t-button-bora1 { background: var(--pc-bora-1)!important; } 
 .academy-mngr-Wrap .t-button-bora2 { background: var(--pc-bora-2)!important; } 
@@ -455,7 +426,7 @@ select
 .academy-mngr-Wrap [class^="t-radio"] input[type="radio"] { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; } 
 
 /* 01 기본형 */
-.academy-mngr-Wrap .t-radio-01 input[type="radio"] + label { display:inline-block; font-size: var(--pc-fs13); margin: 0 8px 0 0; box-sizing:border-box; position:relative; z-index: 0; } 
+.academy-mngr-Wrap .t-radio-01 input[type="radio"] + label { display:inline-block; font-size: var(--pc-fs13); margin: 0 10px 0 0; box-sizing:border-box; position:relative; z-index: 0; } 
 .academy-mngr-Wrap .t-radio-01 input[type="radio"] + label:last-child { margin:0; } 
 .academy-mngr-Wrap .t-radio-01 input[type="radio"] + label:hover { cursor:pointer; } 
 .academy-mngr-Wrap .t-radio-01 input[type="radio"] + label .rchk { display: inline-block; width: 18px; height: 18px; border-radius:100%; background:#fff; border:1px solid var(--pc-border-2); box-sizing: border-box; vertical-align: middle; transition: border 0.5s; position: relative; margin-right: 5px; margin-top: -2px; } 
@@ -629,6 +600,7 @@ text field
 .academy-mngr-Wrap .i-regist2 { background: url(../images/regist-btn2.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-modify { background: url(../images/icon-modify.png) no-repeat center/100%; width: 13px; height: 13px; margin-bottom:2px; } 
 .academy-mngr-Wrap .i-set { background: url(../images/icon-set.png) no-repeat center/100%; width: 11px; height: 12px; } 
+.academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 11px; height: 12px; } 
 .academy-mngr-Wrap .i-clock { background: url(../images/icon-clock.png) no-repeat center/100%; width: 12px; height: 12px; margin-bottom:1px; } 
 .academy-mngr-Wrap .i-save { background: url(../images/icon-save.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-del { background: url(../images/icon-del.png) no-repeat center/100%; width: 13px; height: 13px; } 
