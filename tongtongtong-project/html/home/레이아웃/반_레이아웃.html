@@ -173,7 +173,7 @@
 
 
       <!-- 페이지 컨텐츠 시작 : 클래스 추가되면서 페이지 발생예정 -->
-      <div class="content sub studentMg">
+      <div class="content sub classMg">
 
 
 
@@ -183,10 +183,10 @@
 
           <div class="left-cont-wrap">
 
-            <div class="button-wrap flex-between"><button type="button" class="t-button-xs m0"><i
-                  class="i-paste"></i><span>반 복사</span></button>
-              <button type="button" id="" class="t-button-xs t-button-bora2 m0 add-close">
-                <span class="add-txt-ch">반 분류 전체 닫기</span><i class="more-arrow"></i>
+            <div class="button-wrap flex-between">
+              <button type="button" class="t-button-xs m0"><i class="i-paste"></i><span>반 복사</span></button>
+              <button type="button" id="class-close" class="t-button-xs t-button-bora7 m0">
+                <span>반 분류 전체 닫기</span><i class="more-arrow tr180"></i>
               </button>
             </div>
 
@@ -244,93 +244,95 @@
               </div>
 
               <!-- 반 목록 시작 -->
-              <div class="list-cnt-box">
-                <ul class="class-list">
-                  <li class="class-item">
-                    <button data-action="collapse" type="button"></button>
-                    <button data-action="expand" type="button" style="display: none;"></button>
-                    <div class="class-item-cnt group">
-                      <a class="class-name" href="#">전체</a>
-                    </div>
-                    <ul class="class-list">
-                      <li class="class-item">
-                        <button data-action="collapse" type="button"></button>
-                        <button data-action="expand" type="button" style="display: none;"></button>
-                        <div class="class-item-cnt group">
-                          <a class="class-name" href="#">학원사랑</a>
-                        </div>
-                        <ul class="class-list">
-                          <li class="class-item ">
-                            <button data-action="collapse" type="button"></button>
-                            <button data-action="expand" type="button" style="display: none;"></button>
-                            <div class="class-item-cnt group">
-                              <a class="class-name" href="#">주단위반</a>
-                            </div>
-                            <ul class="class-list" style="/* display: none; */">
-                              <li class="class-item">
-                                <p class="last-item"></p>
-                                <div class="class-item-cnt group">
-                                  <a class="class-name" href="#">국어반</a>
-                                </div>
-                              </li>
-                              <li class="class-item">
-                                <p class="last-item"></p>
-                                <div class="class-item-cnt group">
-                                  <a class="class-name" href="#">수학반</a>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="class-item">
-                            <button data-action="collapse" type="button"></button>
-                            <button data-action="expand" type="button" style="display: none;"></button>
-                            <div class="class-item-cnt group">
-                              <a class="class-name" href="#">월단위반</a>
-                            </div>
-                            <ul class="class-list">
-                              <li class="class-item ">
-                                <p class="last-item"></p>
-                                <div class="class-item-cnt group">
-                                  <a class="class-name" href="#">국어반</a>
-                                </div>
-                              </li>
-                              <li class="class-item">
-                                <p class="last-item"></p>
-                                <div class="class-item-cnt group">
-                                  <a class="class-name" href="#">수학반</a>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="class-item">
-                        <button data-action="collapse" type="button"></button>
-                        <button data-action="expand" type="button" style="display: none;"></button>
-                        <div class="class-item-cnt group">
-                          <a class="class-name" href="#">멀티캠퍼스</a>
-                        </div>
-                        <ul class="class-list">
-                          <li class="class-item ">
-                            <button data-action="collapse" type="button" style="display: none;"></button>
-                            <button data-action="expand" type="button"></button>
-                            <div class="class-item-cnt group">
-                              <a class="class-name" href="#">특수반 A</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="class-item">
-                        <button data-action="collapse" type="button" style="display: none;"></button>
-                        <button data-action="expand" type="button"></button>
-                        <div class="class-item-cnt group">
-                          <a class="class-name" href="#">테스트반 A</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              <div class="class-list-wrap">
+                <div class="list-cnt-box">
+                  <ul class="class-list">
+                    <li class="class-item">
+                      <button data-action="collapse" type="button"></button>
+                      <button data-action="expand" type="button" style="display: none;"></button>
+                      <div class="class-item-cnt group">
+                        <a class="class-name" href="#">전체</a>
+                      </div>
+                      <ul class="class-list">
+                        <li class="class-item">
+                          <button data-action="collapse" type="button"></button>
+                          <button data-action="expand" type="button" style="display: none;"></button>
+                          <div class="class-item-cnt group">
+                            <a class="class-name" href="#">학원사랑</a>
+                          </div>
+                          <ul class="class-list">
+                            <li class="class-item ">
+                              <button data-action="collapse" type="button"></button>
+                              <button data-action="expand" type="button" style="display: none;"></button>
+                              <div class="class-item-cnt group">
+                                <a class="class-name" href="#">주단위반</a>
+                              </div>
+                              <ul class="class-list">
+                                <li class="class-item">
+                                  <p class="last-item"></p>
+                                  <div class="class-item-cnt group">
+                                    <a class="class-name" href="#">국어반</a>
+                                  </div>
+                                </li>
+                                <li class="class-item">
+                                  <p class="last-item"></p>
+                                  <div class="class-item-cnt group">
+                                    <a class="class-name" href="#">수학반</a>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="class-item">
+                              <button data-action="collapse" type="button"></button>
+                              <button data-action="expand" type="button" style="display: none;"></button>
+                              <div class="class-item-cnt group">
+                                <a class="class-name" href="#">월단위반</a>
+                              </div>
+                              <ul class="class-list">
+                                <li class="class-item ">
+                                  <p class="last-item"></p>
+                                  <div class="class-item-cnt group">
+                                    <a class="class-name" href="#">국어반</a>
+                                  </div>
+                                </li>
+                                <li class="class-item">
+                                  <p class="last-item"></p>
+                                  <div class="class-item-cnt group">
+                                    <a class="class-name" href="#">수학반</a>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="class-item">
+                          <button data-action="collapse" type="button"></button>
+                          <button data-action="expand" type="button" style="display: none;"></button>
+                          <div class="class-item-cnt group">
+                            <a class="class-name" href="#">멀티캠퍼스</a>
+                          </div>
+                          <ul class="class-list">
+                            <li class="class-item ">
+                              <button data-action="collapse" type="button" style="display: none;"></button>
+                              <button data-action="expand" type="button"></button>
+                              <div class="class-item-cnt group">
+                                <a class="class-name" href="#">특수반 A</a>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="class-item">
+                          <button data-action="collapse" type="button" style="display: none;"></button>
+                          <button data-action="expand" type="button"></button>
+                          <div class="class-item-cnt group">
+                            <a class="class-name" href="#">테스트반 A</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
 
+                </div>
               </div>
               <!-- 반 목록 끝 -->
             </div>
@@ -353,34 +355,15 @@
 
           <div class="layout-wrap">
 
-            <p class="page-tit">반 관리</p>
+            <div class="page-tit-wrap"><p class="page-tit mb0">반 관리</p>
+              <button type="button" id="class-open" class="t-button-xs t-button-bora2 m0" style="display: inline-flex;">
+                <span>반 분류 전체 펼치기</span><i class="more-arrow"></i>
+              </button></div>
             <!-- 테이블 box 시작 -->
             <div class="box-bg">
               <table class="t-basic-2 bora4">
-                <colgroup>
-                  <col style="width:155px;">
-                  <col style="width:315px;">
-                  <col style="width:155px;">
-                  <col style="width:315px;">
-                  <col style="width:155px;">
-                  <col style="width:315px;">
-                  <col style="width:155px;">
-                  <col style="width:315px;">
-                </colgroup>
+                
                 <tbody>
-                  <tr>
-                    <th>종강기간</th>
-                    <td colspan="8"><span class="date-picker">
-                        <input type="text" id="datepickerStart" class="datePicker txtfield-basic"
-                          placeholder="YYYY-MM-DD" readonly="">
-                        <img class="ui-datepicker-trigger" src="../../images/datepicker.png" alt="" title="">
-                        ~
-                        <input type="text" id="datepickerEnd" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD"
-                          readonly="">
-                        <img class="ui-datepicker-trigger" src="../../images/datepicker.png" alt="" title="">
-                      </span>
-                    </td>
-                  </tr>
                   <tr>
                     <th>대분류</th>
                     <td><select name="" id="">
@@ -393,6 +376,30 @@
                       </select></td>
                     <th>중분류</th>
                     <td><select name="" id="">
+                        <option value="" disabled="" selected="">중분류 (전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td><th>반 명</th><td colspan="3"><input type="text" id="txtNmm" class="txtfield-basic" placeholder="반 명을 입력해주세요."></td>
+                    
+                    
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th>강사명</th>
+                    <td><select name="" id="">
+                        <option value="" disabled="" selected="">대분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>운영방식</th>
+                    <td><select name="" id="">
                         <option value="" disabled="" selected="">리스트 수</option>
                         <option value="">20개씩 보기</option>
                         <option value="">40개씩 보기</option>
@@ -400,7 +407,7 @@
                         <option value="">80개씩 보기</option>
                         <option value="">100개씩 보기</option>
                       </select></td>
-                    <th>소분류</th>
+                    <th>수납방식</th>
                     <td>
                       <select name="" id="">
                         <option value="" disabled="" selected="">리스트 수</option>
@@ -411,8 +418,17 @@
                         <option value="">100개씩 보기</option>
                       </select>
                     </td>
-                    <th>전체</th>
-                    <td><input type="text" id="txtNmm" class="txtfield-basic" placeholder="검색어를 입력하세요."></td>
+                    <th>수강상태</th>
+                    <td>
+                      <select name="" id="">
+                        <option value="" disabled="" selected="">리스트 수</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -422,6 +438,42 @@
               </div>
             </div>
             <!-- 테이블 box 끝 -->
+<div class="box-bg">
+              <table class="t-basic-2 bora4">
+                
+                <tbody>
+                  <tr>
+                    <th style="
+    width: 125px;
+">선택 일괄처리</th>
+                    <td style="
+"><div class="t-radio-01 mr20 i-block">
+      <input type="radio" id="hradio01" name="hradio01" checked="">
+      <label for="hradio01"><span class="rchk"></span>수강료 배정</label>
+      <input type="radio" id="hradio01_2" name="hradio01">
+      <label for="hradio01_2"><span class="rchk"></span>담당강사 배정</label>
+      <input type="radio" id="hradio01_3" name="hradio01">
+      <label for="hradio01_3"><span class="rchk"></span>수강상태</label>
+      <input type="radio" id="hradio01_4" name="hradio01">
+      
+    </div>
+<div class="i-block">
+                <span for="txtNm">- 수강료 :</span>
+                <input type="text" id="txtNmm" class="txtfield-basic" placeholder="">
+              </div></td>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                  </tr>
+                  
+                </tbody>
+              </table>
+              
+            </div>
 
 
             <!-- 하단 내용 시작 -->
@@ -675,21 +727,26 @@
 
   <script>
 
-    // 원생정보 더보기 버튼 클릭시 
-    /* document.getElementById("add-close").onclick = function () {
+    
+    // 반 분류 전체 닫기,펼치기 버튼 클릭시 
+    document.getElementById("class-open").onclick = function () {
 
-      $(this).toggleClass("add-close");
+    $(this).css('display','none') ;
+     
+    $(".left-cont").addClass("active");
 
-      if ($(".add-txt-ch").text() == "추가정보 닫기") {
-        $(".add-txt-ch").text('원생정보 더보기');
-      } else {
-        $(".add-txt-ch").text('추가정보 닫기');
-      }
-
-      $(".add-info-wrap").toggleClass("active");
+    };
 
 
-    }; */
+    document.getElementById("class-close").onclick = function () {
+
+    $("#class-open").css('display','inline-flex') ;
+    
+    $(".left-cont").removeClass("active");
+
+    };
+
+
 
     // 공통 스크립트
     // 로그인 학원명 드롭다운메뉴 클릭시 
