@@ -51,18 +51,22 @@
 
 /* 옵션 상태 */
 .academy-mngr-Wrap [class^="opt-"] { font-weight: var(--text-medium); } 
-.academy-mngr-Wrap .opt-attend { color: var(--pc-bora-7); } 
-.academy-mngr-Wrap .opt-accepting { color: var(--pc-bora-7); } 
+.academy-mngr-Wrap .opt-attend{ color: var(--pc-bora-7); } 
+.academy-mngr-Wrap .opt-accepting,
+.academy-mngr-Wrap .opt-be-course  { color: var(--pc-bora-7); } 
 .academy-mngr-Wrap .opt-absent { color: var(--pc-red); } 
-.academy-mngr-Wrap .opt-late { color: var(--pc-bora-6); } 
-.academy-mngr-Wrap .opt-dead { color: var(--pc-bora-6); } 
-.academy-mngr-Wrap .opt-leave { color: var(--pc-bora-8); } 
+.academy-mngr-Wrap .opt-late,
+.academy-mngr-Wrap .opt-dead  { color: var(--pc-bora-6); } 
+.academy-mngr-Wrap .opt-leave,
+.academy-mngr-Wrap .opt-course  { color: var(--pc-bora-8); } 
 .academy-mngr-Wrap .opt-regist { color: #15038C; } 
 .academy-mngr-Wrap .opt-reserve { color: #447EF2; } 
 .academy-mngr-Wrap .opt-nonregi { color: #035AA6; } 
-.academy-mngr-Wrap .opt-discharge { color: #F24B59; } 
+.academy-mngr-Wrap .opt-discharge,
+.academy-mngr-Wrap .opt-end { color: #F24B59; } 
 .academy-mngr-Wrap .opt-absence { color: #89B3D9; } 
 .academy-mngr-Wrap .opt-set { color: #b2b2b2; } 
+
 
 
 .num { font-family:"SUIT"; } 
@@ -600,7 +604,7 @@ text field
 .academy-mngr-Wrap .i-regist2 { background: url(../images/regist-btn2.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-modify { background: url(../images/icon-modify.png) no-repeat center/100%; width: 13px; height: 13px; margin-bottom:2px; } 
 .academy-mngr-Wrap .i-set { background: url(../images/icon-set.png) no-repeat center/100%; width: 11px; height: 12px; } 
-.academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 11px; height: 12px; } 
+.academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 14px; height: 15px; margin-bottom: 1px;} 
 .academy-mngr-Wrap .i-clock { background: url(../images/icon-clock.png) no-repeat center/100%; width: 12px; height: 12px; margin-bottom:1px; } 
 .academy-mngr-Wrap .i-save { background: url(../images/icon-save.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-del { background: url(../images/icon-del.png) no-repeat center/100%; width: 13px; height: 13px; } 
@@ -708,6 +712,11 @@ text field
 .academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents .login-arrow { width: 13px; height: 8px; background: transparent url(../images/login-arrow.png) center no-repeat; margin-left: 30px; } 
 .academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents:after { position: absolute; content: ''; right: 20px; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); background: transparent url(../images/login-arrow.png) no-repeat center/100%; transition: transform 0.5s; cursor: pointer; width: 13px; height: 7.5px; transform-origin: center 20%; opacity: 0.9; } 
 
+
+/* 학원 1개이하인 경우 화살표 제거 */
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive {min-width: auto;}
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive .dropdown{display:none;}
+.academy-mngr-Wrap header .header-top-inner .login-wrap .login-contents.noactive:after {display:none;}
 
 
 
