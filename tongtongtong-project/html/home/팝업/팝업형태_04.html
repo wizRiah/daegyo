@@ -25,119 +25,58 @@
         </div>
         <div class="pop-body">
           <div class="pop-container">
-
             <div class="box-bg">
               <table class="t-basic-2 bora4">
                 <tbody>
                   <tr>
-                    <th>학부</th>
+                    <th>비회원 수신자 등록</th>
                     <td><select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
+                        <option value="" disabled="" selected="">그룹선택</option>
                         <option value="">초등부</option>
                         <option value="">중등부</option>
                         <option value="">고등부</option>
                       </select></td>
-                    <th>학년</th>
-                    <td><select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">1학년</option>
-                        <option value="">2학년</option>
-                        <option value="">3학년</option>
-                      </select></td>
-                    <th>학교</th>
-                    <td><select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">A학교</option>
-                        <option value="">B학교</option>
-                        <option value="">C학교</option>
-                      </select></td>
-                    <th>전체</th>
-                    <td><select class="mr5" name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">원생명</option>
-                        <option value="">원생닉네임</option>
-                        <option value="">원생휴대폰번호</option>
-                        <option value="">학부모명</option>
-                        <option value="">학부모아이디</option>
-                        <option value="">학부모휴대폰번호</option>
-                      </select>
-                      <input type="text" id="txtNmm" class="txtfield-basic wd-Auto" placeholder="검색어를 입력하세요."/>
+                    <th>이름</th>
+                    <td>
+                      <div class="input-btn-wrap">
+                        <input type="text" id="txtNmm" placeholder="이름입력">
+                      </div>
+                    </td>
+                    <th>번호</th>
+                    <td>
+                      <div class="input-btn-wrap">
+                        <input type="text" id="txtNmm" placeholder="휴대폰(-없이) 입력"><button type="button" class="t-button-xs t-button-bora1 mr0">등록</button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <th>대분류</th>
-                    <td>
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">대분류(전체)</option>
-                        <option value="">20개씩 보기</option>
-                        <option value="">40개씩 보기</option>
-                        <option value="">60개씩 보기</option>
-                        <option value="">80개씩 보기</option>
-                        <option value="">100개씩 보기</option>
-                      </select>
-                    </td>
-                    <th>중분류</th>
-                    <td>
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">중분류(전체)</option>
-                        <option value="">20개씩 보기</option>
-                        <option value="">40개씩 보기</option>
-                        <option value="">60개씩 보기</option>
-                        <option value="">80개씩 보기</option>
-                      </select>
-                    </td>
-                    <th>반 선택</th>
-                    <td>
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">20개씩 보기</option>
-                        <option value="">40개씩 보기</option>
-                        <option value="">60개씩 보기</option>
-                        <option value="">80개씩 보기</option>
-                      </select>
-                    </td>
-                    <th>원생선택</th>
-                    <td>
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">20개씩 보기</option>
-                        <option value="">40개씩 보기</option>
-                        <option value="">60개씩 보기</option>
-                        <option value="">80개씩 보기</option>
-                      </select>
+                    <th>검색</th>
+                    <td colspan="5">
+                      <div class="input-btn-wrap">
+                        <input type="text" id="txtNmm" class="wd200" placeholder="이름 또는 휴대폰(-없이) 입력">
+                        <button type="button" class="t-button-xs t-button-bora2 mr0">검색</button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="button-wrap flex-end2 mt17">
-                <button type="button" class="t-button-xs">검색조건 초기화</button>
-                <button type="button" class="t-button-xs t-button-bora2">검색</button>
-              </div>
             </div>
-
             <div class="content-section mt40">
               <div class="layout-wrap col2 colauto">
-
                 <div class="box-bg flex-grow-1 box-bg-02">
                   <div class="tit-bg">
-                    <p class="tit-bg-txt">SMS 사용현황</p>
+                    <p class="tit-bg-txt">그룹관리</p>
                   </div>
-                  <div class="tit-wrap flex-end ">
-                    <span class="sum">총 10명</span>
-                    <div class="button-wrap items-end">
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">10건</option>
-                        <option value="">100건</option>
-                        <option value="">200건</option>
-                      </select>
-                    </div>
+                  <div class="input-btn-wrap">
+                    <input type="text" id="txtNmm" placeholder="그룹명 입력">
+                    <button type="button" class="t-button-xs t-button-bora2 mr0">추가</button>
                   </div>
                   <table class="t-basic-1 bora3">
                     <thead>
                       <tr>
                         <th style="width:68px;">
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_all"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_all">
                             <label for="tbl_check_all"></label>
                           </div>
                         </th>
@@ -149,7 +88,7 @@
                       <tr class="bg-all">
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
                             <label for="tbl_check_01"></label>
                           </div>
                         </td>
@@ -161,7 +100,7 @@
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
                             <label for="tbl_check_01"></label>
                           </div>
                         </td>
@@ -173,7 +112,7 @@
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_02"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_02">
                             <label for="tbl_check_02"></label>
                           </div>
                         </td>
@@ -190,7 +129,7 @@
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_03"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_03">
                             <label for="tbl_check_03"></label>
                           </div>
                         </td>
@@ -208,7 +147,6 @@
                     <button type="button" class="t-button-xs t-button-bora1 m0">선택 발송대상 추가</button>
                   </div>
                 </div>
-
                 <div class="box-bg flex-grow-2 box-bg-02">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">수신자 목록</p>
@@ -216,7 +154,7 @@
                   <div class="tit-wrap flex-end ">
                     <span class="sum">총 10명</span>
                     <div class="button-wrap items-end">
-                      <select name="" id="">
+                      <button type="button" class="t-button-xs t-button-bora2">수신자추가</button><select name="" id="">
                         <option value="" disabled="" selected="">10건</option>
                         <option value="">100건</option>
                         <option value="">200건</option>
@@ -228,7 +166,7 @@
                       <tr>
                         <th style="width:68px;">
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_all"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_all">
                             <label for="tbl_check_all"></label>
                           </div>
                         </th>
@@ -236,7 +174,6 @@
                         <th>수납금액</th>
                         <th>수납금액</th>
                         <th>환불금액</th>
-                        <th>수강<br>상태</th>
                         <th>관리</th>
                       </tr>
                     </thead>
@@ -244,7 +181,7 @@
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
                             <label for="tbl_check_01"></label>
                           </div>
                         </td>
@@ -261,17 +198,13 @@
                           <p>채용시 마감</p>
                         </td>
                         <td>
-                          <p class="opt-be-course">수강전</p>
-                        </td>
-                        <td>
-                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i
-                              class="i-set-g"></i></button>
+                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button>
                         </td>
                       </tr>
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_02"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_02">
                             <label for="tbl_check_02"></label>
                           </div>
                         </td>
@@ -288,17 +221,13 @@
                           <p>채용시 마감</p>
                         </td>
                         <td>
-                          <p class="opt-course">수강</p>
+                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button>
                         </td>
-                        <td>
-                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i
-                              class="i-set-g"></i></button>
-                         </td>
                       </tr>
                       <tr>
                         <td>
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_03"/>
+                            <input type="checkbox" name="checkForm" id="tbl_check_03">
                             <label for="tbl_check_03"></label>
                           </div>
                         </td>
@@ -315,11 +244,7 @@
                           <p>채용시 마감</p>
                         </td>
                         <td>
-                          <p class="opt-end">종강</p>
-                        </td>
-                        <td>
-                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i
-                              class="i-set-g"></i></button>
+                          <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i class="i-set-g"></i></button>
                         </td>
                       </tr>
                     </tbody>
