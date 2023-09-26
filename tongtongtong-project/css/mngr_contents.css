@@ -43,7 +43,7 @@
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li { margin-bottom: 14px; } 
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li .info-tit { position: relative; padding-right: 12px; margin-right: 12px; flex: auto; width: 38px; } 
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li .info-tit:after { position: absolute; content: ''; width: 1px; height: 12px; top: 5px; right: 0; background-color: rgb(255 255 255 / 20%); } 
-.academy-mngr-Wrap .studentMg .message-wrap { display: flex; background: #f9fafc; padding: 15px 20px; box-sizing: border-box; border-bottom: 1px solid #e0e6ef; } 
+
 .academy-mngr-Wrap .studentMg .t-basic-1 tbody tr td { word-break: break-all; } 
 .academy-mngr-Wrap .studentMg .add-info-wrap { transition: left .5s; width: 400px; position: absolute; left: -50px; background: #ffffff; top: 0; padding: 0; height: 100%; box-sizing: border-box; z-index: 2; box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%); } 
 .academy-mngr-Wrap .studentMg .add-info-wrap .add-title { display: flex; padding: 20px; height: 66px; box-sizing: border-box; background: #5a4ddc; align-items: center; } 
@@ -103,12 +103,13 @@
 기본서브
 */
 .academy-mngr-Wrap .sub { padding-top: 54px; min-width: 1280px; margin: 0 auto; width: 100%; background-color: #fff; display: flex; } 
-.academy-mngr-Wrap .sub .layout-wrap { padding: 35px 20px; margin: 0 auto; box-sizing: border-box; } 
+.academy-mngr-Wrap .sub .layout-wrap { height:100%; padding: 35px 20px; margin: 0 auto; box-sizing: border-box; } 
 .academy-mngr-Wrap .sub .box-bg { margin-bottom: 40px; } 
 .academy-mngr-Wrap .sub .main-cont { width: 100%; } 
 .academy-mngr-Wrap .sub .main-tit .tit { padding-left: 5px; } 
 .academy-mngr-Wrap .sub .page-tit { color: var(--pc-bora-1); font-size: 20px; font-weight: var(--text-bold); padding: 0 23px; margin-bottom: 16px; } 
 .academy-mngr-Wrap .sub .page-tit-wrap { display: flex; align-items: center; margin-bottom: 16px; } 
+
 
 /* 왼쪽영역 */
 .academy-mngr-Wrap .sub .left-cont { width: 350px; flex-shrink: 0; box-sizing: border-box; position: relative; } 
@@ -119,8 +120,8 @@
 /*
 반 (classMg)
 */
-.academy-mngr-Wrap .classMg .class-list-wrap { overflow: hidden; height: 680px; background: #fff; border: 1px solid var(--pc-border-2); border-radius: 2px; box-sizing: border-box; } 
-.academy-mngr-Wrap .classMg .list-cnt-box { height: 100%; overflow: hidden; padding: 20px; overflow-y: auto; box-sizing: border-box; } 
+.academy-mngr-Wrap .classMg .class-list-wrap { height:680px; background: #fff;  border: 1px solid var(--pc-border-2); border-radius: 2px; box-sizing: border-box;  padding: 20px 0;  overflow-y: auto; } 
+.academy-mngr-Wrap .classMg .list-cnt-box { padding: 0 20px;box-sizing: border-box; } 
 .academy-mngr-Wrap .classMg .class-list { display: block; position: relative; margin: 0; padding: 0; } 
 .academy-mngr-Wrap .classMg .class-item { display: block; position: relative; margin: 0; padding: 0; min-height: 20px; line-height: 20px; } 
 .academy-mngr-Wrap .classMg .class-item > button { display: block; position: absolute; height: 34px; overflow: hidden; z-index: 1; } 
@@ -139,8 +140,10 @@
 .academy-mngr-Wrap .classMg .class-item > button[data-action="expand"]~.class-name { color:#5b5693; } 
  
 .academy-mngr-Wrap .classMg .page-tit-wrap .page-tit { height: 36px; line-height: 36px; } 
-.academy-mngr-Wrap .classMg .left-cont { transition: .5s; left:-350px; width: 0; opacity:0; } 
-.academy-mngr-Wrap .classMg .left-cont.active { left:0; width: 350px; opacity:1; } 
+.academy-mngr-Wrap .classMg .left-cont { transition: .5s; left:-350px; width:0; opacity:0; } 
+.academy-mngr-Wrap .classMg .left-cont.active { left:0; width:350px; opacity:1;   } 
+.academy-mngr-Wrap .classMg .left-cont .left-cont-wrap{padding:0;}
+.academy-mngr-Wrap .classMg .left-cont.active .left-cont-wrap{padding:20px;}
 .academy-mngr-Wrap .classMg .process-data { display: inline-flex; align-items: center; margin-left: 30px; } 
 .academy-mngr-Wrap .classMg .process-data span { flex-shrink: 0; } 
 
