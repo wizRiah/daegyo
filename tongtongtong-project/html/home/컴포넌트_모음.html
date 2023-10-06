@@ -156,6 +156,27 @@
       <option value="">80개씩 보기</option>
       <option value="">100개씩 보기</option>
     </select>
+
+    <br><br><br>
+    <b>크기별 셀렉트</b><br>
+
+    <select name="" id="" class="wd140">
+      <option value="" disabled="" selected="">너비140</option>
+      <option value="">20개씩 보기</option>
+    </select>
+    <select name="" id="" class="wd160">
+      <option value="" disabled="" selected="">너비160</option>
+      <option value="">20개씩 보기</option>
+    </select>
+    <select name="" id="" class="wd200">
+      <option value="" disabled="" selected="">너비200</option>
+      <option value="">20개씩 보기</option>
+    </select>
+    <select name="" id="" class="wd-Auto">
+      <option value="" disabled="" selected="">너비auto</option>
+      <option value="">20개씩 보기</option>
+    </select>
+    
     <!-- 셀렉트 끝 -->
 
 
@@ -170,6 +191,16 @@
     <br><br>
 
     <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="비활성화" />
+
+    <br><br>
+
+    <b>크기별 인풋</b><br>
+    <input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="너비140" />
+    <input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder="너비160" />
+    <input type="text" id="txtNmm" class="txtfield-basic wd200" placeholder="너비200" />
+    <input type="text" id="txtNmm" class="txtfield-basic wd-Auto" placeholder="너비auto" />
+
+
     <!-- 인풋 끝 -->
 
 
@@ -887,8 +918,10 @@
           <td>
             <p class="opt-end">종강</p>
           </td>
-          <td><button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i
-                class="i-set-g"></i></button></td>
+          <td>
+            <button type="button" class="t-button-circle btn-del t-button-grey" title="설정"><i
+                class="i-set-g"></i></button>
+          </td>
         </tr>
 
       </tbody>
@@ -901,7 +934,7 @@
     <table class="t-basic-2 bora4">
       <tbody>
         <tr>
-          <th>종강기간</th>
+          <th style="width: 130px;"><span class="t-necessary">필수</span>종강기간</th>
           <td colspan="8">
             <span class="date-picker">
               <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD"
