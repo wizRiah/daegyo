@@ -272,6 +272,20 @@ select
 /* 
 탭
 */
+
+
+[class^="t-tab-Contents"] { display: flex; flex-direction: row; flex-wrap: wrap; } 
+[class^="t-tab-Contents"]>.tabCo-Wrap>.tabCo-CommonBox { display: none; } 
+[class^="t-tab-Contents"]>input[type="radio"] { display: none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; } 
+[class^="t-tab-Contents"]>input[type="radio"]:first-of-type:checked ~ .tabCo-Wrap>.tabCo-CommonBox:first-child, 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(2):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(2), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(3):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(3), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(4):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(4), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(5):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(5), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(6):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(6), 
+[class^="t-tab-Contents"]>input[type="radio"]:nth-of-type(7):checked ~ .tabCo-Wrap>.tabCo-CommonBox:nth-child(7) { display: flex; align-items: center; } 
+
+
 .academy-mngr-Wrap .tab-menu { width: 100%; box-sizing: border-box; } 
 
 
