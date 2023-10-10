@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>(L) 원생 상세 검색 팝업</title>
+  <title>(L)원생검색</title>
   <link rel="stylesheet" href="../../../../../../css/font.css">
   <link rel="stylesheet" href="../../../../../../css/common.css">
   <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
@@ -20,13 +20,13 @@
 
     <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
 
-    
+
 
     <!-- 원생 상세검색 팝업 시작 -->
     <div class="t-popup-wrap">
       <div class="t-popup ui-draggable" style="width: 1200px;">
         <div class="pop-header ui-draggable-handle" style="cursor: move;">
-          <p class="pop-title">원생 상세 검색</p>
+          <p class="pop-title">원생 검색</p>
         </div>
         <div class="pop-body">
           <div class="pop-container">
@@ -37,28 +37,26 @@
                 <tbody>
                   <tr>
                     <th>학부</th>
-                    <td><select name="" id="">
+                    <td>
+                      <select name="" id="">
                         <option value="" disabled="" selected="">전체</option>
                         <option value="">초등부</option>
                         <option value="">중등부</option>
                         <option value="">고등부</option>
-                      </select></td>
+                      </select>
+                    </td>
                     <th>학년</th>
-                    <td><select name="" id="">
+                    <td>
+                      <select name="" id="">
                         <option value="" disabled="" selected="">전체</option>
                         <option value="">1학년</option>
                         <option value="">2학년</option>
                         <option value="">3학년</option>
-                      </select></td>
-                    <th>학교</th>
-                    <td><select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">A학교</option>
-                        <option value="">B학교</option>
-                        <option value="">C학교</option>
-                      </select></td>
+                      </select>
+                    </td>
                     <th>전체</th>
-                    <td><select class="mr5" name="" id="">
+                    <td>
+                      <select name="" id="">
                         <option value="" disabled="" selected="">전체</option>
                         <option value="">원생명</option>
                         <option value="">원생닉네임</option>
@@ -66,8 +64,10 @@
                         <option value="">학부모명</option>
                         <option value="">학부모아이디</option>
                         <option value="">학부모휴대폰번호</option>
-                      </select><input type="text" id="txtNmm" class="txtfield-basic wd-Auto" placeholder="검색어를 입력하세요.">
+                      </select>
                     </td>
+                    <th>검색어</th>
+                    <td><input type="text" id="txtNmm" class="txtfield-basic wd-Auto" placeholder="검색어를 입력하세요."></td>
                   </tr>
                   <tr>
                     <th>대분류</th>
@@ -86,23 +86,23 @@
                         <option value="">40개씩 보기</option>
                         <option value="">60개씩 보기</option>
                         <option value="">80개씩 보기</option>
-                      </select></td>
+                      </select>
+                    </td>
                     <th>반 선택</th>
-                    <td><select name="" id="">
-                        <option value="" disabled="" selected="">전체</option>
-                        <option value="">20개씩 보기</option>
-                        <option value="">40개씩 보기</option>
-                        <option value="">60개씩 보기</option>
-                        <option value="">80개씩 보기</option>
-                      </select></td>
-                    <th>원생선택</th>
-                    <td><select name="" id="">
+                    <td>
+                      <select name="" id="">
                         <option value="" disabled="" selected="">전체</option>
                         <option value="">20개씩 보기</option>
                         <option value="">40개씩 보기</option>
                         <option value="">60개씩 보기</option>
                         <option value="">80개씩 보기</option>
                       </select>
+                    </td>
+                    <td colspan="2">
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check01" checked="">
+                        <label for="check01">재원형제 포함</label>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -115,34 +115,27 @@
             <!-- /상단 박스 부분 -->
 
             <!-- 상단 박스 아래부분 -->
-            <div class="content-section">
-
-              <!-- 최근 검색 목록 부분 -->
-              <div class="mb40 mt10 t-recent-List-wrap">
-                <p class="sub-tit mb10">최근 검색 목록
-                  <span class="pc-bora2 t-bullet-02 ml10">로그아웃 하면 최근 검색 목록이 초기화 됩니다.</span>
-                </p>
-
-                <ul class="t-recent-List">
-                  <li><a href="#">#원생명(원생닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                  <li><a href="#">#홍길동(길동닉네임)</a></li>
-                </ul>
-              </div>
-              <!-- /최근 검색 목록 부분 -->
-
+            <div class="content-section mt40">
 
               <div class="tit-wrap flex-end">
-                <span class="sum">
-                  총 10명</span>
+                <span class="sum">총 10명</span>
                 <div class="button-wrap items-end">
+                  <span class="main-text">선택 시 포함 : </span>
+                  <ul class="check-list mr5 ml5">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02">
+                        <label for="check02">학부모(모)</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">학부모(부)</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <button type="button" class="t-button-xs t-button-bora1">선택 추가</button>
                   <select name="" id="">
                     <option value="" disabled="" selected="">10건</option>
                     <option value="">100건</option>
@@ -153,115 +146,110 @@
               <table class="t-basic-1 bora3">
                 <thead>
                   <tr>
+                    <th style="width:68px;">
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_all">
+                        <label for="tbl_check_all"></label>
+                      </div>
+                    </th>
                     <th style="width: 68px;">No</th>
                     <th>원생명<br>(닉네임)</th>
-                    <th>원생구분</th>
-                    <th>학부/학년</th>
+                    <th>구분</th>
+                    <th>학부<br>학년</th>
                     <th>학교</th>
                     <th>휴대폰</th>
                     <th>반</th>
+                    <th>선택</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>10</td>
-                    <td>홍길동<br>(에듀홍초)</td>
-                    <td>재원생</td>
-                    <td>중등부/2학년</td>
-                    <td>구로중학교 2학년</td>
-                    <td>010-1234-6789</td>
-                    <td class="txt-l">
-                      중학교&gt;수학<br>중등부2학년수학반</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>홍길동<br>(에듀홍초)</td>
-                    <td>휴원생</td>
-                    <td>중등부/2학년</td>
-                    <td>구로중학교 2학년</td>
-                    <td>010-1234-6789</td>
-                    <td class="txt-l">
-                      중학교&gt;수학<br>중등부2학년수학반</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>홍길동<br>(에듀홍초)</td>
-                    <td>퇴원생</td>
-                    <td>중등부/2학년</td>
-                    <td>구로중학교 2학년</td>
-                    <td>010-1234-6789</td>
-                    <td class="txt-l">-</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>홍길동<br>(에듀홍초)</td>
-                    <td>미등록생</td>
-                    <td>중등부/2학년</td>
-                    <td>구로중학교 2학년</td>
-                    <td>010-1234-6789</td>
-                    <td class="txt-l">-</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>홍길동<br>(에듀홍초)</td>
-                    <td>예비생</td>
-                    <td>중등부/2학년</td>
-                    <td>구로중학교 2학년</td>
-                    <td>010-1234-6789</td>
-                    <td class="txt-l">-</td>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01">
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>1</p>
+                    </td>
+                    <td>
+                      홍길동<br>(에듀홍초)
+                    </td>
+                    <td>
+                      재원생
+                    </td>
+                    <td>중등부<br>2학년</td>
+                    <td>
+                      구로중학교 2학년
+                    </td>
+                    <td>010-1234-6789
+                    </td>
+                    <td class="txt-l">중등부&gt;수학<br>중등2학년수학반</td>
+                    <td><button type="button" class="t-button-xms t-button-bora1">추가</button></td>
                   </tr>
                 </tbody>
               </table>
               <div class="t-pagination mt30" aria-disabled="false" role="navigation">
                 <div class="t-pagination-content">
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
                     </span>
                   </button>
                   <div class="h-pagination-middle flex justify-center">
-                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button"
+                      aria-label="1" aria-current="true">
                       <span class="t-btn-content">
                         <span class="block">1</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">2</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">3</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">4</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">5</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">6</span>
                       </span>
                     </button>
                   </div>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
                     </span>
@@ -269,10 +257,11 @@
                 </div>
               </div>
               <div class="btn-set mt40">
+                <button type="button" class="t-button-xs t-button-bora1">선택 추가</button>
                 <button type="button" class="t-button-xs t-button-grey">닫기</button>
               </div>
             </div>
-            
+            <!-- /상단 박스 아래부분 -->
 
           </div>
         </div>
@@ -300,7 +289,7 @@
 
   <script>
 
-   
+
   </script>
 
 </body>
