@@ -19,7 +19,7 @@
     <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
 
     <div class="t-popup-wrap">
-      <div class="t-popup ui-draggable" style="width: 1200px;">
+      <div class="t-popup ui-draggable" style="width: 1250px;">
         <div class="pop-header ui-draggable-handle" style="cursor: move;">
           <p class="pop-title">문자보내기</p>
         </div>
@@ -48,16 +48,12 @@
                   <label for="check03">수신대상 조건 무시</label>
                 </div>
               </li>
-
-
             </ul>
-
-
 
             <div class="content-section mt60">
               <div class="layout-wrap col3 colauto">
 
-                <!-- 왼쪽 박스 -->
+                <!-- 첫번째 박스 -->
                 <div class="box-bg box-bg-02">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">문자</p>
@@ -84,13 +80,14 @@
                       <option value="" disabled="" selected="">선택</option>
                       <option value="">100건</option>
                       <option value="">공지사항</option>
-                    </select><button type="button" class="t-button-xs flex-1">문자저장</button><button type="button" class="t-button-xs t-button-bora1 flex-1">문자추가</button>
+                    </select><button type="button" class="t-button-xs t-button-grey1 flex-1">문자저장</button><button
+                      type="button" class="t-button-xs t-button-bora1 flex-1">문자추가</button>
                   </div>
                   <ul class="file-add-list">
                     <li class="input-btn-wrap">
-                      <input type="text" placeholder="파일선택" readonly="" value="">
+                      <input value="" readonly="" placeholder="파일선택" type="text">
                       <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
                       <div class="button-wrap">
                         <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
                       </div>
@@ -98,7 +95,7 @@
                     <li class="input-btn-wrap">
                       <input type="text" placeholder="파일선택" readonly="" value="">
                       <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
                       <div class="button-wrap">
                         <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
                       </div>
@@ -106,7 +103,7 @@
                     <li class="input-btn-wrap">
                       <input type="text" placeholder="파일선택" readonly="" value="">
                       <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
                       <div class="button-wrap">
                         <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
                       </div>
@@ -125,42 +122,54 @@
 
 
                     </div>
-                  </div><div class="button-wrap mt10"><div class="date-picker" style="
+                  </div>
+                  <div class="button-wrap mt10 justify-start">
+                    <div class="date-picker" style="
 ">
-      <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
-      <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
-      
-    </div><select class="mr5 ml5" name="" id="">
-                      <option value="" disabled="" selected="">분</option>
-                      <option value="">00분</option>
-                      <option value="">10분</option>
-                    </select><select name="" id="">
+                      <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD"
+                        readonly="">
+                      <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
+
+                    </div><select class="mr5 ml5" name="" id="">
                       <option value="" disabled="" selected="">시간</option>
                       <option value="">00시</option>
                       <option value="">01시</option>
-                    </select></div>
-                  <div class="btn-set flex-between mt30">
-                    <button type="button" class="t-button-xs t-button-white t-button-red-bd">선택삭제</button>
-                    <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
+                    </select><select name="" id="">
+                      <option value="" disabled="" selected="">분</option>
+                      <option value="">00분</option>
+                      <option value="">10분</option>
+                    </select>
+                  </div>
+                  <div class="button-wrap mt30">
+                    <button type="button" class="t-button-xs t-button-grey2-bd ml0 flex-1">미리보기</button><button
+                      type="button" class="t-button-xs t-button-grey2-bd flex-1">새로쓰기</button>
+                    <button type="button" class="t-button-xs t-button-bora6 flex-1">보내기</button>
                   </div>
                 </div>
-                <!-- /왼쪽 박스 -->
+                <!-- /첫번째 박스 -->
 
-                <!-- 오른쪽 박스 -->
+                <!-- 중간 박스 -->
                 <div class="box-bg box-bg-02">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">발송 대상</p>
                   </div>
-                  <div class="tit-wrap flex-end ">
-                    <span class="sum">총 6건</span>
-                    <div class="button-wrap items-end">
-                      <button type="button" class="t-button-xs t-button-bora1">수신자추가</button>
-                      <select name="" id="">
-                        <option value="" disabled="" selected="">10건</option>
-                        <option value="">100건</option>
-                        <option value="">200건</option>
-                      </select>
+                  <div class="tit-wrap justify-start">
+                    <span class="main-text mr5">받는 사람 : </span><span class="sum">총 4명</span>
+                  </div>
+                  <div class="tit-wrap mt10">
+
+                    <span class="main-text mr5">수신자 : </span>
+                    <div class="input-btn-wrap">
+                      <input class="mr5" type="text" placeholder="이름" value="" style="width: 80px;"> 
+                      <input type="text" id="txtNmm" class="wd160" placeholder="휴대폰(-없이) 입력">
+                      <button type="button" class="t-button-xs t-button-bora1 mr0">추가</button>
                     </div>
+                  </div>
+                  <div class="button-wrap flex-end2 mt30">
+                    <button type="button" class="t-button-xms t-button-white t-button-green-bd ml0">엑셀업로드</button>
+                    <button type="button" class="t-button-xms t-button-white t-button-green-bd mr0">엑셀받기</button>
+                    <button  type="button" class="t-button-xms t-button-bora6 ">원생검색</button>
+                    <button type="button" class="t-button-xms t-button-bora2">주소록</button>
                   </div>
                   <table class="t-basic-1 bora3">
                     <thead>
@@ -201,7 +210,7 @@
                         </td>
                         <td>1</td>
                         <td>홍길동</td>
-                        <td>재원생</td>
+                        <td>홍길동(모)</td>
                         <td>010-1234-5678</td>
                       </tr>
                       <tr>
@@ -220,8 +229,9 @@
                   </table>
 
                 </div>
-                <!-- /오른쪽 박스 -->
+                <!-- /중간 박스 -->
 
+                <!-- 세번째 박스 -->
                 <div class="box-bg box-bg-02">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">설정</p>
@@ -236,9 +246,10 @@
                     <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
                   </div>
                 </div>
+                <!-- /세번째 박스 -->
+                
               </div>
             </div>
-
 
           </div>
         </div>
