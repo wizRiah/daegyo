@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)상세문자발송</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 1200px;">
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">문자보내기</p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+
+            <div class="tab-menu">
+              <ul class="tab-01">
+                <li class="active">
+                  <p href="javascript:void(0);"><span class="status">SMS발송</span></p>
+                </li>
+              </ul>
+            </div>
+            <ul class="check-list mt20">
+              <li>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check02" checked="">
+                  <label for="check02">동일번호에 동일내용 전송 금지</label>
+                </div>
+              </li>
+              <li>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check03" checked="">
+                  <label for="check03">수신대상 조건 무시</label>
+                </div>
+              </li>
+
+
+            </ul>
+
+
+
+            <div class="content-section mt60">
+              <div class="layout-wrap col3 colauto">
+
+                <!-- 왼쪽 박스 -->
+                <div class="box-bg box-bg-02">
+                  <div class="tit-bg">
+                    <p class="tit-bg-txt">문자</p>
+                  </div>
+                  <div class="tit-wrap justify-start">
+
+                    <span class="main-text mr5">보내는 사람 : </span><select name="" id="" class="wd140">
+                      <option value="" disabled="" selected="">070-1234-5678</option>
+                      <option value="">010-1234-5678</option>
+                      <option value="">010-1234-5678</option>
+                    </select>
+                  </div>
+
+                  <div class="t-text-field_slot mt10" style="height: 160px;">
+                    <textarea id=""></textarea>
+                  </div>
+                  <div class="byte-result"><span class="main-text">문자수 : <span class="num">0</span> byte</span></div>
+                  <div class="t-checkbox checkbox01 mt10 mb10">
+                    <input type="checkbox" name="checkForm" id="check01" checked="">
+                    <label for="check01">학원명 함께 전송</label>
+                  </div>
+                  <div class="button-wrap">
+                    <select name="" id="">
+                      <option value="" disabled="" selected="">선택</option>
+                      <option value="">100건</option>
+                      <option value="">공지사항</option>
+                    </select><button type="button" class="t-button-xs flex-1">문자저장</button><button type="button" class="t-button-xs t-button-bora1 flex-1">문자추가</button>
+                  </div>
+                  <ul class="file-add-list">
+                    <li class="input-btn-wrap">
+                      <input type="text" placeholder="파일선택" readonly="" value="">
+                      <input type="file" id="fileAdd" style="display: none;">
+                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <div class="button-wrap">
+                        <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
+                      </div>
+                    </li>
+                    <li class="input-btn-wrap">
+                      <input type="text" placeholder="파일선택" readonly="" value="">
+                      <input type="file" id="fileAdd" style="display: none;">
+                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <div class="button-wrap">
+                        <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
+                      </div>
+                    </li>
+                    <li class="input-btn-wrap">
+                      <input type="text" placeholder="파일선택" readonly="" value="">
+                      <input type="file" id="fileAdd" style="display: none;">
+                      <label for="fileAdd" class="t-button-xs t-button-bora1">추가</label>
+                      <div class="button-wrap">
+                        <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="tit-wrap justify-start">
+
+                    <span class="main-text mr5">발송일시 : </span>
+                    <div class="t-radio-01">
+                      <input type="radio" id="hradio01" name="hradio01" checked="">
+                      <label for="hradio01"><span class="rchk"></span>즉시발송</label>
+                      <input type="radio" id="hradio01_2" name="hradio01">
+                      <label for="hradio01_2"><span class="rchk"></span>예약발송</label>
+
+
+
+
+                    </div>
+                  </div><div class="button-wrap mt10"><div class="date-picker" style="
+">
+      <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+      <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
+      
+    </div><select class="mr5 ml5" name="" id="">
+                      <option value="" disabled="" selected="">분</option>
+                      <option value="">00분</option>
+                      <option value="">10분</option>
+                    </select><select name="" id="">
+                      <option value="" disabled="" selected="">시간</option>
+                      <option value="">00시</option>
+                      <option value="">01시</option>
+                    </select></div>
+                  <div class="btn-set flex-between mt30">
+                    <button type="button" class="t-button-xs t-button-white t-button-red-bd">선택삭제</button>
+                    <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
+                  </div>
+                </div>
+                <!-- /왼쪽 박스 -->
+
+                <!-- 오른쪽 박스 -->
+                <div class="box-bg box-bg-02">
+                  <div class="tit-bg">
+                    <p class="tit-bg-txt">발송 대상</p>
+                  </div>
+                  <div class="tit-wrap flex-end ">
+                    <span class="sum">총 6건</span>
+                    <div class="button-wrap items-end">
+                      <button type="button" class="t-button-xs t-button-bora1">수신자추가</button>
+                      <select name="" id="">
+                        <option value="" disabled="" selected="">10건</option>
+                        <option value="">100건</option>
+                        <option value="">200건</option>
+                      </select>
+                    </div>
+                  </div>
+                  <table class="t-basic-1 bora3">
+                    <thead>
+                      <tr>
+                        <th style="width: 50px;">
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_all">
+                            <label for="tbl_check_all"></label>
+                          </div>
+                        </th>
+                        <th style="width: 50px;">
+                          No
+                        </th>
+                        <th>이름</th>
+                        <th>구분</th>
+                        <th>휴대폰</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td>재원생</td>
+                        <td>010-1234-5678</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td>재원생</td>
+                        <td>010-1234-5678</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td>재원생</td>
+                        <td>010-1234-5678</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <!-- /오른쪽 박스 -->
+
+                <div class="box-bg box-bg-02">
+                  <div class="tit-bg">
+                    <p class="tit-bg-txt">설정</p>
+                  </div>
+                  <div class="input-btn-wrap">
+                    <input type="text" id="txtNmm" placeholder="그룹명 입력">
+                    <button type="button" class="t-button-xs t-button-bora1 mr0">추가</button>
+                  </div>
+
+                  <div class="btn-set flex-between mt30">
+                    <button type="button" class="t-button-xs t-button-white t-button-red-bd">선택삭제</button>
+                    <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+</body>
+
+</html>

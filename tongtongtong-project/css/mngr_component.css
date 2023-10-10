@@ -103,12 +103,6 @@
 
 
 
-
-
-
-
-
-
 .num { font-family:"SUIT"; } 
 
 
@@ -318,6 +312,11 @@ select
  .academy-mngr-Wrap .tab-01 li.active { background-color: var(--pc-bora-5); } 
  .academy-mngr-Wrap .tab-01 li.active a > * { color:#fff; } 
 
+/* tab menu 1 a태그 아닌것 */
+.academy-mngr-Wrap .tab-01 li p{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; box-sizing: border-box; transition: all ease 0.3s; padding: 10px 20px;}
+.academy-mngr-Wrap .tab-01 li p .status { font-size: var(--pc-fs15); color: var(--pc-bora-1); } 
+.academy-mngr-Wrap .tab-01 li.active p > * { color: #fff; } 
+
 /* 
 체크박스 
 */
@@ -370,7 +369,7 @@ select
 
 /* 임시 데이터피커 */
 .academy-mngr-Wrap .date-picker { display: flex; align-items: center; } 
-.academy-mngr-Wrap .date-picker input.datePicker { margin-right: -17px; float:left; width:198px!important; padding: 0px 35px 0 8px; text-align: left; } 
+.academy-mngr-Wrap .date-picker input.datePicker { margin-right: -17px; float:left; width:150px!important; padding: 0px 35px 0 8px; text-align: left; } 
 .academy-mngr-Wrap .date-picker .ui-datepicker-trigger { float: left; position: relative; right: 11px; cursor: pointer; } 
 .academy-mngr-Wrap .date-picker .ui-datepicker-trigger + input.datePicker { margin-left:4px; } 
 
@@ -442,6 +441,10 @@ select
 
 
 /* 컬러 */
+
+/* 버튼 기본컬러 */
+.academy-mngr-Wrap .t-button-grey1 { background: var(--pc-border-1)!important; color: #fff;} 
+
 .academy-mngr-Wrap .t-button-white { background:#fff; } 
 .academy-mngr-Wrap .t-button-nobg { background: transparent !important; color: var(--pc-text-color-1); transition: background ease 1.5s; } 
 .academy-mngr-Wrap .t-button-bora1 { background: var(--pc-bora-1)!important; } 
@@ -561,7 +564,7 @@ text field
 
 /* textarea 영역 */
 .t-text-field_slot { border: 1px solid var(--pc-border-2); position: relative; display: flex!important; flex-direction: column; flex-wrap: wrap; min-width: 0; width: 100%; height: 100%; box-sizing: border-box; align-items: center; background: #fff; } 
-.t-text-field_slot textarea { color: var(--pc-text-color-1); flex: 1 1 auto; line-height: 22px; max-width: 100%; min-height: 60px; resize: none; border-style: none; background-color: transparent; padding: 10px; align-self: stretch; box-sizing: border-box; font-size: 14px; } 
+.t-text-field_slot textarea { color: var(--pc-text-color-1); flex: 1 1 auto; line-height: 19px; max-width: 100%; min-height: 60px; resize: none; border-style: none; background-color: transparent; padding: 10px; align-self: stretch; box-sizing: border-box; font-size: 14px; } 
 
 
 
@@ -713,15 +716,25 @@ text field
 
 
 
-/* col */
-.academy-mngr-Wrap .layout-wrap.col2 { justify-content: space-between; flex-flow: row wrap; } 
+/* 
+col 
+*/
+
+/* 2열 */
+.academy-mngr-Wrap .layout-wrap.col2 { display:flex; justify-content: space-between; flex-flow: row wrap; } 
 .academy-mngr-Wrap .layout-wrap.col2 .box-bg { width: 49%; margin-bottom: 20px; } 
 .academy-mngr-Wrap .layout-wrap.col2 .box-bg:nth-child(odd) { margin-right: 14px; } 
-.academy-mngr-Wrap .layout-wrap.col2 { display:flex; } 
+
+/* 3열 */
+.academy-mngr-Wrap .layout-wrap.col3 { display: flex; justify-content: space-between; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-bg { flex-shrink:0; width: 32%; margin-bottom: 20px; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-bg { margin-right: 14px; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-bg:nth-child(3n) { margin-right: 0; } 
 
 
-/* 2열인데 너비 auto */
+/* 너비 auto */
 .academy-mngr-Wrap .layout-wrap.col2.colauto .box-bg { width:auto; } 
+.academy-mngr-Wrap .layout-wrap.col3.colauto .box-bg { width:auto; } 
 
 
 
@@ -749,12 +762,24 @@ text field
 
 /* 추가 결과 리스트 */
 .academy-mngr-Wrap .add-result-list { display: flex; flex-wrap: wrap; margin-left: 10px; } 
-.academy-mngr-Wrap .add-result-list li{ margin-right: 10px;}
-.academy-mngr-Wrap .add-result-list li:last-child{margin-right:0;}
+.academy-mngr-Wrap .add-result-list li { margin-right: 10px; } 
+.academy-mngr-Wrap .add-result-list li:last-child { margin-right:0; } 
 
 
 
-/* 팝업 */
+.academy-mngr-Wrap .byte-result { background: #E0E6EF; height: 30px; margin-top: 5px; line-height: 28px; text-align: center; border: 1px solid var(--pc-border-2); box-sizing: border-box; } 
+
+
+/* 파일추가 리스트 */
+.academy-mngr-Wrap .file-add-list { margin: 20px 0; } 
+.academy-mngr-Wrap .file-add-list li { margin-bottom: 5px; } 
+.academy-mngr-Wrap .file-add-list li:last-child { margin-bottom:0; } 
+
+
+
+/* 
+팝업 
+*/
 .academy-mngr-Wrap .t-popup-wrap { z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0px; position: fixed; top: 0px; width: 100%; align-items: center; } 
 .academy-mngr-Wrap .t-popup { height: fit-content; white-space: normal; word-wrap: break-word; position: relative; margin: 0px auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; box-sizing: border-box; max-height: calc(100vh - 60px); overflow: hidden; } 
 .academy-mngr-Wrap .t-popup .pop-header { border: 1px solid rgb(59, 41, 137); background-color: rgb(59, 41, 137); padding: 40px 40px 15px; text-overflow: clip; width: 100%; text-align: left; box-sizing: border-box; border-radius: 15px 15px 0px 0px; } 
@@ -767,7 +792,13 @@ text field
 
 
 /* 이중팝업시 컬러변경 */
-.academy-mngr-Wrap .t-popup-wrap:nth-child(even) .t-popup .pop-header{ background: #977dea;}
+.academy-mngr-Wrap .t-popup-wrap:nth-child(even) .t-popup .pop-header { background: #977dea; } 
+
+
+/* 팝업에서 탭메뉴 패딩제거 */
+.academy-mngr-Wrap .t-popup .tab-01{ padding:0; }
+
+
 
 
 
@@ -864,6 +895,8 @@ text field
 .academy-mngr-Wrap .container { overflow: hidden; height: 100%; flex-grow: 4; } 
 
 .academy-mngr-Wrap .container .sub+.sub { padding-top: 0; } 
+
+
 
 /* box-bg아래 컨텐츠 wrap */
 .academy-mngr-Wrap .content-section { padding: 0 23px; } 
