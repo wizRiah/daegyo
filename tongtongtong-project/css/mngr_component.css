@@ -32,7 +32,7 @@
 
 .academy-mngr-Wrap .main-tit { color: var(--pc-bora-1); font-size: 20px; font-weight: var(--text-bold); margin-right: 5px; } 
 .academy-mngr-Wrap .main-tit .num { color: var(--pc-bora-6); font-weight: 700; font-size: var(--pc-fs20); } 
-.academy-mngr-Wrap .tit-wrap { display: flex; justify-content: space-between; align-items: center; } 
+.academy-mngr-Wrap .tit-wrap { min-height:27px; display: flex; justify-content: space-between; align-items: center; } 
 
 
 
@@ -177,6 +177,7 @@
 
 /* 간격 */
 .m0 { margin:0!important; } 
+.mt0 { margin-top:0!important; } 
 .mt3 { margin-top:3px; } 
 .mt5 { margin-top:5px; } 
 .mt10 { margin-top:10px; } 
@@ -196,7 +197,7 @@
 .ml10 { margin-left:10px; } 
 .ml15 { margin-left:15px; } 
 .ml20 { margin-left:20px; } 
-
+.ml30 { margin-left:30px; }
 
 
 .mr0 { margin-right:0!important; } 
@@ -490,6 +491,16 @@ select
 .academy-mngr-Wrap .btn-set [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
 .academy-mngr-Wrap .btn-set [class^="t-button"]:last-of-type { margin-right:0; } 
 
+
+/* 버튼 4개 세트 */
+.academy-mngr-Wrap .btn-set-4 { display: flex; align-items: center; justify-content: center; }
+.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0;}
+.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:last-of-type {margin-left:0; margin-right:0; }
+.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:nth-child(3):nth-of-type(3) { margin-left:0; }
+
+
+
+
 @keyframes tbtnFX01 { 
  0% { transform:scale(0); background:#f2f2f2; } 
  1% { border-radius:100%; } 
@@ -661,7 +672,7 @@ text field
 
 /* 왼쪽 위아래만 둥근거 */
 .academy-mngr-Wrap .t-basic-2 { border-radius: 20px 0 0 20px; overflow: hidden; } 
-.academy-mngr-Wrap .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; /* word-break:keep-all; */ } 
+.academy-mngr-Wrap .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; word-break:keep-all;} 
 .academy-mngr-Wrap .t-basic-2 thead th, 
 .academy-mngr-Wrap .t-basic-2 tbody th, 
 .academy-mngr-Wrap .t-basic-2 tbody td { text-align:left; box-sizing: border-box; } 
@@ -741,8 +752,14 @@ col
 
 /* 2열 */
 .academy-mngr-Wrap .layout-wrap.col2 { display: flex; justify-content: space-between; flex-flow: row wrap; } 
-.academy-mngr-Wrap .layout-wrap.col2 .box-bg { width: 49%; margin-bottom: 20px; } 
+.academy-mngr-Wrap .layout-wrap.col2 .box-bg {  flex:1; width: 49%; margin-bottom: 20px; } 
 .academy-mngr-Wrap .layout-wrap.col2 .box-bg:nth-child(odd) { margin-right: 14px; } 
+
+.academy-mngr-Wrap .layout-wrap.col2 .box-basic { flex:1; width: 49%; margin-bottom: 20px; } 
+.academy-mngr-Wrap .layout-wrap.col2 .box-basic:nth-child(odd) { margin-right: 40px; } 
+
+
+
 
 /* 3열 */
 .academy-mngr-Wrap .layout-wrap.col3 { display: flex; justify-content: space-between; } 
@@ -750,11 +767,19 @@ col
 .academy-mngr-Wrap .layout-wrap.col3 .box-bg { margin-right: 14px; } 
 .academy-mngr-Wrap .layout-wrap.col3 .box-bg:nth-child(3n) { margin-right: 0; } 
 
+.academy-mngr-Wrap .layout-wrap.col3 .box-basic { width: 33%; margin-bottom: 20px; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-basic { margin-right: 40px; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-basic:nth-child(3n) { margin-right: 0; } 
+
+
+
+
 
 /* 너비 auto */
 .academy-mngr-Wrap .layout-wrap.col2.colauto .box-bg { width:auto; } 
 .academy-mngr-Wrap .layout-wrap.col3.colauto .box-bg { width:auto; } 
-
+.academy-mngr-Wrap .layout-wrap.col3.colauto .box-basic { width:auto; } 
+.academy-mngr-Wrap .layout-wrap.col3.colauto .box-basic { width:auto; }
 
 
 
@@ -908,6 +933,15 @@ col
 
 
 
+/* 탭메뉴 옆 컨텐츠 */
+.academy-mngr-Wrap .tab-side { display: flex; padding: 6px 20px; box-sizing: border-box; position: absolute; top: 0; right: 0; } 
+
+
+
+
+
+
+
 /* 
 컨테이너 
 */
@@ -922,7 +956,7 @@ col
 
 
 /* 메시지전송 영역 */
-.academy-mngr-Wrap .message-wrap { display: flex; background: #f9fafc; padding: 15px 20px; box-sizing: border-box; border-bottom: 1px solid #e0e6ef; } 
+.academy-mngr-Wrap .message-wrap { display: flex; background: #f9fafc; padding: 15px 20px; box-sizing: border-box; border-bottom: 1px solid #e0e6ef; justify-content: space-between; } 
 
 
 /* 푸터 */

@@ -167,7 +167,7 @@
       <option value="">100개씩 보기</option>
     </select>
 
-    
+
     <br><br><br>
     <b>크기별 셀렉트</b><br>
 
@@ -285,7 +285,7 @@
     <p class="bracket-btn">(<button type="button" class="t-button-underline t-button-nobg">괄호안버튼</button>)</p>
 
     <br>
-    
+
     <button type="button" class="t-button-sp t-button-grey">#</button>
     <button type="button" class="t-button-em t-button-grey">이모티콘(*^^*)</button>
 
@@ -454,11 +454,142 @@
 
     <br><br><br>
     <h2>10. 테이블</h2><br>
-    <p>- 테이블 태그 class "t-basic-1" 혹은 "t-basic-2"에 "<b>bora3</b>" 혹은 "<b>bora4</b>" 추가시 컬러변경 가능</p><br>
+    <p>- 테이블 태그 class "t-basic-1" 혹은 "t-basic-2"에 "<b>bora3</b>" 혹은 "<b>bora4</b>" 추가시 컬러변경 가능</p>
+    <br><br>
+
+
+    <h3>- 기본 박스 배경 테이블 (설계서에서 주로 테두리가 있는 경우)</h3>
+    <!-- 기본 박스 배경 테이블 시작 -->
+    <div class="box-bg">
+      <table class="t-basic-2 bora4">
+        <tbody>
+          <tr>
+            <th><span class="t-necessary">필수</span>유형</th>
+            <td><select id="" name="">
+                <option value="" disabled="" selected="">유형</option>
+                <option value="">20개씩 보기</option>
+                <option value="">40개씩 보기</option>
+                <option value="">60개씩 보기</option>
+                <option value="">80개씩 보기</option>
+                <option value="">100개씩 보기</option>
+              </select>
+            </td>
+            <th>구분</th>
+            <td><select name="" id="">
+                <option value="" disabled="" selected="">진도</option>
+                <option value="">20개씩 보기</option>
+                <option value="">40개씩 보기</option>
+                <option value="">60개씩 보기</option>
+                <option value="">80개씩 보기</option>
+                <option value="">100개씩 보기</option>
+              </select>
+            </td>
+            <th>제목</th>
+            <td>
+              <select name="" id="">
+                <option value="" disabled="" selected="">제목</option>
+                <option value="">내용</option>
+                <option value="">작성자</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>검색</th>
+            <td colspan="5">
+              <div class="input-btn-wrap"><input type="text" id="txtNmm" class="txtfield-basic"
+                  placeholder="검색어를 입력하세요."><button type="button" class="t-button-xs t-button-bora2 mr0">검색</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <!-- 기본 박스 배경 테이블 끝 -->
+
+
+    
+    <br><br>
+
+  
+    <p>- 박스배경 아래 위치하는 경우 class "<b>content-section</b>"로 감싸주세요! </p>
+    <h3>- *페이지 예시 : 학사관리 &gt; 원생관리 &gt; 원생관리 상세 </h3>
+    <!-- 박스 아래 예시 시작 -->
+    <div class="content-section">
+      <div class="tit-wrap flex-end"><span class="sum">총 10명</span>
+        <div class="button-wrap items-end"><span class="main-text">선택 시 포함 : </span>
+          <ul class="check-list mr5 ml5">
+            <li>
+              <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"> <label
+                  for="check02">학부모(모)</label></div>
+            </li>
+            <li>
+              <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03"> <label
+                  for="check03">학부모(부)</label></div>
+            </li>
+          </ul> <button type="button" class="t-button-xs t-button-bora1">선택 추가</button> <select name="" id="">
+            <option disabled="" value="">10건</option>
+            <option value="">100건</option>
+            <option value="">200건</option>
+          </select>
+        </div>
+      </div>
+      <table class="t-basic-1 bora3">
+        <thead>
+          <tr>
+            <th style="width: 68px;">
+              <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="tbl_check_all"> <label
+                  for="tbl_check_all"></label></div>
+            </th>
+            <th style="width: 68px;">No</th>
+            <th>원생명<br>(닉네임)</th>
+            <th>구분</th>
+            <th>학부<br>학년</th>
+            <th>학교</th>
+            <th>휴대폰</th>
+            <th>반</th>
+            <th>선택</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="tbl_check_01"> <label
+                  for="tbl_check_01"></label></div>
+            </td>
+            <td>
+              <p>1</p>
+            </td>
+            <td>
+              홍길동<br>(에듀홍초)
+            </td>
+            <td>
+              재원생
+            </td>
+            <td>중등부<br>2학년</td>
+            <td>
+              구로중학교 2학년
+            </td>
+            <td>010-1234-6789
+            </td>
+            <td class="txt-l">중등부&gt;수학<br>중등2학년수학반</td>
+            <td><button type="button" class="t-button-xms t-button-bora1">추가</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- /박스 아래 예시 -->
+
+
+    <br><br><br>
     <p>- class "layout-wrap" 에 "<b>col2</b>" 추가시 2열, 너비 1:1 비율</p>
 
     <!-- 테이블 시작 -->
-    <!-- 테이블 box 2열 시작 -->
+    <!-- 2열 테이블 box 시작 -->
+
+
+    <h3>- box 스타일 1번 / *페이지 예시 : 학사관리 &gt; 원생관리 &gt; 기본</h3>
+    <br>
 
     <div class="layout-wrap col2">
       <div class="box-bg">
@@ -553,11 +684,495 @@
         </table>
       </div>
     </div>
-    <!-- 2열 테이블 끝 -->
+
+
+    <br><br>
+    <p>- class "box-bg" 에 "<b>box-bg-02</b>" 추가시 </p>
+    <h3>- box 스타일 2번 / *페이지 예시 : 학사관리 &gt; 원생관리 &gt; 상세문자발송 </h3>
+    <br><br>
+
+    <div class="layout-wrap col2">
+      <div class="box-bg box-bg-02">
+        <div class="tit-bg">
+          <p class="tit-bg-txt">SMS 사용현황</p>
+        </div>
+        <div class="tit-wrap flex-end ">
+          <span class="sum">총 10명</span>
+          <div class="button-wrap items-end">
+            <select name="" id="">
+              <option value="" disabled="" selected="">10건</option>
+              <option value="">100건</option>
+              <option value="">200건</option>
+            </select>
+          </div>
+        </div>
+        <table class="t-basic-1 bora3">
+          <thead>
+            <tr>
+              <th style="width:68px;">
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_all">
+                  <label for="tbl_check_all"></label>
+                </div>
+              </th>
+              <th>그룹명</th>
+              <th>관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-all">
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_01">
+                  <label for="tbl_check_01"></label>
+                </div>
+              </td>
+              <td>
+                <p>전체</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_01">
+                  <label for="tbl_check_01"></label>
+                </div>
+              </td>
+              <td>
+                <p>300,000</p>
+              </td>
+              <td><button type="button" class="t-button-xms t-button-grey2-bd">수정</button></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_02">
+                  <label for="tbl_check_02"></label>
+                </div>
+              </td>
+              <td>
+                <p>300,000</p>
+              </td>
+              <td>
+                <div class="btn-set"><button type="button" class="t-button-xms">저장</button><button type="button"
+                    class="t-button-xms t-button-grey2">취소</button></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_03">
+                  <label for="tbl_check_03"></label>
+                </div>
+              </td>
+              <td>
+                <p>300,000</p>
+              </td>
+              <td><button type="button" class="t-button-xms t-button-grey2-bd">수정</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-set flex-between mt30">
+          <button type="button" class="t-button-xs t-button-white t-button-red-bd">선택삭제</button>
+          <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
+        </div>
+      </div>
+      <div class="box-bg box-bg-02">
+        <div class="tit-bg">
+          <p class="tit-bg-txt">수신자 목록</p>
+        </div>
+        <div class="tit-wrap flex-end ">
+          <span class="sum">총 10명</span>
+          <div class="button-wrap items-end">
+            <select name="" id="">
+              <option value="" disabled="" selected="">10건</option>
+              <option value="">100건</option>
+              <option value="">200건</option>
+            </select>
+          </div>
+        </div>
+        <table class="t-basic-1 bora3">
+          <thead>
+            <tr>
+              <th style="width:68px;">
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_all">
+                  <label for="tbl_check_all"></label>
+                </div>
+              </th>
+              <th style="width: 68px;">No</th>
+              <th>수납금액</th>
+              <th>수납금액</th>
+              <th>환불금액</th>
+              <th>수강<br>상태</th>
+              <th>관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_01">
+                  <label for="tbl_check_01"></label>
+                </div>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+              <td class="txt-r">
+                <p>300,000</p>
+              </td>
+              <td>
+                <p>대학교(4년)</p>
+              </td>
+              <td>
+                <p>채용시 마감</p>
+              </td>
+              <td>
+                <p class="opt-be-course">수강전</p>
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_02">
+                  <label for="tbl_check_02"></label>
+                </div>
+              </td>
+              <td>
+                <p>2</p>
+              </td>
+              <td class="txt-r">
+                <p>300,000</p>
+              </td>
+              <td>
+                <p>대학교(4년)</p>
+              </td>
+              <td>
+                <p>채용시 마감</p>
+              </td>
+              <td>
+                <p class="opt-course">수강</p>
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="tbl_check_03">
+                  <label for="tbl_check_03"></label>
+                </div>
+              </td>
+              <td>
+                <p>3</p>
+              </td>
+              <td class="txt-r">
+                <p>300,000</p>
+              </td>
+              <td>
+                <p>대학교(4년)</p>
+              </td>
+              <td>
+                <p>채용시 마감</p>
+              </td>
+              <td>
+                <p class="opt-end">종강</p>
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-set flex-between mt30">
+          <div class="btn-set"><button type="button"
+              class="t-button-xs t-button-white t-button-red-bd">선택삭제</button><button type="button"
+              class="t-button-xs">선택 이동/복사</button></div>
+          <button type="button" class="t-button-xs t-button-bora1">선택 발송대상 추가</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 2열 테이블 box 끝 -->
+
+    <br><br>
+    <p>- class "layout-wrap" 에 "<b>col3</b>" 추가시 3열, 너비 1:1:1 비율</p>
+    <p>- class "box-basic"</p>
+    <h3>- box 스타일 3번 *페이지 예시 : 학사관리 &gt; 환경설정 &gt; 코드관리 목록</h3>
+    <br><br>
+
+
+    <!-- 3열 테이블 box 시작 -->
+    <div class="layout-wrap col3">
+      <div class="box-basic">
+        <div class="tit-wrap">
+          <p class="main-tit">
+            1차 구분
+          </p>
+        </div>
+
+        <table class="t-basic-1 bora4">
+          <thead>
+            <tr>
+              <th>코드명</th>
+              <th style="width: 100px;">관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학생 기타 정보 구분</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box-basic">
+        <div class="tit-wrap">
+          <p class="main-tit">2차 구분</p>
+          <div class="button-wrap items-end">
+            <button type="button" class="t-button-xms t-button-grey1"><i class="i-regist2"></i><span>등록</span></button>
+          </div>
+        </div>
+
+        <table class="t-basic-1 bora4">
+          <thead>
+            <tr>
+              <th>코드명</th>
+              <th>사용여부</th>
+              <th style="width: 100px;">관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td class="pc-red">미사용</td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box-basic">
+        <div class="tit-wrap">
+          <p class="main-tit">3차 구분</p>
+          <div class="button-wrap items-end">
+            <button type="button" class="t-button-xms t-button-grey1"><i class="i-regist2"></i><span>등록</span></button>
+          </div>
+        </div>
+
+        <table class="t-basic-1 bora4">
+          <thead>
+            <tr>
+              <th>코드명</th>
+              <th>사용여부</th>
+              <th style="width: 100px;">관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="txt-l">학부</td>
+              <td>
+                사용
+              </td>
+              <td>
+                <button type="button" class="t-button-circle t-button-grey" title="설정">
+                  <i class="i-set-g"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- /3열 테이블 box -->
+
+
 
     <br><br>
     <p>- class "layout-wrap col2" 에 "<b>colauto</b>" 추가시 2열,너비 auto</p>
-    <p>- class "box-bg" 에 "<b>flex-grow-1,flex-grow-2</b>" 너비 1:2 비율</p>
+    <p>- class "box-bg, box-bg box-bg-02" 에 "<b>flex-grow-1,flex-grow-2</b>" 너비 1:2 비율</p>
+    <br>
+    <h3>- *페이지 예시 : 학사관리 &gt; 원생관리 &gt; 문자보내기 &gt; 주소록 </h3>
     <br><br>
     <!-- 테이블 box 2열 - 너비 auto 시작 -->
 
@@ -779,76 +1394,10 @@
 
 
 
-    <br><br>
-    <!-- 박스배경 테이블 시작 -->
-    <div class="box-bg">
-      <div class="tit-wrap">
-        <p class="main-tit">수납정보</p>
-        <div class="button-wrap items-end">
-          <button type="button" class="t-button-xms t-button-white t-button-green-bd ml0">엑셀받기</button>
-          <button type="button" class="t-button-xms t-button-white t-button-grey-bd"><i
-              class="i-print"></i><span>인쇄</span></button>
-          <button type="button" class="t-button-xms t-button-bora6"><i class="i-money"></i><span>수납</span></button>
-        </div>
-      </div>
-      <table class="t-basic-1 bora4">
-        <thead>
-          <tr>
-            <th>수강 월/<br>수강기간</th>
-            <th>운영/수납</th>
-            <th>수납내역</th>
-            <th>(실)<br>청구금액</th>
-            <th>상태</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2023.07<br>07.01 ~ 07.31</td>
-            <td>일반<br>1주단위</td>
-            <td class="txt-l">
-              중학교&gt;수학<br>중등부2학년수학
-            </td>
-            <td class="txt-r pc-red text-bold">70,000</td>
-            <td>
-              <p class="opt-set">예정</p>
-            </td>
-          </tr>
-          <tr>
-            <td>(발행일)<br>2023.07.30</td>
-            <td>수동발행</td>
-            <td class="txt-l">해법수학<br>수학의정석</td>
-            <td class="txt-r pc-red text-bold">70,000</td>
-            <td>
-              <p class="opt-discharge">미납</p>
-            </td>
-          </tr>
-          <tr>
-            <td>2023.07<br>07.01 ~ 07.31</td>
-            <td>자동발행</td>
-            <td class="txt-l">특강수강료<br>재료비</td>
-            <td class="txt-r pc-red text-bold">70,000</td>
-            <td>
-              <p class="opt-discharge">미납</p>
-            </td>
-          </tr>
-          <tr>
-            <td>2023.07<br>07.01 ~ 07.31</td>
-            <td>회차<br>(5회)</td>
-            <td class="txt-l">
-              중학교&gt;수학<br>중등부2학년수학
-            </td>
-            <td class="txt-r pc-red text-bold">70,000</td>
-            <td>
-              <p class="opt-discharge">미납</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- 박스배경 테이블 끝 -->
-
+    
 
     <br><br>
+    <p>- 체크박스 있는 테이블</p>
     <!-- 체크박스 있는 테이블 시작 -->
     <table class="t-basic-1 bora3">
       <thead>
@@ -949,9 +1498,83 @@
     </table>
     <!-- 체크박스 있는 테이블 끝 -->
 
-    <br><br>
+   
 
-    <!-- 테이블 버전 2 시작-->
+
+
+    <br><br><br>
+    <p>- 기타 화면 예시</p>
+    <br>
+
+    <!-- 시작 -->
+    <div class="tit-wrap flex-end"><span class="sub-tit">가족 등록 및 수정</span></div>
+    <table class="t-basic-2 bora3 mt10">
+      <tbody>
+        <tr>
+          <th style="width: 130px;"><span class="t-necessary">필수</span>이름</th>
+          <td>
+            <div class="t-tab-Contents flex-center t-radio-01 mr20 i-block"><input type="radio" id="memeber"
+                name="process01"> <label for="memeber"><span class="rchk"></span>회원검색</label> <input type="radio"
+                id="txtfi" name="process01"> <label for="txtfi"><span class="rchk"></span>직접입력</label>
+              <!-- 이름 부분 데이터 영역 시작 -->
+              <div class="tabCo-Wrap process-data"><!-- 회원검색 선택시 -->
+                <div class="tabCo-CommonBox"><input type="text" id="txtNmm" disabled=""
+                    class="txtfield-basic wd140 ml5"> <button type="button"
+                    class="t-button-xs t-button-bora6">회원검색</button> <span class="pc-bora2 t-bullet-02 ml10">회원검색은 학부모에
+                    한해 검색이 가능</span></div> <!-- /회원검색 선택시 --> <!-- 직접입력 선택시 -->
+                <div class="tabCo-CommonBox"><input type="text" id="txtNmm" class="txtfield-basic wd140 ml5"></div>
+                <!-- /직접입력 선택시 -->
+              </div> <!-- 이름 부분 데이터 영역 끝 -->
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>아이디</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th><!-- 직접입력시 가족관계 필수 표시. 클래스 noactive 삭제해주세요 --> <span class="t-necessary noactive">필수</span>가족관계
+          </th>
+          <td><select name="" id="" class="wd140">
+              <option disabled="" value="">선택</option>
+              <option value="">학부모(모)</option>
+              <option value="">학부모(부)</option>
+              <option value="">가족</option>
+            </select> <input type="text" id="txtNmm" class="txtfield-basic wd140 ml5"></td>
+        </tr>
+        <tr>
+          <th>휴대폰</th>
+          <td><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder=""> <span
+              class="alert-txt ml10">"-" 제외 입력</span></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder=""> <span class="mr5 ml5">@</span>
+            <select name="" id="" class="wd140">
+              <option disabled="" value="">선택</option>
+              <option value="">naver.com</option>
+              <option value="">naver.com</option>
+              <option value="">naver.com</option>
+            </select> <input type="text" id="txtNmm" class="ml5 txtfield-basic wd140" placeholder="직접입력">
+          </td>
+        </tr>
+        <tr>
+          <th>메모</th>
+          <td><input type="text" id="txtNmm" class="txtfield-basic" placeholder=""></td>
+        </tr>
+        <tr>
+          <th>내용_textarea</th>
+          <td>
+            <div class="t-text-field_slot"><textarea id="" rows="4"></textarea></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- / -->
+
+    <br><br>
+  
+    <!-- 시작-->
     <table class="t-basic-2 bora4">
       <tbody>
         <tr>
@@ -1006,57 +1629,7 @@
         </tr>
       </tbody>
     </table>
-    <!-- 테이블 버전 2 끝 -->
-
-
-    <br><br>
-
-
-    <div class="box-bg">
-      <table class="t-basic-2 bora4">
-        <tbody>
-          <tr>
-            <th><span class="t-necessary">필수</span>유형</th>
-            <td><select id="" name="">
-                <option value="" disabled="" selected="">유형</option>
-                <option value="">20개씩 보기</option>
-                <option value="">40개씩 보기</option>
-                <option value="">60개씩 보기</option>
-                <option value="">80개씩 보기</option>
-                <option value="">100개씩 보기</option>
-              </select>
-            </td>
-            <th>구분</th>
-            <td><select name="" id="">
-                <option value="" disabled="" selected="">진도</option>
-                <option value="">20개씩 보기</option>
-                <option value="">40개씩 보기</option>
-                <option value="">60개씩 보기</option>
-                <option value="">80개씩 보기</option>
-                <option value="">100개씩 보기</option>
-              </select>
-            </td>
-            <th>제목</th>
-            <td>
-              <select name="" id="">
-                <option value="" disabled="" selected="">제목</option>
-                <option value="">내용</option>
-                <option value="">작성자</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th>검색어</th>
-            <td colspan="5">
-              <div class="input-btn-wrap"><input type="text" id="txtNmm" class="txtfield-basic"
-                  placeholder="검색어를 입력하세요."><button type="button" class="t-button-xs t-button-bora2 mr0">검색</button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
+    <!-- / -->
 
 
 
