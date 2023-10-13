@@ -437,7 +437,6 @@ select
 .academy-mngr-Wrap .t-button-circle { border-radius: 100%; padding: 0; width: 30px; height: 30px; line-height: 30px; } 
 .academy-mngr-Wrap .t-button-circle-16 { width: 16px; height: 16px; line-height:14px; } 
 .academy-mngr-Wrap [class^="t-button-circle"]::after { display: inline-flex; flex-flow: row wrap; justify-content: center; align-items: center; font-family: 'Material Icons'; font-style: normal; width: 100%; height: 100%; color: #fff; border-radius: 50%; box-sizing: border-box; } 
-.academy-mngr-Wrap [class^="t-button-circle"].remove { margin-bottom: 2px; } 
 .academy-mngr-Wrap [class^="t-button-circle"].remove::after { content: 'close'; font-size: 14px; color:red; } 
 
 
@@ -837,10 +836,11 @@ col
 
 
 /* 추가 결과 리스트 */
-.academy-mngr-Wrap .add-result-list { display: flex; flex-wrap: wrap; margin-left: 10px; } 
-.academy-mngr-Wrap .add-result-list li { margin-right: 10px; } 
-.academy-mngr-Wrap .add-result-list li:last-child { margin-right:0; } 
-
+.academy-mngr-Wrap .add-result-list { display: flex; flex-wrap: wrap; margin-left: 10px; }
+.academy-mngr-Wrap .add-result-list li { margin-right: 10px; }
+.academy-mngr-Wrap .add-result-list li:last-child { margin-right:0; }
+.academy-mngr-Wrap .add-result-list :is(p,span){word-wrap: break-word;  word-break: keep-all; font-size: var(--pc-fs13); color: #333333;}
+.academy-mngr-Wrap .add-result-list button.remove{margin:0 3px;}
 
 
 .academy-mngr-Wrap .byte-result { background: #E0E6EF; height: 30px; margin-top: 5px; line-height: 28px; text-align: center; border: 1px solid var(--pc-border-2); box-sizing: border-box; } 
