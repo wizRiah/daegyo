@@ -106,7 +106,8 @@
 /* ***수납상태*** */
 /* 예정 */
 .academy-mngr-Wrap .opt-set { color: #b2b2b2; } 
-
+/* 완납 */
+.academy-mngr-Wrap .opt-charge { color: var(--pc-bora-7); }
 
 
 .num { font-family:"SUIT"; } 
@@ -496,7 +497,10 @@ select
 .academy-mngr-Wrap .button-wrap [class^="t-button"]:nth-child(2):nth-of-type(2) { margin-left:0; } 
 
 .academy-mngr-Wrap .input-btn-wrap { display: flex; } 
+.academy-mngr-Wrap .input-btn-wrap  [class^="t-button"]:last-of-type { margin-right:0;}
 
+/* 버튼+셀렉트 */
+.academy-mngr-Wrap .btn-set select:last-of-type { margin-left:5px;}
 
 .academy-mngr-Wrap .btn-set-wrap{display:flex; align-items: center;}
 
@@ -505,21 +509,24 @@ select
 
 
 /* 버튼 2개 세트 */
-.academy-mngr-Wrap .btn-set { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .btn-set [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set [class^="t-button"]:last-of-type { margin-right:0; } 
+.academy-mngr-Wrap .btn-set { display: flex;align-items: center; justify-content: center; }
+.academy-mngr-Wrap .btn-set [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; }
+.academy-mngr-Wrap .btn-set [class^="t-button"]:last-of-type { margin-right:0; }
 
 /* 버튼 3개 세트 */
-.academy-mngr-Wrap .btn-set-3 { display: flex; align-items: center; justify-content: center; }
+.academy-mngr-Wrap .btn-set-3 { display: flex;align-items: center;justify-content: center; }
 .academy-mngr-Wrap .btn-set-3 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0;}
 .academy-mngr-Wrap .btn-set-3 [class^="t-button"]:last-of-type {margin-left:0; margin-right:0; }
 
 
 /* 버튼 4개 세트 */
-.academy-mngr-Wrap .btn-set-4 { display: flex; align-items: center; justify-content: center; }
+.academy-mngr-Wrap .btn-set-4 { display: flex;align-items: center; justify-content: center; }
 .academy-mngr-Wrap .btn-set-4 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0;}
 .academy-mngr-Wrap .btn-set-4 [class^="t-button"]:last-of-type {margin-left:0; margin-right:0; }
 .academy-mngr-Wrap .btn-set-4 [class^="t-button"]:nth-child(3):nth-of-type(3) { margin-left:0; }
+
+
+
 
 
 
@@ -750,10 +757,11 @@ text field
 
 
 
-/* 
-박스 
+
+/*
+박스
 */
-.academy-mngr-Wrap .box-bg { flex:auto; padding: 30px 23px; box-sizing: border-box; border: 1px solid var(--pc-border-4); box-shadow: 1px 2px 8px 0px rgb(0 0 0 / 28%); border-radius: 20px; background-color: #f7f7fa; } 
+.academy-mngr-Wrap .box-bg { position: relative; flex:auto; padding: 30px 20px; box-sizing: border-box; border: 1px solid var(--pc-border-4); box-shadow: 1px 2px 8px 0px rgb(0 0 0 / 28%); border-radius: 20px; background-color: #f7f7fa; }
 
 /* border,타이틀 배경 있는 박스 */
 .academy-mngr-Wrap .box-bg-02 { border-color: #36336b; border-width: 3px; position:relative; } 
