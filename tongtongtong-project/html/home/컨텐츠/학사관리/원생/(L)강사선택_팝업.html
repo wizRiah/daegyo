@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)강사선택 팝업</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 800px;">
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">직원 검색</p>
+        </div>
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <!-- 상단 박스 부분 -->
+            <div class="box-bg">
+              <table class="t-basic-2 bora4">
+                <tbody>
+                  <tr>
+
+                    <th>회원유형</th>
+                    <td>
+                      <select name="" id="">
+                        <option value="" disabled="" selected="">회원유형</option>
+                        <option value="">원장</option>
+                        <option value="">강사</option>
+                        <option value="">직원</option>
+                        <option value="">일반</option>
+                      </select>
+                    </td>
+
+                    <th>업무구분</th>
+                    <td>
+                      <select name="" id="">
+                        <option value="" disabled="" selected="">업무구분</option>
+                        <option value="">원장님</option>
+                        <option value="">강사</option>
+                        <option value="">상담</option>
+                        <option value="">회계</option>
+                      </select>
+                    </td>
+
+                    <th>근무여부</th>
+                    <td>
+                      <select name="" id="" disabled="">
+                        <option value="" disabled="" selected="">재직</option>
+                      </select>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <th>검색</th>
+                    <td colspan="5">
+                      <div class="input-btn-wrap">
+                        <select name="" id="">
+                          <option value="" disabled="" selected="">전체</option>
+                          <option value="">전체</option>
+                          <option value="">직원명</option>
+                          <option value="">직원아이디</option>
+                          <option value="">직원휴대폰번호</option>
+                        </select>
+                        <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder="검색어를 입력하세요.">
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <div class="button-wrap flex-end2 mt17">
+                <button type="button" class="t-button-xs">검색조건 초기화</button>
+                <button type="button" class="t-button-xs t-button-bora2">검색</button>
+              </div>
+            </div>
+            <!-- /상단 박스 부분 -->
+
+
+            <!-- 상단 박스 아래부분 -->
+            <div class="content-section mt40">
+
+              <div class="tit-wrap flex-end">
+                <span class="sum">총 10명</span>
+                <div class="button-wrap items-end">
+                  <button type="button" class="t-button-xs t-button-bora1">선택 추가</button>
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">10건</option>
+                    <option value="">100건</option>
+                    <option value="">200건</option>
+                  </select>
+                </div>
+              </div>
+
+              <table class="t-basic-1 bora3">
+                <thead>
+                  <tr>
+                    <th style="width:68px;">
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_all">
+                        <label for="tbl_check_all"></label>
+                      </div>
+                    </th>
+                    <th style="width: 68px;">No</th>
+                    <th>직원명<br>(회원유형)</th>
+                    <th>업무구분</th>
+                    <th>재직</th>
+                    <th>휴대폰</th>
+                    <th>선택</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01">
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>1</p>
+                    </td>
+                    <td>김원장<br>(원장)</td>
+                    <td>원장님/상담</td>
+                    <td>재직</td>
+                    <td>010-1234-5678</td>
+                    <td><button type="button" class="t-button-xms t-button-bora1">추가</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              
+              <div class="t-pagination mt30" aria-disabled="false" role="navigation">
+                <div class="t-pagination-content">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                    </span>
+                  </button>
+                  <div class="h-pagination-middle flex justify-center">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                      <span class="t-btn-content">
+                        <span class="block">1</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">2</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">3</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">4</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">5</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">6</span>
+                      </span>
+                    </button>
+                  </div>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="btn-set mt40">
+                <button type="button" class="t-button-xs t-button-bora1">선택 추가</button>
+                <button type="button" class="t-button-xs t-button-grey2">닫기</button>
+              </div>
+
+            </div>
+            <!-- /상단 박스 아래부분 -->
+
+          </div>
+        </div>
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
