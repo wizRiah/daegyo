@@ -214,13 +214,36 @@
 
 
  /* 문의등록 */
+ .chat-input-area { display:flex; } 
+ .chat-input-area .t-text-field_slot {border-radius: 20px;} 
+ .chat-input-area .t-text-field_slot textarea {border-radius: 20px;font-size: 13px;padding: 20px;} 
+ .chat-input-area button {height: 100%!important;width: 100px;border-radius: 20px!important;} 
+
+ .chat-wrap { display:flex; flex-direction: column; min-height:250px; padding: 20px; } 
+ .chat-day-set { margin-bottom: 40px; } 
+ .chat-day-set:last-child { margin-bottom:0; } 
+
  .chat-item { display: flex; flex-direction: column; align-items: flex-end; margin-bottom:30px; } 
  .chat-item:last-child { margin-bottom:0; } 
  .chat-item .chat-set { display: flex; align-items: flex-end; flex-direction: row-reverse; } 
  .chat-item .chat-box { padding: 10px 15px; background: #c1b9dd6b; border-radius: 10px 0 10px 10px; } 
  .chat-item .chat-set .sb-txt { font-size: 11px!important; flex-shrink: 0; margin-right:5px; } 
 
- .chat-item.left {align-items: flex-start;}
- .chat-item.left .chat-box{ border-radius: 0 10px 10px 10px; background: var(--pc-border-3);}
- .chat-item.left .chat-set{flex-direction: row;}
- .chat-item.left .chat-set .sb-txt {margin-left:5px; margin-right:0;}
+ .chat-item.left { align-items: flex-start; } 
+ .chat-item.left .chat-box { border-radius: 0 10px 10px 10px; background: var(--pc-border-3); } 
+ .chat-item.left .chat-set { flex-direction: row; } 
+ .chat-item.left .chat-set .sb-txt { margin-left:5px; margin-right:0; } 
+
+ .chat-date { text-align: center; box-sizing: border-box; position: relative; margin-bottom:20px; } 
+ .chat-date:before { content: ''; position: absolute; left: 0; top: 10px; width: 100%; height: 1px; background-color: #00000029; } 
+ .chat-date span { position: relative; background-color: #f9fafc; padding: 0 8px; } 
+
+
+ /* 문의종료일때 */
+ .chat-state.chat-end .end-txt { display:block!important; } 
+ .chat-state.chat-end .tit-wrap button { display:none; } 
+ .chat-state.chat-end .chat-wrap { background-color: #c9c9c9; } 
+ .chat-state.chat-end .chat-date span { background-color: #c9c9c9; } 
+ .chat-state.chat-end .alarm-check { display:none; } 
+ .chat-state.chat-end .chat-input-area { display:none; } 
+ .chat-state.chat-end .chat-state-btn {display:none;}
