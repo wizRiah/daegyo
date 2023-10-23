@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)문자 조회 및 추가</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+    <!-- 원생 간편검색 결과 팝업 시작 -->
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 800px;">
+
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">문자 조회 및 추가</p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <div class="tit-wrap flex-end">
+              <div class="input-btn-wrap">
+                
+                <select name="" id="">
+                  <option value="" disabled="" selected="">문자 구분</option>
+                  <option value="">전체</option>
+                  <option value="">신규</option>
+                  <option value="">예정자</option>
+                  <option value="">미납자</option>
+                  <option value="">생일자</option>
+                  <option value="">지각자</option>
+                  <option value="">결석자</option>
+                  <option value="">공지사항</option>
+                  <option value="">기타</option>
+                </select>
+
+                <!-- 문자내용 입력 -->
+                <input type="text" id="txtNmm" class="wd200 ml5" placeholder="문자 내용을 입력하세요"/>
+                <!-- /문자내용 입력 -->
+                <button type="button" class="t-button-xs t-button-bora1">추가</button>
+
+              </div>
+
+              <div class="button-wrap">
+                <button type="button" class="t-button-xs t-button-grey1">문자등록</button>
+              </div>
+
+            </div>
+
+            <table class="t-basic-1 bora3">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">No</th>
+                  <th>구분</th>
+                  <th>문자 내용</th>
+                  <th style="width: 90px;">작성일</th>
+                  <th>관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20</td>
+                  <td>신규</td>
+                  <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                  <td>2023-05-26</td>
+                  <td>
+                    <div class="btn-set-4">
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">가져오기</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">내용보기</button> 
+                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-red-bd">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>예정자</td>
+                  <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                  <td>2023-05-26</td>
+                  <td>
+                    <div class="btn-set-4">
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">가져오기</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">내용보기</button> 
+                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-red-bd">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>공지사항</td>
+                  <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                  <td>2023-05-26</td>
+                  <td>
+                    <div class="btn-set-4">
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">가져오기</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-grey-bd">내용보기</button> 
+                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button> 
+                      <button type="button" class="t-button-xms t-button-white t-button-red-bd">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="t-pagination mt30" aria-disabled="false" role="navigation">
+              <div class="t-pagination-content">
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false" disabled="" aria-disabled="true">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                  </span>
+                </button>
+
+                <div class="h-pagination-middle flex justify-center">
+                  <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button"
+                    aria-label="1" aria-current="true">
+                    <span class="t-btn-content">
+                      <span class="block">1</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">2</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">3</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">4</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">5</span>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <span class="block">6</span>
+                    </span>
+                  </button>
+                </div>
+
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                  aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                  </span>
+                </button>
+                <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                  aria-current="false">
+                  <span class="t-btn-content">
+                    <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+
+      </div>
+    </div>
+    <!-- 원생 간편검색 결과 팝업 끝 -->
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
