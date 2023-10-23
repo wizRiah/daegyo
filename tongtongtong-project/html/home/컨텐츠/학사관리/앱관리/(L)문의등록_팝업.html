@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>문의등록팝업</title>
+  <link rel="stylesheet" href="../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 700px;">
+
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">문의 등록</p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+
+            <!-- 문의 상태 wrap -->
+            <div class="chat-state">
+
+              <!-- 상단 날짜 영역 -->
+              <div class="tit-section">
+                <div class="tit-wrap">
+                  <p class="main-tit"><span class="num">2023</span>년 <span class="num">08</span>월 <span class="num">11</span>일</p>
+                  <p class="main-text end-txt pc-red" style="display: none;">[문의종료]</p>
+                  <button type="button" class="t-button-xs t-button-bora6" style="display: none;">문의종료하기</button>
+                </div>
+
+                <div class="button-wrap chat-state-btn">
+                  <button type="button" class="t-button-xs t-button-white t-button-red-bd" style="display: none;">삭제</button>
+                </div>
+
+              </div>
+              <!-- /상단 날짜 영역 -->
+
+              <!-- 문의 대상 설정 영역 -->
+              <div class="box-bg mt20 mb20 flex flex-between" style="padding: 20px;">
+                <div class="tit-wrap">
+                  <p class="cont-text">문의 : </p>
+
+                  <!-- 대상 -->
+                  <input type="text" id="txtNmm" class="txtfield-basic" disabled="" placeholder="홍길동"
+                    style="width: 100px;/* display: none; */">
+                  <p class="main-text slash-txt" style="display: none;">홍길동(원생)</p>
+                  <!-- /대상 -->
+
+                  <div class="input-btn-wrap">
+                    <!-- 번호 -->
+                    <input type="text" id="txtNmm" class="wd140 ml5" disabled="" placeholder="010-1234-5678" style="/* display: none; */">
+                    <p class="main-text" style="display: none;">010-1234-5678</p>
+                    <!-- /번호 -->
+                    <button type="button" class="t-button-xs t-button-bora2 mr0"
+                      style="/* display: none; */">검색</button>
+                  </div>
+                </div>
+
+                <div class="alarm-check flex flex-center">
+                  <p class="cont-text">알림 발송 대상 :</p>
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"
+                          checked="">
+                        <label for="check02">원생</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04"
+                          checked="">
+                        <label for="check04">모</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03"
+                          checked="">
+                        <label for="check03">부</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /문의 대상 설정 영역 -->
+
+              <!-- 문의 내용 입력 영역 -->
+              <div class="mb10 chat-input-area">
+                <div class="t-text-field_slot">
+                  <textarea id="" rows="2" placeholder="내용을 입력해주세요."></textarea>
+                </div>
+                <div class="ml5 button-wrap">
+                  <button type="button" class="t-button-xs t-button-grey1">등록</button>
+                </div>
+              </div>
+              <!-- /문의 내용 입력 영역 -->
+
+
+              <!-- 문의 답 영역 -->
+              <div class="box-bg box-bg-02 chat-wrap">
+
+
+                <!-- 챗 하루치 -->
+                <div class="chat-day-set">
+
+                  <!-- 챗 박스 내부 날짜 -->
+                  <div class="chat-date">
+                    <span class="main-text h-txt-c">2023년 08월 11일</span>
+                  </div>
+                  <!-- /챗 박스 내부 날짜 -->
+
+                  <!-- 오른쪽 챗 -->
+                  <div class="chat-item">
+                    <p class="sub-tit mb5 text-medium">박실장</p>
+                    <div class="chat-set">
+                      <div class="chat-box main-text">안녕하세요. 문의봇입니다.</div>
+                      <span class="sb-txt text-light">2023-08-11 오후 3:30</span>
+                    </div>
+                  </div>
+                  <!-- /오른쪽 챗 -->
+
+                </div>
+                <!-- /챗 하루치 -->
+
+              </div>
+              <!-- /문의 답 영역 -->
+
+            </div>
+            <!-- /문의 상태 wrap -->
+
+          </div>
+          
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+
+      </div>
+    </div>
+
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>

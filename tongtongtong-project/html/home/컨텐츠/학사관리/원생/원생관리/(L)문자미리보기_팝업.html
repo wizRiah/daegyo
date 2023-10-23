@@ -3,13 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>(L)_사진_등록/삭제_팝업</title>
+  <title>(L)문자미리보기</title>
   <link rel="stylesheet" href="../../../../../../css/font.css">
   <link rel="stylesheet" href="../../../../../../css/common.css">
   <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
   <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -21,41 +19,52 @@
     <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
 
 
-    <!-- 사진 등록/삭제 팝업 시작 -->
     <div class="t-popup-wrap">
-      <div class="t-popup ui-draggable" style="width: 500px;">
+      <div class="t-popup ui-draggable" style="width: 400px;">
 
         <div class="pop-header ui-draggable-handle" style="cursor: move;">
-          <p class="pop-title">사진 등록/삭제</p>
+          <p class="pop-title">문자 미리보기</p>
         </div>
 
         <div class="pop-body">
           <div class="pop-container">
 
-            <div class="txt-box">
-              <div class="input-btn-wrap">
-                <input type="text" placeholder="이미지 선택" readonly value=""/>
-                <input type="file" id="imgChage" style="display: none;">
-                <label for="imgChage" class="t-button-xs t-button-bora2">
-                사진선택
-                </label>
-                <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
-              </div>
-            </div>
+            <!-- 핸드폰 테두리 -->
+            <div class="box-bg box-bg-02 sms-box ">
 
-            <div class="btn-set mt30">
-              <button type="button" class="t-button-xs">저장</button>
+              <!-- 문자내용 영역 -->
+              <div class="main-text text-wrap chat-item left">
+                <div class="chat-box">
+                  문자발송<br> 
+                  [
+                  <span>&amp;학원명</span>
+                  ]입니다.
+                  <br>
+                  [
+                  <span>&amp;원생명</span>
+                  ]님 안녕하세요.
+                  <br>안내 사항입니다.
+                </div>
+              </div>
+              <!-- /문자내용 영역 -->
+
+            </div>
+            <!-- /핸드폰 테두리 -->
+
+            <div class="button-wrap mt30">
               <button type="button" class="t-button-xs t-button-grey2">닫기</button>
             </div>
+
           </div>
         </div>
 
         <button type="button" class="close" title="팝업 닫기">
           <i class="p-close"></i>
         </button>
+
       </div>
     </div>
-    <!-- 사진 등록/삭제 팝업 끝 -->
+
 
 
     <!-- 팝업 뒤 배경 -->
@@ -74,7 +83,7 @@
 
   <script>
 
-   
+
   </script>
 
 </body>
