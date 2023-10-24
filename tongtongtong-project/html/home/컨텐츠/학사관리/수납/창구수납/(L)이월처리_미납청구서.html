@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)이월처리_미납청구서</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 1000px;">
+
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">[이월] 중등부 2학년 수학반(2023년05월) 수납처리
+
+          </p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <div class="layout-wrap col2">
+              <div class="box-basic">
+                <div class="tit-wrap">
+                  <p class="sub-tit">수납 정보</p>
+                </div>
+                <table class="t-basic-2 bora3 mt10">
+                  <tbody>
+                    <tr>
+                      <th style="width: 120px;">수납상태</th>
+                      <td> &gt; </td>
+                    </tr>
+                    <tr>
+                      <th>수납유형</th>
+                      <td>수강료(일반/1개월단위)</td>
+                    </tr>
+                    <tr>
+                      <th>수강년월</th>
+                      <td>잔여 회차가 1회시 청구서 자동 발행</td>
+                    </tr>
+                    <tr>
+                      <th>수강기간</th>
+                      <td><span class="date-picker"> <!--v-if--> <!--v-if--></span></td>
+                    </tr>
+                    <tr>
+                      <th>수업일수</th>
+                      <td><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="수업일수"> <span class="alert-txt ml10">수강 기간내 수업일수</span></td>
+                    </tr>
+                    <tr>
+                      <th>수납일자</th>
+                      <td><input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="수업일수"> <span class="alert-txt ml10">수강 기간내 수업일수</span></td>
+                    </tr>
+                    <tr>
+                      <th>수납구분</th>
+                      <td><select name="">
+                          <option value="0">할인선택</option>
+                          <option value="100000">신규할인</option>
+                          <option value="50000">장기할인</option>
+                          <option value="30000">생일할인</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <th>청구금액</th>
+                      <td class="txt-r">0 원</td>
+                    </tr>
+                    <tr>
+                      <th>할인금액</th>
+                      <td class="txt-r"><select name="">
+                          <option value="0">할인선택</option>
+                          <option value="100000">신규할인</option>
+                          <option value="50000">장기할인</option>
+                          <option value="30000">생일할인</option>
+                        </select> <input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="할인금액" readonly=""> 원
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>휴강일차감금액</th>
+                      <td class="txt-r"> <input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="차감금액">
+                        원
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>(실)청구금액</th>
+                      <td class="txt-r pc-red text-bold">0 원</td>
+                    </tr>
+                    <tr>
+                      <th>수납방법</th>
+                      <td><select name="">
+                          <option value="0">할인선택</option>
+                          <option value="100000">신규할인</option>
+                          <option value="50000">장기할인</option>
+                          <option value="30000">생일할인</option>
+                        </select> </td>
+                    </tr>
+                    <tr>
+                      <th>수납</th>
+                      <td><select name="">
+                          <option value="0">할인선택</option>
+                          <option value="100000">신규할인</option>
+                          <option value="50000">장기할인</option>
+                          <option value="30000">생일할인</option>
+                        </select> <input type="text" id="txtNmm" class="txtfield-basic wd140" placeholder="할인금액" readonly=""> 원
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>현금영수증</th>
+                      <td>
+                        <div class="t-radio-01">
+                          <input type="radio" id="link_01" name="link">
+                          <label for="link_01"><span class="rchk"></span>발행</label>
+                          <input type="radio" id="link_01_2" name="link">
+                          <label for="link_01_2"><span class="rchk"></span>미발행</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>카드취소번호</th>
+                      <td><select name="">
+                          <option value="1112233333">111-22-33333(에듀베이션)</option>
+                          <option value="1112255555">111-22-55555(훈장마을)</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <th>사업자번호</th>
+                      <td><input type="text" class="txtfield-basic" placeholder="비고 메모"></td>
+                    </tr>
+                    <tr>
+                      <th>카드취소번호</th>
+                      <td><input type="text" class="txtfield-basic" placeholder="비고 메모"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box-basic">
+                <div class="tit-wrap">
+                  <p class="sub-tit">수납 금액 정보</p>
+                </div>
+                <table class="t-basic-2 bora3 mt10">
+                  <tbody>
+                    <tr>
+                      <th style="width: 120px;">청구금액</th>
+                      <td class="txt-r">0 원</td>
+                    </tr>
+                    <tr>
+                      <th>할인금액</th>
+                      <td class="txt-r">0 원</td>
+                    </tr>
+                    
+                    <tr>
+                      <th>휴강일차감금액</th>
+                      <td><span class="date-picker"> <!--v-if--> <!--v-if--></span></td>
+                    </tr>
+                    <tr>
+                      <th>(실)청구금액</th>
+                      <td class="txt-r pc-red text-bold">0 원</td>
+                    </tr>
+                    <tr>
+                      <th>결제금액</th>
+                      <td class="txt-r">0 원</td>
+                    </tr>
+                  </tbody>
+                </table><div class="box-basic mt30">
+
+              <div class="tit-wrap">
+                  <p class="sub-tit">단말기 연동 카드 수납</p>
+                </div>
+
+              <div class="txt-box mt5 main-text"><div class="t-radio-01">
+                <input type="radio" id="link_01" name="link">
+                <label for="link_01"><span class="rchk"></span>단말기 연동</label>
+                <input type="radio" id="link_01_2" name="link">
+                <label for="link_01_2"><span class="rchk"></span>단말기 연동 안함</label>
+              </div><p class="pc-bora2 t-bullet-02 mt20">단말기 연동에 문제가 있을 시 아래의 번호로 연락 주세요</p><p class="t-bullet-02 mt15">고객센터 대표번호 : 1811-6277</p>
+              <br>
+            </div>
+
+              
+              
+            </div>
+              </div>
+            </div>
+            
+            <div class="btn-set mt20">
+              <button type="button" class="t-button-xs">저장</button>
+              <button type="button" class="t-button-xs t-button-grey2">닫기</button>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+
+      </div>
+    </div>
+
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
