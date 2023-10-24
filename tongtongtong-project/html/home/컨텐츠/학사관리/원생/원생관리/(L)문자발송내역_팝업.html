@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)문자발송내역</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 800px;">
+
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">문자 발송내역</p>
+        </div>
+
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <!-- 상단 박스영역 -->
+            <div class="box-bg">
+              <table class="t-basic-2 bora4">
+                <tbody>
+                  <tr>
+                    <th>발송일</th>
+                    <td colspan="3">
+                      <div class="flex"><span class="date-picker"><input type="text" id="datepickerStart"
+                            class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img
+                            class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
+                          ~
+                          <input type="text" id="datepickerEnd" class="datePicker txtfield-basic"
+                            placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger"
+                            src="/images/datepicker.png" alt="" title=""></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>검색</th>
+                    <td>
+                      <div class="input-btn-wrap">
+                        <select name="" id="" class="wd140">
+                          <option value="" disabled="" selected="">전체</option>
+                          <option value="">에듀베이션 학원입니다. 공지사항이 있습니다.</option>
+                        </select>
+                        <input type="text" id="txtNmm" class="ml5" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="t-button-xs t-button-bora2">검색</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /상단 박스영역 -->
+
+            <!-- 하단 영역 -->
+            <div class="content-section mt40">
+
+
+              <div class="tit-wrap flex-end">
+                <span class="sum">총 10건</span>
+                <div class="button-wrap items-end">
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">10건</option>
+                    <option value="">100건</option>
+                    <option value="">200건</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <table class="t-basic-1 bora3">
+                <thead>
+                  <tr>
+                    <th style="width: 50px;">No</th>
+                    <th>발송일</th>
+                    <th>문자</th>
+                    <th>수신대상</th>
+                    <th>발송결과</th>
+                    <th>발송직원</th>
+                    <th>재발송</th>
+                    <th>수신건수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>20</td>
+                    <td>신규</td>
+                    <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                    <td>원생<br>학부모</td>
+                    <td class="opt-suc">성공</td>
+                    <td>홍길동</td>
+                    <td><button type="button" class="t-button-xms t-button-bora1">재발송</button></td>
+                    <td><button type="button" class="t-button-underline t-button-nobg">12</button></td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>신규</td>
+                    <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                    <td>원생</td>
+                    <td class="opt-fail">실패</td>
+                    <td>홍길동</td>
+                    <td><button type="button" class="t-button-xms t-button-bora1">재발송</button></td>
+                    <td><button type="button" class="t-button-underline t-button-nobg">12</button></td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>신규</td>
+                    <td class="txt-l">에듀수학학원 입니다. 홍길동 학생의 수강기간이 끝나갑니다.</td>
+                    <td>학부모</td>
+                    <td class="opt-part-fail">일부실패</td>
+                    <td>홍길동</td>
+                    <td><button type="button" class="t-button-xms t-button-bora1">재발송</button></td>
+                    <td><button type="button" class="t-button-underline t-button-nobg">12</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <div class="t-pagination mt30" aria-disabled="false" role="navigation">
+                <div class="t-pagination-content">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                    </span>
+                  </button>
+
+                  <div class="h-pagination-middle flex justify-center">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button"
+                      aria-label="1" aria-current="true">
+                      <span class="t-btn-content">
+                        <span class="block">1</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                      aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">2</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3"
+                      aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">3</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4"
+                      aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">4</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5"
+                      aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">5</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6"
+                      aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">6</span>
+                      </span>
+                    </button>
+                  </div>
+
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                    </span>
+                  </button>
+
+                </div>
+              </div>
+
+              <div class="btn-set mt30">
+                <button type="button" class="t-button-xs t-button-white t-button-green-bd">엑셀 다운로드</button> 
+                <button type="button" class="t-button-xs t-button-grey2">닫기</button>
+              </div>
+
+            </div>
+            <!-- /하단 영역 -->
+           
+          </div>
+        </div>
+
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
