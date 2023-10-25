@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>(L)원생_퇴원처리_팝업</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+    
+
+    <!-- 원생 상세검색 팝업 시작 -->
+    <div class="t-popup-wrap">
+      <div class="t-popup ui-draggable" style="width: 1200px;">
+        <div class="pop-header ui-draggable-handle" style="cursor: move;">
+          <p class="pop-title">원생 퇴원 처리</p>
+        </div>
+        <div class="pop-body">
+          <div class="pop-container">
+
+            <div class="btn-set flex-end2 mb10"><button type="button" class="t-button-xs t-button-white t-button-red-bd">퇴원처리</button> </div><!-- 상단 박스 부분 -->
+            <div class="box-bg"><div class="tit-wrap"><p class="main-tit">퇴원 정보</p> </div><table class="t-basic-2 bora4 mt10"><tbody><tr><th style="width:130px;"><span class="t-necessary">필수</span>퇴원일</th> <td><span class="date-picker"><input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt=""> </span></td></tr> <tr><th>퇴원유형</th> <td><select name="" id="" class="wd140"><option disabled="" value="">대분류</option> <option value="">개인사유</option>  <option value="">학원사유</option></select><select name="" id="" class="wd140 ml5"><option disabled="" value="">중분류</option> <option value="">이사</option> <option value="">친구문제</option> <option value="">가정형편</option><option value="">기타</option></select></td></tr>  <tr><th>퇴원 사유</th> <td><div class="t-text-field_slot"><textarea id="" rows="4"></textarea></div></td></tr></tbody></table></div><div class="box-bg mt30" style="
+    border-radius: 10px;
+"><div class="tit-wrap"><p class="main-tit">퇴원 대상반(수강반)</p> </div><table class="t-basic-1 bora4">
+                <thead>
+                  <tr>
+                    <th style="width: 68px;">No</th>
+                    <th>반명</th>
+                    <th>운영/수납</th>
+                    <th>구분</th>
+                    <th>등록<br>시작일~종료일</th>
+                    <th>(강의요일) 강의시간</th>
+                    <th>반</th>
+                  <th>기준일<br>(청구)</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                    <td>일반<br>1주단위</td>
+                    <td class="opt-course">수강</td>
+                    <td>구로중학교 2학년</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 1:00 ~ 2:30</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                  <td>24일<br>(미청구)</td></tr>
+                  
+                  
+                  
+                  
+                <tr>
+                    <td>1</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                    <td>일반<br>1주단위</td>
+                    <td class="opt-be-course
+
+">예정</td>
+                    <td>구로중학교 2학년</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 1:00 ~ 2:30</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                  <td>24일<br>(미청구)</td></tr></tbody>
+              </table></div>
+            
+
+            
+            <div class="box-bg"><div class="tit-wrap"><p class="main-tit">미납자료</p> </div><table class="t-basic-2 bora3 mt10">
+                <tbody>
+                  <tr>
+                    <th style="width: 160px;"><span class="t-necessary">필수</span>미납자료 유지 여부</th>
+                    <td>
+                      <!-- 선택일괄처리 영역 시작-->
+                      <div class="t-tab-Contents flex-center t-radio-01 mr20 i-block">
+                        <input type="radio" id="tuition" name="process01">
+                        <label for="tuition"><span class="rchk"></span>미납자료 유지</label>
+                        <input type="radio" id="teacher" name="process01">
+                        <label for="teacher"><span class="rchk"></span>미납자료 삭제</label>
+                        <input type="radio" id="course" name="process01">
+                        <label for="course"><span class="rchk"></span>자료유지(면제처리)</label>
+
+                        <!-- 일괄처리 데이터 영역 시작 -->
+                        <div class="tabCo-Wrap process-data">
+                          <!-- 수강료 배정 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 수강료 :</span>
+                            <input type="text" id="txtNmm" class="txtfield-basic mr5 ml5">
+                            <span class="mr10">원</span>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /수강료 배정 선택시 -->
+
+                          <!-- 담당강사 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 담당강사 선택 :</span>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /담당강사 선택시 -->
+
+                          <!-- 수강상태 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <span>- 수강상태 :</span>
+                            <select class="ml5" name="" id="">
+                              <option value="" disabled="" selected="">수강상태</option>
+                              <option value="">수강전</option>
+                              <option value="">수강</option>
+                              <option value="">종강</option>
+                            </select>
+                            <button type="button" class="t-button-xs t-button-bora6">저장</button>
+                          </div>
+                          <!-- /수강상태 선택시 -->
+
+                        </div>
+                        <!-- 일괄처리 데이터 영역 끝 -->
+
+                      </div>
+                      <!-- 선택일괄처리 영역 끝-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table><table class="t-basic-1 bora4">
+                <thead>
+                  <tr>
+                    <th style="width: 68px;">No</th>
+                    <th>반명</th>
+                    <th>운영/수납</th>
+                    <th>구분</th>
+                    <th>등록<br>시작일~종료일</th>
+                    <th>(강의요일) 강의시간</th>
+                    <th>반</th>
+                  <th>기준일<br>(청구)</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                    <td>일반<br>1주단위</td>
+                    <td class="opt-course">수강</td>
+                    <td>구로중학교 2학년</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 1:00 ~ 2:30</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                  <td>24일<br>(미청구)</td></tr>
+                  
+                  
+                  
+                  
+                <tr>
+                    <td>1</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                    <td>일반<br>1주단위</td>
+                    <td class="opt-be-course
+
+">예정</td>
+                    <td>구로중학교 2학년</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 1:00 ~ 2:30</td>
+                    <td class="txt-l">
+                      중학교&gt;수학<br>중등부2학년수학반</td>
+                  <td>24일<br>(미청구)</td></tr></tbody>
+              </table><div class="t-pagination mt30" aria-disabled="false" role="navigation">
+                <div class="t-pagination-content">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                    </span>
+                  </button>
+                  <div class="h-pagination-middle flex justify-center">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                      <span class="t-btn-content">
+                        <span class="block">1</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">2</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">3</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">4</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">5</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">6</span>
+                      </span>
+                    </button>
+                  </div>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                    </span>
+                  </button>
+                </div>
+              </div></div><div class="btn-set mt40">
+                <button type="button" class="t-button-xs t-button-white t-button-red-bd">퇴원처리</button><button type="button" class="t-button-xs t-button-grey2">닫기</button>
+              </div>
+            
+
+          </div>
+        </div>
+        <button type="button" class="close" title="팝업 닫기">
+          <i class="p-close"></i>
+        </button>
+      </div>
+    </div>
+    <!-- 원생 상세검색 팝업 끝 -->
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+   
+  </script>
+
+</body>
+
+</html>

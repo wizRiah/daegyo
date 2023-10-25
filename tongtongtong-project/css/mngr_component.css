@@ -3,10 +3,50 @@
 
 :root { /* pc */
 
- /* Color */
- --pc-bora-1: #292e41; --pc-bora-2: #9678f1; --pc-bora-3: #6d57b3; --pc-bora-4: #4641ab; --pc-bora-5: #c4afda; --pc-bora-6: #5b5693; --pc-bora-7: #5d39ff; --pc-bora-8: #c1b9dd; --pc-red: #dd346d; --pc-border-1: #62666B; --pc-border-2: #CCD1D7; --pc-border-3: #E0E6EF; --pc-border-4: #d7dce5; --pc-border-5: #3b2989; --pc-text-color-1: #333; /* Font */
- --pc-text-h1: 36px; --pc-text-h2: 24px; --pc-text-h3: 16px; --pc-text-h4: 15px; --pc-text-h5: 14px; --pc-text-h6: 13px; --pc-fs20: 20px; --pc-fs18: 18px; --pc-fs17: 17px; --pc-fs16: 16px; --pc-fs15: 15px; --pc-fs14: 14px; --pc-fs13: 13px; --pc-fs12: 12px; --pc-fs11: 11px; --pc-fs10: 10px; /* pc,m 공용*/
- --text-light: 300; --text-regular: 400; --text-medium: 500; --text-bold: 700; --text-extrabold: 800; --letter-spacing-0: 0; --letter-spacing-065: -0.65px; --letter-spacing-1: -1px; --letter-spacing-2: -2px; } 
+    /* Color */
+    --pc-bora-1: #292e41;
+    --pc-bora-2: #9678f1;
+    --pc-bora-3: #6d57b3;
+    --pc-bora-4: #4641ab;
+    --pc-bora-5: #c4afda;
+    --pc-bora-6: #5b5693;
+    --pc-bora-7: #5d39ff;
+    --pc-bora-8: #c1b9dd;
+    --pc-red: #dd346d;
+    --pc-border-1: #62666B;
+    --pc-border-2: #CCD1D7;
+    --pc-border-3: #E0E6EF;
+    --pc-border-4: #d7dce5;
+    --pc-border-5: #3b2989;
+    --pc-text-color-1: #333;
+    /* Font */
+    --pc-text-h1: 36px;
+    --pc-text-h2: 24px;
+    --pc-text-h3: 16px;
+    --pc-text-h4: 15px;
+    --pc-text-h5: 14px;
+    --pc-text-h6: 13px;
+    --pc-fs20: 20px;
+    --pc-fs18: 18px;
+    --pc-fs17: 17px;
+    --pc-fs16: 16px;
+    --pc-fs15: 15px;
+    --pc-fs14: 14px;
+    --pc-fs13: 13px;
+    --pc-fs12: 12px;
+    --pc-fs11: 11px;
+    --pc-fs10: 10px;
+    /* pc,m 공용*/
+    --text-light: 300;
+    --text-regular: 400;
+    --text-medium: 500;
+    --text-bold: 700;
+    --text-extrabold: 800;
+    --letter-spacing-0: 0;
+    --letter-spacing-065: -0.65px;
+    --letter-spacing-1: -1px;
+    --letter-spacing-2: -2px;
+}
 .text-light { font-weight: var(--text-light) !important; } 
 .text-regular { font-weight: var(--text-regular) !important; } 
 .text-medium { font-weight: var(--text-medium) !important; } 
@@ -15,6 +55,8 @@
 
 .academy-mngr-Wrap .sum { font-size:var(--pc-fs16); } 
 
+
+.bg-over {background: beige;}
 
 
 /* 
@@ -26,7 +68,7 @@
 .academy-mngr-Wrap .sb-txt { color: #9a9a9a!important; font-size:var(--pc-fs13); } 
 
 /* 도움말 문구 */
-.academy-mngr-Wrap .alert-txt { color: #9a9a9a!important; font-size:var(--pc-fs13); } 
+.academy-mngr-Wrap .alert-txt {color: var(--pc-bora-6)!important; font-size:var(--pc-fs13); } 
 
 
 .academy-mngr-Wrap .main-tit { color: var(--pc-bora-1); font-size: 20px; font-weight: var(--text-bold); margin-right: 5px; } 
@@ -409,15 +451,15 @@ select
 /*
 달력 - datePicker
 */
-.academy-mngr-Wrap .date-picker { display: flex; align-items: center; } 
-.academy-mngr-Wrap .date-picker input.datePicker { width: 140px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; } 
-.academy-mngr-Wrap .date-picker .dp__input_icon { left: auto; right: 3px; float: none; position: absolute; height:22px; } 
+.academy-mngr-Wrap .date-picker { display: flex; align-items: center; }
+.academy-mngr-Wrap .date-picker input.datePicker { width: 140px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; }
+.academy-mngr-Wrap .date-picker .dp__input_icon { left: auto; right: 3px; float: none; position: absolute; height:22px; }
 
-.dp__calendar_header_item { font-weight: 500; } 
-.dp__calendar_header_item:nth-child(6) { color: var(--pc-bora-7); } 
-.dp__calendar_header_item:last-child { color: var(--pc-red); } 
-.dp__today { background: var(--pc-bora-5)!important; border: none!important; color: #fff; } 
-.dp__cell_inner { font-size:14px; } 
+.dp__calendar_header_item { font-weight: 500; }
+.dp__calendar_header_item:nth-child(6) { color: var(--pc-bora-7); }
+.dp__calendar_header_item:last-child { color: var(--pc-red); }
+.dp__cell_inner { font-size:14px; }
+
 
 
 
@@ -850,7 +892,7 @@ col
 .academy-mngr-Wrap .t-bullet-01 li:last-child { margin-bottom:0; } 
 .academy-mngr-Wrap .t-bullet-01 li:after { position: absolute; left: 1px; content: ''; width: 2px; height: 2px; background-color: #525252; border-radius: 50%; top: 8px; } 
 .academy-mngr-Wrap .t-bullet-02 { font-weight:var(--text-medium); position: relative; padding-left: 10px; font-size:var(--pc-fs13); } 
-.academy-mngr-Wrap .t-bullet-02:after { color: inherit; position: absolute; top: 7px; left: 0; content: '*'; transform: translateY(-50%); margin-top: 1px; } 
+.academy-mngr-Wrap .t-bullet-02:after { color: inherit; position: absolute; top: 50%; left: 0; content: '*'; transform: translateY(-50%); } 
 
 
 /* 원형 넘버 */
@@ -926,8 +968,8 @@ col
 
 /* 팝업일때 box-basic */
 .academy-mngr-Wrap .t-popup .layout-wrap.col2 .box-basic:nth-child(odd) { margin-right: 18px; } 
-
-
+/* 팝업일때 box-bg */
+.academy-mngr-Wrap .t-popup .box-bg { border-radius: 10px;}
 
 
 
@@ -1133,3 +1175,7 @@ hover
 /* 안내 리스트 */
 .academy-mngr-Wrap .admin-Ullist li { line-height: 150%; font-size: 15px; } 
 .academy-mngr-Wrap .admin-Ullist li:before { content:""; width: 5px; height: 5px; border-radius: 100%; display: inline-block; background: var(--pc-bora-6); vertical-align: middle; margin-right: 10px; margin-top: -3px; } 
+
+
+/* 청구서 리스트 */
+.academy-mngr-Wrap .admin-Ullist.trans li:before { margin-right: 3px; }
