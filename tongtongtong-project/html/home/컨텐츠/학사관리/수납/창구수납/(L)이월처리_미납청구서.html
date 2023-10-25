@@ -59,17 +59,22 @@
                       <th>수강년월</th>
                       <td>
                         <span class="date-picker">
-                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> 
-                            <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title=""> 
+                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic"
+                            placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th>수강기간</th>
                       <td>
-                        <span class="date-picker"><input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
+                        <span class="date-picker"><input type="text" id="datepickerStart"
+                            class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img
+                            class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
                           ~
-                          <input type="text" id="datepickerEnd" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title=""></span>
+                          <input type="text" id="datepickerEnd" class="datePicker txtfield-basic"
+                            placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger"
+                            src="/images/datepicker.png" alt="" title=""></span>
                       </td>
                     </tr>
                     <tr>
@@ -102,7 +107,7 @@
                           <option value="100000">신규할인</option>
                           <option value="50000">장기할인</option>
                           <option value="30000">생일할인</option>
-                        </select> 
+                        </select>
                         <input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder="할인금액" readonly=""> 원
                       </td>
                     </tr>
@@ -132,7 +137,8 @@
                           <option value="100000">신규할인</option>
                           <option value="50000">장기할인</option>
                           <option value="30000">생일할인</option>
-                        </select> <input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder="할인금액" readonly=""> 원
+                        </select> <input type="text" id="txtNmm" class="txtfield-basic wd160" placeholder="할인금액"
+                          readonly=""> 원
                       </td>
                     </tr>
                     <tr>
@@ -167,58 +173,66 @@
               <!-- /왼쪽영역 -->
 
               <!-- 오른쪽영역 -->
-              <!-- 수납정보 -->
+             
               <div class="box-basic">
-                <div class="tit-wrap">
-                  <p class="sub-tit">수납 금액 정보</p>
-                </div>
-                <table class="t-basic-2 bora3 mt10">
-                  <tbody>
-                    <tr>
-                      <th style="width: 120px;">청구금액</th>
-                      <td class="txt-r">0 원</td>
-                    </tr>
-                    <tr>
-                      <th rowspan="2">할인금액</th>
-                      <td class="txt-r"><span class="alert-txt mr10 fl">재원형제할인</span>0 원</td>
-                    </tr><tr>
-                      
-                      <td class="txt-r"><span class="alert-txt mr10 fl">성적할인</span>0 원</td>
-                    </tr>
 
-                    <tr>
-                      <th>휴강일차감금액</th>
-                      <td class="txt-r"><span class="alert-txt mr10 fl">성적할인</span>0 원</td>
-                    </tr>
-                    <tr>
-                      <th>(실)청구금액</th>
-                      <td class="txt-r pc-red text-bold">0 원</td>
-                    </tr>
-                    <tr>
-                      <th rowspan="2">결제금액</th>
-                      <td class="txt-r">0 원</td>
-                    </tr><tr>
-                      
-                      <td class="txt-r"><span class="alert-txt mr10 fl">미납금액</span>0 원</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <!-- 수납 금액 정보 -->
+                <div class="box-basic">
+                  <div class="tit-wrap">
+                    <p class="sub-tit">수납 금액 정보</p>
+                  </div>
+                  <table class="t-basic-2 bora3 mt10">
+                    <tbody>
+                      <tr>
+                        <th style="width: 120px;">청구금액</th>
+                        <td class="txt-r">0 원</td>
+                      </tr>
+                      <tr>
+                        <th rowspan="2">할인금액</th>
+                        <td class="txt-r"><span class="alert-txt mr10 fl">재원형제할인</span>0 원</td>
+                      </tr>
+                      <tr>
+                        <td class="txt-r"><span class="alert-txt mr10 fl">성적할인</span>0 원</td>
+                      </tr>
+                      <tr>
+                        <th>휴강일차감금액</th>
+                        <td class="txt-r"><span class="alert-txt mr10 fl">성적할인</span>0 원</td>
+                      </tr>
+                      <tr>
+                        <th>(실)청구금액</th>
+                        <td class="txt-r pc-red text-bold">0 원</td>
+                      </tr>
+                      <tr>
+                        <th rowspan="2" style="border-bottom-color: var(--pc-bora-3);">결제금액</th>
+                        <td class="txt-r">0 원</td>
+                      </tr>
+                      <tr>
+                        <td class="txt-r"><span class="alert-txt mr10 fl">미납금액</span>0 원</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <!-- /수납 금액 정보 -->
 
                 <!-- 청구서 목록 리스트 -->
                 <div class="box-basic mt40">
 
                   <ul class="admin-Ullist trans">
                     <li>
-                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반 [미납]</button>
+                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반
+                        [미납]</button>
                     </li>
                     <li>
-                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반 [미납]</button>
+                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반
+                        [미납]</button>
                     </li>
                     <li>
-                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반 [미납]</button>
+                      <button type="button" class="t-button-underline t-button-nobg">R20230811001-01 중등2수학반
+                        [미납]</button>
                     </li>
                   </ul>
-                  
+
                 </div>
                 <!-- /청구서 목록 리스트 -->
 
@@ -254,8 +268,12 @@
             <!-- /도움말 -->
 
             <div class="btn-set mt30">
-              <div class="btn-set-3"><button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button> <button type="button" class="t-button-xs t-button-bora6">수납처리</button> <button type="button" class="t-button-xs t-button-grey2-bd">수정</button> </div>
-              <div class="btn-set ml5"><button type="button" class="t-button-xs t-button-grey">초기화</button><button type="button" class="t-button-xs t-button-grey2">닫기</button></div>
+              <div class="btn-set-3"><button type="button"
+                  class="t-button-xs t-button-white t-button-red-bd">삭제</button> <button type="button"
+                  class="t-button-xs t-button-bora6">수납처리</button> <button type="button"
+                  class="t-button-xs t-button-grey2-bd">수정</button> </div>
+              <div class="btn-set ml5"><button type="button" class="t-button-xs t-button-grey">초기화</button><button
+                  type="button" class="t-button-xs t-button-grey2">닫기</button></div>
             </div>
 
           </div>
