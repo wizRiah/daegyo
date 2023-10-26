@@ -18,244 +18,211 @@
 
     <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
 
-    <div class="t-popup-wrap">
+    <div class="t-popup-wrap" style="top: 0px; left: 0px;">
       <div class="t-popup ui-draggable" style="width: 1250px;">
         <div class="pop-header ui-draggable-handle" style="cursor: move;">
-          <p class="pop-title">문자보내기</p>
+          <p class="pop-title">문자 보내기</p>
         </div>
-
         <div class="pop-body">
           <div class="pop-container">
-
-          
+            
+            <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
             <div class="tab-menu none">
               <ul class="tab-01">
                 <li class="active">
                   <p href="javascript:void(0);"><span class="status">SMS발송</span></p>
                 </li>
               </ul>
-            </div>
+            </div> 
 
             <!-- 체크박스 리스트 -->
             <ul class="check-list mt20">
               <li>
                 <div class="t-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="check02" checked="">
-                  <label for="check02">동일번호에 동일내용 전송 금지</label>
-                </div>
+                  <input type="checkbox" name="checkForm" id="dplctPrvnFlag"> 
+                  <label
+                    for="dplctPrvnFlag">동일번호에 동일내용 전송 금지</label>
+                  </div>
               </li>
               <li>
-                <div class="t-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="check03" checked="">
-                  <label for="check03">수신대상 조건 무시</label>
+                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="cndDsrgrdFlag"> 
+                  <label for="cndDsrgrdFlag">수신대상 조건 무시</label>
                 </div>
               </li>
-            </ul>
+            </ul> 
             <!-- /체크박스 리스트 -->
 
-
             <div class="content-section mt60">
+              <!-- 첫번째 박스 -->
               <div class="layout-wrap col3 colauto">
-
-                <!-- 첫번째 박스 -->
                 <div class="box-bg box-bg-02">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">문자</p>
                   </div>
-
-                  <div class="tit-wrap justify-start">
-                    <span class="cont-text">보내는 사람 : </span>
-                    <select name="" id="" class="wd140">
-                      <option value="" disabled="" selected="">070-1234-5678</option>
-                      <option value="">010-1234-5678</option>
-                      <option value="">010-1234-5678</option>
-                    </select>
-                  </div>
-
-                  <!-- 문자내용 입력 영역 -->
+                  <div class="tit-wrap justify-start"><span class="main-text mr5">보내는 사람 : </span> 
+                    <select name="dsptchNo" id="dsptchNo" class="wd140">
+                      <option disabled="" value="">선택</option>
+                      <option>010-1234-5678</option>
+                      <option>02-123-5555</option>
+                      <option>031-234-5564</option>
+                    </select></div>
                   <div class="t-text-field_slot mt10" style="height: 160px;">
-                    <textarea id=""></textarea>
+                    <textarea> </textarea>
                   </div>
-                  <!-- /문자내용 입력 영역 -->
-
-                  <!-- 문자수 결과칸 -->
-                  <div class="byte-result"><span class="main-text">문자수 : <span class="num">0</span> byte</span></div>
-                  <!-- /문자수 결과칸 -->
-
-
-                  <div class="t-checkbox checkbox01 mt10 mb10">
-                    <input type="checkbox" name="checkForm" id="check01" checked="">
-                    <label for="check01">학원명 함께 전송</label>
+                  <div class="byte-result"><span class="main-text">
+                      문자수 : 0</span></div>
+                  <div class="t-checkbox checkbox01 mt10 mb10"><input type="checkbox" name="checkForm" id="comnSndng">
+                    <label for="comnSndng">학원명 함께 전송</label>
                   </div>
-
 
                   <div class="button-wrap">
-                    <select name="" id="">
-                      <option value="" disabled="" selected="">선택</option>
-                      <option value="">100건</option>
-                      <option value="">공지사항</option>
-                    </select>
-                    <button type="button" class="t-button-xs t-button-grey1 flex-1">문자저장</button>
-                    <button type="button" class="t-button-xs t-button-bora1 flex-1">문자추가</button>
-                  </div>
+                    <select id="msgSeCd" name="msgSeCd">
+                      <option>선택</option>
+                    </select> 
+                    <button type="button" class="t-button-xs t-button-grey1 flex-1">문자저장</button> 
+                    <button type="button" class="t-button-xs t-button-grey1 flex-1">문자추가</button>
+                  </div> 
 
                   <!-- 파일 추가 영역 -->
                   <ul class="file-add-list">
-                    <li class="input-btn-wrap">
-                      <input value="" readonly="" placeholder="파일선택" type="text">
-                      <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
-                      <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
+                    <li class="input-btn-wrap"><input type="text" placeholder="사진.jpg" readonly=""> 
+                      <input type="file" id="fileUrlRegist_01" accept=".jpg" style="display: none;"> 
+                        <label class="t-button-xs t-button-bora1" for="fileUrlRegist_01">
+                        추가
+                      </label> 
+                      <button type="button" class="t-button-xs t-button-white t-button-red-bd ml10">
+                        삭제
+                      </button>
+                    </li>
+                    <li class="input-btn-wrap"><input type="text" placeholder="사진.jpg" readonly=""> 
+                      <input type="file" id="fileUrlRegist_01" accept=".jpg" style="display: none;"> 
+                      <label class="t-button-xs t-button-bora1" for="fileUrlRegist_01">
+                        추가
+                      </label> 
+                      <button type="button" class="t-button-xs t-button-white t-button-red-bd ml10">
+                        삭제
+                      </button>
                     </li>
                     <li class="input-btn-wrap">
-                      <input type="text" placeholder="파일선택" readonly="" value="">
-                      <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
-                      <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
-                    </li>
-                    <li class="input-btn-wrap">
-                      <input type="text" placeholder="파일선택" readonly="" value="">
-                      <input type="file" id="fileAdd" style="display: none;">
-                      <label for="fileAdd" class="t-button-xs t-button-bora2">추가</label>
-                      <button type="button" class="t-button-xs t-button-white t-button-red-bd">삭제</button>
+                      <input type="text" placeholder="사진.jpg" readonly=""> 
+                      <input type="file" id="fileUrlRegist_01" accept=".jpg" style="display: none;"> 
+                      <label class="t-button-xs t-button-bora1" for="fileUrlRegist_01">
+                        추가
+                      </label> <button type="button" class="t-button-xs t-button-white t-button-red-bd ml10">
+                        삭제
+                      </button>
                     </li>
                   </ul>
-                  <!-- /파일 추가 영역 -->
-
-
-                  <div class="tit-wrap justify-start">
-                    <span class="cont-text">발송일시 : </span>
-                    <div class="t-radio-01">
-                      <input type="radio" id="hradio01" name="hradio01" checked="">
-                      <label for="hradio01"><span class="rchk"></span>즉시발송</label>
-                      <input type="radio" id="hradio01_2" name="hradio01">
-                      <label for="hradio01_2"><span class="rchk"></span>예약발송</label>
+                  <div class="tit-wrap justify-start"><span class="cont-text">발송일시 : </span>
+                    <div class="t-radio-01"><input type="radio" id="hradio01_3" name="hradio01" value="즉시발송"> <label
+                        for="hradio01_3"><span class="rchk"></span>즉시발송</label> <input type="radio" id="hradio01_4"
+                        name="hradio01" value="예약발송"> <label for="hradio01_4"><span class="rchk"></span>예약발송</label>
                     </div>
                   </div>
 
-                  <div class="button-wrap mt10 justify-start">
-                    <div class="date-picker">
-                      <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
-                      <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
-                    </div>
-                    <select class="mr5 ml5 flex-1" name="" id="">
-                      <option value="" disabled="" selected="">시간</option>
-                      <option value="">00시</option>
-                      <option value="">01시</option>
-                    </select><select class="flex-1" name="" id="">
-                      <option value="" disabled="" selected="">분</option>
-                      <option value="">00분</option>
-                      <option value="">10분</option>
+                  <div class="flex mt10">
+                    <span class="date-picker" id="sndngDate" disabled="true">
+                      <div class="dp__main dp__theme_light">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                          aria-readonly="false">
+                          <div class="dp__input_wrap"><input name="sndngDate"
+                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                              class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                  class="ui-datepicker-trigger" src="/images/datepicker.png"></button></span></div>
+                        </div>
+                      </div>
+                    </span> 
+                    <select id="sndngAmPm" name="sndngAmPm" disabled="" class="ml5">
+                      <option value="AM">오전</option>
+                      <option value="PM">오후</option>
+                    </select> <select id="sndngHour" name="ssndngHour" class="ml5" disabled="">
+                      <option value="">시간</option>
+                      <option value="01">01시</option>
+                      <option value="02">02시</option>
+                      <option value="03">03시</option>
+                      <option value="04">04시</option>
+                      <option value="05">05시</option>
+                      <option value="06">06시</option>
+                      <option value="07">07시</option>
+                      <option value="08">08시</option>
+                      <option value="09">09시</option>
+                      <option value="10">10시</option>
+                      <option value="11">11시</option>
+                      <option value="12">12시</option>
+                    </select> 
+                    <select id="sndngMin" name="sndngMin" class="ml5" disabled="">
+                      <option value="">분</option>
+                      <option value="00">00분</option>
+                      <option value="10">10분</option>
+                      <option value="20">20분</option>
+                      <option value="30">30분</option>
+                      <option value="40">40분</option>
+                      <option value="50">50분</option>
                     </select>
                   </div>
-                
                   <div class="button-wrap mt30">
-                    <button type="button" class="t-button-xs t-button-grey2-bd ml0 flex-1">미리보기</button>
-                    <button type="button" class="t-button-xs t-button-grey2-bd flex-1">새로쓰기</button>
-                    <button type="button" class="t-button-xs t-button-bora6 flex-1">보내기</button>
-                  </div>
-
+                    <button type="button"
+                      class="t-button-xs t-button-grey2-bd ml0 flex-1">미리보기</button> 
+                      <button type="button"
+                      class="t-button-xs t-button-grey2-bd flex-1">새로쓰기</button> 
+                      <button type="button"
+                      class="t-button-xs t-button-bora6 flex-1">보내기</button>
+                    </div>
                 </div>
-                <!-- /첫번째 박스 -->
-
+                <!-- 첫번째 박스 -->
 
                 <!-- 중간 박스 -->
                 <div class="box-bg box-bg-02">
                   <div class="tit-bg">
-                    <p class="tit-bg-txt">발송 대상</p>
+                    <p class="tit-bg-txt">발송대상</p>
                   </div>
-                  <div class="tit-wrap justify-start">
-                    <span class="cont-text">받는 사람 : </span><span class="sum">총 4명</span>
+                  <div class="tit-wrap justify-start"><span class="cont-text">받는 사람 : </span><span class="sum">총 0명
+                    </span>
                   </div>
-
                   <!-- 수신자 입력 영역 -->
-                  <div class="tit-wrap justify-start mt10">
-                    <span class="cont-text">수신자 : </span>
-                    <div class="input-btn-wrap">
-                      <input class="mr5" type="text" placeholder="이름" value="" style="width: 107px;">
-                      <input type="text" id="txtNmm" placeholder="휴대폰(-없이) 입력" class="wd140">
-                      <button type="button" class="t-button-xs t-button-bora1 mr0">추가</button>
+                  <div class="tit-wrap justify-start mt10"><span class="cont-text">수신자 : </span>
+                    <div class="input-btn-wrap"><input class="mr5" type="text" placeholder="이름" style="width: 76px;">
+                      <input type="text" id="txtNmm" placeholder="휴대폰(-없이) 입력" class="wd140"> <button type="button"
+                        class="t-button-xs t-button-bora1 mr0">추가</button>
                     </div>
                   </div>
                   <!-- /수신자 입력 영역 -->
-
-                  <div class="button-wrap flex-end2 mt30">
-                    <button type="button" class="t-button-xms t-button-white t-button-green-bd ml0">엑셀업로드</button>
-                    <button type="button" class="t-button-xms t-button-white t-button-green-bd mr0">엑셀받기</button>
-                    <button type="button" class="t-button-xms t-button-bora6 ">원생검색</button>
-                    <button type="button" class="t-button-xms t-button-bora2">주소록</button>
-                  </div>
-
+                  <div class="button-wrap flex-end2 mt30"><button type="button"
+                      class="t-button-xms t-button-white t-button-green-bd ml0">엑셀업로드</button> <button type="button"
+                      class="t-button-xms t-button-white t-button-green-bd mr0">엑셀받기</button> <button type="button"
+                      class="t-button-xms t-button-bora6">원생검색</button> <button type="button"
+                      class="t-button-xms t-button-bora2">주소록</button></div>
                   <table class="t-basic-1 bora3">
                     <thead>
                       <tr>
                         <th style="width: 50px;">
                           <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_all">
+                            <input type="checkbox" name="allCheckForm" id="tbl_check_all"> 
                             <label for="tbl_check_all"></label>
                           </div>
                         </th>
                         <th style="width: 50px;">
-                          No
+                          NO
                         </th>
                         <th>이름</th>
                         <th>구분</th>
                         <th>휴대폰</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01">
-                            <label for="tbl_check_01"></label>
-                          </div>
-                        </td>
-                        <td>1</td>
-                        <td>홍길동</td>
-                        <td>재원생</td>
-                        <td>010-1234-5678</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01">
-                            <label for="tbl_check_01"></label>
-                          </div>
-                        </td>
-                        <td>1</td>
-                        <td>홍길동</td>
-                        <td>홍길동(모)</td>
-                        <td>010-1234-5678</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="checkForm" id="tbl_check_01">
-                            <label for="tbl_check_01"></label>
-                          </div>
-                        </td>
-                        <td>1</td>
-                        <td>홍길동</td>
-                        <td>재원생</td>
-                        <td>010-1234-5678</td>
-                      </tr>
-                    </tbody>
+                    <tbody></tbody>
                   </table>
-
-                </div>
+                </div> 
                 <!-- /중간 박스 -->
 
                 <!-- 세번째 박스 -->
-                <div class="box-bg box-bg-02 flex-grow-0" style="flex-basis: 335px;">
+                <div class="box-bg box-bg-02 flex-shrink-0" style="flex-basis:335px;">
                   <div class="tit-bg">
                     <p class="tit-bg-txt">설정</p>
                   </div>
-
-                  <!-- 치환어 -->
+                  <!-- 치환어 부분 -->
                   <div class="mb20 t-recent-List-wrap pt0">
                     <p class="sub-tit mb10">치환어</p>
-
                     <ul class="t-recent-List">
                       <li><a href="#">&amp;원생명</a></li>
                       <li><a href="#">&amp;학원명</a></li>
@@ -267,9 +234,8 @@
                       <li><a href="#">&amp;치환어</a></li>
                     </ul>
                   </div>
-                  <!-- /치환어 -->
-
-                  <!-- 특수문자 -->
+                  <!-- /치환어 부분 -->
+                  <!-- 특수문자 부분 -->
                   <div class="mb20 special-symbol-wrap">
                     <p class="sub-tit mb10">특수문자</p>
                     <ul class="special-symbol">
@@ -277,6 +243,7 @@
                       <li><button type="button" class="t-button-sp t-button-grey">#</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">&amp;</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">@</button></li>
+                      <li><button type="button" class="t-button-sp t-button-grey">\</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
@@ -289,39 +256,30 @@
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
                       <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
-                    <li><button type="button" class="t-button-sp t-button-grey">°</button></li><li><button type="button" class="t-button-sp t-button-grey">°</button></li><li><button type="button" class="t-button-sp t-button-grey">°</button></li><li><button type="button" class="t-button-sp t-button-grey">°</button></li><li><button type="button" class="t-button-sp t-button-grey">°</button></li><li><button type="button" class="t-button-sp t-button-grey">°</button></li></ul>
+                      <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
+                      <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
+                      <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
+                      <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
+                      <li><button type="button" class="t-button-sp t-button-grey">°</button></li>
+                    </ul>
                   </div>
-                  <!-- /특수문자 -->
-
-
+                  <!-- /특수문자 부분 -->
                   <div class="pt30">
                     <p class="mt10 t-bullet-02">문자 전송량이 많을 경우 전송시 다소 시간이 소요되오니 전송완료전까지 기다려 주시기 바랍니다.</p>
                     <p class="mt10 t-bullet-02">예약전송은 상단의 예약전송을 체크 하셔야 합니다.</p>
                     <p class="mt10 t-bullet-02">전송대상자는 대상자정보(회원정보)에 핸드폰번호가 입력이 된 대상에 한하여 조회되며 전송됩니다.</p>
                     <p class="mt30 t-bullet-02">SMS 전송결과안내<br>학사관리 &gt; 인트라넷 &gt; SMS/WebMail &gt; SMS전송결과조회에서 확인하실 수
-                    있습니다.</p>
+                      있습니다.</p>
                   </div>
-                  
                 </div>
-                <!-- /세번째 박스 -->
-
-
+                <!-- 세번째 박스 -->
               </div>
-
-
-              <div class="btn-set mt30">
-                <button type="button" class="t-button-xs t-button-grey2">닫기</button>
-              </div>
-              
             </div>
-
+            <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
           </div>
+
         </div>
-
-
-        <button type="button" class="close" title="팝업 닫기">
-          <i class="p-close"></i>
-        </button>
+        <button type="button" class="close" title="팝업 닫기"><i class="p-close"></i></button>
       </div>
     </div>
 
