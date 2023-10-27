@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>반관리</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- 헤더 시작 -->
+    <header>
+      <div class="header-top-inner">
+
+        <!-- 로고, 학원명 표시 시작-->
+        <div class="top-logo-wrap">
+          <p class="top-logo">
+            <span class="tit"></span>
+          </p>
+        </div>
+        <!-- 로고, 학원명 표시 끝 -->
+
+        <!-- 메뉴 시작 -->
+        <div class="gnb-wrap">
+          <ul class="gnb-list">
+
+            <!-- 1차 메뉴 시작 -->
+            <!-- 1차메뉴 li에 클래스 "depth1-on" 추가시 활성화 -->
+            <li class="depth1-on">
+              <a href="#">학사관리</a>
+              <!-- 2차 메뉴 시작 -->
+              <!-- 2차메뉴 li에 클래스 "depth2-on" 추가시 활성화 -->
+              <ul class="menu-depth2-list">
+                <li class="depth2-on">
+                  <a href="#">반</a>
+                  <!-- 3차 메뉴 시작 -->
+                  <!-- 3차메뉴 li에 "depth3-on" 추가시 활성화 -->
+                  <ul class="menu-depth3-list">
+                    <li class="depth3-on"><a href="#">원생관리</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                  </ul>
+                  <!-- 3차 메뉴 끝 -->
+                </li>
+                <li>
+                  <a href="#">원생</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">수납</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+              </ul>
+              <!-- 2차 메뉴 끝 -->
+            </li>
+            <!-- 1차 메뉴 끝 -->
+            <li>
+              <a href="#">학습관리</a>
+              <ul class="menu-depth2-list">
+                <li>
+                  <a href="#">222반</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222조건별원생조회</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">원생</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">수납</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+              </ul>
+            </li>
+            <li><a href="#">경영정보</a></li>
+            <li><a href="#">인트라넷</a></li>
+            <li><a href="#">도움센터</a></li>
+          </ul>
+        </div>
+        <!-- 메뉴 끝 -->
+
+        <!-- 로그인/로그아웃 영역 시작 -->
+        <div class="login-wrap">
+
+
+          <!--  
+            1) 로그인 학원명 클릭시  id "login-contents" 클릭시 class "active" 추가
+            2) 학원 1개이하인 경우 화살표,dropdown 제거 : class "noactive" 추가
+          -->
+
+          <!-- 로그인 학원명 표시 시작 -->
+          <div class="login-contents" id="login-contents">
+            <div class="flex items-center">
+              <div class="login-icon">
+                <img src="../../../images/icon_academy.png" alt="">
+              </div>
+              <span class="login-info">에듀베이션 학원</span>
+            </div>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li>
+                  <a>에듀베이션 학원</a>
+                </li>
+                <li>
+                  <a>학원2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 로그인 학원명 표시 끝 -->
+
+          <!-- 로그아웃 버튼 -->
+          <button class="logout-btn" type="button"></button>
+        </div>
+        <!-- 로그인/로그아웃 영역 끝 -->
+
+      </div>
+
+    </header>
+    <!-- 헤더 끝 -->
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+      <!-- 페이지 컨텐츠 시작 : 클래스 추가될 예정 -->
+      <div class="content sub classMg">
+
+
+        <!-- 메인 컨텐츠 시작 -->
+        <div class="main-cont">
+
+          
+          <div class="tab-menu">
+            <ul class="tab-01">
+              <li class="active"><a><span class="status">반관리</span></a></li>
+            </ul>
+          </div>
+
+
+          <div class="layout-wrap">
+
+            <!-- 테이블 box 시작 -->
+            <div class="box-bg">
+
+              <table class="t-basic-2 bora4">
+                <tbody>
+                  <tr>
+                    <th>대분류</th>
+                    <td><select name="" id="" class="wd140">
+                        <option value="" disabled="" selected="">대분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select></td>
+                    <th>중분류</th>
+                    <td>
+                      <select class="wd140" name="" id="">
+                        <option value="" disabled="" selected="">중분류 (전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select>
+                    </td>
+                    <th>반 명</th>
+                    <td colspan="3">
+                      <select class="wd100" name="" id="">
+                        <option value="" disabled="" selected="">반명</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                        <option value="">60개씩 보기</option>
+                        <option value="">80개씩 보기</option>
+                        <option value="">100개씩 보기</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>운영방식</th>
+                    <td>
+                      <select class="wd140" name="" id="">
+                        <option value="" disabled="" selected="">운영방식</option>
+                        <option value="">일반</option>
+                        <option value="">회차</option>
+                      </select>
+                    </td>
+                    <th>수납방식</th>
+                    <td><select class="wd140" name="" id="">
+                        <option value="" disabled="" selected="">수납방식</option>
+                        <option value="">1회만수납</option>
+                        <option value="">주단위</option>
+                        <option value="">월단위</option>
+                      </select>
+                    </td>
+                    <th>수강상태</th>
+                    <td>
+                      <select class="wd140" name="" id="">
+                        <option value="" disabled="" selected="">수강상태</option>
+                        <option value="">수강전</option>
+                        <option value="">수강</option>
+                        <option value="">종강</option>
+                      </select>
+                    </td>
+                    <th>검색</th>
+                    <td>
+                      <div class="input-btn-wrap">
+                        <select name="" id="">
+                          <option disabled="" value="">전체</option>
+                          <option value="">전체</option>
+                          <option value="">직원명</option>
+                          <option value="">직원아이디</option>
+                          <option value="">직원휴대폰번호</option>
+                        </select> 
+                        <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder="검색어를 입력하세요.">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="button-wrap flex-end2 mt17">
+                <button type="button" class="t-button-xs">검색조건 초기화</button>
+                <button type="button" class="t-button-xs t-button-bora2">검색</button>
+              </div>
+
+            </div>
+            <!-- 테이블 box 끝 -->
+
+
+
+            <!-- 선택일괄처리 영역 시작-->
+            <div class="box-bg">
+              <table class="t-basic-2 bora3">
+                <tbody>
+                  <tr>
+                    <th style="width: 160px;">선택 일괄처리</th>
+                    <td>
+                      <div class="t-tab-Contents flex-center t-radio-01">
+                        <input type="radio" id="tuition" name="process01">
+                        <label for="tuition"><span class="rchk"></span>수강료 배정</label>
+                        <input type="radio" id="teacher" name="process01">
+                        <label for="teacher"><span class="rchk"></span>담당강사 배정</label>
+                        <input type="radio" id="course" name="process01">
+                        <label for="course"><span class="rchk"></span>종강처리</label>
+
+                        <!-- 일괄처리 데이터 영역 시작 -->
+                        <div class="tabCo-Wrap process-data">
+
+                          <!-- 수강료 배정 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <p class="t-bullet-02 cont-text">수강료 :</p>
+                            <input type="text" id="txtNmm" class="txtfield-basic txt-r mr5">
+                            <span class="mr10">원</span>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /수강료 배정 선택시 -->
+
+                          <!-- 담당강사 배정 선택시 -->
+                          <div class="tabCo-CommonBox">
+                            <p class="t-bullet-02 cont-text">담당강사 선택 :</p>
+                            <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                          </div>
+                          <!-- /담당강사 배정 선택시 -->
+
+                          <!-- 종강처리 선택시 -->
+                          <div class="tabCo-CommonBox">
+
+                            <div class="t-checkbox checkbox01">
+                              <input type="checkbox" name="checkForm" id="check01">
+                              <label class="pc-red" for="check01">미납자료 삭제</label>
+                            </div>
+
+                            <div class="flex ml15 flex-center">
+                              <p class="t-bullet-02 cont-text">수업종료일 :</p>
+                              <!-- 데이트피커 -->
+                              <span class="date-picker">
+                                <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title=""> 
+                              </span>
+                              <!-- /데이트피커 -->
+                              <div class="btn-set ml5"><button type="button" class="t-button-xs t-button-white t-button-red-bd">종강처리</button></div>
+                            </div>
+
+                          </div>
+                          <!-- /종강처리 선택시 -->
+
+                        </div>
+                        <!-- 일괄처리 데이터 영역 끝 -->
+
+                      </div>
+                      <!-- 선택일괄처리 영역 끝-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <!-- /선택일괄처리 영역 시작-->
+
+
+            <!-- 하단 내용 시작 -->
+            <div class="content-section">
+
+              <div class="tit-wrap flex-end">
+
+                <div class="flex flex-end">
+                  <span class="sum">총 7건</span>
+                  <!-- 회차반인 경우 컬러 표시 박스 -->
+                  <div class="status-box-set ml15">
+                    <span class="status-box bg-class"></span>
+                    <span class="main-text">회차반</span>
+                  </div>
+                  <!-- /회차반인 경우 컬러 표시 박스 -->
+                </div>
+
+                <div class="button-wrap flex-end2">
+                  <button type="button" class="t-button-xs t-button-bora1">반 등록</button>
+                  <button type="button" class="t-button-xs t-button-white t-button-green-bd">엑셀받기</button>
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">10건</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">60개씩 보기</option>
+                    <option value="">80개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select>
+                </div>
+
+              </div>
+
+
+              <table class="t-basic-1 bora3">
+                <thead>
+                  <tr>
+                    <th style="width:68px;">
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_all">
+                        <label for="tbl_check_all"></label>
+                      </div>
+                    </th>
+                    <th style="width: 68px;">No</th>
+                    <th>대분류</th>
+                    <th>반명</th>
+                    <th>운영/수납</th>
+                    <th>수강료</th>
+                    <th>담당강사</th>
+                    <th>등록/정원</th>
+                    <th>등록일<br>종강일</th>
+                    <th>상태</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                   <!-- 회차반인 경우 tr에 class "bg-class" 추가 : 열 배경컬러 변경 -->
+                   <tr class="bg-class">
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01">
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>1</p>
+                    </td>
+                    <td>
+                      중등부
+                    </td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>회차/<br>1회만수납</td>
+                    <td class="txt-r">50,000</td>
+                    <td>김강사(강사)<br>이직원(직원)</td>
+                    <td>
+                      20/20
+                    </td>
+                    <td>
+                      2023-08-01<br>2023-09-30
+                    </td>
+                    <td class="opt-end">종강</td>
+                    <td>
+                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-clock"></i><span>보기</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01">
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>1</p>
+                    </td>
+                    <td>
+                      중등부
+                    </td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>일반/<br>1회만수납
+                    </td>
+                    <td class="txt-r">50,000</td>
+                    <td>김강사(강사)<br>이직원(직원)</td>
+                    <td>
+                      20/20
+                    </td>
+                    <td>
+                      2023-08-01<br>2023-09-30
+                    </td>
+                    <td class="opt-be-course">
+                      수강전
+                    </td>
+                    <td><button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span></button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="tbl_check_01">
+                        <label for="tbl_check_01"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <p>1</p>
+                    </td>
+                    <td>
+                      중등부
+                    </td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>일반/<br>1회만수납
+                    </td>
+                    <td class="txt-r">50,000</td>
+                    <td>김강사(강사)<br>이직원(직원)</td>
+                    <td>
+                      20/20
+                    </td>
+                    <td>
+                      2023-08-01<br>2023-09-30
+                    </td>
+                    <td class="opt-course">수강</td>
+                    <td>
+                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span></button></td>
+                  </tr>
+                </tbody>
+              </table>
+    
+              
+              <!-- 페이지네이션 -->
+              <div class="t-pagination mt30" aria-disabled="false" role="navigation">
+                <div class="t-pagination-content">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
+                    </span>
+                  </button>
+                  <div class="h-pagination-middle flex justify-center">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                      <span class="t-btn-content">
+                        <span class="block">1</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">2</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">3</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">4</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">5</span>
+                      </span>
+                    </button>
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
+                      <span class="t-btn-content">
+                        <span class="block">6</span>
+                      </span>
+                    </button>
+                  </div>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
+                    </span>
+                  </button>
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                    <span class="t-btn-content">
+                      <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <!-- /페이지네이션 -->
+
+            </div>
+            <!-- 하단 내용 끝 -->
+
+          </div>
+
+        </div>
+        <!-- 메인 컨텐츠 끝 -->
+
+
+    
+      </div>
+      <!-- 페이지 컨텐츠 끝 -->
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 푸터 시작 -->
+    <footer>
+      <div class="footer-inner">푸터</div>
+    </footer>
+    <!-- 푸터 끝 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg" style="display: none;">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+</body>
+
+</html>
