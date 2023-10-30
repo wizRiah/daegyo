@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>반등록</title>
+  <title>반등록_반설정</title>
   <link rel="stylesheet" href="../../../../../../css/font.css">
   <link rel="stylesheet" href="../../../../../../css/common.css">
   <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
@@ -192,11 +192,11 @@
 
 
           <div class="layout-wrap">
-
             <div class="tit-wrap flex-end">
 
               <span class="main-tit">반정보</span>
 
+              <!-- 타이틀 옆 종강처리 부분 -->
               <div class="flex flex-center">
                 <div class="t-checkbox checkbox01">
                   <input type="checkbox" name="checkForm" id="check01">
@@ -204,90 +204,115 @@
                 </div>
                 <div class="flex ml15 flex-center">
                   <p class="t-bullet-02 cont-text">수업종료일 :</p>
-                  <!-- 데이트피커 -->
+
+                  <!-- 데이트피커 vue용으로 다시 넣어야함 -->
                   <span class="date-picker">
-                    <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD"
-                      readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
+                    <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                    <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
                   </span>
                   <!-- /데이트피커 -->
-                  <div class="btn-set ml5"><button type="button"
-                      class="t-button-xs t-button-white t-button-red-bd">종강처리</button></div>
+
+                  <div class="btn-set ml5"><button type="button" class="t-button-xs t-button-white t-button-red-bd">종강처리</button></div>
+
                 </div>
               </div>
+              <!-- /타이틀 옆 종강처리 부분 -->
 
             </div>
 
-            
+
+            <!-- 표 시작 -->
             <table class="t-basic-2 bora3 mt10">
               <tbody>
                 <tr>
                   <th style="width:130px;">등록일</th>
-                  <td>
-
-                  </td>
+                  <td>2023-08-01</td>
                   <th style="width:130px;">종강일</th>
-                  <td>
-                  </td>
+                  <td>2023-08-01</td>
                 </tr>
+
                 <!-- 분류 -->
                 <tr>
                   <th style="width:130px;"><span class="t-necessary">필수</span>분류</th>
                   <td colspan="3">
                     <div class="flex">
                       <div class="flex flex-center mr20">
-                        <div class="t-radio-01 cont-text"><input type="radio" id="hradio01" name="datepicType"> <label
-                            for="hradio01"><span class="rchk"></span>분류선택 :</label></div>
-                        <div class="input-btn-wrap mr10"><select name="" id="" class="wd140">
+                        <div class="t-radio-01 cont-text">
+                          <input type="radio" id="hradio01" name="datepicType"> 
+                          <label for="hradio01"><span class="rchk"></span>분류선택 :</label>
+                        </div>
+                        
+                        <div class="input-btn-wrap mr10">
+                          <select name="" id="" class="wd140">
                             <option disabled="" selected="" value="">대분류</option>
                             <option value="">중등부</option>
-                          </select> <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder=""
-                            disabled=""></div>
-                        <div class="input-btn-wrap"><select name="" id="" class="wd140">
+                          </select> 
+                          <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder="" disabled="">
+                        </div>
+
+                        <div class="input-btn-wrap">
+                          <select name="" id="" class="wd140">
                             <option disabled="" value="" selected="">중분류</option>
                             <option value="">1학년</option>
                             <option value="">직접입력</option>
-                          </select> <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder=""></div>
+                          </select> 
+                          <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder="">
+                        </div>
+
                       </div>
+
                       <div class="flex flex-center">
-                        <div class="t-radio-01"><input type="radio" id="hradio01_2" name="datepicType"> <label
-                            for="hradio01_2" class="ml10"><span class="rchk"></span>분류없음</label></div>
+                        <div class="t-radio-01">
+                          <input type="radio" id="hradio01_2" name="datepicType"> 
+                          <label for="hradio01_2" class="ml10"><span class="rchk"></span>분류없음</label>
+                        </div>
                       </div>
+
                     </div>
                   </td>
                 </tr>
                 <!-- /분류 -->
 
+
                 <!-- 반명 -->
                 <tr>
-                  <th><span class="t-necessary">필수</span>반명</th>
-                  <td colspan="3"><input type="text" id="txtNmm" class="txtfield-basic wd200" placeholder=""></td>
+                  <th>
+                    <span class="t-necessary">필수</span>반명
+                  </th>
+                  <td colspan="3">
+                    <input type="text" id="txtNmm" class="txtfield-basic wd200" placeholder="">
+                  </td>
                 </tr>
                 <!-- /반명 -->
+
 
                 <!-- 담당강사 -->
                 <tr>
                   <th> 담당강사</th>
                   <td colspan="3">
                     <div class="flex flex-center">
-                      <div class="btn-set"><button type="button" class="t-button-xs t-button-bora6">배정</button></div>
+                      <div class="btn-set">
+                        <button type="button" class="t-button-xs t-button-bora6">배정</button>
+                      </div>
+
+                      <!-- 배정 강사 데이터 값 리스트 -->
                       <ul class="add-result-list">
                         <li>
                           <span>홍길동(원장)</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                         <li>
                           <span>홍길동(원장)</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                       </ul>
+                      <!-- /배정 강사 데이터 값 리스트 -->
+
                     </div>
                   </td>
                 </tr>
                 <!-- /담당강사 -->
+
 
                 <!-- 운영기간 -->
                 <tr>
@@ -296,34 +321,30 @@
                     <div class="flex flex-center">
                       <div class="flex flex-center mr20">
                         <div class="t-radio-01 cont-text">
-                          <input type="radio" id="hradio04" name="period"> 
+                          <input type="radio" id="hradio04" name="period">
                           <label for="hradio04"><span class="rchk"></span>기간설정 :</label>
-                        </div> 
-                          
+                        </div>
+
                         <!-- 데이트피커 -->
                         <span class="date-picker">
-                        <input type="text" id="datepickerStart" class="datePicker txtfield-basic"
-                          placeholder="YYYY-MM-DD" readonly="">
-                        <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt=""
-                          title="">
-                        ~
-                        <input type="text" id="datepickerEnd" class="datePicker txtfield-basic"
-                          placeholder="YYYY-MM-DD" readonly="">
-                        <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt=""
-                          title="">
-                      </span>
-                      <!-- /데이트피커 -->
+                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
+                          ~
+                          <input type="text" id="datepickerEnd" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="" title="">
+                        </span>
+                        <!-- /데이트피커 -->
                       </div>
 
                       <div class="flex flex-center">
                         <div class="t-radio-01">
-                          <input type="radio" id="hradio01_3" name="period"> <label for="hradio01_3" class="ml10"><span class="rchk"></span>상시운영</label>
+                          <input type="radio" id="hradio01_3" name="period"> 
+                          <label for="hradio01_3" class="ml10"><span class="rchk"></span>상시운영</label>
                         </div>
                       </div>
-
                       <p class="pc-bora2 t-bullet-02 ml20">상시운영 설정 시, 종강을 원할 경우 수동 설정 필요</p>
-
                     </div>
+
                   </td>
                 </tr>
                 <!-- /운영기간 -->
@@ -332,12 +353,12 @@
                 <tr>
                   <th><span class="t-necessary">필수</span>운영방식</th>
                   <td colspan="3">
-                    <div class="flex">
-                      <div class="flex flex-center mr20"><span class="t-bullet-02 cont-text">수강료 :</span><input
-                          type="text" id="txtNmm" class="txtfield-basic wd140 mr5" placeholder="">원</div>
-                      <div class="flex flex-center"><span class="t-bullet-02 cont-text">1회(일)당 차감 수수료 :</span><input
-                          placeholder="" class="txtfield-basic wd140 mr5 pc-red" id="txtNmm" type="text">원</div>
-                    </div>
+                    <select class="wd140" name="" id="">
+                      <option value="" disabled="" selected="">회차</option>
+                      <option value="">1회만수납</option>
+                      <option value="">주단위</option>
+                      <option value="">월단위</option>
+                    </select> 
                   </td>
                 </tr>
                 <!-- /운영방식 -->
@@ -345,35 +366,47 @@
                 <!-- 수납방식 -->
                 <tr>
                   <th><span class="t-necessary">필수</span>수납방식</th>
-                  <td colspan="3"><select class="wd140" name="" id="">
+                  <td colspan="3">
+                    <select class="wd140" name="" id="">
                       <option value="" disabled="" selected="">수납방식</option>
                       <option value="">1회만수납</option>
                       <option value="">주단위</option>
                       <option value="">월단위</option>
-                    </select> </td>
+                    </select> 
+                  </td>
                 </tr>
                 <!-- /수납방식 -->
-                
+
+
                 <!-- 수강료 -->
                 <tr>
                   <th><span class="t-necessary">필수</span>수강료</th>
                   <td colspan="3">
                     <div class="flex">
-                      <div class="flex flex-center mr20"><span class="t-bullet-02 cont-text">수업횟수 :</span><input
-                          type="text" id="txtNmm" class="txtfield-basic mr5" placeholder="" style="width: 85px;">회</div>
-                      <div class="flex flex-center"><span class="t-bullet-02 cont-text">수강료 :</span>
-                        <input placeholder="" class="txtfield-basic wd140 mr5 pc-red" id="txtNmm" type="text">원</div>
+                      <div class="flex flex-center mr20">
+                        <span class="t-bullet-02 cont-text">수업횟수 :</span>
+                        <input type="text" id="txtNmm" class="txtfield-basic mr5" placeholder="" style="width: 85px;">회
+                      </div>
+                      <div class="flex flex-center mr20">
+                        <span class="t-bullet-02 cont-text">수강료 :</span>
+                        <input placeholder="" class="txtfield-basic wd140 mr5 pc-red" id="txtNmm" type="text">원
+                      </div><div class="flex flex-center">
+                        <span class="t-bullet-02 cont-text">1회(일)당 차감 수수료 :</span>
+                        <input placeholder="" class="txtfield-basic wd140 mr5 pc-red" id="txtNmm" type="text">원
+                      </div>
                     </div>
                   </td>
                 </tr>
                 <!-- /수강료 -->
-                
+
+
                 <!-- 청구서발행기준 -->
                 <tr>
                   <th>청구서발행기준</th>
                   <td colspan="3">잔여회차가<input type="text" id="txtNmm" class="txtfield-basic ml5 mr5" placeholder="" style="width: 85px;">회 시 청구서 자동 발행</td>
                 </tr>
                 <!-- /청구서발행기준 -->
+
 
                 <!-- 정원 -->
                 <tr>
@@ -387,6 +420,7 @@
                 </tr>
                 <!-- /정원 -->
 
+
                 <!-- 사업자정보 -->
                 <tr>
                   <th>사업자정보</th>
@@ -394,89 +428,108 @@
                 </tr>
                 <!-- /사업자정보 -->
 
+
                 <!-- 시간표설정 -->
                 <tr>
                   <th>시간표설정</th>
                   <td colspan="3">
                     <div class="t-radio-01">
-                      <input type="radio" id="hradio01" name="hradio01" checked=""> 
-                      <label for="hradio01"><span class="rchk"></span>간단시간표</label> 
-                      <input type="radio" id="hradio01_2"  name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>미사용</label> 
+                      <input type="radio" id="hradio01" name="hradio01" checked="">
+                      <label for="hradio01"><span class="rchk"></span>간단시간표</label>
+                      <input type="radio" id="hradio01_2" name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>미사용</label>
                     </div>
+
 
                     <!-- 시간표 설정 부분 -->
                     <div class="time-box mt10">
                       <div class="btn-set flex-end2">
-                        <button type="button" class="t-button-xms t-button-grey">초기화</button> 
-                        <button type="button" class="t-button-xms t-button-grey1"><i class="i-save"></i><span>저장</span></button> 
+                        <button type="button" class="t-button-xms t-button-grey">초기화</button>
+                        <button type="button" class="t-button-xms t-button-grey1"><i class="i-save"></i><span>저장</span></button>
                       </div>
 
+
+                      <!-- 회색박스 -->
                       <div class="txt-box flex mt10 mb20">
 
+                        <!-- 요일선택 -->
                         <select name="" id="" class="">
                           <option disabled="" selected="" value="">요일</option>
                           <option value="">월</option>
                           <option value="">화</option>
                         </select>
+                        <!-- /요일선택 -->
 
+
+                        <!-- 시간선택 -->
                         <div class="flex flex-center ml20">
-                          <div class="flex flex-center mr10"><select name="" id="" class="mr5">
+                          <div class="flex flex-center mr10">
+                            <select name="" id="" class="mr5">
                               <option disabled="" selected="" value="">오전</option>
                               <option value="">오후</option>
-                            </select>시<select name="" id="" class="ml5 mr5">
+                            </select>
+                            시
+                            <select name="" id="" class="ml5 mr5">
                               <option disabled="" selected="" value="">시간</option>
                               <option value="">월</option>
                               <option value="">화</option>
-                            </select>분</div><span>~</span>
-                          <div class="flex flex-center ml10"><select name="" id="" class="mr5">
-                              <option disabled="" selected="" value="">오전</option>
-                              <option value="">오후</option>
-                            </select>시<select name="" id="" class="ml5 mr5">
-                              <option disabled="" selected="" value="">시간</option>
-                              <option value="">월</option>
-                              <option value="">화</option>
-                            </select>분</div>
-                        </div>
-                      </div>
+                            </select>
+                            분
+                          </div>
+                          <!-- /시간선택 -->
 
-                      <!-- 시간표설정 후 결과 값 -->
-                      <ul class="add-result-list mt20 mb20 ml0">
+                          <span>~</span>
+
+                          <!-- 시간선택 -->
+                          <div class="flex flex-center ml10">
+                            <select name="" id="" class="mr5">
+                              <option disabled="" selected="" value="">오전</option>
+                              <option value="">오후</option>
+                            </select>
+                            시
+                            <select name="" id="" class="ml5 mr5">
+                              <option disabled="" selected="" value="">시간</option>
+                              <option value="">월</option>
+                              <option value="">화</option>
+                            </select>
+                            분
+                          </div>
+                          <!-- /시간선택 -->
+
+                        </div>
+
+                      </div>
+                      <!-- /회색박스 -->
+
+
+                      <!-- 시간 설정 후 결과 값 리스트 -->
+                      <ul class="add-result-list">
                         <li>
                           <span>(화) 오후 3:00~4:00</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                         <li>
                           <span>(화) 오후 3:00~4:00</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                         <li>
                           <span>(화) 오후 3:00~4:00</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                         <li>
                           <span>(화) 오후 3:00~4:00</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                         <li>
                           <span>(화) 오후 3:00~4:00</span>
-                          <button type="button"
-                            class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"
-                            title="삭제"></button>
+                          <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd" title="삭제"></button>
                         </li>
                       </ul>
-                      <!-- /시간표설정 후 결과 값 -->
+                      <!-- /시간 설정 후 결과 값 리스트 -->
 
 
                     </div>
                     <!-- /시간표 설정 부분 -->
+
 
                   </td>
                 </tr>
@@ -484,11 +537,14 @@
 
               </tbody>
             </table>
+            <!-- /표 -->
+
+
             <div class="btn-set flex-end2 mt30">
               <button type="button" class="t-button-xs t-button-grey1">저장</button>
               <button type="button" class="t-button-xs t-button-grey">목록</button>
             </div>
-
+            
 
           </div>
 

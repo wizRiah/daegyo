@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>반관리</title>
+  <title>반조회</title>
   <link rel="stylesheet" href="../../../../../../css/font.css">
   <link rel="stylesheet" href="../../../../../../css/common.css">
   <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
@@ -183,7 +183,7 @@
         <!-- 메인 컨텐츠 시작 -->
         <div class="main-cont">
 
-          
+
           <div class="tab-menu">
             <ul class="tab-01">
               <li class="active"><a><span class="status">반관리</span></a></li>
@@ -221,9 +221,9 @@
                     </td>
                     <th>반 명</th>
                     <td colspan="3">
-                      <select class="wd100" name="" id="">
+                      <select class="wd140" name="" id="">
                         <option value="" disabled="" selected="">반명</option>
-                        <option value="">20개씩 보기</option>
+                        
                         <option value="">40개씩 보기</option>
                         <option value="">60개씩 보기</option>
                         <option value="">80개씩 보기</option>
@@ -248,17 +248,28 @@
                         <option value="">월단위</option>
                       </select>
                     </td>
-                    <th>수강상태</th>
+                    <th>강사명</th>
                     <td>
                       <select class="wd140" name="" id="">
-                        <option value="" disabled="" selected="">수강상태</option>
+                        <option value="" disabled="" selected="">강사명</option>
                         <option value="">수강전</option>
                         <option value="">수강</option>
                         <option value="">종강</option>
                       </select>
                     </td>
-                    <th>검색</th>
+                    <th>상태</th>
                     <td>
+                      <select class="wd140" name="" id="">
+                        <option value="" disabled="" selected="">상태</option>
+                        <option value="">수강전</option>
+                        <option value="">수강</option>
+                        <option value="">종강</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>검색</th>
+                    <td colspan="7">
                       <div class="input-btn-wrap">
                         <select name="" id="">
                           <option disabled="" value="">전체</option>
@@ -266,7 +277,7 @@
                           <option value="">직원명</option>
                           <option value="">직원아이디</option>
                           <option value="">직원휴대폰번호</option>
-                        </select> 
+                        </select>
                         <input type="text" id="txtNmm" class="txtfield-basic ml5" placeholder="검색어를 입력하세요.">
                       </div>
                     </td>
@@ -330,7 +341,7 @@
                               <p class="t-bullet-02 cont-text">수업종료일 :</p>
                               <!-- 데이트피커 -->
                               <span class="date-picker">
-                                <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title=""> 
+                                <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="" title="">
                               </span>
                               <!-- /데이트피커 -->
                               <div class="btn-set ml5"><button type="button" class="t-button-xs t-button-white t-button-red-bd">종강처리</button></div>
@@ -360,6 +371,7 @@
 
                 <div class="flex flex-end">
                   <span class="sum">총 7건</span>
+
                   <!-- 회차반인 경우 컬러 표시 박스 -->
                   <div class="status-box-set ml15">
                     <span class="status-box bg-class"></span>
@@ -406,8 +418,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                   <!-- 회차반인 경우 tr에 class "bg-class" 추가 : 열 배경컬러 변경 -->
-                   <tr class="bg-class">
+
+                  <!-- 회차반인 경우 tr에 class "bg-class" 추가 : 열 배경컬러 변경 -->
+                  <tr class="bg-class">
                     <td>
                       <div class="t-checkbox checkbox01">
                         <input type="checkbox" name="checkForm" id="tbl_check_01">
@@ -432,7 +445,8 @@
                     </td>
                     <td class="opt-end">종강</td>
                     <td>
-                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-clock"></i><span>보기</span></button>
+                      <button type="button" class="t-button-xms t-button-grey1">
+                        <i class="i-clock"></i><span>보기</span></button>
                     </td>
                   </tr>
                   <tr>
@@ -462,7 +476,10 @@
                     <td class="opt-be-course">
                       수강전
                     </td>
-                    <td><button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span></button></td>
+                    <td>
+                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span>
+                        </button>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -490,12 +507,13 @@
                     </td>
                     <td class="opt-course">수강</td>
                     <td>
-                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span></button></td>
+                      <button type="button" class="t-button-xms t-button-grey1"><i class="i-set"></i><span>설정</span></button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
-    
-              
+
+
               <!-- 페이지네이션 -->
               <div class="t-pagination mt30" aria-disabled="false" role="navigation">
                 <div class="t-pagination-content">
@@ -564,7 +582,7 @@
         <!-- 메인 컨텐츠 끝 -->
 
 
-    
+
       </div>
       <!-- 페이지 컨텐츠 끝 -->
 
