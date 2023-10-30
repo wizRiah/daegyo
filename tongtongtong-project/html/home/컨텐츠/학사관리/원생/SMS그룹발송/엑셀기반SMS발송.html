@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>엑셀기반SMS발송</title>
+  <link rel="stylesheet" href="../../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+    <!-- 헤더 시작 -->
+    <header>
+      <div class="header-top-inner">
+
+        <!-- 로고, 학원명 표시 시작-->
+        <div class="top-logo-wrap">
+          <p class="top-logo">
+            <span class="tit"></span>
+          </p>
+        </div>
+        <!-- 로고, 학원명 표시 끝 -->
+
+        <!-- 메뉴 시작 -->
+        <div class="gnb-wrap">
+          <ul class="gnb-list">
+
+            <!-- 1차 메뉴 시작 -->
+            <!-- 1차메뉴 li에 클래스 "depth1-on" 추가시 활성화 -->
+            <li class="depth1-on">
+              <a href="#">학사관리</a>
+              <!-- 2차 메뉴 시작 -->
+              <!-- 2차메뉴 li에 클래스 "depth2-on" 추가시 활성화 -->
+              <ul class="menu-depth2-list">
+                <li class="depth2-on">
+                  <a href="#">반</a>
+                  <!-- 3차 메뉴 시작 -->
+                  <!-- 3차메뉴 li에 "depth3-on" 추가시 활성화 -->
+                  <ul class="menu-depth3-list">
+                    <li class="depth3-on"><a href="#">원생관리</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                  </ul>
+                  <!-- 3차 메뉴 끝 -->
+                </li>
+                <li>
+                  <a href="#">원생</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                    <li><a href="#">원생관리</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">수납</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+              </ul>
+              <!-- 2차 메뉴 끝 -->
+            </li>
+            <!-- 1차 메뉴 끝 -->
+            <li>
+              <a href="#">학습관리</a>
+              <ul class="menu-depth2-list">
+                <li>
+                  <a href="#">222반</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222조건별원생조회</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">할인관리</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                    <li><a href="#">조건별원생조회</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">원생</a>
+                  <ul class="menu-depth3-list">
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                    <li><a href="#">222원생관리</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">수납</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+                <li><a href="#">상담</a></li>
+              </ul>
+            </li>
+            <li><a href="#">경영정보</a></li>
+            <li><a href="#">인트라넷</a></li>
+            <li><a href="#">도움센터</a></li>
+          </ul>
+        </div>
+        <!-- 메뉴 끝 -->
+
+        <!-- 로그인/로그아웃 영역 시작 -->
+        <div class="login-wrap">
+
+
+          <!--  
+            1) 로그인 학원명 클릭시  id "login-contents" 클릭시 class "active" 추가
+            2) 학원 1개이하인 경우 화살표,dropdown 제거 : class "noactive" 추가
+          -->
+
+          <!-- 로그인 학원명 표시 시작 -->
+          <div class="login-contents" id="login-contents">
+            <div class="flex items-center">
+              <div class="login-icon">
+                <img src="../../../images/icon_academy.png" alt="">
+              </div>
+              <span class="login-info">에듀베이션 학원</span>
+            </div>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <ul>
+                <li>
+                  <a>에듀베이션 학원</a>
+                </li>
+                <li>
+                  <a>학원2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 로그인 학원명 표시 끝 -->
+
+          <!-- 로그아웃 버튼 -->
+          <button class="logout-btn" type="button"></button>
+        </div>
+        <!-- 로그인/로그아웃 영역 끝 -->
+
+      </div>
+
+    </header>
+    <!-- 헤더 끝 -->
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+      <!-- 페이지 컨텐츠 시작 : 클래스 추가될 예정 -->
+      <div class="content sub">
+
+
+        <!-- 메인 컨텐츠 시작 -->
+        <div class="main-cont">
+
+          <!-- 탭메뉴 -->
+          <div class="tab-menu">
+            <ul class="tab-01">
+              <li><a><span class="status">SMS발송</span></a></li>
+              <li class="active"><a><span class="status">엑셀기반 SMS발송</span></a></li>
+              <li><a><span class="status">SMS 발송 결과</span></a></li>
+            </ul>
+          </div>
+          <!-- /탭메뉴 -->
+
+
+          <div class="layout-wrap">
+
+            <!-- 엑셀파일 선택 영역 -->
+            <div class="txt-box mb20">
+              <div class="input-btn-wrap">
+                <p class="cont-text">엑셀파일 :</p><input type="text" class="wd160" placeholder="파일.xlxs" readonly=""
+                  value="">
+                <input type="file" id="fileSelect" style="display: none;">
+                <label for="fileSelect" class="t-button-xs t-button-bora2">엑셀파일 선택</label>
+                <button type="button" class="t-button-xs t-button-bora1">선택 엑셀파일 읽기</button>
+              </div>
+            </div>
+            <!-- /엑셀파일 선택 영역 -->
+
+            <div class="layout-wrap col2 colauto">
+
+              <!-- SMS 발송 대상 엑셀 파일 내역 -->
+              <div class="box-bg flex-grow-2 box-bg-02 wd60">
+                <div class="tit-bg">
+                  <p class="tit-bg-txt">SMS 발송 대상 엑셀 파일 내역</p>
+                </div>
+
+
+                <!-- 스크롤 -->
+                <div class="m-scroll">
+                  <table class="t-basic-1 bora3 mt0">
+                    <thead>
+                      <tr>
+                        <th rowspan="2" style="width: 50px;">
+                          <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="tbl_check_all">
+                            <label for="tbl_check_all"></label>
+                          </div>
+                        </th>
+                        <th rowspan="2">No</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                      </tr>
+                      <tr class="group-bg">
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">휴대폰</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                        <th>
+                          <select name="" id="" class="wd140">
+                            <option value="" disabled="" selected="">선택</option>
+                            <option value="">010-1234-5678</option>
+                          </select>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>24</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>1111111111</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="t-checkbox checkbox01">
+                            <input type="checkbox" name="checkForm" id="tbl_check_01">
+                            <label for="tbl_check_01"></label>
+                          </div>
+                        </td>
+                        <td>24</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /스크롤 -->
+
+              </div>
+              <!-- /SMS 발송 대상 엑셀 파일 내역 -->
+
+
+              <!-- 문자 영역 -->
+              <div class="box-bg box-bg-02 flex-1 h-min-c">
+
+                <div class="tit-bg">
+                  <p class="tit-bg-txt">문자</p>
+                </div>
+
+                <div class="pb30">
+                  <p class="pc-bora2 t-bullet-02">아래에서 선택한 치환문자에 해당하는 컬럼의 내용으로 치환되어 전송됩니다.</p>
+                </div>
+
+                <!-- 치환어 -->
+                <div class="mb20 t-recent-List-wrap pt0">
+                  <p class="sub-tit mb10">치환어</p>
+                  <ul class="t-recent-List">
+                    <li><a href="#">&amp;원생명</a></li>
+                    <li><a href="#">&amp;학원명</a></li>
+                    <li><a href="#">&amp;반명</a></li>
+                    <li><a href="#">&amp;학부모명</a></li>
+                    <li><a href="#">&amp;치환어</a></li>
+                    <li><a href="#">&amp;원생명</a></li>
+                    <li><a href="#">&amp;치환어</a></li>
+                    <li><a href="#">&amp;치환어</a></li>
+                  </ul>
+                </div>
+                <!-- /치환어 -->
+
+
+                <div class="tit-wrap justify-start">
+                  <span class="cont-text">보내는 사람 : </span>
+                  <select name="" id="" class="wd140">
+                    <option disabled="" value="">선택</option>
+                    <option>010-1234-5678</option>
+                    <option>02-123-5555</option>
+                  </select>
+                </div>
+
+                <div class="t-text-field_slot mt10" style="height: 160px;">
+                  <textarea> </textarea>
+                </div>
+
+                <div class="byte-result main-text">
+                  <span class="cont-text">문자수 :</span>0<span> byte</span>
+                </div>
+
+                <!-- 발송일시 영역 -->
+                <div class="mt10 tit-wrap justify-start">
+                  <span class="cont-text">발송일시 :</span>
+                  <div class="t-radio-01">
+                    <input type="radio" id="hradio01_3" name="hradio01" value="즉시발송">
+                    <label for="hradio01_3"><span class="rchk"></span>즉시발송</label>
+                    <input type="radio" id="hradio01_4" name="hradio01" value="예약발송">
+                    <label for="hradio01_4"><span class="rchk"></span>예약발송</label>
+                  </div>
+                </div>
+                <!-- /발송일시 영역 -->
+
+
+
+                <div class="flex mt10">
+
+                  <!-- 데이트피커 -->
+                  <span class="date-picker"><div class="dp__main dp__theme_light"><div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false"><!----><div class="dp__input_wrap"><!----><input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger" src="/images/datepicker.png"></button></span><!----><!----><!----></div></div><!----></div> <!--v-if--> <!--v-if--></span>
+                  <!-- /데이트피커 -->
+
+
+                  <select id="sndngAmPm" name="sndngAmPm" disabled="" class="ml5">
+                    <option value="AM">오전</option>
+                    <option value="PM">오후</option>
+                  </select>
+
+                  <select id="sndngHour" name="ssndngHour" class="ml5" disabled="">
+                    <option value="">시간</option>
+                    <option value="01">01시</option>
+                    <option value="02">02시</option>
+                    <option value="03">03시</option>
+                    <option value="04">04시</option>
+                    <option value="05">05시</option>
+                    <option value="06">06시</option>
+                    <option value="07">07시</option>
+                    <option value="08">08시</option>
+                    <option value="09">09시</option>
+                    <option value="10">10시</option>
+                    <option value="11">11시</option>
+                    <option value="12">12시</option>
+                  </select>
+
+                  <select id="sndngMin" name="sndngMin" class="ml5" disabled="">
+                    <option value="">분</option>
+                    <option value="00">00분</option>
+                    <option value="10">10분</option>
+                    <option value="20">20분</option>
+                    <option value="30">30분</option>
+                    <option value="40">40분</option>
+                    <option value="50">50분</option>
+                  </select>
+
+                </div>
+
+
+                <div class="btn-set-3 mt30">
+                  <button type="button" class="t-button-xs t-button-grey2-bd flex-1">미리보기</button>
+                  <button type="button" class="t-button-xs t-button-grey2-bd flex-1">새로쓰기</button>
+                  <button type="button" class="t-button-xs t-button-bora6 flex-1">보내기</button>
+                </div>
+
+              </div>
+              <!-- /문자 영역 -->
+
+            </div>
+          </div>
+
+        </div>
+        <!-- 메인 컨텐츠 끝 -->
+
+
+
+      </div>
+      <!-- 페이지 컨텐츠 끝 -->
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+    <!-- 푸터 시작 -->
+    <footer>
+      <div class="footer-inner">푸터</div>
+    </footer>
+    <!-- 푸터 끝 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg" style="display: none;">
+    </div>
+
+    <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+</body>
+
+</html>
