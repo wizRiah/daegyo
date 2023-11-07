@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>반 등록정보설정</title>
@@ -242,170 +243,924 @@
 
 
 
+
+
+
+
+
           <!-- ●●●●●● 탭 아래 컨텐츠 시작 ●●●●●●-->
           <div class="layout-wrap">
 
-            <div class="tit-wrap flex-end">
 
-              <span class="main-tit">반 목록</span>
+            <!-- 상단 반목록 영역 -->
+            <div>
+              <!-- 표 위 타이틀 -->
+              <div class="tit-wrap flex-end">
 
-              <!-- 타이틀 옆 부분 -->
-              <div class="flex flex-center">
-                <div class="status-box-set mr15"><span class="status-box bg-class"></span> <span class="main-text">회차반</span></div>
+                <span class="main-tit">반 목록</span>
+
+                <!-- 반 목록 타이틀 옆 부분 -->
+                <div class="flex flex-center">
+                  <div class="status-box-set mr15"><span class="status-box bg-class"></span> <span class="main-text">회차반</span></div>
+                  <div class="t-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="check01">
+                    <label for="check01">이력자료 포함</label>
+                  </div>
+                  <div class="btn-set ml10"><button type="button" class="t-button-xs t-button-bora6">반 등록(배정)
+                      처리</button><button type="button" class="t-button-xs t-button-grey2">닫기</button>
+                  </div>
+                </div>
+                <!-- /반 목록 타이틀 옆 부분 -->
+
+              </div>
+              <!-- /표 위 타이틀 -->
+
+              <!-- 반 목록 표 -->
+              <table class="t-basic-1 bora3">
+                <thead>
+                  <tr>
+                    <th style="width: 60px;">No</th>
+                    <th>반명</th>
+                    <th>구분</th>
+                    <th>등록<br>시작일~종료일</th>
+                    <th>(강의요일) 강의시간</th>
+                    <th>잔여회차</th>
+                    <th>기준일<br>(청구)</th>
+                    <th style="width: 258px;">관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 수강중인 반 상태 : tr에 class "opt-course" 추가 -->
+                  <tr class="opt-course">
+                    <td>6</td>
+                    <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
+                    <td>전반</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>잔여1회시<br>(청구)</td>
+                    <td>
+                      <div class="btn-set-5 flex-end2">
+                        <button type="button" class="t-button-xms t-button-grey1">전반</button>
+                        <button type="button" class="t-button-xms t-button-grey1">휴학</button>
+                        <button type="button" class="t-button-xms t-button-red">종강</button>
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">등록취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>등록</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>24일<br>(미청구)</td>
+                    <td>
+                      <div class="btn-set-5 flex-end2">
+                        <button type="button" class="t-button-xms t-button-grey1">전반</button>
+                        <button type="button" class="t-button-xms t-button-grey1">휴학</button>
+                        <button type="button" class="t-button-xms t-button-red">종강</button>
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">등록취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- 회차반인 경우 tr에 class "bg-class" 추가 : 행 배경컬러 변경 -->
+                  <tr class="bg-class">
+                    <td>4</td>
+                    <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
+                    <td>전반</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>잔여1회시<br>(청구)</td>
+                    <td>
+                      <div class="btn-set-5 flex-end2">
+                        <button type="button" class="t-button-xms t-button-grey1">전반</button>
+                        <button type="button" class="t-button-xms t-button-grey1">휴학</button>
+                        <button type="button" class="t-button-xms t-button-red">종강</button>
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">전반취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>복학</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>24일<br>(미청구)</td>
+                    <td>
+                      <div class="btn-set-5 flex-end2">
+                        <button type="button" class="t-button-xms t-button-grey1">전반</button>
+                        <button type="button" class="t-button-xms t-button-grey1">휴학</button>
+                        <button type="button" class="t-button-xms t-button-red">종강</button>
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">복학취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>휴학</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>24일<br>(미청구)</td>
+                    <td>
+                      <div class="btn-set-3 flex-end2">
+                        <button type="button" class="t-button-xms t-button-bora7">복학</button>
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">휴학취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="txt-l">중등부 1학년 국어반</td>
+                    <td>종강</td>
+                    <td>2023.05.12~<br>2023.07.31</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>24일<br>(미청구)</td>
+                    <td>
+                      <div class="btn-set flex-end2">
+                        <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
+                        <button type="button" class="t-button-xms t-button-grey">종강취소</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- /반 목록 표 -->
+
+
+              <!-- 페이지네이션 -->
+              <div class="t-pagination mt30 mb20" aria-disabled="false" role="navigation">
+                <div class="t-pagination-content">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i></span></button>
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i></span></button>
+                  <div class="h-pagination-middle flex justify-center">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true"><span class="t-btn-content"><span class="block">1</span></span></button>
+                  </div> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i></span></button>
+                </div>
+              </div>
+              <!-- /페이지네이션 -->
+
+            </div>
+            <!-- /상단 반목록 영역 -->
+
+
+
+            <!-- 전반 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="layout-wrap col3 colauto pt0 ban-add-info">
+
+                <!-- 현재 수강반 영역 -->
+                <div class="box-basic flex-grow-1">
+                  <div class="tit-wrap">
+                    <p class="main-tit">현재 수강반</p>
+                  </div>
+                  <table class="t-basic-2 bora4 mt10">
+                    <tbody>
+                      <tr>
+                        <th>
+                          반명
+                        </th>
+                        <td>
+                          중등부&gt;수학&gt;중등부 2학년 수학반
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          등록종료일</th>
+                        <td>
+                          2023-05-23
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          운영/수납</th>
+                        <td>
+                          일반/1개월단위
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          수업횟수</th>
+                        <td>
+                          5
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>수강료</th>
+                        <td><span>100,000</span> 원</td>
+                      </tr>
+                      <tr>
+                        <th>할인</th>
+                        <td><span>100,000</span> 원<span class="alert-txt ml10">(형제할인 10%)</span></td>
+                      </tr>
+                      <tr>
+                        <th>(실)수강료</th>
+                        <td class="txt-r pc-red text-bold">200,000원 </td>
+                      </tr>
+                      <tr>
+                        <th>1회 수강료</th>
+                        <td><span>0</span> 원</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <!-- /현재 수강반 영역 -->
+
+                <!-- 화살표 -->
+                <div class="box-basic flex-center-set">
+                  <img src="../../../../../../images/right-arrow.png" alt="">
+                </div>
+                <!-- /화살표 -->
+
+                <!-- 전반 후 수강반 영역 -->
+                <div class="box-basic flex-grow-2">
+                  <div class="tit-wrap">
+                    <p class="main-tit">전반 후 수강반</p>
+                  </div>
+                  <table class="t-basic-2 bora4 mt10">
+                    <tbody>
+                      <tr>
+                        <th>
+                          반명
+                        </th>
+                        <td>
+                          <div class="input-btn-wrap"><input type="text" id="txtNmm" class="flex-1" placeholder="">
+                            <button type="button" class="t-button-xs t-button-bora2 mr0">검색</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>등록시작일</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <!-- 데이트피커 -->
+                            <span class="date-picker">
+                              <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                              <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                            </span>
+                            <!-- /데이트피커 -->
+
+                            <p class="cont-text ml10">기준일 :</p>
+                            <div class="flex-center-set">
+                              <select name="" id="">
+                                <option selected="" disabled="" value="">23일</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>수납방식</th>
+                        <td>
+                          <select id="" name="">
+                            <option selected="" disabled="" value="">일반</option>
+                          </select>
+                          <select name="" id="" class="mr5 ml5">
+                            <option selected="" disabled="" value="">주단위</option>
+                          </select>
+                          <select name="" id="">
+                            <option selected="" disabled="" value="">1주 단위</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          수업횟수</th>
+                        <td><input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 70px;"></td>
+                      </tr>
+                      <tr>
+                        <th>수강료</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원<span class="alert-txt ml10">(반 기준 : 110,000 원)</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>할인</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <div class="t-select-check active" tabindex="0" style="width: 120px;">
+                              <p class="t-select-name"><span>할인 선택</span></p>
+                              <div class="dropdown" style="display: none;">
+                                <ul class="check-list">
+                                  <li>
+                                    <div class="t-checkbox checkbox01">
+                                      <input type="checkbox" id="1699263185088_0">
+                                      <label for="1699263185088_0">재원형제할인</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-center-set">
+                              <input type="text" class="t-txtfield-basic ml5 mr5" placeholder="" style="width: 100px;">원
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>(실)수강료</th>
+                        <td class="txt-r pc-red text-bold">200,000원 </td>
+                      </tr>
+                      <tr>
+                        <th>1회 수강료</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원<span class="alert-txt ml10">(휴강일에 따른 차감 수강료)</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /전반 후 수강반 영역 -->
+
+              </div>
+
+
+              <div class="tit-wrap">
                 <div class="t-checkbox checkbox01">
-                  <input type="checkbox" name="checkForm" id="check01">
-                  <label for="check01">이력자료 포함</label>
+                  <input type="checkbox" name="checkForm" id="check02">
+                  <label for="check02">전반후 반의 수강료가 더 클 경우, 차액만큼 미납자료 생성</label>
                 </div>
-                <div class="btn-set ml10"><button type="button" class="t-button-xs t-button-bora6">반 등록(배정) 처리</button>
+                <div class="btn-set flex-end2">
+                  <button type="button" class="t-button-xs t-button-grey1">전반 처리</button>
                 </div>
               </div>
-              <!-- /타이틀 옆 부분 -->
+            </div>
+            <!-- /전반 클릭시 보이는 데이터 -->
+
+
+
+            <!-- 휴학 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="mb20">
+                <div class="tit-wrap">
+                  <p class="main-tit">휴학 처리</p>
+                </div>
+                <table class="t-basic-2 bora4 mt10">
+                  <tbody>
+                    <tr>
+                      <th>
+                        반명
+                      </th>
+                      <td>
+                        중등부&gt;수학&gt;중등부 2학년 수학반
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>휴학기간</th>
+                      <td>
+                        <span class="date-picker">
+                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                          ~
+                          <input type="text" id="datepickerEnd" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>휴학사유</th>
+                      <td><input type="text" class="t-txtfield-basic wd100" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th>복학 알림</th>
+                      <td>
+                        <div class="flex-center-set">
+                          휴학기간 종료
+                          <input type="text" class="t-txtfield-basic mr5 ml5" placeholder="" style="width: 70px;">일전
+                          <ul class="check-list ml20">
+                            <li>
+                              <div class="t-checkbox checkbox01">
+                                <input type="checkbox" name="checkForm" id="check02" checked="">
+                                <label for="check02">일정표시</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="t-checkbox checkbox01">
+                                <input type="checkbox" name="checkForm" id="check03" checked="">
+                                <label for="check03">SMS 알림</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="t-checkbox checkbox01">
+                                <input type="checkbox" name="checkForm" id="check04" checked="">
+                                <label for="check04">팝업메모 알림</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="btn-set flex-end2">
+                <button type="button" class="t-button-xs t-button-grey1">휴학 처리</button>
+              </div>
 
             </div>
+            <!-- /휴학 클릭시 보이는 데이터 -->
 
 
-            <!-- 표 시작 -->
-            <table class="t-basic-1 bora3">
-              <thead>
-                <tr>
-                  <th style="width:68px;">No</th>
-                  <th>반명</th>
-                  <th>구분</th>
-                  <th>등록<br>시작일~종료일</th>
-                  <th>(강의요일) 강의시간</th>
-                  <th>잔여회차</th>
-                  <th>기준일<br>(청구)</th>
-                  <th>관리</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>6</td>
-                  <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
-                  <td>전반</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>잔여1회시<br>(청구)</td>
-                  <td style="width: 258px;">
-                    <div class="btn-set-5 flex-end2">
-                      <button type="button" class="t-button-xms t-button-grey1">전반</button>
-                      <button type="button" class="t-button-xms t-button-grey1">휴학</button>
-                      <button type="button" class="t-button-xms t-button-red">종강</button>
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">등록취소</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td class="txt-l">중등부 1학년 국어반</td>
-                  <td>등록</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>24일<br>(미청구)</td>
-                  <td>
-                    <div class="btn-set-5 flex-end2">
-                      <button type="button" class="t-button-xms t-button-grey1">전반</button>
-                      <button type="button" class="t-button-xms t-button-grey1">휴학</button>
-                      <button type="button" class="t-button-xms t-button-red">종강</button>
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">등록취소</button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- 회차반인 경우 tr에 class "bg-class" 추가 : 열 배경컬러 변경 -->
-                <tr class="bg-class">
-                  <td>4</td>
-                  <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
-                  <td>전반</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>잔여1회시<br>(청구)</td>
-                  <td>
-                    <div class="btn-set-5 flex-end2">
-                      <button type="button" class="t-button-xms t-button-grey1">전반</button>
-                      <button type="button" class="t-button-xms t-button-grey1">휴학</button>
-                      <button type="button" class="t-button-xms t-button-red">종강</button>
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">전반취소</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td class="txt-l">중등부 1학년 국어반</td>
-                  <td>복학</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>24일<br>(미청구)</td>
-                  <td>
-                    <div class="btn-set-5 flex-end2">
-                      <button type="button" class="t-button-xms t-button-grey1">전반</button>
-                      <button type="button" class="t-button-xms t-button-grey1">휴학</button>
-                      <button type="button" class="t-button-xms t-button-red">종강</button>
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">복학취소</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td class="txt-l">중등부 1학년 국어반</td>
-                  <td>휴학</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>24일<br>(미청구)</td>
-                  <td>
-                    <div class="btn-set-3 flex-end2">
-                      <button type="button" class="t-button-xms t-button-bora7">복학</button>
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">휴학취소</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="txt-l">중등부 1학년 국어반</td>
-                  <td>종강</td>
-                  <td>2023.05.12~<br>2023.07.31</td>
-                  <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
-                  <td>7</td>
-                  <td>24일<br>(미청구)</td>
-                  <td>
-                    <div class="btn-set flex-end2">
-                      <button type="button" class="t-button-xms t-button-grey2-bd">수정</button>
-                      <button type="button" class="t-button-xms t-button-grey">종강취소</button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- /표 -->
+
+            <!-- 복학 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="layout-wrap col3 colauto pt0 ban-add-info">
+
+                <!-- 현재 휴학반 영역 -->
+                <div class="box-basic flex-grow-1">
+                  <div class="tit-wrap">
+                    <p class="main-tit">현재 휴학반</p>
+                  </div>
+                  <table class="t-basic-2 bora4 mt10">
+                    <tbody>
+                      <tr>
+                        <th>
+                          반명
+                        </th>
+                        <td>
+                          중등부&gt;수학&gt;중등부 2학년 수학반
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>휴학일자</th>
+                        <td>
+                          2023-05-23
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          운영/수납</th>
+                        <td>
+                          일반/1개월단위
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          수업횟수</th>
+                        <td>
+                          5
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>수강료</th>
+                        <td><span>100,000</span> 원</td>
+                      </tr>
+                      <tr>
+                        <th>할인</th>
+                        <td><span>100,000</span> 원<span class="alert-txt ml10">(형제할인 10%)</span></td>
+                      </tr>
+                      <tr>
+                        <th>(실)수강료</th>
+                        <td class="txt-r pc-red text-bold">200,000원 </td>
+                      </tr>
+                      <tr>
+                        <th>1회 수강료</th>
+                        <td><span>0</span> 원</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <!-- /현재 휴학반 영역 -->
+
+                <!-- 화살표 -->
+                <div class="box-basic flex-center-set">
+                  <img src="../../../../../../images/right-arrow.png" alt="">
+                </div>
+                <!-- /화살표 -->
+
+                <!-- 복학 후 수강반 영역 -->
+                <div class="box-basic flex-grow-2">
+                  <div class="tit-wrap">
+                    <p class="main-tit">복학 후 수강반</p>
+                  </div>
+                  <table class="t-basic-2 bora4 mt10">
+                    <tbody>
+                      <tr>
+                        <th>
+                          반명
+                        </th>
+                        <td>
+                          <div class="input-btn-wrap"><input type="text" id="txtNmm" class="flex-1" placeholder="">
+                            <button type="button" class="t-button-xs t-button-bora2 mr0">검색</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>복학일자</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <!-- 데이트피커 -->
+                            <span class="date-picker">
+                              <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                              <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                            </span>
+                            <!-- /데이트피커 -->
+
+                            <p class="cont-text ml10">기준일 :</p>
+                            <div class="flex-center-set">
+                              <select name="" id="">
+                                <option selected="" disabled="" value="">23일</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>수납방식</th>
+                        <td>
+                          <select id="" name="">
+                            <option selected="" disabled="" value="">일반</option>
+                          </select>
+                          <select name="" id="" class="mr5 ml5">
+                            <option selected="" disabled="" value="">주단위</option>
+                          </select>
+                          <select name="" id="">
+                            <option selected="" disabled="" value="">1주 단위</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          수업횟수</th>
+                        <td><input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 70px;"></td>
+                      </tr>
+                      <tr>
+                        <th>수강료</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원<span class="alert-txt ml10">(반 기준 : 110,000 원)</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>할인</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <div class="t-select-check active" tabindex="0" style="width: 120px;">
+                              <p class="t-select-name"><span>할인 선택</span></p>
+                              <div class="dropdown" style="display: none;">
+                                <ul class="check-list">
+                                  <li>
+                                    <div class="t-checkbox checkbox01">
+                                      <input type="checkbox" id="1699263185088_0">
+                                      <label for="1699263185088_0">재원형제할인</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-center-set">
+                              <input type="text" class="t-txtfield-basic ml5 mr5" placeholder="" style="width: 100px;">원
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>(실)수강료</th>
+                        <td class="txt-r pc-red text-bold">200,000원 </td>
+                      </tr>
+                      <tr>
+                        <th>1회 수강료</th>
+                        <td>
+                          <div class="flex-center-set">
+                            <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원<span class="alert-txt ml10">(휴강일에 따른 차감 수강료)</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /복학 후 수강반 영역 -->
+
+              </div>
 
 
-            <!-- 페이지네이션 -->
-            <div class="t-pagination mt30 mb20" aria-disabled="false" role="navigation">
-              <div class="t-pagination-content"><button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i></span></button> <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i></span></button>
-                <div class="h-pagination-middle flex justify-center"><button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true"><span class="t-btn-content"><span class="block">1</span></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false"><span class="t-btn-content"><span class="block">2</span></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false"><span class="t-btn-content"><span class="block">3</span></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false"><span class="t-btn-content"><span class="block">4</span></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false"><span class="t-btn-content"><span class="block">5</span></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false"><span class="t-btn-content"><span class="block">6</span></span></button></div> <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i></span></button> <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i></span></button>
+              <div class="btn-set flex-end2">
+                <button type="button" class="t-button-xs t-button-bora7">복학 처리</button>
               </div>
             </div>
-            <!-- /페이지네이션 -->
+            <!-- /복학 클릭시 보이는 데이터 -->
 
-            
+
+
+            <!-- 종강 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="mb20">
+                <div class="tit-wrap">
+                  <p class="main-tit">종강 처리</p>
+                </div>
+                <table class="t-basic-2 bora4 mt10">
+                  <tbody>
+                    <tr>
+                      <th>
+                        반명
+                      </th>
+                      <td>중등부&gt;수학&gt;중등부 2학년 수학반</td>
+                    </tr>
+                    <tr>
+                      <th>종강일자</th>
+                      <td>
+                        <span class="date-picker">
+                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                          <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>종강사유</th>
+                      <td><input type="text" class="t-txtfield-basic wd100" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th>미납자료</th>
+                      <td>
+                        <div class="t-checkbox checkbox01">
+                          <input type="checkbox" name="checkForm" id="check06">
+                          <label for="check06" class="pc-red">체크하시면 종강처리하는 반의 미납자료가 있을 시 모든 미납자료를 삭제 합니다.</label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="btn-set flex-end2">
+                <button type="button" class="t-button-xs t-button-red">종강 처리</button>
+              </div>
+
+            </div>
+            <!-- /종강 클릭시 보이는 데이터 -->
+
+
+
+            <!-- 수정 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="mb20">
+                <div class="tit-wrap">
+                  <p class="main-tit">반 수강정보 수정</p>
+                </div>
+                <table class="t-basic-2 bora4 mt10">
+                  <tbody>
+
+                    <tr>
+                      <th>
+                        <span class="t-necessary">필수</span>반명
+                      </th>
+                      <td style="width: 35%;">중등부&gt;수학&gt;중등부 2학년 수학반</td>
+                      <th>
+                        수강료</th>
+                      <td style="width: 35%;">
+                        <div class="flex-center-set">
+                          <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>
+                        <span class="t-necessary">필수</span>등록 시작일
+                      </th>
+                      <td>
+                        <div class="flex-center-set">
+                          <!-- 데이트피커 -->
+                          <span class="date-picker">
+                            <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                            <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                          </span>
+                          <!-- /데이트피커 -->
+
+                          <p class="cont-text ml10">기준일 :</p>
+                          <div class="flex-center-set">
+                            <select name="" id="">
+                              <option selected="" disabled="" value="">23일</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <th>할인</th>
+                      <td>
+                        <div class="flex-center-set">
+                          <div class="t-select-check active" tabindex="0" style="width: 120px;">
+                            <p class="t-select-name"><span>할인 선택</span></p>
+                            <div class="dropdown" style="display: none;">
+                              <ul class="check-list">
+                                <li>
+                                  <div class="t-checkbox checkbox01">
+                                    <input type="checkbox" id="1699263185088_0">
+                                    <label for="1699263185088_0">재원형제할인</label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="flex-center-set">
+                            <input type="text" class="t-txtfield-basic ml5 mr5" placeholder="" style="width: 100px;">원
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>수납방식</th>
+                      <td>
+                        <select id="" name="">
+                          <option selected="" disabled="" value="">일반</option>
+                        </select>
+                        <select name="" id="" class="mr5 ml5">
+                          <option selected="" disabled="" value="">주단위</option>
+                        </select>
+                        <select name="" id="">
+                          <option selected="" disabled="" value="">1주 단위</option>
+                        </select>
+                      </td>
+                      <th>
+                        (실)수강료</th>
+                      <td class="txt-r pc-red text-bold">200,000원</td>
+                    </tr>
+
+                    <tr>
+                      <th>수업횟수</th>
+                      <td>
+                        <div class="flex-center-set">
+                          <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 70px;">
+                          <p class="cont-text ml10">1회 수강료 :</p>
+                          <div class="flex-center-set"><input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원</div>
+                        </div>
+                      </td>
+                      <th>
+                        당월 수강료
+                      </th>
+                      <td>
+                        <div class="flex-center-set">
+                          <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="tit-wrap">
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check02">
+                  <label for="check02">기준일 변경에 따른 당월 미납청구서 발행하기
+                  </label>
+                </div>
+                <div class="btn-set flex-end2">
+                  <button type="button" class="t-button-xs t-button-grey1">저장</button>
+                </div>
+              </div>
+
+            </div>
+            <!-- /수정 클릭시 보이는 데이터 -->
+
+
+            <!-- 등록 취소 클릭시 보이는 데이터 -->
+            <div class="box-bg box-bg-02 mt40 mb0">
+
+              <div class="mb20">
+                <div class="tit-wrap">
+                  <p class="main-tit">반 등록 취소 처리</p>
+                </div>
+                <table class="t-basic-2 bora4 mt10">
+                  <tbody>
+
+                    <tr>
+                      <th>
+                        <span class="t-necessary">필수</span>반명
+                      </th>
+                      <td style="width: 35%;">중등부&gt;수학&gt;중등부 2학년 수학반</td>
+                      <th>
+                        수강료</th>
+                      <td style="width: 35%;"><span>10,000</span> 원</td>
+                    </tr>
+
+                    <tr>
+                      <th>
+                        <span class="t-necessary">필수</span>등록 시작일
+                      </th>
+                      <td>
+                        <div class="flex-center-set">
+                          <!-- 데이트피커 -->
+                          <span class="date-picker">
+                            <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
+                            <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                          </span>
+                          <!-- /데이트피커 -->
+
+                          <p class="cont-text ml10">기준일 :</p>
+                          <div class="flex-center-set">
+                            <select name="" id="">
+                              <option selected="" disabled="" value="">23일</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <th>할인</th>
+                      <td>형제할인 10% / <span>1,000</span> 원
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>수납방식</th>
+                      <td>회차 / 형제할인 10% / <span>1,000</span> 원
+                      </td>
+                      <th>
+                        (실)수강료</th>
+                      <td class="txt-r pc-red text-bold">200,000원</td>
+                    </tr>
+
+                    <tr>
+                      <th>수업횟수</th>
+                      <td>
+                        5
+                      </td>
+                      <th>1회 수강료</th>
+                      <td>
+                        <span>0</span> 원
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="tit-wrap">
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check02">
+                  <label for="check02" class="pc-red">미납자료를 삭제 합니다.(체크를 해제 하시면 미납자료가 유지 됩니다.)</label>
+                </div>
+                <div class="btn-set flex-end2">
+                  <button type="button" class="t-button-xs t-button-grey">반 등록 취소</button>
+                </div>
+              </div>
+
+            </div>
+            <!-- /등록 취소 클릭시 보이는 데이터 -->
+
+
+
             <!-- 하단 설명 부분 -->
             <ul class="admin-Ullist pt30">
+              <!-- 기존 -->
               <li>반 등록(배정) : [반등록(배정)] 버튼 클릭 → 반 목록에서 배정하고 하고자 하는 반 선택 및 배정 정보 설정</li>
               <li>반 전반 처리 : 등록된 반 목록에서 [전반] 클릭 시 화면 하단에 등록반 정보 표시 및 전반 하고자 하는 반 선택 및 정보 설정</li>
               <li>원생 휴학 처리 : 등록된 반 목록에서 [휴학] 클릭 시 화면 하단에 휴학 정보 설정 및 처리</li>
               <li>반 등록 정보 수정 : 등록된 반 목록에서 [수정] 클릭 시 화면 하단에 반 등록 정보가 보이며, 정보 수정이 가능</li>
               <li>반 등록 취소 : 등록된 반 목록에서 [등록취소] 클릭 시 화면 하단에 반 등록 정보가 보이며 수강료 관련 처리 및 해당 반 등록 취소</li>
+              <!-- 전반 클릭시 -->
+              <li>전반(현재 등록중인 반에서 다른 반으로 이동하여 수강) 할 수 있습니다.</li>
+              <li>[전반후 수강반]의 [반명/등록시작일]를 입력하신 후 [저장] 버튼을 클릭하십시요.</li>
+              <li>휴학 반을 다시 수강 반으로 하시려면 복학으로만 가능합니다.</li>
+              <li>아래 [전반후 수강반]의 반명 우측 [검색]을 클릭하여 반목록이 조회되면 전반하여 이동하고자 하는 반을 선택 합니다.</li>
+              <!-- 휴학 클릭시 -->
+              <li>휴학(현재 등록중인 반을 일정기간 동안 쉼 → 추후에 복학할 수 있음) 할 수 있습니다. </li>
+              <li>휴학자료의 입력/수정은 [휴학일자/휴학사유]를 입력하신 후 [휴학처리] 버튼을 클릭하세요.</li>
+              <li>휴학 반을 다시 수강 반으로 하시려면 복학으로만 가능합니다.</li>
+              <li>휴학취소를 하면 등록반으로 변경 됩니다.</li>
+              <!-- 종강 클릭시 -->
+              <li>종강(현재 등록중인 반의 수강종료, 원생은 다른 수강중인 반이 없으면 미등록생이 됨) 할 수 있습니다.</li>
+              <li>종강자료의 입력/수정은 [종강일자/종강사유]를 입력하신 후 [확인] 버튼을 클릭하십시요.</li>
+              <li>종강 반을 다시 수강 반으로 하시려면 종강취소로 가능합니다.</li>
+              <!-- 수정 클릭시 -->
+              <li>반 수강 정보를 수정 합니다.</li>
+              <li>등록자료의 입력/수정은 [반명 /등록시작일]를 입력하신 후 [저장] 버튼을 클릭하십시요.</li>
+              <li>아래쪽 반명 우측의 [검색] 버튼 클릭 시 반 검색이 반 목록 영역에 보이며, 반 검색 및 선택을 하세요.</li>
+              <!-- 수정 클릭시 -->
+              <li>반 등록을 취소 합니다.</li>
+              <li>등록을 취소하면 원생의 회차 출석 차감자료가 존재할 경우 출석 차감결과가 삭제 됩니다.</li>
+              <li>등록을 취소하시려면 [반등록취소] 버튼을 클릭하십시요.</li>
             </ul>
             <!-- /하단 설명 부분 -->
+
 
 
           </div>

@@ -435,13 +435,13 @@ select
 
 
 /* 체크박스리스트 */
-.academy-mngr-Wrap .check-list { display: flex; align-items: center; line-height: 19px;}
+.academy-mngr-Wrap .check-list { display: flex; align-items: center; }
 .academy-mngr-Wrap .check-list li { margin-right: 12px; }
 .academy-mngr-Wrap .check-list li:last-child { margin-right: 0; }
 
 
 /* label:before에 체크하기 전 상태 CSS */
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: inherit;}
+.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px;}
 .academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
 .academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; }
 .academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { margin: -4px 0 0 0; z-index: 1; }
@@ -504,9 +504,8 @@ select
 버튼 
 */
 
-.academy-mngr-Wrap [class^="t-button"] { flex-shrink: 0; word-break:keep-all; position: relative; overflow: hidden; display: inline-block; vertical-align: middle; box-sizing:border-box; margin: 0 5px; padding: 0px 10px; cursor: pointer; border-radius: 2px; background: var(--pc-border-1); color: #fff; display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; } 
+.academy-mngr-Wrap [class^="t-button"] { font-weight:500; flex-shrink: 0; word-break:keep-all; position: relative; overflow: hidden; display: inline-block; vertical-align: middle; box-sizing:border-box; margin: 0 5px; padding: 0px 10px; cursor: pointer; border-radius: 2px; background: var(--pc-border-1); color: #fff; display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; } 
 .academy-mngr-Wrap [class^="t-button"]:before { content:""; position:absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; opacity:0; } 
-
 .academy-mngr-Wrap [class^="t-button"]:focus:before { opacity:0.2; -webkit-animation: tbtnFX01 1s 1 ease; -o-animation: tbtnFX01 1s 1 ease; animation: tbtnFX01 1s 1 ease; } 
 .academy-mngr-Wrap [class^="t-button"] span:first-child:nth-last-child(2) { margin-right: 7px; } 
 .academy-mngr-Wrap [class^="t-button"] span:last-child:nth-last-child(1) { margin-left: 6px; } 
@@ -871,6 +870,9 @@ text field
 .academy-mngr-Wrap table .bg-be-course td { background:#e2e9ff!important; }
 
 
+/* 수강중인 반 상태 */
+.academy-mngr-Wrap table .opt-course td { font-weight: var(--text-medium); color: #000!important; }
+
 
 
 /* 상태별 팝업 및 상태박스 배경컬러 변경 */
@@ -909,7 +911,7 @@ text field
 .container *::-webkit-scrollbar-thumb { background-color: #868196; } 
 
 
-
+.academy-mngr-Wrap .m-scroll { overflow: auto; }
 
 
 /* 아이콘 */
@@ -982,7 +984,7 @@ col
 
 .academy-mngr-Wrap .layout-wrap.col3 .box-basic { width: 33%; margin-bottom: 20px; } 
 .academy-mngr-Wrap .layout-wrap.col3 .box-basic { margin-right: 30px; } 
-.academy-mngr-Wrap .layout-wrap.col3 .box-basic:nth-child(3n) { margin-right: 0; } 
+.academy-mngr-Wrap .layout-wrap.col3 .box-basic:nth-child(3n) { margin-right: 0!important; } 
 
 
 
@@ -993,7 +995,7 @@ col
 /* 너비 auto */
 .academy-mngr-Wrap .layout-wrap.col2.colauto .box-bg { width:auto; } 
 .academy-mngr-Wrap .layout-wrap.col3.colauto .box-bg { width:auto; } 
-.academy-mngr-Wrap .layout-wrap.col3.colauto .box-basic { width:auto; } 
+.academy-mngr-Wrap .layout-wrap.col2.colauto .box-basic { width:auto; } 
 .academy-mngr-Wrap .layout-wrap.col3.colauto .box-basic { width:auto; } 
 
 
