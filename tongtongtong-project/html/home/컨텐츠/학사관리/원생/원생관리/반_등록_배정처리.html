@@ -243,9 +243,11 @@
 
 
 
+
           <!-- ●●●●●● 탭 아래 컨텐츠 시작 ●●●●●●-->
           <div class="layout-wrap">
 
+            <!-- 수강반 영역 -->
             <div class="mb30">
               <div class="tit-wrap flex-end">
                 <span class="main-tit">수강 반</span>
@@ -275,13 +277,44 @@
                 </tbody>
               </table>
             </div>
+            <!-- /수강반 영역 -->
+
+
+            <!-- 등록 대상 반 목록 -->
             <div class="box-bg">
+
               <div class="tit-wrap">
-                <p class="main-tit">등록 대상 반 목록</p><div class="button-wrap"> <div class="status-box-set"><span class="status-box bg-class"></span> <span class="main-text">수강시작전 반</span></div>  </div>
+                <p class="main-tit">등록 대상 반 목록</p>
+                <div class="button-wrap">
+                  <div class="status-box-set">
+                    <span class="status-box bg-be-course"></span> 
+                    <span class="main-text">수강시작전 반</span>
+                  </div>
+                </div>
               </div>
+
               <div class="tit-wrap mt30">
-                <div class="input-btn-wrap"><select name=""><option value="">대분류</option></select><select class="mr5 ml5" name=""><option value="">중분류</option></select><select name=""><option value="">반 선택</option></select><input type="text" class="t-txtfield-basic wd200 ml5" placeholder="검색어를 입력하세요"><button type="button" class="t-button-xs t-button-bora2"><!--v-if--><!--v-if--> 검색</button></div><div class="button-wrap"> <select name=""><option value="">10건</option></select>  </div>
-              </div><table class="t-basic-1 bora4">
+                <div class="input-btn-wrap">
+                  <select name="">
+                    <option value="">대분류</option>
+                  </select>
+                  <select class="mr5 ml5" name="">
+                    <option value="">중분류</option>
+                  </select>
+                  <select class="wd200" name="">
+                    <option value="">반 선택</option>
+                  </select>
+                  <input type="text" class="t-txtfield-basic wd200 ml5" placeholder="반명을 입력하세요">
+                  <button type="button" class="t-button-xs t-button-bora2">검색</button>
+                </div>
+                <div class="button-wrap"> 
+                  <select name="">
+                    <option value="">10건</option>
+                  </select> 
+                </div>
+              </div>
+
+              <table class="t-basic-1 bora4">
                 <thead>
                   <tr>
                     <th style="width:68px;">No</th>
@@ -294,6 +327,16 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <!-- 수강시작전 반 : tr에 class "bg-be-course" 추가-->
+                  <tr class="bg-be-course">
+                    <td>6</td>
+                    <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
+                    <td>전반</td>
+                    <td>일반/<br>1주단위</td>
+                    <td>(월/수/금) 오전 1:00 ~ 2:30<br>(화/목) 오후 1:00 ~ 2:30</td>
+                    <td>7</td>
+                    <td>잔여1회시<br>(청구)</td>
+                  </tr>
                   <tr>
                     <td>6</td>
                     <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학</td>
@@ -304,144 +347,209 @@
                     <td>잔여1회시<br>(청구)</td>
                   </tr>
                 </tbody>
-              </table><div class="t-pagination mt30" aria-disabled="false" role="navigation">
+              </table>
+              
+              <!-- 페이지네이션 -->
+              <div class="t-pagination mt30" aria-disabled="false" role="navigation">
                 <div class="t-pagination-content">
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
                     </span>
                   </button>
                   <div class="h-pagination-middle flex justify-center">
-                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button"
+                      aria-label="1" aria-current="true">
                       <span class="t-btn-content">
                         <span class="block">1</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                      aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">2</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="3" aria-current="false">
-                      <span class="t-btn-content">
-                        <span class="block">3</span>
-                      </span>
-                    </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="4" aria-current="false">
-                      <span class="t-btn-content">
-                        <span class="block">4</span>
-                      </span>
-                    </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="5" aria-current="false">
-                      <span class="t-btn-content">
-                        <span class="block">5</span>
-                      </span>
-                    </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="6" aria-current="false">
-                      <span class="t-btn-content">
-                        <span class="block">6</span>
-                      </span>
-                    </button>
                   </div>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
+                    aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
+                    aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
                     </span>
                   </button>
                 </div>
               </div>
+              <!-- /페이지네이션 -->
+
             </div>
+            <!-- /등록 대상 반 목록 -->
 
 
-
+            <!-- 등록 대상 반 목록에서 반 클릭시 나타나는 정보 -->
             <div class="box-bg">
               <div class="tit-wrap">
                 <p class="main-tit">반 등록(배정) 정보</p>
               </div>
               <table class="t-basic-2 bora4 mt10">
                 <tbody>
-                  <tr>
-                    <th style="width:130px;">
-                      <span class="t-necessary">필수</span>반명</th>
-                    <td>
-                      
-                      <input type="text" class="t-txtfield-basic wd100" placeholder="">
-                      
-                    </td>
-                  <th style="width:130px;">
-                      수강료</th><td><div class="flex-center-set"><input type="text" class="t-txtfield-basic wd140 mr5" placeholder="">원</div></td></tr>
+
                   <tr>
                     <th>
-                      <span class="t-necessary">필수</span>등록 시작일</th>
-                    <td><input type="text" class="t-txtfield-basic wd140 mr5" placeholder=""><select name="" id="">
-                        <option selected="" disabled="" value="">중분류</option>
-                        <option value="">이사</option>
-                        <option value="">친구문제</option>
-                        <option value="">가정형편</option>
-                        <option value="">기타</option>
-                      </select></td>
-                  <th style="">
-                      할인</th><td><div class="flex-center-set"><div class="t-select-check active" tabindex="0" style="
-    width: 120px;
-"><p class="t-select-name"><span>할인 선택</span></p> <div class="dropdown" style="display: none;"><ul class="check-list"> <li><div class="t-checkbox checkbox01"><input type="checkbox" id="1699263185088_0" value="[object Object]"> <label for="1699263185088_0">재원형제할인</label></div></li></ul></div></div><div class="flex-center-set"><input type="text" class="t-txtfield-basic ml5 mr5" placeholder="" style="
-    width: 100px;
-">원</div></div></td></tr>
+                      <span class="t-necessary">필수</span>반명
+                    </th>
+                    <td>
+                      <input type="text" class="t-txtfield-basic wd100" disabled="" placeholder="">
+                    </td>
+                    <th>
+                      수강료</th>
+                    <td>
+                      <div class="flex-center-set">
+                        <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원<span class="alert-txt ml10">(반 기준 : 110,000 원)</span>
+                      </div>
+                    </td>
+                  </tr>
+
                   <tr>
-                    <th style="">수납방식</th>
-                    <td><select name="" id="" class="wd140">
-                        <option selected="" disabled="" value="">대분류</option>
-                        <option value="">개인사유</option>
-                        <option value="">학원사유</option>
-                      </select><select name="" id="" class="wd140 ml5">
-                        <option selected="" disabled="" value="">중분류</option>
-                        <option value="">이사</option>
-                        <option value="">친구문제</option>
-                        <option value="">가정형편</option>
-                        <option value="">기타</option>
-                      </select></td>
-                  <th style="">
-                      (실)수강료</th><td class="txt-r">90,000원</td></tr>
-                <tr>
-                    <th style="">수업횟수</th>
-                    <td><input type="text" class="t-txtfield-basic wd140" placeholder=""><select name="" id="" class="wd140 ml5">
-                        <option selected="" disabled="" value="">중분류</option>
-                        <option value="">이사</option>
-                        <option value="">친구문제</option>
-                        <option value="">가정형편</option>
-                        <option value="">기타</option>
-                      </select></td>
-                  <th style="">
-                      당월 수강료</th><td><select name="" id="" class="wd140">
-                        <option selected="" disabled="" value="">대분류</option>
-                        <option value="">개인사유</option>
-                        <option value="">학원사유</option>
-                      </select></td></tr></tbody>
-              </table><div class="tit-wrap mt20">
-                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"> <label for="check02">반 등록에 따른 당월 미납청구서 발행하기</label></div><div class="btn-set flex-end2"><button class="t-button-xs t-button-grey1" type="button">등록</button> <button type="button" class="t-button-xs t-button-grey">목록</button></div>
+                    <th>
+                      <span class="t-necessary">필수</span>등록 시작일
+                    </th>
+                    <td>
+                      <div class="flex-center-set">
+                        <!-- 데이트피커 -->
+                        <span class="date-picker">
+                          <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly=""> 
+                          <img class="ui-datepicker-trigger" src="/images/datepicker.png" alt="">
+                        </span>
+                        <!-- /데이트피커 -->
+
+                        <p class="cont-text ml10">기준일 :</p>
+                        <div class="flex-center-set">
+                          <select name="" id="">
+                            <option selected="" disabled="" value="">23일</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <th>할인</th>
+                    <td>
+                      <div class="flex-center-set">
+                        <div class="t-select-check active" tabindex="0" style="width: 120px;">
+                          <p class="t-select-name"><span>할인 선택</span></p>
+                          <div class="dropdown" style="display: none;">
+                            <ul class="check-list">
+                              <li>
+                                <div class="t-checkbox checkbox01">
+                                  <input type="checkbox" id="1699263185088_0"> 
+                                  <label for="1699263185088_0">재원형제할인</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="flex-center-set">
+                          <input type="text" class="t-txtfield-basic ml5 mr5" placeholder="" style="width: 100px;">원</div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>수납방식</th>
+                    <td>
+                      <select id="" name="">
+                        <option selected="" disabled="" value="">일반</option>
+                      </select>
+                      <select name="" id="" class="mr5 ml5">
+                        <option selected="" disabled="" value="">주단위</option>
+                      </select>
+                      <select name="" id="">
+                        <option selected="" disabled="" value="">1주 단위</option>
+                      </select>
+                    </td>
+                    <th>
+                      (실)수강료</th>
+                    <td class="txt-r pc-red text-bold">200,000원</td>
+                  </tr>
+
+                  <tr>
+                    <th>수업횟수</th>
+                    <td>
+                      <div class="flex-center-set">
+                        <input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 70px;">
+                        <p class="cont-text ml10">1회 수강료 :</p>
+                        <div class="flex-center-set"><input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원</div>
+                      </div>
+                    </td>
+                    <th>
+                      당월 수강료</th>
+                    <td>
+                      <div class="flex-center-set"><input type="text" class="t-txtfield-basic mr5" placeholder="" style="width: 100px;">원</div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+
+              <div class="tit-wrap mt20">
+
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" name="checkForm" id="check02"> 
+                  <label for="check02">반 등록에 따른 당월 미납청구서 발행하기</label>
+                </div>
+
+                <div class="btn-set flex-end2">
+                  <button class="t-button-xs t-button-grey1" type="button">등록</button>
+                  <button type="button" class="t-button-xs t-button-grey">목록</button>
+                </div>
               </div>
+
             </div>
+            <!-- /등록 대상 반 목록에서 반 클릭시 나타나는 정보 -->
+
+
+
 
             <!-- 하단 설명 부분 -->
             <ul class="admin-Ullist">
               <li>등록(신규로 원생이 수강할 반을 배정) 할 수 있습니다.</li>
-              <li>등록자료의 입력/수정은【 반명 /등록시작일 】를 입력하신 후 [확인] 버튼을 클릭하십시요</li>
+              <li>등록자료의 입력/수정은 [반명 /등록시작일]를 입력하신 후 [확인] 버튼을 클릭하십시요</li>
               <li>반 분류 선택 후 반 선택 또는 반선택을 클릭 하면 반 목록이 보이며, 선택 시 해당 반 정보가 표시 됩니다.</li>
             </ul>
             <!-- /하단 설명 부분 -->
 
 
+
+
+
+
+
+
+
+
           </div>
           <!-- ●●●●●● 탭 아래 컨텐츠 끝 ●●●●●●-->
+
+
+
+
+
+
+
+
+
 
 
 
