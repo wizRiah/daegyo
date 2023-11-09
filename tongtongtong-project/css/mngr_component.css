@@ -534,6 +534,7 @@ select
 .academy-mngr-Wrap [class^="t-button"] span:last-child:nth-last-child(1) { margin-left: 6px; } 
 .academy-mngr-Wrap [class^="t-button"] img { vertical-align:middle; } 
 .academy-mngr-Wrap [class^="t-button"]:not(.t-button-xxs,.t-button-xms,.t-button-circle,.t-button-sp) { min-width:60px; text-align:center; } 
+.academy-mngr-Wrap [class^="t-button"] + [class^="t-button"] {margin-left:0;}
 .academy-mngr-Wrap .t-button-circle { border-radius: 100%; padding: 0; width: 30px; height: 30px; line-height: 30px; } 
 .academy-mngr-Wrap .t-button-circle-16 { width: 16px; height: 16px; line-height:14px; } 
 .academy-mngr-Wrap [class^="t-button-circle"]::after { display: inline-flex; flex-flow: row wrap; justify-content: center; align-items: center; font-family: 'Material Icons'; font-style: normal; width: 100%; height: 100%; color: #fff; border-radius: 50%; box-sizing: border-box; } 
@@ -597,39 +598,21 @@ select
 
 .academy-mngr-Wrap .input-btn-wrap { display: flex; align-items: center; } 
 .academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:last-of-type { margin-right:0; } 
+.academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:only-of-type {margin-left:0;}
 
 /* 버튼+셀렉트 */
 .academy-mngr-Wrap .btn-set select:last-of-type { margin-left:5px; } 
 
-.academy-mngr-Wrap .btn-set-wrap { display:flex; align-items: center; } 
 
 /* 표 위의 컨테츠 부분 */
 .tit-section { display:flex; align-items: center; justify-content: space-between; } 
 
 
-/* 버튼 2개 세트 */
-.academy-mngr-Wrap .btn-set { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .btn-set [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set [class^="t-button"]:last-of-type { margin-right:0; } 
-
-/* 버튼 3개 세트 */
-.academy-mngr-Wrap .btn-set-3 { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .btn-set-3 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set-3 [class^="t-button"]:last-of-type { margin-left:0; margin-right:0; } 
-
-
-/* 버튼 4개 세트 */
-.academy-mngr-Wrap .btn-set-4 { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:last-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set-4 [class^="t-button"]:nth-child(3):nth-of-type(3) { margin-left:0; } 
-
-/* 버튼 5개 세트 */
-.academy-mngr-Wrap .btn-set-5 { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .btn-set-5 [class^="t-button"]:first-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set-5 [class^="t-button"]:last-of-type { margin-left:0; margin-right:0; } 
-.academy-mngr-Wrap .btn-set-5 [class^="t-button"]:nth-child(3):nth-of-type(3) { margin-left:0; } 
-.academy-mngr-Wrap .btn-set-5 [class^="t-button"]:nth-child(4):nth-of-type(4) { margin-left:0; } 
+.academy-mngr-Wrap [class^="btn-set"]:not(.btn-set-box) { display: flex; align-items: center; justify-content: center; }
+.academy-mngr-Wrap [class^="btn-set"]:not(.btn-set-box) [class^="t-button"] {margin:0 2.5px;}
+.academy-mngr-Wrap [class^="btn-set"]:not(.btn-set-box) [class^="t-button"]:only-child {margin:0;}
+.academy-mngr-Wrap [class^="btn-set"]:not(.btn-set-box) [class^="t-button"]:first-of-type { margin-left:0; }
+.academy-mngr-Wrap [class^="btn-set"]:not(.btn-set-box) [class^="t-button"]:last-of-type { margin-right:0; }
 
 
 
@@ -677,16 +660,15 @@ select
 .academy-mngr-Wrap input.wd140 { width:140px !important; min-width:140px; } 
 .academy-mngr-Wrap input.wd160 { width:160px !important; min-width:160px; } 
 .academy-mngr-Wrap input.wd200 { width:200px !important; min-width:200px; } 
-
+.academy-mngr-Wrap input.wd500 { width:500px !important; min-width:500px; }
 
 
 .academy-mngr-Wrap input[type="text"] { width:100%; height: 36px; padding: 0 8px; border:1px solid var(--pc-border-2); border-radius: 2px; box-sizing: border-box; font-size: var(--pc-fs13); } 
 .academy-mngr-Wrap input[type="text"]:disabled { background:#f2f2f2; color:#bcbcbc; } 
 .academy-mngr-Wrap input[type="number"] { text-align:right; } 
 .academy-mngr-Wrap input::placeholder { color:#bcbcbc; } 
-
 .academy-mngr-Wrap input[type="password"] { width: 100%; height: 36px; padding: 0 8px; border: 1px solid var(--pc-border-2); border-radius: 2px; box-sizing: border-box; font-size: var(--pc-fs13); } 
-
+.academy-mngr-Wrap textarea {padding:10px 8px; line-height:130%; border:1px solid var(--pc-border-2); border-radius: 2px; box-sizing: border-box; font-size: var(--pc-fs13);}
 
 
 /* input text에 값이 없으면*/
@@ -783,6 +765,7 @@ text field
 .academy-mngr-Wrap .t-basic-1>thead>tr:first-child th:first-child { position:relative; border-radius: 15px 0 0 0; }
 .academy-mngr-Wrap .t-basic-1>thead>tr:first-child th:last-child { border-radius: 0 15px 0 0; }
 .academy-mngr-Wrap .t-basic-1>tbody>tr>td:first-child { border-left: 1px solid var(--pc-border-4); }
+.academy-mngr-Wrap .t-basic-1>tbody>tr>td:only-child {padding:100px 0;}
 .academy-mngr-Wrap .t-basic-1 + .t-basic-1 { margin-top:20px; }
 .academy-mngr-Wrap .t-basic-1>thead>tr:first-child th:last-child { border-right:0; }
 
@@ -823,6 +806,7 @@ text field
 .academy-mngr-Wrap .t-basic-2>thead>tr>th,
 .academy-mngr-Wrap .t-basic-2>tbody>tr>th { line-height: 16px; background: var(--pc-bora-4); color: #ffffff; font-size:var(--pc-fs14); padding: 20px; font-weight: 400; border-bottom: 1px solid var(--pc-border-4); }
 .academy-mngr-Wrap .t-basic-2>tbody>tr>td { background:#fff; font-size:var(--pc-fs13); color:#333333; padding: 10px; line-height: 19px; border-bottom: 1px solid var(--pc-border-4); border-right: 1px solid var(--pc-border-4); }
+.academy-mngr-Wrap table>tbody>tr>td button:only-child {margin-left:0;}
 /* .academy-mngr-Wrap .t-basic-2>tbody>tr:first-child>th { border-top: 1px solid var(--pc-bora-3); } */
 /* .academy-mngr-Wrap .t-basic-2>tbody>tr:last-child>th:first-child { border-bottom: 1px solid var(--pc-bora-3); } */
 .academy-mngr-Wrap .t-basic-2>tbody>tr:last-child>th:first-child { border-bottom:0;}
