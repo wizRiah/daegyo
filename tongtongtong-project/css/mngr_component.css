@@ -361,11 +361,10 @@
 
 
 
-
 /*필수표시 */
-.t-necessary { width: 7px; height: 9px; display: inline-block; color: #fff300; text-indent: -999px; overflow: hidden; position: relative; margin-right: 3px; } 
-.t-necessary:before { content: "*"; font-size: 15px; text-indent: 0; position: absolute; left: 0; top: -3px; height: 100%; } 
-.t-necessary.noactive { display:none; } 
+.t-necessary { width: 7px; height: 9px; display: inline-block; color:transparent; text-indent: -999px; position: relative; margin-right: 2px; }
+.t-necessary:before { content: "*"; color: #dd346d; font-size: 15px; text-indent: 0; position: absolute; left: 0; top: 0; height: 100%; }
+.t-necessary.noactive { display:none; }
 
 
 /* 
@@ -433,12 +432,13 @@ select
 
 
  /* hover */
- .academy-mngr-Wrap .tab-02 li:hover { background-color: #535353!important; } 
- .academy-mngr-Wrap .tab-02 li:hover a > * { color:#fff; border-color: #535353;} 
+ .academy-mngr-Wrap .tab-02 li:hover { background-color: #535353!important; }
+ .academy-mngr-Wrap .tab-02 li:hover a > * { color:#fff; border-color: #535353;}
 
  /* active */
- .academy-mngr-Wrap .tab-02 li.active {background-color: #ffffff!important;margin-bottom: -3px;} 
- .academy-mngr-Wrap .tab-02 li.active a > * {color: var(--pc-bora-6); } 
+ .academy-mngr-Wrap .tab-02 li.active {background-color: #ffffff!important;margin-bottom: -4px;}
+ .academy-mngr-Wrap .tab-02 li.active a > * {color: var(--pc-bora-6); }
+
 
 
 
@@ -599,18 +599,18 @@ select
 .academy-mngr-Wrap .t-button-bora8 { background: var(--pc-bora-8)!important; } 
 .academy-mngr-Wrap .t-button-grey { background: var(--pc-border-3)!important; color: var(--pc-border-1); } 
 .academy-mngr-Wrap .t-button-grey2 { background: #c3cad4; } 
-.academy-mngr-Wrap .t-button-red { background: var(--pc-red)!important; } 
-.academy-mngr-Wrap .t-button-red-bd { color: var(--pc-red); border: 1px solid var(--pc-red); } 
-.academy-mngr-Wrap .t-button-green-bd { color:#127c00; border: 1px solid #127c00; } 
-.academy-mngr-Wrap .t-button-grey-bd { color: var(--pc-border-1); border: 1px solid #7e7e7e; } 
-.academy-mngr-Wrap .t-button-grey2-bd { background: #f2f4f7; color: var(--pc-border-1); border: 1px solid #CCD1D7; } 
+.academy-mngr-Wrap .t-button-red-bd { color: var(--pc-red); border: 1px solid var(--pc-red)!important; }
+.academy-mngr-Wrap .t-button-green-bd { color:#127c00; border: 1px solid #127c00; }
+.academy-mngr-Wrap .t-button-grey-bd { color: var(--pc-border-1); border: 1px solid #7e7e7e; }
+.academy-mngr-Wrap .t-button-grey2-bd { background: #f2f4f7; color: var(--pc-border-1); border: 1px solid #CCD1D7; }
 
-.academy-mngr-Wrap .button-wrap { display: flex; justify-content: center; } 
+.academy-mngr-Wrap .button-wrap { display: flex; justify-content: center; }
 
-
-.academy-mngr-Wrap .input-btn-wrap { display: flex; align-items: center; } 
-.academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:last-of-type { margin-right:0; } 
-.academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:only-of-type {margin-left:0;}
+.academy-mngr-Wrap .input-btn-wrap { display: flex; align-items: center; }
+.academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:last-of-type {margin-right:0;}
+.academy-mngr-Wrap .input-btn-wrap [class^="t-button"]:first-child {margin-left:0;}
+.academy-mngr-Wrap .input-btn-wrap .btn-set {margin-left:5px;}
+.academy-mngr-Wrap .input-btn-wrap button:only-of-type {margin-left:5px; }
 
 /* 버튼+셀렉트 */
 .academy-mngr-Wrap .btn-set select:last-of-type { margin-left:5px; } 
@@ -845,7 +845,7 @@ text field
 .academy-mngr-Wrap .box-bg.top-srchBox .button-wrap .t-button-xs.t-button-bora2:before {content:""; display:inline-block; background:url(/images/ico_srch.png); background-size: cover; position: relative; z-index: 1; top: auto; right: auto; bottom: auto; left: auto; width: 14px; height: 15px; vertical-align: middle; opacity: 1; margin-right: 5px;}
 .academy-mngr-Wrap .box-bg.p0 table td {border:none !important; }
 .academy-mngr-Wrap .box-bg.p0 table tr:only-child td:last-child {border-radius:0 15px 15px 0;}
-
+.academy-mngr-Wrap .box-bg.top-srchBox table th .t-necessary:before{ color: #f8ff24;}
 
 
 
