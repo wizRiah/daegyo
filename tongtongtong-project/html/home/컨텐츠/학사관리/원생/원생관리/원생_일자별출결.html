@@ -254,7 +254,7 @@
 
                  -->
 
-                  <button type="button" id="add-close" class="t-button-xs t-button-bora2 flex-1 m0 add-close">
+                  <button type="button" id="add-close" class="t-button-xs t-button-bora2 flex-1 m0">
                     <span class="add-txt-ch">원생정보 더보기</span><i class="more-arrow"></i>
                   </button>
                 </div>
@@ -840,9 +840,10 @@
 
           <!-- 문자 발송 영역 시작 -->
           <div class="message-wrap">
-            <input type="text" id="txtNmm" class="txtfield-basic flex-1" placeholder="발송 문자를 입력하세요.">
-            <div class="button-wrap">
+            <div class="input-btn-wrap flex-1"><input type="text" id="txtNmm" class="txtfield-basic" placeholder="발송 문자를 입력하세요.">
               <button type="button" class="t-button-xs t-button-bora6">문자 발송</button>
+            </div>
+            <div class="btn-set ml5">
               <button type="button" class="t-button-xs t-button-grey2-bd ml0">상세 문자 발송</button>
               <button type="button" class="t-button-xs t-button-grey2-bd ml0">문자 발송 내역</button>
               <button type="button" class="t-button-xs t-button-grey2-bd ml0">문자 수신 설정</button>
@@ -855,13 +856,11 @@
               <p></p>
             </li>
             <li>원생</li>
-            <li>원생관리</li>
-            <li>출결</li>
-            <li class="active">원생 출결</li>
+            <li class="active">원생관리</li>
           </ul>
 
-          <p class="top-title">원생 출결</p>
-          
+          <p class="top-title">원생관리</p>
+
           <!-- 서브 탭메뉴 시작 -->
           <div class="tab-menu">
             <ul class="tab-01">
@@ -907,7 +906,7 @@
 
             
 
-            <div class="tab-menu">
+            <p class="main-title">원생 출결</p><div class="tab-menu">
               <ul class="tab-02">
                 <li class="active"><a href="javascript:void(0);"><span class="status">일자별</span></a></li>
                 <li><a href="javascript:void(0);"><span class="status">월별</span></a></li>
@@ -952,8 +951,7 @@
               <div class="tit-wrap items-end mt20">
                 <div class="flex-center-set">
                   <span class="date-picker">
-                    <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD"
-                      readonly="">
+                    <input type="text" id="datepickerStart" class="datePicker txtfield-basic" placeholder="YYYY-MM-DD" readonly="">
                     <img class="ui-datepicker-trigger" src="../../../../../../images/datepicker.png" alt="">
                   </span>
                   <div class="t-checkbox checkbox01 ml10">
@@ -962,9 +960,7 @@
                   </div>
                 </div>
                 <div class="btn-set">
-                  <button type="button" class="t-button-xms t-button-white t-button-grey-bd"><i
-                      class="i-print"></i><span>결과인쇄</span> </button><button type="button"
-                    class="t-button-xms t-button-white t-button-green-bd">엑셀받기</button>
+                  <button type="button" class="t-button-xms t-button-white t-button-grey-bd"><i class="i-print"></i><span>결과인쇄</span> </button><button type="button" class="t-button-xms t-button-white t-button-green-bd">엑셀받기</button>
                 </div>
               </div>
 
@@ -1025,40 +1021,34 @@
               <!-- 페이지네이션 -->
               <div class="t-pagination mt30" aria-disabled="false" role="navigation">
                 <div class="t-pagination-content">
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
-                    aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_left</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0"
-                    aria-current="false" disabled="" aria-disabled="true">
+                  <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="0" aria-current="false" disabled="" aria-disabled="true">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_left</i>
                     </span>
                   </button>
                   <div class="h-pagination-middle flex justify-center">
-                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button"
-                      aria-label="1" aria-current="true">
+                    <button class="t-btn non-selectable t-btn-outline t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true">
                       <span class="t-btn-content">
                         <span class="block">1</span>
                       </span>
                     </button>
-                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
-                      aria-current="false">
+                    <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
                       <span class="t-btn-content">
                         <span class="block">2</span>
                       </span>
                     </button>
                   </div>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2"
-                    aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="2" aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_arrow_right</i>
                     </span>
                   </button>
-                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0"
-                    aria-current="false">
+                  <button class="t-btn non-selectable t-btn-actionable" tabindex="-1" type="button" aria-label="0" aria-current="false">
                     <span class="t-btn-content">
                       <i class="t-icon material-icons" aria-hidden="true" role="img">keyboard_double_arrow_right</i>
                     </span>
@@ -1194,12 +1184,10 @@
                             <label for="check02">SMS</label></div>
                         </li>
                         <li>
-                          <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03"
-                              checked=""> <label for="check03">모바일앱 푸시</label></div>
+                          <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03" checked=""> <label for="check03">모바일앱 푸시</label></div>
                         </li>
                         <li>
-                          <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04"
-                              checked=""> <label for="check04">모바일 앱 미설치 시 SMS 발송</label></div>
+                          <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04" checked=""> <label for="check04">모바일 앱 미설치 시 SMS 발송</label></div>
                         </li>
                       </ul>
                     </td>
