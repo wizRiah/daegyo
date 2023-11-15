@@ -929,17 +929,32 @@ text field
 
 
 
+
 /* 스크롤 공통 디자인 */
+
+.t-popup-wrap *::-webkit-scrollbar { width: 13px!important; height: 13px!important; }
+
 .academy-mngr-Wrap *::-webkit-scrollbar,
-.t-popup-wrap *::-webkit-scrollbar,
-.container *::-webkit-scrollbar { width: 13px; height: 13px; } 
+.container *::-webkit-scrollbar,
+.main-cont *::-webkit-scrollbar { width: 8px; height: 8px; }
 
 .academy-mngr-Wrap *::-webkit-scrollbar-thumb,
 .t-popup-wrap *::-webkit-scrollbar-thumb,
-.container *::-webkit-scrollbar-thumb { background-color: #868196; } 
+.container *::-webkit-scrollbar-thumb { background-color: #868196; }
 
 
-.academy-mngr-Wrap .m-scroll { overflow: auto; } 
+.academy-mngr-Wrap .m-scroll { overflow: auto; }
+
+
+/*
+tbody 스크롤
+*/
+.academy-mngr-Wrap .t-scrolltable-wrap { position: relative; padding-top: 40px; border-bottom: 1px solid var(--pc-border-4);}
+.academy-mngr-Wrap .t-scrolltable-wrap .t-scrolltable { overflow: auto; overflow-x: hidden; }
+.academy-mngr-Wrap .t-scrolltable-wrap .t-scrolltable .t-basic-1 { width: 100%; table-layout: fixed; margin-top: 0; border-bottom:0; }
+.academy-mngr-Wrap .t-scrolltable-wrap .t-scrolltable .t-basic-1 thead tr { position: absolute; top: 0;  left: 0; }
+.academy-mngr-Wrap .t-scrolltable-wrap .t-scrolltable .t-basic-1 tr { display: inline-table;  width: 100%; }
+.academy-mngr-Wrap .t-scrolltable-wrap .t-scrolltable .t-basic-1 tbody tr { display: table-row; }
 
 
 /* 아이콘 */
