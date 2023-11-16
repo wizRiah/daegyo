@@ -458,13 +458,15 @@ select
 /* 
 체크박스 
 */
-.academy-mngr-Wrap input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; } 
-.academy-mngr-Wrap .t-checkbox { display: inline-block; -webkit-user-select: none !important; user-select: none !important; } 
+.academy-mngr-Wrap input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
+.academy-mngr-Wrap .t-checkbox { display: inline-block; -webkit-user-select: none !important; user-select: none !important; }
 .academy-mngr-Wrap .t-checkbox input,
-.academy-mngr-Wrap .t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; } 
+.academy-mngr-Wrap .t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; }
 .academy-mngr-Wrap .t-checkbox input[type="checkbox"] + label,
-.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; } 
-.academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; } 
+.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; }
+.academy-mngr-Wrap .t-checkbox.checkbox-column label {display:block;}
+.academy-mngr-Wrap .t-checkbox.checkbox-column label ~ label {margin-top:10px;}
+.academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; }
 
 
 /* 체크박스리스트 */
@@ -794,21 +796,24 @@ text field
 
 
 /* 왼쪽 위아래만 둥근거 */
-.academy-mngr-Wrap .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; word-break:keep-all; } 
+.academy-mngr-Wrap .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; word-break:keep-all; }
 .academy-mngr-Wrap .t-basic-2>thead>tr>th,
-.academy-mngr-Wrap .t-basic-2>tbody>tr>th { width:130px; color:#31516A; font-weight:500; line-height: 16px; background: var(--pc-bora-3); font-size: var(--pc-fs14); padding: 12px 10px; border-right: 1px solid #e5e5e5; border-bottom:1px solid var(--pc-border-4); box-sizing: border-box; text-align:left; box-sizing: border-box; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr>td { background:#fff; font-size:var(--pc-fs13); color:#333333; padding: 10px; line-height: 19px; border-bottom: 1px solid var(--pc-border-4); border-right: 1px solid var(--pc-border-4); text-align:left; box-sizing: border-box; height:57px; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01 {line-height:36px;}
-.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01 label {line-height:25px;}
-.academy-mngr-Wrap table>tbody>tr>td button:only-child { margin-left:0; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr:last-child>th:first-child { border-bottom:0; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr:first-child:not(:only-child)>th:first-child { border-radius:10px 0 0 0; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr:last-child:not(:only-child)>th:first-child { border-radius:0 0 0 10px; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr:first-child>td { border-top: 1px solid var(--pc-border-4); } 
+.academy-mngr-Wrap .t-basic-2>tbody>tr>th { width:130px !important; color:#31516A; font-weight:500; line-height: 16px; background: var(--pc-bora-3); font-size: var(--pc-fs14); padding: 12px 10px; border-right: 1px solid #e5e5e5; border-bottom:1px solid var(--pc-border-4); box-sizing: border-box; text-align:left; box-sizing: border-box; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td { background:#fff; font-size:var(--pc-fs13); color:#333333; padding: 10px; line-height: 19px; border-bottom: 1px solid var(--pc-border-4); border-right: 1px solid var(--pc-border-4); text-align:left; box-sizing: border-box; height:57px; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01 { line-height:36px; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01 label { line-height:25px; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01.radio-column label {display: block;}
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01.radio-column.wd100 label {width:100%;}
+.academy-mngr-Wrap .t-basic-2>tbody>tr>td .t-radio-01.radio-column label ~ label {margin-top:5px;}
+.academy-mngr-Wrap table>tbody>tr>td button:only-child { margin-left:0; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr:last-child>th:first-child { border-bottom:0; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr:first-child:not(:only-child)>th:first-child { border-radius:10px 0 0 0; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr:last-child:not(:only-child)>th:first-child { border-radius:0 0 0 10px; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr:first-child>td { border-top: 1px solid var(--pc-border-4); }
 .academy-mngr-Wrap .t-basic-2>tbody>tr:first-child>th:not(:first-child) { border-top: 1px solid var(--pc-border-4); }
-.academy-mngr-Wrap .t-basic-2>tbody>tr:only-of-type>th:first-child { border-radius:10px 0 0 10px!important; } 
-.academy-mngr-Wrap .t-basic-2>tbody>tr>th:last-child { border-bottom:0; } 
-.academy-mngr-Wrap .t-basic-2 .admin-Ullist li { font-size: 13px; } 
+.academy-mngr-Wrap .t-basic-2>tbody>tr:only-of-type>th:first-child { border-radius:10px 0 0 10px!important; }
+.academy-mngr-Wrap .t-basic-2>tbody>tr>th:last-child { border-bottom:0; }
+.academy-mngr-Wrap .t-basic-2 .admin-Ullist li { font-size: 13px; }
 
 
 
