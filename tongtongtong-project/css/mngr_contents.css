@@ -4,7 +4,7 @@
 */
 .academy-mngr-Wrap .login-page { background: linear-gradient(to right, #6359e8 0%, #7e4ef7 60%, #894fe2 100%); height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: center; }
 .academy-mngr-Wrap .login-page .login-tit { text-align: center; font-size: 17px; color: #fff; }
-.academy-mngr-Wrap .login-page .login-box { width: 430px; padding: 50px; background: #fff; border-radius: 20px; box-sizing: border-box; margin: 25px auto; box-shadow: 1px 2px 8px 0px rgb(0 0 0 / 28%); border: 1px solid var(--pc-border-4); }
+.academy-mngr-Wrap .login-page .login-box { width: 430px; padding: 50px; background: #fff; margin-bottom: 0; flex: none; }
 .academy-mngr-Wrap .login-page .login-box .login-logo { display: flex; align-items: center; justify-content: center; }
 .academy-mngr-Wrap .login-page .login-box .login-logo img { width: auto; max-width: 300px; height: auto; max-height: 65px; }
 .academy-mngr-Wrap .login-page .login-box .login-cont { margin-top: 15px; }
@@ -130,6 +130,7 @@ location
 */
 .academy-mngr-Wrap .sub { padding-top: 43px; margin: 0 auto; width: 100%; background-color: #fff; display: flex; flex-grow:1; }
 .academy-mngr-Wrap .sub .layout-wrap { position: relative; padding: 30px 20px 35px; margin: 0 auto; box-sizing: border-box; }
+.academy-mngr-Wrap .sub .layout-wrap>.layout-wrap {padding:0;}
 .academy-mngr-Wrap .sub .main-cont { width: 100%; position: relative; }
 .academy-mngr-Wrap .sub .page-tit-wrap { display: flex; align-items: center; margin-bottom: 16px; }
 .academy-mngr-Wrap .sub .t-popup .content-section>.layout-wrap { padding:0; }
@@ -323,3 +324,8 @@ location
  .academy-mngr-Wrap .t-popup .t-sms-wrap { overflow-x:auto; padding: 25px 8px 0;}
  .academy-mngr-Wrap .t-popup .t-sms-wrap .layout-wrap { flex-wrap: nowrap!important; }
  .academy-mngr-Wrap .t-popup .t-sms-wrap .box-bg {margin-bottom:0; }
+
+
+ /* 주소록 팝업 */
+ .academy-mngr-Wrap .address-table>tbody>tr>td:not(.t-no-data):nth-child(2) { cursor: pointer;}
+ .academy-mngr-Wrap .address-table>tbody>tr>td:not(.t-no-data):nth-child(2):hover{ background:beige!important;}

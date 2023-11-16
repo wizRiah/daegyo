@@ -198,7 +198,7 @@
 .academy-mngr-Wrap .t-recent-List { display:flex; flex-wrap: wrap; } 
 .academy-mngr-Wrap .t-recent-List li { margin-right: 10px; margin-bottom: 8px; } 
 .academy-mngr-Wrap .t-recent-List li a { border-radius: 2px; background: beige; padding: 5px; font-size:var(--pc-fs14); display: block; } 
-
+.academy-mngr-Wrap .t-recent-List-wrap .sub-tit { display: flex; align-items: center; margin-bottom:10px; }
 
 /* 특수문자 목록 */
 .academy-mngr-Wrap .special-symbol-wrap { border-bottom: 1px dashed #333; padding-bottom:30px; } 
@@ -473,7 +473,7 @@ select
 .academy-mngr-Wrap .check-list li:last-child { margin-right: 0; } 
 
 /* label:before에 체크하기 전 상태 CSS */
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { vertical-align: text-bottom; position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; }
+.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; }
 .academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
 .academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
 .academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { margin: -4px 0 0 0; z-index: 1; } 
@@ -983,12 +983,11 @@ tbody 스크롤
 /*
 박스
 */
-.academy-mngr-Wrap .box-bg { margin-bottom: 30px; position: relative; flex: auto; padding:20px 20px; box-sizing: border-box; border: 1px solid #e0e6ef; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); border-radius: 20px; background-color: #f9fafc; } 
-
-
+.academy-mngr-Wrap .box-bg { margin-bottom: 30px; position: relative; flex: auto; padding:20px; box-sizing: border-box; border: 1px solid #f2f2f3; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); border-radius: 20px; background-color: #f9fafc; }
+.academy-mngr-Wrap .box-bg:empty { display:none; }
 
 /* border,타이틀 배경 있는 박스 */
-.academy-mngr-Wrap .box-bg-02 { /* height: min-content; */ /* margin-bottom:30px; */ border-color: #36336b; border-width: 3px; position:relative; } 
+.academy-mngr-Wrap .box-bg-02 { padding: 30px 20px 20px; border-color: #36336b; border-width: 3px; position:relative; }
 .academy-mngr-Wrap .box-bg-02 .tit-bg { position: absolute; left: -10px; top: -27px; background: #36336b; padding: 13px 20px; box-sizing: border-box; border-radius: 0 18px 18px 18px; } 
 .academy-mngr-Wrap .box-bg-02 .tit-bg .tit-bg-txt { color: #fff; font-size: var(--pc-fs17); font-weight: var(--text-medium); } 
 
@@ -1172,7 +1171,7 @@ col
 
 
 /* 팝업일때 box-bg */
-.academy-mngr-Wrap .t-popup .box-bg { border-radius: 10px; padding: 20px; } 
+.academy-mngr-Wrap .t-popup .box-bg { border-radius: 10px; }
 
 
 
