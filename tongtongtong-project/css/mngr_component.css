@@ -72,9 +72,8 @@
 /* 메인 타이틀 */
 .academy-mngr-Wrap .main-title { color: var(--pc-bora-1); font-size: 20px; font-weight: var(--text-bold); margin-bottom: 16px; } 
 
-
 /* 단독 중앙 텍스트 */
-.academy-mngr-Wrap .t-center-txt { color: var(--pc-bora-1); font-size: 19px; font-weight: var(--text-bold); margin-bottom:10px; text-align: center; } 
+.academy-mngr-Wrap .t-center-txt { color: var(--pc-bora-1); font-size: 19px; font-weight: var(--text-bold); text-align: center; }
 
 /* 괄호 텍스트 */
 .academy-mngr-Wrap .sb-txt { color: #9a9a9a!important; font-size:var(--pc-fs13); } 
@@ -429,8 +428,7 @@ select
 .academy-mngr-Wrap .tab-02 li {text-align:center;box-sizing:border-box;transition:background ease 0.3s;height: 35px;line-height: 35px;border-radius: 2px 25px 0 0;min-width: 60px;border: 2px solid #333952;border-bottom: 0;background: #333952;margin-left: 1px;width: 15%;}
 .academy-mngr-Wrap .tab-02 li a {position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:100%;box-sizing:border-box;transition:all ease 0.3s;padding: 5px 40px 5px 35px;}
 .academy-mngr-Wrap .tab-02 li a > * { transition:all ease 0.3s; }
-.academy-mngr-Wrap .tab-02 li a .status {color: #e7e7e7; font-size: var(--pc-fs13);font-weight:500;}
-
+.academy-mngr-Wrap .tab-02 li a .status { word-break:keep-all; color: #e7e7e7; font-size: var(--pc-fs13); font-weight:500; }
 
  /* hover */
  .academy-mngr-Wrap .tab-02 li:hover { background-color: #535353!important; }
@@ -478,7 +476,7 @@ select
 .academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; }
 .academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
 .academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { margin: -4px 0 0 0; z-index: 1; } 
+.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; }
 
 
 
@@ -512,7 +510,7 @@ select
 달력 - datePicker
 */
 .academy-mngr-Wrap .date-picker { display: flex; align-items: center; height:36px; }
-.academy-mngr-Wrap .date-picker input.datePicker { width: 140px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; }
+.academy-mngr-Wrap .date-picker input.datePicker { width: 130px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; }
 .academy-mngr-Wrap .date-picker .dp__input_icon { left: auto; right: 3px; float: none; position: absolute; }
 
 
@@ -899,27 +897,25 @@ text field
 .academy-mngr-Wrap table .bg-class td { background:#e8f9dd!important; } 
 
 /* 수강시작전 반 상태 */
-.academy-mngr-Wrap table .bg-be-course td { background:#e2e9ff!important; } 
-
+.academy-mngr-Wrap table .bg-be-course td { background: #b3c6ff!important; }
 
 /* 수강중인 반 상태 */
-.academy-mngr-Wrap table .opt-course td { font-weight: var(--text-medium); color: #000!important; } 
+.academy-mngr-Wrap table .opt-course td { font-weight: var(--text-medium); color: #000!important; }
 
 
 
-/* 상태별 팝업 및 상태박스 배경컬러 변경 */
+/* 상태별 팝업 배경컬러 변경 */
 
 /* 이월처리 */
-.bg-over { background: beige!important;; } 
+.bg-over { background: beige!important;; }
 /* 단말기 미연동 */
-.bg-no-link { background:#ececf9!important; } 
+.bg-no-link { background:#ececf9!important; }
 /* 퇴원,퇴사 */
-.bg-grey-pt { background:#f3f3f3!important; } 
+.bg-grey-pt { background:#f3f3f3!important; }
 /* 회차반 */
-.bg-class { background:#e8f9dd!important; } 
+.bg-class { background:#e8f9dd!important; }
 /* 수강시작전 반 */
-.bg-be-course { background:#e2e9ff!important; } 
-
+.bg-be-course { background:#b3c6ff!important; }
 
 
 
@@ -970,7 +966,7 @@ tbody 스크롤
 .academy-mngr-Wrap .i-set { background: url(../images/icon-set.png) no-repeat center/100%; width: 11px; height: 12px; } 
 .academy-mngr-Wrap .i-set-g { background: url(../images/icon-set-g.png) no-repeat center/100%; width: 14px; height: 15px; margin-bottom: 1px; } 
 .academy-mngr-Wrap .i-clock { background: url(../images/icon-clock.png) no-repeat center/100%; width: 12px; height: 12px; margin-bottom:1px; } 
-.academy-mngr-Wrap .i-save { background: url(../images/icon-save.png) no-repeat center/100%; width: 13px; height: 13px; } 
+.academy-mngr-Wrap .i-save { background: url(../images/icon-save.png) no-repeat center/100%; width: 11px; height: 11px; } 
 .academy-mngr-Wrap .i-del { background: url(../images/icon-del.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-close { background: url(../images/icon-close.png) no-repeat center/100%; width: 13px; height: 13px; } 
 .academy-mngr-Wrap .i-stuInfo { background: url(../images/stu_info.png) no-repeat center/100%; width: 18px; height: 18px; display:inline-block; } 
@@ -992,11 +988,11 @@ tbody 스크롤
 .academy-mngr-Wrap .box-bg:empty { display:none; }
 
 /* border,타이틀 배경 있는 박스 */
-.academy-mngr-Wrap .box-bg-02 { padding: 30px 20px 20px; border-color: #36336b; border-width: 3px; position:relative; }
+.academy-mngr-Wrap .box-bg-02 { padding: 30px 20px 20px; border-color: #36336b; border-width: 3px; position:relative; margin-bottom:0; }
 .academy-mngr-Wrap .box-bg-02 .tit-bg { position: absolute; left: -10px; top: -27px; background: #36336b; padding: 13px 20px; box-sizing: border-box; border-radius: 0 18px 18px 18px; } 
 .academy-mngr-Wrap .box-bg-02 .tit-bg .tit-bg-txt { color: #fff; font-size: var(--pc-fs17); font-weight: var(--text-medium); } 
-
-
+/* .academy-mngr-Wrap .layout-wrap.col2 .box-bg-02:first-child { margin-left:8px;}
+.academy-mngr-Wrap .layout-wrap.col3 .box-bg-02:first-child { margin-left:8px;} */
 
 
 /* 텍스트박스 */
@@ -1148,8 +1144,12 @@ col
 
 
 /* 이중팝업시 컬러변경 */
-.academy-mngr-Wrap .container .t-popup-wrap:nth-of-type(even) .t-popup .pop-header { background: #977dea; } 
+.academy-mngr-Wrap .container .t-popup-wrap:nth-of-type(even) .t-popup { max-height:calc(100vh - 30px); }
+.academy-mngr-Wrap .container .t-popup-wrap:nth-of-type(even) .t-popup .pop-container { max-height:75vh; }
+.academy-mngr-Wrap .container .t-popup-wrap:nth-of-type(even) .t-popup .pop-header { background: #977dea; }
 
+/* 팝업 안에 팝업 */
+.academy-mngr-Wrap .container .t-popup-wrap .t-popup .pop-container>.t-popup-wrap .t-popup .pop-header { background-color: var(--pc-bora-4);}
 
 
 /* 팝업에서 탭메뉴 패딩제거 */
@@ -1177,7 +1177,7 @@ col
 
 /* 팝업일때 box-bg */
 .academy-mngr-Wrap .t-popup .box-bg { border-radius: 10px; }
-
+.academy-mngr-Wrap .t-popup .layout-wrap .box-bg-02 { margin-top:0!important; }
 
 
 /* 팝업 배경세팅 */
