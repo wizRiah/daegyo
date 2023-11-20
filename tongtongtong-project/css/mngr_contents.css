@@ -1,5 +1,4 @@
-@charset "utf-8"; 
-/* 컨텐츠 내용을 담은 CSS */
+@charset "utf-8"; /* 컨텐츠 내용을 담은 CSS */
 /*
 로그인 페이지
 */
@@ -45,7 +44,7 @@ location
 .academy-mngr-Wrap .dashboard .box-bg { margin-bottom: 30px; position: relative; flex: auto; padding: 30px; box-sizing: border-box; border: 1px solid #3b2989; box-shadow: 3px 4px 10px 0px rgb(0 0 0 / 38%); border-radius: 30px; background-color: #f9fafc; }
 .academy-mngr-Wrap .dashboard .box-bg .dash-box-tit { display: flex; border-bottom: 1px solid #ffffff50; box-sizing: border-box; }
 .academy-mngr-Wrap .dashboard .main-tit { font-size: var(--pc-text-h2); font-weight: var(--text-bold); }
-.academy-mngr-Wrap .dashboard .box-bg .dash-box-tit .main-tit { color: #ffffff; padding-bottom: 20px; }
+.academy-mngr-Wrap .dashboard .box-bg .dash-box-tit .main-tit { color: #fff; padding-bottom: 17px; }
 .academy-mngr-Wrap .dash-top { background: linear-gradient(to right, #534ad4 0%, #744ff1 60%, #884fe6 100%); height: 318px; }
 .academy-mngr-Wrap .dash-top .layout-wrap { gap: 30px; padding: 30px 0 35px 20px; }
 .academy-mngr-Wrap .dash-top .layout-wrap .box-basic.t-left { flex-basis: 460px; }
@@ -80,44 +79,45 @@ location
 
 /* 오늘 강의 일정 */
 .academy-mngr-Wrap .dashboard .today-class { flex-basis: 270px; flex-grow: 0; height: 383px; background: #977dea; }
- .academy-mngr-Wrap .dashboard .today-class .attend-list { gap:10px; max-height: 260px; }
+.academy-mngr-Wrap .dashboard .today-class .attend-list { gap:10px; max-height: 260px; }
 .academy-mngr-Wrap .dashboard .today-class .attend-list li { width:100%; background:transparent; padding-right:0; }
 .academy-mngr-Wrap .dashboard .today-class .attend-list .time-box { background: #4641ab; }
 .academy-mngr-Wrap .dashboard .today-class .attend-list .at-name { color:#fff; font-size: 13px; max-width: 76%; }
+
+
 /* 오늘 출근 강사 */
 .academy-mngr-Wrap .dashboard .today-teacher { flex-basis: 320px; flex-grow: 0; height: 383px; background: #4641ab; }
-
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list { gap: 10px; }
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list li { width: 100%; background: transparent; padding-right: 0; }
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list li .time-box { background: #806dc2; margin-right: 10px; color: #dbd5f3; }
-
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list li .teacher-wrap { background: #806dc2; width: 100%; height: 100%; border-radius: 7px; display: flex; align-items: center; }
-
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list li .at-name { color: #dbd5f3; max-width: 57%; }
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list .at-status.set { background: #cfc9e7; color: #402baf; }
- .academy-mngr-Wrap .dashboard .at-uncheck { color: #cfc9e7; }
-
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list { gap: 10px; max-height: 260px;}
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li { width: 100%; background: transparent; padding-right: 0; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li .time-box { background: #806dc2; margin-right: 10px; color: #dbd5f3; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li .teacher-wrap { background: #806dc2; width: 100%; height: 100%; border-radius: 7px; display: flex; align-items: center; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li .at-name { color: #dbd5f3; max-width: 57%; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list .at-status.set { background: #cfc9e7; color: #402baf; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li.active .time-box { background:#fff; color:#402baf; }
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li.active .teacher-wrap { background: #fff;}
+.academy-mngr-Wrap .dashboard .today-teacher .attend-list li.active .teacher-wrap .at-name { color: #402baf; }
 
 
- .academy-mngr-Wrap .dashboard .today-teacher .attend-list li.active .time-box { background:#fff; color:#402baf; }
+.academy-mngr-Wrap .dashboard .at-check { color: #5d39ff; display: none; }
+.academy-mngr-Wrap .dashboard .at-uncheck { color: #cfc9e7; }
 
 
-
-
-
-
-.attend-check { -webkit-user-select: none !important; user-select: none !important; position: absolute; right: 10px; }
-.attend-check label { display: flex; align-items: center; }
- .attend-check label .at-status-box { width: 45px; position:relative; height: 29px; border-radius: 0 7px 7px 7px; font-size: 13px; line-height: 29px; text-align: center; text-indent: -1px; background: #cfc9e7; color: #402baf; margin-left: 7px; }
-
- .attend-check label .at-status-box:after { position: relative; content:"예정";}
- .academy-mngr-Wrap .dashboard .at-check { color: #5d39ff; display: none; }
-
-
+/* 출석 체크박스 */
+.academy-mngr-Wrap .attend-check { -webkit-user-select: none !important; user-select: none !important; position: absolute; right: 10px; }
+.academy-mngr-Wrap .attend-check label { display: flex; align-items: center; }
+.academy-mngr-Wrap .attend-check label .at-status-box { width: 45px; position:relative; height: 29px; border-radius: 0 7px 7px 7px; font-size: 13px; line-height: 29px; text-align: center; text-indent: -1px; background: #cfc9e7; color: #402baf; margin-left: 7px; }
+.academy-mngr-Wrap .attend-check label .at-status-box:after { position: relative; content:"예정";}
 .academy-mngr-Wrap .attend-check input[type="checkbox"]:checked + label .at-uncheck { display:none; }
 .academy-mngr-Wrap .attend-check input[type="checkbox"]:checked + label .at-check { display:block; }
 .academy-mngr-Wrap .attend-check input[type="checkbox"]:checked + label .at-status-box { background:#5d39ff; color: #fff; }
 .academy-mngr-Wrap .attend-check input[type="checkbox"]:checked + label .at-status-box:after { content:"출석"; }
+
+
+
+
+
+
+
 
 
 
