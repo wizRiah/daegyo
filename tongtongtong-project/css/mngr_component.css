@@ -465,22 +465,80 @@ select
 
 
 
-/*
-통vue에 있는거 달력 - datePicker
-*/
+/*통vue에 있는거 달력 - datePicker*/
 /*
 달력 - datePicker
 */
-.academy-mngr-Wrap .date-picker { display: flex; align-items: center; height:36px; } 
-.academy-mngr-Wrap .date-picker input.datePicker { width: 130px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; } 
-.academy-mngr-Wrap .date-picker .dp__input_icon { left: auto; right: 3px; float: none; position: absolute; } 
+.academy-mngr-Wrap .date-picker { display:inline-flex; align-items: center; height:36px; }
+.academy-mngr-Wrap .date-picker input.datePicker { min-width: 130px!important; padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; }
+.academy-mngr-Wrap .date-picker .dp__input_icon { left: auto; right: 3px; float: none; position: absolute; height:22px;}
+.academy-mngr-Wrap .date-picker>.dp__main:not(:only-child) {max-width:150px;}
+.dp__calendar_header_item { font-weight: 500; }
+.dp__calendar_header_item:nth-child(6) { color: var(--pc-bora-7); }
+.dp__calendar_header_item:last-child { color: var(--pc-red); }
+.dp__cell_inner { font-size:14px; }
+
+    /* datePicker - popup */
+    .dp__menu {border: 1px solid #333 !important; box-shadow: 0px 5px 10px #0000001A !important; border-radius: 4px;}
+    .dp__menu.dp__theme_light.dp__menu_index {min-width:180px !important;}
+    .dp__arrow_bottom {border: 1px solid #333 !important; border-width: 0px 1px 1px 0 !important;}
+    .dp__arrow_top {border: 1px solid #333 !important; border-width:1px 0 0 1px !important;}
+    /* 일선택 */
+    .dp__instance_calendar { padding:15px 15px 0; box-sizing: border-box; }
+    .dp__instance_calendar .dp__month_year_row {width:248px; margin-bottom:7px;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap {justify-content: center;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select {width: auto; padding: 0 5px; font-family:'SUIT'; font-weight: 800; letter-spacing: 1px;}
+    .dp__instance_calendar .dp__calendar {}
+    .dp__instance_calendar .dp__calendar>div:not(.dp__calendar_row) {height:auto !important; min-height:85px;}
+    .dp__instance_calendar .dp__calendar_header {}
+    .dp__instance_calendar .dp__calendar_header .dp__calendar_header_item {height: auto; font-size: 14px; font-weight: 400;}
+    .dp__instance_calendar .dp__calendar_header_separator {opacity:0;}
+    .dp__instance_calendar .dp__calendar .dp__calendar_row {margin:0;}
+    .dp__instance_calendar .dp__calendar .dp__calendar_row:last-child {margin-bottom:20px;}
+    .dp__instance_calendar .dp__calendar .dp__calendar_row .dp__cell_inner {height:auto; margin:2px 0; font-family:'SUIT';font-weight: 500;}
+    .dp__instance_calendar .dp__calendar .dp__calendar_row .dp__cell_inner.dp__today {border: none; background: #f1f1f1; font-weight: 700;}
+    .dp__instance_calendar .dp__calendar .dp__calendar_row .dp__cell_inner.dp__active_date {color:#fff !important;}
+    .dp__instance_calendar .dp__calendar_header .dp__calendar_header_item:nth-child(7n),
+    .dp__instance_calendar .dp__calendar .dp__calendar_row .dp__calendar_item:nth-child(7n) .dp__cell_inner {color:#ff6000;}
+    .dp__instance_calendar .dp__calendar_header .dp__calendar_header_item:nth-child(6n),
+    .dp__instance_calendar .dp__calendar .dp__calendar_row .dp__calendar_item:nth-child(6n) .dp__cell_inner {color:#180c9f;}
+    /* 년도선택 */
+    .dp__overlay {border-radius:4px;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay {padding:20px;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay .dp__overlay_row {}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay .dp__overlay_col {padding:5px 0;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay .dp__overlay_col .dp__overlay_cell_pad {padding:8px 0; font-size:15px;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay .dp__overlay_col .dp__overlay_cell_pad.dp__overlay_cell_active {    background: var(--dp-primary-text-color); color: var(--dp-primary-color); font-weight: 700;}
+    .dp__instance_calendar .dp__month_year_row .dp__month_year_wrap .dp__month_year_select + .dp__overlay .dp__button_bottom {display:none;}
 
 
-.dp__calendar_header_item { font-weight: 500; } 
-.dp__calendar_header_item:nth-child(6) { color: var(--pc-bora-7); } 
-.dp__calendar_header_item:last-child { color: var(--pc-red); } 
-.dp__cell_inner { font-size:14px; } 
+/*
+시간선택 - time-picker
+*/
+.academy-mngr-Wrap .time-picker {}
+.academy-mngr-Wrap .time-picker .dp__input {padding: 0px 35px 0 8px; text-align: left; font-size: var(--pc-fs13); font-family: 'Pretendard'; height: 36px; border: 1px solid var(--pc-border-2) !important; border-radius: 2px !important; box-sizing: border-box;}
+.academy-mngr-Wrap .time-picker .dp__input_icon {width: 25px; height: 25px; margin-top: 1px;}
+.academy-mngr-Wrap .time-picker .dp__input_icon button {width:100%; height:100%; background:url(/images/timepicker.png) no-repeat;}
+.academy-mngr-Wrap .time-picker .dp__input_icon button img {display:none;}
+    /* time-picker - popup */
+    .dp__instance_calendar .dp__time_input {}
+    .dp__instance_calendar .dp__time_input .dp__time_col {padding:0 10px;}
+    .dp__instance_calendar .dp__time_input .dp__time_col .dp__time_display {font-family: 'SUIT'; font-size: 22px; font-weight: 700;}
+    .dp__instance_calendar .dp__time_input .dp__time_col .dp__inc_dec_button {opacity:0.5;}
+    .dp__action_row {padding:0 10px 10px !important; border-radius:4px;}
+    .dp__action_row .dp__selection_preview {display:none;}
+    .dp__action_row .dp__action_buttons {width: 100%; display: flex; justify-content:center;}
+    .dp__action_row .dp__action_buttons span {padding: 0; font-size: 14px !important; font-weight: 400;}
+    .dp__action_row .dp__action_buttons .dp__cancel {display:none;}
+    .dp__action_row .dp__action_buttons .dp__select {text-indent: -999px; overflow: hidden; position: relative; height: 27px; width: 50px; background: var(--pc-bora-6)!important; color: #fff; text-align: center; border-radius:2px;}
+    .dp__action_row .dp__action_buttons .dp__select:before {content:"선택"; text-indent: 0; width: 100%; font-size: var(--pc-fs12);}
 
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay {}
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_row {flex:0;}
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_container {padding:15px 15px 0;}
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_row .dp__overlay_col {padding:0;}
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_row .dp__overlay_col .dp__overlay_cell_pad {padding:5px 0; font-size:15px;}
+    .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__button {display:none;}
 
 
 
