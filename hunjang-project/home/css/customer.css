@@ -1,9 +1,47 @@
 @charset "utf-8";
 /* (styleGuide.css 수정 충돌 방지 위해 해당 문서에 입력함) */
+
+/* font color */
+.h-txt-white { color:#fff; }
+.h-txt-puple { color:#6f30c4; }
+
+/* font-size */
+.h-tit-40 {font-size:40px;line-height:40px;}
+.text-subtitle19 {font-size:19px;line-height:19px;}
+.text-subtitle20 {font-size:20px;line-height:20px;}
+.text-subtitle30 {font-size:30px;line-height:32px;}
+.text-subtitle40 {font-size:40px;line-height:40px;}
+
 /* 간격 */
+.mt30 {margin-top:30px;}
+.mt38 {margin-top:38px;}
 .mt60 { margin-top:60; } 
-.pdb60 { padding-bottom:60px !important; } 
-.wrap-w950 { width:950px !important; } 
+.mt70 {margin-top:70px;}
+.mt100 {margin-top:100px;}
+.ml0 {margin-left:0 !important;}
+.mrl40 {margin:0 40px;}
+.pd0 {padding:0 !important;}
+.pdt10 { padding-top:10px !important; }
+.pdt70 { padding-top:70px !important; } 
+.pdb60 { padding-bottom:60px !important; }
+.pdl0 {padding-left:0 !important;} 
+.pdb230 { padding-bottom:230px !important; } 
+.pdlr5 {padding:0 5px;}
+.wrap-w950 { width:950px !important; }
+.max-w100 { max-width:100% !important; } 
+
+/* input width */
+.input-wd-70 { width:70px !important; min-width:70px; } 
+.input-wd-120 { width:120px !important; min-width:120px; } 
+.input-wd-150 { width:150px !important; min-width:150px; } 
+.input-wd-160 { width:160px !important; min-width:160px; } 
+.input-wd-200 { width:200px !important; min-width:200px; } 
+.input-wd-250 { width:250px !important; min-width:250px; } 
+.input-wd-290 { width:290px !important; min-width:290px; } 
+.input-wd-350 { width:350px !important; min-width:350px; } 
+.input-wd-400 { width:400px !important; min-width:400px; } 
+.input-wd-500 { width:500px !important; min-width:500px; } 
+.input-wd-550 { width:550px !important; min-width:550px; } 
 
 /* 고객센터홈 전용 layout custome */
 .customer header .header-menu-inner { margin-right:260px; } 
@@ -21,6 +59,12 @@
 .h-tab-Contents-green > li > a { display:block; width:250px; height:60px; line-height:60px; text-align:center; font-size:var(--text-subtitle3); color:#333; border:1px solid #DCDCDC; box-sizing:border-box; margin-left:-1px; } 
 .h-tab-Contents-green > li > a.on { background:#43A986; color: #fff; border-color:#43A986; } 
 .h-tab-Contents-green > li > a:focus { background:#43A986; color: #fff; border-color:#43A986; } 
+
+/* tab puple color style */
+.h-tab-Contents-puple { position:relative;width:100%;z-index:10;} 
+.h-tab-Contents-puple > li > a { display:block; width:250px; height:60px; line-height:60px;background:#fff; text-align:center; font-size:var(--text-subtitle3); color:#333; border:1px solid #DCDCDC; box-sizing:border-box; margin-left:-1px; } 
+.h-tab-Contents-puple > li > a.on { background:#522095; color: #fff; border-color:#522095; } 
+.h-tab-Contents-puple > li > a:focus { background:#522095; color: #fff; border-color:#522095; } 
 
 /* tab border bottom line style */
 .content .tabs-wrap { position:relative; display:flex; width:100%; height:60px; } 
@@ -206,3 +250,61 @@
 .customer .h-subtxtbox-01 { padding:30px; background:#EBEFF5; border-radius:10px; font-size:14px; color:#333333; } 
 .customer .h-subtxtbox-01 ul li { } 
 .customer .h-subtxtbox-01 ul li span { color:#005DFF; } 
+
+/* 멤버십 수정 */
+.customer .membership-content * {font-family:"gmarket";}
+.customer .visual {background:url(../images/customer/bg_membership_visual.png) no-repeat 50% 0;}
+.customer .visual img {display:block;margin:0 auto;} 
+.customer .visual .membership-banner {padding:45px 0;text-align:center;}
+.customer .tit-membership {font-size:40px;line-height:40px;font-weight:300;}
+.customer .membership-benefit {width:1064px;padding-bottom:100px;margin:0 auto;}
+.customer .membership-benefit > li {height:142px;border-radius:20px;background:#f6f6f9;}
+.customer .membership-benefit > li > dl {position:relative;height:142px;padding:30px 50px 0px 30px;margin-left:50px;box-sizing:border-box;}
+.customer .membership-benefit > li > dl:before {display:block;content:"";position:absolute;right:0;top:calc(50% - 40px);width:1px;height:80px;background:#e5e5e5;}
+.customer .membership-benefit > li > dl:last-child::before {display:none;}
+.customer .membership-benefit > li > dl dt {position:absolute;top:30px;left:0;font-size:12px;color:#a2a2a2;}
+.customer .membership-benefit > li > dl dd {display:flex;flex-direction:row;align-items:center;height:100%;}
+.customer .membership-pay-wrap {padding:100px 0;background:#f6f6f9;text-align:center;}
+.customer .membership-pay-wrap .pay-btn {height:94px;line-height:94px;border-radius:47px;background:#6f30c4;font-size:28px;}
+.customer .membership-pay-wrap .pay-btn span {padding-right:56px;background: url(../images/customer/icon-pay-btn.png) no-repeat right 50%;}
+.customer .membership-pay-wrap .round-box {width:1064px;padding:35px 50px;margin:30px auto 0;border-radius:20px;box-sizing:border-box;background:#fff;}
+.customer .membership-pay-wrap .round-box dl {}
+.customer .membership-pay-wrap .round-box dl .label {margin-right:30px;font-size: 14px;color: #a2a2a2;}
+.customer .membership-pay-wrap .round-box .h-radio-01 input[type="radio"] + label .rchk {border:1px solid #CCD1D7;}
+.customer .membership-pay-wrap .round-box .h-radio-01 input[type="radio"] + label .rchk:after {background:#621dbf;}
+.customer .membership-pay-wrap .price {color:#ff3000;}
+
+.customer .CommonBox {margin-top:30px;}
+.customer .h-subbox-basic-guide {width:924px;margin:0 auto; background:var(--neutral-3); padding:30px; border-radius:10px;box-sizing:border-box; } 
+.customer .h-subbox-basic-guide .form-depth2 {padding-left:30px;border-left:1px solid #e5e5e5;}
+.customer .h-basic-formList { display:flex; flex-wrap:wrap; } 
+.customer .h-basic-formList>li { width:100%; display:flex; align-items: center; margin-bottom: 10px; } 
+.customer .h-basic-formList>li .labelArea { width:82px; font-size:var(--text-subtitle4); color: var(--black-3);text-align:left; } 
+.customer .h-basic-formList>li .formArea { width:calc(100% - 82px);padding-left:30px;box-sizing:border-box; display: flex; flex-wrap: wrap; justify-content: flex-start; } 
+.customer .h-basic-formList>li.line2 { align-items:flex-start; } 
+.customer .h-basic-formList>li.line2 .labelArea { margin-top:15px; } 
+.customer .h-basic-formList>li.wd50 { width:50%; } 
+.customer .h-basic-formList>li select { width:160px; } 
+.customer .h-basic-formList .h-txtfield-basic {height:42px !important;padding:0 15px !important;}
+.customer .h-basic-formList>li.titLi { font-size:var(--text-subtitle2); color:var(--black-1); font-weight:bold; margin-bottom:12px; } 
+.customer .h-basic-formList>li.titLi:before { content:"ㆍ"; } 
+.customer .h-basic-formList>li.titLi ~ li { padding-left:15px; margin-bottom:7px; } 
+.customer .h-basic-formList>li.titLi ~ li .labelArea { width:115px; } 
+.customer .h-basic-formList>li.titLi ~ li .formArea { width:calc(100% - 115px); } 
+.customer .h-basic-formList>li.titLi ~ li input,
+.customer .h-basic-formList>li.titLi ~ li .h-field-wrap { height:46px !important; } 
+.customer .h-basic-formList>li.titLi ~ li.titLi { margin-top:23px; } 
+.customer .h-basic-formList>li.btnBoxLi { padding:20px 0 0 130px !important; margin-bottom:0 !important; } 
+.customer .h-basic-formList>li.btnBoxLi .h-button-s { margin-left:0; } 
+.customer .h-basic-formList>li.btnBoxLi.addBox { padding-top:15px !important; } 
+.customer .h-basic-formList>li.btnBoxLi.addBox ul { display:flex; justify-content:flex-start; } 
+.customer .h-basic-formList>li.btnBoxLi.addBox ul li { background:#fff; border:1px solid #CCD1D7; border-radius:4px; font-size:var(--text-subtitle4); line-height:16px; padding:8px 10px 8px 20px; margin-right:5px; color:var(--black-2); } 
+.customer .h-basic-formList>li.btnBoxLi.addBox ul li button { color:#C3CAD4; margin-left:8px; } 
+.customer .h-basic-formList>li.btnBoxLi.addBox ul li button span { font-size:var(--text-h4); display:inline-block; vertical-align:middle; } 
+.customer .h-basic-formList.h-radio-01 input[type="radio"]:checked + label .rchk { margin-left:0; } 
+.customer .h-bullet-01 { line-height:22px; } 
+.customer .h-bullet-01 li { text-indent:-10px; padding-left:10px; } 
+.customer .h-bullet-01 li:before { content:"ㆍ"; } 
+.customer .h-dash-01 { line-height:22px; } 
+.customer .h-dash-01 li {position:relative;padding-left:10px; } 
+.customer .h-dash-01 li:before { content:"-"; position:absolute;left:0;}
