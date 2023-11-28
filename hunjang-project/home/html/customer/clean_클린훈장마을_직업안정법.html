@@ -213,21 +213,50 @@
 
     <!-- container -->
     <div class="container">
-      <!-- 컨텐츠 -->
-      <div class="content wrap-w950">
-        <div class="h-tit-box-1 flex-end">
-          <h2 class="i-block h-tit-26">클린 훈장마을</h2>
-        </div>
 
-        <ul class="h-tab-Contents-green mt20">
+      <!-- 컨텐츠 -->
+      <div class="content max-w100 pd0">
+
+        <ul class="h-tab-Contents-lgreen flex-set">
           <li><a href="#none">임금체불 사업주 공개</a></li>
           <li><a class="on" href="#none">직업안정법</a></li>
         </ul>
- 
-        <img class=" mt50" src="../../images/customer/img-clean.png" alt="직업안정법에 관한 이미지">
+        
+        <div class="act-content01">
+          <div><img src="../../images/customer/img-jobsecurity01.png" alt="올바른 구인구직 서비스 제공을 위해! 훈장마을도 직업안정법에 동참합니다."></div>
+        </div>
+        <div class="act-content02">
+          <div><img src="../../images/customer/img-jobsecurity02.png" alt="일부 계정 된 직업안정법을 한눈에 확인하세요."></div>
+        </div>
+        <div class="act-content03">
+          <div><img src="../../images/customer/img-jobsecurity03.png" alt="훈장마을 이용 시 학원회원 인증 Flow"></div>
+        </div>
+        <div class="act-content04">
+          <div><img src="../../images/customer/img-jobsecurity04.png" alt="사업자 진위여부 안내"></div>
+        </div>
         
       </div>
 
+      <script>
+        // tabmenu scroll event
+        function handleScroll() {
+          var tabMenu = document.querySelector('.h-tab-Contents-lgreen');
+          var scrollY = window.scrollY || window.pageYOffset;
+          
+          if (scrollY >= 95) {
+            tabMenu.style.position = 'fixed';
+            tabMenu.style.top = '0';
+            tabMenu.style.background = '#fff';
+          } else {
+
+            tabMenu.style.position = '';
+            tabMenu.style.top = '';
+            tabMenu.style.background = '';
+          }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+      </script>
 
       <!-- footer -->
       <footer>

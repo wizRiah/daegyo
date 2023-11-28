@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>훈장마을 &gt; 클린 훈장마을 &gt; 임금체불 사업주 공개</title>
   <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/font-gmarket.css">
   <link rel="stylesheet" href="../../css/common.css">      
   <link rel="stylesheet" href="../../css/styleGuide.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -215,28 +216,42 @@
     <div class="container">
 
       <!-- 컨텐츠 -->
-      <div class="content wrap-w950">
-        <div class="h-tit-box-1 flex-end">
-          <h2 class="i-block h-tit-26">고객센터</h2>
-        </div>
+      <div class="content max-w100 pd0">
 
-        <ul class="h-tab-Contents-green mt20">
+        <ul class="h-tab-Contents-black flex-set">
           <li><a class="on" href="#none">임금체불 사업주 공개</a></li>
           <li><a href="#none">직업안정법</a></li>
         </ul>
  
-        <div class="clean-text-box">
-          <h3 class="mt50">임금체불 사업주 명단 공개</h3>
-          <p class="mt15">고용노동부는 공개기준일 (매년 8월31일) 이전 3년 이내 임금 등을 체불하여 2회 이상 유죄가 확정된 자로서, 기준일 이전 1년 이내 임금 등의 체불 총액이 3천만원 이상인 체불사업주의 명단을 고용노동부 홈페이지, 관보, 지방고용 노동관서 게시판 및 그 밖의 열람이 가능한 공공장소에 공개하고 있습니다.</p>
-          <div class="grey-box mt30"><strong>근거 : </strong>근로기준법 제43조 및 같은 법 시행령 제23조의 3</div>
-          <p class="mt30">이번에 공개된 체불사업주는 입금체불정보심의위원회를 거쳐 최종 확정되었으며, 체불사업주의 성명, 나이, 사업자명, 주소 및 소재지 기준일 이전 3년간의 임금 체불액을 공개하고 있습니다.</p>
+        <div class="blacklist-content">
+          <div><img src="../../images/customer/img-blacklist.png" alt="임금체불사업주 명단공개"></div>
+          
+          <div class="h-btn-wrap h-txt-c">
+            <a href="javascript:void(0);" class="h-button-l h-button-black btn-blacklist mt50" style="width:540px;"><span class="m0">임금체불 사업주 확인하러 가기</span><img src="../../images/customer/icon-arrow-btn.png" alt=""></a>
+          </div>
         </div>
-
-        <div class="h-btn-wrap h-txt-c mt50">
-          <a href="javascript:void(0);" class="h-button-l h-button-orange" style="width:282px;"><span>임금체불 사업주 확인하러 가기</span><img src="../../images/customer/icon-arrow-r.png" alt=""></a>
-        </div>
-        
       </div>
+
+      <script>
+        // tabmenu scroll event
+        function handleScroll() {
+          var tabMenu = document.querySelector('.h-tab-Contents-black');
+          var scrollY = window.scrollY || window.pageYOffset;
+          
+          if (scrollY >= 95) {
+            tabMenu.style.position = 'fixed';
+            tabMenu.style.top = '0';
+            tabMenu.style.background = '#fff';
+          } else {
+
+            tabMenu.style.position = '';
+            tabMenu.style.top = '';
+            tabMenu.style.background = '';
+          }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+      </script>
 
 
       <!-- footer -->
