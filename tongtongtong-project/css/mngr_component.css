@@ -608,11 +608,11 @@ select
 
 
 /* 사이즈별 */
-.academy-mngr-Wrap .t-button-xxs { height:22px; font-size:var(--pc-fs11); padding:0 9px; }
-.academy-mngr-Wrap .t-button-xms { height:27px; line-height:27px; font-size:var(--pc-fs12); }
-.academy-mngr-Wrap .t-button-xs { height:36px; line-height:36px; font-size:var(--pc-fs13); }
-.academy-mngr-Wrap .t-button-s { height:38px; line-height:38px; font-size:var(--pc-fs13); }
-.academy-mngr-Wrap .t-button-sm { height:40px; line-height:40px; font-size:var(--pc-fs13); }
+.t-button-xxs { height:22px; font-size:var(--pc-fs11); padding:0 9px; }
+.t-button-xms { height:27px; line-height:27px; font-size:var(--pc-fs12); }
+.t-button-xs { height:36px; line-height:36px; font-size:var(--pc-fs13); }
+.t-button-s { height:38px; line-height:38px; font-size:var(--pc-fs13); }
+.t-button-sm { height:40px; line-height:40px; font-size:var(--pc-fs13); }
 
 
 /* 컬러별 */
@@ -1382,7 +1382,8 @@ hover
 
 
 
-.m-academy-mngr-Wrap * { color:var(--m-text-color-1); } 
+.m-academy-mngr-Wrap :not([class^="t-button"])*{ color:var(--m-text-color-1); } 
+
 
 /* 본문 서브 타이틀 텍스트 */
 .m-academy-mngr-Wrap .sub-tit { font-size: var(--m-fs17); letter-spacing: var(--letter-spacing-0); font-weight: var(--text-bold); margin-bottom: 18px; } 
