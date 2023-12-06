@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>모바일 팝업형태</title>
+  <title>팝업형태_뒤로가기</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
   <link rel="stylesheet" href="../../../css/mngr_contents.css">
@@ -24,7 +24,7 @@
       <div class="t-popup-wrap">
         <div class="t-popup popup-goback ui-draggable">
 
-          <div class="pop-header ui-draggable-handle" style="cursor: move;" cursor:="">
+          <div class="pop-header ui-draggable-handle" style="cursor: move;">
             <p class="pop-title">팝업 title</p>
           </div>
 
@@ -34,9 +34,9 @@
 
             <div class="pop-container">
 
-
               <!-- 컨텐츠 -->
               <div class="m-item-list">
+
                 <div class="m-item">
                   <p class="sub-tit">분류</p>
 
@@ -49,35 +49,31 @@
                   </div>
                   <!-- /탭 -->
 
+
                   <div class="label-set">
-
-                    <span class="main-text">대분류</span><select name="" id="">
-                      <option value="" disabled="" selected="">대분류(전체)</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                    </select>
-
+                    <span class="label-text">대분류</span>
+                    <div class="label-item"><select name="" id="">
+                        <option value="" disabled="" selected="">대분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                      </select></div>
                   </div>
 
                   <div class="label-set">
-
-                    <span class="main-text">중분류</span><select name="" id="">
-                      <option value="" disabled="" selected="">중분류(전체)</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                    </select>
-
+                    <span class="label-text">중분류</span>
+                    <div class="label-item"><select name="" id="">
+                        <option value="" disabled="" selected="">중분류(전체)</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                      </select>
+                    </div>
                   </div>
-
-
-
-
 
 
                 </div>
 
                 <div class="m-item">
-                  <p class="sub-tit">분류</p><input type="text" id="txtNmm" class="txtfield-basic" placeholder="이름">
+                  <p class="sub-tit">반명</p><input type="text" id="txtNmm" class="txtfield-basic" placeholder="반명을 입력해주세요.">
                 </div>
 
 
@@ -90,51 +86,43 @@
                 </div>
                 <div class="m-item">
                   <p class="sub-tit">운영방식</p>
-                  <div class="t-radio-01" style="
-"><input type="radio" id="hradio01" name="hradio01" checked=""> <label for="hradio01"><span
-                        class="rchk"></span>Line</label> <input type="radio" id="hradio01_2" name="hradio01"> <label
-                      for="hradio01_2"><span class="rchk"></span>Rectangle</label> </div>
+                  <div class="t-radio-01">
+                    <input type="radio" id="hradio01" name="hradio01" checked="">
+                    <label for="hradio01"><span class="rchk"></span>일반</label>
+                    <input type="radio" id="hradio01_2" name="hradio01">
+                    <label for="hradio01_2"><span class="rchk"></span>회차</label>
+                  </div>
                 </div>
                 <div class="m-item">
                   <p class="sub-tit">수납방식</p>
 
-
-
-
-
                   <div class="label-set">
+                    <span class="label-text">단위</span>
+                    <div class="label-item"><select name="" id="">
+                        <option value="" disabled="" selected="">주 단위</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                      </select><select name="" id="">
+                        <option value="" disabled="" selected="">1주 단위</option>
+                        <option value="">20개씩 보기</option>
+                        <option value="">40개씩 보기</option>
+                      </select></div>
 
-                    <span class="main-text">대분류</span><select name="" id="">
-                      <option value="" disabled="" selected="">대분류(전체)</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                    </select>
-
-                    <select name="" id="">
-                      <option value="" disabled="" selected="">대분류(전체)</option>
-                      <option value="">20개씩 보기</option>
-                      <option value="">40개씩 보기</option>
-                    </select>
                   </div>
 
                   <div class="label-set">
-
-                    <span class="main-text">중분류</span><input type="number" id="" class="txtfield-basic" placeholder="">
-
+                    <span class="label-text">수강료</span>
+                    <div class="label-item"><input type="number" id="" class="txtfield-basic" placeholder=""></div>
                   </div>
-
-
-
-
 
 
                 </div>
               </div>
 
               <!-- /컨텐츠 -->
-
-
             </div>
+
+
 
             <!-- 하단 버튼 -->
             <div class="bt-btnbox">
@@ -142,6 +130,7 @@
               <a href="#" class="registbtn">등록</a>
             </div>
             <!-- /하단 버튼 -->
+
 
           </div>
 
