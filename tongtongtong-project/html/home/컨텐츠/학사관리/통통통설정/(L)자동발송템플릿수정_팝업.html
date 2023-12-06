@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>(L)자동발송템플릿수정_팝업</title>
-  <link rel="stylesheet" href="../../../../../../css/font.css">
-  <link rel="stylesheet" href="../../../../../../css/common.css">
-  <link rel="stylesheet" href="../../../../../../css/mngr_contents.css">
-  <link rel="stylesheet" href="../../../../../../css/mngr_component.css">
+  <link rel="stylesheet" href="../../../../../css/font.css">
+  <link rel="stylesheet" href="../../../../../css/common.css">
+  <link rel="stylesheet" href="../../../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../../../css/mngr_component.css">
 </head>
 
 <body>
@@ -27,77 +27,167 @@
         <div class="pop-body">
           <div class="pop-container">
 
-            <table class="t-basic-2"><tbody><tr><th>구분</th> <td><select name="" id="">
-                    <option value="" disabled="" selected="">수납처리(완납)</option>
-                    <option value="">100건</option>
-                    <option value="">200건</option>
-                  </select></td></tr> <tr><th>문자 수신여부</th> <td><div class="t-radio-01"><input type="radio" id="hradio01" name="hradio01" checked=""> <label for="hradio01"><span class="rchk"></span>예</label> <input type="radio" id="hradio01_2" name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>아니오</label>    </div></td></tr> <tr><th>알림 유형 설정</th> <td><ul class="check-list"><li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02" checked=""> <label for="check02">SMS</label></div></li> <li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03" checked=""> <label for="check03">모바일 앱 푸시</label></div></li> <li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04" checked=""> <label for="check04">알림톡</label></div></li> <li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check05" checked=""> <label for="check05">모바일 앱 푸시 실패시 SMS 발송</label></div></li></ul></td>  </tr> <tr><th>[완납] 알림 대상 설정</th> <td><ul class="check-list"><li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02" checked=""> <label for="check02">원생</label></div></li> <li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03" checked=""> <label for="check03">부</label></div></li> <li><div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04" checked=""> <label for="check04">모</label></div></li> </ul></td></tr></tbody></table>
-            
-            
 
+            <table class="t-basic-2">
+              <tbody>
+                <tr>
+                  <th>구분</th>
+                  <td><select name="" id="">
+                      <option value="" disabled="" selected="">수납처리(완납)</option>
+                      <option value="">100건</option>
+                      <option value="">200건</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th>문자 수신여부</th>
+                  <td>
+                    <div class="t-radio-01"><input type="radio" id="hradio01" name="hradio01" checked=""> <label
+                        for="hradio01"><span class="rchk"></span>예</label> <input type="radio" id="hradio01_2"
+                        name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>아니오</label> </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>알림 유형 설정</th>
+                  <td>
+                    <ul class="check-list">
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"
+                            checked=""> <label for="check02">SMS</label></div>
+                      </li>
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03"
+                            checked=""> <label for="check03">모바일 앱 푸시</label></div>
+                      </li>
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04"
+                            checked=""> <label for="check04">알림톡</label></div>
+                      </li>
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check05"
+                            checked=""> <label for="check05">모바일 앱 푸시 실패시 SMS 발송</label></div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>[완납] 알림 대상 설정</th>
+                  <td>
+                    <ul class="check-list">
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"
+                            checked=""> <label for="check02">원생</label></div>
+                      </li>
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03"
+                            checked=""> <label for="check03">부</label></div>
+                      </li>
+                      <li>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check04"
+                            checked=""> <label for="check04">모</label></div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-            <!-- 상단 박스 아래부분 -->
-            <div class="content-section mt40">
+            <p class="pc-bora2 t-bullet-02 mt40">문자 내용에 해당 치환문자 기재 부문을 클릭한 후 치환문자 [버튼] 클릭 시 문자 내용에 반영 됩니다.</p>
 
-              <div class="tit-wrap flex-end">
-                <span class="sum">총 10명</span>
-                <div class="button-wrap items-end">
+            <table class="t-basic-2 mt10">
+              <tbody>
+                <tr>
+                  <th class="t-group" rowspan="4" style="border-radius: 15px 0 0 15px;">치환 문자</th>
+                  <td>
+                    <ul class="substit-lang">
+                      <li><a href="#">&amp;원생명</a></li>
+                    </ul><span class="ml10">문자 발송 시 &amp;원생명 부분을 실제 원생명으로 바꾸어 발송해 줍니다
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="substit-lang">
+                      <li><a href="#">&amp;수납내역</a></li>
+                    </ul><span class="ml10">문자 발송 시 &amp;원생명 부분을 실제 청구서 수납내역으로 바꾸어 발송해 줍니다
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="substit-lang">
+                      <li><a href="#">&amp;결제일자</a></li>
+                    </ul><span class="ml10">문자 발송 시 &amp;원생명 부분을 실제 청구서 완납처리일자으로 바꾸어 발송해 줍니다
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="substit-lang">
+                      <li><a href="#">&amp;결제금액</a></li>
+                    </ul><span class="ml10">문자 발송 시 &amp;원생명 부분을 실제 청구서 결제금액으로 바꾸어 발송해 줍니다
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-                  <select name="" id="">
-                    <option value="" disabled="" selected="">10건</option>
-                    <option value="">100건</option>
-                    <option value="">200건</option>
-                  </select>
-                </div>
+            <div class="layout-wrap col2 mt40">
+              <div class="box-basic">
+                <table class="t-basic-2">
+                  <tbody>
+                    <tr>
+                      <th>SMS 발송</th>
+                      <td>
+                        <div class="t-checkbox checkbox01">
+                          <input type="checkbox" name="checkForm" id="check02" checked="">
+                          <label for="check02">학원명 포함 발송</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>SMS 문자</th>
+                      <td>
+                        <div class="t-text-field_slot" style="height: 160px;"><textarea> </textarea></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
-              <table class="t-basic-1 bora3">
-                <thead>
-                  <tr>
-                    <th style="width: 68px;">No</th>
-                    <th>반명</th>
-                    <th>강의시간</th>
-                    <th>수강기간</th>
-                    <th>담당강사</th>
-                    <th>선택</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      1
-                    </td>
-                    <td class="txt-l">중등부&gt;수학<br>중등2학년수학반</td>
-                    <td>(월/수/금) 오전 10:00~11:30</td>
-                    <td>2023.07.01~2023.07.31</td>
-                    <td>홍길동</td>
-                    <td><button type="button" class="t-button-xms t-button-bora1">선택</button></td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td class="txt-l">중등부&gt;수학<br>중등2학년수학반</td>
-                    <td>(월/수/금) 오전 10:00~11:30<br>(화/목) 오후 10:00~11:30</td>
-                    <td>2023.07.01~2023.07.31</td>
-                    <td>홍길동<br>이정희</td>
-                    <td><button type="button" class="t-button-xms t-button-bora1">선택</button></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              
-
-              <div class="btn-set mt40">
-                <button type="button" class="t-button-xs t-button-grey1">저장</button>
-              <button type="button" class="t-button-xs t-button-grey2">닫기</button></div>
-
+              <div class="box-basic">
+                <table class="t-basic-2">
+                  <tbody>
+                    <tr>
+                      <th>모바일앱 발송</th>
+                      <td>
+                        <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check02"
+                            checked=""> <label for="check02">학원명 포함 발송</label></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>모바일앱 문자</th>
+                      <td>
+                        <div class="t-text-field_slot" style="height: 160px;"><textarea> </textarea></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <!-- /상단 박스 아래부분 -->
+
+            <div class="btn-set mt10">
+              <button type="button" class="t-button-xs t-button-grey1">저장</button>
+              <button type="button" class="t-button-xs t-button-grey2">닫기</button>
+            </div>
 
           </div>
         </div>
+
+
         <button type="button" class="close" title="팝업 닫기">
           <i class="p-close"></i>
         </button>
+
       </div>
     </div>
 
