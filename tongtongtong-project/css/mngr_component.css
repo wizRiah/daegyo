@@ -1,15 +1,65 @@
 @charset "utf-8"; /* 공통 스타일 CSS */
 
-:root { /* pc */
+:root {/* pc */
 
- /* Color */
- --pc-bora-1: #292e41; --pc-bora-2: #9678f1; --pc-bora-3: #EBEFF5; --pc-bora-4: #4641ab; --pc-bora-5: #c4afda; --pc-bora-6: #5b5693; --pc-bora-7: #5d39ff; --pc-bora-8: #c1b9dd; --pc-red: #dd346d; --pc-border-1: #62666B; --pc-border-2: #CCD1D7; --pc-border-3: #E0E6EF; --pc-border-4: #d7dce5; --pc-border-5: #3b2989; --pc-text-color-1: #333; /* Font */
- --pc-text-h1: 36px; --pc-text-h2: 24px; --pc-text-h3: 16px; --pc-text-h4: 15px; --pc-text-h5: 14px; --pc-text-h6: 13px; --pc-fs20: 20px; --pc-fs18: 18px; --pc-fs17: 17px; --pc-fs16: 16px; --pc-fs15: 15px; --pc-fs14: 14px; --pc-fs13: 13px; --pc-fs12: 12px; --pc-fs11: 11px; --pc-fs10: 10px; /* m */
+    /* Color */
+    --pc-bora-1: #292e41;
+    --pc-bora-2: #9678f1;
+    --pc-bora-3: #EBEFF5;
+    --pc-bora-4: #4641ab;
+    --pc-bora-5: #c4afda;
+    --pc-bora-6: #5b5693;
+    --pc-bora-7: #5d39ff;
+    --pc-bora-8: #c1b9dd;
+    --pc-red: #dd346d;
+    --pc-border-1: #62666B;
+    --pc-border-2: #CCD1D7;
+    --pc-border-3: #E0E6EF;
+    --pc-border-4: #d7dce5;
+    --pc-border-5: #3b2989;
+    --pc-text-color-1: #333;
+    /* Font */
+    --pc-text-h1: 36px;
+    --pc-text-h2: 24px;
+    --pc-text-h3: 16px;
+    --pc-text-h4: 15px;
+    --pc-text-h5: 14px;
+    --pc-text-h6: 13px;
+    --pc-fs20: 20px;
+    --pc-fs18: 18px;
+    --pc-fs17: 17px;
+    --pc-fs16: 16px;
+    --pc-fs15: 15px;
+    --pc-fs14: 14px;
+    --pc-fs13: 13px;
+    --pc-fs12: 12px;
+    --pc-fs11: 11px;
+    --pc-fs10: 10px;
+    /* m */
 
- /* Color */
- --m-text-color-1: #333; /* Font */
- --m-fs20: 20px; --m-fs19: 19px; --m-fs18: 18px; --m-fs17: 17px; --m-fs16: 16px; --m-fs15: 15px; --m-fs14: 14px; --m-fs13: 13px; --m-fs12: 12px; /* pc,m 공용*/
- --text-light: 300; --text-regular: 400; --text-medium: 500; --text-bold: 700; --text-extrabold: 800; --letter-spacing-0: 0; --letter-spacing-065: -0.65px; --letter-spacing-1: -1px; --letter-spacing-2: -2px; } 
+    /* Color */
+    --m-text-color-1: #333;
+    /* Font */
+    --m-fs20: 20px;
+    --m-fs19: 19px;
+    --m-fs18: 18px;
+    --m-fs17: 17px;
+    --m-fs16: 16px;
+    --m-fs15: 15px;
+    --m-fs14: 14px;
+    --m-fs13: 13px;
+    --m-fs12: 12px;
+    /* pc,m 공용*/
+    --text-light: 300;
+    --text-regular: 400;
+    --text-medium: 500;
+    --text-bold: 700;
+    --text-extrabold: 800;
+    --letter-spacing-0: 0;
+    --letter-spacing-065: -0.65px;
+    --letter-spacing-1: -1px;
+    --letter-spacing-2: -2px;
+}
 .text-light { font-weight: var(--text-light) !important; } 
 .text-regular { font-weight: var(--text-regular) !important; } 
 .text-medium { font-weight: var(--text-medium) !important; } 
@@ -385,50 +435,48 @@ select
 
 
 
-
 /* 
 체크박스 
 */
-input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; } 
-.t-checkbox { vertical-align: middle; display: inline-flex; align-items: center; -webkit-user-select: none !important; user-select: none !important; } 
+.t-checkbox input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
+.t-checkbox { vertical-align: middle; display: inline-flex; align-items: center; -webkit-user-select: none !important; user-select: none !important; }
 .t-checkbox input,
-.t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; } 
+.t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; }
 .t-checkbox input[type="checkbox"] + label,
-.t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; } 
-.t-checkbox.checkbox-column label { display:block; } 
-.t-checkbox.checkbox-column label ~ label { margin-top:10px; } 
-select ~ .t-checkbox { margin-left:10px; } 
+.t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; }
+.t-checkbox.checkbox-column label {display:block;}
+.t-checkbox.checkbox-column label ~ label {margin-top:10px;}
+.academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; }
+
+    /* 체크박스리스트 */
+    .academy-mngr-Wrap .check-list { display: inline-flex; align-items: center; }
+    .academy-mngr-Wrap .check-list li { margin-right: 12px; }
+    .academy-mngr-Wrap .check-list li:last-child { margin-right: 0; }
 
 
-/* 체크박스리스트 */
-.check-list { display: inline-flex; align-items: center; } 
-.check-list li { margin-right: 12px; } 
-.check-list li:last-child { margin-right: 0; } 
+    /* label:before에 체크하기 전 상태 CSS */
+    .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; }
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; }
+    .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; }
 
+    /* label:before에 체크 된 상태 CSS */
+    .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--pc-bora-2); border-color:transparent; font-weight: 400; }
 
-/* label:before에 체크하기 전 상태 CSS */
-.t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; } 
-.t-checkbox.checkbox01 input[type="checkbox"] + label:before,
-.t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
-.t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; } 
-
-/* label:before에 체크 된 상태 CSS */
-.t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
-.t-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--pc-bora-2); border-color:transparent; font-weight: 400; } 
-
-/*포커싱되었을때*/
-.t-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
-.t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); } 
-/*hover*/
-.t-checkbox.checkbox01 input[type="checkbox"] + label:after,
-.t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 8px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; } 
-.t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after,
-.t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; } 
-.t-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
-.t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; } 
-/*disabled*/
-.t-checkbox.checkbox01 input[type="checkbox"]:disabled + label:before,
-.t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; } 
+    /*포커싱되었을때*/
+    .t-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); }
+    /*hover*/
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:after,
+    .t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 6px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; }
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after,
+    .t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; }
+    .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
+    .t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; }
+    /*disabled*/
+    .t-checkbox.checkbox01 input[type="checkbox"]:disabled + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; }
 
 
 
@@ -723,7 +771,7 @@ input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
  .academy-mngr-Wrap .t-pagination .t-btn-outline { color: #fff !important; font-weight: 700 !important; background: var(--pc-bora-2)!important; border-color: var(--pc-bora-2)!important; } 
  /* 마우스 hover효과 */
  .academy-mngr-Wrap .t-pagination .t-btn:not(.disabled):hover:before { -webkit-transform: scale(2); transform: scale(2); } 
-.academy-mngr-Wrap .box-bg .t-pagination { margin-bottom:0!important; } 
+ .academy-mngr-Wrap .box-bg .t-pagination { margin-bottom:0!important; } 
 
 
 
@@ -885,9 +933,7 @@ input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 /* 스크롤 공통 디자인 */
 .academy-mngr-Wrap *::-webkit-scrollbar { background-color: #f1f1f1; } 
 .academy-mngr-Wrap .t-popup-wrap *::-webkit-scrollbar,
-.academy-mngr-Wrap .sub *::-webkit-scrollbar
- {
- width: 13px!important; height: 13px!important; } 
+.academy-mngr-Wrap .sub *::-webkit-scrollbar { width: 13px!important; height: 13px!important; } 
 .academy-mngr-Wrap .dashboard *::-webkit-scrollbar { width: 8px; height: 8px; } 
 .academy-mngr-Wrap *::-webkit-scrollbar-thumb { background-color: #868196; transition: .3s; } 
 .academy-mngr-Wrap *::-webkit-scrollbar-thumb:hover { background-color: #6e6a7a; } 
@@ -1393,6 +1439,9 @@ hover
 .m-academy-mngr-Wrap .t-radio-01 input[type="radio"] + label { margin: 0 0 9px 0; font-size: var(--m-fs14); } 
 .m-academy-mngr-Wrap .t-radio-01 input[type="radio"] + label:last-child { margin:0; } 
 
+/*체크박스*/
+.m-academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label {font-size:15px;}
+
 /* 버튼 */
 .m-academy-mngr-Wrap [class^="t-button"] { margin: 0 3px; } 
 
@@ -1412,9 +1461,8 @@ hover
 .m-academy-mngr-Wrap .slash-txt:after { color: var(--m-text-color-1); font-size: 11px; top: 50%; transform: translateY(-50%); } 
 
 
-/* 체크박스 */
-.m-academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { color:#242424; font-size: var(--pc-fs14);} 
-.m-academy-mngr-Wrap .check-list li { margin-right: 0; } 
+
+
 
 
 
@@ -1432,11 +1480,11 @@ hover
 .m-drop-set .m-drop-box .dropdown .m-drop-cont .label-set2 { padding: 15px 0; border-top: 1px solid var(--pc-border-3); align-items: flex-start !important;} 
 .m-drop-set .m-drop-box .dropdown .m-drop-cont .label-set2 .label-text { color:#242424; font-weight: var(--text-regular); } 
 .m-drop-set .m-drop-box .dropdown .m-drop-cont .label-set2 .label-text:before { content: "\b7"; margin-right: 3px; } 
-
+.m-drop-set .t-checkbox.checkbox01 input[type="checkbox"] + label { color:#242424; font-size: var(--pc-fs14);} 
 
 
 /* 3단 체크리스트 */
-.m-academy-mngr-Wrap .check-list.col3 { gap: 10px 2%; flex-wrap: wrap; width: 100%;}
+.m-academy-mngr-Wrap .check-list.col3 { display:flex; gap: 10px 2%; flex-wrap: wrap; width: 100%;}
 .m-academy-mngr-Wrap .check-list.col3 li { margin-right: 0; width: 32%; }
 
 
@@ -1451,9 +1499,9 @@ hover
 .m-academy-mngr-Wrap .t-popup .pop-header { background: #ffffff; border-bottom: 1px solid #e0e6ee; } 
 .m-academy-mngr-Wrap .t-popup .pop-header .pop-title { color: #000; font-weight: var(--text-bold); font-size: var(--m-fs19); } 
 .m-academy-mngr-Wrap .t-popup button.close { right: 15px; top: 18px; border-radius: 0; width: 17px; height: 17px;; background: url(../images/m-btn-close.png) no-repeat center/100%; } 
-.m-academy-mngr-Wrap .t-popup .pop-container { padding: 0; max-height: 100%; } 
-.m-academy-mngr-Wrap .t-popup .pop-cont { padding: 15px; } 
-.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; } 
+.m-academy-mngr-Wrap .t-popup .pop-container { padding: 0;max-height: 100%; }
+.m-academy-mngr-Wrap .t-popup .pop-cont { padding: 15px;}
+.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; border-bottom:3px solid #f0f0f1;}
 
 
 /* 뒤로가기 */
