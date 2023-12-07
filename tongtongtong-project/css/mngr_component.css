@@ -389,46 +389,45 @@ select
 /* 
 체크박스 
 */
-.academy-mngr-Wrap input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; } 
-.academy-mngr-Wrap .t-checkbox { vertical-align: middle; display: inline-flex; align-items: center; -webkit-user-select: none !important; user-select: none !important; } 
-.academy-mngr-Wrap .t-checkbox input,
-.academy-mngr-Wrap .t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; } 
-.academy-mngr-Wrap .t-checkbox input[type="checkbox"] + label,
-.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; } 
-.academy-mngr-Wrap .t-checkbox.checkbox-column label { display:block; } 
-.academy-mngr-Wrap .t-checkbox.checkbox-column label ~ label { margin-top:10px; } 
-.academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; } 
+.t-checkbox input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
+.t-checkbox { vertical-align: middle; display: inline-flex; align-items: center; -webkit-user-select: none !important; user-select: none !important; }
+.t-checkbox input,
+.t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; }
+.t-checkbox input[type="checkbox"] + label,
+.t-checkbox label>input[type="checkbox"] + .spanLabel { cursor:pointer; position: relative; z-index: 1; }
+.t-checkbox.checkbox-column label {display:block;}
+.t-checkbox.checkbox-column label ~ label {margin-top:10px;}
+.academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; }
+
+    /* 체크박스리스트 */
+    .academy-mngr-Wrap .check-list { display: inline-flex; align-items: center; }
+    .academy-mngr-Wrap .check-list li { margin-right: 12px; }
+    .academy-mngr-Wrap .check-list li:last-child { margin-right: 0; }
 
 
-/* 체크박스리스트 */
-.academy-mngr-Wrap .check-list { display: inline-flex; align-items: center; } 
-.academy-mngr-Wrap .check-list li { margin-right: 12px; } 
-.academy-mngr-Wrap .check-list li:last-child { margin-right: 0; } 
+    /* label:before에 체크하기 전 상태 CSS */
+    .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; }
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; }
+    .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; }
 
+    /* label:before에 체크 된 상태 CSS */
+    .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--pc-bora-2); border-color:transparent; font-weight: 400; }
 
-/* label:before에 체크하기 전 상태 CSS */
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); line-height: 19px; } 
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; } 
-
-/* label:before에 체크 된 상태 CSS */
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--pc-bora-2); border-color:transparent; font-weight: 400; } 
-
-/*포커싱되었을때*/
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); } 
-/*hover*/
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:after,
-.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 6px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; } 
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after,
-.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; } 
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
-.academy-mngr-Wrap .t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; } 
-/*disabled*/
-.academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"]:disabled + label:before,
-.academy-mngr-Wrap .t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; } 
+    /*포커싱되었을때*/
+    .t-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); }
+    /*hover*/
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:after,
+    .t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 6px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; }
+    .t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after,
+    .t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; }
+    .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
+    .t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; }
+    /*disabled*/
+    .t-checkbox.checkbox01 input[type="checkbox"]:disabled + label:before,
+    .t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; }
 
 
 
@@ -1395,6 +1394,9 @@ hover
 .m-academy-mngr-Wrap .t-radio-01 input[type="radio"] + label { margin: 0 0 9px 0; font-size: var(--m-fs14); }
 .m-academy-mngr-Wrap .t-radio-01 input[type="radio"] + label:last-child { margin:0; }
 
+/*체크박스*/
+.m-academy-mngr-Wrap .t-checkbox.checkbox01 input[type="checkbox"] + label {font-size:15px;}
+
 /* 버튼 */
 .m-academy-mngr-Wrap [class^="t-button"] { margin: 0 3px; }
 
@@ -1426,7 +1428,7 @@ hover
 .m-academy-mngr-Wrap .t-popup button.close { right: 15px; top: 18px; border-radius: 0; width: 17px; height: 17px;; background: url(../images/m-btn-close.png) no-repeat center/100%; } 
 .m-academy-mngr-Wrap .t-popup .pop-container { padding: 0;}
 .m-academy-mngr-Wrap .t-popup .pop-cont { padding: 15px;}
-.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; }
+.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; border-bottom:3px solid #f0f0f1;}
 
 
 /* 뒤로가기 */
