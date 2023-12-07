@@ -605,26 +605,70 @@ location
 .m-academy-mngr-Wrap .smallBox.opt-end {background:#aeaeae; color:#fff !important;}
 .m-academy-mngr-Wrap .smallBox.opt-be-course {background: #d7dce5; color:#333 !important; letter-spacing:-0.5px;}
 
+.m-academy-mngr-Wrap .circleTxt {width:16px; height:16px; line-height:16px; border-radius:100%; text-align:center;}
+.m-academy-mngr-Wrap .m-listTopSetBox .circleTxt   {width:16px; height:16px; line-height:16px; font-size:10px;}
+.m-academy-mngr-Wrap [class^="m-list-"] .circleTxt {width:19px; height:19px; line-height:19px; font-size:10px;}
+.m-academy-mngr-Wrap .circleTxt.opt-regist {background:#36b6c9; color:#fff !important;}
+.m-academy-mngr-Wrap .circleTxt.opt-discharge {background:#6d6d6d; color:#fff !important;}
+.m-academy-mngr-Wrap .circleTxt + span {font-size:12px; color:#333; margin-left:3px; }
 
 
 /* 목록 리스트 박스(공통) */
 .m-academy-mngr-Wrap [class^="m-list-"] {padding:0 15px 75px; width:100%; display:flex; flex-direction:column; box-sizing:border-box;}
 .m-academy-mngr-Wrap [class^="m-list-"] .arrow {width:5px; height: 5px; display: inline-block; vertical-align: middle; border: 1px solid #a6a6a6; border-width: 1px 1px 0 0; transform: rotate(45deg); margin: 0 3px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .listBox {border:1px solid #c5c5c5; border-radius:5px; padding:20px 15px; box-sizing:border-box; margin-bottom:10px;}
-.m-academy-mngr-Wrap [class^="m-list-"] .listBox .arrow {}
-.m-academy-mngr-Wrap [class^="m-list-"] .clsNm {font-size:16px; font-weight:600;}
-
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list {}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl {display:flex; flex-direction:row; flex-wrap:wrap;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl ~ dl {margin-top:5px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dt {color:#9a9a9a; font-size:14px; padding-right:15px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dt::before {content:"\b7"; margin-right:3px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dd {color:#333333; font-size:14px;}
-.m-academy-mngr-Wrap [class^="m-list-"] .m-readmore {border:1px solid #c5c5c5; border-radius:5px; margin:20px 0; font-size:15px; height:40px; line-height:40px;}
+.m-academy-mngr-Wrap [class^="m-list-"] .m-readmore {width:100%; border:1px solid #c5c5c5; border-radius:5px; margin:20px 0; font-size:15px; height:40px; line-height:40px;}
 
     /* 반관리 (m-list-clsMng) */
     .m-academy-mngr-Wrap .m-list-clsMng .clsAge {font-size:14px; color:#333;}
+    .m-academy-mngr-Wrap .m-list-clsMng .clsNm {font-size:16px; font-weight:600;}
     .m-academy-mngr-Wrap .m-list-clsMng .clsTit {margin:8px 0 15px;}
     .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl {display:flex; flex-wrap:nowrap;}
     .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dt {width:100px; flex-shrink:0;}
     .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dd {width:80%; flex-shrink:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+    /* 담당강사 선택 */
+    .m-academy-mngr-Wrap .m-list-prsnTchr {padding:0; margin-bottom:100px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li {}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li:nth-last-child(2) label {margin-bottom:0;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"] {display:none;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"] + label {display:flex; width:100%; padding:15px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"]:checked + label {border-color:#4641ab;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-photo {width:65px; height:65px; border-radius:3px; border:1px solid #e5e5e5;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-photo img {max-width:100%;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info {width:60%; flex-grow:1; padding-left:15px; display: flex;flex-direction: column; align-items: flex-end; margin-top:5px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm {width:100%; font-size:16px; color:#a6a6a6; display:flex; align-items:center; margin-bottom:10px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm .circleTxt {margin-right:5px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm strong {font-weight:400; color:#333; margin-left:2px;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .bull-list {width:100%;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info button {border:1px solid #dadada; border-radius:7px; height:26px; line-height:26px; padding:0 7px; color:#333333; background:#fff; margin:0;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"]:checked + label .prsn-info button {background:#4641ab; color:#fff;}
+    .m-academy-mngr-Wrap .m-list-prsnTchr .bull-list dl dt {padding-right:8px;}
+
+
+
+/* 내가 선택한 강사 선택박스 */
+.m-academy-mngr-Wrap .btm-FixBtnbox {position:fixed; bottom:0; background:#f5f7fa; border-top:1px solid #6155aa; width:100%; box-sizing:border-box;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .toggle-closeBtn {width:100%; height: 25px; position: absolute; left: 0; top: 0;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .toggle-closeBtn:before {content:""; position: absolute;top: 10px; left: 50%; margin-left: -25px; width:50px; height:3px; border-radius:10px; background:#dbdcde; display:inline-block;}
+
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap {padding:25px 15px 15px; transition:padding 0.5s;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap .titBox {font-size:17px; font-weight:600; }
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap .titBox span {font-size:13px; color:#ababab; font-weight:400;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap .mySelect {}
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap .mySelect .add-result-list {width:100%; display:flex; flex-wrap:wrap; transition: padding-top 0.5s;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .mySelect-Wrap .mySelect .add-result-list li {display:none; background:#f5f5de; padding: 6px 10px; border-radius: 3px; margin-right: 10px; font-size: 14px;}
+.m-academy-mngr-Wrap .btm-FixBtnbox.on .mySelect-Wrap .mySelect .add-result-list {padding-top:20px;}
+.m-academy-mngr-Wrap .btm-FixBtnbox.on .mySelect-Wrap {padding:25px 15px;}
+.m-academy-mngr-Wrap .btm-FixBtnbox.on .mySelect-Wrap .mySelect .add-result-list li {display:inline-flex;}
+
+.m-academy-mngr-Wrap .btm-FixBtnbox .bt-btnbox {margin:0;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .bt-btnbox a {border-radius:0;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .bt-btnbox .canclebtn {background:#fff; color:rgb(51 51 51 / 70%); font-weight:400;}
+.m-academy-mngr-Wrap .btm-FixBtnbox .bt-btnbox .registbtn {background:#7850e4;}
