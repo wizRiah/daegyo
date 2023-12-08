@@ -638,8 +638,11 @@ select
 .button-wrap [class^="t-button"]:last-child,
 [class^="btn-set"]:not(.btn-set-box) [class^="t-button"]:last-child { margin-right:0; } 
 
+.tit-section>[class^="t-button"]:only-of-type { margin:0;}
+
 /* 버튼+셀렉트 */
 .btn-set select:last-of-type { margin-left:5px; } 
+
 
 /* 박스 버튼 스타일 */
 .box-btn-wrap .layout-wrap { padding:0 23px; } 
@@ -812,8 +815,10 @@ input[type="text"]::placeholder { color:#bcbcbc; font-size:var(--pc-fs14); }
 
 
     /* 임의로 radius주기 */
-    .academy-mngr-Wrap .t-group { border-radius: 0 0 0 10px; } 
-    .academy-mngr-Wrap .t-basic-2>tbody>tr>th.t-group { border-bottom:0; } 
+    .academy-mngr-Wrap .t-group { border-radius: 0 0 0 15px; }
+    .academy-mngr-Wrap .t-basic-2>tbody>tr>th.t-group { border-bottom:0; }
+    .academy-mngr-Wrap .t-basic-2>tbody>tr:first-child:not(:only-child)>th.t-group {border-radius: 15px 0 0 15px;}
+
 
 
 
@@ -854,43 +859,54 @@ input[type="text"]::placeholder { color:#bcbcbc; font-size:var(--pc-fs14); }
 /* 테이블 행 배경 효과 */
 
     /* 전체일 경우 */
-    .academy-mngr-Wrap table .bg-all td { background:#efedfc!important; font-weight:var(--text-medium); } 
-    .academy-mngr-Wrap table tr.bg-all:first-child td { border-top-color:var(--pc-border-4)!important; font-weight:var(--text-bold); } 
-    .academy-mngr-Wrap table tr.bg-all:first-child + tr td { border-top-color:var(--pc-border-5)!important; } 
+    .academy-mngr-Wrap table .bg-all td { background:#efedfc!important; font-weight:var(--text-medium); }
+    .academy-mngr-Wrap table tr.bg-all:first-child td { border-top-color:var(--pc-border-4)!important; font-weight:var(--text-bold); }
+    .academy-mngr-Wrap table tr.bg-all:first-child + tr td { border-top-color:var(--pc-border-5)!important; }
+
     /* 전체인데 마지막인 경우 */
-    .academy-mngr-Wrap table tr.bg-all:last-child td { border-top: 1px solid var(--pc-border-5)!important; border-bottom-color:var(--pc-border-4)!important; } 
+
+    .academy-mngr-Wrap table tr.bg-all:last-child td { border-top: 1px solid var(--pc-border-5)!important; border-bottom-color:var(--pc-border-4)!important; }
     /* 반 집계, 중분류 */
-    .academy-mngr-Wrap table .bg-all.ban td:nth-child(-n+2) { border-top-color: var(--pc-border-4)!important; background-color: inherit!important; } 
-    .academy-mngr-Wrap table .bg-all.mid td:nth-child(-n+1) { border-top-color: var(--pc-border-4)!important; background-color: inherit!important; } 
+    .academy-mngr-Wrap table .bg-all.ban td:nth-child(-n+2) { border-top-color: var(--pc-border-4)!important; background-color: inherit!important; }
+    .academy-mngr-Wrap table .bg-all.mid td:nth-child(-n+1) { border-top-color: var(--pc-border-4)!important; background-color: inherit!important; }
+
+
     /* 퇴사,퇴원 상태 */
-    .academy-mngr-Wrap table .bg-grey-pt td { background:#f3f3f3!important; } 
+    .academy-mngr-Wrap table .bg-grey-pt td { background:#f3f3f3!important; }
     /* 이월처리된 상태*/
-    .academy-mngr-Wrap table .bg-over td { background: beige!important; } 
+    .academy-mngr-Wrap table .bg-over td { background: beige!important; }
     /* 단말기 미연동상태 */
-    .academy-mngr-Wrap table .bg-no-link td { background:#ececf9!important; } 
+    .academy-mngr-Wrap table .bg-no-link td { background:#ececf9!important; }
     /* 회차반 상태 */
-    .academy-mngr-Wrap table .bg-class td { background:#e8f9dd!important; } 
+    .academy-mngr-Wrap table .bg-class td { background:#e8f9dd!important; }
     /* 수강시작전 반 상태 */
-    .academy-mngr-Wrap table .bg-be-course td { background: #b3c6ff!important; } 
+    .academy-mngr-Wrap table .bg-be-course td { background: #b3c6ff!important; }
     /* 수강중인 반 상태 */
-    .academy-mngr-Wrap table .opt-course td { font-weight: var(--text-medium); color: #000!important; } 
+    .academy-mngr-Wrap table .opt-course td { font-weight: var(--text-medium); color: #000!important; }
+    /* 전반처리된 상태 */
+    .academy-mngr-Wrap table .bg-cl-change td { background:#ffeed0!important; }
+
     /* th컬러 */
     /* 환불금액정보 */
-    .academy-mngr-Wrap table.bg-refund>tbody>tr>th { background: #eec8c8; } 
+    .academy-mngr-Wrap table.bg-refund>tbody>tr>th { background: #eec8c8; }
 
 
-/* 상태별 팝업 배경컬러 변경 */
+/* 상태별 팝업 배경,텍스트박스 컬러 변경용 */
 
     /* 이월처리 */
-    .bg-over { background: beige!important; } 
+    .bg-over { background: beige!important; }
     /* 단말기 미연동 */
-    .bg-no-link { background:#ececf9!important; } 
+    .bg-no-link { background:#ececf9!important; }
     /* 퇴원,퇴사 */
-    .bg-grey-pt { background:#f3f3f3!important; } 
+    .bg-grey-pt { background:#f3f3f3!important; }
     /* 회차반 */
-    .bg-class { background:#e8f9dd!important; } 
+    .bg-class { background:#e8f9dd!important; }
     /* 수강시작전 반 상태 */
-    .bg-be-course { background:#b3c6ff!important; } 
+    .bg-be-course { background:#b3c6ff!important; }
+    /* 전반처리된 상태 */
+    .bg-cl-change { background:#ffeed0!important; }
+
+
 
 
 /* 상태 박스 */
