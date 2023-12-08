@@ -940,7 +940,7 @@ button i { display:inline-block; }
 .i-down { background: url(../images/icon_down.png) no-repeat center/100%; width: 15px; height: 12px; } 
 .i-money-g { background: url(/images/icon-money-b.png) no-repeat center/100%; margin-right: 3px; width: 14px; height: 14px; vertical-align: middle; margin-top: -2px; } 
 .i-file { background: url(../images/icon-file.png) no-repeat center/100%; width: 11px; height: 12px; } 
-
+.i-sortList:before {background: url(/images/sortList.png) no-repeat center/100%; width: 17px; height:17px; content:""; z-index: 0; position: relative; top: auto; bottom: auto; left: auto; right: auto; opacity: 1;}
 
 /* 박스 */
 .academy-mngr-Wrap .box-bg { margin-bottom: 30px; position: relative; /* flex: auto; */ padding:20px; box-sizing: border-box; border: 1px solid #f2f2f3; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); border-radius: 20px; background-color: #f9fafc; } 
@@ -1319,14 +1319,11 @@ button i { display:inline-block; }
 .m-listTopSetBox .Totaltxt strong { color:#333; font-weight:500; } 
 .m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; } 
 .m-listTopSetBox>div:last-child button:last-child { margin-right:0; } 
-
+.m-listTopSetBox>div:last-child button+button {margin-left:0;}
 
 
 
 /* 모바일 텍스트 */
-
-    /* 전체 글자 컬러 */
-    .m-academy-mngr-Wrap :not([class^="t-button"]) * { color:var(--m-text-color-1); } 
 
     /* 본문 서브 타이틀 텍스트 */
     .m-academy-mngr-Wrap .sub-tit { font-size: var(--m-fs17); letter-spacing: var(--letter-spacing-0); font-weight: var(--text-bold); margin-bottom: 17px; } 
