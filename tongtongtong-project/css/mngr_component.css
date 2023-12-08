@@ -554,7 +554,7 @@ select
 [class^="t-button"]:not(.t-button-circle) span:last-child:nth-last-child(1) { margin-left: 6px; } 
 [class^="t-button"] img { vertical-align:middle; } 
 [class^="t-button"]:not(.t-button-xxs,.t-button-xms,.t-button-circle,.t-button-sp) { min-width:60px; text-align:center; } 
-[class^="t-button"]:only-child { margin:0; } 
+[class^="t-button"]:only-child { margin:0!important; } 
 .t-button-circle { border-radius: 100%; padding: 0; width: 30px; height: 30px; line-height: 30px; } 
 .t-button-circle-16 { width: 16px; height: 16px; line-height:14px; } 
 [class^="t-button-circle"]::after { display: inline-flex; flex-flow: row wrap; justify-content: center; align-items: center; font-family: 'Material Icons'; font-style: normal; width: 100%; height: 100%; color: #fff; border-radius: 50%; box-sizing: border-box; } 
@@ -1052,6 +1052,11 @@ button i { display:inline-block; }
  /* 멀티셀렉트 드롭다운 상단으로 */
  .t-select-check.active.d-top .dropdown { bottom: 38px; top: auto; margin-bottom: 5px; } 
  .t-select-check.active.d-top .t-select-name:after { transform: rotate(180deg); } 
+
+ /* 멀티셀렉트 disabled */
+ .t-select-check.disabled { background-color: #f2f2f2; color: #707070; cursor:unset; }
+ .t-select-check.disabled .t-select-name:after{cursor:unset;}
+ .t-select-check.disabled .dropdown {display:none;}
 
 
 /*
