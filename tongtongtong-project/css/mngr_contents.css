@@ -608,7 +608,10 @@ location
 .m-academy-mngr-Wrap .circleTxt {width:16px; height:16px; line-height:16px; border-radius:100%; text-align:center;}
 .m-academy-mngr-Wrap .m-listTopSetBox .circleTxt   {width:16px; height:16px; line-height:16px; font-size:10px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .circleTxt {width:19px; height:19px; line-height:19px; font-size:10px;}
-.m-academy-mngr-Wrap .circleTxt.opt-regist {background:#36b6c9; color:#fff !important;}
+.m-academy-mngr-Wrap .circleTxt.opt-regist    {background:#36b6c9; color:#fff !important;}
+.m-academy-mngr-Wrap .circleTxt.opt-reserve   {background:#d1d1d1; color:#333 !important;}
+.m-academy-mngr-Wrap .circleTxt.opt-nonregi   {background:#7db77a; color:#fff !important;}
+.m-academy-mngr-Wrap .circleTxt.opt-absence   {background:#eeb249; color:#fff !important;}
 .m-academy-mngr-Wrap .circleTxt.opt-discharge {background:#6d6d6d; color:#fff !important;}
 .m-academy-mngr-Wrap .circleTxt + span {font-size:12px; color:#333; margin-left:3px; }
 
@@ -623,6 +626,8 @@ location
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dt {color:#9a9a9a; font-size:14px; padding-right:15px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dt::before {content:"\b7"; margin-right:3px;}
 .m-academy-mngr-Wrap [class^="m-list-"] .bull-list dl dd {color:#333333; font-size:14px;}
+.m-academy-mngr-Wrap [class^="m-list-"] .bull-list ul {}
+.m-academy-mngr-Wrap [class^="m-list-"] .bull-list ul li {font-size:13px; color:#7a7a7a; line-height:140%;}
 .m-academy-mngr-Wrap [class^="m-list-"] .m-readmore {width:100%; border:1px solid #c5c5c5; border-radius:5px; margin:20px 0; font-size:15px; height:40px; line-height:40px;}
 
     /* 반관리 (m-list-clsMng) */
@@ -633,23 +638,25 @@ location
     .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dt {width:100px; flex-shrink:0;}
     .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dd {width:80%; flex-shrink:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
-    /* 담당강사 선택 */
-    .m-academy-mngr-Wrap .m-list-prsnTchr {padding:0; margin-bottom:100px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li {}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li:nth-last-child(2) label {margin-bottom:0;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"] {display:none;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"] + label {display:flex; width:100%; padding:15px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"]:checked + label {border-color:#4641ab;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-photo {width:65px; height:65px; border-radius:3px; border:1px solid #e5e5e5;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-photo img {max-width:100%;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info {width:60%; flex-grow:1; padding-left:15px; display: flex;flex-direction: column; align-items: flex-end; margin-top:5px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm {width:100%; font-size:16px; color:#a6a6a6; display:flex; align-items:center; margin-bottom:10px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm .circleTxt {margin-right:5px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .prsnNm strong {font-weight:400; color:#333; margin-left:2px;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info .bull-list {width:100%;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .prsn-info button {border:1px solid #dadada; border-radius:7px; height:26px; line-height:26px; padding:0 7px; color:#333333; background:#fff; margin:0;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr li input[type="checkbox"]:checked + label .prsn-info button {background:#4641ab; color:#fff;}
-    .m-academy-mngr-Wrap .m-list-prsnTchr .bull-list dl dt {padding-right:8px;}
+    /* 담당강사/학생 선택 */
+    .m-academy-mngr-Wrap .m-list-prsn {padding:0; margin-bottom:100px;}
+    .m-academy-mngr-Wrap .m-list-prsn li {}
+    .m-academy-mngr-Wrap .m-list-prsn li:nth-last-child(2) label {margin-bottom:0;}
+    .m-academy-mngr-Wrap .m-list-prsn li input[type="checkbox"] {display:none;}
+    .m-academy-mngr-Wrap .m-list-prsn li input[type="checkbox"] + label {display:flex; width:100%; padding:15px;}
+    .m-academy-mngr-Wrap .m-list-prsn li.on label,
+    .m-academy-mngr-Wrap .m-list-prsn li input[type="checkbox"]:checked + label {border-color:#4641ab;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-photo {width:65px; height:65px; border-radius:3px; border:1px solid #e5e5e5;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-photo img {max-width:100%;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info {width:60%; flex-grow:1; padding-left:15px; display: flex;flex-direction: column; align-items: flex-end; margin-top:5px;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info .prsnNm {width:100%; font-size:16px; color:#a6a6a6; display:flex; align-items:center; margin-bottom:10px;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info .prsnNm .circleTxt {margin-right:5px;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info .prsnNm strong {font-weight:400; color:#333; margin-left:2px;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info .bull-list {width:100%;}
+    .m-academy-mngr-Wrap .m-list-prsn .prsn-info button {border:1px solid #dadada; border-radius:7px; height:26px; line-height:26px; padding:0 7px; color:#333333; background:#fff; margin:0;}
+    .m-academy-mngr-Wrap .m-list-prsn li.on label .prsn-info button,
+    .m-academy-mngr-Wrap .m-list-prsn li input[type="checkbox"]:checked + label .prsn-info button {background:#4641ab; color:#fff;}
+    .m-academy-mngr-Wrap .m-list-prsn .bull-list dl dt {padding-right:8px;}
 
 
 
