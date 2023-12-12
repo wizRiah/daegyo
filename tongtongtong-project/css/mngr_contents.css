@@ -4,20 +4,28 @@
 /*
 로그인 페이지
 */
-.academy-mngr-Wrap .login-page { background: linear-gradient(to right, #6359e8 0%, #7e4ef7 60%, #894fe2 100%); height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: center; } 
-.academy-mngr-Wrap .login-page .login-tit { text-align: center; font-size: 17px; color: #fff; } 
-.academy-mngr-Wrap .login-page .login-box { width: 430px; padding: 50px; background: #fff; margin-bottom: 0; flex: none; } 
-.academy-mngr-Wrap .login-page .login-box .login-logo { display: flex; align-items: center; justify-content: center; } 
-.academy-mngr-Wrap .login-page .login-box .login-logo img { width: auto; max-width: 300px; height: auto; max-height: 65px; } 
-.academy-mngr-Wrap .login-page .login-box .login-cont { margin-top: 15px; } 
-.academy-mngr-Wrap .login-page .login-box .login-cont .t-button-login { height: 50px; line-height: 50px; border-radius: 2px; font-size: 15px; color: #fff; background: #36336b; margin: 12px 0; } 
-.academy-mngr-Wrap .login-page .login-box .login-cont .login-info-box { display: flex; justify-content: space-between; align-items: center; } 
-.academy-mngr-Wrap .login-page .login-info-box ul li button { font-size: 13px; color: #333; } 
-.academy-mngr-Wrap .login-page .login-info-box ul li { position: relative; } 
-.academy-mngr-Wrap .login-page .login-info-box ul li:first-child { padding-right: 12px; } 
-.academy-mngr-Wrap .login-page .login-info-box ul li:first-child:after { display: block; content: ""; position: absolute; right: 0; top: calc(50% - 5px); width: 1px; height: 13px; background: var(--pc-border-2); } 
-.academy-mngr-Wrap .login-page .login-info-box ul li:nth-child(2) { padding-left: 12px; } 
-.academy-mngr-Wrap .login-page .select-ad { border-color: #36336b; width:100%; margin-top:10px; } 
+.academy-mngr-Wrap.login-page-wrap { min-width: 100%; }
+.login-page { background: linear-gradient(to right, #6359e8 0%, #7e4ef7 60%, #894fe2 100%); height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: center; }
+.login-page .login-tit { text-align: center; font-size: 17px; color: #fff; }
+.login-page .login-box { width: 430px; padding: 50px; background: #fff; margin-bottom: 0; flex: none; }
+.login-page .login-box .login-logo { display: flex; align-items: center; justify-content: center; }
+.login-page .login-box .login-logo img { width: auto; max-width: 300px; height: auto; max-height: 65px; }
+.login-page .login-box .login-cont { margin-top: 15px; }
+.login-page .login-box .login-cont .t-button-login { height: 50px; line-height: 50px; border-radius: 2px; font-size: 15px; color: #fff; background: #36336b; margin: 12px 0; }
+.login-page .login-box .login-cont .login-info-box { line-height:18px; display: flex; justify-content: space-between; align-items: center; }
+.login-page .login-info-box ul li button { font-size: 13px; color: #333; }
+.login-page .login-info-box ul li { position: relative; }
+.login-page .login-info-box ul li:first-child { padding-right: 12px; }
+.login-page .login-info-box ul li:first-child:after { display: block; content: ""; position: absolute; right: 0; top: calc(50% - 5px); width: 1px; height: 13px; background: var(--pc-border-2); }
+.login-page .login-info-box ul li:nth-child(2) { padding-left: 12px; }
+.login-page .select-ad { border-color: #36336b; width:100%; margin-top:10px; }
+
+
+@media (max-width: 990px){
+  .login-page .login-box { width: 90%; padding: 40px; }
+  .login-page .box-bg-02 .tit-bg .tit-bg-txt {  font-size: var(--m-fs15); }
+  .login-page .login-box .login-cont .t-button-login { height: 45px; line-height: 45px;}
+}
 
 
 /*
