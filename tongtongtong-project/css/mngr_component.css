@@ -430,6 +430,8 @@ select
 .t-checkbox.checkbox-column label {display:block;}
 .t-checkbox.checkbox-column label ~ label {margin-top:10px;}
 .academy-mngr-Wrap select ~ .t-checkbox { margin-left:10px; }
+.t-checkbox.checkbox01 input[type="checkbox"] + label + input[type="checkbox"] + label { margin-left:12px;}
+
 
     /* 체크박스리스트 */
     .academy-mngr-Wrap .check-list { display: inline-flex; align-items: center; }
@@ -547,7 +549,7 @@ select
 /*
 버튼
 */
-[class^="t-button"] { flex-shrink: 0; word-break:keep-all; position: relative; overflow: hidden; display: inline-block; vertical-align: middle; box-sizing:border-box; margin: 0 2.5px; padding: 0px 10px; cursor: pointer; border-radius: 2px; background: var(--pc-border-1); color: #fff; display:inline-flex; flex-flow:row wrap; justify-content:center; align-items:center; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; } 
+[class^="t-button"] { flex-wrap: nowrap; flex-shrink: 0; word-break:keep-all; position: relative; overflow: hidden; display: inline-block; vertical-align: middle; box-sizing:border-box; margin: 0 2.5px; padding: 0px 10px; cursor: pointer; border-radius: 2px; background: var(--pc-border-1); color: #fff; display:inline-flex; justify-content:center; align-items:center; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
 [class^="t-button"]:before { content:""; position:absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; opacity:0; } 
 [class^="t-button"]:focus:before { opacity:0.2; -webkit-animation: tbtnFX01 1s 1 ease; -o-animation: tbtnFX01 1s 1 ease; animation: tbtnFX01 1s 1 ease; } 
 [class^="t-button"]:not(.t-button-circle) span:first-child:nth-last-child(2) { margin-right: 7px; } 
