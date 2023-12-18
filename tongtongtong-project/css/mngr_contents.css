@@ -252,8 +252,8 @@ location
 /*
 원생관리 (studentMg)
 */
-.academy-mngr-Wrap .photo-info { overflow: hidden; border: 1px solid #7d7d7d; box-sizing: border-box; margin-top: 10px; /* padding: 10px; */ background: #ffff; border-radius: 4px; } 
-.academy-mngr-Wrap .photo-info .photo { position: relative; width: 100px; height: 100px; overflow: hidden; border-radius: 5px; border: 1px solid #e0e6ef; box-sizing: border-box; flex-shrink: 0; } 
+.academy-mngr-Wrap .photo-info { overflow: hidden; box-sizing: border-box; margin-top: 10px; /* padding: 10px; */ /* background: #ffff; */ border-radius: 4px; } 
+.academy-mngr-Wrap .photo-info .photo { position: relative; width: 100px; height: 100px; overflow: hidden; border-radius: 10px; border: 1px solid #7d7d7d; box-sizing: border-box; flex-shrink: 0; } 
 .academy-mngr-Wrap .photo-info .photo img { position: absolute; z-index: 1; top: -999px; bottom: -999px; left: -999px; right: -999px; width: 100%; max-width: 100%; height: auto; margin: auto; } 
 .academy-mngr-Wrap .photo-info .profile-txt-list { margin-left: 13px; box-sizing: border-box; flex: 1; } 
 .academy-mngr-Wrap .photo-info .profile-txt-list .profile-txt { display: flex; padding: 5px 0; position: relative; width: 100%; } 
@@ -261,15 +261,16 @@ location
 .academy-mngr-Wrap .photo-info .profile-txt-list .profile-txt .pro-txt { font-size: 13px; word-break: break-all; color: #333; text-align: left; flex: 2.8; } 
 .academy-mngr-Wrap .photo-info .profile-txt-list .profile-txt.inclu-btn .pro-txt { padding-right: 71px; flex: 1.2; } 
 .academy-mngr-Wrap .photo-info .profile-txt-list .profile-txt.inclu-btn [class^="t-button"]:last-child { width: 60px; position: absolute; right: 0; margin-top: -4px!important; } 
-.academy-mngr-Wrap .photo-info .photo-info-wrap { position: relative; padding: 10px; box-sizing: border-box; } 
+.academy-mngr-Wrap .photo-info .photo-info-wrap { position: relative; padding: 10px; box-sizing: border-box; border: 1px solid #7d7d7d; border-radius: 10px 10px 0 0; background: #fff; } 
 .academy-mngr-Wrap .photo-info .photo-info-wrap .photo-info-btn { z-index:1; position: absolute; right: 0; top: 0; display: flex; flex-direction: column; gap: 5px; } 
+.academy-mngr-Wrap .studentMg .left-cont .info-wrap { background: #fff; overflow: hidden; border-radius: 4px; box-sizing: border-box; padding: 20px; border: 1px solid #7d7d7d; } 
 .academy-mngr-Wrap .studentMg .left-cont .info-wrap li { display: flex; align-items: center; position: relative; margin-bottom: 10px; padding: 15px 10px; background: #d3d3d308; box-sizing: border-box; border-radius: 2px; } 
-.academy-mngr-Wrap .studentMg .left-cont .info-wrap>li .info-tit { min-width:55px; color: #9a9a9a; margin-right: 30px; font-size: 13px; word-break: keep-all; flex: 1; text-align: left; } 
-.academy-mngr-Wrap .studentMg .left-cont .info-wrap>li .info-txt { color: #fff; font-size: 13px; text-align: left; flex: 4; } 
+.academy-mngr-Wrap .studentMg .left-cont .info-wrap>li .info-tit { min-width:55px; margin-right: 30px; font-size: 13px; word-break: keep-all; flex: 1; text-align: left; } 
+.academy-mngr-Wrap .studentMg .left-cont .info-wrap>li .info-txt { font-size: 13px; text-align: left; flex: 4; } 
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li { margin-bottom: 14px; align-items: center; } 
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li .info-tit { position: relative; padding-right: 12px; margin-right: 12px; flex: auto; width: 38px; } 
 .academy-mngr-Wrap .studentMg .left-cont .t-bullet-01>li .info-tit:after { position: absolute; content: ''; width: 1px; height: 12px; top: 3px; right: 0; background-color: rgb(255 255 255 / 20%); } 
-.academy-mngr-Wrap .studentMg .add-info-wrap { transition: left .5s; width: 400px; position: absolute; left: -50px; background: #ffffff; top: 0; padding: 0; height: 100%; box-sizing: border-box; z-index: 2; box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%); } 
+.academy-mngr-Wrap .studentMg .add-info-wrap { transition: left .5s; width: 400px; position: absolute; left: -50px; background: #ffffff; top: 0; padding: 0; height: 100%; box-sizing: border-box; z-index: 2; /* box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 28%); */ } 
 .academy-mngr-Wrap .studentMg .add-info-wrap .add-title { display: flex; padding: 20px; height: 66px; box-sizing: border-box; background: #5a4ddc; align-items: center; } 
 .academy-mngr-Wrap .studentMg .add-info-wrap .add-title .main-tit { color: #fff; } 
 .academy-mngr-Wrap .studentMg .add-info-wrap .add-info-inner { display: block; overflow: hidden; height: calc(100% - 65px); padding: 20px 0 20px 20px; box-sizing: border-box; } 
@@ -280,7 +281,7 @@ location
 .academy-mngr-Wrap .studentMg .add-close { background: var(--pc-bora-7)!important; } 
 .academy-mngr-Wrap .studentMg .add-close .more-arrow { transform: rotate(180deg); } 
 .academy-mngr-Wrap .studentMg .add-info-wrap.active { left: 350px; } 
-.academy-mngr-Wrap .studentMg .left-cont .info-wrap li .t-radio-01 input[type="radio"] + label { color: #333; } 
+/* .academy-mngr-Wrap .studentMg .left-cont .info-wrap li .t-radio-01 input[type="radio"] + label { color: #333; } */
 .academy-mngr-Wrap .studentMg .left-cont .left-cont-wrap .info-wrap .result-wrap { display: none; } 
 .academy-mngr-Wrap .studentMg .left-cont .photo-info .regist-button-set { display: none; } 
 .academy-mngr-Wrap .studentMg .left-cont .photo-info .profile-txt-list .profile-txt .result-wrap { display: none; } 
@@ -309,7 +310,7 @@ location
 .academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .t-bullet-01>li .info-tit:after { display: none; } 
 .academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .left-cont-wrap .info-wrap .result-wrap.flexIMF { display:flex!important; } 
 .academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .info-wrap li { padding: 0; margin-bottom: 22px; background: none; } 
-.academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .info-wrap { background: #fff; padding: 10px; overflow: hidden; border-radius: 4px; box-sizing: border-box; border: 1px solid #7d7d7d; } 
+.academy-mngr-Wrap .studentMg .left-cont.stu-regist-form .info-wrap { background: #fff; overflow: hidden; border-radius: 4px; box-sizing: border-box; padding: 20px; border: 1px solid #7d7d7d; } 
 
 
 
@@ -351,9 +352,9 @@ location
 
 /* 왼쪽영역 */
 .academy-mngr-Wrap .sub .left-cont { /* min-height:100vh; */ width: 350px; flex-shrink: 0; box-sizing: border-box; position: relative; } 
-.academy-mngr-Wrap .sub .left-cont .left-cont-wrap { height: 100%; padding: 20px; background: #d5d5d5; z-index: 3; position: relative; box-sizing: border-box; } 
+.academy-mngr-Wrap .sub .left-cont .left-cont-wrap { border-right: 1px solid #b4b4b4; height: 100%; padding: 20px; background: #efefef; z-index: 3; position: relative; box-sizing: border-box; } 
 .academy-mngr-Wrap .layout-wrap { position: relative; padding: 30px 20px; margin: 0 auto; box-sizing: border-box; } 
-.academy-mngr-Wrap .main-cont { width: 100%; position: relative; } 
+.academy-mngr-Wrap .main-cont { width: 100%; position: relative; background: #efefef; } 
 
 
 /*
@@ -539,7 +540,7 @@ location
 
 
  /* 메시지전송 영역 */
-.academy-mngr-Wrap .message-wrap { align-items: center; display: flex; background: #f9fafc; padding: 15px 20px; box-sizing: border-box; border-top: 1px solid #e0e6ef; border-bottom: 1px solid #e0e6ef; justify-content: space-between; } 
+.academy-mngr-Wrap .message-wrap { align-items: center; display: flex; padding: 15px 20px; box-sizing: border-box; border-top: 1px solid #b4b4b4; border-bottom: 1px solid #b4b4b4; justify-content: space-between; } 
 .academy-mngr-Wrap .message-wrap2 { display: flex; box-sizing: border-box; justify-content: space-between; } 
 
 
