@@ -17,23 +17,27 @@
   <!-- 모바일 전체 Wrap -->
   <div class="m-academy-mngr-Wrap">
 
-    <!-- 헤더 -->
-    <header>
+     <!-- 헤더 -->
+     <header>
       <div class="header-top">
         <div class="header-cnt">
+          <!-- 로고영역 -->
+          <a class="m-logo" href="#">
+            <span>new통통통</span>
+          </a>
+          <!-- /로고영역 -->
 
-          <a class="m-logo">
-            <img src="/images/mobile_logo.png"></a>
+          <!-- 학원선택 -->
           <select class="acdmyNm">
             <option>대교에듀베이션학원</option>
           </select>
+          <!-- /학원선택 -->
         </div>
-
+        <!-- 알림버튼 -->
         <button type="button" class="alarmBTN on">
           <!-- 알림이 있는 경우 on클래스 추가. -->
         </button>
-
-
+        <!-- /알림버튼 -->
       </div>
     </header>
     <!-- /헤더 -->
@@ -41,7 +45,16 @@
 
     <!-- 상단 메뉴 -->
     <div class="m-topMenu">
-      <div class="m-location">학사관리</div>
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>학사관리</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
       <ul class="menu-Wrap">
         <li class="on">
           <!-- 활성화된 메뉴는 on클래스 추가. -->
@@ -50,17 +63,20 @@
         <li><a>원생</a></li>
         <li><a>수납</a></li>
         <li><a>상담</a></li>
+        <li><a>직원</a></li>
+        <li><a>통통통설정</a></li>
         <li><a>앱관리</a></li>
       </ul>
-      <ul class="depth2-menu-Wrap">
-        <li class="on"><a>하위메뉴1</a></li>
-        <li><a>하위메뉴2</a></li>
-        <li><a>하위메뉴3</a></li>
-        <li><a>하위메뉴4</a></li>
-      </ul>
-    </div>
-    <!-- 상단 메뉴 끝 -->
+      <!-- /메뉴 -->
 
+      <!--  <ul class="depth2-menu-Wrap">
+      <li class="on"><a>하위메뉴1</a></li>
+      <li><a>하위메뉴2</a></li>
+      <li><a>하위메뉴3</a></li>
+      <li><a>하위메뉴4</a></li>
+    </ul> -->
+    </div>
+    <!-- /상단 메뉴 -->
 
 
 
@@ -392,7 +408,8 @@
     <!-- 하단고정메뉴 -->
     <div class="footer-fixed">
       <ul>
-        <li class="btn-gohome"><button type="button">홈</button></li>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
         <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
         <li class="btn-mymenu"><button type="button"></button></li>
         <li class="btn-srchpp"><button type="button">원생검색</button></li>
