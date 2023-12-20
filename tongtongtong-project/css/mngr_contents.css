@@ -386,9 +386,9 @@ location
 .academy-mngr-Wrap .classMg .process-data { display: inline-flex; align-items: center; margin-left: 30px; } 
 
 /* 반 - 시간표설정 */
-.academy-mngr-Wrap .time-box .add-result-list { margin:20px 0!important; }
-.academy-mngr-Wrap .time-box .add-result-list li { background: #e6ffe4; }
-.academy-mngr-Wrap .time-box .t-select-check.active .dropdown { height: 127px; }
+.academy-mngr-Wrap .time-box .add-result-list { margin:20px 0!important; } 
+.academy-mngr-Wrap .time-box .add-result-list li { background: #e6ffe4; } 
+.academy-mngr-Wrap .time-box .t-select-check.active .dropdown { height: 127px; } 
 
 
 /*
@@ -643,7 +643,7 @@ location
 
 
 /* 목록 리스트 박스(공통) */
-.m-academy-mngr-Wrap [class^="m-list-"] {padding:0 15px 75px; width:100%; display:flex; flex-direction:column; box-sizing:border-box; } 
+.m-academy-mngr-Wrap [class^="m-list-"] { padding:0 15px 75px; width:100%; display:flex; flex-direction:column; box-sizing:border-box; } 
 .m-academy-mngr-Wrap [class^="m-list-"] .arrow { width:5px; height: 5px; display: inline-block; vertical-align: middle; border: 1px solid #a6a6a6; border-width: 1px 1px 0 0; transform: rotate(45deg); margin: 0 3px; } 
 .m-academy-mngr-Wrap [class^="m-list-"] .listBox { position:relative; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); border: 1px solid #7e7e7e; border-radius:5px; padding: 15px; box-sizing:border-box; margin-bottom:10px; } 
 .m-academy-mngr-Wrap [class^="m-list-"] .listBox:last-child { margin-bottom:0; } 
@@ -810,3 +810,36 @@ location
 .m-academy-mngr-Wrap .m-file-list .sb-txt { color:#b6b6b8!important; } 
 .m-academy-mngr-Wrap .m-file-list button { margin:0; width: 20px; height: 20px; line-height: 20px; } 
 .m-academy-mngr-Wrap .m-file-list button::before { content:none; } 
+
+
+
+/* 학원선택 */
+.m-academy-mngr-Wrap .acdmyNm { background: url(../images/mobile_header_select.png) transparent right 10px center no-repeat; padding: 0 30px 0 15px; border: none; color: #fff; height: 50px; font-size: var(--m-fs15); background-size: 12px!important; } 
+.m-academy-mngr-Wrap .acdmyNm.color2 { color: #333; background: url(../images/m_select_arrow.png) transparent right 10px center no-repeat; } 
+
+/* 알림버튼 */
+.m-academy-mngr-Wrap .alarmBTN { background:url(../images/mobile-icon-alarm.png) no-repeat; width: 50px; height: 50px; background-position: center; background-size: 20px; position:relative; } 
+.m-academy-mngr-Wrap .alarmBTN.on:after { content:""; position:absolute; width:5px; height:5px; display:inline-block; border-radius:100%; background: #cdfa91; top: 10px; right: 12px; } 
+
+
+
+/* 전체메뉴 */
+.m-tong-allmenuPOP { background: #fff; display: flex; height: 100%; flex-direction: column; } 
+.m-tong-allmenuPOP .menuArea { display: flex; background: #F5F7FA; flex-grow: 2; } 
+.m-tong-allmenuPOP .all-1depth { width: 111px; display: flex; flex-direction: column; height: 100%; background: rgb(86, 97, 185); z-index: 2; box-shadow: inset -5px 4px 4px 3px rgb(37 37 37 / 11%); } 
+.m-tong-allmenuPOP .all-1depth a { font-size: 15px; width: 100%; text-align: center; border-width: 1px 0 0px; padding: 19px 0; color: #fff; } 
+.m-tong-allmenuPOP .all-1depth a.on { color: rgb(39 39 39); font-weight: bold; background: #fff; border-right: 1px solid #fff; } 
+.m-tong-allmenuPOP .m-innerMenu { flex-grow: 1; background: #FFFFFF; padding: 8px 20px; max-height: 100vh; overflow-y: scroll; scroll-behavior: smooth; } 
+.m-tong-allmenuPOP .m-innerMenu>li { padding: 10px 0; position:relative; } 
+.m-tong-allmenuPOP .m-innerMenu li.on>a { font-weight:bold; } 
+.m-tong-allmenuPOP .m-innerMenu>li:after { content: ''; position: absolute; top: 16px; right: 0; background: url(../images/m_select_arrow.png) no-repeat center/100%; width: 12px; height: 6px; transform: rotate(270deg); } 
+.m-tong-allmenuPOP .m-innerMenu li ul li:before { content: "\b7"; color: rgb(86, 97, 185); font-size: 24px; vertical-align: middle; margin-right: 3px; } 
+.m-tong-allmenuPOP .m-innerMenu a { font-size: 15px; color: #333333; } 
+.m-tong-allmenuPOP .m-innerMenu li ul li { border-bottom: none; position:relative; padding: 0 7px; } 
+.m-tong-allmenuPOP .m-innerMenu li ul li a { font-size: 14px; } 
+
+.m-tong-allmenuPOP .m-all-3depth { margin-top: 8px; } 
+
+/* 3depth가 있는 경우 class="m-all-3depth-on" 추가 */
+.m-tong-allmenuPOP .m-innerMenu>li.on.m-all-3depth-on:after { transform: rotate(180deg); } 
+.m-tong-allmenuPOP .m-innerMenu>li.m-all-3depth-on:after { transform: rotate(360deg); } 
