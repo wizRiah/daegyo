@@ -114,9 +114,9 @@
 /* 종강 */
 .opt-end { color: var(--pc-red)!important; } 
 /* 수강 */
-.opt-course { color: #000!important; } 
+.opt-course { color: var(--pc-bora-7)!important; } 
 /* 수강전 */
-.opt-be-course { color: var(--pc-bora-7)!important; } 
+.opt-be-course { color: #000!important;} 
 
 
 /* ***수납상태*** */
@@ -1318,10 +1318,9 @@ button i { display:inline-block; }
 
 
 /*목록 상단 토탈 및 선택/버튼 등 구조*/
-.m-listTopSetBox { flex-wrap: wrap; display: flex; /* height: 35px; */ justify-content: space-between; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; } 
+.m-listTopSetBox { flex-wrap: wrap; display: flex; justify-content: space-between; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; } 
 .m-listTopSetBox.flex-end { height: auto; justify-content: flex-end; margin-bottom: 15px; } 
-.m-listTopSetBox>div { } 
-.m-listTopSetBox .Totaltxt { color:#9a9a9a; font-size:14px; } 
+.m-listTopSetBox .Totaltxt { color: #6d6d6d; font-size:14px; } 
 .m-listTopSetBox .Totaltxt strong { color:#333; font-weight:500; } 
 .m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; } 
 .m-listTopSetBox>div:last-child button:last-child { margin-right:0; } 
@@ -1346,6 +1345,13 @@ button i { display:inline-block; }
  /* border-bottom 있는 텍스트 */
  .m-academy-mngr-Wrap .text-wrap-tit { display: flex; align-items: center; padding-bottom: 17px; border-bottom: 1px solid #ececf0; } 
  .m-academy-mngr-Wrap .text-wrap-tit .sub-tit { margin-bottom:0; } 
+
+ /* 리스트의 제목 */
+ .m-academy-mngr-Wrap .list-title { font-size: 16px; font-weight: bold; color: #3c3c3c; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+
+
+
+
 
 /* 서브아이템 리스트 */
 .m-academy-mngr-Wrap .m-item-list { display: flex; flex-direction: column; flex-wrap: wrap; } 
@@ -1397,7 +1403,7 @@ button i { display:inline-block; }
 
 /* 버튼 */
 .m-academy-mngr-Wrap .t-button-grey { background: #e4e4e4!important; color: rgb(51 51 51 / 70%); } 
-.m-academy-mngr-Wrap .bt-btnbox { display: flex; /* margin-top: 11px; */ margin-bottom:5px; } 
+.m-academy-mngr-Wrap .bt-btnbox { display: flex; margin-bottom:5px; } 
 .m-academy-mngr-Wrap .bt-btnbox button,.m-academy-mngr-Wrap .bt-btnbox a { height: 50px; line-height: 50px; font-size: var(--m-fs15); font-weight: var(--text-bold); color: rgb(51 51 51 / 70%); text-align: center; flex: 1; display: flex; justify-content: center; box-sizing: border-box; align-items: center; } 
 .m-academy-mngr-Wrap .t-popup .canclebtn { background:#fff; border-top: 1px solid #ddd; } 
 .m-academy-mngr-Wrap .registbtn { background: var(--pc-bora-2); color: #fff!important; } 
@@ -1439,6 +1445,15 @@ button i { display:inline-block; }
 
 
 
+
+/* 직급박스 */
+.m-academy-mngr-Wrap .psBox { box-sizing: border-box; font-size: 12px; line-height: 20px; display: inline-block; background: #33333324; border-radius: 2px; font-weight: 600; padding: 0 6px; overflow: hidden; color: #333; } 
+
+
+
+
+
+
 /* 
 팝업 
 */
@@ -1453,7 +1468,7 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .t-popup .bt-btnbox { margin-bottom:0; } 
 .m-academy-mngr-Wrap .t-popup .pop-container { padding:0; } 
 .m-academy-mngr-Wrap .t-popup .p-close { display:none; } 
-
+.m-academy-mngr-Wrap .t-popup .pop-cont .m-listTopSetBox { padding:0;}
 
 
 /* 뒤로가기 */
