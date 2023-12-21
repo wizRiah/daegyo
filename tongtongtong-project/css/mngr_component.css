@@ -364,15 +364,15 @@ select
 
 
 
-
 /* tab menu 3 */
-.tab-03 { display: inline-flex; } 
-.tab-03 li { position: relative; text-align: center; box-sizing: border-box; padding-right: 11px; margin-right: 5px; } 
-.tab-03 li:last-child { padding:0; margin:0; } 
-.tab-03 li button { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; box-sizing: border-box; } 
-.tab-03 li button > * { display:inline-block; line-height:normal; } 
-.tab-03 li button .status { transition: color ease 0.3s; word-break: keep-all; color: #494949; font-size: 13px; } 
-.tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818196; top: 50%; transform: translateY(-50%); } 
+.tab-03 { display: inline-flex; }
+.tab-03 li { position: relative; text-align: center; box-sizing: border-box; padding-right: 11px; margin-right: 5px; }
+.tab-03 li:last-child { padding:0; margin:0; }
+.tab-03 li button { height: 22px; position: relative; display: flex; justify-content: center; align-items: center; width: 100%; box-sizing: border-box; }
+.tab-03 li button > * { display:inline-block; line-height:normal; }
+.tab-03 li button .status { transition: color ease 0.3s; word-break: keep-all; color: #494949; font-size: 13px; }
+.tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818196; top: 50%; transform: translateY(-50%); }
+
 
 
  /* active */
@@ -1335,14 +1335,16 @@ button i { display:inline-block; }
  body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; } 
 
 
+
 /*목록 상단 토탈 및 선택/버튼 등 구조*/
-.m-listTopSetBox { flex-wrap: wrap; display: flex; justify-content: space-between; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; } 
-.m-listTopSetBox.flex-end { height: auto; justify-content: flex-end; margin-bottom: 15px; } 
-.m-listTopSetBox .Totaltxt { color: #6d6d6d; font-size:14px; } 
-.m-listTopSetBox .Totaltxt strong { color:#333; font-weight:500; } 
-.m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; } 
-.m-listTopSetBox>div:last-child button:last-child { margin-right:0; } 
-.m-listTopSetBox>div:last-child button+button { margin-left:0; } 
+.m-listTopSetBox { gap: 10px; flex-wrap: wrap; display: flex; justify-content: space-between; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; }
+.m-listTopSetBox.flex-end { height: auto; justify-content: flex-end; margin-bottom: 15px; }
+.m-listTopSetBox .Totaltxt { color: #6d6d6d; font-size:14px; }
+.m-listTopSetBox .Totaltxt strong { color:#333; font-weight:500; }
+.m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; }
+.m-listTopSetBox>div:last-child button:last-child { margin-right:0; }
+.m-listTopSetBox>div:last-child button+button { margin-left:0; }
+
 
 
 
@@ -1500,21 +1502,27 @@ button i { display:inline-block; }
 
 
 
-
 @media (max-width: 300px){
- :root { --m-fs15 : 14px; --m-fs14 : 13px; } 
- .m-academy-mngr-Wrap header .header-top .header-cnt .m-logo { padding:0 10px; } 
- .m-academy-mngr-Wrap .acdmyNm { padding: 0 30px 0 10px!important; } 
- .m-academy-mngr-Wrap .label-set select { width: 100%; } 
- .m-academy-mngr-Wrap .label-set .label-text { width: 50px; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { margin-bottom:10px; display: flex; width: 100%; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li { flex: 1; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .btn-set { width:100%; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .btn-set [class^="t-button"]:first-child { flex:1; } 
- .m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { font-size: 13px; } 
- .m-academy-mngr-Wrap .check-list.col3 li { width: 49%; } 
- .m-academy-mngr-Wrap .bt-btnbox button, .m-academy-mngr-Wrap .bt-btnbox a { height:40px; } 
- .m-academy-mngr-Wrap .m-list-student .listBox {flex-direction: column; align-items: center;}
- .m-academy-mngr-Wrap .m-list-student .prsn-info { padding-left: 0; width: 100%;}
- .m-academy-mngr-Wrap .m-list-student .prsn-photo { margin-bottom:10px;}
- }
+    :root { --m-fs15 : 14px; --m-fs14 : 13px; }
+    .m-academy-mngr-Wrap header .header-top .header-cnt .m-logo { padding:0 10px; }
+    .m-academy-mngr-Wrap .acdmyNm { padding: 0 30px 0 10px!important; }
+    .m-academy-mngr-Wrap .label-set select { width: 100%; }
+    .m-academy-mngr-Wrap .label-set .label-text { width: 50px; }
+    .m-academy-mngr-Wrap .m-listTopSetBox { margin: 10px 0;}
+    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { display: flex; width: 100%; flex-wrap: wrap; gap: 5px;}
+    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li { width: 32%; margin-right: 0; padding-right: 11px;}
+    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n):after { content:none;}
+    .tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818196; top: 50%; transform: translateY(-50%); }
+    .m-academy-mngr-Wrap .m-listTopSetBox .btn-set { width:100%; }
+    .m-academy-mngr-Wrap .m-listTopSetBox .btn-set [class^="t-button"]:first-child { flex:1; }
+    .m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { font-size: 13px; }
+    .m-academy-mngr-Wrap .check-list.col3 li { width: 49%; }
+    .m-academy-mngr-Wrap .bt-btnbox button, .m-academy-mngr-Wrap .bt-btnbox a { height:40px; }
+    .m-academy-mngr-Wrap .m-list-student .listBox {flex-direction: column; align-items: center;}
+    .m-academy-mngr-Wrap .m-list-student .prsn-info { padding-left: 0; width: 100%;}
+    .m-academy-mngr-Wrap .m-list-student .prsn-photo { margin-bottom:10px;}
+   
+   
+   
+    }
+   
