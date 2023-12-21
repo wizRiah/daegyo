@@ -1304,6 +1304,7 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap footer { background:#fff; } 
 .m-academy-mngr-Wrap footer .footer-inner { } 
 
+
 /*
 기본 검색박스
 */
@@ -1314,6 +1315,9 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox input[type="text"]::placeholder { color:#afafb0; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox button { order: 2; width: 40px; height: 40px; background: url(../images/mobile-icon-srch.png) center no-repeat; background-size: 21px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox + .form-list { padding-top:10px; } 
+
+
+ /*모바일 데이터피커 팝업*/
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker { border-bottom: 1px solid #0a3460; display:flex; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker:only-child { margin-bottom:15px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker .date-picker { flex-grow:1; } 
@@ -1321,6 +1325,12 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker .date-picker .dp__input_icon { } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker .date-picker .dp__input_icon button { width:37px; height:55px; background:url(../images/mobile-icon-caldendar.png) center no-repeat; background-size:22px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-date-picker .date-picker .dp__input_icon button img { display:none; } 
+body.mobile .dp__menu.dp__theme_light.dp__menu_index { width:calc(100% - 30px); transform:translateY(-50%) !important; left:15px !important; top:50% !important; } 
+body.mobile .dp__arrow_top { display:none; } 
+body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; } 
+
+
+
 .m-academy-mngr-Wrap .m-tooltip { width:55px; height:55px; background:url(../images/mobile-icon-tooltip.png) center right no-repeat; background-size:22px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set { display: flex; align-items: center; height: 37px; width: 100%; background: #fff; border-radius: 3px; box-sizing: border-box; position: relative; padding: 0 15px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set .label-text { width: 65px; flex-shrink: 0; font-size: var(--m-fs15); opacity: 0.6; font-weight: var(--text-regular); margin-right: 0; } 
@@ -1328,11 +1338,6 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set:first-child { margin-top:0; } 
 
 
-
- /*모바일 데이터피커 팝업*/
- body.mobile .dp__menu.dp__theme_light.dp__menu_index { width:calc(100% - 30px); transform:translateY(-50%) !important; left:15px !important; top:50% !important; } 
- body.mobile .dp__arrow_top { display:none; } 
- body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; } 
 
 
 
@@ -1409,7 +1414,7 @@ button i { display:inline-block; }
 
 /* 인풋 */
 .m-academy-mngr-Wrap input { padding: 0 12px; height:45px; border-radius: 3px; font-size: var(--m-fs14); } 
-.m-academy-mngr-Wrap input[type="number"] { text-align: right; width:100%; } 
+.m-academy-mngr-Wrap input[type="number"] { width:100%; } 
 
 /* 라디오 */
 .m-academy-mngr-Wrap .t-radio-01 { display: inline-flex; flex-direction: column; } 
@@ -1423,9 +1428,9 @@ button i { display:inline-block; }
 
 /* 버튼 */
 .m-academy-mngr-Wrap .t-button-grey { background: #e4e4e4!important; color: rgb(51 51 51 / 70%); } 
-.m-academy-mngr-Wrap .bt-btnbox { display: flex; margin-bottom:5px; } 
+.m-academy-mngr-Wrap .bt-btnbox { border-bottom: 1px solid #ddd; display: flex; margin-bottom:5px; } 
 .m-academy-mngr-Wrap .bt-btnbox button,.m-academy-mngr-Wrap .bt-btnbox a { height: 50px; line-height: 50px; font-size: var(--m-fs15); font-weight: var(--text-bold); color: rgb(51 51 51 / 70%); text-align: center; flex: 1; display: flex; justify-content: center; box-sizing: border-box; align-items: center; } 
-.m-academy-mngr-Wrap .t-popup .canclebtn { background:#fff; border-top: 1px solid #ddd; } 
+.m-academy-mngr-Wrap .canclebtn { background:#fff; border-top: 1px solid #ddd; } 
 .m-academy-mngr-Wrap .registbtn { background: var(--pc-bora-2); color: #fff!important; } 
 .m-academy-mngr-Wrap .resetbtn { background: #f4f4f5!important; } 
 .m-academy-mngr-Wrap .t-button-plus { padding:0; color: #a1a1a1; border: 1px solid #c3cad4; min-width:auto!important; width: 15px; height: 15px; } 
@@ -1465,6 +1470,16 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-bullet01::before { content:"\b7"; margin-right:3px; } 
 
 
+/* 사진박스 */
+.m-academy-mngr-Wrap .prsn-photo { width:75px; height:75px; border-radius:4px; border:1px solid #e5e5e5; overflow: hidden; } 
+.m-academy-mngr-Wrap .prsn-photo img { max-width:100%; } 
+
+
+
+
+
+
+
 
 /* 
 팝업 
@@ -1477,7 +1492,7 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .t-popup button.close:hover { background-color: #b2b2b226; } 
 .m-academy-mngr-Wrap .t-popup .pop-cont { padding: 15px; } 
 .m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; border-bottom:3px solid #f0f0f1; } 
-.m-academy-mngr-Wrap .t-popup .bt-btnbox { margin-bottom:0; } 
+.m-academy-mngr-Wrap .t-popup .bt-btnbox { margin-bottom:0; border-bottom:0;} 
 .m-academy-mngr-Wrap .t-popup .pop-container { padding:0; } 
 .m-academy-mngr-Wrap .t-popup .p-close { display:none; } 
 .m-academy-mngr-Wrap .t-popup .pop-cont .m-listTopSetBox { padding:0; } 
@@ -1502,6 +1517,9 @@ button i { display:inline-block; }
 
 
 
+
+
+/* 반응형 */
 @media (max-width: 300px){
     :root { --m-fs15 : 14px; --m-fs14 : 13px; }
     .m-academy-mngr-Wrap header .header-top .header-cnt .m-logo { padding:0 10px; }
@@ -1520,9 +1538,6 @@ button i { display:inline-block; }
     .m-academy-mngr-Wrap .bt-btnbox button, .m-academy-mngr-Wrap .bt-btnbox a { height:40px; }
     .m-academy-mngr-Wrap .m-list-student .listBox {flex-direction: column; align-items: center;}
     .m-academy-mngr-Wrap .m-list-student .prsn-info { padding-left: 0; width: 100%;}
-    .m-academy-mngr-Wrap .m-list-student .prsn-photo { margin-bottom:10px;}
-   
-   
-   
+    .m-academy-mngr-Wrap .m-list-student .prsn-photo { margin-bottom:15px;}
     }
-   
+  

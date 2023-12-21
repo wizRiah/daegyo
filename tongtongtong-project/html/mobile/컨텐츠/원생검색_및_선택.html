@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>원생검색 및 선택</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-top">
+        <div class="header-cnt">
+          <!-- 로고영역 -->
+          <a class="m-logo" href="#">
+            <span>new통통통</span>
+          </a>
+          <!-- /로고영역 -->
+
+          <!-- 학원선택 -->
+          <select class="acdmyNm">
+            <option>대교에듀베이션학원</option>
+          </select>
+          <!-- /학원선택 -->
+        </div>
+        <!-- 알림버튼 -->
+        <button type="button" class="alarmBTN on">
+          <!-- 알림이 있는 경우 on클래스 추가. -->
+        </button>
+        <!-- /알림버튼 -->
+      </div>
+    </header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>학사관리</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li class="on">
+          <!-- 활성화된 메뉴는 on클래스 추가. -->
+          <a>반</a>
+        </li>
+        <li><a>원생</a></li>
+        <li><a>수납</a></li>
+        <li><a>상담</a></li>
+        <li><a>직원</a></li>
+        <li><a>통통통설정</a></li>
+        <li><a>앱관리</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+      <!--  <ul class="depth2-menu-Wrap">
+      <li class="on"><a>하위메뉴1</a></li>
+      <li><a>하위메뉴2</a></li>
+      <li><a>하위메뉴3</a></li>
+      <li><a>하위메뉴4</a></li>
+    </ul> -->
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+      <!-- 기본 검색박스 -->
+      <div class="m-basicSrchBox">
+        <div class="m-srchBox">
+          <input type="text" placeholder="반명, 담당강사 검색">
+          <button type="button" class="button"></button>
+        </div>
+      </div>
+      <!-- /기본 검색박스 -->
+
+      <!-- content -->
+      <div class="content">
+
+
+        <div class="m-item-list">
+
+          <div class="m-item">
+            <p class="sub-tit">사진</p>
+            <div class="prsn-photo">
+              <img src="/images/profie-df.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">이름</p><input type="text" class="txtfield-basic" placeholder="반명을 입력해주세요.">
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">닉네임</p>
+            <input type="text" class="txtfield-basic" placeholder="반명을 입력해주세요.">
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">휴대폰</p>
+            <input type="number" class="txtfield-basic" placeholder="“-” 제외한 원생 휴대폰 번호를 입력해 주세요">
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">성별</p>
+            <div class="m-pageTap-wrap">
+              <button class="m-pageTap active" type="button">남</button>
+              <button class="m-pageTap" type="button">여</button>
+            </div>
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">학부/학년</p>
+            <div class="label-set">
+              <select name="" id="">
+                <option value="" disabled="" selected="">학부 선택</option>
+                <option value="">20개씩 보기</option>
+                <option value="">40개씩 보기</option>
+              </select>
+              <select name="" id="">
+                <option value="" disabled="" selected="">학년 선택</option>
+                <option value="">20개씩 보기</option>
+                <option value="">40개씩 보기</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="bt-btnbox">
+          <button type="button" class="registbtn">등록</button><button type="button" class="canclebtn">취소</button>
+        </div>
+
+
+
+        <!-- 리스트 -->
+
+        <!-- /리스트 -->
+
+
+
+
+
+      </div>
+      <!-- /content -->
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-inner"></div>
+    </footer>
+    <!-- /푸터 -->
+
+
+    <!-- 하단고정메뉴 -->
+    <div class="footer-fixed">
+      <ul>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
+        <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
+        <li class="btn-mymenu"><button type="button"></button></li>
+        <li class="btn-srchpp"><button type="button">원생검색</button></li>
+        <li class="btn-mypage"><button type="button">마이페이지</button></li>
+      </ul>
+    </div>
+
+
+    <!-- 팝업 뒤 배경 -->
+    <!-- <div class="pop-bg">
+    </div> -->
+    <!-- /팝업 뒤 배경 -->
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
