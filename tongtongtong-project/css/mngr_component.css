@@ -242,8 +242,8 @@
 .flex-grow-2 { flex-grow: 2!important; } 
 .flex-shrink-0 { flex-shrink: 0!important; } 
 .flex-center-set { display:inline-flex; align-items:center !important; } 
-.gap5 { display:flex; gap:5px; } 
-.gap10 { display:flex; gap:10px; } 
+.gap5 { display:flex; gap:5px; flex-wrap: wrap;} 
+.gap10 { display:flex; gap:10px; flex-wrap: wrap;} 
 
 
 
@@ -1475,7 +1475,7 @@ body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
 
 
 /* 인풋 */
-.m-academy-mngr-Wrap input { padding: 0 12px; height:45px; border-radius: 3px; font-size: var(--m-fs14); }
+.m-academy-mngr-Wrap input { padding: 0 8px; height:45px; border-radius: 3px; font-size: var(--m-fs14); }
 .m-academy-mngr-Wrap input[type="number"] { width:100%; }
 
 /* 라디오 */
@@ -1533,7 +1533,7 @@ body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
 
 
 /* 사진박스 */
-.m-academy-mngr-Wrap .prsn-photo { text-align:center; font-size:13px; display: flex; align-items: center; justify-content: center; width:75px; height:75px; border-radius:4px; border:1px solid #e5e5e5; overflow: hidden; }
+.m-academy-mngr-Wrap .prsn-photo { box-sizing: border-box; text-align:center; font-size:13px; display: flex; align-items: center; justify-content: center; width:75px; height:75px; border-radius:4px; border:1px solid #e5e5e5; overflow: hidden; }
 .m-academy-mngr-Wrap .prsn-photo img { max-width:100%; }
 
 
@@ -1582,7 +1582,7 @@ body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
 
 
 /* 반응형 */
-@media (max-width: 300px){
+@media (max-width: 376px){
  :root { --m-fs15 : 14px; --m-fs14 : 13px; }
  .m-academy-mngr-Wrap header .header-top .header-cnt .m-logo { padding:0 10px; }
  .m-academy-mngr-Wrap .acdmyNm { padding: 0 30px 0 10px!important; }
@@ -1601,7 +1601,4 @@ body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
  .m-academy-mngr-Wrap .m-list-student .listBox { flex-direction: column; align-items: center; }
  .m-academy-mngr-Wrap .m-list-student .prsn-info { padding-left: 0; width: 100%; }
  .m-academy-mngr-Wrap .m-list-student .prsn-photo { margin-bottom:15px; }
- .m-academy-mngr-Wrap .m-list-student.m-item-list .label-set { align-items: flex-start; flex-direction: column; margin-top: 20px;}
- .m-academy-mngr-Wrap .m-list-student.m-item-list .label-text { margin-bottom: 8px; }
- .m-academy-mngr-Wrap .m-list-student.m-item-list .prsn-photo { margin-bottom:0; }
 }
