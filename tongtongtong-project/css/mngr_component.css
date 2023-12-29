@@ -371,14 +371,13 @@ select
 
 
 /* tab menu 3 */
-.tab-03 { display: inline-flex; } 
-.tab-03 li { position: relative; text-align: center; box-sizing: border-box; padding-right: 11px; margin-right: 5px; } 
-.tab-03 li:last-child { padding:0; margin:0; } 
-.tab-03 li button { height: 22px; position: relative; display: flex; justify-content: center; align-items: center; width: 100%; box-sizing: border-box; } 
-.tab-03 li button > * { display:inline-block; line-height:normal; } 
-.tab-03 li button .status { transition: color ease 0.3s; word-break: keep-all; color: #494949; font-size: 13px; } 
-.tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818196; top: 50%; transform: translateY(-50%); } 
-
+.tab-03 { display: inline-flex; }
+.tab-03 li { position: relative; text-align: center; box-sizing: border-box; padding-right: 11px; margin-right: 5px; }
+.tab-03 li:last-child { padding:0; margin:0; }
+.tab-03 li button { height: 22px; position: relative; display: flex; justify-content: center; align-items: center; width: 100%; box-sizing: border-box; }
+.tab-03 li button > * { display:inline-block; line-height:normal; }
+.tab-03 li button .status { transition: color ease 0.3s; word-break: keep-all; color: #494949; font-size: 13px; }
+.tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818178; top: 50%; transform: translateY(-50%); }
 
 
  /* active */
@@ -523,6 +522,7 @@ select
  .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_row .dp__overlay_col { padding:0; } 
  .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__overlay_row .dp__overlay_col .dp__overlay_cell_pad { padding:5px 0; font-size:15px; } 
  .dp__instance_calendar .dp__time_input .dp__time_col + .dp__overlay .dp__button { display:none; } 
+ .dp__overlay_container { overflow-y: visible!important;}
 
 
 
@@ -1539,10 +1539,11 @@ body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
     .m-academy-mngr-Wrap .label-set select { width: 100%; }
     .m-academy-mngr-Wrap .label-set .label-text { width: 50px; }
     .m-academy-mngr-Wrap .m-listTopSetBox { margin: 10px 0; }
-    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { justify-content: space-between; display: flex; width: 100%; flex-wrap: wrap; gap: 5px; }
+    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { display: flex; width: 100%; flex-wrap: wrap; gap: 5px 2%; }
     .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li { width: 32%; margin-right: 0; padding-right: 11px; }
+    .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n){ padding-right:0; }
     .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n):after { content:none; }
-    .tab-03 li:not(:last-child):after { content: "|"; position: absolute; right: 0; color: #81818196; top: 50%; transform: translateY(-50%); }
+  
     .m-academy-mngr-Wrap .m-listTopSetBox .btn-set { width:100%; }
     .m-academy-mngr-Wrap .m-listTopSetBox .btn-set [class^="t-button"]:first-child { flex:1; }
     .m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { font-size: 13px; }
