@@ -69,12 +69,6 @@
       </ul>
       <!-- /메뉴 -->
 
-      <!--  <ul class="depth2-menu-Wrap">
-     <li class="on"><a>하위메뉴1</a></li>
-     <li><a>하위메뉴2</a></li>
-     <li><a>하위메뉴3</a></li>
-     <li><a>하위메뉴4</a></li>
-   </ul> -->
     </div>
     <!-- /상단 메뉴 -->
 
@@ -90,6 +84,7 @@
 
       <!-- content -->
       <div class="content">
+
 
         <ul class="tab-04">
           <li class="active">
@@ -108,7 +103,7 @@
             </button></li>
         </ul>
 
-        
+
         <!-- 기본 검색박스 -->
         <div class="m-basicSrchBox">
           <div class="m-srchBox">
@@ -116,73 +111,128 @@
             <button type="button" class="button"></button>
           </div>
 
+          <!-- 카테고리 슬라이드 (스와이퍼 개발 필요) -->
+          <div class="brdCategory-swiperWrap">
+            <div class="swiper-slide swiper-slide-active">전체</div>
+            <div class="swiper-slide">행사안내</div>
+            <div class="swiper-slide">공지사항</div>
+            <div class="swiper-slide">입시정보</div>
+            <div class="swiper-slide">개인알림</div>
+            <div class="swiper-slide">개인알림</div>
+            <div class="swiper-slide">개인알림</div>
+          </div>
+          <!-- /카테고리 슬라이드 (스와이퍼 개발 필요) -->
         </div>
         <!-- /기본 검색박스 -->
-        
 
-        
+
         <!-- 리스트 상단 선택박스 등 -->
         <div class="m-listTopSetBox">
-          <div>
-            <span class="Totaltxt">총 <strong>10</strong>건</span>
-          </div>
-          <div>
+          <span class="Totaltxt">총 <strong>10</strong>건</span>
+          <div class="btn-set"><button type="button" class="t-button-xs t-button-bora6 m0">알림장 등록</button>
             <select>
-              <option>가나다순</option>
               <option>등록순</option>
+              <option>반명순</option>
             </select>
           </div>
         </div>
-
+        <!-- /리스트 상단 선택박스 등 -->
 
         <!-- 리스트 시작 -->
         <div class="m-list-brdAlarm">
 
-          <div class="listBox">
-            <div class="brdgenre">
-              <div>
-                <div class="smallBox opt-end">행사안내</div>
-              </div>
-              <div class="brdBtnBox">
-                <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view"></button>
-              </div>
-            </div>
-            <a class="writingNm">알림장 제목</a>
-            <div class="conBtnBox">
-              <ul class="writingInfo">
-                <li>2023-11-1 (수) · 김직원(닉네임)</li>
-                <li>10명 중 3명 확인</li>
-              </ul>
-              <div class="rBtnbox">
-                <div class="filenum">3</div>
-                <div class="commentnum">0</div>
-              </div>
-            </div>
-          </div>
 
+          <!-- listBox -->
           <div class="listBox">
+
             <div class="brdgenre">
-              <div>
-                <div class="smallBox opt-end">행사안내</div>
-              </div>
+              <div class="smallBox opt-event">행사안내</div>
+              <!-- 알림대상 부분 -->
               <div class="brdBtnBox">
-                <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view"></button>
+                <p class="bar-txt">
+                  <i class="i-a-check"></i><span class="ml3">알림대상</span>
+                </p>
+
+                <div class="slash-txt-list">
+                  <span class="num">재원생 전체</span>
+                </div>
+
+                <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view">
+                  <i class="i-plus"></i>
+                </button>
+
               </div>
+              <!-- /알림대상 부분 -->
             </div>
-            <a class="writingNm">알림장 제목 알림장 제목 알림장 제목</a>
+
+            <!-- 게시글 제목 -->
+            <a class="writingNm list-title">알림장 제목</a>
+            <!-- /게시글 제목 -->
+
             <div class="conBtnBox">
               <ul class="writingInfo">
-                <li>2023-11-1 (수) · 김직원(닉네임)</li>
-                <li>10명 중 3명 확인</li>
+                <li><span class="bar-txt">김직원(닉네임)</span>2023-11-1 (수)</li>
               </ul>
+            </div>
+            
+            <div class="m-brd-box">
               <div class="rBtnbox">
                 <div class="filenum">3</div>
                 <div class="commentnum">0</div>
               </div>
+              <div>조회수<span class="ml3">120</span></div>
             </div>
+
           </div>
+          <!-- /listBox -->
+
+          <!-- listBox -->
+          <div class="listBox">
+            <div class="brdgenre">
+              <div class="smallBox opt-event">행사안내</div>
+
+              <!-- 알림대상 부분 -->
+              <div class="brdBtnBox">
+                <p class="bar-txt">
+                  <i class="i-a-check"></i><span class="ml3">알림대상</span>
+                </p>
+                <div class="slash-txt-list">
+                  <span class="slash-txt">반(<span class="num">2</span>)</span>
+                  <span>원생(<span class="num">2</span>)</span>
+                </div>
+                <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view">
+                  <i class="i-plus"></i>
+                </button>
+              </div>
+              <!-- /알림대상 부분 -->
+            </div>
+
+            <a class="writingNm list-title">알림장 제목</a>
+
+            <div class="conBtnBox">
+              <ul class="writingInfo">
+                <li><span class="bar-txt">김직원(닉네임)</span>2023-11-1 (수)</li>
+              </ul>
+            </div>
+
+            <div class="m-brd-box">
+              <div class="rBtnbox">
+                <div class="filenum">3</div>
+                <div class="commentnum">0</div>
+              </div>
+              <div>조회수<span class="ml3">120</span></div>
+            </div>
+
+          </div>
+          <!-- /listBox -->
+
+
+          <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
+
 
         </div>
+        <!-- /리스트 -->
+
       </div>
       <!-- /content -->
 
