@@ -56,25 +56,19 @@
 
       <!-- 메뉴 -->
       <ul class="menu-Wrap">
-        <li class="on">
+        <li>
           <!-- 활성화된 메뉴는 on클래스 추가. -->
           <a>반</a>
         </li>
         <li><a>원생</a></li>
         <li><a>수납</a></li>
-        <li><a>상담</a></li>
+        <li class="on"><a>상담</a></li>
         <li><a>직원</a></li>
         <li><a>통통통설정</a></li>
         <li><a>앱관리</a></li>
       </ul>
       <!-- /메뉴 -->
 
-      <!--  <ul class="depth2-menu-Wrap">
-      <li class="on"><a>하위메뉴1</a></li>
-      <li><a>하위메뉴2</a></li>
-      <li><a>하위메뉴3</a></li>
-      <li><a>하위메뉴4</a></li>
-    </ul> -->
     </div>
     <!-- /상단 메뉴 -->
 
@@ -84,142 +78,221 @@
     <div class="container">
 
 
-      <!-- content -->
-      <div class="content">
-        <!-- 리스트 상단 선택박스 등 -->
+
+
+      <!-- 상단부분 -->
+      <div class="m-basicSrchBox">
+
+        <!-- 데이트피커 -->
+        <span class="date-picker">
+          <div class="dp__main dp__theme_light">
+            <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+              aria-readonly="false">
+              <div class="dp__input_wrap">
+                <input name="fromDate"
+                  class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                  inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button
+                    style="margin-right: 5px;">
+                    <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </span>
+        <!-- /데이트피커 -->
 
         <div class="m-listTopSetBox flex-end">
-          <div>
-            <button type="button" class="t-button-xms t-button-white t-button-grey-bd">오늘</button> 
-              <button type="button" class="t-button-xms"><i class="i-regist2"></i><span>상담 등록</span></button> 
-              <button type="button" class="t-button-xms t-button-grey i-sortList"></button> 
+          <div class="btn-set">
+            <button type="button" class="m-infoTip mr5"></button>
+            <!-- 오늘 버튼 클릭시 "today" 클래스 추가 -->
+            <button type="button" class="t-button-xs t-button-grey-bd today">오늘</button>
+            <button type="button" class="t-button-xs t-button-bora6">상담 등록</button>
+            <!-- 목록 버튼 -->
+            <button type="button" class="t-button-xs t-button-grey-bd i-sortList"></button>
+            <!-- 달력 버튼 -->
+            <button type="button" class="t-button-xs t-button-grey-bd i-calender"></button>
           </div>
         </div>
 
+      </div>
+      <!-- /상단부분 -->
+
+
+
+
+
+      <!-- content -->
+      <div class="content">
+
+
+
+
+
         <!-- 리스트 시작 -->
-        <div class="m-list-dailyList">
-          <strong class="listTit">2023년 11월</strong>
-          <ol class="ol-day">
-            <li>
-              <div class="dateCircle">
-                <div class="dayNm">2</div>
-                <div class="dayWk">WED</div>
-              </div>
-              <ol class="ol-time">
-                <li>
-                  <div class="whatTime">오후 1시</div>
-                  <div class="schdlBox">
-                    <div class="csgenre">
-                      <div>
-                        <div class="smallBox opt-end">종료</div>
-                        등록상담
-                      </div>
-                      <div class="csBtnBox">
-                        <button type="button" class="greyiconBtn go-modify"></button>
-                        <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
-                      </div>
-                    </div>
-                    <div class="csApplicant">
-                      <div class="apcntname">홍길동</div>
-                      <div class="apcntphon">010-1234-0000</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="whatTime">오후 1시</div>
-                  <div class="schdlBox">
-                    <div class="csgenre">
-                      <div>
-                        <div class="smallBox opt-regist">상담</div>
-                        등록상담
-                      </div>
-                      <div class="csBtnBox">
-                        <button type="button" class="greyiconBtn go-modify"></button>
-                        <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
-                      </div>
-                    </div>
-                    <div class="csApplicant">
-                      <div class="apcntname">홍길동</div>
-                      <div class="apcntphon">010-1234-0000</div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <div class="dateCircle today">
-                <!-- 오늘날짜에 today 클래스 추가. -->
-                <div class="dayNm">3</div>
-                <div class="dayWk">THU</div>
-              </div>
-              <ol class="ol-time">
-                <li>
-                  <div class="whatTime">오후 1시</div>
-                  <div class="schdlBox">
-                    <div class="csgenre">
-                      <div>
-                        <div class="smallBox opt-end">종료</div>
-                        등록상담
-                      </div>
-                      <div class="csBtnBox">
-                        <button type="button" class="greyiconBtn go-modify"></button>
-                        <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
-                      </div>
-                    </div>
-                    <div class="csApplicant">
-                      <div class="apcntname">홍길동</div>
-                      <div class="apcntphon">010-1234-0000</div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <div class="dateCircle">
-                <div class="dayNm">4</div>
-                <div class="dayWk">FRI</div>
-              </div>
-              <ol class="ol-time">
-                <li>
-                  <div class="no-data">일정이 없습니다.</div>
-                  <!-- 상담일정이 없는 경우 no-data -->
-                </li>
-              </ol>
-            </li>
-          </ol>
+        <div class="m-list-dailyList m-item-list">
 
 
-          <strong class="listTit">2023년 11월</strong>
-          <ol class="ol-day">
-            <li>
-              <div class="dateCircle">
-                <div class="dayNm">25</div>
-                <div class="dayWk">THU</div>
-              </div>
-              <ol class="ol-time">
-                <li>
-                  <div class="whatTime">오후 1시</div>
-                  <div class="schdlBox">
-                    <div class="csgenre">
-                      <div>
-                        <div class="smallBox opt-end">종료</div>
-                        등록상담
-                      </div>
-                      <div class="csBtnBox">
-                        <button type="button" class="greyiconBtn go-modify"></button>
-                        <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
+          <!-- m-item -->
+          <div class="m-item">
+            <p class="listTit">2023년 11월</p>
+
+            <!-- 한달 짜리 -->
+            <ol class="ol-day">
+
+              <!-- 하루 짜리 -->
+              <li>
+                <div class="dateCircle">
+                  <div class="dayNm">2</div>
+                  <div class="dayWk">수</div>
+                </div>
+                <ol class="ol-time">
+                  <li>
+                    <div class="schdlBox">
+                      <div class="whatTime">오후<br>1시</div>
+                      <div class="schdl-cont">
+                        <div>
+                          <div class="csgenre">
+                            <div class="smallBox opt-end">종료</div>등록상담
+
+                          </div>
+                          <div class="csApplicant">
+                            <div class="apcntname">홍길동</div>
+                            <div class="apcntphon">010-1234-0000</div>
+                          </div>
+                        </div>
+                        <div class="csBtnBox">
+                          <button type="button" class="greyiconBtn go-modify"></button>
+                          <button type="button" class="greyiconBtn go-view"></button>
+                        </div>
                       </div>
                     </div>
-                    <div class="csApplicant">
-                      <div class="apcntname">홍길동</div>
-                      <div class="apcntphon">010-1234-0000</div>
+                  </li>
+                  <li>
+                    <div class="schdlBox">
+                      <div class="whatTime">오후<br>2시</div>
+                      <div class="schdl-cont">
+                        <div>
+                          <div class="csgenre">
+                            <div class="smallBox opt-course">상담</div>원생상담
+                          </div>
+                          <div class="csApplicant">
+                            <div class="apcntname">홍길동</div>
+                            <div class="apcntphon">010-1234-0000</div>
+                          </div>
+                        </div>
+                        <div class="csBtnBox">
+                          <button type="button" class="greyiconBtn go-modify"></button>
+                          <button type="button" class="greyiconBtn go-view"></button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ol>
-            </li>
-          </ol>
+                  </li>
+                </ol>
+              </li>
+              <!-- /하루 짜리 -->
+
+              <li>
+                 <!-- 오늘날짜에 today 클래스 추가. -->
+                <div class="dateCircle today">
+                  <div class="dayNm">3</div>
+                  <div class="dayWk">목</div>
+                </div>
+                <ol class="ol-time">
+                  <li>
+                    <div class="schdlBox">
+                      <div class="whatTime">오후<br>1시</div>
+                      <div class="schdl-cont">
+                        <div>
+                          <div class="csgenre">
+                            <div class="smallBox opt-end">종료</div>등록상담
+                          </div>
+                          <div class="csApplicant">
+                            <div class="apcntname">홍길동</div>
+                            <div class="apcntphon">010-1234-0000</div>
+                          </div>
+                        </div>
+                        <div class="csBtnBox">
+                          <button type="button" class="greyiconBtn go-modify"></button>
+                          <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </li>
+
+              <li>
+                <div class="dateCircle">
+                  <div class="dayNm">4</div>
+                  <div class="dayWk">금</div>
+                </div>
+                <ol class="ol-time">
+                  <li>
+                    <div class="no-data">일정이 없습니다.</div>
+                    <!-- 상담일정이 없는 경우 no-data -->
+                  </li>
+                </ol>
+              </li>
+
+            </ol>
+            <!-- /한달 짜리 -->
+          </div>
+          <!-- /m-item -->
+
+
+
+
+
+          <div class="m-item">
+            <p class="listTit">2023년 12월</p>
+            <ol class="ol-day">
+              <li>
+                <div class="dateCircle">
+                  <div class="dayNm">2</div>
+                  <div class="dayWk">수</div>
+                </div>
+                <ol class="ol-time">
+                  <li>
+
+                    <div class="schdlBox">
+                      <div class="whatTime">오후<br>1시</div>
+                      <div class="schdl-cont">
+                        <div>
+                          <div class="csgenre">
+                            <div class="smallBox opt-end">종료</div>등록상담
+
+                          </div>
+                          <div class="csApplicant">
+                            <div class="apcntname">홍길동</div>
+                            <div class="apcntphon">010-1234-0000</div>
+                          </div>
+                        </div>
+                        <div class="csBtnBox">
+                          <button type="button" class="greyiconBtn go-modify"></button>
+                          <button type="button" @click="fnConsultInfoOpenPop" class="greyiconBtn go-view"></button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+
+                </ol>
+              </li>
+
+
+            </ol>
+          </div>
+
+
+
+
+
         </div>
+        <!-- /리스트 -->
+
+
+
+
       </div>
       <!-- /content -->
 
