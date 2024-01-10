@@ -35,7 +35,7 @@
 
 
               <!-- 메인 컨텐츠 -->
-             
+
               <div class="m-item-list m-notice">
 
                 <!-- 알림장 게시글 영역 -->
@@ -43,19 +43,52 @@
 
                   <!-- 알림장 타이틀 영역 -->
                   <div class="noti-tit-wrap">
-                    <div class="button-wrap">
-                      <button type="button" class="greyiconBtn go-modify"></button>
-                      <button type="button" class="greyiconBtn i-del"></button>
+                    <div class="brdBtnBox">
+                      <p class="bar-txt">
+                        <i class="i-a-check"></i><span class="ml3">알림대상</span>
+                      </p>
+                      <div class="slash-txt-list">
+                        <span class="slash-txt">반(<span class="num">2</span>)</span>
+                        <span>원생(<span class="num">2</span>)</span>
+                      </div>
+                      <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view">
+                        <i class="i-plus"></i>
+                      </button>
                     </div>
-                    <p class="m-category">행사안내</p>
-                    <p class="m-notice-tit">알림장 제목이 보여집니다</p>
-                    <p class="m-notice-name m-notice-text">김직원(닉네임)
-                      <span class="m-bullet01 ml10">2023년 11월 1일(수) 오전 10:00</span>
-                    </p>
-                    <span class="m-notice-text mr5">10명 중 3명 확인</span>
-                    <button type="button" class="t-button-plus t-button-white"><i class="material-symbols-outlined fs13">add</i></button>
+                    <div class="smallBox opt-event">행사안내</div>
+                    <p class="m-notice-tit list-title">알림장 제목이 보여ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ집니다</p>
+
+
+
                   </div>
                   <!-- /알림장 타이틀 영역 -->
+                  <div class="noti-file-wrap">
+
+
+
+                    <div class="filenum"><span class="label-text">첨부파일</span></div>
+                    <ul class="m-file-list">
+                      <li>
+                        <div class="flex-set">
+                          <div class="file-text"><span class="m-cont-name">파일명.hwp</span>
+                            <span class="sb-txt">[135 KB]</span>
+                          </div>
+                          <button type="button" class="" title="파일다운로드"><i class="i-down"></i></button>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="flex-set">
+                          <div class="file-text"><span class="m-cont-name">파일명.hwp</span>
+                            <span class="sb-txt">[135 KB]</span>
+                          </div>
+                          <button type="button" class="" title="파일다운로드"><i class="i-down"></i></button>
+                        </div>
+                      </li>
+                    </ul>
+
+
+                  </div>
 
                   <!-- 알림장 내용 영역 -->
                   <div class="noti-cont-wrap">
@@ -68,35 +101,29 @@
                       알림장 내용입니다. 알림장 내용입니다.
                       알림장 내용입니다. 알림장 내용입니다.
                     </div>
+                    <div class="noti-view" style="
+">조회수<span class="ml3">120</span></div>
 
-                    <!-- 첨부파일 영역 -->
-                    <div class="noti-file-wrap txt-box">
-                      <p class="text-wrap-tit"><span class="label-text mr5">첨부파일</span>
-                        <span class="sb-txt">3개</span>
-                      </p>
 
-                      <ul class="m-file-list">
-                        <li>
-                          <div class="flex-set flex-between">
-                            <div class="file-text"><span class="m-cont-name">파일명.hwp</span>
-                              <span class="ml5 sb-txt">[135 KB]</span></div>
-                              <button type="button" class="t-button-circle t-button-grey" title="파일다운로드"><i class="i-down"></i></button>
-                          </div>
-                        </li>
-                        
-                      <li>
-                          <div class="flex-set flex-between">
-                            <div class="file-text"><span class="m-cont-name">파일명.hwp</span>
-                              <span class="ml5 sb-txt">[135 KB]</span></div>
-                              <button type="button" class="t-button-circle t-button-grey" title="파일다운로드"><i class="i-down"></i></button>
-                          </div>
-                        </li></ul>
 
-                    </div>
-                    <!-- /첨부파일 영역 -->
+
 
                   </div>
-                  <!-- /알림장 내용 영역 --> 
+                  <div class="noti-cont-wrap">
+
+                    <div class="flex-set flex-between">
+                      <ul class="writingInfo">
+                        <li><span class="bar-txt">김직원(닉네임)</span>2023-11-01<span class="ml5">15:20</span></li>
+                      </ul>
+                      <div class="btn-set"><button type="button" class="t-button-xms t-button-red-bd">삭제</button><button
+                          type="button" class="t-button-xms t-button-grey2-bd">수정</button></div>
+                    </div>
+
+
+
+
+
+                  </div><!-- /알림장 내용 영역 -->
 
 
                 </div>
@@ -110,35 +137,42 @@
                 <!-- 댓글 영역 -->
                 <div class="m-item">
 
-                  <p class="text-wrap-tit"><span class="sub-tit mr5">댓글</span><span class="sb-txt">3개</span></p>
+                  <div class="text-wrap-tit"><span class="sub-tit mr5">댓글</span><span class="Totaltxt"><strong style="
+">10</strong>건</span></div>
 
-                  <div class="label-set label-set2 flex-start">
-                    <div class="m-photo"><img src="../../../images/profie-df.jpg" alt=""></div>
-                    <div>
-                      <p class="m-notice-name m-photo-cont"><span class="m-cont-name">김원장 (닉네임)</span><span class="m-notice-text">2023.11.12 15:20</span></p>
-                      <p class="m-notice-reply">글 내용이 보여집니다. 댓글 내용이 보여집니글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이
-                        보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다다</p>
+                  <div class="text-wrap-tit">
+                    <div class="input-btn-wrap"><input type="text" id="txtNm" class="txtfield-basic"
+                        placeholder="댓글을 입력해주세요.">
+                      <button type="button" class="t-button-m t-button-bora6">등록</button>
                     </div>
                   </div>
 
                   <div class="label-set label-set2 flex-start">
                     <div class="m-photo"><img src="../../../images/profie-df.jpg" alt=""></div>
-                    <div>
-                      <p class="m-notice-name m-photo-cont"><span class="m-cont-name">김원장 (닉네임)</span><span class="m-notice-text">2023.11.12 15:20</span></p>
+                    <div class="m-photo-cont">
+                      <div class="csBtnBox">
+                        <button type="button" class="greyiconBtn i-del"></button><button type="button"
+                          class="greyiconBtn go-modify"></button>
+
+                      </div>
+                      <p class="m-notice-name"><span class="m-cont-name">김원장 (닉네임)</span><span
+                          class="m-notice-text">2023.11.12 15:20</span></p>
                       <p class="m-notice-reply">글 내용이 보여집니다. 댓글 내용이 보여집니글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이
                         보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다글 내용이 보여집니다. 댓글 내용이 보여집니다다</p>
                     </div>
                   </div>
+
+
 
                 </div>
                 <!-- /댓글 영역 -->
-                
-                
+
+
 
 
 
               </div>
-                
+
               <!-- /메인 컨텐츠 -->
 
 
