@@ -445,7 +445,9 @@ select
  .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; }
  .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; margin: -4px 0 0 0;}
 
+
  /* label:before에 체크 된 상태 CSS */
+ .t-checkbox.checkbox01 input[type="checkbox"]:checked + label { font-weight: 600;}
  .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before,
  .t-checkbox.checkbox01 label>input[type="checkbox"]:checked + .spanLabel:before { content:"\2713"; color: #fff; background-color: var(--pc-bora-2); border-color:transparent; font-weight: 400; } 
 
@@ -1598,8 +1600,8 @@ button i { display:inline-block; }
 
 
 /* 3단 체크리스트 */
-.m-academy-mngr-Wrap .check-list.col3 { display:flex; gap: 10px 2%; flex-wrap: wrap; width: 100%; } 
-.m-academy-mngr-Wrap .check-list.col3 li { margin-right: 0; width: 32%; } 
+.check-list.col3 { display:flex; gap: 10px 2%; flex-wrap: wrap; width: 100%; } 
+.check-list.col3 li { margin-right: 0; width: 32%; } 
 
 
 /* bullet */
