@@ -39,187 +39,32 @@
 
 
 
-               <!-- 검색박스 -->
-               <div class="m-basicSrchBox">
+              <!-- 검색박스 -->
+              <div class="m-basicSrchBox">
                 <div class="m-srchBox">
-                  <input type="text" placeholder="원생명, 원생닉네임, 원생휴대폰 검색" aria-autocomplete="list"> 
+                  <input type="text" placeholder="원생명, 원생닉네임, 원생휴대폰 검색" aria-autocomplete="list">
                   <button type="button" class="button"></button>
                 </div>
 
 
                 <div class="form-list">
-
-                  <!-- vue에 basicSrchBox.vue 활용 -->
-                  <div class="m-drop-set disabled">
-                    <label>원생구분</label>
-                    <!-- active 클래스 추가시. dropdown 열림 -->
-                    <div class="m-drop-box">
-                      <p class="m-drop-name"><span>재원생</span></p>
-
-                      <!-- 드롭다운 -->
-                      <div class="dropdown">
-                        <div class="m-drop-cont">
-                          <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="cls_allChecked" id="cls_allChecked"> <label for="cls_allChecked">전체</label>
-                          </div>
-                          <div class="label-set label-set2">
-                            
-                            <ul class="check-list col3">
-                              
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">재원생</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">예비생</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">미등록생</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">휴원생</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">퇴원생</label>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                                                    
-                          <div class="btn-set bt-btnbox">
-                            <button type="button" class="t-button-l resetbtn t-button-grey">초기화</button>
-                            <button type="button" class="t-button-l registbtn">적용</button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /드롭다운 -->
-
-                    </div>
+                  <div class="label-set">
+                    <span class="label-text">대분류</span>
+                    <select class="">
+                      <option value="">대분류(전체)</option>
+                    </select>
                   </div>
-
-                  <div class="m-drop-set">
-                    <label>학부/학년</label>
-                    <div class="m-drop-box">
-                      <p class="m-drop-name"><span>전체</span></p>
-
-                      <!-- 드롭다운 -->
-                      <div class="dropdown">
-                        <div class="m-drop-cont">
-                          <div class="t-checkbox checkbox01">
-                            <input type="checkbox" name="cls_allChecked" id="cls_allChecked"> <label for="cls_allChecked">전체</label>
-                          </div>
-                          <div class="label-set label-set2">
-                            <span class="label-text">초등부</span>
-                            <ul class="check-list col3">
-                              <li>
-                                <div class="t-checkbox checkbox01">
-                                  <input type="checkbox" name="cls_allChecked" id="cls_allChecked"> <label for="cls_allChecked">전체</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">1학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">2학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">3학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">4학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">5학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">6학년</label>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div class="label-set label-set2">
-                            <span class="label-text">중등부</span>
-                            <ul class="check-list col3">
-                              <li>
-                                <div class="t-checkbox checkbox01">
-                                  <input type="checkbox" name="cls_allChecked" id="cls_allChecked"> <label for="cls_allChecked">전체</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">1학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">2학년</label>
-                                </div>
-                              </li>
-                            </ul>
-
-                          </div>
-
-
-
-                          <div class="label-set label-set2">
-                            <span class="label-text">고등부</span>
-                            <ul class="check-list col3">
-                              <li>
-                                <div class="t-checkbox checkbox01">
-                                  <input type="checkbox" name="cls_allChecked" id="cls_allChecked"> <label for="cls_allChecked">전체</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">1학년</label>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check03">
-                                  <label for="check03">2학년</label>
-                                </div>
-                              </li>
-                            </ul>
-
-                          </div>
-                          <div class="btn-set bt-btnbox">
-                            <button type="button" class="t-button-l resetbtn t-button-grey">초기화</button>
-                            <button type="button" class="t-button-l registbtn">적용</button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /드롭다운 -->
-
-                    </div>
+                  <div class="label-set">
+                    <span class="label-text">중분류</span>
+                    <select class="">
+                      <option value="">중분류(전체)</option>
+                    </select>
                   </div>
-                  
-                  <button type="button" class="t-button-s m-search">검색</button>
-
                 </div>
 
 
-               </div>
-               <!-- /검색박스 -->
+              </div>
+              <!-- /검색박스 -->
 
 
               <div class="pop-cont">
@@ -234,54 +79,41 @@
 
 
                 <!-- 리스트-->
-                <div class="m-list-prsn">
+                <div class="m-list-prsn m-class-ch">
 
-               
+
                   <div class="t-checkbox checkbox01">
                     <input type="checkbox" id="prsn01" name="select-student">
                     <label for="prsn01" class="listBox">
-                      <div class="prsn-photo">
-                        <img src="/images/profie-df.jpg">
-                      </div>
+
                       <div class="prsn-info">
                         <div class="prsnNm">
-                          <div class="psBox opt-regist">재원생</div><span class="list-title">김원장 (닉네임)</span>
+                          <span class="smallBox opt-course">수강</span><span class="list-title">중등부&gt;1학년&gt;중등부 1학년
+                            국어반</span>
                         </div>
-                        <div class="apcntphon-list">
-                          <div class="apcntphon">중등부 1학년 / 구로중학교 1학년</div><div class="apcntphon">010-1234-0000</div>
+                        <div class="bull-list">
+                          <dl>
+                            <dt>운영/수납</dt>
+                            <dd>일반 / 1회만 수납</dd>
+                          </dl>
+                          <dl>
+                            <dt>담당강사</dt>
+                            <dd>김강사(닉네임), 이직원(닉네임), 홍사원(닉네임), 정주임(닉네임), 김강사(닉네임)</dd>
+                          </dl>
+
                         </div>
                       </div>
                     </label>
                   </div>
 
-
-
-                  
-
-
-
-                  
-
-
-
-                  
-                  
-                  
-                  
-
-
-
                   <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
 
 
-                  
                 </div>
                 <!-- 리스트-->
 
 
               </div>
-
-
 
 
               <!-- 선택값 보여지는 박스 -->
@@ -297,13 +129,11 @@
                   <div class="mySelect">
                     <ul class="add-result-list">
                       <li>
-                        <span>홍길동</span>
-                        <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"></button>
+                        <span>중등부&gt;1학년&gt;중등부 1학년 국어반</span>
+                        <button type="button"
+                          class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"></button>
                       </li>
-                      <li>
-                        <span>홍길동</span>
-                        <button type="button" class="t-button-circle t-button-white t-button-circle-16 remove t-button-red-bd"></button>
-                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -337,11 +167,6 @@
 
     </div>
 
-
-    <!-- 팝업 뒤 배경 -->
-    <div class="pop-bg">
-    </div>
-    <!-- /팝업 뒤 배경 -->
 
 
 
