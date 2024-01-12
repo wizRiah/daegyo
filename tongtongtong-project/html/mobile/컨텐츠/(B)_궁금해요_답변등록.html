@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>궁금해요_답변등록</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+      <div class="t-popup-wrap">
+        <div class="t-popup popup-goback">
+
+          <div class="pop-header">
+            <p class="pop-title">궁금해요</p>
+          </div>
+
+
+          <div class="pop-body">
+
+
+            <div class="pop-container">
+
+
+              <!-- 메인 컨텐츠 -->
+
+              <div class="m-item-list m-notice">
+
+                <!-- 알림장 게시글 영역 -->
+                <div class="m-item p0">
+
+
+                  <!-- 알림장 타이틀 영역 -->
+                  <div class="noti-tit-wrap">
+                    <!-- 알림대상영역 -->
+                    <div class="brdBtnBox">
+                      <p class="bar-txt">
+                        <i class="i-a-check"></i><span class="ml3">알림대상</span>
+                      </p>
+                      <div class="slash-txt-list">
+                        <span class="slash-txt">반(<span class="num">2</span>)</span>
+                        <span>원생(<span class="num">2</span>)</span>
+                      </div>
+                      <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view">
+                        <i class="i-plus"></i>
+                      </button>
+                    </div>
+                    <!-- /알림대상영역 -->
+
+                    <div class="smallBox opt-end">답변</div>
+
+                    <p class="m-notice-tit list-title">알림장 제목이 보여ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ집니다</p>
+
+                  </div>
+                  <!-- /알림장 타이틀 영역 -->
+
+
+
+
+
+
+
+                  <!-- 알림장 내용 영역 -->
+                  <div class="noti-cont-wrap">
+                    <div class="noti-cont">
+                      알림장 내용입니다. 알림장 내용입니다.
+                      알림장 내용입니다. 알림장 내용입니다.
+                      알림장 내용입니다. 알림장 내용입니다.
+                      알림장 내용입니다. 알림장 내용입니다.
+                      알림장 내용입니다. 알림장 내용입니다.
+                      알림장 내용입니다. 알림장 내용입니다.
+                    </div>
+
+
+                  </div>
+                  <!-- /알림장 내용 영역 -->
+
+
+                  <!-- 작성자 영역 -->
+                  <div class="noti-cont-wrap">
+                    <div class="noti-name">
+                      <ul class="bar-txt-list">
+                        <li>김직원(닉네임)</li>
+                        <li>2023-11-01<span class="ml5">15:20</span></li>
+                      </ul>
+                      <div class="btn-set">
+                        <button type="button" class="t-button-xs t-button-red-bd">삭제</button>
+                        <button type="button" class="t-button-xs t-button-grey2-bd">수정</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /작성자 영역 -->
+
+                </div>
+                <!-- /알림장 게시글 영역 -->
+
+
+
+                <!-- 댓글 영역 -->
+                <div class="m-item">
+
+                  <div class="text-wrap-tit" style="
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+">
+                    <div><span class="sub-tit mr5">답변</span><span class="Totaltxt"><strong>10</strong>건</span></div>
+                    <div class="brdBtnBox" style="
+    top: 15px;
+    position: relative;
+    top: 0;
+    right: 0;
+">
+                      <p style="
+    display: flex;
+    font-size: var(--m-fs13);
+    color: #333;
+    font-weight: 500;
+">
+                        <i class="i-a-check"></i><span class="ml3" style="
+    display: flex;
+    font-size: var(--m-fs13);
+    color: #333;
+    font-weight: 500;
+">답변자선택</span>
+                      </p>
+
+                      <button type="button" @click="fnNtcBrdInfoOpenPop" class="greyiconBtn go-view">
+                        <i class="i-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="text-wrap-tit">
+                    <div class="input-btn-wrap"><input type="text" class="txtfield-basic" placeholder="답변을 입력해주세요.">
+                      <button type="button" class="t-button-m t-button-bora6">등록</button>
+                    </div>
+                  </div>
+
+
+                  <div class="label-set label-set2 flex-start">
+                    <div class="m-photo"><img src="../../../images/profie-df.jpg" alt=""></div>
+                    <div class="m-photo-cont">
+                      <div class="csBtnBox">
+                        <button type="button" class="greyiconBtn i-del"></button>
+                        <button type="button" class="greyiconBtn go-modify"></button>
+                      </div>
+                      <p class="m-notice-name"><span class="m-cont-name">김원장 (닉네임)</span><span
+                          class="m-notice-text">2023.11.12 15:20</span></p>
+                      <div class="m-file-attach">
+                        <div class="filenum">첨부파일</div>
+                        <ul class="m-file-list">
+
+                          <li>
+                            <div class="flex">
+                              <div class="file-text">
+                                <p class="m-cont-name">파일ㅇㅇㅇsdddddddddddssssssㅇㅇㅇㅇㅇㅇㅇㅇ.hwp</p>
+                                <span class="sb-txt">[135 KB]</span>
+                              </div>
+                              <button type="button" class="" title="파일다운로드"><i class="i-down"></i></button>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="flex">
+                              <div class="file-text"><span class="m-cont-name">파일명.hwp</span>
+                                <span class="sb-txt">[135 KB]</span>
+                              </div>
+                              <button type="button" class="" title="파일다운로드"><i class="i-down"></i></button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="m-notice-reply">답변 내용입니다.</div>
+                    </div>
+                  </div>
+
+
+                  <!-- 본인 댓글 -->
+                  <div class="label-set label-set2 flex-start">
+                    <div class="m-photo"><img src="../../../images/profie-df.jpg" alt=""></div>
+                    <div class="m-photo-cont">
+                      <div class="csBtnBox">
+                        <button type="button" class="greyiconBtn i-del"></button>
+
+                      </div>
+                      <p class="m-notice-name"><span class="m-cont-name">김원장 (닉네임)</span><span
+                          class="m-notice-text">2023.11.12 15:20</span></p>
+                      <!-- 댓글내용 -->
+
+                      <!-- /댓글내용 -->
+                      <div class="m-notice-reply">
+                        <div class="input-btn-wrap mt5">
+                          <input type="text" class="txtfield-basic h35" placeholder="댓글 내용입니다.">
+                          <div class="btn-set">
+                            <button type="button" class="t-button-xs">저장</button>
+                            <button type="button" class="t-button-xs t-button-grey2">취소</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /본인 댓글 -->
+
+
+                  <!-- 댓글 수정 -->
+
+                  <!-- /댓글 수정 -->
+
+
+
+
+                </div>
+                <!-- /댓글 영역 -->
+
+
+
+              </div>
+
+              <!-- /메인 컨텐츠 -->
+
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <button type="button" class="goback" title="뒤로가기"></button>
+
+        </div>
+      </div>
+
+      <!-- ●●●●●●●●●●● /팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+    </div>
+
+
+    <!-- 팝업 뒤 배경 -->
+    <div class="pop-bg">
+    </div>
+    <!-- /팝업 뒤 배경 -->
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+</body>
+
+</html>
