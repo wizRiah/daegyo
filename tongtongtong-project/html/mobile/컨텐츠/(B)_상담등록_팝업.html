@@ -39,7 +39,7 @@
 
                 <!-- 상담구분 -->
                 <div class="m-item">
-                  <p class="sub-tit">상담구분</p>
+                  <p class="sub-tit"><span class="t-necessary">필수</span>상담구분</p>
                   <div class="m-pageTap-wrap">
                     <button class="m-pageTap active" type="button">등록상담</button>
                     <button class="m-pageTap" type="button">원생상담</button>
@@ -50,28 +50,24 @@
 
                 <!-- 상담대상 -->
                 <div class="m-item">
-                  <p class="sub-tit">상담대상</p>
+                  <p class="sub-tit"><span class="t-necessary">필수</span>상담대상</p>
                   <div class="input-btn-wrap gap5">
                     <input type="text" class="txtfield-basic wd140" placeholder="이름">
-                    <input type="number" class="txtfield-basic" placeholder="휴대폰">
+                    <input type="number" class="txtfield-basic" placeholder="휴대폰"><button type="button" class="t-button-m t-button-bora6-bd">선택</button>
                   </div>
                 </div>
                 <!-- /상담대상 -->
 
                 <!-- 상담시작일시 -->
                 <div class="m-item">
-                  <p class="sub-tit">상담시작일시</p>
+                  <p class="sub-tit"><span class="t-necessary">필수</span>상담시작일시</p>
                   <div class="input-btn-wrap gap5">
                     <!-- date-picker -->
                     <span class="date-picker">
                       <div class="dp__main dp__theme_light">
-                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
-                          aria-readonly="false">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
                           <div class="dp__input_wrap">
-                            <input name="singleDate"
-                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
-                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
-                              class="dp__input_icon"><button style="margin-right: 5px;">
+                            <input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;">
                                 <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
                             </span>
                           </div>
@@ -84,13 +80,8 @@
                     <div class="time-picker">
                       <span class="date-picker">
                         <div class="dp__main dp__theme_light">
-                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
-                            aria-readonly="false">
-                            <div class="dp__input_wrap"><input name="sndngTime"
-                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg"
-                                inputmode="none" placeholder="HH:MM" autocomplete="off"><span
-                                class="dp__input_icon"><button style="margin-right: 5px;"><img
-                                    class="ui-datepicker-trigger" src="/images/icon-clock.png"></button></span></div>
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="sndngTime" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg" inputmode="none" placeholder="HH:MM" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger" src="/images/icon-clock.png"></button></span></div>
                           </div>
                         </div>
                       </span>
@@ -103,7 +94,7 @@
 
                 <!-- 내용 -->
                 <div class="m-item">
-                  <p class="sub-tit">내용</p>
+                  <p class="sub-tit"><span class="t-necessary">필수</span>내용</p>
                   <select name="" id="" class="wd100">
                     <option value="" disabled="" selected="">상담유형을 선택해주세요.</option>
                     <option value="">20개씩 보기</option>
@@ -119,7 +110,7 @@
                 <!-- 상담결과 -->
                 <div class="m-item">
                   <div class="sub-tit flex">상담결과<div class="t-checkbox checkbox01">
-                      <input type="checkbox" name="checkForm" id="check01" />
+                      <input type="checkbox" name="checkForm" id="check01">
                       <label for="check01">결과 입력</label>
                     </div>
                   </div>
@@ -134,7 +125,7 @@
                 <div class="m-item">
                   <p class="sub-tit">상담사</p>
                   <div class="input-btn-wrap">
-                    <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="비활성화"/>
+                    <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="비활성화">
                     <button type="button" class="t-button-m t-button-bora6-bd">상담사 변경</button>
                   </div>
                 </div>
@@ -143,9 +134,7 @@
 
                 <!-- 자동 알림발송 -->
                 <div class="m-item">
-                  <div class="sub-tit flex">자동알림발송
-
-                    <!-- 툴팁버튼 -->
+                  <div class="sub-tit flex">상담알림발송<!-- 툴팁버튼 -->
                     <button type="button" class="m-infoTip ml5"></button>
                     <!-- /툴팁버튼 -->
                   </div>
@@ -182,18 +171,18 @@
 
                 <!-- 알림수신대상 -->
                 <div class="m-item">
-                  <p class="sub-tit">알림수신대상</p>
+                  <p class="sub-tit">알림발송대상</p>
 
                   <ul class="check-list">
                     <li>
                       <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="check02"/> 
+                        <input type="checkbox" name="checkForm" id="check02"> 
                         <label for="check02">상담대상</label>
                       </div>
                     </li>
                     <li>
                       <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="check03"/> 
+                        <input type="checkbox" name="checkForm" id="check03"> 
                         <label for="check03">상담사</label>
                       </div>
                     </li>
