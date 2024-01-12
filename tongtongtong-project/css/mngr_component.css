@@ -1469,7 +1469,11 @@ button i { display:inline-block; }
 
 
 /*목록 상단 토탈 및 선택/버튼 등 구조*/
-.m-listTopSetBox { gap: 10px; flex-wrap: wrap; display: flex; justify-content: space-between; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; } 
+.m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { display: flex; width: 100%; flex-wrap: wrap; gap: 5px 2%; } 
+.m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li { width: 32%; margin-right: 0; padding-right: 11px; } 
+.m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n) { padding-right:0; } 
+.m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n):after { content:none; } 
+.m-listTopSetBox { justify-content: flex-end; gap: 10px; flex-wrap: wrap; display: flex; align-items: flex-end; width: 100%; padding: 0 15px; box-sizing: border-box; margin: 20px 0 10px; } 
 .m-listTopSetBox.flex-end { height: auto; justify-content: flex-end; } 
 .m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-listTopSetBox { padding: 0; margin: 10px 0 0; } 
@@ -1681,6 +1685,10 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .t-popup-wrap [class^="m-list-"] .btn-set:last-of-type { margin: 10px 0; } 
 
 
+
+
+
+
 /* 반응형 */
 @media (max-width: 375px) {:root { --m-fs15 : 14px; --m-fs14 : 13px; } 
  .m-academy-mngr-Wrap header .header-top .header-cnt .m-logo { padding:0 10px; } 
@@ -1697,10 +1705,8 @@ button i { display:inline-block; }
  .m-academy-mngr-Wrap .label-set select { width: 100%; } 
  .m-academy-mngr-Wrap .label-set .label-text { width: 50px; } 
  .m-academy-mngr-Wrap .m-listTopSetBox { margin: 10px 0; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 { display: flex; width: 100%; flex-wrap: wrap; gap: 5px 2%; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li { width: 32%; margin-right: 0; padding-right: 11px; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n) { padding-right:0; } 
- .m-academy-mngr-Wrap .m-listTopSetBox .tab-03 li:nth-child(3n):after { content:none; } 
+
+
  .m-academy-mngr-Wrap .m-listTopSetBox .btn-set { width:100%; justify-content: flex-end; } 
  .m-academy-mngr-Wrap .m-listTopSetBox .btn-set [class^="t-button"]:first-child { flex:1; } 
  .m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { font-size: 13px; } 
