@@ -759,7 +759,7 @@ location
 
 
  /* 담당강사 선택 (m-list-prsn) */
- .m-academy-mngr-Wrap .m-list-prsn { margin-bottom: 100px; padding: 0 0 100px; } 
+ .m-academy-mngr-Wrap .m-list-prsn { margin-bottom: 100px; padding: 0 0 100px!important; } 
  .m-academy-mngr-Wrap .m-list-prsn>div { margin-bottom: 10px; } 
  .m-academy-mngr-Wrap .m-list-prsn>div:nth-last-child(2) label { margin-bottom:0; } 
  .m-academy-mngr-Wrap .m-list-prsn>div input[type="checkbox"] { display:none; } 
@@ -795,9 +795,10 @@ location
 
 .m-academy-mngr-Wrap .m-list-student>.listBox { display:flex; } 
 .m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm { margin-bottom: 5px; } 
+.m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm + .apcntphon-list { margin-top:3px; }
 .m-academy-mngr-Wrap .m-list-student .prsn-info .clsAge { margin-bottom: 10px; max-width: 100%; } 
 .m-academy-mngr-Wrap .m-list-student .bull-list dl dt { padding-right: 10px; flex-shrink: 0; width: 74px; } 
-
+.m-academy-mngr-Wrap .m-list-student  div.t-checkbox.checkbox01 input[type="checkbox"] + label:before { top: 15px;}
 
 
 
@@ -838,8 +839,8 @@ location
 
 
 /* apcntphon-list */
-.m-academy-mngr-Wrap .apcntphon-list { gap:5px; display:flex; flex-direction: column; } 
-.m-academy-mngr-Wrap .apcntphon-list .apcntphon { color: #333333; font-size: var(--m-fs13); } 
+.m-academy-mngr-Wrap .apcntphon-list { gap:3px; display:flex; flex-direction: column; } 
+.m-academy-mngr-Wrap .apcntphon-list .apcntphon { color: #333333; font-size: var(--m-fs12); } 
 
 .m-academy-mngr-Wrap .apcntphon { display: flex; align-items: center; } 
 .m-academy-mngr-Wrap .apcntphon:not(:empty):before { content:""; width:4px; height:4px; display:inline-block; border-radius:100%; background:#c1c1c1; margin:0 5px; vertical-align:middle; } 
