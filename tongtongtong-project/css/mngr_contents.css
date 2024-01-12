@@ -703,7 +703,7 @@ location
 
 
  /* bar텍스트 리스트 */
- .m-academy-mngr-Wrap .bar-txt-list { display: flex; gap: 5px; flex-wrap: wrap; line-height: 15px;} 
+ .m-academy-mngr-Wrap .bar-txt-list { position:relative; display: flex; gap: 5px; flex-wrap: wrap; line-height: 15px; } 
  .m-academy-mngr-Wrap .bar-txt-list li { font-size: var(--m-fs12); color: #333; position: relative; padding-right: 10px; } 
  .m-academy-mngr-Wrap .bar-txt-list li::after { content: "|"; position: absolute; right: 0; color: #7f7f7f; } 
  .m-academy-mngr-Wrap .bar-txt-list li:last-child:after { content:none; } 
@@ -795,10 +795,10 @@ location
 
 .m-academy-mngr-Wrap .m-list-student>.listBox { display:flex; } 
 .m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm { margin-bottom: 5px; } 
-.m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm + .apcntphon-list { margin-top:3px; }
+.m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm + .apcntphon-list { margin-top:3px; } 
 .m-academy-mngr-Wrap .m-list-student .prsn-info .clsAge { margin-bottom: 10px; max-width: 100%; } 
 .m-academy-mngr-Wrap .m-list-student .bull-list dl dt { padding-right: 10px; flex-shrink: 0; width: 74px; } 
-.m-academy-mngr-Wrap .m-list-student  div.t-checkbox.checkbox01 input[type="checkbox"] + label:before { top: 15px;}
+.m-academy-mngr-Wrap .m-list-student div.t-checkbox.checkbox01 input[type="checkbox"] + label:before { top: 15px; } 
 
 
 
@@ -865,9 +865,9 @@ location
 
 
  /* 슬래시 텍스트 리스트 */
- .m-academy-mngr-Wrap .slash-txt-list { display:flex; font-size:var(--m-fs13); color: #333;  } 
+ .m-academy-mngr-Wrap .slash-txt-list { display:flex; font-size:var(--m-fs13); color: #333; } 
  .m-academy-mngr-Wrap .slash-txt-list .num { font-size:var(--m-fs13); } 
- .m-academy-mngr-Wrap .slash-result { font-weight: bold; color: #5d39ff; font-size: var(--m-fs12);}
+ .m-academy-mngr-Wrap .slash-result { font-weight: bold; color: #5d39ff; font-size: var(--m-fs12); } 
 
 
  /*리스트*/
@@ -1030,6 +1030,21 @@ location
 .m-academy-mngr-Wrap .m-class-ch .smallBox { margin-right:6px; } 
 .m-academy-mngr-Wrap .m-class-ch .prsn-info { padding-left:0; } 
 .m-academy-mngr-Wrap .m-class-ch .prsn-info .bull-list { width: 90%; } 
+
+
+/* 상담정보 */
+.m-academy-mngr-Wrap .m-consult-top { display: flex; padding: 20px 15px; background: #f0f0f1; border-bottom: 1px solid #cecece; } 
+.m-academy-mngr-Wrap .m-consult-top .schdl-cont { border:0; padding:0; } 
+.m-academy-mngr-Wrap .m-consult-top .csApplicant { font-size: var(--m-fs14); } 
+.m-academy-mngr-Wrap .m-consult-top .bar-txt-list li { font-size: var(--m-fs13); } 
+.m-academy-mngr-Wrap .m-consult-top .apcntphon:not(:empty):before { background: #696969; } 
+.m-academy-mngr-Wrap .m-consult-top button { height: auto; } 
+.m-academy-mngr-Wrap .m-consult-top button.active { background:var(--pc-red)!important; color: #fff; }
+
+
+
+.m-academy-mngr-Wrap .csbar.bar-txt-list:before { position: absolute; left: 0; content: ""; width: 11px; height: 15px; display: inline-block; background: url(/images/m-icon-alarm.png) center no-repeat; background-size: 10px; } 
+.m-academy-mngr-Wrap .csbar.bar-txt-list { padding-left: 15px; } 
 
 
 

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>(B)_상담정보</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+      <div class="t-popup-wrap">
+
+        <!-- t-popup에 클래스 추가될 예정 -->
+        <div class="t-popup popup-goback">
+
+          <div class="pop-header">
+            <p class="pop-title">상담 정보</p>
+          </div>
+
+          <div class="pop-body">
+
+
+
+            <!-- pop-container -->
+            <div class="pop-container">
+              <div class="m-item-list">
+
+
+                <!-- 상담정보 부분 -->
+                <div class="m-consult-top">
+
+                  <div class="schdl-cont">
+                    <div class="csgenre">
+                      <div class="smallBox opt-course">상담</div>등록상담
+                    </div>
+                    <div class="csApplicant">
+                      <div class="apcntname">홍길동</div>
+                      <div class="apcntphon">010-1234-0000</div>
+                    </div>
+
+                    <ul class="csbar bar-txt-list mt5">
+                      <li>등록알림(<span class="slash-result">발송완료</span>)</li>
+                    </ul>
+                  </div>
+
+
+                  <!-- 버튼 선택시 클래스 active 추가 -->
+                  <button type="button" class="t-button-xs t-button-red-bd">상담종료</button>
+
+
+                </div>
+                <!-- /상담정보 부분 -->
+
+
+
+                <!-- 상담시작일시 -->
+                <div class="m-item">
+                  <p class="sub-tit"><span class="t-necessary">필수</span>상담시작일시</p>
+                  <div class="input-btn-wrap gap5">
+                    <!-- date-picker -->
+                    <span class="date-picker">
+                      <div class="dp__main dp__theme_light">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                          aria-readonly="false">
+                          <div class="dp__input_wrap">
+                            <input name="singleDate"
+                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                              class="dp__input_icon"><button style="margin-right: 5px;">
+                                <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                    <!-- /date-picker -->
+
+                    <!-- time-picker(time-picker 공통컴포넌트 사용) -->
+                    <div class="time-picker">
+                      <span class="date-picker">
+                        <div class="dp__main dp__theme_light">
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="sndngTime"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg"
+                                inputmode="none" placeholder="HH:MM" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger" src="/images/icon-clock.png"></button></span></div>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                    <!-- /time-picker -->
+                  </div>
+                </div><!-- /상담시작일시 -->
+
+
+                <!-- 내용 -->
+                <div class="m-item">
+                  <p class="sub-tit"><span class="t-necessary">필수</span>내용</p>
+                  <select name="" id="" class="wd100">
+                    <option value="" disabled="" selected="">상담유형을 선택해주세요.</option>
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                  </select>
+                  <div class="t-text-field_slot mt5">
+                    <textarea id="" rows="4" placeholder="상담내용을 입력해주세요."></textarea>
+                  </div>
+                </div>
+                <!-- /내용 -->
+
+
+                <!-- 상담결과 -->
+                <div class="m-item">
+                  <div class="sub-tit flex">상담결과<div class="t-checkbox checkbox01">
+                      <input type="checkbox" name="checkForm" id="check01">
+                      <label for="check01">결과 입력</label>
+                    </div>
+                  </div>
+                  <div class="t-text-field_slot">
+                    <textarea id="" rows="4" disabled="" placeholder="상담결과 내용을 입력해주세요."></textarea>
+                  </div>
+                </div>
+                <!-- /상담결과 -->
+
+
+                <!-- 상담사 -->
+                <div class="m-item">
+                  <p class="sub-tit">상담사</p>
+                  <div class="input-btn-wrap">
+                    <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="">
+
+                  </div>
+                </div>
+                <!-- /상담사 -->
+
+
+                <!-- 자동 알림발송 -->
+                <div class="m-item">
+                  <div class="sub-tit flex">상담알림발송<!-- 툴팁버튼 -->
+                    <button type="button" class="m-infoTip ml5"></button>
+                    <!-- /툴팁버튼 -->
+                  </div>
+
+
+                  <!-- 체크리스트 -->
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02" checked="">
+                        <label for="check02">문자발송</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">모바일 앱 푸시</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check01">
+                        <label for="check01">모바일 앱 푸시 실패시 문자발송</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- /체크리스트 -->
+
+                </div>
+                <!-- /자동 알림발송 -->
+
+
+
+                <!-- 알림수신대상 -->
+                <div class="m-item">
+                  <p class="sub-tit">알림발송대상</p>
+
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02">
+                        <label for="check02">원생</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">학부모(모)</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">학부모(부)</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">상담사</label>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+                <!-- /알림수신대상 -->
+
+
+              </div>
+            </div>
+            <!-- /pop-container  -->
+
+
+
+            <!-- 하단 버튼 -->
+            <div class="bt-btnbox">
+              <button type="button" class="deletebtn">삭제</button><button type="button" class="registbtn">저장</button>
+
+            </div>
+            <!-- /하단 버튼 -->
+
+          </div>
+
+          <!-- 팝업 뒤로 가기 버튼 -->
+          <button type="button" class="goback" title="뒤로가기"></button>
+          <!-- /팝업 뒤로 가기 버튼 -->
+
+        </div>
+        <!-- /t-popup -->
+      </div>
+
+      <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+    </div>
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+</body>
+
+</html>
