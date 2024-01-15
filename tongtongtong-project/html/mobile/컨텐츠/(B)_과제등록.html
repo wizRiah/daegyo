@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>(B)_과제등록</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+      <div class="t-popup-wrap">
+        <div class="t-popup popup-goback">
+
+          <div class="pop-header">
+            <p class="pop-title">과제 등록</p>
+          </div>
+
+
+          <div class="pop-body">
+
+
+            <div class="pop-container">
+
+
+
+              
+
+              <!-- 컨텐츠 리스트 -->
+              <div class="m-item-list">
+
+
+                <!-- 구분 -->
+                <div class="m-item">
+                  <p class="sub-tit">구분</p>
+                  <div class="m-pageTap-wrap">
+                    <button class="m-pageTap active" type="button">반별</button>
+                    <button class="m-pageTap" type="button">개별</button>
+                  </div>
+                </div>
+                <!-- /구분 -->
+
+
+                <!-- 과제대상 -->
+                <div class="m-item">
+                  <div class="sub-tit-bar"><span class="sub-tit bar-txt mb0">과제대상</span>
+                    <div class="slash-txt-list">
+                      <div>
+                        <span class="cont-text">선택된 대상 :</span>
+                        <span class="num">대상을 선택해주세요.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-btn-wrap">
+                    <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="비활성화">
+                    <button type="button" class="t-button-m t-button-bora6-bd">원생 선택</button>
+                  </div>
+                </div>
+                <!-- /과제대상 -->
+
+
+                <!-- 제목 -->
+                <div class="m-item">
+                  <p class="sub-tit">제출기간</p>
+                  <div class="label-set">
+                    <span class="label-text">제출시작일</span>
+                    <!-- 데이트피커 -->
+                    <span class="date-picker" >
+                      <div class="dp__main dp__theme_light">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                          aria-readonly="false">
+                          <div class="dp__input_wrap"><input name="singleDate"
+                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                              class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                  class="ui-datepicker-trigger"
+                                  src="/images/datepicker.png"></button></span></div>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="label-set">
+                    <span class="label-text">제출마감일</span>
+                    <!-- 데이트피커 -->
+                    <span class="date-picker">
+                      <div class="dp__main dp__theme_light">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                          aria-readonly="false">
+                          <div class="dp__input_wrap"><input name="singleDate"
+                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                              class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                  class="ui-datepicker-trigger"
+                                  src="/images/datepicker.png"></button></span></div>
+                        </div>
+                      </div>
+                    </span>
+                    <!-- /데이트피커 -->
+                  </div>
+                </div>
+                <!-- /제목 -->
+
+
+
+                <!-- 내용 -->
+                <div class="m-item">
+                  <p class="sub-tit">과제명</p>
+                  <input type="text" class="txtfield-basic" placeholder="과제명을 입력해주세요.">
+                </div>
+                <!-- /내용 -->
+
+
+
+
+                <div class="m-item">
+                  <p class="sub-tit">내용</p>
+                  <div class="t-text-field_slot mt5">
+                    <textarea id="" rows="4" placeholder="과제내용을 입력해주세요."></textarea>
+                  </div>
+                </div>
+
+
+
+                <div class="m-item">
+                  <p class="sub-tit">이미지<span class="ml10 m-bora1 t-bullet-02">최대 5개 등록 가능</span></p>
+
+                  <ul class="img-add-list">
+                    <li>
+                      <input type="file" id="imgChage" style="display:none;"> 
+                      <label for="imgChage" class="material-symbols-outlined t-button-img-add">add_circle</label>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="m-item">
+                  <p class="sub-tit">링크
+                    <span class="ml10 m-bora1 t-bullet-02">“http://” 또는 “https://” 로 시작해야 합니다.</span>
+                  </p>
+                  <div class="input-btn-wrap">
+                    <input type="text" id="txtNm" class="txtfield-basic" placeholder="">
+                    <button type="button" class="t-button-m t-button-bora6-bd">링크 추가</button>
+                  </div>
+                </div>
+                
+          
+
+                <div class="m-item">
+                  <p class="sub-tit">사용여부</p>
+                  <div class="t-radio-01">
+                    <input type="radio" id="hradio01" name="hradio01" checked=""> 
+                    <label for="hradio01"><span class="rchk"></span>사용</label> 
+                    <input type="radio" id="hradio01_2"  name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>미사용</label> 
+                  </div>
+                </div>
+
+
+                <div class="m-item">
+                  <p class="sub-tit">과제알림발송<button type="button" class="m-helpTip ml5"></button></p>
+
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02" checked="">
+                        <label for="check02">문자발송</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">모바일 앱 푸시</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check01">
+                        <label for="check01">모바일 앱 푸시 실패시 문자발송</label>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+
+
+
+                <div class="m-item">
+                  <p class="sub-tit">알림발송대상</p>
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02" checked="">
+                        <label for="check02">원생</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check03">
+                        <label for="check03">학부모(모)</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check01">
+                        <label for="check01">학부모(부)</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+     
+
+              </div>
+              <!-- /컨텐츠 리스트 -->
+
+
+            </div>
+
+
+            <!-- 하단 버튼 -->
+            <div class="bt-btnbox">
+              <button type="button" class="registbtn">등록</button><button type="button" class="canclebtn">취소</button>
+            </div>
+            <!-- /하단 버튼 -->
+
+          </div>
+
+
+          <button type="button" class="goback" title="뒤로가기"></button>
+
+        </div>
+      </div>
+
+      <!-- ●●●●●●●●●●● /팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+    </div>
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
