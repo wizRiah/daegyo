@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>통통통설정_메인</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-top">
+        <div class="header-cnt">
+          <!-- 로고영역 -->
+          <a class="m-logo" href="#">
+            <span>new통통통</span>
+          </a>
+          <!-- /로고영역 -->
+
+          <!-- 학원선택 -->
+          <select class="acdmyNm">
+            <option>대교에듀베이션학원</option>
+          </select>
+          <!-- /학원선택 -->
+        </div>
+        <!-- 알림버튼 -->
+        <button type="button" class="alarmBTN on">
+          <!-- 알림이 있는 경우 on클래스 추가. -->
+        </button>
+        <!-- /알림버튼 -->
+      </div>
+    </header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>학사관리</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li>
+
+          <a>반</a>
+        </li>
+        <li><a>원생</a></li>
+        <li><a>수납</a></li>
+        <li><a>상담</a></li>
+        <li><a>직원</a></li>
+        <li><a>통통통설정</a></li>
+        <li class="on"><a>앱관리</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+
+
+      <!-- content -->
+      <div class="content">
+
+        <!-- 탭 -->
+        <ul class="tab-04">
+          <li class="active">
+            <button type="button">
+              <div class="tab04-bg"><i class="i-tab08"></i></div><span class="status">청구자료생성설정</span>
+            </button>
+          </li>
+        </ul>
+        <!-- /탭 -->
+
+
+
+        <div class="m-list-tongset m-item-list">
+          <div class="m-item">
+            <p class="sub-tit">생성주기</p>
+
+            <div class="listBox">
+              <p class="main-text m-notice-text">최종 수강기간이 종료되기
+                <select name="" id="" class="h35 ml5 mr5">
+                  <option value="" disabled="" selected="">7일</option>
+                  <option value="">10일</option>
+                </select>
+                전에 수납/미납 자료에 대해 다음 주기의 청구자료가 생성 됩니다.
+              </p>
+            </div>
+            <p class="m-bora1 t-bullet-02 mt15">회차반 중 회차 소진 시 잔여회차 수에 따라 청구자료를 생성하는 회차반의 청구자료는 생성하지 않습니다. (1회만 납부 방식)</p>
+          </div>
+
+          <div class="m-item">
+            <p class="sub-tit">분류/반 선택</p>
+            <div class="label-set">
+              <span class="label-text">대분류</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">대분류(전체)</option>
+                <option value="">20개씩 보기</option>
+              </select>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">중분류</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">중분류(전체)</option>
+                <option value="">20개씩 보기</option>
+              </select>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">반선택</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">전체</option>
+                <option value="">20개씩 보기</option>
+              </select>
+            </div>
+            <p class="m-bora1 t-bullet-02 mt15">선택 시 해당 분류에 속한 반 또는 선택한 반에 한해 설정이 적용 됩니다.</p>
+          </div>
+
+
+          <div class="m-item">
+            <p class="sub-tit">수강료 청구금액</p>
+            <!-- 라디오 -->
+            <div class="t-radio-01">
+              <input type="radio" id="hradio01" name="hradio01"> 
+              <label for="hradio01"><span class="rchk"></span>수강하는 반의 수강료</label> 
+              <input type="radio" id="hradio01_2"  name="hradio01"> <label for="hradio01_2"><span class="rchk"></span>직접입력(일괄적용) 
+                <input type="number" id="" class="txtfield-basic wd100" placeholder="0"> 원</label> 
+            </div>
+            <!-- /라디오 -->
+            <p class="m-bora1 t-bullet-02 mt15">수강하는 반의 수강료”는 수강료가 0원 이상으로 입력된 반에 대해서만 청구자료가 생성 됩니다.</p>
+          </div>
+
+
+
+
+          <div class="m-item">
+            <p class="sub-tit">원생별 수강기간</p>
+
+            <!-- 라디오 -->
+            <div class="t-radio-01">
+              <input type="radio" id="hradio01" name="hradio01">
+              <label for="hradio01">
+                <span class="rchk"></span>수강년월의 1일부터 말일까지
+              </label>
+              <input type="radio" id="hradio01_2" name="hradio01">
+              <label for="hradio01_2"><span class="rchk"></span>직접입력(일괄적용) 
+                <!-- 데이트피커 -->
+                <span class="date-picker mt5">
+                  <div class="dp__main dp__theme_light">
+                    <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                      aria-readonly="false">
+                      <div class="dp__input_wrap"><input name="fromDate"
+                          class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                          inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                          class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger"
+                              src="/images/datepicker.png"></button></span></div>
+                    </div><!---->
+                  </div> <span class="rangeMark ml5 mr5">~</span>
+                  <div class="dp__main dp__theme_light">
+                    <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                      aria-readonly="false"><!---->
+                      <div class="dp__input_wrap"><!----><input name="toDate"
+                          class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                          inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                          class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger"
+                              src="/images/datepicker.png"></button></span></div>
+                    </div>
+                  </div>
+                </span>
+               <!-- /데이트피커 -->
+              </label>
+            </div>
+            <!-- /라디오 -->
+          </div>
+
+
+          
+          <div class="m-item">
+            <p class="sub-tit">사업자번호</p>
+            <p class="main-text">200-12-12345 사업자로 수강료 청구자료가 생성 됩니다.</p>
+          </div>
+
+
+          <div class="btn-set p015">
+            <button type="button" class="t-button-bora2 m-readmore">수강료 청구서 일괄 생성</button>
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <!-- /content -->
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-inner"></div>
+    </footer>
+    <!-- /푸터 -->
+
+
+
+
+    <!-- 하단고정메뉴 -->
+    <div class="footer-fixed">
+      <ul>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
+        <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
+        <li class="btn-mymenu"><button type="button"></button></li>
+        <li class="btn-srchpp"><button type="button">원생검색</button></li>
+        <li class="btn-mypage"><button type="button">마이페이지</button></li>
+      </ul>
+    </div>
+
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
