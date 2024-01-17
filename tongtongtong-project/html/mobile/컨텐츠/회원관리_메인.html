@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>회원관리_메인</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-top">
+        <div class="header-cnt">
+          <!-- 로고영역 -->
+          <a class="m-logo" href="#">
+            <span>new통통통</span>
+          </a>
+          <!-- /로고영역 -->
+
+          <!-- 학원선택 -->
+          <select class="acdmyNm">
+            <option>대교에듀베이션학원</option>
+          </select>
+          <!-- /학원선택 -->
+        </div>
+        <!-- 알림버튼 -->
+        <button type="button" class="alarmBTN on">
+          <!-- 알림이 있는 경우 on클래스 추가. -->
+        </button>
+        <!-- /알림버튼 -->
+      </div>
+    </header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>학사관리</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li><a>반</a></li>
+        <li><a>원생</a></li>
+        <li><a>수납</a></li>
+        <li><a>상담</a></li>
+        <li><a>직원</a></li>
+        <li><a>통통통설정</a></li>
+        <li class="on"><a>앱관리</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+
+
+      <!-- content -->
+      <div class="content">
+
+
+        <ul class="tab-04">
+          <li>
+            <button type="button">
+              <div class="tab04-bg"><i class="i-tab08"></i></div><span class="status">알림장</span>
+            </button>
+          </li>
+          <li><button type="button">
+              <div class="tab04-bg"><i class="i-tab09"></i></div><span class="status">앨범</span>
+            </button></li>
+          <li class="active"><button type="button">
+              <div class="tab04-bg"><i class="i-tab10"></i></div><span class="status">회원관리</span>
+            </button></li>
+          <li><button type="button">
+              <div class="tab04-bg"><i class="i-tab11"></i></div><span class="status">궁금해요</span>
+            </button></li>
+        </ul>
+
+
+        <!-- 기본 검색박스 -->
+        <div class="m-basicSrchBox">
+          <div class="m-srchBox">
+            <input type="text" placeholder="제목, 작성자 검색">
+            <button type="button" class="button"></button>
+          </div>
+
+
+
+          <!-- /카테고리 슬라이드 (스와이퍼 개발 필요) -->
+        </div>
+        <!-- /기본 검색박스 -->
+
+
+        <!-- 리스트 상단 선택박스 등 -->
+        <div class="m-listTopSetBox flex-end">
+          <ul class="tab-03">
+            <li class="active"><button type="button" ><span class="status">전체(28)</span> </button>
+              </li>
+            <li><button type="button" ><span class="status">승인(45)</span> </button>
+              </li>
+            <li><button type="button" ><span class="status">미승인(1)</span> </button>
+              </li>
+          </ul>
+
+          <div class="btn-set">
+            <select>
+              <option>최근가입순</option>
+            </select>
+          </div>
+        </div>
+        <!-- /리스트 상단 선택박스 등 -->
+
+
+
+        <!-- 리스트 시작 -->
+        <div class="m-list-app">
+
+          <div class="m-scroll">
+            <table class="t-basic-1">
+              <thead>
+                <tr>
+                  <th>이름<br>(ID)</th>
+                  <th>회원유형</th>
+                  <th>휴대폰</th>
+                  <th>자녀</th>
+                  <th>상태</th>
+                  <th>가입일/<br>탈퇴일</th>
+                  <th>승인</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>김영자<br>(hongilmoom)</td>
+                  <td>학부모(모)</td>
+                  <td>010-1234-1111</td>
+                  <td>홍길동</td>
+                  <td>회원</td>
+                  <td>2023-12-10 <br> -</td>
+                  <td>
+                    <div class="t-switch">
+                      <input type="checkbox" id="switch" name="switch1" disabled=""> 
+                      <label for="switch" class="t-switchBtn-box"><span class="t-switchBtn"></span></label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>김영자<br>(hongilmoom)</td>
+                  <td>학부모(모)</td>
+                  <td>010-1234-1111</td>
+                  <td>홍길동</td>
+                  <td class="opt-discharge">탈퇴</td>
+                  <td>2023-12-10 <br> -</td>
+                  <td>
+                    <div class="t-switch">
+                      <input type="checkbox" id="switch" name="switch1" disabled=""> 
+                      <label for="switch" class="t-switchBtn-box"><span class="t-switchBtn"></span></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
+
+
+        </div>
+        <!-- /리스트 -->
+
+
+
+      </div>
+      <!-- /content -->
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-inner"></div>
+    </footer>
+    <!-- /푸터 -->
+
+
+
+
+    <!-- 하단고정메뉴 -->
+    <div class="footer-fixed">
+      <ul>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
+        <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
+        <li class="btn-mymenu"><button type="button"></button></li>
+        <li class="btn-srchpp"><button type="button">원생검색</button></li>
+        <li class="btn-mypage"><button type="button">마이페이지</button></li>
+      </ul>
+    </div>
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
