@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>(C)_퇴원처리</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+      <div class="t-popup-wrap">
+
+        <!-- t-popup에 클래스 추가될 예정 -->
+        <div class="t-popup popup-goback popup-full">
+
+          <div class="pop-header">
+            <p class="pop-title">퇴원처리</p>
+          </div>
+
+          <div class="pop-body">
+
+
+
+            <!-- pop-container -->
+            <div class="pop-container">
+
+
+              <div class="m-list-student m-item-list">
+
+                
+                <!-- 퇴원정보 -->
+                <div class="m-item">
+                  <p class="sub-tit">퇴원정보</p>
+                  <div class="label-set">
+                    <span class="label-text">퇴원일</span>
+                    <div class="wd100">
+                      <!-- 데이트피커 -->
+                      <span class="date-picker">
+                        <div class="dp__main dp__theme_light">
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="singleDate"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                                inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger" src="/images/datepicker.png"></button></span></div>
+                          </div>
+                        </div>
+                      </span>
+                      <!-- /데이트피커 -->
+                    </div>
+                  </div>
+
+                  <div class="label-set">
+                    <span class="label-text">퇴원유형</span>
+                    <div class="flex wd100"><select name="" id="">
+                        <option value="" disabled="" selected="">퇴원사유</option>
+                        <option value="">20개씩 보기</option>
+                      </select>
+                      <select name="" id="">
+                        <option value="" disabled="" selected="">선택</option>
+                        <option value="">20개씩 보기</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="label-set">
+                    <span class="label-text">퇴원사유</span>
+                    <div class="t-text-field_slot"><textarea id="" rows="4"></textarea></div>
+                  </div>
+                </div>
+                <!-- /퇴원정보 -->
+
+
+
+
+                <!-- 퇴원 대상반 -->
+                <div class="m-item">
+                  <p class="sub-tit">퇴원 대상 반(수강반)</p>
+                  <div class="m-scroll">
+                    <table class="t-basic-1 mt0">
+                      <thead>
+                        <tr>
+                          <th>반명</th>
+                          <th>운영/수납</th>
+                          <th>등록시작일</th>
+                          <th>잔여<br>회차</th>
+                          <th>기준일<br>(청구)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="txt-l">중학교&gt;수학<br>중등부2학년수학반</td>
+                          <td>일반/<br>1주단위</td>
+                          <td>2023.12.14
+                          </td>
+                          <td>-</td>
+                          <td>24일<br>(미청구)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- /퇴원 대상반 -->
+
+
+                <!-- 미납자료  -->
+                <div class="m-item">
+                  <p class="sub-tit">미납자료</p>
+                  <div class="tit-wrap mt15">
+                    <div class="apcntphon">미납자료<br>유지 여부</div>
+
+                    <!-- 버튼 클릭시 active 추가 -->
+                    <div class="btn-set time-box-btn m0"> 
+                      <button type="button" class="t-button-xms t-button-bora6-bd active">미납자료 유지</button> 
+                      <button type="button" class="t-button-xms t-button-bora6-bd">미납자료 삭제</button> 
+                      <button type="button" class="t-button-xms t-button-bora6-bd">면제처리</button>
+                    </div>
+
+                  </div>
+
+                  <div class="m-scroll">
+                    <table class="t-basic-1">
+                      <thead>
+                        <tr>
+                          <th>수강월/<br>수강기간</th>
+                          <th>수납내역</th>
+                          <th>운영/수납</th>
+                          <th>구분</th>
+                          <th>(실)청구금액</th>
+                          <th>선택</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="txt-l">2023.12<br>12.01~12.31</td>
+                          <td class="txt-l">중학교&gt;수학<br>중등부2학년수학반</td>
+                          <td>일반/<br>1주단위</td>
+                          <td>수강료</td>
+                          <td class="txt-r pc-red text-bold">82,000</td>
+                          <td>
+                            <button type="button" class="t-button-xxs">
+                              선택
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- /미납자료  -->
+              </div>
+
+
+
+
+
+            </div>
+            <!-- /pop-container  -->
+            <div class="bt-btnbox">
+              <button type="button" class="registbtn">퇴원처리</button><button type="button" class="canclebtn">취소</button>
+            </div>
+
+
+          </div>
+
+          <!-- 팝업 뒤로 가기 버튼 -->
+          <button type="button" class="close" title="닫기"></button>
+          <!-- /팝업 뒤로 가기 버튼 -->
+
+        </div>
+        <!-- /t-popup -->
+      </div>
+
+      <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+    </div>
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+</body>
+
+</html>
