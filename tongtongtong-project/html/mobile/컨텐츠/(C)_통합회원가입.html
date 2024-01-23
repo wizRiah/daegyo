@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>(C)_통합회원가입</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+      <div class="t-popup-wrap">
+        <div class="t-popup popup-goback popup-full">
+
+          <div class="pop-header">
+            <p class="pop-title">회원가입
+            </p>
+          </div>
+
+
+          <div class="pop-body">
+
+            <!-- pop-container -->
+            <div class="pop-container">
+
+
+
+
+
+              <div class="m-list-student m-item-list m-item-serv">
+
+
+                <div class="m-item">
+
+
+                  <div class="flex m-join-text">
+                    <p class="mb5 m-join-tit">통통통<span> + 에듀베이션</span></p>
+                    <p class="main-tit">통합회원 <span class="m-bora1">가입하기</span></p>
+                    <p class="main-text mt10 h-txt-c">이용약관, 개인정보 수집 및 이용에 동의하신 후<br>
+                      선택하신 플랫폼의 계정을 사용하여 회원가입이 가능합니다.</p>
+                  </div>
+
+                  <!-- 아이디 -->
+                  <div class="label-set">
+                    <span class="label-text">아이디</span>
+                    <div class="input-btn-wrap gap5 wd100">
+                      <input type="text" class="txtfield-basic" placeholder="One-ID 입력" id="">
+                      <button type="button" class="t-button-m">ID중복체크</button>
+                    </div>
+                  </div>
+
+
+                  <!-- 비밀번호 -->
+                  <div class="label-set">
+                    <span class="label-text">비밀번호</span>
+                    <div class="input-btn-set password">
+                      <input type="text" class="txtfield-basic" placeholder="비밀번호 입력">
+                      <input type="checkbox" name="" id="blindPw" class="">
+                      <label class="btn-blind" for="blindPw"></label>
+                    </div>
+                  </div>
+
+                  <!-- 이름 -->
+                  <div class="label-set">
+                    <span class="label-text">이름</span>
+                    <input type="text" class="txtfield-basic" placeholder="본인 이름(실명) 입력">
+                    <p class="mt5 m-bora1 t-bullet-02">본인 사용중인 실명으로 입력해 주세요.</p>
+                  </div>
+
+
+                  <!-- 생년월일 -->
+                  <div class="label-set">
+                    <span class="label-text">생년월일/성별<span class="ml3 sb-txt">(생년월일 8자리)</span></span>
+                    <div class="input-btn-wrap gap5 wd100 mb10">
+                      <input type="number" class="txtfield-basic" placeholder="생년월일 (YYYYMMDD)">
+                      -<input type="text" class="txtfield-basic wd60" placeholder="">
+                    </div>
+
+                    <!-- 도움말문구 -->
+                    <div class="flex ageguideBox">
+                      <div class="flex">
+                        <button type="button" class="m-infoTip"></button>
+                        <p class="ml5 infoTip-text">만15세 이상인지 확인이 필요합니다.
+                        </p>
+                      </div>
+                      <!-- 버튼 클릭시 미니 팝업 보이기 -->
+                      <div class="mini-popup" style="width: 245px;">
+                        <div class="pop-body">
+                          <div class="pop-container">
+                            <div class="main-text">
+                              취직 최저 연령에 대한 제한 <br> (근로기준법 제64조 1항)
+                            </div>
+                          </div>
+                        </div> 
+                        <button type="button" class="close" title="팝업 닫기"></button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- 휴대폰 -->
+                  <div class="label-set">
+                    <span class="label-text">휴대폰</span>
+                    <div class="input-btn-wrap gap5 wd100">
+                      <input type="number" class="txtfield-basic" placeholder="'-'제외하고 숫자만 입력">
+                      <button type="button" class="t-button-m">인증번호 전송</button>
+                    </div>
+                  </div>
+
+
+                  <!-- 이메일 -->
+                  <div class="label-set">
+                    <span class="label-text">이메일</span>
+                    <div class="input-btn-wrap gap5 wd100">
+                      <input type="text" class="txtfield-basic" placeholder="이메일 주소 입력">
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+
+
+                <!-- 약관 동의 -->
+                <div class="m-item roul-check">
+                  <div class="t-checkbox checkbox01">
+                    <input type="checkbox" name="checkForm" id="tbl_check_all">
+                    <label for="tbl_check_all">약관 전체 동의</label>
+                  </div>
+
+                  <ul class="check-list">
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02">
+                        <label for="check02">
+                          <span class="m-bora1 mr5">[필수]</span>개인정보 수집 및 이용동의</label>
+                          <!-- 버튼 클릭시 on 클래스 추가 -->
+                          <!-- 버튼 클릭시 dropdown에 on 추가 -->
+                          <button type="button" class="readmore-Arrowbtn ml5 on" title="자세히보기"></button>
+                      </div>
+                      <div class="dropdown mt10 on">회원가입 개인정보 수집 및 동의 내용이랄까</div>
+                    </li>
+
+                    <li>
+                      <div class="t-checkbox checkbox01">
+                        <input type="checkbox" name="checkForm" id="check02">
+                        <label for="check02"><span class="sb-txt mr5">[필수]</span>개인정보 수집 및 이용동의</label><button
+                          type="button" class="readmore-Arrowbtn ml5" title="자세히보기"></button>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+                <!-- /약관 동의 -->
+
+              </div>
+
+
+
+
+            </div>
+            <!-- /pop-container -->
+
+            <div class="bt-btnbox">
+              <button type="button" class="registbtn">One-ID 가입완료</button>
+            </div>
+
+
+          </div>
+
+          <button type="button" class="close" title="닫기"></button>
+
+        </div>
+      </div>
+      <!-- ●●●●●●●●●●● /팝업 영역 끝 ●●●●●●●●●●● -->
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
