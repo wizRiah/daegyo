@@ -165,10 +165,7 @@
           </div>
           <div class="btn-set"><button type="button" class="t-button-xms t-button-bora6 flex-1">원생등록</button>
 
-            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button"
-              class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button"
-              class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button"
-              class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
+            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button" class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
           </div>
         </div>
         <!-- /원생공통 -->
@@ -179,13 +176,9 @@
         <div class="m-listTopSetBox mt20">
           <p class="main-tit mr15">출결처리일</p><span class="date-picker">
             <div class="dp__main dp__theme_light">
-              <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
-                aria-readonly="false">
+              <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
                 <div class="dp__input_wrap">
-                  <input name="singleDate"
-                    class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
-                    inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button
-                      style="margin-right: 5px;">
+                  <input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;">
                       <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
                   </span>
                 </div>
@@ -278,19 +271,33 @@
 
               <div class="label-set">
                 <span class="label-text">사유</span>
-                <select name="" id="">
-                  <option value="" disabled="" selected="">주 단위</option>
+                <div class="input-btn-wrap gap5 wd100"><select name="" id="">
+                  <option value="" disabled="" selected="">사유없음</option>
                   <option value="">20개씩 보기</option>
-                  <option value="">40개씩 보기</option>
-                </select>
+                  
+                </select><input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="사유를 입력하세요.">
+                      
+                    </div>
               </div>
               <div class="label-set">
                 <span class="label-text">등원/귀가</span>
-                <select name="" id="">
-                  <option value="" disabled="" selected="">주 단위</option>
-                  <option value="">20개씩 보기</option>
-                  <option value="">40개씩 보기</option>
-                </select>
+                <div class="m-time-select"><select class="" name="" id="">
+                  <option value="" disabled="" selected="">등원</option>
+                  <option value="">귀가</option>
+                  
+                </select><select class="" name="" id="">
+                  <option value="" disabled="" selected="">오전</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select><select class="" name="" id="">
+                  <option value="" disabled="" selected="">01</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select> 시<select class="" name="" id="">
+                  <option value="" disabled="" selected="">00</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select> 분</div>
               </div>
             </div>
 
