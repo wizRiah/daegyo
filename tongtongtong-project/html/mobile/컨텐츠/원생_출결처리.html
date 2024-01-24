@@ -144,6 +144,7 @@
               <div class="clsAge">중등부<span class="arrow"></span>수학<span class="arrow"></span>중등부 2학년 수학반</div>
               <!-- /학부/학년 -->
 
+
               <!-- bull-list -->
               <div class="bull-list">
                 <dl>
@@ -165,7 +166,10 @@
           </div>
           <div class="btn-set"><button type="button" class="t-button-xms t-button-bora6 flex-1">원생등록</button>
 
-            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button" class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
+            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button"
+              class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button"
+              class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button"
+              class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
           </div>
         </div>
         <!-- /원생공통 -->
@@ -173,29 +177,27 @@
 
 
 
+        <!-- 출결처리일 -->
         <div class="m-listTopSetBox mt20">
           <p class="main-tit mr15">출결처리일</p><span class="date-picker">
             <div class="dp__main dp__theme_light">
-              <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
+              <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                aria-readonly="false">
                 <div class="dp__input_wrap">
-                  <input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;">
+                  <input name="singleDate"
+                    class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                    inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button
+                      style="margin-right: 5px;">
                       <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
                   </span>
                 </div>
               </div>
             </div>
           </span>
-
-
-
-
         </div>
-
-
-
-        <!-- 목록시작 -->
+      
         <div class="m-list-attend">
-
+          <!-- 클릭시 열 컬러 변경되는 테이블 -->
           <table class="t-basic-1 hover-table" style="table-layout: fixed;">
             <colgroup>
               <col style="width:30%;">
@@ -213,7 +215,6 @@
                 <th>등원</th>
                 <th>사유</th>
                 <th>출결<br>삭제</th>
-
               </tr>
             </thead>
             <tbody>
@@ -242,19 +243,24 @@
               </tr>
             </tbody>
           </table>
-
+          <!-- /클릭시 열 컬러 변경되는 테이블 -->
           <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
-
-
         </div>
+        <!-- /출결처리일 -->
+
+
+
+
+        <!-- 출결처리 박스 -->
         <div class="m-list-student m-item-list">
 
-
-
           <div class="box-bg mt20">
-
             <p class="main-tit mb10">출결처리</p>
+
+
             <div class="listBox">
+
+              <!-- 출석여부 -->
               <div class="label-set">
                 <span class="label-text">출석여부</span>
 
@@ -265,47 +271,89 @@
                   <button type="button" class="t-button-xms t-button-bora6-bd">지각</button>
                   <button type="button" class="t-button-xms t-button-bora6-bd">조퇴</button>
                 </div>
-                
+
               </div>
+              <!-- /출석여부 -->
 
-
+              <!-- 사유 -->
               <div class="label-set">
                 <span class="label-text">사유</span>
-                <div class="input-btn-wrap gap5 wd100"><select name="" id="">
-                  <option value="" disabled="" selected="">사유없음</option>
-                  <option value="">20개씩 보기</option>
-                  
-                </select><input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="사유를 입력하세요.">
-                      
-                    </div>
+                <div class="input-btn-wrap gap5 wd100">
+                  <select name="" id="">
+                    <option value="" disabled="" selected="">사유없음</option>
+                    <option value="">20개씩 보기</option>
+                  </select>
+                  <input type="text" id="txtNm" class="txtfield-basic" disabled="" placeholder="사유를 입력하세요.">
+                </div>
               </div>
+              <!-- /사유 -->
+
+
+              <!-- 등원/귀가 -->
               <div class="label-set">
                 <span class="label-text">등원/귀가</span>
-                <div class="m-time-select"><select class="" name="" id="">
-                  <option value="" disabled="" selected="">등원</option>
-                  <option value="">귀가</option>
-                  
-                </select><select class="" name="" id="">
-                  <option value="" disabled="" selected="">오전</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select><select class="" name="" id="">
-                  <option value="" disabled="" selected="">01</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select> 시<select class="" name="" id="">
-                  <option value="" disabled="" selected="">00</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select> 분</div>
+                <div class="m-time-select">
+                  <select class="" name="" id="">
+                    <option value="" disabled="" selected="">등원</option>
+                    <option value="">귀가</option>
+                  </select>
+                  <select class="" name="" id="">
+                    <option value="" disabled="" selected="">오전</option>
+                    <option value=""></option>
+                  </select>
+                  <select class="" name="" id="">
+                    <option value="" disabled="" selected="">01</option>
+                    <option value=""></option>
+                  </select> 시
+                  <select class="" name="" id="">
+                    <option value="" disabled="" selected="">00</option>
+                    <option value=""></option>
+                  </select> 분
+                </div>
+
               </div>
+              <!-- /등원/귀가 -->
+              
+              <!-- 자동문자발송 -->
+              <div class="label-set">
+                <span class="label-text">자동문자발송</span>
+
+                <ul class="check-list">
+                  <li>
+                    <div class="t-checkbox checkbox01">
+                      <input type="checkbox" name="checkForm" id="check02" checked="">
+                      <label for="check02">문자발송</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="t-checkbox checkbox01">
+                      <input type="checkbox" name="checkForm" id="check03">
+                      <label for="check03">모바일 앱 푸시</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="t-checkbox checkbox01">
+                      <input type="checkbox" name="checkForm" id="check01">
+                      <label for="check01">모바일 앱 푸시 실패시 문자발송</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!--/자동문자발송 -->
+
+
+              <div class="btn-set wd100 mt20">
+                <button type="button" class="t-button-s">출결처리 및 문자발송</button>
+              </div>
+
             </div>
 
 
           </div>
 
 
-        </div><!-- /목록 -->
+        </div> 
+        <!-- /출결처리 박스 -->
 
 
 
@@ -313,6 +361,10 @@
 
       </div>
       <!-- /content -->
+
+
+
+
 
 
 
