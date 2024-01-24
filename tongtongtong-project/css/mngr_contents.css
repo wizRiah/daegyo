@@ -564,17 +564,19 @@ location
  .academy-mngr-Wrap .address-table>tbody>tr:hover>td:not(.t-no-data):nth-child(2) { background:#f7f9fb!important; }
 
  /* 테이블 행에 hover시 행 전체 컬러 변경 */
- .academy-mngr-Wrap .hover-table>tbody>tr:hover>td:not(.t-no-data) { background: #f7f9fb!important }
- .academy-mngr-Wrap .hover-table>tbody>tr.active>td:not(.t-no-data) { background: beige!important; }
+ .hover-table>tbody>tr:hover>td:not(.t-no-data) { background: #f7f9fb!important; }
+ .hover-table>tbody>tr.active>td:not(.t-no-data) { background: #fff1e4!important; }
 
 
- .academy-mngr-Wrap .hover-table tr { cursor:pointer; }
+
+
+ .hover-table tr { cursor:pointer; }
 
  /* 커서 : pointer */
- .academy-mngr-Wrap .cs-pt { cursor: pointer; }
+ .cs-pt { cursor: pointer; }
 
  /* 테이블 열에 hover시 해당 열 컬러 변경 */
- .academy-mngr-Wrap td.hover-td:not(.t-no-data):hover { cursor: pointer; background: #f7f9fb!important }
+ td.hover-td:not(.t-no-data):hover { cursor: pointer; background: #f7f9fb!important }
 
 
  /* 메시지전송 영역 */
@@ -1277,13 +1279,22 @@ location
 
 
 /* 원생-반 */
-.m-list-cls .writingInfo li { font-size: var(--m-fs12);}
-.m-list-cls .date-txt { font-size: var(--m-fs11); color:#7e7e7e; margin-top:5px; }
+.m-academy-mngr-Wrap .m-list-cls .writingInfo li { font-size: var(--m-fs12);}
+.m-academy-mngr-Wrap .m-list-cls .date-txt { font-size: var(--m-fs11); color:#7e7e7e; margin-top:5px; }
+
+/* 원생-출결 */
+.m-academy-mngr-Wrap .m-list-attend { padding: 0 15px; }
+.m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list {  padding: 0 15px 75px;}
+.m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list .label-set { margin-top: 15px;}
+.m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list .label-set:first-child { margin-top:0; }
+.m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list .time-box-btn { width:100%; }
+.m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list .time-box-btn  button { flex:1; }
 
 
 
 
-
+ /* 테이블 행에 hover시 행 전체 컬러 변경 */
+ .m-academy-mngr-Wrap .hover-table>tbody>tr:hover>td:not(.t-no-data) { background: #fff1e4!important; }
 
 
 .m-academy-mngr-Wrap .csbar.bar-txt-list:before { position: absolute; left: 0; content: ""; width: 11px; height: 15px; display: inline-block; background: url(/images/m-icon-alarm.png) center no-repeat; background-size: 10px; }
