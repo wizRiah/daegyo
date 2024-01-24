@@ -755,7 +755,7 @@ location
 
 /* 목록 리스트 박스(공통) */
 .m-academy-mngr-Wrap .listBox { background:#fff; position:relative; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); border: 1px solid #7e7e7e; border-radius:5px; padding: 15px; box-sizing:border-box; margin-bottom:10px; } 
-.m-academy-mngr-Wrap .listBox:last-child { margin-bottom:0; } 
+.m-academy-mngr-Wrap .listBox:last-of-type:only-child { margin-bottom:0; } 
 .m-academy-mngr-Wrap [class^="m-list-"] { padding: 0 15px 75px; width:100%; display:flex; flex-direction:column; box-sizing:border-box; } 
 .m-academy-mngr-Wrap [class^="m-list-"] .arrow { width:5px; height: 5px; display: inline-block; vertical-align: middle; border: 1px solid #a6a6a6; border-width: 1px 1px 0 0; transform: rotate(45deg); margin: 0 3px 3px; } 
 .m-academy-mngr-Wrap [class^="m-list-"] .prsn-info { width:60%; flex-grow:1; padding-left:15px; display: flex; flex-direction: column; } 
@@ -1291,7 +1291,7 @@ location
 .m-academy-mngr-Wrap .m-list-attend + .m-list-student.m-item-list .time-box-btn button { flex:1; } 
 .m-academy-mngr-Wrap .m-time-select { width: 100%; display: flex; justify-content: space-between; align-items: center; gap:5px; } 
 .m-academy-mngr-Wrap .m-time-select select { min-width: auto; flex:1; } 
-.m-academy-mngr-Wrap .m-time-select select + select { margin-left:0; }
+.m-academy-mngr-Wrap .m-time-select select + select { margin-left:0; } 
 
 
  /* 테이블 행에 hover시 행 전체 컬러 변경 */
@@ -1305,7 +1305,7 @@ location
 
 
 /* 버튼 100% */
-.m-academy-mngr-Wrap .btn-set.wd100 button { width:100%; }
+.m-academy-mngr-Wrap .btn-set.wd100 button { width:100%; } 
 
 
 @media (max-width: 300px){
@@ -1352,10 +1352,16 @@ location
  .m-mobileEdu-Wrap .m-list-customer .m-join-search + .m-join-search { margin: 15px 0 20px; } 
 
 
-
-
-
-
+/* 급식정보 */
+.m-mobileEdu-Wrap .m-food .listBox { text-align:center; } 
+.m-mobileEdu-Wrap .m-food .m-food-list { display: flex; gap: 10px; flex-direction: column; } 
+.m-mobileEdu-Wrap .m-food .m-food-list li { background: #e8eaf6; border-radius: 4px; padding: 8px; box-sizing: border-box; font-size: var(--m-fs15); color: #413064; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox { display: flex; gap: 15px; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info { background: #8181a8; border-radius: 100%; padding: 10px; width: 50px; flex-shrink: 0; text-align: center; height: 50px; display: flex; align-items: center; justify-content: center; line-height: 1; color: #fff; font-size: var(--m-fs15); font-weight: 600; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-ingre { display: flex; flex-direction: column; align-items: flex-start; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-ingre .label-text { margin-bottom: 5px; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-ingre .apcntphon-list { flex-direction: row; flex-wrap: wrap; gap: 5px; } 
+.m-mobileEdu-Wrap .m-food .listBox .conBtnBox button { position: absolute; right: 15px; bottom: 15px; } 
 
 
 
