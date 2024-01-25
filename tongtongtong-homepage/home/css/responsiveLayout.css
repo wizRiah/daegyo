@@ -1,0 +1,72 @@
+@charset "utf-8"; 
+
+
+/* 로그인, 회원가입, 아이디/비밀번호찾기 전용 반응형웹 layout */ 
+
+/* header */
+.t-wrap.t-auth-wrap header {display:flex;justify-content:center;height:100px;background:#000;}
+.t-wrap.t-auth-wrap header .logo-wrap {display:flex;justify-content:space-between;align-items:center;width:100%;max-width:580px;background:#000;}
+.t-wrap.t-auth-wrap header .logo-wrap .logo-item .logo-text {display:block;font-size:11px;color:#fff;}
+.t-wrap.t-auth-wrap header .logo-wrap .logo-item .logo-text span {color:#FFEE00;}
+
+/* container */
+.t-wrap.t-auth-wrap .container {position:unset;width:100%;padding-top:70px;}
+.t-wrap.t-auth-wrap .home-menu {display:flex;justify-content:right;align-items:center;width:100%;max-width:580px;margin:0 auto;box-sizing:border-box;}
+.t-wrap.t-auth-wrap .home-menu .m-tit {display:none;justify-content:left;align-items:center;font-size:18px;}
+.t-wrap.t-auth-wrap .home-menu .m-tit .closeBtn {width:14px;height:14px;margin-right:15px;background:url(../images/auth/btn_close.png) no-repeat 0 0;}
+.t-wrap.t-auth-wrap .home-menu ul {display:flex;justify-content:end;}
+.t-wrap.t-auth-wrap .home-menu ul li {padding:0 12px;}
+.t-wrap.t-auth-wrap .home-menu ul li:first-child {position:relative;}
+.t-wrap.t-auth-wrap .home-menu ul li:first-child::after {display:block;content:"";position:absolute;right:0;top:calc(50% - 7px);width:1px;height:13px;background:#E0E6EF;}
+.t-wrap.t-auth-wrap .home-menu ul li a {display:block;font-size:13px;}
+
+/* footer */
+.t-wrap.t-auth-wrap footer {margin-top:100px;}
+.t-wrap.t-auth-wrap footer {margin-top:170px; padding:45px 0; font-size:var(--text-subtitle5); color:var(--black-3); border-top:1px solid var(--border-basic-3);}
+.t-wrap.t-auth-wrap footer ul li a {color:var(--black-3);}
+.t-wrap.t-auth-wrap footer .quick-menu {display:flex; justify-content:center;}
+.t-wrap.t-auth-wrap footer .quick-menu li + li,
+.t-wrap.t-auth-wrap footer .office-info li + li {position:relative; margin-left: 40px;}
+.t-wrap.t-auth-wrap footer .quick-menu li + li:before,
+.t-wrap.t-auth-wrap footer .office-info li + li:before {content:''; position:absolute; width:1px; height:13px; background:var(--grey-1); margin-left:-20px;}
+.t-wrap.t-auth-wrap footer .office-info {display:flex; justify-content:center; margin:15px 0;}
+.t-wrap.t-auth-wrap footer .office-info .tit {color:var(--black-2); font-weight:var(--text-medium);}
+.t-wrap.t-auth-wrap footer .copyr {text-align:center; color:var(--black-6);}
+
+/* (해상도 480px ~ 767px) */
+@media all and (max-width:767px) {
+    /* header */
+    .t-wrap.t-auth-wrap header .logo-wrap {max-width:100%;padding:0 30px;}
+
+    /* container */
+    .t-wrap.t-auth-wrap .container {background:#fff;}
+    .t-wrap.t-auth-wrap .home-menu {width:100%;max-width:100%;padding-right:30px;}
+    .t-wrap.t-auth-wrap .content {max-width:100%;padding:0 20px;margin-top:35px;background:#fff;border:none;border-radius:0;}
+
+    /* footer */
+    .t-wrap.t-auth-wrap footer {display:none;}
+}
+
+/* (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    /* header */
+    .t-wrap.t-auth-wrap header {display:none;}
+
+    /* container */
+    .t-wrap.t-auth-wrap .container {padding-top:104px;}
+    .t-wrap.t-auth-wrap .home-menu {position:fixed;z-index:1;top:0;justify-content:space-between;height:54px;padding:0 20px;background:#F5F7FA;border-bottom:1px solid #ebfff5;}
+    .t-wrap.t-auth-wrap .home-menu .m-tit {display:flex;}
+    .t-wrap.t-auth-wrap .home-menu ul li {padding:0;}
+    .t-wrap.t-auth-wrap .home-menu ul li:first-child::after {display:none;}
+    .t-wrap.t-auth-wrap .home-menu ul li:nth-child(2) {margin-left:15px;}
+    .t-wrap.t-auth-wrap .home-menu ul li a {position:relative;width:25px;height:22px;font-size:0;line-height:0;}
+    .t-wrap.t-auth-wrap .home-menu ul li a:after {display:block;content:"";position:absolute;left:0;top:0;width:25px;height:22px;}
+    .t-wrap.t-auth-wrap .home-menu .home-link:after {background:url(../images/auth/icon_home_link.png) no-repeat 50% 50%;}
+    .t-wrap.t-auth-wrap .home-menu .customer-link:after {background:url(../images/auth/icon_customer_link.png) no-repeat 50% 50%;}
+}
+
+
+
+
+
+
