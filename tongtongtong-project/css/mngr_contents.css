@@ -1084,7 +1084,7 @@ location
 .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .bull-list dl dd { font-size: 13px; }
 .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .bull-list dl ~ dl { margin-top: 4px; }
 .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .clsTit { margin: 2px 0px 12px; }
-.m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .clsTit:last-child { margin-bottom:0;}
+.m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .clsTit:last-child { margin-bottom:0; }
 
 
 .m-academy-mngr-Wrap .m-stu-info { border-bottom: 4px solid #f0f0f1; padding: 15px; }
@@ -1168,7 +1168,7 @@ location
 /* 과제 */
 .m-academy-mngr-Wrap .m-list-task { }
 .m-academy-mngr-Wrap .m-list-task .listBox { padding: 0; }
-.m-academy-mngr-Wrap .m-list-task .rBtnbox { justify-content: flex-start; display:flex; gap:15px;}
+.m-academy-mngr-Wrap .m-list-task .rBtnbox { justify-content: flex-start; display:flex; gap:15px; }
 .m-academy-mngr-Wrap .m-list-task .clsName { font-size: var(--m-fs12); color: #878787; font-weight: 500; margin-top: 10px; }
 .m-academy-mngr-Wrap .m-list-task .slash-txt-list { font-size: var(--m-fs12); }
 .m-academy-mngr-Wrap .m-list-task .slash-txt-list .num { font-size: var(--m-fs12); }
@@ -1407,10 +1407,27 @@ location
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info span { font-size: var(--m-fs12); font-weight: 400; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap { display: flex; position: relative; margin-right: 10px; padding-right: 10px; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap:after { content: ''; width: 1px; height: 100%; position: absolute; right: 0; top: 0; background-color: #e7e7e7; }
-.m-academy-mngr-Wrap .m-list-clsMng .clsTit .schIcon:after { background: transparent url(/images/m-icon-pen.png) no-repeat center/100%; background-size: 12px; }
+
+
+.schIcon:after { background: transparent url(/images/m-icon-pen.png) no-repeat center/100%; background-size: 12px; }
 
 
 
 /* 영양정보 */
 .m-mobileEdu-Wrap .m-list-ingr .m-food-list b { font-size: var(--m-fs12); }
 .m-mobileEdu-Wrap .m-list-ingr .m-food-list li { display: flex; justify-content: space-between; }
+
+
+/* 자녀정보 설정 */
+.m-mobileEdu-Wrap .m-school-info { gap: 6px; display: flex; flex-direction: column; }
+.m-mobileEdu-Wrap .m-school-info select + select { margin-left:0; }
+.m-mobileEdu-Wrap .m-list-child { padding: 15px 15px 75px; }
+.m-mobileEdu-Wrap .m-list-child .m-child-info { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.m-mobileEdu-Wrap .m-list-child .m-child-info select { height: 35px; border-width: 0 0 1px; border-radius: 0; }
+.m-mobileEdu-Wrap .m-list-child .clsTit { gap: 10px; }
+.m-mobileEdu-Wrap .m-list-child .clsTit .schIcon {width: 20px; height: 20px; background: beige; }
+
+/* 노데이터 */
+.m-academy-mngr-Wrap .listBox.no-data .list-title.name { display:none; }
+.m-academy-mngr-Wrap .listBox.no-data .clsTit { margin-top: 0; flex-direction: column;}
+.m-academy-mngr-Wrap .listBox.no-data .csBtnBox { display: none;}
