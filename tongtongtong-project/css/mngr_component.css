@@ -466,7 +466,7 @@ select.wd-100 { width:100px !important; min-width:100px!important }
  /* label:before에 체크하기 전 상태 CSS */
  .t-checkbox.checkbox01 input[type="checkbox"] + label { position:relative; z-index: 0; color:#333; font-size: var(--pc-fs13); flex-shrink: 0; } 
  .t-checkbox.checkbox01 input[type="checkbox"] + label:before,
- .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -1px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
+ .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { content:""; display:inline-block; box-sizing: border-box; width: 18px; height: 18px; line-height: 19px; font-size:var(--pc-fs15); margin: -2px 5px 0 0; text-align: center; border-radius: 2px; border: 1px solid var(--pc-border-2); transition: background-color 0.5s; -webkit-transition: background-color 0.5s; vertical-align: middle; background-color: #fff; z-index: 1; } 
  .t-checkbox.checkbox01 label>input[type="checkbox"] + .spanLabel:before { z-index: 1; margin: -4px 0 0 0; } 
 
 
@@ -1063,6 +1063,7 @@ button i { display:inline-block; }
 .i-check-img { background: url(../images/check-img.png) no-repeat center/100%; width: 30px; height: 30px; } 
 .i-clock-img { background: url(../images/clock-img.png) no-repeat center/100%; width: 40px; height: 40px; } 
 .i-ask-img { background: url(../images/ask-img.png) no-repeat center/100%; width: 40px; height: 40px; } 
+.i-scroll { background: url(../images/scroll-b.png) no-repeat center/100%; width: 50px; height: 50px; } 
 
 [class^="i-tab"] { width: 20px; height: 20px; } 
 .i-tab-3173 { background: url(../images/m-tab-icon01.png) no-repeat center/100%; } 
@@ -1252,7 +1253,7 @@ button i { display:inline-block; }
 .t-popup-wrap { z-index: 1001; display: flex; height: 100%; justify-content: center; left: 0px; position: fixed; top: 0px; width: 100%; align-items: center; } 
 .t-popup { height: fit-content; white-space: normal; word-wrap: break-word; position: relative; margin: 0px auto; flex: 0 0 auto; z-index: 1001; -webkit-box-shadow: 0px 5px 10px #0000001A; box-shadow: 0px 5px 10px #0000001A; box-sizing: border-box; /* max-height: calc(100vh - 60px); */ overflow: hidden; } 
 .t-popup .pop-header { display: flex; align-items: center; text-overflow: clip; width: 100%; text-align: left; box-sizing: border-box; } 
-.academy-mngr-Wrap .t-popup .pop-header { padding: 20px 20px 15px; border: 1px solid rgb(59, 41, 137); background-color: var(--pc-bora-4); border-radius: 15px 15px 0px 0px; } 
+.academy-mngr-Wrap .t-popup .pop-header { padding: 20px 20px 15px; border: 1px solid rgb(59, 41, 137); background-color: var(--pc-bora-4); border-radius: 15px 15px 0px 0px; border-width: 1px 1px 0 1px; } 
 .t-popup .pop-body { box-sizing: border-box; position: relative; overflow: hidden; background-color: rgb(255, 255, 255); } 
 .academy-mngr-Wrap .t-popup>.pop-container { border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-color: rgb(59, 41, 137); } 
 .academy-mngr-Wrap .t-popup .pop-container { border: 1px solid rgb(59, 41, 137); } 
@@ -1816,9 +1817,16 @@ button i { display:inline-block; }
 
 
 /* 반투명팝업 */
-.m-academy-mngr-Wrap .t-popup.t-opacity { height: 100vh; width: 100%; border-radius: 0; } 
-
-
+.m-academy-mngr-Wrap .t-popup.t-opacity { background: #000000bd; border-radius: 0; width: 100%!important; top: 0; height: 100vh; max-height: 100%; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity>.pop-body { height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: transparent; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .pop-container { height: 100%; max-height: 100%; padding: 15px; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .opacity-cont { flex-direction: column; border-bottom: 2px dotted #fff; height: calc(100% - 50px); display: flex; box-sizing: border-box; justify-content: center; align-items: center; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .pop-container .btn-set { padding-top:15px; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .t-checkbox.checkbox01 input[type="checkbox"] + label { color:#fff; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .tip-box { flex-shrink: 0; width: 30px; height: 30px; box-sizing: border-box; color: #fff; border-radius: 100%; text-align: center; background: rgb(221 52 109); font-weight: bold; font-size: 13px; display: flex; justify-content: center; align-items: center; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .main-text { color: #fff; line-height: 18px; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .opacity-text { margin-top:20px; display: flex; flex-direction: column; gap: 10px; } 
+.m-academy-mngr-Wrap .t-popup.t-opacity .i-scroll { margin: 0 auto;}
 
 
 /* 반응형 */
