@@ -58,12 +58,14 @@
 .cont-text { flex-shrink: 0; margin-right:5px; word-break: keep-all; color: var(--pc-text-color-1); font-size: var(--pc-fs13); letter-spacing: var(--letter-spacing-0); line-height: 19px; } 
 
 /* 컬러별 텍스트*/
-.pc-text-1 { color:var(--pc-text-color-1)!important; } 
-.pc-red { color: var(--pc-red)!important; } 
-.pc-bora2 { color: var(--pc-bora-2)!important; } 
-.pc-bora6 { color: var(--pc-bora-6)!important; } 
-.pc-bora7 { color: var(--pc-bora-7)!important; } 
-.pc-bora8 { color: var(--pc-bora-8)!important; } 
+.pc-text-1 { color:var(--pc-text-color-1)!important; }
+.pc-red { color: var(--pc-red)!important; }
+.pc-bora2 { color: var(--pc-bora-2)!important; }
+.pc-bora6 { color: var(--pc-bora-6)!important; }
+.pc-bora7 { color: var(--pc-bora-7)!important; }
+.pc-bora8 { color: var(--pc-bora-8)!important; }
+.pc-orange { color: #ff6000;}
+.pc-grey { color:#9A9A9A;}
 
 
 .m-text-1 { color:var(--m-text-color-1)!important; } 
@@ -477,19 +479,18 @@ select.wd-100 { width:100px !important; min-width:100px!important }
 
  /*포커싱되었을때*/
  .t-checkbox.checkbox01 input[type="checkbox"]:focus + label:before,
- .t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); } 
+ .t-checkbox.checkbox01 label>input[type="checkbox"]:focus + .spanLabel:before { border-color:var(--pc-bora-3); }
  /*hover*/
  .t-checkbox.checkbox01 input[type="checkbox"] + label:after,
- .t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 8px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; } 
+ .t-checkbox label>input[type="checkbox"] + .spanLabel:after { content:""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 6px; left: 7px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; }
  .t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after,
- .t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; } 
+ .t-checkbox label>input[type="checkbox"] + .spanLabel:hover:after { transform: scale(7); transform-origin: center; opacity: 0.3; }
  .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:after,
- .t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; } 
+ .t-checkbox label>input[type="checkbox"]:checked + .spanLabel:after { background: var(--pc-bora-3); opacity: 0.2; }
  /*disabled*/
  .t-checkbox.checkbox01 input[type="checkbox"]:disabled + label:before,
- .t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; } 
+ .t-checkbox.checkbox01 label>input[type="checkbox"]:disabled + .spanLabel:before { background-color: #f2f2f2; }
 
- 
 /* 체크박스 02 */
 /* .t-checkbox.checkbox02 i { vertical-align: middle; margin: -2px 5px 0 0; } 
 .t-checkbox.checkbox02 input[type="checkbox"] + label:after { content: ""; display: inline-block; width: 4px; height: 4px; position: absolute; top: 7px; left: 10px; border-radius: 100%; opacity: 0; z-index: -1; transition: transform 0.2s, opacity 0.1s; background: #c3cad4; } 
@@ -1215,14 +1216,16 @@ button i { display:inline-block; }
 
 
  /* dropdown */
- .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:6px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; } 
- .input-drop { position:relative; } 
- .input-drop.active .dropdown { top: calc(100% + 5px); height: auto; opacity: 1; visibility: visible; outline: 1px solid var(--pc-border-5); } 
- .dropdown ul { margin:10px 0; text-align:left; } 
- .dropdown ul li a { display:block; padding:9px 20px; font-size: var(--pc-fs14); line-height:16px; color: var(--pc-bora-1); } 
- .dropdown ul li:hover { background: #efedfc; transition:all 0.2s ease; } 
- .dropdown::-webkit-scrollbar-thumb { height:30%; } 
- .srchKeyword { color: #f66900; } 
+ .dropdown { overflow-y:auto; display:block; position:absolute; top:100%; right:0; z-index:1; width:100%; height:0; min-width:80px; max-height:160px; opacity:0; border-radius:3px; background:#fff; text-align:center; box-sizing:border-box; box-shadow:0 5px 10px #0000001A; transition:all 0.3s; }
+ .input-drop { position:relative; }
+ .input-drop.active .dropdown { top: calc(100% + 5px); height: auto; opacity: 1; visibility: visible; outline: 1px solid var(--pc-border-5); }
+ .dropdown ul { margin:10px 0; text-align:left; }
+ .dropdown ul li a { display:block; padding:9px 20px; font-size: var(--pc-fs14); line-height:16px; color: var(--pc-bora-1); }
+ .dropdown ul li:hover { background: #efedfc; transition:all 0.2s ease; }
+ .dropdown::-webkit-scrollbar-thumb { height:30%; background-color: #6e6a7a; width:7px; }
+ .dropdown::-webkit-scrollbar { width: 8px; height: 8px; }
+
+ .srchKeyword { color: #f66900;}
 
 
 
@@ -1532,16 +1535,16 @@ button i { display:inline-block; }
  .m-academy-mngr-Wrap [class^="input-btn-wrap gap"] [class^="t-button"]:last-child { margin:0; } 
 
 
-
 /* 툴팁 */
-.m-helpTip { width: 20px; height: 20px; background: url(../images/mobile-icon-help.png) center no-repeat; background-size: 20px; } 
-.m-infoTip { width: 20px; height: 20px; background: url(../images/mobile-icon-tooltip.png) center no-repeat; background-size: 20px; } 
-.infoTip-text { color: #5d39ff; line-height: 20px; font-size: var(--m-fs13); font-weight: var(--text-medium)!important; } 
-.ageguideBox { position:relative; } 
-.ageguideBox .mini-popup { position: absolute; top: 25px; z-index: 1; padding: 20px; border: 1px solid #62666b; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0 5px 10px #0000001a; background-color: #fff; overflow-y: auto; } 
-.ageguideBox .mini-popup button.close { width: 30px!important; height: 30px!important; background-size: 14px!important; } 
-.ageguideBox .mini-popup .pop-container { min-height:auto; } 
-.ageguideBox .mini-popup .main-text { font-size: var(--m-fs13); } 
+.m-helpTip { width: 20px; height: 20px; background: url(../images/mobile-icon-help.png) center no-repeat; background-size: 20px; }
+.m-infoTip { width: 20px; height: 20px; background: url(../images/mobile-icon-tooltip.png) center no-repeat; background-size: 20px; }
+.infoTip-text { color: #5d39ff; line-height: 20px; font-size: var(--m-fs13); font-weight: var(--text-medium)!important; }
+.ageguideBox { position:relative; }
+.ageguideBox .mini-popup { position: absolute; top: 25px; z-index: 1; padding: 20px; border: 1px solid #62666b; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0 5px 10px #0000001a; background-color: #fff; overflow-y: auto; }
+.ageguideBox .mini-popup button.close { background: url(../images/m-btn-close.png) no-repeat center/100%; width: 30px!important; height: 30px!important; background-size: 14px!important; }
+.ageguideBox .mini-popup .pop-container { min-height:auto; }
+.ageguideBox .mini-popup .main-text { font-size: var(--m-fs13); }
+
 
 
 
