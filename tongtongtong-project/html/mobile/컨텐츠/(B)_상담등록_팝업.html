@@ -33,7 +33,7 @@
 
             <div class="pop-container">
 
-          
+
               <!-- 컨텐츠 리스트 -->
               <div class="m-item-list">
 
@@ -53,7 +53,8 @@
                   <p class="sub-tit"><span class="t-necessary">필수</span>상담대상</p>
                   <div class="input-btn-wrap gap5">
                     <input type="text" class="txtfield-basic wd100" placeholder="이름">
-                    <input type="number" class="txtfield-basic" placeholder="휴대폰"><button type="button" class="t-button-m t-button-bora6-bd">선택</button>
+                    <input type="number" class="txtfield-basic" placeholder="휴대폰"><button type="button"
+                      class="t-button-m t-button-bora6-bd">선택</button>
                   </div>
                 </div>
                 <!-- /상담대상 -->
@@ -65,9 +66,13 @@
                     <!-- date-picker -->
                     <span class="date-picker">
                       <div class="dp__main dp__theme_light">
-                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
+                        <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                          aria-readonly="false">
                           <div class="dp__input_wrap">
-                            <input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;">
+                            <input name="singleDate"
+                              class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                              inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                              class="dp__input_icon"><button style="margin-right: 5px;">
                                 <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
                             </span>
                           </div>
@@ -80,8 +85,13 @@
                     <div class="time-picker">
                       <span class="date-picker">
                         <div class="dp__main dp__theme_light">
-                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
-                            <div class="dp__input_wrap"><input name="sndngTime" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg" inputmode="none" placeholder="HH:MM" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger" src="/images/icon-clock.png"></button></span></div>
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="sndngTime"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg"
+                                inputmode="none" placeholder="HH:MM" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger" src="/images/icon-clock.png"></button></span></div>
                           </div>
                         </div>
                       </span>
@@ -134,12 +144,46 @@
 
                 <!-- 자동 알림발송 -->
                 <div class="m-item">
-                  <div class="sub-tit flex">상담알림발송<!-- 툴팁버튼 -->
-                    <button type="button" class="m-helpTip ml5"></button>
-                    <!-- /툴팁버튼 -->
+                  <div class=" ageguideBox">
+                    <div class="sub-tit flex">상담알림발송<!-- 툴팁버튼 -->
+                      <button type="button" class="m-helpTip ml5"></button>
+                      <!-- /툴팁버튼 -->
+                    </div>
+
+
+                    <!-- 툴팁 팝업 -->
+                    <div class="mini-popup" style="width: 245px; max-height: 220px;">
+                      <div class="pop-body">
+                        <div class="pop-container">
+                          <div class="main-text">
+                            <p><b>상담(등록) 알림발송</b><br>
+                              - 상담 등록/수정 시, 상담(등록) 알림발송 이력이 없는 경우에 한하여
+                              선택된 발송유형으로 하단 알림발송대상에게 상담결과가 포함되지 않은
+                              상담(등록) 알림발송 내용이 최초 1회 발송됩니다.
+                              - 추후 별도의 상담결과를 포함한 상담(결과) 알림발송 1회 가능
+                            </p><br>
+                            <p>
+                              <b>상담(결과) 알림발송</b><br>
+                              - 상담 등록/수정 시, 상담(결과) 알림발송 이력이 없는 경우에 한하여
+                              상담결과에서 ‘결과입력‘ 체크 후 상담결과 내용이 작성된 경우
+                              선택된 발송유형으로 하단 알림발송대상에게 상담결과가 포함된
+                              상담(결과) 알림발송 내용이 최초 1회 발송됩니다.
+                            </p><br>
+                            <p class="pc-red"><b>자동알림발송 유의사항</b><br>
+                              - ‘발송유형’, ‘알림발송대상’ 이 선택되지 않은 경우 발송되지 않음
+                            </p><br>
+                            <p><b>알림발송내용 설정 및 확인</b><br>
+                              - 알림발송 내용은 환경설정/알림설정에서 확인 및 설정이 가능합니다.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="close" title="팝업 닫기"></button>
+                    </div>
+                    <!-- /툴팁 팝업 -->
                   </div>
 
-                  
+
                   <!-- 체크리스트 -->
                   <ul class="check-list">
                     <li>
@@ -154,16 +198,17 @@
                         <label for="check03">모바일 앱 푸시</label>
                       </div>
                     </li>
-                  <li>
+                    <li>
                       <div class="t-checkbox checkbox01">
-                    <input type="checkbox" name="checkForm" id="check01"> 
-                    <label for="check01">모바일 앱 푸시 실패시 문자발송</label>
-                  </div>
-                    </li></ul>
+                        <input type="checkbox" name="checkForm" id="check01">
+                        <label for="check01">모바일 앱 푸시 실패시 문자발송</label>
+                      </div>
+                    </li>
+                  </ul>
                   <!-- /체크리스트 -->
 
 
-                  
+
 
 
                 </div>
@@ -178,13 +223,13 @@
                   <ul class="check-list">
                     <li>
                       <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="check02"> 
+                        <input type="checkbox" name="checkForm" id="check02">
                         <label for="check02">상담대상</label>
                       </div>
                     </li>
                     <li>
                       <div class="t-checkbox checkbox01">
-                        <input type="checkbox" name="checkForm" id="check03"> 
+                        <input type="checkbox" name="checkForm" id="check03">
                         <label for="check03">상담사</label>
                       </div>
                     </li>
@@ -196,7 +241,7 @@
 
               </div>
               <!-- /컨텐츠 리스트 -->
-         
+
 
             </div>
 
