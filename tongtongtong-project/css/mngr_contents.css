@@ -817,6 +817,17 @@ location
 .reply-set + .reply-set { border-top: 1px solid var(--pc-border-3); } 
 
 
+/* 앨범게시판 */
+.album-wrap { margin: 20px 0; display: flex; gap: 15px 1.3%; flex-wrap: wrap; } 
+
+.album-wrap .listBox { position: relative; border-radius: 5px; box-sizing: border-box; margin-bottom: 10px; width: 24%; } 
+.album-wrap .listBox .noti-image { display: flex; flex-wrap: wrap; margin-bottom: 15px; margin-top: 5px; } 
+
+ .album-wrap .listBox .noti-image .photo { position: relative; overflow: hidden; border: 1px solid #e0e6ef; box-sizing: border-box; width: 100%; height: 135px; } 
+ .album-wrap .listBox .noti-image .photo img { position: absolute; z-index: 1; top: -999px; bottom: -999px; left: -999px; right: -999px; width: 100%; max-width: 100%; height: auto; margin: auto; } 
+ .album-wrap .album-tit { font-weight: bold; color: #3c3c3c; max-width: 100%; display: block; font-size: var(--pc-fs15); margin-bottom: 5px; } 
+
+
 
 
 
@@ -825,21 +836,21 @@ location
 
 
 /* 상태박스 */
-.m-academy-mngr-Wrap .smallBox { background: rgb(71 71 71); color:#fff; flex-shrink: 0; font-size: 11px; padding: 0px 6px; line-height: 21px; display: inline-block; border-radius: 20px; font-weight: 600; } 
-.m-academy-mngr-Wrap .smallBox.opt-course { background: rgb(93 57 255 / 16%); } 
-.m-academy-mngr-Wrap .smallBox.opt-end { background: rgb(221 52 109 / 16%); } 
-.m-academy-mngr-Wrap .smallBox.opt-be-course { background: #d7dce5; color:#333 !important; letter-spacing:-0.5px; } 
-.m-academy-mngr-Wrap .smallBox.opt-attend { background: rgb(93 57 255 / 16%); } 
-.m-academy-mngr-Wrap .smallBox.opt-set { background: #c1b9dd54!important; } 
-.m-academy-mngr-Wrap .smallBox.opt-event { background: rgb(89 96 122); color:#fff; } 
-.m-academy-mngr-Wrap .smallBox.opt-indi { color:#fff; background: rgb(248 170 36)!important; } 
-.m-academy-mngr-Wrap .smallBox.opt-accepting { background-color: rgb(93 57 255 / 16%); } 
-.m-academy-mngr-Wrap .smallBox.opt-dead { background: rgb(221 52 109 / 16%); } 
-.m-academy-mngr-Wrap .smallBox.opt-one { background: #8b78c8; color:#fff; } 
-.m-academy-mngr-Wrap .smallBox.opt-regist { background: #15038c33; } 
-.m-academy-mngr-Wrap .smallBox.opt-cl-change { background: #ffeed0; color:#fb9900; } 
-.m-academy-mngr-Wrap .smallBox.opt-return { background: rgb(236 83 206 / 16%); color: rgb(236 83 206); } 
-.m-academy-mngr-Wrap .smallBox.opt-absence { background: #77b9ff3b; } 
+.smallBox { background: rgb(71 71 71); color:#fff; flex-shrink: 0; font-size: 11px; padding: 0px 6px; line-height: 21px; display: inline-block; border-radius: 20px; font-weight: 600; } 
+.smallBox.opt-course { background: rgb(93 57 255 / 16%); } 
+.smallBox.opt-end { background: rgb(221 52 109 / 16%); } 
+.smallBox.opt-be-course { background: #d7dce5; color:#333 !important; letter-spacing:-0.5px; } 
+.smallBox.opt-attend { background: rgb(93 57 255 / 16%); } 
+.smallBox.opt-set { background: #c1b9dd54!important; } 
+.smallBox.opt-event { background: rgb(89 96 122); color:#fff; } 
+.smallBox.opt-indi { color:#fff; background: rgb(248 170 36)!important; } 
+.smallBox.opt-accepting { background-color: rgb(93 57 255 / 16%); } 
+.smallBox.opt-dead { background: rgb(221 52 109 / 16%); } 
+.smallBox.opt-one { background: #8b78c8; color:#fff; } 
+.smallBox.opt-regist { background: #15038c33; } 
+.smallBox.opt-cl-change { background: #ffeed0; color:#fb9900; } 
+.smallBox.opt-return { background: rgb(236 83 206 / 16%); color: rgb(236 83 206); } 
+.smallBox.opt-absence { background: #77b9ff3b; } 
 
 
 
@@ -869,10 +880,10 @@ location
 
 
  /* bar텍스트 리스트 */
- .m-academy-mngr-Wrap .bar-txt-list { position:relative; display: flex; gap: 5px; flex-wrap: wrap; line-height: 15px; } 
- .m-academy-mngr-Wrap .bar-txt-list li { font-size: var(--m-fs13); color: #333; position: relative; padding-right: 9px; } 
- .m-academy-mngr-Wrap .bar-txt-list li::after { content: "|"; position: absolute; right: 0; color: #7f7f7f; } 
- .m-academy-mngr-Wrap .bar-txt-list li:last-child:after { content:none; } 
+ .bar-txt-list { position:relative; display: flex; gap: 5px; flex-wrap: wrap; line-height: 15px; } 
+ .bar-txt-list li { font-size: var(--m-fs13); color: #333; position: relative; padding-right: 9px; } 
+ .bar-txt-list li::after { content: "|"; position: absolute; right: 0; color: #7f7f7f; } 
+ .bar-txt-list li:last-child:after { content:none; } 
 
 
 
