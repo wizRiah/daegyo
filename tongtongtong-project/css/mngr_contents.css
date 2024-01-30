@@ -733,7 +733,7 @@ location
 .add-result-list { display: flex; flex-wrap: wrap; /* margin-left: 10px; */gap: 10px; }
 .add-result-list:only-child { margin-left:0; }
 .add-result-list:last-child { margin-top:10px; }
-.add-result-list li { display: flex; border-radius: 15px; background: #e6e7f5; padding: 5px 8px; box-sizing: border-box; }
+.add-result-list li { display: flex; border-radius: 15px; background: #e6e7f5; padding: 5px 8px; box-sizing: border-box; align-items: center;}
 .add-result-list li:last-child { margin-right:0; }
 .add-result-list :is(p,span) { color: #333333; font-size: var(--pc-fs13); }
 .add-result-list button.remove { margin:1px 0 0 5px; }
@@ -775,12 +775,18 @@ location
 
 /* 수업과목 선택 */
 .add-result-list.add-subject { margin-top:0; }
+.add-result-list.add-subject+.add-result-list.add-subject { margin-top:10px;}
 .add-result-list.add-subject li { background:transparent; padding:0; }
 .add-result-list.add-subject li:first-child span { font-weight:600; }
-.add-result-list.add-subject li:first-child:after { content: ""; display: inline-block; width: 7px; height: 7px; transform: rotate(45deg); border: 1px solid #333; vertical-align: middle; margin: 4px 5px 0; border-width: 1px 1px 0 0; }
+.add-result-list.add-subject li:first-child:after { content: ""; display: inline-block; width: 7px; height: 7px; transform: rotate(45deg); border: 1px solid #333; vertical-align: middle; margin: 0 5px 0; border-width: 1px 1px 0 0; }
 .add-result-list.add-subject button.remove { margin:0; }
 .add-result-list.add-subject :is(p,span) { font-size: var(--pc-fs14); margin-right:3px; }
+.academy-mngr-Wrap table .add-result-list.add-subject:first-of-type { margin-top:10px; }
+.academy-mngr-Wrap table .add-result-list.add-subject :is(p,span) { font-size: var(--pc-fs13);}
 .m-academy-mngr-Wrap .add-result-list.add-subject :is(p,span) { font-size: var(--m-fs13); }
+
+
+
 .t-sj-list { display: flex; height: 300px; padding: 0!important; }
 .t-sj-list .t-sj-1depth { flex-grow: 1; height: 100%; padding: 15px; box-sizing: border-box; overflow-y: auto; border-right: 1px solid #D4DAE2; }
 .t-sj-list .t-sj-1depth .check-list { flex-direction: column; gap: 10px; align-items: flex-start; }
@@ -1564,7 +1570,10 @@ location
 /* 헤더 */
 .m-mobileEdu-Wrap header { background: #f6f5ee;}
 .m-mobileEdu-Wrap header .header-top .header-cnt .m-logo { border-right:0; }
-
+.m-mobileEdu-Wrap header .header-top .header-cnt .m-logo img { max-width: 65px;}
+.m-academy-mngr-Wrap.m-mobileEdu-Wrap header button { width: 21px; height: 21px; }
+.m-mobileEdu-Wrap header .setBtn { width: 20px; height: 21px; background: transparent url(/images/m-set-g.png) no-repeat center/100%; }
+.m-mobileEdu-Wrap header .alarmBTN { width: 20px; height: 21px; background: transparent url(/images/m-alarm-g.png) no-repeat center/100%; }
 
 
 
@@ -1594,6 +1603,5 @@ location
 .m-mobileAtd-wrap .keypadWrap .m-keypad button[class^="number re-"] { font-size: 22px; }
 .m-mobileAtd-wrap .keypadWrap .btn-set button:first-of-type { background: #94bbe9!important; }
 .m-mobileAtd-wrap .keypadWrap .m-keypad button:hover { background: #00000012!important; transition: all .3s; }
-
 
 
