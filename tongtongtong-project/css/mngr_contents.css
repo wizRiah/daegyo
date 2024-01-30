@@ -788,10 +788,10 @@ location
 
 
 .t-sj-list { display: flex; height: 300px; padding: 0!important; }
-.t-sj-list .t-sj-1depth { flex-grow: 1; height: 100%; padding: 15px; box-sizing: border-box; overflow-y: auto; border-right: 1px solid #D4DAE2; }
+.t-sj-list .t-sj-1depth { width: 230px; flex-grow: 1; height: 100%; padding: 15px; box-sizing: border-box; overflow-y: auto; border-right: 1px solid #D4DAE2; }
 .t-sj-list .t-sj-1depth .check-list { flex-direction: column; gap: 10px; align-items: flex-start; }
 .t-sj-list .t-sj-1depth .check-list li { margin-right:0; }
-.t-sj-list .t-sj-2depth { overflow-y: auto; padding: 15px; box-sizing: border-box; flex-grow: 3; }
+.t-sj-list .t-sj-2depth { width: calc(100% - 230px); overflow-y: auto; padding: 15px; box-sizing: border-box; flex-grow: 3; }
 .t-sj-list .t-checkbox.checkbox01 input[type="checkbox"]:checked + label { font-weight: bold; }
 
 
@@ -1168,8 +1168,8 @@ location
 .m-academy-mngr-Wrap .acdmyNm option { color :#333; }
 
 /* 알림버튼 */
-.m-academy-mngr-Wrap .alarmBTN { flex-shrink: 0; background:url(/images/mobile-icon-alarm.png) no-repeat; width: 50px; height: 50px; background-position: center; background-size: 20px; position:relative; }
-.m-academy-mngr-Wrap .alarmBTN.on:after { content:""; position:absolute; width:5px; height:5px; display:inline-block; border-radius:100%; background: #cdfa91; top: 10px; right: 12px; }
+.m-academy-mngr-Wrap .alarmBTN { flex-shrink: 0; background:url(/images/mobile-icon-alarm.png) no-repeat; background-position: center; background-size: 24px; position:relative; }
+.m-academy-mngr-Wrap .alarmBTN.on:after { content:""; position:absolute; width:7px; height:7px; display:inline-block; border-radius:100%; background: #FF6000; top: 0px; right: 0; }
 
 
 
@@ -1355,8 +1355,9 @@ location
 .m-academy-mngr-Wrap .m-list-cust { padding: 0 0 75px; }
 .m-academy-mngr-Wrap .m-list-cust>div:last-child { margin-bottom:10px; }
 .m-academy-mngr-Wrap .m-list-cust .listBox { padding:0; margin-bottom:0; box-shadow: none; border-color:#b9b9b9; border-radius: 0; border-width: 1px 0 0; /* padding: 15px 10px 15px 15px; */ }
-.m-academy-mngr-Wrap .m-list-cust .listBox:last-of-type { border-width: 1px 0 1px; }
-.m-academy-mngr-Wrap .m-list-cust .listBox:first-of-type { border-color: #303030; border-width: 1px 0 0;}
+.m-academy-mngr-Wrap .m-list-cust .listBox:last-of-type { border-width: 1px 0 1px; border-bottom-color:#b9b9b9; }
+.m-academy-mngr-Wrap .m-list-cust .listBox:first-child {border-top-color: #303030;}
+/* .m-academy-mngr-Wrap .m-list-cust .listBox:only-of-type { border-width: 1px 0 1px; } */
 .m-academy-mngr-Wrap .m-list-cust .c-cont-box { display: flex; justify-content: space-between; align-items: center; padding: 15px 10px 15px 15px; }
 .m-academy-mngr-Wrap .m-list-cust .m-album-tit { margin-bottom:7px; gap: 5px; max-width: 90%; }
 .m-academy-mngr-Wrap .m-list-cust .list-title { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
@@ -1571,10 +1572,16 @@ location
 .m-mobileEdu-Wrap header { background: #f6f5ee;}
 .m-mobileEdu-Wrap header .header-top .header-cnt .m-logo { border-right:0; }
 .m-mobileEdu-Wrap header .header-top .header-cnt .m-logo img { max-width: 65px;}
-.m-academy-mngr-Wrap.m-mobileEdu-Wrap header button { width: 21px; height: 21px; }
-.m-mobileEdu-Wrap header .setBtn { width: 20px; height: 21px; background: transparent url(/images/m-set-g.png) no-repeat center/100%; }
-.m-mobileEdu-Wrap header .alarmBTN { width: 20px; height: 21px; background: transparent url(/images/m-alarm-g.png) no-repeat center/100%; }
+/* .m-academy-mngr-Wrap.m-mobileEdu-Wrap header button { width: 21px; height: 21px; } */
+.m-academy-mngr-Wrap.m-mobileEdu-Wrap header .alarmBTN { background-image: url(/images/m-alarm-g.png); }
+.m-academy-mngr-Wrap.m-mobileEdu-Wrap header .setBtn { background: transparent url(/images/m-set-g.png) no-repeat; background-position: center;  background-size: 26px;  }
 
+
+/* 3개 앱 공통 */
+.m-academy-mngr-Wrap header button { width: 30px; height: 30px; }
+.m-academy-mngr-Wrap header .btn-set { gap:5px; }
+.m-academy-mngr-Wrap:not(.m-mobileEdu-Wrap) header .setBtn {background: transparent url(/images/m-set.png) no-repeat; background-position: center;  background-size: 25px;  }
+.m-academy-mngr-Wrap:not(.m-mobileAtd-wrap) header .btn-set { padding-right: 9px; }
 
 
 
@@ -1587,12 +1594,10 @@ location
 .m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top .header-cnt { color: #fff; font-size: 18px; font-weight: 700; }
 .m-academy-mngr-Wrap.m-mobileAtd-wrap header { background: rgba(148,187,233,1); border-radius: 0 0 15px 15px; overflow: hidden; height: 60px; }
 .m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top { border-bottom:0; padding: 2px 15px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header button { width: 21px; height: 21px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .btn-set { gap:10px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .setBtn { width: 20px; background: transparent url(/images/m-set.png) no-repeat center/100%; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn { background: transparent url(/images/m-sound.png) no-repeat center/100%; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active { background-image:url(/images/m-sound-off.png) }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn {background: transparent url(/images/m-sound.png) no-repeat; background-position: center;background-size: 24px;}
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active { background-image:url(/images/m-sound-off.png); }
 .m-academy-mngr-Wrap.m-mobileAtd-wrap header .m-acaName { color: #fff; font-weight: 600; font-size: var(--m-fs16); }
+
 
 /* 키패드 */
 .m-mobileAtd-wrap .keypadWrap { height: 100%; background: #eeeeee; padding: 15px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
