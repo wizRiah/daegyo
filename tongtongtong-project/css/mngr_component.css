@@ -1429,22 +1429,20 @@ button i { display:inline-block; }
 
 
 
-
-
 /* 상단메뉴 */
-.m-academy-mngr-Wrap .m-topMenu { padding: 15px 15px 0; background: #5661b9; } 
-.m-academy-mngr-Wrap .m-topMenu .m-location { font-size:12px; color:#fff; } 
-.m-academy-mngr-Wrap .m-topMenu .m-location:before { content:""; width:13px; height:13px; background:#fff; display:inline-block; margin-right:7px; } 
-.m-academy-mngr-Wrap .m-topMenu .menu-Wrap { gap:10px; display:flex; margin-top:5px; /* justify-content: space-between; */ } 
-.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li { flex:1; } 
-.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { display:block; font-size: 14px; width:100%; height:100%; text-align:center; line-height: 40px; color:#fff; word-break: keep-all; } 
-.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li.on { } 
-.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li.on a { color: #cdfa91; } 
+.m-academy-mngr-Wrap .m-topMenu { padding: 15px; background: #5661b9; }
+.m-academy-mngr-Wrap .m-topMenu .m-location { font-size:12px; color:#fff; }
+.m-academy-mngr-Wrap .m-topMenu .m-location:before { content:""; width:13px; height:13px; background:#fff; display:inline-block; margin-right:7px; }
+.m-academy-mngr-Wrap .m-topMenu .menu-Wrap { gap:10px; display:flex; margin-top:5px; /* justify-content: space-between; */ }
+.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li { flex:1; }
+.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li a { display:block; font-size: 14px; width:100%; height:100%; text-align:center; line-height: 40px; color:#fff; word-break: keep-all; }
+.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li.on { }
+.m-academy-mngr-Wrap .m-topMenu .menu-Wrap li.on a { color: #cdfa91; }
  /*하위메뉴*/
- .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap { border-bottom:1px solid rgba(255,255,255,0.2); width:100%; display:flex; margin-top:15px; } 
- .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li { width:15%; flex-grow:1; text-align:center; } 
- .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li a { font-size:14px; color:#fff; padding:10px 7px; display:inline-block; position:relative; } 
- .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li.on a:before { content:""; width:100%; height:2px; display:inline-block; background:#fff; position:absolute; bottom:0; left:0; } 
+ .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap { border-bottom:1px solid rgba(255,255,255,0.2); width:100%; display:flex; margin-top:15px; }
+ .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li { /* width:15%; */ flex-grow:1; text-align:center; }
+ .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li a { font-size:14px; color:#fff; padding:10px 7px; display:inline-block; position:relative; }
+ .m-academy-mngr-Wrap .m-topMenu .depth2-menu-Wrap li.on a:before { content:""; width:100%; height:2px; display:inline-block; background:#fff; position:absolute; bottom:0; left:0; }
 
 
 
@@ -1764,10 +1762,12 @@ button i { display:inline-block; }
 
 
 
+
 /* 모바일 탭메뉴 슬라이드 */
 .m-academy-mngr-Wrap .carousel { width: 100%; display: flex; align-items: center; padding: 10px 15px 0; border-bottom: 1px solid var(--pc-border-2); }
-.m-academy-mngr-Wrap .carousel .carousel__track { gap:10px;}
-.m-academy-mngr-Wrap .carousel .carousel__slide { /* flex: 1; */ text-align: center; box-sizing: border-box; }
+/* .m-academy-mngr-Wrap .carousel .carousel__track { gap:10px;} */
+.m-academy-mngr-Wrap .carousel .carousel__viewport {width:100%; }
+.m-academy-mngr-Wrap .carousel .carousel__slide { /* flex: 1; */ text-align: center; box-sizing: border-box; padding:0 3px;}
 .m-academy-mngr-Wrap .carousel .carousel__slide div { width: 100%; height: 100%;}
 .m-academy-mngr-Wrap .carousel .carousel__slide div>div { transition: all ease 0.3s; border-bottom: 3px solid transparent;}
 .m-academy-mngr-Wrap .carousel .carousel__slide div>div.active {border-bottom: 3px solid #5661b9;  }
@@ -1777,9 +1777,7 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .carousel .carousel__slide > * { transition: all ease 0.3s; }
 .m-academy-mngr-Wrap .carousel .carousel__slide div>div.active .status { font-weight: 700;}
 .m-academy-mngr-Wrap .carousel .carousel__slide button .status { font-weight: 500; word-break: keep-all; font-size: var(--m-fs12); min-width: max-content; padding: 0 3px; }
-
-
-
+.m-academy-mngr-Wrap .carousel:after { content:""; width:40px; height: 100%; display: inline-block; background:linear-gradient(-90deg, #f4f4f5 15%, transparent); position: absolute; right:0px; top: 0;}
 
 /*
 팝업
