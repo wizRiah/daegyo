@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>통통통 설정</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header><div class="header-top"><div class="header-cnt"><!-- 로고영역 --> <a class="m-logo"><img src="../../../images/m_t_logo.png"></a> <!-- /로고영역 --> <!-- 학원선택 --> <div class="acdmNm-wrap"><select class="acdmyNm"><option><a>이엔엠에듀</a>이엔엠에듀</option><option><a>베스티어학원</a>베스티어학원</option></select></div> <!-- /학원선택 --></div> <div class="btn-set"><!--  <button class="logout-btn" type="button" @click="fnLogOut()"></button> --> <!-- 알림버튼 --> <button type="button" class="alarmBTN on"></button> <!-- 알림이 있는 경우 on클래스 추가. --> <!-- /알림버튼 --> <button class="setBtn" type="button"></button></div> <!-- <layoutHeaderMenu /> --></div></header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>경영분석</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li class="on"><a>수납환불현황</a></li>
+        <li><a>미납현황</a></li>
+        <li><a>원생현황</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+
+
+      <!-- content -->
+      <div class="content">
+
+        
+        
+        <!-- 검색박스 -->
+        <div class="m-basicSrchBox">
+
+          <div class="form-list">
+            <div class="select-srchBox-date">
+              <select name="" id="">
+                <option value="" disabled="" selected="">일 단위</option>
+                <option value="">월 단위</option>
+              </select>
+              <button type="button" class="t-button-s">1주일</button>
+              <button type="button" class="t-button-s">오늘일자 조회</button>
+            </div>
+
+            <!-- 데이트피커 -->
+            <span class="date-picker">
+              <div class="dp__main dp__theme_light">
+                <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false"><!---->
+                  <div class="dp__input_wrap"><!----><input name="fromDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger" src="/images/datepicker.png"></button></span><!----><!----><!----></div>
+                </div><!---->
+              </div> <span class="rangeMark ml5 mr5">~</span>
+              <div class="dp__main dp__theme_light">
+                <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false"><!---->
+                  <div class="dp__input_wrap"><!----><input name="toDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;"><img class="ui-datepicker-trigger" src="/images/datepicker.png"></button></span><!----><!----><!----></div>
+                </div><!---->
+              </div>
+            </span>
+            <!-- /데이트피커 -->
+
+
+
+            <div class="m-pageTap-wrap">
+              <button class="m-pageTap active" type="button">반별</button>
+              <button class="m-pageTap" type="button">강사별</button>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">대분류</span>
+              <select class="">
+                <option value="">전체</option>
+              </select>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">중분류</span>
+              <select class="">
+                <option value="">전체</option>
+              </select>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">반선택</span>
+              <select class="">
+                <option value="">전체</option>
+              </select>
+            </div>
+            
+            
+
+            <div class="btn-set">
+              <button type="button" class="t-button-s t-button-reset">검색 초기화</button>
+              <button type="button" class="t-button-s m-search">검색</button>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /검색박스 -->
+
+
+
+        <!-- 리스트 항목 제목-->
+        <div class="m-listTopSetBox">
+          <span class="Totaltxt">
+            <strong>일별 수납 현황</strong>
+            <span class="within_period">(2023-07-25 ~ 2023-08-24)</span>
+          </span>
+        </div>
+        
+        <!-- /리스트 항목 제목 -->
+
+        <div class="m-list-graph listBox">
+          <div class="r-area-txt">평균 수납액 : 1,000,000원</div>
+          그래프가 들어갑니다.
+        </div>
+        <div class="m-list-pay">
+
+
+          <div class="m-scroll">
+            <table class="t-basic-1">
+              <thead>
+                <tr>
+                  <th>일자</th>
+                  <th>수납금액</th>
+                  <th>환불금액</th>
+                  <th>면제금액</th>
+                  <th>(실)수납금</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="5">테이블 내용 넣어주세요 ~</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+
+      </div>
+      <!-- /content -->
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-inner"></div>
+    </footer>
+    <!-- /푸터 -->
+
+
+
+
+    <!-- 하단고정메뉴 -->
+    <div class="footer-fixed">
+      <ul>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
+        <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
+        <li class="btn-mymenu"><button type="button"></button></li>
+        <li class="btn-srchpp"><button type="button">원생검색</button></li>
+        <li class="btn-mypage"><button type="button">마이페이지</button></li>
+      </ul>
+    </div>
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
