@@ -1493,14 +1493,12 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox .m-search { text-indent: -99999999px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .m-search {border-radius: 3px;flex: 1;background: var(--pc-bora-2)!important;font-size: 15px;} 
 .m-academy-mngr-Wrap .m-basicSrchBox .btn-set { margin-top:5px; } 
-.m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox + .form-list .label-set + .btn-set {margin-top:10px;}
-
+.m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox + .form-list .label-set + .btn-set,
+.m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set + .btn-set {margin-top:10px;}
 
 .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox {display:flex;gap:5px;border-bottom: 2px solid #3f4782;} 
 .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox .m-srchBox {border:none;}
-.m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox .m-srchBox input::placeholder {
-    color: var(--m-text-color-1);
-}
+.m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox .m-srchBox input::placeholder {color: var(--m-text-color-1);}
 .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox>select {overflow: hidden;border: 1px solid #7e7e7e;height: 40px;display: flex;/* border-radius: 20px; */background-color: #fff;border: none;outline: none;opacity: 0.6;font-size: var(--m-fs15);} 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox.disabled {/* background: #f2f2f2!important; */} 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-srchBox.disabled button { cursor: default; } 
@@ -1511,6 +1509,12 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .m-pageTap-wrap .m-pageTap { font-size: var(--m-fs13); height: 38px; line-height: 38px; } 
 .m-academy-mngr-Wrap [class^="m-list-"]>.m-pageTap-wrap { margin: 15px 0; } 
 
+    /* 날짜설정시 우측으로 기간 버튼있는 경우 */
+    .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox-date {border-bottom: 1px solid #ebebeb;}
+    .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox-date select { border:none; height:37px; margin-right:13px;}
+    .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox-date .t-button-s {background: var(--pc-bora-3); color: #333; height: auto; line-height: normal; padding: 5px 10px; margin: 0 5px 0 -4px;}
+    .m-academy-mngr-Wrap .m-basicSrchBox .select-srchBox-date + .date-picker {margin-bottom:10px;}
+    
 
 
 /* 검색박스 안 데이트피커 */
@@ -1572,21 +1576,11 @@ button i { display:inline-block; }
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set input { border: 0!important; height: 37px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set:first-child { margin-top:0; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set + .t-checkbox { margin:10px 0; } 
-.m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set select {
-    background-position-x: 100%;
-}
+.m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-set select {background-position-x: 100%;}
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set {margin-top: 6px;display: flex;align-items: center;} 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set .label-set { margin-right: 5px; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set + .t-checkbox { margin:10px 0; } 
-.m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set .t-button-s {
-    border: none !important;
-    line-height: normal;
-    height: auto;
-    display: inline-block;
-    border-bottom: 1px solid var(--pc-bora-6) !important;
-    border-radius: 0;
-    padding: 5px 2px;
-}
+.m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set .t-button-s {border: none !important;line-height: normal;height: auto;display: inline-block;border-bottom: 1px solid var(--pc-bora-6) !important;border-radius: 0;padding: 5px 2px;}
 .m-academy-mngr-Wrap .m-basicSrchBox .form-list .label-input-set .t-button-s:before {display:none;}
 
 
@@ -1605,8 +1599,8 @@ button i { display:inline-block; }
 .m-listTopSetBox.flex-end { height: auto; justify-content: flex-end; } 
 .m-listTopSetBox select { height:35px !important; border-color:#ccd1d7; } 
 .m-academy-mngr-Wrap .m-basicSrchBox .m-listTopSetBox { padding: 0; margin: 10px 0 0; } 
-
-
+.m-academy-mngr-Wrap .m-listTopSetBox .Totaltxt .within_period  {font-size:0.95em;}
+.m-academy-mngr-Wrap .r-area-txt {font-size:12px; width:100%; text-align:right; margin-bottom:10px;}
 
 /* 모바일 텍스트 */
 .m-academy-mngr-Wrap .tit-wrap { align-items: flex-end; } 
