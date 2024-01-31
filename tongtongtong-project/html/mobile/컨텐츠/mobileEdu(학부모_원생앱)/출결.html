@@ -18,13 +18,22 @@
   <div class="m-academy-mngr-Wrap m-mobileEdu-Wrap">
 
     <!-- 헤더 -->
-    <header><div class="header-top"><div class="header-cnt"><!-- 로고영역 --> <a class="m-logo"><img src="/images/tong_edu_logo.png" alt=""></a> <!-- /로고영역 --> <!-- 학원선택 --> <!-- <div class="acdmNm-wrap">
+    <header>
+      <div class="header-top">
+        <div class="header-cnt"><!-- 로고영역 --> <a class="m-logo"><img src="/images/tong_edu_logo.png" alt=""></a>
+          <!-- /로고영역 --> <!-- 학원선택 --> <!-- <div class="acdmNm-wrap">
       <select class="acdmyNm">
         <option v-for="(item, idx) in conmInfoList" :key="idx">
           <a @click="fnChangeConm(idx)">{{ item.conmNm }}</a>{{ item.conmNm }}
         </option>
       </select>
-    </div> --> <!-- /학원선택 --></div> <div class="btn-set"><!-- <button class="logout-btn" type="button" @click="fnLogOut()"></button> --> <!-- 알림버튼 --> <button type="button" class="alarmBTN on"></button> <!-- 알림이 있는 경우 on클래스 추가. --> <!-- /알림버튼 --> <button class="setBtn" type="button"></button></div> <!-- <layoutHeaderMenu /> --></div></header>
+    </div> --> <!-- /학원선택 --></div>
+        <div class="btn-set"><!-- <button class="logout-btn" type="button" @click="fnLogOut()"></button> -->
+          <!-- 알림버튼 --> <button type="button" class="alarmBTN on"></button> <!-- 알림이 있는 경우 on클래스 추가. --> <!-- /알림버튼 -->
+          <button class="setBtn" type="button"></button>
+        </div> <!-- <layoutHeaderMenu /> -->
+      </div>
+    </header>
     <!-- /헤더 -->
 
 
@@ -59,44 +68,95 @@
     <div class="container">
 
 
+      <!-- 사용자선택 -->
+      <div class="m-edu-user">
+
+        <!-- 멀티셀렉트 모듈 써주세요~! -->
+        <!-- hintKey옵션으로 클래스명 apcntphon 추가 부탁드립니다! -->      
+        <div class="t-select-check active single" tabindex="0" style="width: 100%;">
+          <p class="t-select-name"><span>홍길동</span></p>
+          <div class="dropdown" style="/* display: none; */">
+            <ul class="check-list">
+              <li>
+                <div class="t-checkbox checkbox01">
+                  <input type="checkbox" id="" value="">
+                  <!-- apcntphon -->
+                  <label for="">홍길동 <div class="apcntphon">통통통학원</div></label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /멀티셀렉트 모듈 써주세요~! -->
+
+
+      </div>
+      <!-- /사용자선택 -->
 
 
 
-      <div class="m-edu-user" style="
-    padding: 15px;
-    background: bisque;
-"><select name="" id="" class="wd100">
-                    <option value="" disabled="" selected="">홍길동 - 통통통 학원</option>
-                    <option value="">20개씩 보기</option>
-                    <option value="">40개씩 보기</option>
-                  </select>
-        
-      </div><!-- content -->
+
+      <!-- content -->
       <div class="content">
 
-        
+
+        <div class="m-listTopSetBox">
+          <select name="" id="" class="wd100">
+            <option value="" disabled="" selected="">테스트 수학반</option>
+            <option value="">20개씩 보기</option>
+            <option value="">40개씩 보기</option>
+          </select>
 
 
-        <div class="m-listTopSetBox mt20">
-          <p class="main-tit mr15">출결처리일</p>
-          <!-- 데이트피커 -->
-          <span class="date-picker">
-            <div class="dp__main dp__theme_light">
-              <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false">
-                <div class="dp__input_wrap">
-                  <input name="singleDate" class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic" inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button style="margin-right: 5px;">
-                      <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
-                  </span>
+          <div class="wd100">
+            <!-- 데이트피커 -->
+            <span class="date-picker">
+              <div class="dp__main dp__theme_light">
+                <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                  aria-readonly="false">
+                  <div class="dp__input_wrap">
+                    <input name="singleDate"
+                      class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                      inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span class="dp__input_icon"><button
+                        style="margin-right: 5px;">
+                        <img class="ui-datepicker-trigger" src="/images/datepicker.png"></button>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </span>
-          <!-- /데이트피커 -->
+            </span>
+            <!-- /데이트피커 -->
+          </div>
+
+
+
+          <ul class="pre-stu-data">
+            <li>
+              <p class="stu-data-tit">출석</p>
+              <p class="stu-data-num"><span class="num">5</span>회</p>
+            </li>
+            <li>
+              <p class="stu-data-tit">지각</p>
+              <p class="stu-data-num"><span class="num">1</span>회</p>
+            </li>
+            <li>
+              <p class="stu-data-tit">결석</p>
+              <p class="stu-data-num"><span class="num">20</span>회</p>
+            </li>
+            <li>
+              <p class="stu-data-tit">조퇴</p>
+              <p class="stu-data-num"><span class="num">20</span>회</p>
+            </li>
+          </ul>
         </div>
-        
-        
+
+
+
+
+
+
         <div class="m-list-attend">
-          
+
           <table class="t-basic-1" style="table-layout: fixed;">
             <colgroup>
               <col style="width:30%;">
@@ -111,7 +171,7 @@
                 <th>자동<br>여부</th>
                 <th>출석<br>여부</th>
                 <th>등원</th>
-                <th>사유</th>     
+                <th>사유</th>
               </tr>
             </thead>
             <tbody>
@@ -135,9 +195,6 @@
           <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
 
         </div>
-
-
-
 
 
 
