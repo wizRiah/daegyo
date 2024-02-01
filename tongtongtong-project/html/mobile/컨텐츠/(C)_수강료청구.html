@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>(C)_수강료청구</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <div class="container">
+
+
+
+
+      <!-- ●●●●●●●●●●● 팝업 영역 시작 ●●●●●●●●●●● -->
+
+      <div class="t-popup-wrap">
+
+        <!-- t-popup에 클래스 추가될 예정 -->
+        <div class="t-popup popup-goback popup-full">
+
+          <div class="pop-header">
+            <p class="pop-title">수강료 청구</p>
+          </div>
+
+          <div class="pop-body">
+
+
+
+            <!-- pop-container -->
+            <div class="pop-container">
+
+
+              <div class="pop-cont">
+
+
+
+                <div class="box-bd-bg mt0">
+                  <ul class="box-bd-cont">
+                    <li>
+                      <p class="box-bd-tit">반명</p> 그룹 &gt; 신창캠퍼스[중등부] &gt; 중1
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">운영/수납</p> 일반
+                      &gt;
+                      개월단위<span>(5개월)</span>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">자동발행</p>
+                      <div>
+                        span>수강기준월 7일전 자동발행</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">수강년월</p> 
+                      <span class="date-picker">
+                        <div class="dp__main dp__theme_light">
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="fromDate"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                                inputmode="none" placeholder="YYYY-MM" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger"
+                                    src="/images/datepicker.png"></button></span></div>
+                          </div>
+                        </div>
+                      </span>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">수강기간</p> 
+                      <span class="date-picker">
+                        <div class="dp__main dp__theme_light">
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="startDt"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                                inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger"
+                                    src="/images/datepicker.png"></button></span></div>
+                          </div>
+                        </div> 
+                        <span class="rangeMark ml5 mr5">~</span>
+                        <div class="dp__main dp__theme_light">
+                          <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                            aria-readonly="false">
+                            <div class="dp__input_wrap"><input name="startDt"
+                                class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                                inputmode="none" placeholder="YYYY-MM-DD" autocomplete="off"><span
+                                class="dp__input_icon"><button style="margin-right: 5px;"><img
+                                    class="ui-datepicker-trigger"
+                                    src="/images/datepicker.png"></button></span></div>
+                          </div>
+                        </div>
+                      </span>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">수업일수</p>
+                      <div>
+                        <input type="text " class="txtfield-basic wd140" placeholder="수업일수"> 
+                        <span class="alert-txt ml10">수강 기간내 수업일수</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">수강료</p>
+                      <div>
+                        <input type="text" class="txtfield-basic wd140 h-txt-r" placeholder="수강료"> 원
+                      </div>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">할인금액</p>
+
+                      <div class="wd100"> 
+                        <select id="dscntSe" name="dscntSe" class="" required="">
+                          <option value="">할인구분</option>
+                          <option value="A3C001">할인율(%)</option>
+                          <option value="A3C002">할인금액</option>
+                        </select> 
+                        <input type="text" class="txtfield-basic wd160" disabled="" placeholder="할인구분선택 설명"
+                          readonly=""> 
+                      </div>
+
+                      <div class="mt5">
+                        <input type="text" class="txtfield-basic wd140 h-txt-r" placeholder="할인금액" readonly=""> 원
+                      </div>
+
+                    </li>
+                    <li class="mt5 mb5">
+                      <p class="box-bd-tit">(실)청구금액</p>
+                      <div class="txt-r pc-red text-medium"><span class="pc-red"
+                          style="float: left; font-weight: normal;"></span> 100,000 원
+                      </div>
+                    </li>
+                    <li>
+                      <p class="box-bd-tit">비고</p> <input type="text" class="txtfield-basic" placeholder="비고 메모">
+                    </li>
+                  </ul>
+                </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <!-- /pop-container  -->
+            <div class="bt-btnbox">
+              <button type="button" class="registbtn">생성</button><button type="button" class="canclebtn">취소</button>
+            </div>
+
+
+
+
+          </div>
+
+          <!-- 팝업 뒤로 가기 버튼 -->
+          <button type="button" class="close" title="닫기"></button>
+          <!-- /팝업 뒤로 가기 버튼 -->
+
+        </div>
+        <!-- /t-popup -->
+      </div>
+
+      <!-- ●●●●●●●●●●● 팝업 영역 끝 ●●●●●●●●●●● -->
+
+    </div>
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+</body>
+
+</html>
