@@ -1515,21 +1515,32 @@ td.hover-td:not(.t-no-data):hover { cursor: pointer; background: #f7f9fb !import
 출결앱
 */
 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap { background: #eeeeee; } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top .header-cnt { color: #fff; font-size: 18px; font-weight: 700; } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header { background: rgba(148, 187, 233, 1); border-radius: 0 0 15px 15px; overflow: hidden; height: 60px; } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top { border-bottom: 0; padding: 2px 15px; } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn { background: transparent url(/images/m-sound.png) no-repeat; background-position: center; background-size: 24px; } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active { background-image: url(/images/m-sound-off.png); } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .m-acaName { color: #fff; font-weight: 600; font-size: var(--m-fs16); } 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap { background:#eeeeee; } 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header {background:#fff;/* border-radius: 0 0 15px 15px; */overflow: hidden;height: 50px;} 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top {padding: 2px 15px;border-bottom-color: #dcdcdc; text-align:center;} 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top .header-cnt {color:#000;font-size: var(--m-fs17);font-weight: 600;} 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .m-acaName {color:#fff; font-weight: 600; font-size: var(--m-fs16); } 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn {background:transparent url(/images/m-sound.png) no-repeat; background-position: center; background-size: 24px; } 
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active {background-image: url(/images/m-sound-off.png); } 
+
 
 
 /* 키패드 */
-.m-mobileAtd-wrap .keypadWrap { height: 100%; background: #eeeeee; padding: 15px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; justify-content: space-between; } 
-.m-mobileAtd-wrap .keypadWrap .keyInput { font-size: 32px; display: flex; align-items: center; justify-content: center; padding: 10px; border: 2px solid #94bbe9 !important; border-radius: 8px; background: #fff; height: 70px; box-sizing: border-box; } 
-.m-mobileAtd-wrap .keypadWrap .m-keypad { display: flex; flex-wrap: wrap; gap: 4px 2%; box-sizing: border-box; } 
-.m-mobileAtd-wrap .keypadWrap .m-keypad button { width: 32%; font-weight: bold; font-size: 32px; height: 88px; border: 1px solid #33333373; box-sizing: border-box; border-radius: 4px; background: #ffffff54; box-shadow: 4px 4px 8px 0px rgb(0 0 0 / 8%); } 
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .attend-set { justify-content: flex-end; margin: 10px 0; } 
-.m-mobileAtd-wrap .keypadWrap .m-keypad button[class^="number re-"] { font-size: 22px; } 
-.m-mobileAtd-wrap .keypadWrap .btn-set button:first-of-type { background: #94bbe9 !important; } 
-.m-mobileAtd-wrap .keypadWrap .m-keypad button:hover { background: #00000012 !important; transition: all .3s; } 
+.m-mobileAtd-wrap .keypadWrap {height:100%; background:#fff;padding: 0;box-sizing: border-box;text-align: center;display: flex;flex-direction: column;justify-content: space-between;} 
+.m-mobileAtd-wrap .keypadWrap>div:first-child {padding:30px 15px 0;flex-grow: 1;display: flex;flex-direction: column;}
+.m-mobileAtd-wrap .keypadWrap>div:last-child {background:#3f4782;}
+.m-mobileAtd-wrap .keypadWrap .keyInput {font-size: 30px;display: flex;align-items: center;justify-content: center;padding: 0 10px;border-radius: 8px;height: 70px;line-height: 70px;box-sizing: border-box;border: none;text-align: center;/*background:#f6f7f9;*/ letter-spacing: 13px;font-family: 'SUIT';outline: none;} 
+.m-mobileAtd-wrap .keypadWrap .keyInput::placeholder {font-size: 35px; letter-spacing: 7px; color:#EBEFF5;}
+.m-mobileAtd-wrap .keypadWrap .m-keypad {display: flex;flex-wrap: wrap;gap: 4px 2%;box-sizing: border-box;padding: 10px 30px;} 
+.m-mobileAtd-wrap .keypadWrap .m-keypad button {width: 32%;font-weight: bold;font-size: 22px;font-family: 'SUIT';box-sizing: border-box;border-radius: 4px;color: #fff;font-weight: 600;padding: 11px 0;} 
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn  {font-size: 15px; font-weight: 400;} 
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn:before  {content:"";display:inline-block;width: 16px;height: 16px;background: url(../images/m_srch_reset_white.png) no-repeat center;background-size: 100%;margin: -3px 7px 0 0;vertical-align: middle;} 
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-move {background:url(../images/m_keypad_del.png) no-repeat center;background-size: 32px;}
+.m-mobileAtd-wrap .keypadWrap .m-keypad button:hover {background: #00000012 !important; transition: all .3s; } 
+.m-mobileAtd-wrap .keypadWrap .btn-set {padding: 0 10px 20px;}
+.m-mobileAtd-wrap .keypadWrap .btn-set button {border-radius:5px; font-size: 19px; letter-spacing: 4px; font-weight: 500;}
+.m-mobileAtd-wrap .keypadWrap .btn-set button:first-of-type {background: #ffe62e !important;color: #333;} 
+.m-mobileAtd-wrap .keypadWrap .btn-set button:last-of-type {border:1px solid #fff;background: transparent;}
+
+    .m-academy-mngr-Wrap.m-mobileAtd-wrap .attend-set {justify-content: flex-end;margin: 10px 0;flex-grow: 1;align-items: flex-start;} 
+
