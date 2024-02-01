@@ -158,10 +158,7 @@
           </div>
           <div class="btn-set"><button type="button" class="t-button-xms t-button-bora6 flex-1">원생등록</button>
 
-            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button"
-              class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button"
-              class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button"
-              class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
+            <button type="button" class="t-button-xms t-button-grey2-bd flex-1">원생수정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">사진설정</button><button type="button" class="t-button-xms t-button-grey2-bd flex-1">상세정보</button><button type="button" class="t-button-xms t-button-red-bd flex-1">퇴원처리</button>
           </div>
         </div>
         <!-- /원생공통 -->
@@ -169,26 +166,39 @@
 
 
 
-        <div class="m-listTopSetBox">
-          <div class="tit-section wd100">
+        <!-- 수강반 선택부분 -->
+        <div class="m-listTopSetBox m-border-sect">
+          <div class="tit-section wd100 mb10">
             <p class="main-tit mr15">수강반</p>
             <div class="t-checkbox checkbox01">
               <input type="checkbox" name="checkForm" id="check01">
               <label for="check01">종강반 보기</label>
             </div>
-          </div><select class="wd100" name="" id="">
+          </div>
+
+          <select class="wd100" name="" id="">
             <option value="" disabled="" selected="">중등부 2학년 수학반</option>
             <option value="">20개씩 보기</option>
             <option value="">40개씩 보기</option>
           </select>
-          <div class="btn-set time-box-btn wd100">
-            <!-- 버튼 클릭시 active 추가 -->
-            <button type="button" class="t-button-xms t-button-bora2"><i class="i-money"></i><span class="">수강료
-                청구</span> </button>
-            <button type="button" class="t-button-xms t-button-bora2"><i class="i-money"></i><span class="">기타청구</span>
+
+          <div class="btn-set wd100">
+            <button type="button" class="t-button-xms t-button-bora2"><i class="i-money"></i><span>수강료 청구</span> 
+              </button>
+            <button type="button" class="t-button-xms t-button-bora2"><i class="i-money"></i><span>기타청구</span>
             </button>
           </div>
-          <ul class="tab-03 mt20">
+
+        </div>
+        <!-- /수강반 선택부분 -->
+
+
+        <!-- 목록시작 -->
+        <div class="m-list-student">
+
+
+          <!--탭 -->
+          <ul class="tab-03 mt20 mb10">
             <li class="active">
               <button type="button">
                 <span class="status">미납자료(45)</span>
@@ -211,55 +221,58 @@
               </button>
             </li>
           </ul>
-        </div>
-
-
-
-        <!-- 목록시작 -->
-        <div class="m-list-student">
-
-
-
-
-
+          <!--/탭 -->
 
 
           <div class="tit-wrap">
-            <p class="main-tit">수강료</p>
-            <div class="btn-set"><button type="button" class="t-button-xms t-button-red-bd flex-1">선택삭제</button> </div>
+            <p class="main-tit">미납자료</p>
+            <div class="btn-set ml30">
+              <button type="button" class="t-button-xms t-button-white t-button-red-bd">선택삭제</button>
+              <button type="button" class="t-button-xms t-button-bora1">선택 수납처리</button>
+            </div>
           </div>
+
+
+
           <table class="t-basic-1 mt10">
-            <colgroup>
-              <col width="30%">
-              <col width="30%">
-              <col width="10%">
-              <col width="10%">
-              <col width="">
-              <col width="5%">
-            </colgroup>
             <thead>
               <tr>
-                <th>수강 월/<br>수강기간</th>
+                <th style="width: 40px;">
+                  <div class="t-checkbox checkbox01"><input type="checkbox" id="rcvmt_all"> <label for="rcvmt_all"></label></div>
+                </th>
+                <th>수강월 /<br>수강기간</th>
                 <th>수납내역</th>
-                <th>운영/수납</th>
                 <th>구분</th>
-                <th>(실)<br>청구금액</th>
+                <th>(실)청구금액</th>
                 <th>상태</th>
+                <th>수납</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>2024-01-03<br></td>
-                <td class="txt-l">중등부&gt;수학<br>중등부 2학년 수학반</td>
-                <td>일반<br>개월단위</td>
-                <td>수강료</td>
-                <td class="txt-r pc-red text-bold">123,123</td>
                 <td>
-                  <p class="opt-exempt">면제</p>
+                  <div class="t-checkbox checkbox01"><input type="checkbox" id="rcvmt_0" value="[object Object]"> <label for="rcvmt_0"></label></div>
+                </td>
+                <td>2023.12<br>12.01~12.31</td>
+                <td class="txt-l">대분류테스트999 &gt; 직접생성해도안먹더라<br>반명이요한명이요한명반이요</td>
+                <td>수강료</td>
+                <td class="txt-r pc-red text-bold">1,000</td>
+                <td>
+                  <p class="opt-discharge">미납</p>
+                </td>
+                <td>
+                  <div class="btn-set"><button type="button" class="t-button-xxs t-button-bora6">수납</button>
+                  </div>
                 </td>
               </tr>
             </tbody>
           </table>
+          
+          
+          
+          <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
+
+
         </div>
         <!-- /목록 -->
 
