@@ -585,11 +585,14 @@ select.wd-100 { width:100px !important; min-width:100px!important }
 .date-picker#sndngDate .dp__main {width: 100%;}
 .dp__month_year_wrap { flex-direction: row-reverse;}
 .dp__disabled { color: #707070!important; }
- /* datePicker - popup */
- .dp__menu { border: 1px solid #333 !important; box-shadow: 0px 5px 10px #0000001A !important; border-radius: 4px; }
- .dp__menu.dp__theme_light.dp__menu_index { min-width:180px !important; }
- .dp__arrow_bottom { border: 1px solid #333 !important; border-width: 0px 1px 1px 0 !important; }
- .dp__arrow_top { border: 1px solid #333 !important; border-width:1px 0 0 1px !important; }
+
+/* datePicker - popup */
+.dp__menu { border: 1px solid #333 !important; box-shadow: 0px 5px 10px #0000001A !important; border-radius: 4px; }
+.dp__menu.dp__theme_light.dp__menu_index { min-width:280px !important; }
+.dp__arrow_bottom { border: 1px solid #333 !important; border-width: 0px 1px 1px 0 !important; }
+.dp__arrow_top { border: 1px solid #333 !important; border-width:1px 0 0 1px !important; }
+.dp__month_year_wrap { flex-direction: row-reverse;}
+
  /* 일선택 */
  .dp__instance_calendar { padding:15px 15px 0; box-sizing: border-box; min-height:115px; }
  .dp__instance_calendar .dp__month_year_row { width:248px; margin-bottom:7px; }
@@ -1047,7 +1050,7 @@ table td.red-bg { background-color: #eec8c83d!important; }
 
  /* th컬러 */
  /* 환불금액정보 */
- table.bg-refund>tbody>tr>th { background: #f8e8e8; }
+ table.bg-refund>tbody>tr>th { background: #faeded; }
 
 
 /* 상태별 팝업 배경,텍스트박스 컬러 변경용 */
@@ -1603,31 +1606,31 @@ button i { display:inline-block; }
 
 
  /*모바일 데이터피커 팝업*/
- .m-academy-mngr-Wrap .date-picker { display:flex; align-items: center; }
- .m-academy-mngr-Wrap .date-picker .dp__input { width:100%; border-radius: 3px !important; font-size: var(--m-fs14); height: 45px; color: #333; font-family: 'Pretendard'; }
- .m-academy-mngr-Wrap .date-picker .dp__input_icon { left:auto; cursor: pointer; position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
- .m-academy-mngr-Wrap .date-picker .dp__input_icon button { width: 43px; height: 45px; background: url(../images/mobile-icon-caldendar.png) center no-repeat; background-size: 22px; margin: 0!important; }
- .m-academy-mngr-Wrap .date-picker .dp__input_icon button img { display:none; }
- .m-academy-mngr-Wrap .date-picker:only-of-type .dp__main { width:100%; }
- .m-academy-mngr-Wrap .date-picker:only-of-type .dp__input { width:100%; }
- .m-academy-mngr-Wrap .label-set>.date-picker:last-child { width:100%; }
- .m-academy-mngr-Wrap .label-set>.date-picker:last-child .dp__main{ width:100%;}
+ body.mobile .m-academy-mngr-Wrap .date-picker { display:flex; align-items: center; }
+ body.mobile .m-academy-mngr-Wrap .date-picker .dp__input { width:100%; font-size: var(--m-fs14); height: 45px; color: #333; font-family: 'Pretendard'; }
+ body.mobile .m-academy-mngr-Wrap .date-picker .dp__input_icon { left:auto; cursor: pointer; position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
+ body.mobile .m-academy-mngr-Wrap .date-picker .dp__input_icon button { width: 43px; height: 45px; background: url(/images/mobile-icon-caldendar.png) center no-repeat; background-size: 22px; margin: 0!important; }
+ body.mobile .m-academy-mngr-Wrap .date-picker .dp__input_icon button img { display:none; }
+ body.mobile .m-academy-mngr-Wrap .date-picker:only-of-type .dp__main { width:100%; }
+ body.mobile .m-academy-mngr-Wrap .date-picker:only-of-type .dp__input { width:100%; }
+ body.mobile .m-academy-mngr-Wrap .label-set>.date-picker:last-child { width:100%; }
+ body.mobile .m-academy-mngr-Wrap .label-set>.date-picker:last-child .dp__main{ width:100%;}
 
  /* 타임피커 */
- .m-academy-mngr-Wrap .time-picker .dp__input_icon button { background: url(/images/m-timepicker.png) center no-repeat; background-size: 24px; }
- body.mobile .dp__menu.dp__theme_light.dp__menu_index { position: fixed; width:calc(100% - 30px); transform:translateY(-50%) !important; left:15px !important; top:50% !important; }
+ body.mobile .m-academy-mngr-Wrap .time-picker .dp__input_icon button { background: url(/images/m-timepicker.png) center no-repeat; background-size: 24px; }
+ body.mobile .dp__menu.dp__theme_light.dp__menu_index { position: fixed; /* width: calc(100% - 30px); */ /* transform: translateY(-50%) !important; */ /* left: 15px !important; */ top: 50% !important; left: 50%!important; transform: translate(-50%,-50%)!important; }
  body.mobile .dp__arrow_top,
  body.mobile .dp__arrow_bottom { display:none; }
  body.mobile .dp__instance_calendar .dp__month_year_row { width:100%; }
  body.mobile .dp__instance_calendar .dp__month_year_row > .dp__overlay:after { content:none; }
 
- .m-academy-mngr-Wrap .input-btn-wrap .date-picker { flex:1; }
- .m-academy-mngr-Wrap .input-btn-wrap .time-picker { flex:1; }
 
-
+ body.mobile .m-academy-mngr-Wrap .input-btn-wrap .date-picker { flex:1; }
+ body.mobile .m-academy-mngr-Wrap .input-btn-wrap .time-picker { flex:1; }
  .m-academy-mngr-Wrap [class^="input-btn-wrap gap"] [class^="t-button"]:last-child { margin:0; }
 
 
+ 
 /* 툴팁 */
 .m-helpTip { width: 20px; height: 20px; background: url(../images/mobile-icon-help.png) center no-repeat; background-size: 20px; }
 .m-infoTip { width: 20px; height: 20px; background: url(../images/mobile-icon-tooltip.png) center no-repeat; background-size: 20px; }
