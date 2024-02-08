@@ -202,10 +202,14 @@ location
 .academy-mngr-Wrap .dashboard .t-item { display: flex; gap: 50px; }
 .academy-mngr-Wrap .dashboard .box-bg .t-item { margin-top: 5px; }
 .academy-mngr-Wrap .dashboard .sub-tit { font-size: var(--pc-fs18); }
-.academy-mngr-Wrap .dashboard .incre-txt { vertical-align: middle; display: inline-flex; align-items: center; justify-content: flex-end; }
-.academy-mngr-Wrap .dashboard .incre-txt .down { color: var(--pc-red) !important; }
-.academy-mngr-Wrap .dashboard .incre-txt .up { color: #4641ab !important; }
-.academy-mngr-Wrap .dashboard .incre-txt span { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
+.academy-mngr-Wrap .dashboard .incre-txt span { width: 18px; height: 18px;}
+
+/* 증감 텍스트 */
+.incre-txt { vertical-align: text-top; display: inline-flex; align-items: center; justify-content: flex-end; }
+.incre-txt.down { color: #4641ab !important; }
+.incre-txt.up { color: var(--pc-red) !important; }
+.incre-txt span { width: 15px; height: 15px; display: flex; align-items: center; justify-content: center; }
+
 .pre-stu-data { padding-top: 20px; display: flex; gap: 10px 4%; flex-wrap: wrap; }
 .pre-stu-data li { width: 22%; border: 1px solid #d7dce5; height: 140px; background: #efedfc; display: flex; border-radius: 7px; padding: 20px; box-sizing: border-box; flex-direction: column; }
 .pre-stu-data li .stu-data-tit { font-size: var(--pc-fs15); font-weight: var(--text-medium); color: #373f57; }
@@ -218,7 +222,7 @@ location
 /* 현재 원생 현황 */
 .academy-mngr-Wrap .dashboard .pre-stu { background: transparent; }
 .academy-mngr-Wrap .dashboard .pre-stu .pre-time { color: #c8c8c8; }
-.academy-mngr-Wrap .dashboard .pre-stu .pre-stu-data .incre-txt { margin-top: 4px; }
+.academy-mngr-Wrap .dashboard .pre-stu .pre-stu-data>.incre-txt { margin-top: 4px; }
 .academy-mngr-Wrap .dashboard .pre-stu .pre-stu-data .incre-txt p { margin-right: 2px; }
 
 /* 사용용량 */
