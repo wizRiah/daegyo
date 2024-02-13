@@ -1876,23 +1876,22 @@ dropdown set
 /* layout 타입일때 별도의 백그라운드 */
 .m-popup-bg { position: fixed; width: 100%; height: 100%; background: #000000a1; top: 0; left: 0; z-index: 54; } 
 
-
-.m-academy-mngr-Wrap .t-popup { width: calc(100% - 40px); border-radius: 10px; } 
-.m-academy-mngr-Wrap .t-popup:not(.popup-goback,.popup-bottom) .pop-header { background: #dbdbdb; } 
-.m-academy-mngr-Wrap .t-popup .pop-header { height: 50px; padding: 13px 45px 13px 15px; background: #ffffff; border-bottom: 1px solid #dcdcdc; } 
-.m-academy-mngr-Wrap .t-popup .pop-header .pop-title { color: #000; font-weight: var(--text-bold); font-size: var(--m-fs17); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 95%; line-height: 23px; } 
-.m-academy-mngr-Wrap .t-popup button.close { border-radius: 0; width: 50px; height: 50px; background: url(/images/m-btn-close.png) no-repeat center/100%; background-size: 16px; } 
-.m-academy-mngr-Wrap .t-popup button.close:hover { background-color: #b2b2b226; } 
-.m-academy-mngr-Wrap .t-popup .pop-cont { padding: 15px; /* background: #F5F7FA; */ } 
-.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; } 
-.t-popup .bt-btnbox { margin-bottom:0; border-bottom:0; } 
-.m-academy-mngr-Wrap .t-popup .pop-container { padding:0; } 
-.m-academy-mngr-Wrap .t-popup .p-close { display:none; } 
-.m-academy-mngr-Wrap .t-popup .pop-cont .m-listTopSetBox { padding:0; } 
-.m-academy-mngr-Wrap .t-popup:not(.popup-goback) .pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; } 
-.m-academy-mngr-Wrap .t-popup:not(.popup-goback) .pop-title { padding-left: 38px; height:100%; } 
-.m-academy-mngr-Wrap .t-popup:not(.popup-goback,.popup-bottom) .m-list-student.m-item-list { padding:0 0 15px; } 
-.m-academy-mngr-Wrap .t-popup-wrap [class^="m-list-"] .btn-set:last-of-type { margin: 10px 0; } 
+.m-academy-mngr-Wrap .t-popup { width: calc(100% - 40px); border-radius: 10px; }
+.m-academy-mngr-Wrap .t-popup:not(.popup-goback,.popup-bottom) .pop-header { background: #dbdbdb;}
+.m-academy-mngr-Wrap .t-popup .pop-header {height: 50px;padding: 13px 45px 13px 15px;background: #ffffff;border-bottom: 1px solid #dcdcdc;}
+.m-academy-mngr-Wrap .t-popup .pop-header .pop-title { color: #000; font-weight: var(--text-bold); font-size: var(--m-fs17); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 95%; line-height: 23px; }
+.m-academy-mngr-Wrap .t-popup button.close { border-radius: 0; width: 50px; height: 50px; background: url(/images/m-btn-close.png) no-repeat center/100%; background-size: 16px; }
+.m-academy-mngr-Wrap .t-popup button.close:hover { background-color: #b2b2b226; }
+.m-academy-mngr-Wrap .t-popup .pop-cont { /* padding: 15px; */ background: #F5F7FA; height:100%;}
+.m-academy-mngr-Wrap .t-popup .m-basicSrchBox { border-radius: 0; }
+.t-popup .bt-btnbox { margin-bottom:0; border-bottom:0; }
+.m-academy-mngr-Wrap .t-popup .pop-container { padding:0; }
+.m-academy-mngr-Wrap .t-popup .p-close { display:none; }
+/* .m-academy-mngr-Wrap .t-popup .pop-cont .m-listTopSetBox { padding:0; } */
+.m-academy-mngr-Wrap .t-popup:not(.popup-goback) .pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; }
+.m-academy-mngr-Wrap .t-popup:not(.popup-goback) .pop-title { padding-left: 38px; height:100%; }
+.m-academy-mngr-Wrap .t-popup:not(.popup-goback,.popup-bottom) .m-list-student.m-item-list { padding:0 0 15px; }
+.m-academy-mngr-Wrap .t-popup-wrap [class^="m-list-"] .btn-set:last-of-type { margin: 10px 0; }
 
  /* 뒤로가기 */
  .m-academy-mngr-Wrap .t-popup.popup-goback { background:#fff; border-radius: 0; width: 100%!important; top: 0; height: 100vh; max-height: 100%; } 
@@ -1907,11 +1906,10 @@ dropdown set
  .m-academy-mngr-Wrap .t-popup.popup-bottom .pop-container { padding: 0!important; min-height: auto; overflow-y: auto; max-height: calc(100vh - 54px); } 
 
  /* 팝업형태_닫기(꽉찬) */
- .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-header { padding: 13px 45px 13px 15px!important; } 
- .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-container { background: #F5F7FA; max-height: 100vh; height:100%; } 
- .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-header>.pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; } 
- .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-header>.pop-title { padding-left: 38px; height:100%; } 
-
+ .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-header { padding: 13px 45px 13px 15px!important; }
+ .m-academy-mngr-Wrap .t-popup.popup-full.popup-goback>.pop-container { background: #F5F7FA; max-height: 100vh; height:100%; }
+ .m-academy-mngr-Wrap:not(.m-mobileAtd-wrap).t-popup.popup-full.popup-goback>.pop-header>.pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; }
+ .m-academy-mngr-Wrap:not(.m-mobileAtd-wrap) .t-popup.popup-full.popup-goback>.pop-header>.pop-title { padding-left: 38px; height:100%; }
 
  /* 반투명팝업 */
  .m-academy-mngr-Wrap .t-popup.t-opacity { background: #000000bd; border-radius: 0; width: 100%!important; top: 0; height: 100vh; max-height: 100%; } 
@@ -1935,13 +1933,14 @@ dropdown set
  .t-etcpop .p-close { background-image: url(/images/m-btn-close.png); } 
  .t-etcpop button.close { border-radius: 0!important; height: 40px!important; width: 40px!important; } 
 
-    /* 모바일 */
-    .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-header { display: none; } 
-    .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-cont { padding: 0; min-height: 170px; min-width: 375px; display: flex; align-items: center; justify-content: center; overflow: hidden; } 
-    .m-academy-mngr-Wrap .t-etcpop.popup-bottom .btn-set { height: 50px; padding: 0 5px 0 15px; border-top: 1px solid #ddd; box-sizing: border-box; } 
-    .m-academy-mngr-Wrap .t-etcpop.popup-bottom button.close { display:none;}
-    .m-academy-mngr-Wrap .t-popup .pop-cont{ padding:0; }
-
+     /* 모바일 */
+     .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-header { display: none; }
+     .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-cont { min-height: 170px; min-width: 375px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+     .m-academy-mngr-Wrap .t-etcpop.popup-bottom .btn-set { height: 50px; padding: 0 5px 0 15px; border-top: 1px solid #ddd; box-sizing: border-box; }
+     .m-academy-mngr-Wrap .t-etcpop.popup-bottom button.close { display:none;}
+     .m-academy-mngr-Wrap .t-etcpop .pop-cont{ padding:0; background: #fff; }
+ 
+ 
 
 
 /* dropdown */
