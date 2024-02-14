@@ -901,7 +901,8 @@ table a:hover { text-decoration: underline; }
 .t-basic-1>thead>tr:first-child th:last-child { border-right:0; } 
 .t-basic-1>tbody>tr>td .t-button-xms { min-width:40px; } 
 
-
+table th .t-checkbox.checkbox01 input[type="checkbox"] + label { color: #333;  font-size: var(--pc-fs12);  }
+.t-check-th .t-checkbox.checkbox01 input[type="checkbox"] + label:before { margin:0; }
 
 /* 왼쪽 위아래만 둥근거 */
 .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; word-break:keep-all; } 
@@ -1040,17 +1041,23 @@ table .bg-always td { background:#ffffba!important; }
 
 
 /* 스크롤 공통 디자인 */
-.academy-mngr-Wrap *::-webkit-scrollbar { background-color: #f1f1f1; } 
-.academy-mngr-Wrap .t-popup-wrap *::-webkit-scrollbar { width: 8px!important; height: 8px!important; } 
-.academy-mngr-Wrap .sub *::-webkit-scrollbar { width: 5px!important; height: 8px!important; } 
-.academy-mngr-Wrap .dashboard *::-webkit-scrollbar { width: 8px; height: 8px; } 
-.academy-mngr-Wrap *::-webkit-scrollbar-thumb { background-color: #868196; transition: .3s; } 
-.academy-mngr-Wrap *::-webkit-scrollbar-thumb:hover { background-color: #6e6a7a; } 
+.academy-mngr-Wrap *::-webkit-scrollbar { background-color: #f1f1f1; }
+.academy-mngr-Wrap .t-popup-wrap *::-webkit-scrollbar { width: 8px!important; height: 12px!important; }
+.academy-mngr-Wrap .sub *::-webkit-scrollbar { width: 5px!important; height: 12px!important; }
+.academy-mngr-Wrap .dashboard *::-webkit-scrollbar { width: 8px; height: 8px; }
+.academy-mngr-Wrap *::-webkit-scrollbar-thumb { background-color: #868196; transition: .3s; }
+.academy-mngr-Wrap *::-webkit-scrollbar-thumb:hover { background-color: #6e6a7a; }
 
 
 
 
-.m-scroll { overflow: auto; } 
+.m-scroll { overflow: auto; }
+
+/* 일정 width 부터 스크롤 테이블 */
+@media (max-width: 1500px) {
+.m-scroll .m-scroll-t {width: 120%;}
+}
+
 
 
 /* tbody 스크롤 */
