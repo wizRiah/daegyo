@@ -136,10 +136,18 @@
  .t-auth-wrap .form-box .alert-column.security-bad { padding: 0 0 0 27px; background: url(/images/icon_security_bad.png) no-repeat 0 50%; font-size: 13px; line-height: 20px; color: #FF5656; text-decoration: underline; } 
 
 
- .m-serv-box { background: #f5f7fa; border: 1px solid #dedede; box-sizing: border-box; padding: 15px 10px; overflow-y: auto; max-height: 250px; } 
- .m-serv-box .main-text { color: #626262; } 
- .m-item-serv .sub-tit-bar .t-checkbox input[type="checkbox"]+label { font-weight: 500; } 
- .m-item-serv.m-item-list .m-item+.m-item { border-top: 0; } 
+    /* 개인정보 수집동의 */
+    .m-serv-box { display: flex; flex-direction: column; align-items: flex-start; }
+    .m-serv-box .check-list { align-items: flex-start; margin-left:20px; flex-direction: column; }
+    .m-serv-box .check-list li { margin-right: 0; margin-bottom: 9px; }
+    .m-serv-box>.t-checkbox { margin-bottom:15px; }
+    .m-serv-box .check-list li:last-child { margin-bottom:0; }
+    .m-serv-box .t-checkbox.checkbox01 input[type="checkbox"]+label { font-size: var(--pc-fs13)!important; }
+    .m-serv-box { background: #f5f7fa; border: 1px solid #dedede; box-sizing: border-box; padding: 15px 10px; overflow-y: auto; max-height: 250px; }
+    .m-serv-box .main-text { color: #626262; }
+    .m-item-serv .sub-tit-bar .t-checkbox input[type="checkbox"]+label { font-weight: 500; }
+    .m-item-serv.m-item-list .m-item+.m-item { border-top: 0; }
+
  .m-join-wrap { border-radius: 10px; box-sizing: border-box; padding: 15px; background: #5661b91f; text-align: center; width: 200px; margin: 30px auto 20px; box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); } 
  .m-join-wrap div { width: 100px; height: 100px; margin: 0 auto; } 
  .m-join-wrap div.m-worker { background: url(/images/m-join-img.png) no-repeat center/100%; } 
@@ -569,15 +577,10 @@ location
 .academy-mngr-Wrap .box-bg>.tab-side { top: 7px; } 
 
 /* 도움센터 */
-.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item { padding: 0; background: transparent; } 
-.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item .m-serv-box { background: #fff; } 
-.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item+.m-item { padding-top: 20px; } 
-.academy-mngr-Wrap .m-serv-box { display: flex; flex-direction: column; align-items: flex-start; } 
-.academy-mngr-Wrap .m-serv-box .check-list { align-items: flex-start; margin-left:20px; flex-direction: column; } 
-.academy-mngr-Wrap .m-serv-box .check-list li { margin-right: 0; margin-bottom: 9px; } 
-.academy-mngr-Wrap .m-serv-box>.t-checkbox { margin-bottom:15px; } 
-.academy-mngr-Wrap .m-serv-box .check-list li:last-child { margin-bottom:0; } 
-.academy-mngr-Wrap .m-serv-box .t-checkbox.checkbox01 input[type="checkbox"]+label { font-size: var(--pc-fs13)!important; } 
+.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item { padding: 0; background: transparent; }
+.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item .m-serv-box { background: #fff; }
+.academy-mngr-Wrap .box-bg .help-item.m-item-list .m-item+.m-item { padding-top: 20px; }
+
 
 
 /* 약관류 페이지 (도움센터) */
