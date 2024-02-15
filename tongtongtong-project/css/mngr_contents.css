@@ -225,7 +225,7 @@
 /*
 location
 */
-.location-wrap { margin: 20px; display: flex; justify-content: space-between; } 
+.location-wrap { margin: 20px; display: flex; justify-content: space-between; }
 .location { display: inline-flex; align-items: center; justify-content: flex-end; } 
 .location li { font-size: 13px; color: #6d6d6d; letter-spacing: -1px; font-family: Pretendard; } 
 .location li:first-child { line-height: 15px; } 
@@ -830,7 +830,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 /* 추가 결과 리스트 */
 .add-result-list { display: flex; flex-wrap: wrap; gap: 10px; } 
 .add-result-list:only-child { margin-left: 0; } 
-[class^="t-button"] + .add-result-list:last-child { margin-top: 10px; } 
+[class^="t-button"] + .add-result-list:last-child:not(:empty) { margin-top: 10px; }
 .add-result-list li { display: flex; border-radius: 15px; background: #e6e7f5; padding: 5px 8px; box-sizing: border-box; align-items: center; } 
 .add-result-list li:last-child { margin-right: 0; } 
 .add-result-list :is(p, span) { color: #333333; font-size: var(--pc-fs13); word-break: break-all; } 
