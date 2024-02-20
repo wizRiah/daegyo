@@ -224,12 +224,24 @@
  .m-serv-box .check-list { align-items: flex-start; margin-left:10px; flex-direction: column; } 
  .m-serv-box .check-list li { margin-right: 0; margin-bottom: 9px; } 
  .m-serv-box>.t-checkbox { margin-bottom:15px; } 
- .m-serv-box .check-list li:last-child { margin-bottom:0; } 
+ .m-serv-box .check-list li:last-child { margin-bottom:0!important; } 
+ .m-serv-box .check-list li:last-child .t-button-underline { padding-left: 23px;}
  .m-serv-box .t-checkbox.checkbox01 input[type="checkbox"]+label { font-size: var(--pc-fs13)!important; } 
  .m-serv-box { background: #f5f7fa; border: 1px solid #dedede; box-sizing: border-box; padding: 15px 10px; overflow-y: auto; max-height: 250px; } 
  .m-serv-box .main-text { color: #626262; } 
  .m-item-serv .sub-tit-bar .t-checkbox input[type="checkbox"]+label { font-weight: 500; } 
  .m-item-serv.m-item-list .m-item+.m-item { border-top: 0; } 
+
+
+
+  /* 서비스신청 */
+  .m-appli div.t-checkbox.checkbox01 input[type="checkbox"]+label:before { top: auto; } 
+  .m-serv-box .t-checkbox.checkbox01 input[type="checkbox"]+label { font-size: var(--m-fs12)!important; word-break: break-all; max-width: 100%; display: flex;} 
+
+  .m-appli-list .m-item-serv .sub-tit-bar { flex-direction: column; align-items: flex-start; } 
+  .m-appli .label-set { margin-top: 30px !important; } 
+
+
 
 
 
@@ -1201,6 +1213,8 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 마이페이지 
 */
 .m-academy-mngr-Wrap .m-mypage .m-list-student.m-item-list { padding: 0 0 50px; }
+.m-academy-mngr-Wrap .m-mypage .m-listTopSetBox {background: #fff;}
+.m-academy-mngr-Wrap .m-mypage .m-list-student.m-item-list .m-item {background: #fff;}
 .m-academy-mngr-Wrap .m-mypage .btn-set.fixed { position: fixed; width: 100%; bottom: 0; margin: 0; }
 .m-academy-mngr-Wrap .m-mypage .btn-set.fixed button { border-radius: 0; height: 50px; line-height: 50px; font-size: var(--m-fs15); font-weight: var(--text-bold);}
 
@@ -1738,13 +1752,6 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 
-/*
-서비스신청
-*/
-.m-appli div.t-checkbox.checkbox01 input[type="checkbox"]+label:before { top: auto; } 
-.m-serv-box .t-checkbox.checkbox01 input[type="checkbox"]+label { font-size: var(--m-fs12)!important; } 
-.m-appli-list .m-item-serv .sub-tit-bar { flex-direction: column; align-items: flex-start; } 
-.m-appli .label-set { margin-top: 30px !important; } 
 
 
 
