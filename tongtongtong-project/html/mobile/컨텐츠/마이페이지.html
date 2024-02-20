@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>마이페이지</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-top">
+        <div class="header-cnt"><!-- 로고영역 --> <a class="m-logo"><img src="/images/m_t_logo.png"></a> <!-- /로고영역 -->
+          <!-- 학원선택 -->
+          <div class="acdmNm-wrap"><select class="acdmyNm">
+              <option>이엔엠에듀bbb이엔엠에듀bbb</option>
+              <option>베스티어학원베스티어학원</option>
+            </select></div> <!-- /학원선택 -->
+        </div>
+        <div class="btn-set"><!--  <button class="logout-btn" type="button" @click="fnLogOut()"></button> -->
+          <!-- 알림버튼 --> <button type="button" class="alarmBTN on"></button> <!-- 알림이 있는 경우 on클래스 추가. --> <!-- /알림버튼 -->
+          <button class="setBtn" type="button"></button>
+        </div> <!-- <layoutHeaderMenu /> -->
+      </div>
+    </header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>마이페이지</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li class="on">
+          <a>통합회원정보</a>
+        </li>
+        <li><a>직원정보</a></li>
+        <li><a>서비스신청정보</a></li>
+        <li><a>이용학원</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+      <!-- content -->
+      <!-- content에 m-mypage추가 -->
+      <div class="content m-mypage">
+
+
+
+        <div class="m-listTopSetBox">
+          <p class="main-tit">통합회원 정보</p>
+          <div class="btn-set">
+            <button type="button" class="t-button-xs t-button-red-bd">회원탈퇴</button>
+          </div>
+        </div>
+
+
+
+        <div class="m-list-student m-item-list">
+
+          <div class="m-item">
+
+            <div class="label-set">
+              <span class="label-text">이름</span>
+              <p class="main-text">홍길동</p>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">아이디</span>
+              <p class="main-text">testkim123</p>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">
+                <span class="t-necessary">필수</span>비밀번호</span>
+              <input type="text" class="txtfield-basic" placeholder="">
+              <span class="m-bora1 t-bullet-02 mt10">비밀번호 생성은 문자+숫자+특수문자 조합 9~16자리로 입력</span>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">
+                <span class="t-necessary">필수</span>
+                비밀번호 확인
+              </span>
+              <input type="text" class="txtfield-basic" placeholder="">
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">
+                <span class="t-necessary">필수</span>휴대폰번호</span>
+              <div class="input-btn-wrap gap5 wd100">
+                <select name="" id="" class="">
+                  <option value="" disabled="" selected="">010</option>
+                </select>
+                -
+                <input type="number" class="txtfield-basic" placeholder="">
+                -
+                <input type="number" class="txtfield-basic" placeholder="">
+                <button type="button" class="t-button-m t-button-bora6-bd">인증번호발송</button>
+              </div>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">인증번호</span>
+              <div class="input-btn-wrap gap5 wd100">
+                <input type="number" class="txtfield-basic" placeholder="">
+                <button type="button" class="t-button-m t-button-bora6-bd">확인</button>
+              </div>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">인증번호</span>
+              <div class="input-btn-wrap gap5 wd100">
+                <input type="number" class="txtfield-basic" placeholder="">
+                <button type="button" class="t-button-m t-button-bora6-bd">확인</button>
+              </div>
+            </div>
+
+            <div class="label-set">
+              <span class="label-text">이메일</span>
+              <div class="input-btn-wrap gap5 wd100">
+                <input type="text" class="txtfield-basic" placeholder="">@
+                <input type="text" class="txtfield-basic" placeholder="">
+                <select name="" id="" class="wd100">
+                  <option value="" disabled="" selected="">직접입력</option>
+                  <option value="">naver.com</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="btn-set fixed">
+          <button type="button" class="t-button-sm t-button-bora2 flex-1">수정</button>
+        </div>
+
+
+
+
+      </div>
+      <!-- /content -->
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
