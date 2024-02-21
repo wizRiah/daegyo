@@ -1589,14 +1589,14 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-tong-allmenuPOP .m-innerMenu li ul li { border-bottom: none; position: relative; padding: 11px 10px; } 
 .m-tong-allmenuPOP .m-innerMenu li ul li a { font-size: 14.5px; color: #656565; } 
 
- /* 3depth가 있는 경우 class="m-all-3depth-on" 추가 */
- .m-tong-allmenuPOP .m-innerMenu>li.on>.m-all-3depth:first-of-type { margin-top: 14px; border-top: 2px solid #3f4782; padding-top: 5px; } 
- .m-tong-allmenuPOP .m-innerMenu>li.on.m-all-3depth-on:after { transform: rotate(180deg); } 
- .m-tong-allmenuPOP .m-innerMenu>li.m-all-3depth-on:after { transform: rotate(360deg); } 
+  /* 3depth가 있는 경우 class="m-all-3depth-on" 추가 */
+  .m-tong-allmenuPOP .m-innerMenu>li.on>.m-all-3depth:first-of-type { margin-top: 14px; border-top: 2px solid #3f4782; padding-top: 5px; overflow: hidden; }
+  .m-tong-allmenuPOP .m-innerMenu>li.on.m-all-3depth-on:after { transform: rotate(180deg); }
+  .m-tong-allmenuPOP .m-innerMenu>li.m-all-3depth-on:after { transform: rotate(360deg); }
 
   /* 애니메이션 */
-  .m-tong-allmenuPOP .m-innerMenu>li.m-all-3depth-on .m-all-3depth { height:0; opacity:0; transition: opactiy .3s,height .3s,margin-top .3s;}
-  .m-tong-allmenuPOP .m-innerMenu>li.on.m-all-3depth-on .m-all-3depth {opacity:1; height:100%; }
+  .m-tong-allmenuPOP .m-innerMenu>li.m-all-3depth-on .m-all-3depth { height:0; opacity:0; transition: opactiy .3s,height .3s,margin-top .3s; }
+  .m-tong-allmenuPOP .m-innerMenu>li.on.m-all-3depth-on .m-all-3depth {opacity:1; height:100%; overflow: visible; }
 
 
 
