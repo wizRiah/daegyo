@@ -17,7 +17,10 @@
   --pc-border-3: #E0E6EF;
   --pc-border-4: #d7dce5;
   --pc-border-5: #3b2989;
-  /* tbody 스크롤 */
+
+    
+
+
   --pc-text-color-1: #333;
   /* Font */
   --pc-text-h1: 36px;
@@ -2014,11 +2017,21 @@ dropdown set
  .m-academy-mngr-Wrap .t-popup.popup-goback>.pop-body>.pop-container { padding: 0; box-sizing: border-box; height: 100%; max-height: 100%; flex-shrink: 2; } 
  .m-academy-mngr-Wrap .t-popup.popup-goback>.pop-body>.pop-container { max-height: 100vh; } 
 
+
  /* 하단팝업 */
- .m-academy-mngr-Wrap .t-popup.popup-bottom { border-radius: 10px 10px 0 0; width: 100%; bottom: 0; position: fixed; max-height: 95vh; height: auto; top: auto; } 
+ .m-academy-mngr-Wrap .t-popup.popup-bottom {  transition:.3s; border-radius: 10px 10px 0 0; width: 100%; bottom: -100%; position: fixed; max-height: 95vh; height: auto; top: auto; } 
  .m-academy-mngr-Wrap .t-popup.popup-bottom .pop-container { padding: 0!important; min-height: auto; overflow-y: auto; max-height: calc(100vh - 54px); } 
  .m-academy-mngr-Wrap .t-popup.popup-bottom>.pop-header>.pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; } 
  .m-academy-mngr-Wrap .t-popup.popup-bottom>.pop-header>.pop-title { padding-left: 38px; height:100%; } 
+
+  /* 하단팝업 애니메이션 */
+  .mobile-popup-wrapper.active .t-popup.popup-bottom{ bottom: 0; }
+
+
+
+
+
+
 
 
  /* 팝업형태_닫기(꽉찬) */
@@ -2111,3 +2124,19 @@ dropdown set
  .m-academy-mngr-Wrap .date-picker { flex-direction: column; } 
  .m-academy-mngr-Wrap .t-radio-01 { display:flex; } 
  }
+
+
+
+
+
+ /* 
+ 학부모용 
+ */
+ 
+.m-mobileEdu-Wrap{
+
+  /* Color */
+  --pc-bora-2: #fd7929;
+  --m-bora-1: #ff7426!important;
+  --pc-border-5: #ff7426;
+}
