@@ -1750,7 +1750,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-academy-mngr-Wrap .m-list-cust .listBox { padding: 0; margin-bottom: 0; box-shadow: none; border: 1px solid #e2e2e2; border-width: 1px 0 0; border-radius: 0;/* padding: 15px 10px 15px 15px; */ }
 .m-academy-mngr-Wrap .m-list-cust .listBox:last-of-type { border-width: 1px 0 1px; border-bottom-color: #e2e2e2; }
 .m-academy-mngr-Wrap .m-list-cust .listBox:first-child { border-top-color: #303030; }
-.m-academy-mngr-Wrap .m-list-cust .c-cont-box { display: flex; justify-content: space-between; align-items: center; padding: 15px 10px 15px 15px; }
+.m-academy-mngr-Wrap .m-list-cust .c-cont-box { display: flex; justify-content: space-between; align-items: center; padding: 15px; }
 .m-academy-mngr-Wrap .m-list-cust .m-album-tit { margin-bottom: 7px; gap: 5px; max-width: 90%; }
 .m-academy-mngr-Wrap .m-list-cust .list-title { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .m-academy-mngr-Wrap .arrow-btn { transition: all 0.3s; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
@@ -1852,9 +1852,10 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 /* 설정 */
+.m-academy-mngr-Wrap .m-set { padding: 10px 0 75px;}
 .m-academy-mngr-Wrap .m-set .sub-tit { margin-bottom:0; } 
 .m-academy-mngr-Wrap .m-set>div { margin-bottom:30px; } 
-.m-academy-mngr-Wrap .m-list-cust .listBox { padding:15px!important;}
+.m-academy-mngr-Wrap .m-set .listBox { padding:15px!important;}
 .m-academy-mngr-Wrap .m-set .c-cont-box { padding:0!important;}
 .m-academy-mngr-Wrap .m-set .c-cont-box + .c-cont-box { margin-top:20px;}
 
@@ -1921,8 +1922,29 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-mobileEdu-Wrap .m-stu-info .clsTit { gap: 5px; } 
 
 /* 유저셀렉트 */
-.m-mobileEdu-Wrap .m-edu-user { padding: 15px; background: bisque; } 
+.m-mobileEdu-Wrap .m-edu-user {    padding: 15px;
+  background: #fff;
+  border-bottom: 1px solid #f79a29;} 
+.m-mobileEdu-Wrap .m-edu-user .t-select-check { width: 100%;
+  font-size: var(--m-fs15);
+  background-color: transparent;
+  height: 35px;
+  border-width: 0 0 2px;
+  border-radius: 0;
+  border-color: #474747;}
+.m-mobileEdu-Wrap .m-edu-user .t-select-check.active .dropdown { outline-color: #474747; }
+
 .m-mobileEdu-Wrap .m-edu-user .t-select-check .check-list li .t-checkbox.checkbox01 input[type="checkbox"]+label { display: flex; gap: 5px; } 
+
+
+
+
+
+
+
+
+
+
 
 /*
 출결
@@ -1984,11 +2006,11 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 /*
 자녀정보 설정
 */
+.m-mobileEdu-Wrap .m-child-info { align-items: flex-end; display: flex; gap: 10px; margin-bottom: 10px; } 
+.m-mobileEdu-Wrap .m-child-info select { font-size: var(--m-fs15); background-color: transparent; height: 35px; border-width: 0 0 2px; border-radius: 0; border-color: #474747; } 
 .m-mobileEdu-Wrap .m-school-info { gap: 6px; display: flex; flex-direction: column; } 
 .m-mobileEdu-Wrap .m-school-info select+select { margin-left: 0; } 
 .m-mobileEdu-Wrap .m-list-child { padding: 15px 15px 75px; } 
-.m-mobileEdu-Wrap .m-list-child .m-child-info { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; } 
-.m-mobileEdu-Wrap .m-list-child .m-child-info select { height: 35px; border-width: 0 0 2px; border-radius: 0; border-color: #474747; } 
 .m-mobileEdu-Wrap .m-list-child .clsTit { gap: 5px; } 
 
  /* 노데이터 */
@@ -2012,9 +2034,8 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 /* 팝업 */
-/* .m-mobileEdu-Wrap .t-popup .pop-cont { background: #f9f9f9; } */
 .m-mobileEdu-Wrap .t-popup:not(.t-etcpop,.t-opacity) .pop-container { background: #f9f9f9; } 
-.m-mobileEdu-Wrap .t-popup .pop-header { background: #f6f5ee; } 
+/* .m-mobileEdu-Wrap .t-popup .pop-header { background: #f6f5ee; }  */
 
  /* 팝업 내 광고영역 */
  .m-mobileEdu-Wrap .t-popup .pop-adArea { min-height: 72px; overflow: hidden; display: flex; align-items: center; justify-content: center; } 
@@ -2054,93 +2075,18 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 
-
-/*
-출결앱
-*/
-
-.m-academy-mngr-Wrap.m-mobileAtd-wrap { background:#eeeeee; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header { background:#fff; /* /* border-radius: 0 0 15px 15px; *//* overflow: hidden; */ height: 50px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top { padding: 2px 15px; border-bottom-color: #001339; text-align:center; height:50px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top .header-cnt { color: #001339; font-size: var(--m-fs20); font-weight: bold; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap header .m-acaName { color:#fff; font-weight: 600; font-size: var(--m-fs16); }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn { background:transparent url(/images/m-sound.png) no-repeat; background-position: center; background-size: 24px; }
-.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active { background-image: url(/images/m-sound-off.png); }
-
-/* 키패드 */
-.m-mobileAtd-wrap .keypadWrap { height:100%; background:#fff; padding: 0; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-.m-mobileAtd-wrap .keypadWrap>div:first-child { justify-content: center; position:relative; padding:0 15px; flex-grow: 1; display: flex; flex-direction: column; }
-.m-mobileAtd-wrap .keypadWrap .keyInput { font-size: 40px; display: flex; align-items: center; justify-content: center; padding: 0 10px; border-radius: 8px; height: 70px; line-height: 70px; box-sizing: border-box; border: none; text-align: center; /*background:#f6f7f9; */ letter-spacing: 13px; font-family: 'SUIT'; outline: none; }
-.m-mobileAtd-wrap .keypadWrap .keyInput::placeholder { font-size: 35px; letter-spacing: 7px; color:#EBEFF5; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad { background: #969696; display: flex; flex-wrap: wrap; box-sizing: border-box; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button { height: 10vh; width: 33.33%; font-weight: bold; font-size: 50px; font-family: 'SUIT'; box-sizing: border-box; color: #fff; padding: 10px 0; border: 1px solid #ffffff6b; border-width: 0 1px 1px 0; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button:nth-child(n+10) { border-bottom:0; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button:nth-child(3n) { border-right:0; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn { font-size: 22px; font-family: 'Pretendard'; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn:before { content:""; display:inline-block; width: 27px; height: 27px; background: url(/images/m_srch_reset_white.png) no-repeat center; background-size: 100%; margin: -3px 7px 0 0; vertical-align: middle; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-move { background:url(/images/m_keypad_del.png) no-repeat center; background-size: 40px; }
-.m-mobileAtd-wrap .keypadWrap .m-keypad button:hover { background-color: #62666ba1 !important; transition: all .3s; }
-.key-date { font-size: 18px; color: #575757;; }
-.key-time { font-size: 28px; font-weight:600; margin: 5px 0 30px; color: #001339; }
-.keypad-top button { position: absolute; right: 15px; top: 15px; }
-.keypad-target { word-break: break-all; background: #001339; padding: 15px; box-sizing: border-box; text-align: center; font-size: 26px; min-height: 85px; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 40px 40px 0 0; }
-.keypad-target:before { flex-shrink: 0;  content:''; background: url(/images/m-atd.png) no-repeat center/100%; width: 26px; height: 26px; margin-right: 10px; }
-
-
-.keypad-number .btn-set button { height: 70px; font-size:35px; line-height: 70px; margin:0; border-radius: 0; letter-spacing: 2px; font-weight: 500; }
-.m-mobileAtd-wrap .keypadWrap .btn-set button:first-of-type { background: #aecc25 !important; }
-.m-mobileAtd-wrap .keypadWrap .btn-set button:last-of-type { background: #001339 !important; }
-
-
-/* 키패드 인풋 */
-.keyInputList { display: flex; align-items: center; justify-content: center; gap: 15px; }
-.keyInputList li { flex-shrink: 0; width: 100px; height: 100px; box-sizing: border-box; border-bottom: 7px solid #aecc25; display: flex; align-items: center; justify-content: center; }
-.keyInputList li p { color: #001339; font-size: 50px; padding: 10px; box-sizing: border-box; font-family: 'SUIT'; font-weight: 600; }
-
-
-/* 출석이력 */
-.m-mobileAtd-wrap .attend-list { overflow-y: visible; max-height: fit-content; }
-.m-mobileAtd-wrap .attend-list li {box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); background: #ffffff;}
-.m-mobileAtd-wrap .attend-list .time-box { background: #59607a; width:70px; }
-.m-mobileAtd-wrap .attend-list .at-name { color: #333;}
-.m-mobileAtd-wrap .attend-list li.no-data {  background: transparent!important; box-shadow: none!important; }
-.m-mobileAtd-wrap .attend-list li.no-data p { color: #333;}
-.m-mobileAtd-wrap .key-attend { height: 50px; font-size: 20px; width: 140px; background: #001339!important;}
-
-
- /* 반응형 */
- @media (max-width: 540px){
- .keyInputList li { width:70px; height:70px; }
- .keypad-target { min-height: 70px; font-size: 17px; }
- .keypad-target:before { width: 20px; height: 20px;}
- .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn { font-size:18px; }
- .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn:before { width:20px; height:20px; }
- .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-move { background-size: 32px; }
- .key-time { font-size: 20px;}
- .key-date { font-size: 14px; margin-top: 20px; }
- .m-mobileAtd-wrap .keypadWrap .m-keypad button,
- .keyInputList li p { font-size:45px; }
- .keypad-number .btn-set button { font-size:26px; }
- .keypad-number .btn-set button { height:60px; line-height: 60px; }
- .m-mobileAtd-wrap .key-attend { height: 30px; font-size: 14px; width: 96px;}
- }
-
-
-
- @media (max-height: 667px){
- .m-mobileAtd-wrap .keypadWrap .m-keypad button,
- .keyInputList li p { font-size: 36px; }
- .keypad-target { min-height: 60px; border-radius: 30px 30px 0 0; }
- .keypad-number .btn-set button { height: 55px; line-height: 55px; }
- .key-time { font-size: 20px;  margin-bottom: 10px;}
-}
-
-
-
-
-
-
-
+/* 마이페이지 */
+.m-mobileEdu-Wrap .m-edu-mypage { padding: 0 15px;}
+.m-mobileEdu-Wrap .infoTxt { display: flex; flex-direction: column; gap: 5px; padding: 30px 20px 10px; font-size: 19px; line-height: 130%; font-weight: 300; color: #333;}
+.m-mobileEdu-Wrap .infoTxt-set { gap: 5px;}
+.m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data { gap:5px; margin-bottom:30px;}
+.m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data li { border-color: #f694387a; background-color: #fff;}
+.m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data i { width: 20px; height: 20px; background: blue; margin: 0 auto 10px; }
+.m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data p { font-weight: 500;}
+.m-mobileEdu-Wrap .m-edu-mypage .m-edu-user { padding: 15px 0 15px 15px; background: transparent; border: 0;}
+.m-mobileEdu-Wrap .mypage-item  + .mypage-item { margin-top:30px; }
+.m-mobileEdu-Wrap .mypage-item .listBox { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;}
+.m-mobileEdu-Wrap .mypage-item .sub-tit { margin-bottom:10px;}
 
 
 
@@ -2224,4 +2170,107 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
   /* 광고 배너 영역 */
   .content_dshBrd .adArea {}
   .content_dshBrd .adArea img {width:100%;}
+
+
+
+
+/*
+출결앱
+*/
+
+.m-academy-mngr-Wrap.m-mobileAtd-wrap { background:#eeeeee; }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header { background:#fff; /* /* border-radius: 0 0 15px 15px; *//* overflow: hidden; */ height: 50px; }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top { padding: 2px 15px; border-bottom-color: #001339; text-align:center; height:50px; }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .header-top .header-cnt { color: #001339; font-size: var(--m-fs20); font-weight: bold; }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap header .m-acaName { color:#fff; font-weight: 600; font-size: var(--m-fs16); }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn { background:transparent url(/images/m-sound.png) no-repeat; background-position: center; background-size: 24px; }
+.m-academy-mngr-Wrap.m-mobileAtd-wrap .soundBtn.active { background-image: url(/images/m-sound-off.png); }
+
+/* 키패드 */
+.m-mobileAtd-wrap .keypadWrap { height:100%; background:#fff; padding: 0; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+.m-mobileAtd-wrap .keypadWrap>div:first-child { justify-content: center; position:relative; padding:0 15px; flex-grow: 1; display: flex; flex-direction: column; }
+.m-mobileAtd-wrap .keypadWrap .keyInput { font-size: 40px; display: flex; align-items: center; justify-content: center; padding: 0 10px; border-radius: 8px; height: 70px; line-height: 70px; box-sizing: border-box; border: none; text-align: center; /*background:#f6f7f9; */ letter-spacing: 13px; font-family: 'SUIT'; outline: none; }
+.m-mobileAtd-wrap .keypadWrap .keyInput::placeholder { font-size: 35px; letter-spacing: 7px; color:#EBEFF5; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad { background: #969696; display: flex; flex-wrap: wrap; box-sizing: border-box; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button { height: 10vh; width: 33.33%; font-weight: bold; font-size: 50px; font-family: 'SUIT'; box-sizing: border-box; color: #fff; padding: 10px 0; border: 1px solid #ffffff6b; border-width: 0 1px 1px 0; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button:nth-child(n+10) { border-bottom:0; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button:nth-child(3n) { border-right:0; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn { font-size: 22px; font-family: 'Pretendard'; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn:before { content:""; display:inline-block; width: 27px; height: 27px; background: url(/images/m_srch_reset_white.png) no-repeat center; background-size: 100%; margin: -3px 7px 0 0; vertical-align: middle; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button.re-move { background:url(/images/m_keypad_del.png) no-repeat center; background-size: 40px; }
+.m-mobileAtd-wrap .keypadWrap .m-keypad button:hover { background-color: #62666ba1 !important; transition: all .3s; }
+.key-date { font-size: 18px; color: #575757;; }
+.key-time { font-size: 28px; font-weight:600; margin: 5px 0 30px; color: #001339; }
+.keypad-top button { position: absolute; right: 15px; top: 15px; }
+.keypad-target { word-break: break-all; background: #001339; padding: 15px; box-sizing: border-box; text-align: center; font-size: 26px; min-height: 85px; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 40px 40px 0 0; }
+.keypad-target:before { flex-shrink: 0;  content:''; background: url(/images/m-atd.png) no-repeat center/100%; width: 26px; height: 26px; margin-right: 10px; }
+
+
+.keypad-number .btn-set button { height: 70px; font-size:35px; line-height: 70px; margin:0; border-radius: 0; letter-spacing: 2px; font-weight: 500; }
+.m-mobileAtd-wrap .keypadWrap .btn-set button:first-of-type { background: #aecc25 !important; }
+.m-mobileAtd-wrap .keypadWrap .btn-set button:last-of-type { background: #001339 !important; }
+
+
+/* 키패드 인풋 */
+.keyInputList { display: flex; align-items: center; justify-content: center; gap: 15px; }
+.keyInputList li { flex-shrink: 0; width: 100px; height: 100px; box-sizing: border-box; border-bottom: 7px solid #aecc25; display: flex; align-items: center; justify-content: center; }
+.keyInputList li p { color: #001339; font-size: 50px; padding: 10px; box-sizing: border-box; font-family: 'SUIT'; font-weight: 600; }
+
+
+/* 출석이력 */
+.m-mobileAtd-wrap .attend-list { overflow-y: visible; max-height: fit-content; }
+.m-mobileAtd-wrap .attend-list li {box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 8%); background: #ffffff;}
+.m-mobileAtd-wrap .attend-list .time-box { background: #59607a; width:70px; }
+.m-mobileAtd-wrap .attend-list .at-name { color: #333;}
+.m-mobileAtd-wrap .attend-list li.no-data {  background: transparent!important; box-shadow: none!important; }
+.m-mobileAtd-wrap .attend-list li.no-data p { color: #333;}
+.m-mobileAtd-wrap .key-attend { height: 50px; font-size: 20px; width: 140px; background: #001339!important;}
+
+
+
+
+ /* 반응형 */
+ @media (max-width: 540px){
+ .keyInputList li { width:70px; height:70px; }
+ .keypad-target { min-height: 70px; font-size: 17px; }
+ .keypad-target:before { width: 20px; height: 20px;}
+ .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn { font-size:18px; }
+ .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-btn:before { width:20px; height:20px; }
+ .m-mobileAtd-wrap .keypadWrap .m-keypad button.re-move { background-size: 32px; }
+ .key-time { font-size: 20px;}
+ .key-date { font-size: 14px; margin-top: 20px; }
+ .m-mobileAtd-wrap .keypadWrap .m-keypad button,
+ .keyInputList li p { font-size:45px; }
+ .keypad-number .btn-set button { font-size:26px; }
+ .keypad-number .btn-set button { height:60px; line-height: 60px; }
+ .m-mobileAtd-wrap .key-attend { height: 30px; font-size: 14px; width: 96px;}
+ }
+
+
+
+ @media (max-height: 667px){
+ .m-mobileAtd-wrap .keypadWrap .m-keypad button,
+ .keyInputList li p { font-size: 36px; }
+ .keypad-target { min-height: 60px; border-radius: 30px 30px 0 0; }
+ .keypad-number .btn-set button { height: 55px; line-height: 55px; }
+ .key-time { font-size: 20px;  margin-bottom: 10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
