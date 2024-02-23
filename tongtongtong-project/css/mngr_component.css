@@ -2021,13 +2021,15 @@ dropdown set
 
 
  /* 하단팝업 */
- .m-academy-mngr-Wrap .t-popup.popup-bottom { border-radius: 10px 10px 0 0; width: 100%; bottom: 0; position: fixed; max-height: 95vh; height: auto; top: auto; }
+ .m-academy-mngr-Wrap .t-popup.popup-bottom {  transition:.3s; border-radius: 10px 10px 0 0; width: 100%; bottom: -100%; position: fixed; max-height: 95vh; height: auto; top: auto; }
  .m-academy-mngr-Wrap .t-popup.popup-bottom .pop-container { padding: 0!important; min-height: auto; overflow-y: auto; max-height: calc(100vh - 54px); }
  .m-academy-mngr-Wrap .t-popup.popup-bottom>.pop-header>.pop-title:before { content: ''; position: absolute; top: 1px; left: 0; width: 30px; height: 22px; background: url(/images/tong_logo.png) no-repeat center/100%; }
  .m-academy-mngr-Wrap .t-popup.popup-bottom>.pop-header>.pop-title { padding-left: 38px; height:100%; }
 
     /* 하단팝업 애니메이션 */
     .popup-Mobile.active .t-popup.popup-bottom{ bottom: 0; }
+    .popup-Mobile + .pop-bg { bottom:-100%; transition:.3s; top:auto;}
+    .popup-Mobile.active ~ .pop-bg { bottom:0; }
 
 
 
