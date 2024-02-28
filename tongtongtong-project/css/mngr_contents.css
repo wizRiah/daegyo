@@ -1077,7 +1077,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 /* ************모바일************ */
 
 /* 모바일 노데이터 */
-.m-academy-mngr-Wrap .listBox.no-data { border:none;  margin-bottom:0; color: #3b3b3b; font-size: var(--m-fs14); line-height: 20px; padding: 15px!important; background: transparent; box-shadow: none; text-align: center; }
+.m-academy-mngr-Wrap .listBox.no-data { border:none;  margin-bottom:0; color: #3b3b3b; font-size: var(--m-fs14); line-height: 20px; padding: 50px 0!important; background: transparent; box-shadow: none; text-align: center; }
 /* pc 노데이터 */
 .academy-mngr-Wrap .box.no-data { color: #3b3b3b; font-size: var(--m-fs14); line-height: 20px; margin-top: 10px; min-height: 100px; display: flex; align-items: center; justify-content: center; }
 
@@ -2122,6 +2122,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
  .m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data li { height: 100px; }
  .m-mobileEdu-Wrap .mypage-item + .mypage-item { margin-top:40px; }
  .m-mobileEdu-Wrap .m-edu-mypage .m-edu-user { padding: 30px 0 15px 15px; }
+ .m-mobileEdu-Wrap .m-edu-user .select_kid button.on:before { width:19px!important; height:19px!important;}
  }
 
 
@@ -2190,7 +2191,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
  .content_dshBrd .type_mber .btnBox3 button.dsh_gallery { border-radius: 0 20px 20px 0; }
  .content_dshBrd .type_mber .btnBox3 button.on { color: #fff; z-index: 0; font-size: 16px; }
  .content_dshBrd .type_mber .btnBox3 button.on:before { content:""; width:100%; height: 49px; display: inline-block; background: #f69438; border-radius:25px; z-index:-1; position:absolute; top:-5px; left:0; box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25); }
- .content_dshBrd .type_mber .btnBox3 button .newPost { font-size:9px; background: orange; width:15px; height:15px; border-radius:100%; display:inline-flex; align-items:center; justify-content: center; color: #fff; position: absolute; margin: -6px 0 0 4px; }
+ .content_dshBrd .type_mber .btnBox3 button .newPost { text-indent: -2px; font-size:9px; background: orange; width:15px; height:15px; border-radius:100%; display:inline-flex; align-items:center; justify-content: center; color: #fff; position: absolute; margin: -6px 0 0 4px; }
  .content_dshBrd .type_mber .btnBox3 button.on .newPost { background:rgba(255,255,255,0.9); color:#e79807; }
 
  /*하단 컨텐츠부분*/
@@ -2198,13 +2199,20 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
  .content_dshBrd .btm_dashCo .listBox { margin-bottom:20px!important;}
 
  /* 유저 셀렉트 */
- .select_kid { margin-bottom:5px; }
- .select_kid button { font-weight: 300; position:relative; padding:0px 0 0 15px; /* border: 1px solid #ccc; */ margin-bottom:5px; border-radius:3px; color: #494949; font-size: var(--m-fs14); opacity: 0.8; }
+ .select_kid { margin-bottom: 10px; }
+ .select_kid button { font-weight: 300; position:relative; padding:0 0 0 14px; /* border: 1px solid #ccc; *//*  margin-bottom:5px; */ border-radius:3px; color: #494949; font-size: var(--m-fs14); opacity: 0.8; }
  .select_kid button:first-child { padding-left:0!important; }
  .select_kid button:first-child:not(.on)::before { display:none; }
  .select_kid button:not(.on):before { content:""; width:3px; height:3px; background:#333; border-radius:100%; opacity:0.5; position:absolute; left:5px; top: 50%; transform: translateY(-50%); }
  .select_kid button.on { /*border: 1px solid #f69438; */ color:#333333; font-weight:600; opacity:1; padding-left:5px; }
- .select_kid button.on:before { content:""; width: 16px; height: 16px; display: inline-block; background: url(/images/orange_check.png) no-repeat; vertical-align: middle; background-size: 100%; margin-right: 3px; margin-top: -1px; }
+ .select_kid button.on:before { content:""; width: 16px; height: 16px; display: inline-block; background: url(/images/orange_check.png) no-repeat; vertical-align: middle; background-size: 100%; margin-right: 4px; margin-top: -2px; }
+
+  /* 서브페이지 내 */
+  .m-mobileEdu-Wrap .m-edu-user .select_kid { margin-bottom:0; display: flex; gap: 5px;}
+  .m-mobileEdu-Wrap .m-edu-user .select_kid button.on:before { background-image: url(/images/w_check.png); width: 18px; height: 18px;}
+  .m-mobileEdu-Wrap .m-edu-user .select_kid button { margin-bottom:0; color: #f6f5ee; font-size: var(--m-fs15);}
+  .m-mobileEdu-Wrap .m-edu-user .select_kid button:not(.on):before { background: #f6f5ee;}
+
 
  .content_dshBrd .m-tab-cont .listBox-top { position:relative; }
  .content_dshBrd .m-tab-cont .listBox-top:after { content: ""; display: inline-block; width: 8px; height: 8px; border: 2px solid #f69438; transform: rotate(45deg); border-width: 2px 2px 0 0; border-radius: 2px; right: 15px; top: 17px; position: absolute; }
