@@ -512,7 +512,7 @@ select.wd-100 { width:100px !important; min-width:100px!important }
 체크박스
 */
 .t-checkbox input[type="checkbox"] { position:absolute; display:none; width:1px; height:1px; text-indent:-999px; overflow:hidden; }
-.t-checkbox { flex-shrink: 0; vertical-align: middle; display: inline-flex; align-items: center; -webkit-user-select: none !important; user-select: none !important; }
+.t-checkbox { flex-shrink: 0; vertical-align: middle; display: inline-flex; align-items: center; /* -webkit-user-select: none !important; user-select: none !important; */ }
 .t-checkbox input,
 .t-checkbox label>input { display:none; width: 1px; height: 1px; text-indent: -999px; overflow: hidden; opacity: 0; position: absolute; top:0; left:0; }
 .t-checkbox input[type="checkbox"] + label,
@@ -1472,6 +1472,8 @@ button i { display:inline-block; }
 
 
 
+
+
 /*호버/active 시 보이도록하는 ~*/
 .academy-mngr-Wrap header .header-top-inner .gnb-wrap .gnb-list>li.active .menu-depth2-list { display:flex; }
 .academy-mngr-Wrap header .header-top-inner .gnb-wrap .gnb-list .menu-depth2-list>li:hover .menu-depth3-list { display:flex; }
@@ -1732,7 +1734,7 @@ button i { display:inline-block; }
 .ageguideBox { position:relative; }
 .ageguideBox .mini-popup { position: absolute; top: 25px; z-index: 1; padding: 20px; border: 1px solid #62666b; box-sizing: border-box; min-height: auto; max-height: none; box-shadow: 0 5px 10px #0000001a; background-color: #fff; overflow-y: auto; }
 .ageguideBox .mini-popup button.close { background: url(/images/m-btn-close.png) no-repeat center/100%; width: 30px!important; height: 30px!important; background-size: 14px!important; }
-.ageguideBox .mini-popup .pop-container { min-height:auto; }
+.ageguideBox .mini-popup .pop-container { min-height:auto; background:#fff!important;}
 .ageguideBox .mini-popup .main-text { font-size: var(--m-fs13); }
 
 
@@ -1811,7 +1813,7 @@ button i { display:inline-block; }
 .m-item-list { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; }
 .m-item-list .m-item { padding: 20px 15px; background: #fff; /* background: #F5F7FA; */ }
 .m-item-list .m-item + .m-item { border-top: 8px solid #f0f0f1; }
-
+/* .m-item-list .m-item + .m-item:last-child { border-bottom: 1px solid #cecece; } */
 
  /* m-item-list 버튼 마지막 */
  .m-academy-mngr-Wrap .m-item-list>.btn-set:last-child { margin-bottom: 10px; margin-top: 10px; }
@@ -2157,9 +2159,32 @@ dropdown set
  */
 
  .m-mobileEdu-Wrap {
- /* Color */
- --pc-bora-2: #fd7929; --m-bora-1: #ff7426!important; --pc-border-5: #ff7426; --pc-bora-6: #fd7929; }
 
-.m-mobileEdu-Wrap .t-select-check .dropdown ul li:hover { background: #ffe4c475; }
-.m-mobileEdu-Wrap .t-select-check .apcntphon:not(:empty):before { background: #fe7426; }
-.m-mobileEdu-Wrap header .header-top { border-bottom:0; }
+  /* Color */
+  --pc-bora-2: #fd7929;
+  --m-bora-1: #ff7426!important;
+  --pc-border-5: #ff7426;
+  --pc-bora-6: #fd7929;
+ 
+ }
+ 
+ .m-mobileEdu-Wrap .t-select-check .dropdown ul li:hover { background: #ffe4c475; }
+ .m-mobileEdu-Wrap .t-select-check .apcntphon:not(:empty):before { background: #fe7426; }
+ .m-mobileEdu-Wrap header .header-top { border-bottom:0; }
+ 
+ 
+ 
+ 
+ 
+ /*
+ 출결앱
+ */
+ .m-mobileAtd-wrap {
+ 
+   /* Color */
+   --pc-bora-2: #aecc25;
+   --m-bora-1: #67CC25;
+   --pc-border-5: #67CC25;
+ 
+ }
+ 
