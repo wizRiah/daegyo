@@ -1345,7 +1345,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
  /* 출결 */
  .m-academy-mngr-Wrap .m-list-attend { padding: 0 15px; }
- .m-academy-mngr-Wrap .m-list-attend+.m-list-student.m-item-list { padding: 0 15px 75px; }
+ .m-academy-mngr-Wrap .m-list-attend+.m-list-student.m-item-list { padding: 0 15px 75px; background: #F5F7FA;}
  .m-academy-mngr-Wrap .m-list-attend+.m-list-student.m-item-list .label-set { margin-top: 20px; }
  .m-academy-mngr-Wrap .m-list-attend+.m-list-student.m-item-list .label-set:first-child { margin-top: 0; }
  .m-academy-mngr-Wrap .m-list-attend+.m-list-student.m-item-list .time-box-btn { width: 100%; }
@@ -1913,6 +1913,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-mobileEdu-Wrap .content { background:#fff; }
 .m-mobileEdu-Wrap [class^="m-list-"] { background:#fff; }
 .m-mobileEdu-Wrap .m-listTopSetBox { background: #fff; }
+.m-mobileEdu-Wrap .m-listTopSetBox.m-empty-br { padding: 11px; min-height: auto; }
 .m-mobileEdu-Wrap .m-basicSrchBox { border-color:#f694387a; background:#f59545;}
 .m-mobileEdu-Wrap .m-basicSrchBox .select-srchBox { /* border-color:#f79520; */ border-color: #ffffff; }
 .m-mobileEdu-Wrap .m-basicSrchBox:before { content: ''; width: 100%; height: 100%; position: absolute; background: #f6f5ee; left: 0; top: -1px; z-index: -1;}
@@ -1977,8 +1978,8 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 /*
 급식정보
 */
-.m-mobileEdu-Wrap .m-food { padding: 15px 15px 90px; /* background: #ffffff;  */}
-.m-mobileEdu-Wrap .m-food .listBox { text-align: center; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
+.m-mobileEdu-Wrap .m-food { padding: 15px 15px 90px; /* background: #f9f9f9; */}
+.m-mobileEdu-Wrap .m-food .listBox:not(.no-data){ border: 1px solid #5f5f5d36; text-align: center; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 .m-mobileEdu-Wrap .m-food .sub-tit { display: flex; align-items: center; justify-content: center; gap: 3px; }
 .m-mobileEdu-Wrap .m-food .m-food-list { display: flex; gap: 7px; flex-direction: column; }
 .m-mobileEdu-Wrap .m-food .m-food-list li { font-weight: 500; background: #f1eee8; border-radius: 6px; padding: 8px 10px; box-sizing: border-box; font-size: var(--m-fs15); color: #333; }
@@ -1991,17 +1992,15 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info span { font-size: var(--m-fs12); font-weight: 400; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap { display: flex; position: relative; margin-right: 10px; padding-right: 10px; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap:after { content: ''; width: 1px; height: 100%; position: absolute; right: 0; top: 0; background-color: #e7e7e7; }
-.m-mobileEdu-Wrap .m-food .no-data { padding:0; position: relative; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .conBtnBox { display: none; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .sub-tit { display: none; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .m-pay-list { border-bottom: 0; position: relative; padding-bottom: 15px; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data:before { content: ''; position: absolute; transform: translateX(-50%); left: 50%; top:20px; background: transparent url(/images/m-food.png) no-repeat center/100%; width: 40px; height: 40px; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .m-food-list { padding-top: 30px; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .m-food-list li { background:transparent;}
+.m-mobileEdu-Wrap .m-food .listBox.no-data .clsTit { margin: 0; flex-direction: column; gap: 10px;  }
+
+/* 밥 아이콘 */
+.m-mobileEdu-Wrap .foodIcon {  background: transparent url(/images/m-food.png) no-repeat center/100%; margin-top:-3px;width: 30px; height: 30px; }
+
 
 
 /* 학교아이콘 */
-.schIcon { background: transparent url(/images/m-school.png) no-repeat center/100%; width: 20px; height: 20px; }
+.schIcon { background: transparent url(/images/m-school.png) no-repeat center/100%; width: 20px; height: 20px;}
 
 
 
@@ -2009,7 +2008,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 영양정보
 */
 .m-mobileEdu-Wrap .m-list-ingr .m-food-list b { font-size: var(--m-fs12); }
-.m-mobileEdu-Wrap .m-list-ingr .m-food-list li { display: flex; justify-content: space-between; }
+.m-mobileEdu-Wrap .m-list-ingr .m-food-list li { display: flex; justify-content: space-between; margin-top: -2px; }
 
 
 /*
@@ -2019,23 +2018,56 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-mobileEdu-Wrap .m-child-info select { font-size: var(--m-fs15); background-color: transparent; height: 35px; border-width: 0 0 2px; border-radius: 0; border-color: #474747; }
 .m-mobileEdu-Wrap .m-school-info { gap: 6px; display: flex; flex-direction: column; }
 .m-mobileEdu-Wrap .m-school-info select+select { margin-left: 0; }
-.m-mobileEdu-Wrap .m-list-child { padding: 15px 15px 75px; }
-.m-mobileEdu-Wrap .m-list-child .clsTit { gap: 5px; }
+.m-mobileEdu-Wrap .m-list-child { padding: 0 15px 75px; }
+.m-mobileEdu-Wrap .m-list-child .clsTit { gap: 5px; margin-bottom: 0; display: flex; justify-content: flex-start!important;}
+.m-mobileEdu-Wrap .m-list-child .listBox:not(.no-data) { border: 1px solid #5f5f5d36; }
+.m-mobileEdu-Wrap .m-list-child .schIcon{ width: 18px; height: 18px; margin-top:-3px;}
+.m-mobileEdu-Wrap .m-list-child .no-data .schIcon { width: 30px; height: 30px;}
+
+  /* 학교정보관리 */
+  .m-mobileEdu-Wrap .child-box .name { margin-bottom: 10px;}
+  .m-mobileEdu-Wrap .child-box .clsTit { gap: 5px; margin-bottom: 0; justify-content: center;}
+  .m-mobileEdu-Wrap .scnm { font-size: var(--m-fs14); font-weight: 500; display: flex; align-items: center;}
+
+
+      /* 학교정보등록 */
+      .m-mobileEdu-Wrap .m-list-school .clsTit { margin-bottom:15px;}
+      .m-mobileEdu-Wrap .m-list-school .m-child-info { margin-bottom: 15px; align-items: center;}
+      .m-mobileEdu-Wrap .m-list-school .listBox { border: 1px solid #5f5f5d36;}
+      /* .m-mobileEdu-Wrap .m-list-school .btn-set button:first-child { background: var(--pc-bora-6)!important; color: #fff!important;} */
+
+
 
 
  /* 노데이터 */
  .m-mobileEdu-Wrap .m-list-child .listBox.no-data .list-title.name { display: none; }
- .m-mobileEdu-Wrap .m-list-child .listBox.no-data .clsTit { margin-top: 0; flex-direction: column; }
+ .m-mobileEdu-Wrap .m-list-child .listBox.no-data .clsTit { margin: 0; flex-direction: column;gap: 10px;  }
  .m-mobileEdu-Wrap .m-list-child .listBox.no-data .csBtnBox { display: none; }
- /* .m-mobileEdu-Wrap .m-list-child .listBox.no-data .clsTit .schIcon { background: #cdcdcd; } */
- .m-mobileEdu-Wrap .m-list-child .listBox.no-data .clsTit { gap: 10px; }
 
 
 
+/*
+학교생활
+*/
+.m-mobileEdu-Wrap .m-school-life.child-box { margin: 20px 0; }
 
-/* 시간표 */
-.m-mobileEdu-Wrap .m-timeTable-date {  font-size: 17px; color: #333; font-weight: 700; text-align: center; margin: 20px 0 0;}
 
+  /* 시간표 */
+  .m-mobileEdu-Wrap .m-timeTable-date { text-align: center; font-size: 17px; color: #333; font-weight: 700;}
+  .m-mobileEdu-Wrap .m-list-time .m-date-box { justify-content: center; align-items: center; display: flex; gap: 15px;}
+  .m-mobileEdu-Wrap .m-list-time .m-date-box button { margin:0; }
+  .m-mobileEdu-Wrap .m-list-time .m-date-box button.on {  background:var(--pc-bora-6); color:#fff!important; border: 1px solid var(--pc-bora-6)!important;}
+
+
+
+  /* 교내일정 */
+  .m-school-scd .fc-toolbar-title {font-size: 17px; color: #333; font-weight: 700;}
+  .m-school-scd .fc-button { height: 36px; line-height: 15px; font-size: var(--m-fs13); background: #fff; color: var(--pc-bora-6)!important;  border: 1px solid var(--pc-bora-6)!important; }
+  .m-school-scd .fc-button-primary:hover { background:var(--pc-bora-6); color:#fff!important; border: 1px solid var(--pc-bora-6)!important;}
+  .m-school-scd .fc-button-primary:not(:disabled).fc-button-active,
+  .m-school-scd .fc-button-primary:not(:disabled):active { background:var(--pc-bora-6); color:#fff!important; border: 1px solid var(--pc-bora-6)!important;}
+  .m-school-scd .fc-button-primary:focus {box-shadow:none;}
+  .m-school-scd .fc-toolbar.fc-header-toolbar { justify-content: center; align-items: center; display: flex; margin-bottom: 10px; gap: 15px; }
 
 
 /* 수강 */
@@ -2049,11 +2081,11 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 /* 궁금해요 */
-/* .m-mobileEdu-Wrap .m-edu-wonder { background:#fff; } */
 .m-mobileEdu-Wrap .m-edu-wonder-cont .m-listTopSetBox { background:#fff;}
 .m-mobileEdu-Wrap .m-edu-wonder-cont .m-album-tit .writingNm { margin: 0;}
 .m-mobileEdu-Wrap .m-edu-wonder-cont .m-album-tit { margin-bottom:10px;}
-/* .m-mobileEdu-Wrap .m-edu-wonder-cont {background: #f7f7f7;} */
+.m-mobileEdu-Wrap .m-edu-wonder-cont .listBox { border: 1px solid #5f5f5d36;}
+
 
 
 
@@ -2161,8 +2193,16 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
  .m-mobileEdu-Wrap .m-list-news .sub-tit { margin-bottom:10px; }
 
 
+
+
+
+
+
+
+
+
 /* mobileEdu - 학부모/원생앱 대시보드 */
-.m-mobileEdu-Wrap .content_dshBrd .listBox { border: 1px solid #5f5f5d36; }
+/* .m-mobileEdu-Wrap .content_dshBrd .listBox { border: 1px solid #5f5f5d36; } */
 .content_dshBrd { display:flex; flex-direction:column; height:100%; padding-bottom: 137px; width:100%; box-sizing:border-box; }
 .content_dshBrd .dshTit01 { font-size:16px; margin-left:14px; }
 .content_dshBrd .coTit01 { font-size:18px; margin-bottom:10px; }
@@ -2223,11 +2263,11 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
  /* 유저 셀렉트 */
  .select_kid { margin-bottom: 10px; }
- .select_kid button { font-weight: 300; position:relative; padding:0 0 0 14px; /* border: 1px solid #ccc; *//*  margin-bottom:5px; */ border-radius:3px; color: #494949; font-size: var(--m-fs14); opacity: 0.8; }
- .select_kid button:first-child { padding-left:0!important; }
+ .select_kid button { transition:.3s;font-weight: 300; position:relative; padding:0 0 0 14px; /*  margin-bottom:5px; */ border-radius:3px; color: #494949; font-size: var(--m-fs14); opacity: 0.8; }
+ .select_kid button:first-child { padding-left:0; }
  .select_kid button:first-child:not(.on)::before { display:none; }
  .select_kid button:not(.on):before { content:""; width:3px; height:3px; background:#333; border-radius:100%; opacity:0.5; position:absolute; left:5px; top: 50%; transform: translateY(-50%); }
- .select_kid button.on { /*border: 1px solid #f69438; */ color:#333333; font-weight:600; opacity:1; padding-left:5px; }
+ .select_kid button.on { color:#333333; font-weight:600; opacity:1; padding-left:5px; }
  .select_kid button.on:before { content:""; width: 16px; height: 16px; display: inline-block; background: url(/images/orange_check.png) no-repeat; vertical-align: middle; background-size: 100%; margin-right: 4px; margin-top: -2px; }
 
   /* 서브페이지 내 */
