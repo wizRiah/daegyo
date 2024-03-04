@@ -2017,15 +2017,14 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info span { font-size: var(--m-fs12); font-weight: 400; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap { display: flex; position: relative; margin-right: 10px; padding-right: 10px; }
 .m-mobileEdu-Wrap .m-food .listBox .conBtnBox .m-food-info-wrap:after { content: ''; width: 1px; height: 100%; position: absolute; right: 0; top: 0; background-color: #e7e7e7; }
-.m-mobileEdu-Wrap .m-food .listBox.no-data .clsTit { margin: 0; flex-direction: column; gap: 10px;  }
+  /* 데이터 없는경우 */
+  .m-mobileEdu-Wrap .listBox.no-data .clsTit { margin: 0; flex-direction: column; gap: 10px;  }
+  .m-mobileEdu-Wrap .listBox.no-data .clsTit .schIcon { width: 30px; height: 30px; }
 
-/* 밥 아이콘 */
-.m-mobileEdu-Wrap .foodIcon {  background: transparent url(/images/m-food.png) no-repeat center/100%; margin-top:-3px;width: 30px; height: 30px; }
-
-
-
-/* 학교아이콘 */
-.schIcon { background: transparent url(/images/m-school.png) no-repeat center/100%; width: 20px; height: 20px;}
+  /* 밥 아이콘 */
+  .m-mobileEdu-Wrap .foodIcon {  background: transparent url(/images/m-food.png) no-repeat center/100%; margin-top:-3px;width: 30px; height: 30px; }
+  /* 학교아이콘 */
+  .schIcon { background: transparent url(/images/m-school.png) no-repeat center/100%; width: 20px; height: 20px;}
 
 
 
@@ -2074,10 +2073,11 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 /*
 학교생활
 */
-.m-mobileEdu-Wrap .m-school-life.child-box { margin: 20px 0; }
+.m-mobileEdu-Wrap .m-school-life.child-box { margin: 10px 0 20px; }
 
 
   /* 시간표 */
+  .m-mobileEdu-Wrap .m-list-time { padding: 15px 15px 90px;}
   .m-mobileEdu-Wrap .m-timeTable-date { text-align: center; font-size: 17px; color: #333; font-weight: 700;}
   .m-mobileEdu-Wrap .m-list-time .m-date-box { justify-content: center; align-items: center; display: flex; gap: 15px;}
   .m-mobileEdu-Wrap .m-list-time .m-date-box button { margin:0; }
@@ -2086,6 +2086,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
   /* 교내일정 */
+  .m-mobileEdu-Wrap .m-school-scd .m-school-life.child-box { margin-top:25px;}
   .m-school-scd .fc-toolbar-title {font-size: 17px; color: #333; font-weight: 700;}
   .m-school-scd .fc-button { height: 36px; line-height: 15px; font-size: var(--m-fs13); background: #fff; color: var(--pc-bora-6)!important;  border: 1px solid var(--pc-bora-6)!important; }
   .m-school-scd .fc-button-primary:hover { background:var(--pc-bora-6); color:#fff!important; border: 1px solid var(--pc-bora-6)!important;}
