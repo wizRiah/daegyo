@@ -2076,26 +2076,36 @@ dropdown set
 
 
 
+
+
  /* 오늘하루보지않기 팝업 */
- .t-etcpop { position: absolute; display: block; z-index: 1001; background: #fff; max-width: 620px;}
+ .academy-mngr-Wrap .t-etcpop { max-width: 620px;}
+ .academy-mngr-Wrap .t-etcpop .pop-body { min-width:300px; min-height:300px;}
+ .t-etcpop { position: absolute; display: block; z-index: 1001; /* background: #fff; */}
  .t-etcpop .pop-body { height: 100%; width:100%; }
  .t-etcpop .pop-container { max-height: 100%; padding: 0!important; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
  .t-etcpop button.close { border-radius: 0!important; height: 40px!important; width: 40px!important; background: url(/images/m-btn-close.png) no-repeat center/100%; background-size: 16px;}
  .t-etcpop img { max-height: 520px; max-width: 500px; vertical-align: top;/*  width: 100%; */}
- .t-etcpop .etc-close { position: relative; box-sizing: border-box; height: 40px; display: flex; align-items: center; justify-content: space-between !important;}
+ .t-etcpop .etc-close {  background: #fff;  position: relative; box-sizing: border-box; height: 40px; display: flex; align-items: center; justify-content: space-between !important;}
  .t-etcpop .etc-close .t-checkbox { padding-left: 15px;}
 
 
+      /* 포지션 */
+       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+2){ left:20%!important; }
+       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+3){ left:40%; }
+       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+4){ left:60%; }
+
+
+
     /* 모바일 */
-    .m-academy-mngr-Wrap .t-etcpop .pop-cont { /* padding:0;  */background: #fff; }
-    .m-academy-mngr-Wrap .t-etcpop .etc-close { height: 50px; padding: 0 5px 0 0; border-top: 1px solid #ddd;  box-sizing: border-box;}
+    .m-academy-mngr-Wrap .t-etcpop .pop-cont { /* padding:0;  *//* background: #fff; */}
+    .m-academy-mngr-Wrap .t-etcpop .etc-close {height: 50px; padding: 0 5px 0 0; border-top: 1px solid #ddd;  box-sizing: border-box;}
     .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-header { display: none; }
-    .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-cont { min-height: 170px; min-width: 375px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .m-academy-mngr-Wrap .t-etcpop.popup-bottom .pop-cont { min-height: 170px; min-width: 375px; padding:0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .m-academy-mngr-Wrap .t-etcpop.popup-bottom button.close { display:none; }
     .m-academy-mngr-Wrap .t-etcpop .etc-close .t-button-nobg { font-size: var(--m-fs14);}
     .m-academy-mngr-Wrap .t-etcpop.popup-bottom { bottom: 0;}
-
-
+    .m-academy-mngr-Wrap .t-etcpop.popup-bottom img { width: 375px; height: 170px;}
 
 
 
