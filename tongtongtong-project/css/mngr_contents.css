@@ -1223,6 +1223,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .clsIcon { flex-shrink: 0; width: 30px; height: 30px; border-radius: 100%; background: #d7d8e8; margin-right: 8px; position: relative; }
 .clsIcon:after { content: ''; position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; background: transparent url(/images/m-icon-pen.png) no-repeat center/100%; width: 30px; height: 30px; background-size: 12px; margin-left: 1px; }
 .m-academy-mngr-Wrap .m-list-clsMng .listBox .smallBox { position: absolute; right: 10px; top: 10px; border-radius: 7px; }
+.m-academy-mngr-Wrap .m-list-clsMng .listBox .smallBox:empty { display:none;}
 .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dt { padding-right: 8px; }
 .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl { flex-wrap: nowrap; }
 .m-academy-mngr-Wrap .m-list-clsMng .bull-list dl dt { width: 100px; flex-shrink: 0; }
@@ -1255,6 +1256,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 .m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm { margin-bottom: 5px; }
 .m-academy-mngr-Wrap .m-list-student .prsn-info .prsnNm+.apcntphon-list { margin-top: 3px; }
 .m-academy-mngr-Wrap .m-list-student .prsn-info .clsAge { margin-bottom: 10px; /* max-width: 100%; */ }
+.m-academy-mngr-Wrap .m-list-student .prsn-info .clsAge:empty { margin-bottom:0;}
 .m-academy-mngr-Wrap .m-list-student .bull-list dl dt { padding-right: 10px; flex-shrink: 0; width: 74px; }
 .m-academy-mngr-Wrap .m-list-student div.t-checkbox.checkbox01 input[type="checkbox"]+label:before { top: 15px; }
 .m-academy-mngr-Wrap .m-list-student.m-list-prsn .t-checkbox.checkbox01 input[type="checkbox"] + label { align-items: flex-start; }
@@ -1321,17 +1323,21 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
  .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .clsTit { margin: 2px 0px 12px; }
  .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox .listBox-cont .clsTit:last-child { margin-bottom: 0!important; }
  .m-academy-mngr-Wrap .box-bg .m-list-clsMng .listBox { /* min-height: 109px; */ border: 1px solid #d4d4d4; }
- .m-academy-mngr-Wrap .m-stu-info { border-bottom: 4px solid #d1d1d1; padding: 15px; }
+ .m-academy-mngr-Wrap .m-stu-info { border-bottom: 4px solid #d1d1d1; padding: 15px; background:#fff;}
  .m-academy-mngr-Wrap .m-stu-info .listBox { border: 1px solid #e0e6ef; }
  .m-academy-mngr-Wrap .m-stu-info .bull-list dl~dl { margin-top:0; }
+ .m-academy-mngr-Wrap .m-stu-info + .carousel { border-radius: 0;}
 
 
 
- /* 과제 */
- .m-academy-mngr-Wrap .box-bg .m-list-task .listBox { padding: 0; border: 1px solid #d4d4d4; }
 
- /* 출결 */
- .m-academy-mngr-Wrap .m-attend-box { align-items: flex-end; flex-direction: row !important; }
+  /* 과제 */
+  .m-academy-mngr-Wrap .box-bg .m-list-task .listBox { padding: 0; border: 1px solid #d4d4d4; }
+
+  /* 출결 */
+  .m-academy-mngr-Wrap .m-attend-box { align-items: flex-end; flex-direction: row !important; padding-top: 30px;}
+
+
 
  /* 원생 상세정보 */
  .m-academy-mngr-Wrap .add-info-list { padding-right: 0; }
@@ -1805,7 +1811,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 
-.m-academy-mngr-Wrap .admin-Ullist li+li { margin-top: 5px; }
+/* .m-academy-mngr-Wrap .admin-Ullist li+li { margin-top: 5px; } */
 .m-academy-mngr-Wrap .admin-Ullist li { font-size: var(--m-fs14); }
 .m-academy-mngr-Wrap .admin-Ullist li:before { margin-right: 6px; }
 
@@ -2178,7 +2184,7 @@ tr.active-td:not(.t-no-data) td { cursor: pointer; background: #fff1e4 !importan
 
 
 /* 마이페이지 */
-.m-mobileEdu-Wrap .m-edu-mypage { padding: 0 15px; justify-content: space-between; display: flex; flex-direction: column; height: 100%; }
+.m-mobileEdu-Wrap .m-edu-mypage { background: #f9f9f9; padding: 0 15px; justify-content: space-between; display: flex; flex-direction: column; height: 100%; }
 .m-mobileEdu-Wrap .m-edu-mypage .infoTxt { display: flex; flex-direction: column; gap: 5px; padding: 20px 0 0; font-size: 19px; line-height: 130%; font-weight: 300; color: #333; }
 .m-mobileEdu-Wrap .m-edu-mypage .infoTxt-set { gap: 5px; }
 .m-mobileEdu-Wrap .m-edu-mypage .pre-stu-data { gap:5px; margin: 15px 0; }
