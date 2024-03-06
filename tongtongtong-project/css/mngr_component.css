@@ -2074,22 +2074,29 @@ dropdown set
  .m-academy-mngr-Wrap .t-popup.t-opacity .i-scroll { margin: 0 auto; }
 
 
+
  /* 오늘하루보지않기 팝업 */
- .academy-mngr-Wrap .t-etcpop { max-width: 620px;}
- .academy-mngr-Wrap .t-etcpop .pop-body { min-width:300px; min-height:300px;}
- .t-etcpop { position: absolute; display: block; z-index: 1001; /* background: #fff; */}
+ .academy-mngr-Wrap .t-etcpop { border: 1px solid rgb(59, 41, 137);  box-sizing: border-box;}
+ .academy-mngr-Wrap .t-etcpop .pop-body { min-width:300px; min-height:300px; display: flex; justify-content: center;  align-items: center;}
+ .t-etcpop { margin: 0; display: block; z-index: 1001;}
  .t-etcpop .pop-body { height: 100%; width:100%; }
  .t-etcpop .pop-container { max-height: 100%; padding: 0!important; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
  .t-etcpop button.close { border-radius: 0!important; height: 40px!important; width: 40px!important; background: url(/images/m-btn-close.png) no-repeat center/100%; background-size: 16px;}
- .t-etcpop img { max-height: 520px; max-width: 500px; vertical-align: top;/*  width: 100%; */}
+ .t-etcpop img { max-height: 620px; max-width: 620px; vertical-align: top;}
  .t-etcpop .etc-close {  background: #fff;  position: relative; box-sizing: border-box; height: 40px; display: flex; align-items: center; justify-content: space-between !important;}
  .t-etcpop .etc-close .t-checkbox { padding-left: 15px;}
+ .academy-mngr-Wrap .t-etcpop .etc-close { border-top: 1px solid #ddd;  box-sizing: border-box;}
+
+
+.etcpop-wrap { position: absolute; display: flex; gap: 5px; padding: 15px; box-sizing: border-box; flex-wrap: wrap; width: 100%; z-index: 199;}
+
+
 
 
       /* 포지션 */
-       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+2){ left:20%!important; }
+     /*   .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+2){ left:20%!important; }
        .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+3){ left:40%; }
-       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+4){ left:60%; }
+       .academy-mngr-Wrap .t-etcpop:nth-of-type(4n+4){ left:60%; } */
 
 
 
@@ -2102,6 +2109,8 @@ dropdown set
     .m-academy-mngr-Wrap .t-etcpop .etc-close .t-button-nobg { font-size: var(--m-fs14);}
     .m-academy-mngr-Wrap .t-etcpop.popup-bottom { bottom: 0;}
     .m-academy-mngr-Wrap .t-etcpop.popup-bottom img { width: 375px; height: 170px;}
+
+
 
 
 
