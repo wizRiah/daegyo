@@ -143,7 +143,7 @@
  .t-wrap .home-menu .m-tit { display: block; }
  .t-wrap .home-menu ul:not(.mobile-menu) { display: none; }
  .t-wrap .container { padding-top:50px; }
- .t-wrap input { height: 45px; }
+ .t-wrap input { height: 45px!important; }
  .t-wrap .date-picker .dp__input { height: 45px; }
  .t-wrap select { color: var(--m-text-color-1); flex-shrink: 0; text-overflow: ellipsis; white-space: nowrap; min-width: 60px; appearance: none; height: 45px; padding: 0px 27px 0 8px; border: 1px solid var(--pc-border-2); border-radius: 4px; font-size: var(--m-fs14); background: url(/images/m_icon_select_arrow.png) right 8px center no-repeat rgb(255, 255, 255); background-size: 8px; }
  .t-wrap .t-button-xs { height:45px; }
@@ -178,13 +178,13 @@
 .t-wrap.t-auth-wrap footer .office-info li+li { position: relative; margin-left: 40px; } */
 .t-auth-wrap .home-menu { max-width: 580px; }
 .t-auth-wrap .home-menu ul { padding:0; }
-.t-auth-wrap .content .auth-tit { display: block; font-size: 30px; text-align: center; }
+.t-auth-wrap .auth-tit { display: block; font-size: 30px; text-align: center; }
 .t-auth-wrap .auth-txt { display: block; margin-top: 10px; font-size: 14px; line-height: 22px; color: #7E7E7E; text-align: center; }
-.t-auth-wrap .content .auth-tit>span { font-size: 24px; }
-.t-auth-wrap .content .auth-tit strong { display: block; font-size: 30px; font-weight: 500; }
-.t-auth-wrap .content .t-txt-3 { color: #7E7E7E }
+.t-auth-wrap .auth-tit>span { font-size: 24px; }
+.t-auth-wrap .auth-tit strong { display: block; font-size: 30px; font-weight: 500; }
+.t-auth-wrap .t-txt-3 { color: #7E7E7E }
 .t-auth-wrap .auth-txt strong { display: block; font-size: 14px; font-weight: 400; color: #333; }
-.t-auth-wrap .content .form-box { max-width: 360px; padding-bottom: 90px; margin: 0 auto; }
+.t-auth-wrap .form-box { max-width: 360px; padding-bottom: 90px; margin: 0 auto; }
 .t-auth-wrap .form-box .labelArea { position: relative; padding-left: 10px; font-size: 12px; color: #333; }
 .t-auth-wrap input { height: 54px !important; padding: 0 19px !important; }
 .t-auth-wrap .form-box .input-btn-wrap button { position: absolute; right: 8px; top: calc(50% - 18px); margin: 0; }
@@ -280,9 +280,7 @@
 .membership-service .page-location li {width:50%;position:relative;font-size:16px;text-align:center;color:#BCBCBC;}
 .membership-service .page-location li:nth-child(2)::before {display:block;content:"";position:absolute;left:0;top:0;width:1px;height:19px;background:#E0E6EF;}
 .membership-service .page-location li.on {color:#151515;}
-
-
-.membership-service .form-box {max-width:360px;margin:0 auto;}
+.membership-service .form-box {max-width:380px!important;margin:0 auto;}
 .membership-service .form-box .txtfield-basic.disabled {background:#f2f2f2;color:#bcbcbc;}
 .membership-service .form-box .labelArea {position:relative;padding-left:10px;font-size:12px;color:#333;}
 .membership-service .form-box .labelArea:before {content:'';position:absolute;top:calc(50% - 1px);left:3px;width:2px;height:2px;background:#333333;}
@@ -294,18 +292,21 @@
 .membership-service .form-box .label-input-set .txtfield-basic {height:54px;padding: 0 19px 0 76px !important;font-size:15px;line-height:54px;color:#333;}
 .membership-service .form-box .label-input-btn-set {position:relative;background:#fff;}
 .membership-service .form-box .label-input-btn-set .label {position:absolute;top:calc(50% - 7px);left:20px;line-height:14px;font-size:12px;color:#9A9A9A;}
-.membership-service .form-box .label-input-btn-set .txtfield-basic {height:54px;padding: 0 105px 0 76px !important;font-size:15px;line-height:54px;color:#333;}
+.membership-service .form-box .label-input-btn-set .txtfield-basic { overflow:hidden; height:54px;padding: 0 105px 0 76px !important;font-size:15px;line-height:54px;color:#333;}
 .membership-service .form-box .t-button-xms {position:absolute;top:calc(50% - 16px);right:11px;padding:0 15px; height:33px;}
 .membership-service .form-box .remove {position:absolute;right:-30px;top:calc(50% - 10px);}
 .membership-service .form-box .include_txt {position: absolute;right: 15px;top: calc(50% - 7px);margin: 0;font-size: 12px;color: #FF5656;}
 
-
-
-
-
-
-
-
+/* 모바일(회원정보관리)*/
+.m-mobileEdu-Wrap .t-popup .pop-cont.m-membership { height:100%;}
+.m-academy-mngr-Wrap .m-t-auth .membership-service { padding: 30px 0; }
+.m-academy-mngr-Wrap .m-t-auth .m-list-student.m-item-list .m-item { background: #fff;}
+.m-academy-mngr-Wrap .m-t-auth .btm-btn {height: 40px; line-height: 40px; border-radius: 4px; font-size: var(--m-fs13);; color: #fff; margin-top: 20px; background: var(--pc-bora-6) !important;}
+.m-academy-mngr-Wrap .m-t-auth .form-box { max-width: 100% !important; background: #fff; padding: 0 15px; margin-top: 35px;}
+.m-academy-mngr-Wrap .m-t-auth .m-list-student.m-item-list { padding:0; }
+.m-academy-mngr-Wrap .m-t-auth .auth-txt { font-size: 13px;}
+.m-academy-mngr-Wrap .m-t-auth input { height: 45px!important;}
+.m-academy-mngr-Wrap .m-t-auth .auth-tit strong { font-size: 25px;}
 
 
 
