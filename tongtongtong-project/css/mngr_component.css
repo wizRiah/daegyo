@@ -1965,7 +1965,7 @@ dropdown set
 .m-academy-mngr-Wrap [class^="m-list-"]>.t-basic-1 { margin-top:0; }
 .m-academy-mngr-Wrap [class^="m-list-"]>.m-scroll>.t-basic-1 { margin-top:0; }
 .m-academy-mngr-Wrap .t-basic-1 { font-size: var(--m-fs12); }
-.m-academy-mngr-Wrap .t-basic-1>thead>tr>th { font-size: var(--m-fs13); line-height: 15px; background: #d5d5d5; }
+.m-academy-mngr-Wrap .t-basic-1>thead>tr>th { font-size: var(--m-fs13); line-height: 15px;/*  background: #d5d5d5; */ }
 .m-academy-mngr-Wrap .t-basic-1>thead>tr>th { padding: 10px 5px; }
 .m-academy-mngr-Wrap .t-basic-1 .admin-Ullist li { font-size: var(--m-fs12);}
 
@@ -2088,9 +2088,10 @@ dropdown set
  .m-academy-mngr-Wrap .t-popup.t-opacity .main-text { color: #fff; line-height: 18px; }
  .m-academy-mngr-Wrap .t-popup.t-opacity .opacity-text { margin-top:20px; display: flex; flex-direction: column; gap: 10px; }
  .m-academy-mngr-Wrap .t-popup.t-opacity .i-scroll { margin: 0 auto; }
-
+ 
  /* 오늘하루보지않기 팝업 */
- .academy-mngr-Wrap .t-etcpop { border: 2px solid #333; box-sizing: border-box; box-shadow: 6px 3px 10px #0000008f; }
+ .academy-mngr-Wrap .t-etcpop { border: 2px solid #333; box-sizing: border-box; box-shadow: 6px 3px 10px #0000008f;/* display: none; */ opacity:0; }
+ .academy-mngr-Wrap .t-etcpop.show {/*  display:block; */ opacity:1;}
  .academy-mngr-Wrap .t-etcpop .pop-body { padding: 8px; min-width:300px; min-height:300px; display: flex; justify-content: center;  align-items: center;}
  .t-etcpop { margin: 0; display: block; z-index: 1001;}
  .t-etcpop .pop-body { height: 100%; width:100%; }
