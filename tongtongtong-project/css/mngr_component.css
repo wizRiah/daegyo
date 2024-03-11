@@ -977,6 +977,7 @@ table th .t-checkbox.checkbox01 input[type="checkbox"] + label { color: #fff; fo
 .t-basic-2 :is(th, td, p, strong, span) { word-wrap:break-word; word-break:keep-all; }
 .t-basic-2>thead>tr>th,
 .t-basic-2>tbody>tr>th { width:160px !important; color:#333; font-weight:500; line-height:35px; font-size:var(--pc-fs14); padding:12px 10px; vertical-align:top; border-bottom:1px solid #EDEEF3; box-sizing: border-box; text-align:left; box-sizing: border-box; }
+.m-academy-mngr-Wrap .t-basic-2>thead>tr>th,.m-academy-mngr-Wrap .t-basic-2>tbody>tr>th { width:100px !important;}
 .t-basic-2>tbody>tr>td { background:#fff; font-size:var(--pc-fs13); color:#333333; padding:12px 10px; line-height:19px; border-bottom:1px solid var(--pc-bora-3); border-right:1px solid var(--pc-bora-3); text-align:left; box-sizing: border-box; /*height:57px; */ }
 .t-basic-2>tbody>tr>td:last-child { border-right:none; }
 .t-basic-2>tbody>tr>td.h-txt-r { text-align:right; }
@@ -1310,12 +1311,15 @@ button i { display:inline-block; }
 
 /* 불렛 */
 .t-bullet-01 li { position: relative; padding-left: 8px; margin-bottom:10px; }
+.t-bullet-01 li::marker { display:none;}
 .t-bullet-01 li:last-child { margin-bottom:0; }
 .t-bullet-01 li:after { position: absolute; left: 1px; content: ''; width: 2px; height: 2px; background-color: #525252; border-radius: 50%; top: 8px; }
 .t-bullet-02 { font-weight: var(--text-medium)!important; position: relative; padding-left: 9px; font-size:var(--pc-fs13); }
 .t-bullet-02:after { color: inherit; position: absolute; top: 2px; left: 0; content: '*'; }
 .t-bullet-02.pc-bora2 {color:#BCBCBC !important; font-weight:400 !important; margin-left:0 !important;}
 .t-bullet-02.pc-bora2:after {display:none;}
+
+.m-academy-mngr-Wrap .t-bullet-01 li { font-size: var(--m-fs13);}
 
 
 /* 원형 넘버 */
