@@ -1079,6 +1079,23 @@ table td.red-bg { background-color: #eec8c83d!important; }
 .academy-mngr-Wrap .box-bg .txtfield-basic + .t-button-xs.t-button-bora2:before { content:""; display:inline-block; background:url(/images/ico_srch.png); background-size: cover; position: relative; z-index: 1; top: auto; right: auto; bottom: auto; left: auto; width: 14px; height: 14px; vertical-align: middle; opacity: 1; margin-right: 5px; animation:none; }
 .academy-mngr-Wrap .box-bg.top-srchBox > .t-radio-01 { }
 
+
+
+/* 검색바 우측으로 배너존이 있는 경우. */
+.include_bnrzone {display:flex; justify-content:space-between; width:100%; align-items:stretch;}
+.include_bnrzone .bnrzone {max-width:31%; margin-left:15px; margin-bottom:15px; padding:15px;}
+.include_bnrzone .bnrzone>div {width:100%; overflow:hidden;}
+.include_bnrzone .bnrzone img {width:100%; display:block;}
+.include_bnrzone .box-bg.top-srchBox:not(:only-child) {width:auto; flex-grow:1; padding-right:15px;}
+.include_bnrzone .box-bg.top-srchBox:not(:only-child)>table {padding-right:0px;}
+.include_bnrzone .box-bg.top-srchBox select {max-width:120px !important; min-width: auto !important;}
+
+@media (min-width:1400px) {
+  .include_bnrzone .bnrzone {max-width:546px;}
+}
+
+
+
 /* 테이블 행 배경 효과 */
 
  /* 전체일 경우 */
@@ -2002,7 +2019,7 @@ dropdown set
 .m-academy-mngr-Wrap .t-basic-1>thead>tr>th { font-size: var(--m-fs13); line-height: 15px;/*  background: #d5d5d5;  */}
 .m-academy-mngr-Wrap .t-basic-1>thead>tr>th { padding: 10px 5px; }
 .m-academy-mngr-Wrap .t-basic-1 .admin-Ullist li { font-size: var(--m-fs12);}
-
+.m-academy-mngr-Wrap .t-basic-1>tbody>tr:first-child>td {border-top: 1px solid #3f4782;}
 
 
 /* 학부모/원생 앱 */
