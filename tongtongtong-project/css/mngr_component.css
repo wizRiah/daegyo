@@ -692,7 +692,7 @@ select.wd-100 { width:100px !important; min-width:100px!important }
 .t-button-circle-20.remove::after { font-size: 16px; }
 [class^="t-button-circle"]::after { display: inline-flex; flex-flow: row wrap; justify-content: center; align-items: center; font-family: 'Material Icons'; font-style: normal; width: 100%; height: 100%; color: #fff; border-radius: 50%; box-sizing: border-box; }
 [class^="t-button-circle"].remove::after { content: 'close'; font-size: 14px; color:red; }
-.t-button-underline { color: var(--pc-border-5)!important; padding: 0; margin: 0; height: auto; line-height: inherit; font-size: var(--pc-fs13); text-underline-position: from-font; text-decoration: underline !important; font-weight: var(--text-medium); }
+.t-button-underline { flex-shrink: 0; color: var(--pc-border-5)!important; padding: 0; margin: 0; height: auto; line-height: inherit; font-size: var(--pc-fs13); text-underline-position: from-font; text-decoration: underline !important; font-weight: var(--text-medium); }
 .t-button-white:not(.t-button-nobg):before,
 .t-button-grey:before,
 .t-button-grey2-bd:before { background: #8c9197; }
@@ -789,6 +789,8 @@ select.wd-100 { width:100px !important; min-width:100px!important }
 .btmBtnBox button.t-button-white:not(.t-button-red-bd) { background:#C7CBD1 !important; color:#fff; border:none; }
 .btmBtnBox button.t-button-red-bd { position:absolute; left:0; top:0; }
 
+  /* 모바일 */
+  .m-academy-mngr-Wrap .t-popup-wrap .btmBtnBox button:not(:only-child) { flex: 1;}
 
 .tit-section>[class^="t-button"]:only-of-type { margin:0; }
 
@@ -971,7 +973,7 @@ table a:hover { text-decoration: underline; }
 /* .t-basic-1 .t-checkbox,
 .t-basic-1 .t-checkbox.checkbox01 input[type="checkbox"] + label:before { margin:0; } */
 .t-basic-1>tbody>tr>td:not(:last-child) { border-right:1px solid #f2f4f7; }
-.t-basic-1:not(.cdMng-table, .cdMng-table2)>tbody>tr>td.txt-l { font-weight:600; }
+.t-basic-1:not(.cdMng-table, .cdMng-table2,.pc-addition)>tbody>tr>td.txt-l { font-weight:600; }
 .t-basic-1 tr th:first-child .t-checkbox.checkbox01:first-child input[type="checkbox"] + label:before,
 .t-basic-1 tr td:first-child .t-checkbox.checkbox01:first-child input[type="checkbox"] + label:before { margin:0; }
 .t-basic-1 .t-checkbox label>input[type="checkbox"] + .spanLabel:before { margin:0; }
@@ -2198,7 +2200,7 @@ dropdown set
 
 
  /* 뒤로가기팝업 애니메이션 */
- .popup-slide .t-popup.popup-goback { right: -100%; transition:.3s; }
+/*  .popup-slide .t-popup.popup-goback { right: -100%; transition:.3s; } */
  .popup-slide.active>.t-popup.popup-goback { right: 0; }
 
  /* .popup-slide.active ~ .pop-bg { bottom:0; } */
