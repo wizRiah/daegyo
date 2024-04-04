@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta id="myViewport" name="viewport"
+    content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>로그인화면</title>
   <link rel="stylesheet" href="../../../css/font.css">
   <link rel="stylesheet" href="../../../css/common.css">
@@ -14,71 +16,78 @@
 
 
   <!-- PC 전체 Wrap -->
-  <div class="academy-mngr-Wrap login-page-wrap">
-
-
-    <div class="login-page">
-
-      <div class="login-tit">
-        통통통 로그인
-      </div>
-
-
-      <div class="login-box">
-
-        <!-- Logo  -->
-        <div class="login-logo">
-          <img src="../../../images/top-logo.png" alt="로고">
+  <div class="login-page-wrap t-wrap">
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-item">
+          <img src="/images/t_logo.png" alt="">
+          <span class="logo-text">세상에서 가장 <span>간편한 학원관리</span></span>
         </div>
-        <!-- /Logo  -->
+        <span><img src="/images/e_logo.png" alt=""></span>
+      </div>
+    </header>
+    <div class="container">
+      <div class="home-menu">
+        <div class="m-tit t-txt-1"><button type="button" class="closeBtn"></button>로그인</div>
+        <ul class="">
+          <li><a class="home-link t-txt-teal" href="#none">통통통 홈</a></li>
+          <li><a class="customer-link" href="#none">고객센터</a></li>
+        </ul>
+      </div>
+      <div class="login-page content">
+        <span class="auth-tit">
+          <span>통통통<span class="t-txt-3"> + 에듀베이션</span></span>
+          <strong>통합회원(One-ID) <span class="t-txt-royalblue">로그인</span></strong>
+        </span>
+        <div class="login-box">
 
 
-        <!-- 로그인 컨텐츠 -->
-        <div class="login-cont">
-
-          <ul>
-            <li>
-              <input type="text" name="userId" id="userId" placeholder="아이디 입력" title="아이디" class="txtfield-basic">
-            </li>
-            <li>
-              <input type="password" name="password" id="password" placeholder="비밀번호 입력" title="비밀번호" class="txtfield-basic mt5">
-            </li>
-            <li>
-              <select name="" id="" class="select-ad">
-                <option value="" disabled="" selected="">학원선택</option>
-                <option value="">a학원</option>
-                <option value="">b학원</option>
-                <option value="">c학원</option>
-                <option value="">d학원</option>
-                <option value="">e학원</option>
-              </select>
-            </li>
-          </ul>
-
-          <button type="button" class="t-button-login wd100">로그인</button>
-
-          <div class="login-info-box">
-
-            <div class="t-checkbox checkbox01">
-              <input type="checkbox" name="checkForm" id="check01" checked="">
-              <label for="check01">아이디 저장</label>
-            </div>
-
-            <ul class="button-wrap">
-              <li><button type="button" class="membership">회원가입</button></li>
-              <li><button type="button" class="find-pw">비밀번호 찾기</button></li>
+          <div class="login-cont form-box">
+            <ul>
+              <li><input type="text" placeholder="에듀베이션 One-ID 입력" title="아이디" class="txtfield-basic"></li>
+              <li><input type="password" placeholder="비밀번호 입력" title="비밀번호" class="txtfield-basic mt10"></li>
             </ul>
+            <div class="login-info-box">
+              <div class="t-checkbox checkbox01"><input type="checkbox" name="checkForm" id="check01"> <label for="check01">아이디 저장</label></div>
+              <div class="flex flex-column">
+
+                <ul class="button-wrap">
+                  <li><button type="button">One-ID 찾기</button></li>
+                  <li><button type="button" class="find-pw">비밀번호 찾기</button></li>
+                </ul>
+              </div>
+            </div><button type="button" class="t-button-login wd100">로그인</button>
+            <div class="text-slogan mt30">
+              <p class="eduvation-slogan">학원인의 성공만을 생각하는 <img src="/images/logo_eduvation.png" alt="에듀베이션"></p>
+              <p class="eduvation-text">에듀베이션의 통합회원으로 가입하시면 학원관련 다양한 서비스를 <span>이용하실 수 있습니다.</span></p>
+            </div><button type="button" class="t-button-login wd100 btn-membership t-button-pink mt20">통합회원 가입</button>
 
           </div>
+          <div class="slideBnrList">
+            <div class="slideBnrImg">
+              <img src="/images/img_bnr340_120.png" alt="test banner">
+            </div>
 
+          </div><div class="all-footer"><div><a href="#" class="bar-txt">이용약관</a> <a href="#">개인정보 처리방침</a></div>
+                        ⓒ EDUVATION INC.
+                      </div>
         </div>
-        <!-- /로그인 컨텐츠 -->
-
       </div>
-
+      <footer>
+        <ul class="quick-menu">
+          <li><a href="javascript:void(0);">회사소개</a></li>
+          <li><a href="javascript:void(0);">이용약관</a></li>
+          <li><a href="javascript:void(0);"><strong>개인정보 처리방침</strong></a></li>
+          <li><a href="javascript:void(0);">개인정보 위탁계약</a></li>
+        </ul>
+        <ul class="office-info">
+          <li><span class="tit">통통통 고객센터</span> : 1599-1692 (평일 10:00~18:00, 점심시간 12:30~13:30) / 주말.공휴일 휴무</li>
+          <li><span class="tit">이메일</span> : tong@daekyo.co.kr</li>
+          <li><span class="tit">Fax</span> : 02-858-6956</li>
+        </ul>
+        <p class="copyr">© EDUVATION INC.</p>
+      </footer>
     </div>
-
-
   </div>
   <!-- PC 전체 Wrap 끝 -->
 
