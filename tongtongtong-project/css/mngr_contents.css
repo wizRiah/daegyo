@@ -3043,12 +3043,12 @@ tutorial 튜토리얼
 .dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(3) {margin-top:28px; margin-right:2%;}
 .dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(4) {margin-top:-10px;}
 
-.dash-TutorialPOP .ttrlStepBox .r_StepBox button:first-child .stepNm  {animation:quick111motion 0.9s linear 0s 1 normal forwards;}
-.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(2) .stepNm {animation:quick111motion 0.9s linear 0.1s 1 normal forwards;}
-.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(3) .stepNm {animation:quick111motion 0.9s linear 0.17s 1 normal forwards;}
-.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(4) .stepNm {animation:quick111motion 0.9s linear 0.25s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:first-child .stepNm  {animation:ttralAnimation 0.9s linear 0s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(2) .stepNm {animation:ttralAnimation 0.9s linear 0.1s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(3) .stepNm {animation:ttralAnimation 0.9s linear 0.17s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(4) .stepNm {animation:ttralAnimation 0.9s linear 0.25s 1 normal forwards;}
 
-@keyframes quick111motion {
+@keyframes ttralAnimation {
   0% {margin-top:0;}
   50% {margin-top:-15px;}
   100% {margin-top:0;}
@@ -3062,3 +3062,16 @@ tutorial 튜토리얼
 .dash-TutorialPOP .btmBox button:before {content:""; width:18px; height:18px; display:inline-block; background:url(../images/tutorial/dash_popClose_small.png); vertical-align:middle; margin-right:6px; transition:transform 0.3s; margin-top:-3px;}
 .dash-TutorialPOP .btmBox button:hover {font-weight:600;}
 .dash-TutorialPOP .btmBox button:hover:before {transform:rotate(90deg);}
+
+
+/* 말풍선형 튜토리얼 노출,공통 */
+.balloon-Tutorial {position:fixed; right:110px; bottom:55px; z-index:999; width:305px; height:105px; background:url(../images/tutorial/balloon_ttral.png) no-repeat; text-align:center; display: flex; flex-direction:column; padding:24px 0 0; box-sizing:border-box; background-size:100%; align-items:center;
+                    animation:balloonJump 1s linear 0s 1 normal forwards;}
+.balloon-Tutorial .txt {font-family:'NanumBrush'; font-size:22px; color:#fff; letter-spacing:-0.25px;}
+.balloon-Tutorial button {font-family:'NanumBrush'; font-size:17px; color:#2152fa; display: inline-flex; background:#fff; padding:0 25px 4px; border-radius:30px; line-height:20px; margin-top:5px;}
+
+@keyframes balloonJump {
+    0%   {bottom:55px;}
+    50%  {bottom:75px;}
+    100% {bottom:55px;}
+}
