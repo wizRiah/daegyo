@@ -3000,3 +3000,65 @@ faq
 
 
 
+
+
+
+
+
+
+
+
+/*
+tutorial 튜토리얼
+*/
+
+/* pc- main dashboard (step) */
+.dash-TutorialPOP {background:rgba(0,0,0,0.8); position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:999; display:flex; align-items:center; justify-content:center;}
+.dash-TutorialPOP .innerBox {width:920px;}
+.dash-TutorialPOP .mainTxt {display:flex; justify-content:space-between;}
+.dash-TutorialPOP .mainTxt .l_txt {}
+.dash-TutorialPOP .mainTxt .l_txt .usrNm {color:#fff; font-size:22px;}
+.dash-TutorialPOP .mainTxt .l_txt .usrNm strong {color:#FFFF00;}
+.dash-TutorialPOP .mainTxt .l_txt .stepTit {font-family:'NanumBrush'; color:#fff; font-size:55px; margin-bottom:10px;}
+.dash-TutorialPOP .smallTxt {font-size:14px; color:#fff; line-height:20px; font-weight:200;}
+.dash-TutorialPOP .mainTxt button {width:50px; height:50px; text-indent:-9999px; overflow:hidden; background:url(../images/tutorial/dash_popClose.png) no-repeat; transition:transform 0.3s;}
+.dash-TutorialPOP .mainTxt button:hover {transform:rotate(90deg);}
+
+.dash-TutorialPOP .ttrlStepBox {width:100%; height:280px; background:url(../images/tutorial/ttrlStepBox_bluebg.png); border-radius:30px; padding:50px 65px 35px; margin:30px 0; box-sizing:border-box; display:flex; align-items:flex-start;}
+.dash-TutorialPOP .ttrlStepBox .l_txt {display:flex; flex-wrap:wrap; align-items:flex-start; width:245px; margin-right:15px;}
+.dash-TutorialPOP .ttrlStepBox .l_txt .boxTit {width:100%;; font-family:'NanumBrush'; font-size:50px; margin-bottom:10px; color:#fff;}
+.dash-TutorialPOP .ttrlStepBox .l_txt .guideTxt {font-family:'NanumBrush'; font-size:22px; margin-right:14px; color:#fff;}
+
+.dash-TutorialPOP .ttrlStepBox .r_StepBox {flex-grow:1; background:url(../images/tutorial/ttrlStepBox_bg.png) no-repeat; height:100%; display:flex; background-position-y:57px; background-position-x:100%;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button {width:25%; text-align:center; display:flex; flex-direction:column; align-items:center;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button .stepNm {font-family:'NanumBrush'; font-size:26px; color:#FFFF00;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button .markImg {width:68px; height:58px; margin:10px 0 3px; overflow:hidden; color:#01aefd; background:url(../images/tutorial/ttrlStepBox_goIMG.png) no-repeat; background-position:center; box-sizing:border-box; padding: 6px 0 0;font-family:'NanumBrush'; font-size:19px;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:not(:disabled) .go_or_Fin {width:52px; height:21px; background:url(../images/tutorial/ttrlStepBox_go.png) no-repeat;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:disabled .stepNm {color:#6D7FDF;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:disabled .markImg {background:url(../images/tutorial/ttrlStepBox_finIMG.png) no-repeat; text-indent:-9999px; background-position:center;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:disabled .go_or_Fin {width:20px; height:21px; background:url(../images/tutorial/ttrlStepBox_fin.png) no-repeat;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:disabled:hover {cursor:auto;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:first-child  {margin-top:72px; width:20%;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(2) {margin-top:10px; width:19%; margin-right:8.5%;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(3) {margin-top:28px; margin-right:2%;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(4) {margin-top:-10px;}
+
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:first-child .stepNm  {animation:quick111motion 0.9s linear 0s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(2) .stepNm {animation:quick111motion 0.9s linear 0.1s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(3) .stepNm {animation:quick111motion 0.9s linear 0.17s 1 normal forwards;}
+.dash-TutorialPOP .ttrlStepBox .r_StepBox button:nth-child(4) .stepNm {animation:quick111motion 0.9s linear 0.25s 1 normal forwards;}
+
+@keyframes quick111motion {
+  0% {margin-top:0;}
+  50% {margin-top:-15px;}
+  100% {margin-top:0;}
+}
+
+.dash-TutorialPOP .btmBox {display:flex; justify-content:space-between; align-items:flex-end;}
+.dash-TutorialPOP .btmBox .smallTxt {}
+.dash-TutorialPOP .btmBox .smallTxt li {color:#B9B9B9;}
+.dash-TutorialPOP .btmBox .smallTxt li:last-child {color:#FFFFFF;}
+.dash-TutorialPOP .btmBox button {color:#fff; font-size:13px; font-weight:200;}
+.dash-TutorialPOP .btmBox button:before {content:""; width:18px; height:18px; display:inline-block; background:url(../images/tutorial/dash_popClose_small.png); vertical-align:middle; margin-right:6px; transition:transform 0.3s; margin-top:-3px;}
+.dash-TutorialPOP .btmBox button:hover {font-weight:600;}
+.dash-TutorialPOP .btmBox button:hover:before {transform:rotate(90deg);}
