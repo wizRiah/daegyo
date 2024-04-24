@@ -3243,7 +3243,19 @@ tutorial 튜토리얼
 
 
 
-/* mobile- main dashboard (step) */
+
+
+
+
+
+
+
+
+
+
+/* 
+mobile
+- main dashboard (step) */
 .dash-m-TutorialPOP {background:rgba(0,0,0,0.8);position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:999;display:flex;align-items:center;justify-content:center;padding: 0 30px;box-sizing: border-box;}
 .dash-m-TutorialPOP .innerBox {width:100%;max-height: 100vh;overflow-y: scroll;padding: 50px 0;box-sizing: border-box;}
 .dash-m-TutorialPOP .mainTxt {display:flex; justify-content:space-between;}
@@ -3269,3 +3281,49 @@ tutorial 튜토리얼
 .dash-m-TutorialPOP .btmBox {display:flex; justify-content: flex-end;align-items:flex-end;}
 .dash-m-TutorialPOP .btmBox button {color:#fff; font-size:13px; font-weight:200;}
 .dash-m-TutorialPOP .btmBox button:before {content:""; width:18px; height:18px; display:inline-block; background:url(../images/tutorial/dash_popClose_small.png); vertical-align:middle; margin-right:6px; transition:transform 0.3s; margin-top:-3px;}
+
+
+
+
+.tutorial-m-Wrap {position:fixed; top:0; right:0; width:100%; height:100%; z-index:999; background: rgba(0, 0, 0, 0.8); padding: 25px; box-sizing: border-box;}
+.tutorial-m-Wrap>.popTit {color: #FFFF00;font-family: 'NanumBrush';font-size: 36px;margin-top: 25px;margin-bottom: 15px;}
+.tutorial-m-Wrap>.popTit span {color: #fff; font-family: 'NanumBrush'; margin-left: 10px;}
+.tutorial-m-Wrap .tutorialCloseBtn {position: absolute; right: 25px; top: 25px; background: url(../images/tutorial/dash_popClose.png) no-repeat; width: 33px; height: 33px; background-size: 100%; z-index: 999;}
+.tutorial-m-Wrap .btmBox {display:flex; justify-content: flex-end;align-items:flex-end; margin-top:15px;}
+.tutorial-m-Wrap .btmBox button {color:#fff; font-size:13px; font-weight:200;}
+.tutorial-m-Wrap .btmBox button:before {content:""; width:18px; height:18px; display:inline-block; background:url(../images/tutorial/dash_popClose_small.png); vertical-align:middle; margin-right:6px; transition:transform 0.3s; margin-top:-3px;}
+
+/* 모바일 - 탭형 튜토리얼 팝업 */
+.tutorialTAB-m-Wrap {z-index:999;box-sizing:border-box;position: relative;border-radius: 10px;overflow: hidden;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] {position:relative;top:0;right:0;z-index:0;width: 100%;border: none;border-radius: 10px;padding: 85px 5px 0px 17px;height: calc(100vh - 180px);}
+.tutorialTAB-m-Wrap input {display:none;}
+.tutorialTAB-m-Wrap input + label {position:absolute;left: 0;background: #C9C7E1;color:#fff;height: 68px;box-sizing:border-box;display:flex;justify-content:center;flex-direction:column;align-items: center;z-index:1;border-left: 1px solid rgba(255,255,255,0.3);}
+.tutorialTAB-m-Wrap input + label>div {font-family:'NanumBrush';font-size: 12px;margin-top: -11px;}
+.tutorialTAB-m-Wrap input + label>div strong {font-family:'NanumBrush';font-size: 16px;margin-right: 3px;font-weight: 500;}
+.tutorialTAB-m-Wrap input + label>strong {font-family:'NanumBrush';font-size: 21px;font-weight: 500;}
+.tutorialTAB-m-Wrap input:checked {}
+.tutorialTAB-m-Wrap input:checked + label {background: #634CDB;}
+.tutorialTAB-m-Wrap input:checked + label>strong {color: #FFFF00;margin-top: 3px;}
+.tutorialTAB-m-Wrap input:checked + label:after {content:"";border-top: 7px solid #634CDB;border-left: 6px solid transparent;border-right: 6px solid transparent;border-bottom: 0px solid transparent;position: absolute;bottom: -7px;}
+.tutorialTAB-m-Wrap input:nth-of-type(1) + label {width: 26%; border-left:none;}
+.tutorialTAB-m-Wrap input:nth-of-type(2) + label {width: 34%;left: 26%;}
+.tutorialTAB-m-Wrap input:nth-of-type(3) + label {width: 40%;left: auto;right: 0;}
+.tutorialTAB-m-Wrap input:nth-of-type(1):checked ~ [class^="tutorialPOP-"] .step01Box,
+.tutorialTAB-m-Wrap input:nth-of-type(2):checked ~ [class^="tutorialPOP-"] .step02Box,
+.tutorialTAB-m-Wrap input:nth-of-type(3):checked ~ [class^="tutorialPOP-"] .step03Box {display:block !important;}
+.tutorialTAB-m-Wrap input:checked + label,
+.tutorialTAB-m-Wrap input:checked + label +input + label {border-left:none;}
+.tutorialTAB-m-Wrap .tutorialPOP-class .ttralUl {max-height: 100%;width: 100%;padding: 0;padding-right: 0;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .stepBox {display:none;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .sctnTit-2dpt {color: #000; font-size: 15px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .guideImgBox img {max-width:100%;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .txtbox + .guideImgBox {margin-top:15px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li {padding-bottom: 20px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .txtbox .sampleList>li {font-size: 13px;word-break: keep-all;font-weight: 300;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .txtbox .sampleList>li:before {}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .tipBox {background:#EFEFEF;border-radius:6px;padding: 25px 19px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .tipBox>b {font-size:13px;font-weight:500;margin-bottom: 5px;display: block;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .tipBox div {color:#4B566B;font-size:13px;text-indent: -7px;padding-left: 7px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .tipBox div:before {content:"-";margin-right: 3px;}
+.tutorialTAB-m-Wrap [class^="tutorialPOP-"] .ttralUl>li .guideImgBox {padding:0;border-radius: 10px;box-shadow: 0px 1px 5px rgba(0,0,0,0.08);width: calc(100% - 6px);margin-left: 3px;}
+
