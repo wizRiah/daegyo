@@ -3331,3 +3331,33 @@ mobile
 .ch9-ttralTAP.tutorialTAB-m-Wrap input:nth-of-type(1) + label {width:36%; }
 .ch9-ttralTAP.tutorialTAB-m-Wrap input:nth-of-type(2) + label {width:32%; left:36%;}
 .ch9-ttralTAP.tutorialTAB-m-Wrap input:nth-of-type(3) + label {width:34%;}
+
+/* 원생등록 튜토리얼 */
+.tutorialSlide-m-Wrap {max-height:calc(100vh - 180px); overflow-y:scroll; background:#F5F7FA; border-radius:10px;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper { padding:10px 10px 55px;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper .swiper-slide {text-align:center;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper img {max-width:100%;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper .swiper-pagination {bottom:20px;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper .swiper-pagination-bullet {background:#E1E1E1; width:15px; height:15px; opacity:1;}
+.tutorialSlide-m-Wrap .ttralstdntRgistSwiper .swiper-pagination-bullet-active {background:#2449FF;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] {text-align:center; position:relative; display:inline-block;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .redBox {border:2px dashed #FF0000; background:#FF00001A; border-radius:6px; position:absolute; border-radius:6px;}
+.tutorialSlide-m-Wrap .stdntRgistslide-01 .redBox {top:0; width:49%; height:20%; left:-5px;}
+.tutorialSlide-m-Wrap .stdntRgistslide-02 .redBox {top:21%; width:102%; height:38%; left:-5px;}
+.tutorialSlide-m-Wrap .stdntRgistslide-03 .redBox {top:61%; width:102%; height:16%; left:-5px;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox {position:absolute; left: 5%; text-align:left; background:#2449FF; border-radius:15px; color:#fff; padding:25px; box-sizing:border-box; box-shadow:0px 5px 10px rgba(0,0,0,0.4); transition: top 0.5s;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox:before {content:""; position:absolute; left: 29px; top: -20px; border-bottom: 20px solid #2449FF; border-left: 7px solid transparent; border-right: 20px solid transparent;}
+.tutorialSlide-m-Wrap .stdntRgistslide-01 .blBox {top:23.5%; }
+.tutorialSlide-m-Wrap .stdntRgistslide-02 .blBox {top:50.5%;}
+.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox:before {border-top: 20px solid #2449FF; border-left-width:20px; border-right-width:7px; border-bottom:none; top:auto; bottom:-20px; left:35px;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox strong {font-size:16px;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox p {font-size:13px; font-weight:200; margin-top:5px; line-height:130%;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox div {font-size:13px; font-weight:200; line-height:150%; padding-left:8px; text-indent:-8px;}
+.tutorialSlide-m-Wrap [class^="stdntRgistslide-"] .blBox div:before {content:"-"; margin-right:3px;}
+
+@media only screen and (min-width:650px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:37.5%;}}
+@media (min-width:498px) and (max-width:649px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:35.5%;}}
+@media (min-width:498px) and (max-width:569px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:31.5%;}}
+@media (min-width:424px) and (max-width:497px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:27.5%;}}
+@media (min-width:381px) and (max-width:423px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:22.5%;}}
+@media only screen and (max-width:380px){.tutorialSlide-m-Wrap .stdntRgistslide-03 .blBox {top:15.5%;}}
