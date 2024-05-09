@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>출결_오늘등원생</title>
+  <link rel="stylesheet" href="../../../css/font.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/mngr_contents.css">
+  <link rel="stylesheet" href="../../../css/mngr_component.css">
+</head>
+
+<body>
+
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-top">
+        <div class="header-cnt"><!-- 로고영역 --> <a class="m-logo"><img src="/images/m_t_logo.png"></a> <!-- /로고영역 -->
+          <!-- 학원선택 -->
+          <div class="acdmNm-wrap"><select class="acdmyNm">
+              <option value="0">이엔엠에듀_B1</option>
+              <option value="1">베스티어학원_B2</option>
+            </select></div> <!-- /학원선택 -->
+        </div>
+        <div class="btn-set"><!--  <button class="logout-btn" type="button" @click="fnLogOut()"></button> -->
+          <!-- 알림버튼 --> <button type="button" class="alarmBTN"></button> <!-- 알림이 있는 경우 on클래스 추가. --> <!-- /알림버튼 -->
+          <button class="setBtn" type="button"></button></div> <!-- <layoutHeaderMenu /> -->
+      </div>
+    </header>
+    <!-- /헤더 -->
+
+
+    <!-- 상단 메뉴 -->
+    <div class="m-topMenu">
+      <!-- location -->
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>학사관리</li>
+      </ul>
+      <!-- /location -->
+
+      <!-- 메뉴 -->
+      <ul class="menu-Wrap">
+        <li>
+
+          <a>반</a>
+        </li>
+        <li><a>원생</a></li>
+        <li><a>수납</a></li>
+        <li><a>상담</a></li>
+        <li><a>직원</a></li>
+        <li><a>통통통설정</a></li>
+        <li class="on"><a>앱관리</a></li>
+      </ul>
+      <!-- /메뉴 -->
+
+    </div>
+    <!-- /상단 메뉴 -->
+
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+      <!-- content -->
+      <div class="content">
+
+        <!-- 탭메뉴 슬라이드 사용 (컴포넌트) -->
+        <ul class="tab-04">
+          <li class="active">
+            <button type="button">
+              <div class="tab04-bg"><i class="i-tab-3187"></i></div><span class="status">오늘등원생</span>
+            </button>
+          </li>
+          <li><button type="button">
+              <div class="tab04-bg"><i class="i-tab-3188"></i></div><span class="status">원생별</span>
+            </button></li>
+        </ul>
+
+
+
+
+
+        <!-- 기본 검색박스 -->
+        <div class="m-basicSrchBox">
+          <div class="form-list">
+            <div class="select-srchBox"><select>
+                <option value="allTot">출결구분</option>
+              </select>
+              <div class="m-srchBox disabled"><input type="text" placeholder="원생명, 닉네임, 출결번호 검색"> <button type="button"
+                  class="button"></button></div>
+            </div>
+            <div class="label-set"><span class="label-text">출결일</span> <span class="date-picker">
+                <div class="dp__main dp__theme_light">
+                  <div aria-label="Datepicker input" role="textbox" aria-multiline="false" aria-disabled="false"
+                    aria-readonly="false"><!---->
+                    <div class="dp__input_wrap"><!----><input name=""
+                        class="dp__pointer dp__input_readonly dp__input dp__input_icon_pad dp__input_reg datePicker txtfield-basic"
+                        inputmode="none" placeholder="YYYY-MM" autocomplete="off"><span class="dp__input_icon"><button
+                          style="margin-right: 5px;"><img class="ui-datepicker-trigger"
+                            src="/images/datepicker.png"></button></span><!----><!----><svg version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                        class="dp__icon dp__clear_icon dp__input_icons" data-test="clear-icon">
+                        <path
+                          d="M23.057 7.057l-16 16c-0.52 0.52-0.52 1.365 0 1.885s1.365 0.52 1.885 0l16-16c0.52-0.52 0.52-1.365 0-1.885s-1.365-0.52-1.885 0z">
+                        </path>
+                        <path
+                          d="M7.057 8.943l16 16c0.52 0.52 1.365 0.52 1.885 0s0.52-1.365 0-1.885l-16-16c-0.52-0.52-1.365-0.52-1.885 0s-0.52 1.365 0 1.885z">
+                        </path>
+                      </svg></div>
+                  </div><!---->
+                </div>  
+              </span></div>
+            <div class="label-set"><span class="label-text">대분류</span> <select>
+                <option value="">전체</option>
+              </select></div>
+            <div class="label-set"><span class="label-text">중분류</span> <select>
+                <option value="">전체</option>
+              </select></div>
+            <div class="label-set"><span class="label-text">반선택</span> <select>
+                <option value="">전체</option>
+              </select></div>
+            <div class="btn-set"><button type="button" class="t-button-s t-button-reset">검색 초기화</button> <button
+                type="button" class="t-button-s m-search">검색</button></div>
+          </div>
+          <div class="bnrzone"> <img src="/images/pc_stdntDash_bnr_sample.png"></div>
+        </div>
+        <!-- /기본 검색박스 -->
+
+
+
+        
+
+        <!-- 리스트 상단 선택박스 등 -->
+        <div class="m-listTopSetBox pb10">
+          <span class="Totaltxt">총 <strong>10</strong>건</span>
+          <div class="btn-set"><button type="button" class="t-button-xs">선택 출결처리</button>
+
+          </div>
+        </div>
+        <!-- /리스트 상단 선택박스 등 -->
+
+        <!-- 리스트 시작 -->
+        <div class="m-list-Attend">
+          <table class="t-basic-1">
+            <thead>
+              <tr>
+                <th>
+                  <div class="flex">
+                    <div class="t-checkbox checkbox01"><input type="checkbox" id="rcvmt_all"> <label
+                        for="rcvmt_all"></label></div>
+                    <div class="h-txt-c" style="flex-grow: 1;">원생정보</div>
+                  </div>
+                </th>
+                <th>출결 정보</th>
+                <th>사유</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="h-txt-l">
+                  <div class="check-texSet flex flex-start mb5">
+                    <div class="t-checkbox checkbox01 mr5"><input type="checkbox">
+                      <label for="rcvmt_0"></label></div> <b>중등부 수학A반</b>
+                  </div>
+                  <div class="Info-txt"><span class="opt-regist mr3">[재]</span>홍길동 (닉네임)</div>
+                  <ul class="innerUL">
+                    <li><span>학부/학년 : </span>초등/2</li>
+                    <li><span>출결번호 : </span>12344</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>오전 10:00 (등원/수동)</p>
+                  <p>오전 10:00 (등원/수동)</p>
+                </td>  <!-- 수납처리자 -->
+                <td>
+                  <div class="btn-set"><button type="button" class="greyiconBtn go-view"><i class="i-plus"></i></button>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="h-txt-l">
+                  <div class="check-texSet flex flex-start mb5">
+                    <div class="t-checkbox checkbox01 mr5"><input type="checkbox">
+                      <label for="rcvmt_0"></label></div> <b>중등부 수학A반</b>
+                  </div>
+                  <div class="Info-txt"><span class="opt-regist mr3">[재]</span>홍길동 (닉네임)</div>
+                  <ul class="innerUL">
+                    <li><span>학부/학년 : </span>초등/2</li>
+                    <li><span>출결번호 : </span>12344</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>결석예정</p>
+                </td>  <!-- 수납처리자 -->
+                <td>
+                  <div class="btn-set"><button type="button" class="greyiconBtn go-view"><i class="i-plus"></i></button>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table> <!-- /클릭시 열 컬러 변경되는 테이블 -->
+          <!--    <useButton btnName="더보기" btnClass="m-readmore" icon="arrow-mb" @click="fnPage(formInfo?.ctlPageNow + 1)" v-if="loading && isMore"></useButton>-->
+        </div>
+        <!-- /리스트 -->
+
+      </div>
+      <!-- /content -->
+
+
+
+
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-inner"></div>
+    </footer>
+    <!-- /푸터 -->
+
+
+
+
+    <!-- 하단고정메뉴 -->
+    <div class="footer-fixed">
+      <ul>
+        <!-- 활성화시 li에 acitve 추가 -->
+        <li class="btn-gohome active"><button type="button">홈</button></li>
+        <li class="btn-allmenu"><button type="button">전체메뉴</button></li>
+        <li class="btn-mymenu"><button type="button"></button></li>
+        <li class="btn-srchpp"><button type="button">원생검색</button></li>
+        <li class="btn-mypage"><button type="button">마이페이지</button></li>
+      </ul>
+    </div>
+
+
+    <!-- 팝업 뒤 배경 -->
+    <!-- <div class="pop-bg">
+   </div> -->
+    <!-- /팝업 뒤 배경 -->
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+
+
+  <script>
+
+
+  </script>
+
+</body>
+
+</html>
