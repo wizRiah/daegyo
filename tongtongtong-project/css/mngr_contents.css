@@ -1481,7 +1481,7 @@ location
   .helpBtn span { margin-left:4px!important;}
 
     /* 체크 라디오박스 */
-    .checkRadio>.t-radio-01 { display: flex; gap:20px; }
+    .checkRadio>.t-radio-01 { display: flex!important; gap:20px; }
     .checkRadio>.t-radio-01 input[type="radio"] + label { margin:0; transition:all .3s; font-size: 16px; flex: 1; min-height: 75px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: #F5F5F5; padding: 20px; border: 1px solid #E2E2E2; }
     .checkRadio>.t-radio-01 input[type="radio"] + label .rchk {margin-right:12px; }
     .checkRadio>.t-radio-01 input[type="radio"] + label b { color:#292E41;}
@@ -1845,10 +1845,8 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .numText span { margin-left:3px; }
 .academy-mngr-Wrap .t-basic-1.test.td15>tbody>tr>td { padding: 15px 5px; }
 .max-pay td:nth-of-type(2)>div:before { content: ''; left: -73px; top: -43px; background: transparent url(/images/maxPay.png) no-repeat center / 100%; width: 70px; height: 68px; position: absolute;}
-
 .rich-balance td:nth-of-type(2)>div,
 .max-pay td:nth-of-type(2)>div { position:relative;}
-
 .rich-balance td:nth-of-type(2)>div:before { position: absolute; content: ''; left: -73px; top: -43px; background: transparent url(/images/rich-balance.png) no-repeat center / 100%; width: 70px; height: 68px;}
 
 
@@ -1857,29 +1855,50 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
   .payInfo.textBox .t-checkbox.checkbox01 input[type="checkbox"] + label {font-size: 14px; }
   .payInfo.textBox button { margin-left:20px;}
 
-/* m */
-.m-academy-mngr-Wrap .t-bullet-01.contText { color:#828282; line-height: 20px; }
-.m-academy-mngr-Wrap .m-list-charge .box-bg { padding: 20px 15px; border-color: #E2E2E2; border-radius: 9px; margin-bottom: 20px;}
-.m-academy-mngr-Wrap .m-list-charge .box-bg + .box-bg { margin-bottom:10px;}
-.m-academy-mngr-Wrap .m-list-charge .charge-set { display: flex; align-items: center; justify-content: space-between; gap: 20px;}
-.m-academy-mngr-Wrap .m-list-charge .textTitWrap { margin: 0; padding: 0; border: 0;}
-.m-academy-mngr-Wrap .m-list-charge .imgCircle { background: #F6F3FE; width: 50px; height: 50px; }
-.m-academy-mngr-Wrap .m-list-charge .imgCircle img { width: 30px; }
-.m-academy-mngr-Wrap .m-list-charge .charge-info { margin-top: 15px;}
-.m-academy-mngr-Wrap .m-list-charge .charge-info li { gap: 20px; background: #F6F3FE; border-radius: 9px; padding: 14px 15px; box-sizing: border-box; font-size: 12px; color: #333; display: flex; justify-content: space-between; align-items: center;}
-.m-academy-mngr-Wrap .m-list-charge .charge-info li + li { margin-top:5px;}
-.m-academy-mngr-Wrap .m-list-charge .charge-info li b {font-size: 14px; font-weight: 800; }
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 {     gap: 10px;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label { padding: 15px; background: #FFFFFF; border-radius: 9px; flex-direction: column;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .rchk { width: 20px; height: 20px; position: absolute; flex-shrink: 0; left: 15px; top: 15px;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .amountSet { font-size: 12px; width: 100%; align-items: baseline; color: #333333; box-sizing: border-box; word-break: break-all; display: flex;justify-content: flex-end; padding-left: 50px; }
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .amountSet .numWrap { margin-left: 22px; color: #828282; font-size: 13px; text-align: right;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .amountSet .numWrap .num { font-size: 20px; font-weight: 900; letter-spacing: -0.7px; margin-right: 2px;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"]:checked + label .rchk { background: url(/images/radioCheck_c.svg);}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .amountSet>span { white-space: nowrap;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio .charge-info { width: 100%; margin-top: 10px; border-radius: 9px; padding: 15px; box-sizing: border-box; background: #FCFBFF;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio .charge-info li { background: transparent; margin-top:0; line-height: 21px; padding: 0; border-radius: 0; color: #828282;}
-.m-academy-mngr-Wrap .m-list-charge .checkRadio input[type="radio"] + label b {color:#333333; font-weight:bold; font-size:13px;}
+  /* m */
+  .m-academy-mngr-Wrap .t-bullet-01.contText { color:#828282; line-height: 20px; }
+  .m-academy-mngr-Wrap .m-list-charge .text-wrap { margin-top:24px; }
+  .m-academy-mngr-Wrap .m-list-charge { padding-bottom:180px!important;}
+  .m-academy-mngr-Wrap .m-list-charge .box-bg { padding:15px; border-color: #E2E2E2; margin-bottom: 20px;}
+  .m-academy-mngr-Wrap .m-list-charge .box-bg + .box-bg { margin-bottom:10px;}
+  .m-academy-mngr-Wrap .m-list-charge .box-bg .charge-info { background:#F6F3FE; }
+  .m-academy-mngr-Wrap .m-list-charge .box-bg .numWrap .num {  color:#F5691F;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-set { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-set>.flex-set { flex-shrink: 0; min-height: 25px; }
+  .m-academy-mngr-Wrap .m-list-charge .charge-set img { margin-right:7px;}
+  .m-academy-mngr-Wrap .m-list-charge .textTitWrap { margin: 0; padding: 0; border: 0;}
+  .m-academy-mngr-Wrap .m-list-charge .numWrap .num { line-height: 24px; font-size: 20px; font-weight: 900; letter-spacing: -0.7px; margin-right: 2px;}
+  .m-academy-mngr-Wrap .m-list-charge .numWrap { word-break: break-all; margin-left:8px; color: #828282; font-size: 13px; text-align: right;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-info { width: 100%; margin-top: 10px; border-radius: 9px; padding: 15px; box-sizing: border-box; background: #FCFBFF;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-info .txtTit { white-space: nowrap;    min-height: 22px;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-info li { gap: 10px; box-sizing: border-box; font-size: 12px; color: #828282; line-height: 21px; display: flex; justify-content: space-between; align-items: flex-start;}
+  .m-academy-mngr-Wrap .m-list-charge .charge-info li .num-txt-wrap { text-align: right; font-size: 12px; color: #828282; word-break: break-all; }
+  .m-academy-mngr-Wrap .m-list-charge .charge-info li .num-txt { color: #333333; font-size: 13px; font-weight: bold;}
+  .m-academy-mngr-Wrap .m-list-charge .main-tit + .checkRadio { margin-top:12px;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 { gap: 10px;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label { transition:none; padding: 15px; background: #FFFFFF; border-radius:10px; flex-direction: column;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .rchk { width: 20px; height: 20px; position: absolute; flex-shrink: 0; left: 15px; top: 15px;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .amountSet { font-size: 12px; width: 100%; color: #333333; box-sizing: border-box; word-break: break-all; display: flex;justify-content: flex-end; padding-left:48px; }
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"]:checked + label .rchk { background: url(/images/radioCheck_c.svg);}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label.max-pay-m .amountSet:before { content:''; margin-top:3px; flex-shrink:0; margin-right: 7px; background: url(/images/maxPay_m.png) no-repeat center / 100%; width:102px; height: 22px;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .charge-amount { display: flex; align-items: baseline; min-width: 151px; justify-content: space-between;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label .charge-amount>span { flex-shrink: 0;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label.rich-m .amountSet:before { content:''; margin-top:3px; flex-shrink:0; margin-right: 7px; background: url(/images/rich-balance_m.png) no-repeat center / 100%; width:94.14px; height: 22px;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label.max-pay-m .charge-info { background:#FEFFEF;}
+  .m-academy-mngr-Wrap .m-list-charge .checkRadio>.t-radio-01 input[type="radio"] + label.rich-m .charge-info { background:#F9F4FC;}
+  .m-academy-mngr-Wrap .m-list-charge + .textBox .t-button-m { font-size:14px; font-weight: bold; border-radius: 4px!important;}
+  .m-academy-mngr-Wrap .m-list-charge + .textBox  { z-index: 2; position: fixed; bottom: 65px; height: 102px; width: 100%; background: #FFFFFF; border-radius: 0; border: 0; padding: 8px 15px; align-items: flex-start; flex-direction: column; gap: 12px;}
+  .m-academy-mngr-Wrap .m-list-charge + .textBox .t-checkbox.checkbox01 input[type="checkbox"] + label { font-size: 13px;}
+  .m-academy-mngr-Wrap .m-list-charge + .textBox .t-button-grey2 { background-color: #C7CBD1; }
+  .m-academy-mngr-Wrap .m-list-charge + .textBox .t-button-m:disabled { background:#C7CBD1;}
+
+
+
+  @media only screen and (max-width: 360px) {
+    .m-academy-mngr-Wrap .m-list-charge + .textBox .t-checkbox.checkbox01 input[type="checkbox"] + label {font-size: 12px;}
+  }
+
+
 
 
 
