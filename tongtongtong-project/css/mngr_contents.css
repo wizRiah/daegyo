@@ -1918,11 +1918,13 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceIn .servOption { background: url(/images/serv-bg.png); border-radius: 30px; background-size: cover; margin-top: 50px; padding: 50px; }
 .serviceIn .servOption .servOptionList { display: flex; gap: 30px;}
 .serviceIn .servOption .servOptionList li .serv-img { position: absolute; top: 40px; right: 40px;}
-.serviceIn .servOption .servOptionList>li {width: calc((100% - 60px) / 3); box-shadow: 0px 5px 20px #00000026; border-radius: 20px; background: #FFFFFF; padding: 45px; position: relative;}
+.serviceIn .servOption .servOptionList>li {/* width: calc((100% - 60px) / 3); */ flex:1; box-shadow: 0px 5px 20px #00000026; border-radius: 20px; background: #FFFFFF; padding: 45px; position: relative;}
 .serviceIn .servOption .servOptionList>li .serv-status{ position: absolute; top: -5px; }
+.serviceIn .servOption .servOptionList:not(:has(.preparing)) .t-button-m { position: absolute; right: 40px; bottom: 40px; width: 145px; }
+ .serviceIn .servOption .servOptionList:not(:has(.preparing)) .contText { margin-top: 0; display: inline-block; padding-right: 160px;}
 .serviceIn .servOption .servInfoText {min-height: 77px; display: flex; align-items: flex-start; }
 .serviceIn .servOption .serv-mainT {font-size: 36px; line-height: 43px; margin-bottom: 5px; font-weight: bold;}
-.serviceIn .servOption .orangeText { color: #F56318; font-weight: 900; letter-spacing: -0.84px; font-size: 24px; margin-right: 5px; }
+.serviceIn .servOption .orangeText { color: #F56318; font-weight: 900; letter-spacing: -0.84px; font-size: 24px;}
 .serviceIn .servOption .greyText { color: #B9B9B9;}
 .serviceIn .servOption .servCont { color: #828282; margin-top:27px; margin-bottom:20px; font-size:14px; line-height: 22px;}
 .serviceIn .servOption .servCont b.blue { color:#0062F6;}
