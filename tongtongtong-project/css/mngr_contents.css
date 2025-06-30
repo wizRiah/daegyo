@@ -2023,11 +2023,20 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 
 
     /* 결제정보관리 */
-    .ness-p { margin-left:7px; color:#FF6F00; }
+    .ness-p { color:#FF6F00; }
     .pop-cont.validator .infoList .t-necessary { margin-left:3px; }
     .pop-cont.validator .infoList .t-necessary:before { font-size: 13px; font-weight: bold; }
     .pop-cont.validator .boxSet + .boxSet { margin-top:20px; }
     .pop-cont.validator .infoList.view li + li { margin-top:13px; }
+    .pop-cont.validator.pay .vali-box { padding:30px;}
+    .pop-cont.validator.pay .check-pay { display:inline-block;}
+    .pop-cont.validator.pay .check-pay>.t-checkbox.checkbox01 input[type="checkbox"]:checked + label { color:#6F55EB; font-weight: bold;}
+    .pop-cont.validator.pay .check-pay>.t-checkbox.checkbox01 input[type="checkbox"] + label { color:#828282; line-height: 1;}
+    .pop-cont.validator.pay .check-pay>.t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before { background-image: url(/images/check-pay.svg); }
+    .pop-cont.validator.pay .check-pay>.t-checkbox.checkbox01 input[type="checkbox"] + label:before { width: 15px; margin: -2px 6px 0 0; height: 15px; background: url(/images/check-pay-off.svg) no-repeat center / 100%; border: none; border-radius: 0; transition: none;}   .check-pay>.t-checkbox.checkbox01 input[type="checkbox"] + label:hover:after { content:none;}
+    .pop-cont.validator.pay .boxSet .t-button-xs { min-width: 90px; width:90px;}
+
+
 
     /* 모바일 */
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) { padding: 0 0 200px; background: #F5F7FA; }
