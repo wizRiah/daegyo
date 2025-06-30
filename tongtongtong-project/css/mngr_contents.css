@@ -1919,8 +1919,10 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceIn .servOption .servOptionList>li { flex: 1; box-sizing: border-box; border-radius: 20px; background: #FFFFFF; padding: 45px; position: relative; border: 1px solid #E2E2E2; }
 .serviceIn .servOption .servOptionList li .serv-img { position: absolute; top: 45px; right: 45px; }
 .serviceIn .servOption .servOptionList>li .serv-status { position: absolute; top: -5px; left: 25px; }
-/* 사용중 */
-.serviceIn .servOption .servOptionList>li.in-use { box-shadow: 0px 5px 20px #00000012; border: 2px solid #6F55EB; }
+
+  /* 사용중 */
+  .serviceIn .servOption .servOptionList>li.in-use { box-shadow: 0px 5px 20px #00000012; border: 2px solid #6F55EB; }
+
 .use-info { color: #333333; display:flex; height: 55px; border-radius: 5px; background: #F5F7FA; align-items: center; justify-content: center; font-size: 16px; }
 .use-info .pt-color { margin-right:3px; }
 .serviceIn .servOption .servInfoText { min-height: 77px; display: flex; align-items: flex-start; }
@@ -1928,22 +1930,24 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceIn .servOption .orangeText { color: #F56318; font-weight: 900; letter-spacing: -0.84px; font-size: 24px; }
 .serviceIn .servOption .greyText { color: #B9B9B9; }
 .serviceIn .servOption .servCont { color: #333333; margin-top: 20px; margin-bottom: 20px; font-size: 16px; line-height: 26px; }
-.serviceIn .servOption .servCont b.blue { color:#0062F6; }
+.serviceIn b.blue { color:#0062F6; }
 .serviceIn .servOption .servCont b { color:#333; }
 .serviceIn .servOption .servOptionList .t-button-m { width: 100%; background: #0062F6; border-radius: 5px; height: 55px; font-size: 16px; font-weight: bold; }
+.serviceIn .servOption .servOptionList .apply-wrap:hover .apply-tip{ display:block;}
+.serviceIn .servOption .servOptionList .apply-wrap{ position: relative;}
+.serviceIn .servOption .servOptionList .apply-tip { background: #000000; display: none; box-shadow: 0px 5px 15px #00000026; border-radius: 10px; color: #fff; padding: 20px; font-size: 12px; line-height: 18px; max-width: 305px; box-sizing: border-box; position: absolute; right: 0; margin-top: -5px;}
+.serviceIn .servOption .servOptionList .apply-tip:after { content: url(/images/apply_arrow.svg); position: absolute; left: 20px; top: -13px; }
 .serviceIn .servOption .contText { margin-top:30px; }
-.serviceIn .servOption .contText.t-bullet-01 li:after { top: 9px; background-color: #333333; }
+.serviceIn .servOption .contText.t-bullet-01 li:after { top: 10px; background-color: #333333; }
 .serviceIn .servOption .contText.t-bullet-01 .pc-text-1 { font-weight:bold; }
 .serviceIn .servOption .textInfo + .contText { margin-top:0; }
-.serviceIn .tipText { font-size: 24px; color: #666666; letter-spacing: -0.6px; }
+.serviceIn .tipText { font-size: 24px; color:#333333; letter-spacing: -0.6px; }
 .serviceIn .servBox { margin-top:70px; margin-bottom: 70px; }
 .serviceIn .servBox .textTitWrap { border: 0; padding: 0; }
 .serviceIn .servBox .t-button-m { font-size:13px; margin-bottom: 5px; }
 .serviceIn .servBox .textSubTit { color:#666666; line-height: 20px; }
 .serviceIn .servBox .textBox02 { flex: 1; padding: 35px 40px; align-items: flex-end; justify-content: space-between; }
 
-
-  /* 수정사항 25.06.25 */
   .academy-mngr-Wrap .serviceIn .textBox .t-button-m { font-size:13px; }
   .academy-mngr-Wrap .serviceIn .textBox .item-box.colorBG { height: auto; align-items: center; justify-content: space-between; }
   .academy-mngr-Wrap .serviceIn .textBox .item-box.colorBG .t-button-underline { margin-left: 15px; }
@@ -1956,6 +1960,9 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
     .servStep { display:flex; gap:12px; align-items: center; }
     .servStep .serviceIn .servBox .textBox02 { background:#FCFBFF; }
     .servStep .step { border-radius: 4px 0px; background: #35267D; color: #fff; font-size: 12px; font-weight: bold; padding: 6px 11px; position: absolute; top: 0; left: 0; }
+
+    .servBox .textBox02.complete { background: #FCFBFF;}
+    .servBox .textBox02.complete { background: #FCFBFF;}
 
 
 
@@ -2068,7 +2075,6 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceList .box-bg + .box-bg { margin-top:20px; }
 .serviceList .box-bg .main-tit { font-size:22px; margin-bottom:12px;}
 .serviceList .box-bg .contText { color:#62666B;}
-.serviceList .box-bg .orange-txt { color:#F56318;}
 .serviceList .box-bg .contText .orange-txt:after { background:#F56318;}
 .serviceList .box-bg .contText li:after { top: 9px; background:#62666B;}
 .serviceList .statusSet { position: absolute; right: 30px; display: flex; gap: 5px; top: -5px;}
