@@ -1919,7 +1919,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceIn .servOption .servOptionList { display: flex; gap: 30px; }
 .serviceIn .servOption .servOptionList>li { flex: 1; box-sizing: border-box; border-radius: 20px; background: #FFFFFF; padding: 45px; position: relative; border: 1px solid #E2E2E2; }
 .serviceIn .servOption .servOptionList li .serv-img { position: absolute; top: 45px; right: 45px; }
-.serviceIn .servOption .servOptionList>li .serv-status { position: absolute; top: -5px; left: 25px; }
+.serviceIn .servOption .servOptionList>li .serv-status { position: absolute; top: -7px; left: 25px; }
 
   /* 사용중 */
   .serviceIn .servOption .servOptionList>li.in-use { box-shadow: 0px 5px 20px #00000012; border: 2px solid #6F55EB; }
@@ -1931,7 +1931,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .serviceIn .servOption .orangeText { color: #F56318; font-weight: 900; letter-spacing: -0.84px; font-size: 24px; }
 .serviceIn .servOption .greyText { color: #B9B9B9; }
 .serviceIn .servOption .servCont { color: #333333; margin-top: 20px; margin-bottom: 20px; font-size: 16px; line-height: 26px; }
-.serviceIn b.blue { color:#0062F6; }
+.serviceIn b.blue { color:#0062F6!important; }
 .serviceIn .servOption .servCont b { color:#333; }
 .serviceIn .servOption .servOptionList .t-button-m { width: 100%; background: #0062F6; border-radius: 5px; height: 55px; font-size: 16px; font-weight: bold; }
 
@@ -1943,7 +1943,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 .apply-tip:after { content: url(/images/apply_arrow.svg); position: absolute; left: 20px; top: -13px; }
 
 
-.serviceIn .servOption .contText { margin-top:30px; }
+.serviceIn .servOption .contText { margin-top:30px; color:#333;}
 .serviceIn .servOption .contText.t-bullet-01 li:after { top: 10px; background-color: #333333; }
 .serviceIn .servOption .contText.t-bullet-01 .pc-text-1 { font-weight:bold; }
 .serviceIn .servOption .textInfo + .contText { margin-top:0; }
@@ -2044,52 +2044,65 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 
 
 
-    /* 모바일 */
+    /* (m) 도움센터 - 이용중인 요금제 */
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) { padding: 0 0 200px; background: #F5F7FA; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap { margin: 15px; width: auto; gap: 5px; flex-wrap: wrap; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap .m-pageTap { color: #333; border-radius: 5px; border: 1px solid #E2E2E2; width: calc(50% - 2.5px); flex: none; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap .m-pageTap { color: #333; border-radius: 5px; border: 1px solid #E2E2E2; width: calc(50% - 2.5px); flex: none; font-size:15px; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap .m-pageTap.active { background:#5948B0; color:#fff; }
-    .m-academy-mngr-Wrap .serviceIn .servOption { margin-top: 0; padding: 20px 20px 50px; border-radius: 20px 20px 0 0; }
+    .m-academy-mngr-Wrap .serviceIn .servOption { margin-top: 0; padding: 0 15px 50px;}
     .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList { flex-direction: column; gap:20px; }
-    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList>li { padding: 35px 25px 25px; }
-    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList li .serv-img { top: 30px; right: 25px; }
-    .m-academy-mngr-Wrap .serviceIn .servOption .servCont { margin-top: 20px; font-size: 13px; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .t-button-m { height:46px; line-height: 46px; }
+    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList>li { padding: 30px 20px; border-radius: 15px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList li .serv-img { top: 30px; right: 20px; height: 70px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .serv-mainT { font-size: 32px; line-height: 38px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .orangeText { font-size: 20px; letter-spacing: -0.7px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .servCont { font-size: 14px; margin-bottom: 15px; line-height: 22px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .use-info { height: 46px; border-radius: 4px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .use-info.option02 { border-radius: 5px; display:none; flex-direction: column; gap: 5px; height: 67px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .use-info.option02.on { display:flex;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .contText { margin-top:20px; line-height: 22px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList>li .serv-status { left: 20px;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .textInfo { text-align: center!important;}
+    .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList .t-button-m { height:46px; }
+
+    /* 하단 고정 영역 */
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .mySelect-Wrap { box-shadow: 0px -3px 10px #0000000D; padding: 15px; height: 100%; box-sizing: border-box; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .mySelect-Wrap .sv-icon { width: 20px; margin-right:7px; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .mySelect-Wrap .t-button-m { height:40px; line-height: 40px; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox { z-index: 1; bottom: 65px; border-top: 0; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .toggle-closeBtn { width: 80px; top: -16px; height: 16px; background: #FFFFFF; border-radius: 10px 10px 0 0; left: 50%; transform: translateX(-50%); }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .mySelect-Wrap { padding: 15px 15px 11px; height: 100%; box-sizing: border-box; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .colorBG { border: 1px solid #E2E2E2; padding: 15px; border-radius: 4px; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .toggle-closeBtn { width: 80px; top: -16px; height: 16px; background: #FFFFFF; border-radius: 10px 10px 0 0; left: 50%; transform: translateX(-50%); box-shadow: 0px -3px 10px #0000000D;}
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .colorBG { border: 1px solid #E2E2E2; padding:12px 15px; border-radius: 4px; justify-content: flex-start;}
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .colorBG .fs14 { font-size:14px!important; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .toggle-closeBtn:before { margin-left: -7px; width: 14px; height: 7px; top: 7px; background: transparent url(/images/login-arrow.png) no-repeat center / 100%; border-radius: 0; transform: rotate(180deg); }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .colorBG.setBoxCont { flex-direction: column; align-items: flex-start !important;}
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .colorBG.setBoxCont .pc-grey82 {width: 100%; margin-bottom: 2px; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .toggle-closeBtn:before { margin-left: -7px; width: 14px; height: 7px; bottom: 0; top: auto; background: transparent url(/images/on_arrow.png) no-repeat center / 100%; border-radius: 0; transform: rotate(180deg); }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .t-button-m { border-radius: 4px; font-size:13px; font-weight: bold; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .sub-txt { font-size: 13px; margin-top:12px; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .sub-txt { font-size: 12px; margin-top: 15px; color: #333333; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox + .btmBg { display:none; background-color: #000000B3; position: fixed; top: 0; left: 0; width: 100%; height: 100%; justify-content: center; align-items: center; z-index: 0; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .text { font-size:14px; font-weight: 500; color:#333; }
-    .m-academy-mngr-Wrap .serviceIn + .btm-FixBtnbox .t-button-underline { margin-left:0; font-size:13px; margin-top:7px; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox .set.on { display:none; }
-    .m-academy-mngr-Wrap .m-list-help .setBox .setBoxCont { border-width: 1px 1px 0; background:#FCFBFF; display: flex; padding: 20px; align-items: center !important; border: 1px solid #E2E2E2; border-radius: 10px 10px 0 0; box-sizing: border-box; }
+    .m-academy-mngr-Wrap .m-list-help .setBox .t-button-blue { background:#5D39FF;}
+    .m-academy-mngr-Wrap .m-list-help .setBox .setBoxCont { background: #FCFBFF; display: flex; padding: 15px; align-items: center !important; border: 1px solid #E2E2E2; border-width: 1px 1px 0; border-radius: 4px 4px 0 0!important; box-sizing: border-box; }
     .m-academy-mngr-Wrap .m-list-help .setBox .imgCircle { width: 60px; height: 60px; }
     .m-academy-mngr-Wrap .m-list-help .setBox .imgCircle img { height:28px; }
     .m-academy-mngr-Wrap .m-list-help .setBox .textTit { font-size: 15px; line-height: 18px; }
     .m-academy-mngr-Wrap .m-list-help .setBox .textSubTit { margin-top: 10px; color: #666666; font-size: 12px; line-height: 18px; }
-    .m-academy-mngr-Wrap .m-list-help .setBox .t-button-sm { border-radius: 0px 0px 10px 10px; font-weight: bold; width: 100%; }
-    .m-academy-mngr-Wrap .m-list-help .setBox + .setBox { margin-top:12px; }
+    .m-academy-mngr-Wrap .m-list-help .setBox .t-button-sm { border-radius: 0px 0px 4px 4px; font-weight: bold; width: 100%; }
+    .m-academy-mngr-Wrap .m-list-help .setBox + .setBox { margin-top:10px; }
     .m-academy-mngr-Wrap .m-list-help .textBox { border-radius: 4px; flex:1; padding: 12px 10px; text-align: center; display: block; }
-    .m-academy-mngr-Wrap .m-list-help .textSub { color: #666666; margin-top:4px; font-size: 11px; }
-    .m-academy-mngr-Wrap .m-list-help .textBoxSet { display: flex; gap: 5px; margin-top: 10px; margin-bottom: 4px; }
-    .m-academy-mngr-Wrap .m-list-help .fs14.pt-color { margin-top:12px; margin-bottom:25px; line-height: 22px; font-size: 14px!important; }
+    .m-academy-mngr-Wrap .m-list-help .textSub { color: #666666; margin-top:2px; font-size: 11px; }
+    .m-academy-mngr-Wrap .m-list-help .textBoxSet { display: flex; gap: 5px; margin-top: 10px;}
+  /*   .m-academy-mngr-Wrap .m-list-help .fs14.pt-color { margin-top:12px; margin-bottom:25px; line-height: 22px; font-size: 14px!important; } */
     .m-academy-mngr-Wrap .m-list-help .setBox02 .textSubTit { font-size: 13px; line-height:20px; margin-top:7px; }
-    .m-academy-mngr-Wrap .m-list-help .setBox02 .setBoxCont { border-radius: 10px; position: relative; }
-    .m-academy-mngr-Wrap .m-list-help .setBox02 .setBoxCont .t-button-xs { height: 34px; padding: 0 20px; font-weight: bold; border-radius: 4px; position: absolute; right: 0; bottom: 0; }
+    .m-academy-mngr-Wrap .m-list-help .setBox02 .setBoxCont { border-radius: 4px!important; position: relative; border-width: 1px; }
+    .m-academy-mngr-Wrap .m-list-help .setBox02 .setBoxCont .t-button-xs { height: 34px; padding: 0 20px; font-weight: bold; border-radius: 4px; position: absolute; right:-1px; bottom:-1px; }
     .m-academy-mngr-Wrap .m-list-help .pr80 { padding-right:80px }
 
+
     /* 화살표버튼 클릭시 */
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .mySelect-Wrap { padding: 15px 15px 20px; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .toggle-closeBtn:before { transform: rotate(0deg); }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .set.off { display:none; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .set.on { display:block; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on + .btmBg { display: flex; }
-    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .sub-txt { margin-top:15px; }
+    .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .sub-txt { margin-bottom:12px; }
     .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) .btm-FixBtnbox.on .textBoxSet { display:none; }
 
 

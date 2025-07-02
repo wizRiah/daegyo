@@ -28,12 +28,14 @@
 
 
         <div class="m-list-help">
+
           <div class="m-pageTap-wrap">
             <button type="button" class="m-pageTap false">서비스신청정보</button>
-            <button type="button" class="m-pageTap false">이용중인 요금제</button>
+            <button type="button" class="m-pageTap active">이용중인 요금제</button>
             <button type="button" class="m-pageTap false">부가서비스 신청 및 해지</button>
-            <button type="button" class="m-pageTap active">문자발송 발신번호 등록/접수</button>
+            <button type="button" class="m-pageTap">문자발송 발신번호 등록/접수</button>
           </div>
+
 
 
 
@@ -44,8 +46,9 @@
             <div class="servOption">
               <ul class="servOptionList">
 
-                <!-- 베이직 -->
-                <li>
+                <!-- 베이직 사용중 -->
+                <!-- 사용중시 클래스 "in-use" 추가-->
+                <li class="in-use">
                   <img src="/images/b-inuse.png" class="serv-status" alt="사용중">
                   <div>
                     <div>
@@ -56,10 +59,26 @@
                     </div>
                     <img class="serv-img" src="/images/serv-Img01.png" alt="">
                   </div>
+
                   <p class="servCont">
-                    <b class="blue">없는게 없는 강력한 Free</b><br><b>50명 미만</b>의 학원이 사용 하기에 적합 합니다.
+                    <b class="blue">원생 등록 수 제한이 없는 무료</b><br><b>50명 미만</b>의 학원이 사용 하기에 적합 합니다.
                   </p>
-                  <button type="button" class="t-button-m">Free (무료)</button>
+
+            
+                  <div class="use-info"><b class="pt-color ">basic (무료)</b>요금제 사용중</div>
+
+                  <!-- 다운그레이드 신청시 클래스 "on" 추가 -->
+                  <div class="use-info option02">
+                    <p>
+                      <b class="pt-color ">basic</b>
+                      요금제 변경</p>
+                    <p class="fs13"><b>요금제 적용 예상일 : </b>
+                      <b class="orange-txt">25년 9월1일</b>
+                    </p>
+                  </div>
+                  <!-- /다운그레이드 신청시 클래스 "on" 추가 -->
+
+
                   <ul class="t-bullet-01 contText">
                     <li><span class="pc-text-1">원생 등록 수는 제한이 없습니다.</span></li>
                     <li>자동으로 출결을 기록하고 확인할 수 있습니다.</li>
@@ -70,8 +89,9 @@
                     <li>수업 시작일에 <span class="pc-text-1">청구서</span>는 <span class="pc-text-1">수동</span>으로 생성할 수
                       있습니다.</li>
                   </ul>
+
                 </li>
-                <!-- /베이직 -->
+                <!-- /베이직 사용중 -->
 
 
                 <!-- 스마트 -->
@@ -86,11 +106,26 @@
                     </div>
                     <img class="serv-img" src="/images/serv-Img02.png" alt="">
                   </div>
+
                   <p class="servCont">
-                    <b class="blue">스마트한 학원비 청구,수납 자동화</b><br><b>50명~100명</b> 규모의 학원이 사용 하기에 적합
-                    합니다.
+                    <b class="blue">스마트한 학원비 청구,수납 자동화</b><br><b>50명~100명</b> 규모의 학원이 사용 하기에 적합 합니다.
                   </p>
-                  <button type="button" class="t-button-m">업그레이드</button>
+
+                  <div class="use-info" style="display: none;"><b class="pt-color ">smart</b>요금제 사용중</div>
+                  
+                  <!-- 다운그레이드 신청시 클래스 "on" 추가 -->
+                  <div class="use-info option02">
+                    <p>
+                      <b class="pt-color ">smart</b> 요금제 사용중</p>
+                    <p class="fs13"><b>요금제 사용 마감일 : </b>
+                      <b class="orange-txt">25년 9월1일</b>
+                    </p>
+                  </div>
+                  <!-- /다운그레이드 신청시 클래스 "on" 추가 -->
+
+                  <button type="button" class="t-button-m">요금제 즉시 적용하기</button>
+                  <p class="pc-grey82 fs12 mt10 textInfo">버튼을 클릭하시면 요금제가 즉시 적용됩니다.</p>
+
 
                   <ul class="t-bullet-01 contText">
                     <li><span class="pc-text-1">basic의 모든 기능 포함</span></li>
@@ -107,16 +142,28 @@
                 </li>
                 <!-- /스마트 -->
 
-                <!-- 오픈 준비중 상태 -->
-                <li class="preparing">
-                  <div class="servInfoText">
+
+                <!-- 마스터 -->
+                <li>
+                  <div>
                     <p class="serv-mainT">master</p>
-                    <img class="serv-img" src="/images/serv-Img03.png" alt="">
+                    <p>
+                      <span class="orangeText">00,000</span>
+                      <span class="fs14 pc-text-1">원<span class="greyText">/</span>월</span>
+                    </p><img class="serv-img" src="/images/serv-Img03.png" alt="">
                   </div>
+
                   <p class="servCont">
-                    <b>막힘 없는 학원운영의 완성</b><br><b>100명 이상</b> 규모의 학원이 사용 하기에 적합 합니다.
+                    <b class="blue">막힘 없는 학원운영의 완성</b><br><b>100명 이상</b> 규모의 학원이 사용 하기에 적합 합니다.
                   </p>
-                  <button type="button" class="t-button-m">오픈 준비중</button>
+
+                  <div class="use-info" style="display: none;">
+                    <b class="pt-color ">master</b>요금제 사용중
+                  </div>
+                    
+                  <button type="button" class="t-button-m">요금제 즉시 적용하기</button>
+                  <p class="pc-grey82 fs12 mt10 textInfo">버튼을 클릭하시면 요금제가 즉시 적용됩니다.</p>
+
                   <ul class="t-bullet-01 contText">
                     <li>
                       <span class="pc-text-1">smart의 모든 기능 포함</span>
@@ -133,8 +180,10 @@
                         학부모에게 공유</span>할 수 있으며, 웹 스토리지와 연동되어 사용됩니다.
                     </li>
                   </ul>
+
                 </li>
-                <!-- /오픈 준비중 상태 -->
+                <!-- /마스터 -->
+
 
 
               </ul>
@@ -145,43 +194,55 @@
 
 
 
-          <!-- 하단 고정영역 -->
-          <div class="btm-FixBtnbox on">
 
-            <!-- toggle-closeBtn 클릭시 btm-FixBtnbox에 on 추가해주세용. -->
+          <!-- 하단 고정영역 -->
+          <div class="btm-FixBtnbox">
+
+            <!-- toggle-closeBtn 클릭시 btm-FixBtnbox에 클래스 "on" 추가해주세용. -->
             <button type="button" class="toggle-closeBtn"></button>
 
             <div class="mySelect-Wrap">
 
               <div class="colorBG flex-set">
-                <img class="sv-icon" src="/images/i_money.png" alt="">
-                <span class="fs14 pc-text-1 mr10">이용중인 요금제 :</span><b class="fs18 pt-color">basic</b>
+                <img class="sv-icon" src="/images/i_money_m.png" alt="">
+                <span class="fs14 pc-text-1 mr3">이용중인 요금제 :</span><b class="fs14 pt-color">basic (무료)</b>
               </div>
 
 
-              <!-- 사업자 정보 인증 전 -->
-              <div style="display: none;">
+              <!-- 사업자 정보 인증 전에 보이게 해주세용 -->
+              <div style="/* display: none; */">
 
-
+                <!-- toggle-closeBtn 클릭시 안보일거에요 -->
                 <div class="set off">
+                  <p class="sub-txt">요금제 및 부가서비스 신청을 위해서 아래 2가지 정보수집이 필요 합니다.</p>
                   <div class="btn-set wd100 mt10">
                     <button type="button" class="t-button-m t-button-orange2">사업자 정보 인증하기</button>
                     <button type="button" class="t-button-m t-button-orange2">결제정보 등록하기</button>
                   </div>
                 </div>
+                <!-- /toggle-closeBtn 클릭시 안보일거에요 -->
 
 
-                <div class="set on mt15">
+                <!-- toggle-closeBtn 클릭시 보일거에요 -->
+                <div class="set on mt10">
 
-                  <p class="text">이용중인 부가서비스</p>
-
-                  <div class="h-txt-c mt20 mb25">
-                    <span class="text pc-grey82 text-regular">"부가서비스를 사용하지 않고
-                      있습니다."</span>
-                    <button type="button" class="t-button-underline t-button-nobg">함께 사용하면 좋은 부가서비스 보러가기</button>
+                  <!-- 이용중인 부가서비스 -->
+                  <div class="setBox">
+                    <div class="setBoxCont colorBG">
+                      <div class="flex-set">
+                        <img class="sv-icon" src="/images/i-com.png" alt="">
+                        <span class="fs14 pc-text-1">이용중인 부가서비스</span>
+                      </div>
+                      <p class="mt10 fs14 pc-grey82 h-txt-c">"부가서비스를 사용하지 않고
+                        있습니다."</p>
+                    </div>
+                    <button type="button" class="t-button-sm t-button-blue">함께 사용하면 좋은 부가서비스 보러가기</button>
                   </div>
+                  <!-- /이용중인 부가서비스 -->
 
-                  <!-- 사업자인증 -->
+                  <p class="sub-txt">요금제 및 부가서비스 신청을 위해서 아래 2가지 정보수집이 필요 합니다.</p>
+                  
+                  <!-- 사업자인증 필요-->
                   <div class="setBox">
                     <div class="setBoxCont">
                       <div class="imgCircle mr15"><img src="/images/pay_img05.svg" alt=""></div>
@@ -190,10 +251,11 @@
                         <p class="textSubTit">사업자 유효성 검증 후 요금제 업그레이드 및 부가서비스를 신청할 수 있습니다.</p>
                       </div>
                     </div>
-                    <button type="button" class="t-button-sm t-button-orange2 btn165">사업자 정보 인증하기</button>
+                    <button type="button" class="t-button-sm t-button-orange2">사업자 정보 인증하기</button>
                   </div>
+                  <!-- /사업자인증 필요 -->
 
-                  <!-- 결제정보 등록 -->
+                  <!-- 결제정보 등록 필요 -->
                   <div class="setBox">
                     <div class="setBoxCont">
                       <div class="imgCircle mr15"><img src="/images/pay_img06.svg" alt=""></div>
@@ -204,34 +266,52 @@
                     </div>
                     <button type="button" class="t-button-sm t-button-orange2 btn165">결제정보 등록하기</button>
                   </div>
-                </div>
+                  <!-- /결제정보 등록 필요 -->
 
-                <p class="sub-txt">요금제 및 부가서비스 신청을 위해서 2가지 정보수집이 필요 합니다.</p>
+
+                </div>
+                <!-- /toggle-closeBtn 클릭시 보일거에요 -->
+
 
               </div>
-              <!-- /사업자 정보 인증 전 -->
+              <!-- /사업자 정보 인증 전에 보이게 해주세용 -->
 
 
-              <!-- 사업자 정보 인증 완료 -->
-              <div style="/* display: none; */">
 
+              <!-- 사업자 정보 인증 완료시 보이게 해주세용 -->
+              <div style="display: none;">
+
+                <!-- toggle-closeBtn 클릭시 안보일거에요 -->
                 <div class="textBoxSet set off">
-                  <div class="textBox">
 
+                  <div class="textBox">
                     <p class="fs13 pc-text-1">사업자 인증 <b class="pc-orange2">완료</b></p>
                     <p class="textSub">완료일 : <b class="pc-text-1">2025.06.09</b></p>
                   </div>
-                  <div class="textBox">
 
+                  <div class="textBox">
                     <p class="fs13 pc-text-1">결제정보 등록 <b class="pc-orange2">완료</b></p>
                     <p class="textSub">완료일 : <b class="pc-text-1">2025.06.09</b></p>
                   </div>
+
                 </div>
+                <!-- /toggle-closeBtn 클릭시 안보일거에요 -->
 
-                <div class="set on mt15">
-                  <p class="text">이용중인 부가서비스</p>
 
-                  <p class="fs14 pt-color"><b>신용카드 단말기 연동, 비대면 간편결제 연동, KIOSK(키오스크) 연동, PC 용량추가, 080 수신거부 서비스</b></p>
+                <!-- toggle-closeBtn 클릭시 보일거에요 -->
+                <div class="set on mt10">
+                  <div class="setBox setBox02 mb15">
+                    <div class="setBoxCont colorBG">
+                      <div class="flex-set mb10">
+                        <img class="sv-icon" src="/images/i-com.png" alt="">
+                        <span class="fs14 pc-text-1">이용중인 부가서비스</span>
+                      </div>
+                      <p class="fs14 pt-color t-line-hgt22">
+                        <b>신용카드 단말기 연동, 비대면 간편결제 연동, KIOSK(키오스크) 연동, PC 용량추가, 080
+                          수신거부 서비스</b>
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="setBox setBox02">
                     <div class="setBoxCont">
@@ -241,7 +321,6 @@
                         <div class="textSubTit">인증 완료일 : <b class="pc-text-1">2025.06.09</b></div>
                       </div>
                     </div>
-
                   </div>
 
                   <div class="setBox setBox02">
@@ -253,16 +332,17 @@
                           <p class="pc-text-1 pr80">(담당자
                             : 홍길순)</p>
                         </div>
-
-                      </div><button type="button" class="t-button-xs t-button-orange2">변경하기</button>
+                      </div>
+                      <button type="button" class="t-button-xs t-button-orange2">변경하기</button>
                     </div>
 
                   </div>
 
                 </div>
+                 <!-- /toggle-closeBtn 클릭시 보일거에요 -->
 
               </div>
-              <!-- /사업자 정보 인증 완료 -->
+              <!-- /사업자 정보 인증 완료시 보이게 해주세용 -->
 
 
 
@@ -273,15 +353,10 @@
 
 
 
-          <!-- 고정영역 뒷배경 -->
-          <div class="btmBg"></div>
 
-
-
-
+          
 
         </div>
-
 
 
 
