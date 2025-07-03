@@ -1511,7 +1511,7 @@ location
     .textSubTit { color: #7E7E7E; margin-top:7px; font-size: 13px; }
     .textTit input { background: #FCFFAA; font-size:20px; font-weight: bold; color:#5D39FF; border-color: #5D39FF !important; text-align: center; height: 40px; margin: 0 10px;}
     .MainText { letter-spacing: -0.5px;}
-    .t-bullet-01.contText li { margin: 0; padding-left: 7px; }
+    .t-bullet-01.contText li { margin: 0; padding-left: 7px;}
     .textBox .t-bullet-01 li:after { top: 10px; background-color: #666666; }
     .bluePoint {color:#5D39FF; font-weight: bold;}
     .textBox .t-checkbox.checkbox01 input[type="checkbox"] + label {font-size: 16px; font-weight: 500; }
@@ -1979,21 +1979,20 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
     .pop-cont.validator .input-btn-wrap input:read-only::placeholder { color:#C2BCBC; font-weight:400; font-size:14px; }
     .pop-cont.validator .input-btn-wrap label { font-weight:600; margin-left:10px; background: #35267D; font-size:13px; width:100px; }
     .academy-mngr-Wrap .t-popup-wrap:has(.pop-cont.validator) .pop-body { border-radius: 0 0 15px 15px; }
-    .academy-mngr-Wrap .t-popup-wrap:has(.pop-cont.validator) .pop-container { padding: 0; min-height: 200px; border:0; }
+    .academy-mngr-Wrap .t-popup-wrap:has(.pop-cont.validator) .pop-container { padding: 0; min-height: 200px; border:0;}
     .pop-cont.validator .vali-wrap { max-height: 400px; overflow-y: auto; }
     .pop-cont.validator .vali-box { padding: 15px 30px 30px;}
-    .pop-cont.validator .contText { line-height: 20px; }
+    .pop-cont.validator .contText { line-height: 20px; word-break: break-all; }
     .pop-cont.validator .t-button-orange { background:#FF6001; border-color: #FF6001; }
     .pop-cont.validator .service-txt .t-button-xs { background:#62666B!important;position: absolute; right: 20px;bottom:20px; }
-    .pop-cont.validator .serviceSelect { min-width: 230px; max-width: 230px; }
+    .academy-mngr-Wrap .pop-cont.validator .serviceSelect { min-width: 230px; max-width: 230px; }
     .pop-cont.validator .serviceSelect.disabled { background:#F2F2F2;}
     .pop-cont.validator .serviceSelect.disabled:hover { cursor:default;}
     .pop-cont.validator .serviceSelect .dropdown { width:187px; }
     .pop-cont.validator .serviceSelect .login-info p { max-width: 132px; }
-    .pop-cont.validator .serviceSelect:after { background-image: url(/images/v-icon.png); opacity: 1; width: 11px; height: 7px; }
-    .pop-cont.validator .serviceSelect .dropdown ul li { padding: 0 24px 0 26px; }
-    .pop-cont.validator .serviceSelect .dropdown ul li:hover:before { top: 7px; }
-    .pop-cont.validator .service-set .main-text2 { max-width: 200px; }
+    .pop-cont.validator .serviceSelect:after { background-image: url(/images/v-icon.svg); opacity: 1; width: 8px; height: 5px;}
+    .pop-cont.validator .serviceSelect .dropdown ul li { padding: 0 24px 0 26px; word-break: break-all;}
+     .academy-mngr-Wrap  .pop-cont.validator .service-set .main-text2 { max-width: 200px; }
     .pop-cont.validator .ser-box { margin-bottom:0; background: #F9FAFC !important; border-color: #D8DCE5 !important; min-height:151px;}
     .pop-cont.validator .ser-box + .ser-box { margin-top:10px; }
     .pop-cont.validator .service-set .main-tit { font-size:16px;}
@@ -2024,13 +2023,33 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 
 
       /* 모바일 */
-      .m-academy-mngr-Wrap .pop-cont.validator { padding:20px; background:#fff!important;}
-      .m-academy-mngr-Wrap .pop-cont.validator .mainTit{ margin-bottom:30px; margin-top:10px; font-size:24px; letter-spacing: -0.6px; color:#7E7E7E; }
+      .m-academy-mngr-Wrap .pop-cont.validator { padding:20px 20px 90px; background:#fff!important;}
+      .m-academy-mngr-Wrap .pop-cont.validator .mainTit{ font-weight: 400; margin-bottom:30px; margin-top:10px; font-size:24px; letter-spacing: -0.6px; color:#7E7E7E; }
       .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input { border-radius: 4px 0 0 4px; height: 45px; font-size: 13px; padding: 0 15px;}
       .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input::placeholder {color:#BCBCBC; font-size: 13px;}
       .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap label { margin-left: 0; border-radius: 0px 4px 4px 0px; width: 84px; }
       .m-academy-mngr-Wrap .pop-cont.validator .fs14 { font-size:14px!important;}
-      .m-academy-mngr-Wrap .pop-cont.validator .box-bg { padding:20px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .infoList li { gap:15px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li { flex-direction: column; align-items: flex-start; gap:7px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li>span { color:#828282!important; line-height: 16px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li + li { margin-top:15px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li input { padding:0 15px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g { color:#666666; }
+      .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g li:after { background-color: #666666;}
+      .m-academy-mngr-Wrap .pop-cont.validator .contText.grey { color:#666666!important;}
+      .m-academy-mngr-Wrap .pop-cont.validator .statusSet { margin-top:10px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect { margin-top:0; height: 45px; padding: 15px 30px 15px 15px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info { font-size: 13px;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .acdNumber { font-size: 13px; margin-right: 9px; flex-shrink: 0;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info p { max-width: 100%;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet { position: relative;}
+      .m-academy-mngr-Wrap .pop-cont.validator .service-set { padding: 15px 15px 20px; border: 1px solid #D8DCE5; background: #F9FAFC; border-radius: 10px 10px 0 0; border-width: 1px 1px 0; }
+      .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet .t-button-sm{ width: 100%; border-radius: 0px 0px 10px 10px; }
+      .m-academy-mngr-Wrap .pop-cont.validator .main-text2 {  line-height: 22px !important;}
+      .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .dropdown { width: calc(100% - 49px);}
+      .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input:read-only::placeholder { color:#BCBCBC; font-size:13px; }
+      .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet + .serBoxSet { margin-top:20px;}
+      .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator) .bt-btnbox button { background:#62666B;font-size: 16px; height: 55px; line-height: 55px;}
 
 
 
@@ -2184,6 +2203,8 @@ button:has(.i-cancel) {width:112px;}
   /* 말풍선 */
   .serviceList .apply-tip {right: -40px; width: 194px; margin-top: 5px; padding:19px;}
   .serviceList .apply-tip:after { left: 80px;}
+  .serviceList .apply-tip.wd245 { width:245px!important;}
+  .serviceList .apply-tip.wd245:after { left:130px;}
   .serviceList .apply-tip.wd286 { width:286px!important;}
   .serviceList .apply-tip.wd286:after { left: 170px;}
 
