@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>부가서비스 신청 및 관리 상세_m.html</title>
+  <title>12.부가서비스 신청 및 관리_m</title>
   <link rel="stylesheet" href="../../css/font.css">
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/mngr_component.css">
@@ -18,18 +17,115 @@
   <!-- 모바일 전체 Wrap -->
   <div class="m-academy-mngr-Wrap">
 
+    <header>
+      <div class="header-top">
+        <div class="header-cnt">
+          <!-- 로고영역 --> <a class="m-logo"><img src="../..../..../../images/m_t_logo.png" style="width: 38px;"></a> <!-- /로고영역 -->
+          <!-- 학원선택 -->
+          <div class="acdmNm-wrap"><select class="acdmyNm">
+              <option value="0">통통통_002_B1 (DA009)</option>
+            </select></div> <!-- /학원선택 -->
+        </div>
+        <div class="btn-set">
+          <!--  <button class="logout-btn" type="button" @click="fnLogOut()"></button> -->
+          <!-- 알림버튼 --> <button type="button" class="alarmBTN"></button> <!-- 알림이 있는 경우 on클래스 추가. -->
+          <!-- /알림버튼 --> <button class="setBtn" type="button"></button></div> <!-- <layoutHeaderMenu /> -->
+      </div>
+    </header>
 
+    <div class="m-topMenu">
+      <ul class="location">
+        <li>
+          <p>home</p>
+        </li>
+        <li>도움센터</li>
+      </ul>
+      <ul class="menu-Wrap">
+        <li class="on"><a>통통통서비스</a></li>
+        <li class=""><a>고객센터</a></li>
+      </ul>
+    </div>
 
     <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
     <div class="container">
 
-
-
+      <section class="carousel" dir="ltr" aria-label="Gallery" tabindex="0">
+        <div class="carousel__viewport">
+          <ol class="carousel__track" style="transform: translateX(0px); transition: all; width: 100%;">
+           <!--  <li class="carousel__slide carousel__slide--visible carousel__slide--active" aria-hidden="false"
+              style="width: 25%;">
+              <div class="tab-3202">
+                <div class="active"><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3202"></i></div><span class="status">이용요금납부</span>
+                  </button></div>
+              </div>
+            </li>
+            <li class="carousel__slide carousel__slide--visible carousel__slide--next" aria-hidden="false"
+              style="width: 25%;">
+              <div class="tab-3203">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3203"></i></div><span class="status">납부내역조회</span>
+                  </button></div>
+              </div>
+            </li>
+            <li class="carousel__slide carousel__slide--visible" aria-hidden="false" style="width: 25%;">
+              <div class="tab-3337">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3337"></i></div><span class="status">환불내역조회</span>
+                  </button></div>
+              </div>
+            </li> -->
+            <li class="carousel__slide carousel__slide--visible" aria-hidden="false" style="width: 25%;">
+              <div class="tab-3204">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3204"></i></div><span class="status">문자발송내역</span>
+                  </button></div>
+              </div>
+            </li>
+            <li class="carousel__slide" aria-hidden="true" style="width: 25%;">
+              <div class="tab-3205">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3205"></i></div><span class="status">문자충전내역</span>
+                  </button></div>
+              </div>
+            </li>
+            <li class="carousel__slide" aria-hidden="true" style="width: 25%;">
+              <div class="tab-3206">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3206"></i></div><span class="status">면제내역</span>
+                  </button></div>
+              </div>
+            </li>
+            <li class="carousel__slide" aria-hidden="true" style="width: 25%;">
+              <div class="tab-3207">
+                <div class=""><button type="button">
+                    <div class="tab-bg"><i class="i-tab-3207"></i></div><span class="status">이용중인서비스</span>
+                  </button></div>
+              </div>
+            </li>
+          </ol>
+        </div><!-- <navigation /> -->
+        <!-- <Navigation  /> -->
+        <ol class="carousel__pagination">
+          <li class="carousel__pagination-item"><button type="button"
+              class="carousel__pagination-button carousel__pagination-button--active"
+              aria-label="Navigate to slide 1"></button></li>
+          <li class="carousel__pagination-item"><button type="button" class="carousel__pagination-button"
+              aria-label="Navigate to slide 2"></button></li>
+          <li class="carousel__pagination-item"><button type="button" class="carousel__pagination-button"
+              aria-label="Navigate to slide 3"></button></li>
+          <li class="carousel__pagination-item"><button type="button" class="carousel__pagination-button"
+              aria-label="Navigate to slide 4"></button></li>
+        </ol>
+        <div class="carousel__liveregion carousel__sr-only" aria-live="polite" aria-atomic="true">Item 1 of 7</div>
+      </section>
 
 
       <div class="content">
 
-        <div class="m-list-help">
+
+
+         <div class="m-list-help">
 
 
           <div class="m-pageTap-wrap">
@@ -48,7 +144,7 @@
                 <!-- 부가서비스 미사용상태 -->
                 <div class="box-bg">
                   <div class="statusSet">
-                    <img src="/images/b-recom.svg" alt="추천item">
+                    <img src="../../images/b-recom.svg" alt="추천item">
                   </div>
 
                   <div class="txt-set">
@@ -75,12 +171,12 @@
                 <!-- 부가서비스 신청접수 -->
                 <div class="box-bg">
                   <div class="statusSet">
-                    <img src="/images/b-recom.svg" alt="추천item">
+                    <img src="../../images/b-recom.svg" alt="추천item">
                   </div>
 
                   <div class="txt-set">
                     <span class="main-tit mb0">비대면 간편결제 (카카오톡 / SMS문자 결제)</span>
-                    <img src="/images/b-test.svg" alt="승인심사중">
+                    <img src="../../images/b-test.svg" alt="승인심사중">
                   </div>
 
                   <div class="h-txt-r height52Set">
@@ -104,11 +200,11 @@
                 <!-- 부가서비스 사용중 -->
                 <div class="box-bg">
                   <div class="statusSet">
-                    <img src="/images/b-recom.svg" alt="추천item">
+                    <img src="../../images/b-recom.svg" alt="추천item">
                   </div>
                   <div class="txt-set">
                     <span class="main-tit mb0">비대면 간편결제 (카카오톡 / SMS문자 결제)</span>
-                    <img src="/images/b-inuse.svg" alt="사용중">
+                    <img src="../../images/b-inuse.svg" alt="사용중">
                   </div>
                   <div class="h-txt-r height52Set">
                     <span class="fs14 pc-bora1">월 사용료 :</span>
@@ -127,11 +223,11 @@
                 <!-- 부가서비스 해지접수 -->
                 <div class="box-bg">
                   <div class="statusSet">
-                    <img src="/images/b-recom.svg" alt="추천item">
+                    <img src="../../images/b-recom.svg" alt="추천item">
                   </div>
                   <div class="txt-set">
                     <span class="main-tit mb0">비대면 간편결제 (카카오톡 / SMS문자 결제)</span>
-                    <img src="/images/b-inuse.svg" alt="사용중">
+                    <img src="../../images/b-inuse.svg" alt="사용중">
                   </div>
                   <div class="h-txt-r height52Set">
                     <span class="fs14 pc-bora1">월 사용료 :</span>
@@ -212,7 +308,7 @@
                 <div class="box-bg">
 
                   <div class="txt-set">
-                    <span class="main-tit mb0">PC 용량추가</span><img src="/images/b-test.svg" alt="승인심사중">
+                    <span class="main-tit mb0">PC 용량추가</span><img src="../../images/b-test.svg" alt="승인심사중">
                   </div>
 
                   <div class="h-txt-r">
@@ -246,14 +342,14 @@
                 <div class="box-bg">
 
                   <div class="txt-set">
-                    <span class="main-tit mb0">PC 용량추가</span><img src="/images/b-test.svg" alt="승인심사중">
+                    <span class="main-tit mb0">PC 용량추가</span><img src="../../images/b-test.svg" alt="승인심사중">
                   </div>
 
                   <div class="h-txt-r">
                     <p>
                       <span class="fs14 pc-bora1">월 사용료 :</span>
                       <span class="fs14 num-wrap">
-                        <span class="fs26 orange-txt num-txt">5,500</span>원
+                        <span class="fs26 orange-txt num-txt">22,000</span>원
                       </span>
                     </p>
                     <p class="fs12 grey">(당월납입 / VAT포함)</p>
@@ -284,7 +380,7 @@
                 <div class="box-bg">
 
                   <div class="txt-set">
-                    <span class="main-tit mb0">PC 용량추가</span><img src="/images/b-inuse.svg" alt="사용중">
+                    <span class="main-tit mb0">PC 용량추가</span><img src="../../images/b-inuse.svg" alt="사용중">
                   </div>
 
                   <div class="h-txt-r">
@@ -322,7 +418,7 @@
                 <!-- PC 용량 추가 사용중 변경 시 버튼 활성화 -->
                 <div class="box-bg">
                   <div class="txt-set">
-                    <span class="main-tit mb0">PC 용량추가</span><img src="/images/b-inuse.svg" alt="사용중">
+                    <span class="main-tit mb0">PC 용량추가</span><img src="../../images/b-inuse.svg" alt="사용중">
                   </div>
 
                   <div class="h-txt-r">
@@ -361,7 +457,7 @@
                 <div class="box-bg">
 
                   <div class="txt-set">
-                    <span class="main-tit mb0">PC 용량추가</span><img src="/images/b-inuse.svg" alt="사용중">
+                    <span class="main-tit mb0">PC 용량추가</span><img src="../../images/b-inuse.svg" alt="사용중">
                   </div>
 
                   <div class="h-txt-r">
@@ -427,11 +523,25 @@
 
 
 
-
+    <div class="footer-fixed">
+      <ul>
+        <li class="btn-gohome">
+          <button type="button" class="button">홈</button>
+        </li>
+        <li class="btn-allmenu">
+          <button type="button" class="button">전체메뉴</button>
+        </li>
+        <li class="btn-srchpp">
+          <button type="button" class="button">원생검색</button>
+        </li>
+        <li class="btn-mypage">
+          <button type="button" class="button">마이페이지</button>
+        </li>
+      </ul>
+    </div>
 
   </div>
   <!-- 모바일 전체 Wrap 끝 -->
-
 
 
 
