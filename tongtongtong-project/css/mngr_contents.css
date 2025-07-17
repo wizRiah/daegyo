@@ -1495,6 +1495,7 @@ location
  .textBox { align-items: center; display: flex; background: #FCFBFF; border: 1px solid #E2E2E2; border-radius: 10px; box-sizing: border-box; position: relative; overflow: hidden; } 
  .textBox .item-box { padding: 30px 40px; background: #FCFBFF; display: flex; height: 179px; box-sizing: border-box; width: 100%; } 
  .textBox ~ .textBox .item-box { height:155px; } 
+  .item-box.h155 { height:155px;}
  .textBox02 { background:#FCFCFC; padding: 30px 40px; } 
 
  /* 비활성화 */
@@ -1507,7 +1508,7 @@ location
  .textTitWrap { display: flex; flex-direction: column; justify-content: center; height: 100%; border-right: 1px solid #E2E2E2; padding-right: 50px; margin-right: 50px; } 
  .textTit { color: #333333; font-size: 20px; line-height: 24px; } 
  .textSubTit { color: #7E7E7E; margin-top:7px; font-size: 13px; } 
- .textTit input { background: #FCFFAA; font-size:20px; font-weight: bold; color:#5D39FF; border-color: #5D39FF !important; text-align: center; height: 40px; margin: 0 10px; } 
+ .textTit input { background: #FCFFAA; font-size:20px; font-weight: bold; color:#5D39FF; border-color: #5D39FF !important; text-align: center; height: 40px; margin: 0 10px;}
  .MainText { letter-spacing: -0.5px; } 
  .t-bullet-01.contText li { margin: 0; padding-left: 7px; } 
  .textBox .t-bullet-01 li:after { top: 10px; background-color: #666666; } 
@@ -1922,7 +1923,8 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  /* 사용중 */
  .serviceIn .servOption .servOptionList>li.in-use { box-shadow: 0px 5px 20px #00000012; border: 2px solid #6F55EB; } 
 
-.use-info { color: #333333; display:flex; height: 55px; border-radius: 5px; background: #F5F7FA; align-items: center; justify-content: center; font-size: 16px; } 
+.use-info { box-sizing: border-box; color: #333333; display:flex; height: 55px; border-radius: 5px; background: #F5F7FA; align-items: center; justify-content: center; font-size: 16px; }
+.academy-mngr-Wrap .use-info {padding: 10px 15px; }
 .use-info .pt-color { margin-right:3px; } 
 .serviceIn .servOption .servInfoText { min-height: 77px; display: flex; align-items: flex-start; } 
 .serviceIn .servOption .serv-mainT { font-size: 40px; line-height: 48px; margin-bottom: 5px; font-weight: bold; } 
@@ -1958,6 +1960,11 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .recom-box { background: #FFFFFF; box-sizing: border-box; border: 1px solid #E2E2E2; border-radius: 80px; height: 24px; font-size: 12px; color: #333333; padding: 0 10px; display: flex; align-items: center; justify-content: center; } 
  .recom-box img { margin-right:5px; } 
  .recom-box b { margin-left: 4px; color: #F56317; } 
+  /* 요금면제 적용중 */
+  .recom-box.exempt { color: #fff; background: #1CAE90; font-weight: bold; }
+  .academy-mngr-Wrap .use-info.exempt {height: 75px; flex-direction: column; gap: 7px;}
+  .m-academy-mngr-Wrap .serviceIn .servOption .use-info.exempt { height: 92px; flex-direction: column; gap:10px;}
+  .m-academy-mngr-Wrap .serviceIn .servOption .use-info.exempt .fs13 { line-height: 18px; }
 
 
  /* 사업자 정보 인증 완료 */
@@ -2087,11 +2094,13 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 
 
 
- /* (m) 도움센터 - 이용중인 요금제 */
- .m-academy-mngr-Wrap .m-list-help:has(.serviceIn) { padding: 0 0 215px; background: #F5F7FA; }
- .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap { margin: 15px; width: auto; gap: 5px; flex-wrap: wrap; }
- .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap .m-pageTap { font-weight: 500; color: #333; border-radius:5px; border: 1px solid #E2E2E2; width: calc(50% - 2.5px); flex: none; font-size:15px; }
- .m-academy-mngr-Wrap .m-list-help:has(.serviceIn)>.m-pageTap-wrap .m-pageTap.active { background:#5948B0; color:#fff; } 
+
+/* (m) 도움센터 - 이용중인 요금제 */
+.m-academy-mngr-Wrap .m-list-help:has(.serviceIn) { padding: 0 0 90px; }
+.m-academy-mngr-Wrap .m-list-help:has(.btm-FixBtnbox) { padding: 0 0 215px; background: #F5F7FA; }
+.m-academy-mngr-Wrap .m-list-help>.m-pageTap-wrap { margin: 15px; width: auto; gap: 5px; flex-wrap: wrap; }
+.m-academy-mngr-Wrap .m-list-help>.m-pageTap-wrap .m-pageTap { font-weight: 500; color: #333; border-radius:5px!important; border: 1px solid #E2E2E2!important; width: calc(50% - 2.5px); flex: none; font-size:15px; }
+.m-academy-mngr-Wrap .m-list-help>.m-pageTap-wrap .m-pageTap.active { background:#5948B0; color:#fff; }
  .m-academy-mngr-Wrap .serviceIn .servOption { margin-top: 0; padding: 0 15px 50px; } 
  .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList { flex-direction: column; gap:20px; } 
  .m-academy-mngr-Wrap .serviceIn .servOption .servOptionList>li { padding: 30px 20px; border-radius: 15px; } 
