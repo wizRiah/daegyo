@@ -1961,10 +1961,12 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .recom-box img { margin-right:5px; } 
  .recom-box b { margin-left: 4px; color: #F56317; } 
   /* 요금면제 적용중 */
-  .recom-box.exempt { color: #fff; background: #1CAE90; font-weight: bold; border:0; }
-  .academy-mngr-Wrap .use-info.exempt {height: 75px; flex-direction: column; gap: 7px;}
-  .m-academy-mngr-Wrap .serviceIn .servOption .use-info.exempt { height: 92px; flex-direction: column; gap:10px;}
-  .m-academy-mngr-Wrap .serviceIn .servOption .use-info.exempt .fs13 { line-height: 18px; }
+  .recom-box.exempt { color: #fff; background: #1CAE90; font-weight: bold; border:0;}
+  .use-info.exempt { line-height: 18px; position: relative; display: block; font-size: 14px; color: #828282; background: transparent; border-top: 1px solid #E2E2E2; padding: 15px 0 15px 23px; box-sizing: border-box; height: auto;}
+  .use-info.exempt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 18px; height: 18px; position: absolute; left: 0; }
+  .yellow-txt {color:#F56318; font-size: 14px; }
+  .m-academy-mngr-Wrap .serviceIn .servOption .use-info.exempt { height: auto; display: flex; line-height: 20px; flex-direction: column; font-size: 13px; align-items: flex-start; justify-content: flex-start;}
+
 
 
  /* 사업자 정보 인증 완료 */
@@ -2014,7 +2016,8 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .pop-cont.validator .btn-set .t-button-bora6 { background:#35267D!important; } 
  .pop-cont.validator .contText.bd-g { border-top:1px solid #D9DCE5; padding-top: 20px; } 
  .pop-cont.validator .infoList li + li.flex-start .fs13 { line-height: 36px; } 
- .pop-cont.validator .inputSet { display: flex; flex-direction: column; gap: 7px; width:100%; } 
+ .pop-cont.validator .inputSet { display: flex; flex-direction: column; gap: 7px; width:100%; }
+ .pop-cont.validator .inputSet input[type="text"].notEnter { background-color: #FFFDE2!important; border:1px solid #FF5656!important; } 
  .pop-cont.validator .infoList .inputSet span.pc-orange { line-height: 18px; } 
  .pop-cont.validator .contText.first { margin-left: -10px; } 
  .pop-cont.validator .mainTit { text-align: center; letter-spacing: -0.55px; font-size: 22px; font-weight: bold; color: #333333; margin-bottom: 10px; } 
@@ -2023,6 +2026,8 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .pop-cont.validator .error { padding:30px; } 
  .academy-mngr-Wrap .t-popup-wrap:has(.pop-cont.validator .error) .t-popup { width:673px!important; } 
  .pop-cont.validator .btn-set button:not(.t-button-orange).wd134 { width:134px!important; } 
+ .academy-mngr-Wrap .pop-cont.validator .contText + .btn-set.mb10 { margin-bottom:0!important; }
+
 
 
 
@@ -2057,6 +2062,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet + .serBoxSet { margin-top:20px; } 
  .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator) .bt-btnbox button { background:#62666B; font-size: 16px; height: 55px; line-height: 55px; } 
  .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText {color: #666666; }
+ .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText li:after { background:#666666;}
 
 
  /* 결제정보관리 팝업 */
