@@ -1498,6 +1498,17 @@ location
   .item-box.h155 { height:155px;}
  .textBox02 { background:#FCFCFC; padding: 30px 40px; } 
 
+        /* 스위치 문구 */
+        .flexBox {display: flex; align-items: center; justify-content: space-between; flex: 1; }
+        .t-switchTxt { vertical-align: middle; color: #999999; font-size: 14px; margin-right: 10px; }
+        .t-switch input[type="checkbox"]:checked + .t-switchTxt {  color:#5C61B7;}
+
+
+        /* 학부모용 모바일앱 결제방법 */
+        .textBox02.way {background-color: #FFFEE8;justify-content: space-between;}
+
+
+
  /* 비활성화 */
  .textBox .item-box.de-act { justify-content: space-between; display:none; align-items: center; background: #FCFBFFE6; position: absolute; top: 0; left: 0; } 
  .textBox .item-box.de-act.on { display:flex; } 
@@ -1509,6 +1520,7 @@ location
  .textTit { color: #333333; font-size: 20px; line-height: 24px; } 
  .textSubTit { color: #7E7E7E; margin-top:7px; font-size: 13px; } 
  .textTit input { background: #FCFFAA; font-size:20px; font-weight: bold; color:#5D39FF; border-color: #5D39FF !important; text-align: center; height: 40px; margin: 0 10px;}
+ .textTit input:disabled { background: #F5F5F5!important; border-color:#E2E2E2!important;}
  .MainText { letter-spacing: -0.5px; } 
  .t-bullet-01.contText li { margin: 0; padding-left: 7px; } 
  .textBox .t-bullet-01 li:after { top: 10px; background-color: #666666; } 
@@ -2053,40 +2065,37 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .academy-mngr-Wrap .pop-cont.validator .contText + .btn-set.mb10 { margin-bottom:0!important; }
 
 
-
-
-
- /* 모바일 */
- .m-academy-mngr-Wrap .pop-cont.validator { background:#fff!important; } 
- .m-academy-mngr-Wrap .t-popup:has(.bt-btnbox) .pop-cont.validator { padding:20px 20px 90px!important; } 
- .m-academy-mngr-Wrap .pop-cont.validator .mainTit { font-weight: 400; margin-bottom:30px; margin-top:10px; font-size:24px; letter-spacing: -0.6px; color:#7E7E7E; } 
- .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input { border-radius: 4px 0 0 4px; height: 45px; font-size: 13px; padding: 0 15px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input::placeholder { color:#BCBCBC; font-size: 13px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap label { margin-left: 0; border-radius: 0px 4px 4px 0px; width: 84px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .fs14 { font-size:14px!important; } 
- .m-academy-mngr-Wrap .pop-cont.validator .infoList li { gap:15px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li { flex-direction: column; align-items: flex-start; gap:7px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li>span { color:#828282!important; line-height: 16px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li + li { margin-top:15px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li input { padding:0 15px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g { color:#666666; } 
- .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g li:after { background-color: #666666; } 
- .m-academy-mngr-Wrap .pop-cont.validator .contText.grey { color:#666666!important; } 
- .m-academy-mngr-Wrap .pop-cont.validator .statusSet { margin-top:10px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect { margin-top:0; height: 45px; padding: 15px 30px 15px 15px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info { font-size: 13px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .acdNumber { font-size: 13px; margin-right: 9px; flex-shrink: 0; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info p { max-width: 100%; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet { position: relative; } 
- .m-academy-mngr-Wrap .pop-cont.validator .service-set { padding: 15px 15px 20px; border: 1px solid #D8DCE5; background: #F9FAFC; border-radius: 10px 10px 0 0; border-width: 1px 1px 0; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet .t-button-sm { width: 100%; border-radius: 0px 0px 10px 10px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .main-text2 { line-height: 22px !important; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .dropdown { width: calc(100% - 49px); } 
- .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input:read-only::placeholder { color:#BCBCBC; font-size:13px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet + .serBoxSet { margin-top:20px; } 
- .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator) .bt-btnbox button { background:#62666B; font-size: 16px; height: 55px; line-height: 55px; } 
- .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText {color: #666666; }
- .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText li:after { background:#666666;}
+  /* 모바일 */
+  .m-academy-mngr-Wrap .pop-cont.validator { background:#fff!important; padding: 15px 20px 30px;} 
+  .m-academy-mngr-Wrap .t-popup:has(.bt-btnbox) .pop-cont.validator { padding:15px 20px 90px!important; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .mainTit { font-weight: 400; margin-bottom:30px; margin-top:15px; font-size:24px; letter-spacing: -0.6px; color:#7E7E7E; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input { border-radius: 4px 0 0 4px; height: 45px; font-size: 13px; padding: 0 15px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input::placeholder { color:#BCBCBC; font-size: 13px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap label { margin-left: 0; border-radius: 0px 4px 4px 0px; width: 84px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .fs14 { font-size:14px!important; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .infoList li { gap:15px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li { flex-direction: column; align-items: flex-start; gap:7px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li>span { color:#828282!important; line-height: 16px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li + li { margin-top:15px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .infoList.col li input { padding:0 15px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g { color:#666666; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .contText.bd-g li:after { background-color: #666666; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .contText.grey { color:#666666!important; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .statusSet { margin-top:10px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect { margin-top:0; height: 45px; padding: 15px 30px 15px 15px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info { font-size: 13px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .acdNumber { font-size: 13px; margin-right: 9px; flex-shrink: 0; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .login-info p { max-width: 100%; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet { position: relative; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .service-set { padding: 15px 15px 20px; border: 1px solid #D8DCE5; background: #F9FAFC; border-radius: 10px 10px 0 0; border-width: 1px 1px 0; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet .t-button-sm { width: 100%; border-radius: 0px 0px 10px 10px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .main-text2 { line-height: 22px !important; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .dropdown { width: calc(100% - 49px); } 
+  .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input:read-only::placeholder { color:#BCBCBC; font-size:13px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet + .serBoxSet { margin-top:20px; } 
+  .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator) .bt-btnbox button { background:#62666B; font-size: 16px; height: 55px; line-height: 55px; } 
+  .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText {color: #666666; }
+  .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText li:after { background:#666666;}
 
 
  /* 결제정보관리 팝업 */
