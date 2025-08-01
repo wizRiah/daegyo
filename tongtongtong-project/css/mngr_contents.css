@@ -1503,10 +1503,11 @@ location
         .t-switchTxt { vertical-align: middle; color: #999999; font-size: 14px; margin-right: 10px; }
         .t-switch input[type="checkbox"]:checked + .t-switchTxt {  color:#5C61B7;}
 
-
-        /* 학부모용 모바일앱 결제방법 */
+    /* 학부모용 모바일앱 결제방법 */
         .textBox02.way {background-color: #FFFEE8;justify-content: space-between;}
-
+        .wayBox .textBox02:first-child {border-radius: 10px 10px 0 0; }
+        .textBox02.way + .textBox02 { background-color: #FFFEE8; }
+        .wayBox .textBox02:nth-child(2) { border-radius: 0 0 10px 10px; border-top: 0;}
 
 
  /* 비활성화 */
@@ -1530,7 +1531,7 @@ location
  .textBox .t-checkbox.checkbox01 input[type="checkbox"]:checked + label:before { font-size: 18px; } 
  .textBox .t-checkbox.checkbox01 input[type="checkbox"] + label:after { width: 5px; height: 5px; top: 7px; left: 8px; } 
  .textBox .t-checkbox.checkbox01 input[type="checkbox"] + label + input[type="checkbox"] + label { margin-left: 30px; } 
- .textBox .check-list li { margin-right: 30px; } 
+ .textBox .check-list li:not(:only-child) {margin-right: 30px; } 
 
 
 
