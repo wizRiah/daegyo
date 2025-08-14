@@ -2290,7 +2290,15 @@ button:has(.i-cancel) { width:112px; }
 .serviceApply .mainText { font-size:24px; color:#666666; } 
 .serviceApply .textBox .item-box { padding:20px 40px; } 
 .serviceApply .status { padding: 6px 12px; box-sizing: border-box; background: #FFAA01; border-radius: 50px; font-size: 12px; font-weight: bold; color: #fff; } 
-.serviceApply .status.prep { background:#FF5E18; } 
+.serviceApply .status.prep { background:#FF5E18; }
+.serviceApply .status.exempt {border:1px solid #FF6F00; color:#FF6F00; background-color: #fff;}
+.serviceApply .status + .status { margin-left:5px;}
+.benefit { color:#B637FF; font-size: 16px; font-weight: bold; margin-bottom:12px;} 
+
+
+/* 추천item인 경우 border 두껍게 */
+.serviceList .box-bg:has(.recomItem) {border-width: 2px; }
+.serviceList .box-bg:has(.status:not(.prep,.exempt)) { background: #FFFDE2; border-width: 2px; border-color: #FFAA00;}
 
  /* 말풍선 */
  .serviceList .apply-tip { right: -40px; width: 194px; margin-top: 5px; padding:19px; } 
@@ -2299,6 +2307,17 @@ button:has(.i-cancel) { width:112px; }
  .serviceList .apply-tip.wd245:after { left:130px; } 
  .serviceList .apply-tip.wd286 { width:286px!important; } 
  .serviceList .apply-tip.wd286:after { left: 170px; } 
+
+
+ /* 학원 통계 신청하기 클릭시 팝업 */
+.serviceList .box-bg .ageguideBox .mini-popup { width: 260px; border-radius: 15px; box-shadow: 0px 5px 6px #00000026; border-color: #000000; top: -80px; right: -20px; }
+.serviceList .box-bg .ageguideBox .mini-popup button.close { width: 43px !important; height: 43px !important; background-size: 13px !important; }
+.serviceList .box-bg .ageguideBox .mini-popup .min-wrap{ background: #F5F7FA; border: 1px solid #E2E2E2; border-radius: 10px; padding: 12px 15px; color: #333; font-size: 12px; font-weight: bold; line-height: 18px;}
+.serviceList .box-bg .ageguideBox .mini-popup .t-button-xs { width:95px;}
+
+
+
+
 
 
   /* (m) 도움센터 - 이용중인 서비스 - 부가서비스 신청 및 관리 */
