@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>수납_디자인수정_m</title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/mngr_component.css">
+  <link rel="stylesheet" href="../../css/mngr_contents.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+</head>
+
+<body>
+
+  <!-- 모바일 전체 Wrap -->
+  <div class="m-academy-mngr-Wrap">
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+
+
+      <div class="content">
+
+
+        <div class="m-list-student m-pay">
+          <ul class="tab-01">
+            <li><button type="button"><span class="status">미납자료</span></button></li>
+            <li class=""><button type="button"><span class="status">수강료</span></button></li>
+            <li class=""><button type="button"><span class="status">기타</span></button></li>
+            <li class="active"><button type="button"><span class="status">전체</span></button></li>
+          </ul>
+
+          <div class="status-box-set mb10" style="justify-content: flex-end;">
+            <span class="status-box bg-no-link"></span>
+            <span class="main-text">단말기 연동</span>
+          </div>
+
+
+          <div class="tit-wrap">
+            <p class="main-tit">전체</p>
+            <div class="btn-set ml30">
+              <button type="button" class="t-button-xs">정렬변경</button>
+            </div>
+          </div>
+
+
+          <!-- 기존 디자인 수정되는 부분 - 수납_수강료_m -->
+          <div class="boxList mt15">
+
+
+            <!-- 반복 덩어리 : 0) 미납자료인 경우 : 체크박스 추가했습니다, 실청구금액이 파란 글씨에여 -->
+            <div class="box-bg">
+              <div class="titwrap">
+                <!-- 체크박스 추가했어용 -->
+                <div class="t-checkbox checkbox01">
+                  <label>
+                    <input type="checkbox" name="checkForm">
+                    <span class="spanLabel"></span>
+                  </label>
+                </div><span class="txt-label basic">일반</span>
+                <!-- 반명 -->
+                <p class="tit">일반 중등 2학년 수학반</p>
+              </div>
+
+              <span class="txt-label abso">수강료</span>
+
+              <ul class="innerUL">
+                <li><span>수강월 : </span>2025.08</li>
+                <li><span>수강기간 : </span>2025.08.17~2025.08.17</li>
+              </ul>
+
+              <div class="paySet">
+
+                <!-- 그룹핑 펼침,접힘 버튼 : 펼쳐진 상태인 경우 클래스 "on" 추가해주세요. -->
+                <button class="group-btn on" type="button"></button>
+
+                <div class="view-wrap">
+
+                  <!-- 반복 덩어리 -->
+                  <div class="payWrap">
+                    <div class="pay-detail">
+                      <div class="pay-view">(미납)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-bora6">수납&amp;수정</button>
+                    </div>
+
+                  </div>
+                  <!-- /반복 덩어리 -->
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- 반복 덩어리 -->
+
+
+            <!-- 반복 덩어리 : 1) 그룹핑 항목 펼쳐진상태-->
+            <div class="box-bg">
+              <div class="titwrap">
+                <span class="txt-label basic">일반</span>
+                <!-- 반명 -->
+                <p class="tit">일반 중등 2학년 수학반</p>
+              </div>
+
+              <span class="txt-label abso">수강료</span>
+
+              <ul class="innerUL">
+                <li><span>수강월 : </span>2025.08</li>
+                <li><span>수강기간 : </span>2025.08.17~2025.08.17</li>
+              </ul>
+
+              <div class="paySet">
+
+                <!-- 그룹핑 펼침,접힘 버튼 : 펼쳐진 상태인 경우 클래스 "on" 추가해주세요. -->
+                <button class="group-btn on" type="button"></button>
+
+                <div class="view-wrap">
+
+                  <!-- 반복 덩어리 -->
+                  <div class="payWrap">
+                    <div class="pay-detail">
+
+                      <div class="pay-view opt-charge">(완납)</div>
+
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-bora6">환불</button>
+                      <button type="button" class="t-button-xms t-button-grey1">수정</button>
+                    </div>
+
+                  </div>
+                  <!-- /반복 덩어리 -->
+
+                  <div class="payWrap">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-etc">(분납)<br>(전체환불)<br> (면제)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+
+                      <button type="button" class="t-button-xms t-button-grey1">조회&amp;수정</button>
+                    </div>
+
+                  </div>
+
+                  <div class="payWrap">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-etc">(분납)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-grey1">조회&amp;수정</button>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- /반복 덩어리 -->
+
+
+            <!-- 반복 덩어리 : 2) 그룹핑 항목 접힌상태 -->
+            <div class="box-bg">
+              <div class="titwrap">
+                <span class="txt-label basic">일반</span>
+                <!-- 반명 -->
+                <p class="tit">일반 중등 2학년 수학반</p>
+              </div>
+
+              <span class="txt-label abso">수강료</span>
+
+              <ul class="innerUL">
+                <li><span>수강월 : </span>2025.08</li>
+                <li><span>수강기간 : </span>2025.08.17~2025.08.17</li>
+              </ul>
+
+              <div class="paySet">
+
+                <!-- 그룹핑 펼침,접힘 버튼 -->
+                <button class="group-btn" type="button"></button>
+
+                <div class="view-wrap">
+
+                  <!-- 반복 덩어리 : 접혀있는 상태인 경우 : payWrap 하나만 보여주기, 나머지는 display:none 시켜주세용!-->
+                  <div class="payWrap">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-charge">(완납)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-bora6">환불</button>
+                      <button type="button" class="t-button-xms t-button-grey1">수정</button>
+                    </div>
+
+                  </div>
+                  <!-- /반복 덩어리 -->
+
+
+                  <div class="payWrap" style="display: none;">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-etc">(분납)<br>(전체환불)<br> (면제)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-grey1">조회&amp;수정</button>
+                    </div>
+
+                  </div>
+
+                  <div class="payWrap" style="display: none;">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-etc">(분납)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-grey1">조회&amp;수정</button>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+
+              </div>
+
+
+
+
+            </div>
+            <!-- /반복 덩어리 -->
+
+
+
+            <!-- 반복 덩어리 : 3) 데이터 하나만 있는 경우 -->
+            <div class="box-bg">
+              <div class="titwrap">
+                <span class="txt-label count">회차</span>
+                <!-- 반명 -->
+                <p class="tit">일반 중등 2학년 수학반</p>
+
+              </div>
+
+              <span class="txt-label abso">수강료</span>
+
+              <ul class="innerUL">
+                <li><span>발행일 : </span>2025.08</li>
+
+              </ul>
+
+              <div class="paySet">
+
+                <!-- 그룹핑 펼침,접힘 버튼 : view-wrap안에 payWrap이 하나만 있는경우에 안보이도록 css로 제거 시켜두었습니다. -->
+                <button class="group-btn" type="button"></button>
+
+                <div class="view-wrap">
+
+                  <!-- 반복 덩어리 -->
+                  <div class="payWrap">
+                    <div class="pay-detail">
+                      <div class="pay-view opt-charge">(완납)</div>
+                      <ul class="innerUL">
+                        <li><span>대상금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>할인금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li><span>(실)청구금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                        <li class="black-b"><span>수납금액 : </span>
+                          <p class="amout-num"><b>100,000</b>원</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-set wd100">
+                      <button type="button" class="t-button-xms t-button-bora6">환불</button>
+                      <button type="button" class="t-button-xms t-button-grey1">수정</button>
+                    </div>
+
+                  </div>
+                  <!-- /반복 덩어리 -->
+
+
+                </div>
+
+
+
+
+              </div>
+
+
+
+
+            </div>
+            <!-- /반복 덩어리 -->
+
+
+
+
+          </div>
+          <!-- /기존 디자인 수정되는 부분 - 수납_수강료_m-->
+
+          <button type="button" class="m-readmore">더보기<i class="m-arrow-b"></i></button>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+
+
+  </div>
+  <!-- 모바일 전체 Wrap 끝 -->
+
+
+
+
+</body>
+
+</html>
