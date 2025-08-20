@@ -4589,6 +4589,43 @@ faq
  .m-mobileEdu-Wrap .box-bd-bg { border-color: #5f5f5d36; background: #f7f7f7; } 
 
 
+ 
+
+/* 25.08.20 수정사항 */
+.content_dshBrd .top_mberType.custom .dshTit01 {position: absolute; left: 0; }
+.content_dshBrd .top_mberType.custom .type_mber {padding-top:0!important;  }
+.content_dshBrd .top_mberType.custom .type_mber .inner15:before { top:110px;}
+.content_dshBrd .top_mberType.custom .type_mber .inner15:has(.noticeBox.dp-none):before { top: 119px; }
+.content_dshBrd .top_mberType.custom .type_mber .innerWrap { align-items: flex-end; min-height: 117px;}
+.content_dshBrd .top_mberType.custom .type_mber .myInfo {margin-bottom: 25px; }
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox { min-height: 101px; border: 1px solid #F08C3C; position: relative; padding: 10px 0; height: 101px; background: #FFFFFF; border-radius: 15px; box-shadow: 0px 3px 5px #0000001A;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo { padding: 0 10px; }
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo strong { font-size: 12px; color: #F57A34; font-weight: bold;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul { margin-top:6px; padding: 6px 8px 0; border-top: 1px solid #F08C3C;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul li { display:flex; align-items: center; gap: 6px; padding:0;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul li + li { margin-top:5px;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul li:nth-of-type(2)>.smallTit { background:#F57A34;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul li .smallTit { background: #4BCB4B; font-size: 12px; color: #fff; border-radius: 50px; padding: 1px 5px; text-align: center; box-sizing: border-box;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo ul li .timeDb { min-width: 56px; font-size: 12px; color: #333333; text-align: center; flex: 1; }
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo .atndTit { display: flex; flex-direction: column; min-height: 29px; justify-content: center;}
+.content_dshBrd .top_mberType.custom .type_mber .atndcBox .atndcInfo .atndClass { color: #3F3938; font-size: 12px; font-weight: 500; margin-bottom: 1px;}
+.content_dshBrd .top_mberType.custom .type_mber .swiper-horizontal>.swiper-pagination-bullets,
+.content_dshBrd .top_mberType.custom .type_mber .swiper-pagination-bullets.swiper-pagination-horizontal,
+.content_dshBrd .top_mberType.custom .type_mber .swiper-pagination-custom, .swiper-pagination-fraction { position: relative; bottom: 0;}
+
+
+ @media only screen and (max-width: 320px) {
+ .content_dshBrd .top_mberType.custom .type_mber .inner15:has(.noticeBox:not(.dp-none)):before { top:110px!important; }
+ .content_dshBrd .top_mberType.custom .type_mber .inner15:has(.noticeBox.dp-none):before { top:119px!important; }
+ }
+/* /25.08.20 수정사항 */
+
+
+
+
+
+
+
 
 /* mobileEdu - 학부모/원생앱 대시보드 */
 .content_dshBrd { display:flex; flex-direction:column; height:100%; padding-bottom:230px; width:100%; box-sizing:border-box; } 
@@ -4615,8 +4652,8 @@ faq
  .content_dshBrd .type_normal { position:relative; /* margin-bottom:-40px; */ padding:0 15px; background:url(../images/dash_bg2.png) no-repeat; background-size:275px; background-position-y:0; background-position-x: right; } 
  .content_dshBrd .type_normal>.infoTxt { padding:50px 0 20px; font-size:19px; line-height:130%; font-weight:300; color:#333; } 
  .content_dshBrd .type_normal>.infoTxt strong { font-weight:600; } 
+ .content_dshBrd .top_mberType:has(.type_normal) { z-index: 1;}
  .content_dshBrd .type_normal:before { content:''; width:100%; height: 274px; position:absolute; left:0; top:0; background: #f5f0e8; z-index: -1; } 
-
  .content_dshBrd .top_mberType:has(.type_normal .infoTxt:only-child) + .btm_dashCo>.dashSchlBox:only-child { border-radius: 0; } 
 
 
