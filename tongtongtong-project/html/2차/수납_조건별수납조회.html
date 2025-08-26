@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>수납_조건별수납조회</title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/mngr_component.css">
+  <link rel="stylesheet" href="../../css/mngr_contents.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+
+      <!-- 페이지 컨텐츠 시작 -->
+      <div class="content sub">
+
+
+
+        <div class="main-cont">
+
+
+          <!-- 조건별수납조회 -->
+          <div class="layout-wrap conditionPay">
+
+            <p class="main-tit">수납집계</p>
+
+            <table class="t-basic-1 test">
+              <thead>
+                <tr>
+                  <th>인원</th>
+                  <th>건수</th>
+                  <th>카드 결제</th>
+                  <th>현금 결제</th>
+                  <th>은행 결제</th>
+                  <th>지역화폐 결제</th>
+                  <th>청구금액</th>
+                  <th>할인금액</th>
+                  <th>(실)청구금액</th>
+                  <th>수납금액</th>
+                  <th>환불금액</th>
+                  <th>면제금액</th>
+                  <th>(실)매출액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!-- 인원 -->
+                  <td>1명</td>
+                  <!-- 건수 -->
+                  <td>3건</td>
+                  <!-- 카드 결제 -->
+                  <td>1,333원</td>
+                  <!-- 현금 결제 -->
+                  <td>0원</td>
+                  <!-- 은행 결제 -->
+                  <td>0원</td>
+                  <!-- 지역화폐 결제 -->
+                  <td>0원</td>
+                  <!-- 청구금액 -->
+                  <td>1,333원</td>
+                  <!-- 할인금액 -->
+                  <td>0원</td>
+                  <!-- (실)청구금액 -->
+                  <td>1,333원</td>
+                  <!-- 수납금액 -->
+                  <td>1,333원</td>
+                  <!-- 환불금액 -->
+                  <td>333원</td>
+                  <!-- 면제금액 -->
+                  <td>0원</td>
+                  <!-- (실)매출액 -->
+                  <td>1,000원</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+            <div class="mt18 flex flex-end2">
+              <div class="btn-set items-end mr5">
+                <button type="button" class="t-button-xs t-button-white t-button-green-bd">엑셀받기</button>
+              </div>
+              <select>
+                <option value="10" selected="">10건</option>
+                <option value="20">20건</option>
+              </select>
+            </div>
+
+
+
+            <!-- 하단 테이블 -->
+            <table class="t-basic-1 test grey">
+              <thead>
+                <tr>
+                  <th style="width: 46px;">No</th>
+                  <th>원생</th>
+                  <th>수강월/<br>수강기간</th>
+                  <th style="width: 94px;">반명</th>
+                  <th>수납일자</th>
+                  <th>수납유형</th>
+                  <th>대상금액<br>(원)</th>
+                  <th>할인금액<br>(원)</th>
+                  <th>할인금액<br>(원)</th>
+                  <th>(실)청구금액<br>(원)</th>
+                  <th>수납</th>
+                  <th>상태</th>
+                  <th>수납<br>처리자</th>
+                  <th style="width: 86px;">비고</th>
+                  <th>할인사유</th>
+                  <th style="width: 100px;">관리</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <!-- No -->
+                  <td rowspan="3">1</td>
+
+                  <!-- 원생 -->
+                  <td rowspan="3">
+                    <span class="label">재원생</span>
+                    <br>
+                    <b>홍길동</b>
+                    <p>(닉네임)</p>
+                  </td>
+
+                  <!-- 수강월/수강기간 -->
+                  <td rowspan="3">
+                    <p><b>2023.07</b></p>
+                    <p>2023.07.23~<br>2024.07.23</p>
+                  </td>
+
+                  <!-- 반명 -->
+                  <td rowspan="3">중등부 2학년 수학반</td>
+
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p class="opt-charge">완납</p>
+                      <p class="smallBox">다건</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td>
+                    <div class="reson-wrap">
+                      <div class="reson-i"></div>
+                      <div class="reson-tip"> 분납 후 자동생성</div>
+                    </div>
+                  </td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+
+                </tr>
+
+                <!-- rowspan가진 tr 다음 tr에 클래스 td-group -->
+                <tr class="td-group">
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p>분납</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td>
+                    <div class="reson-wrap">
+                      <div class="reson-i"></div>
+                      <div class="reson-tip">분납 후 자동생성</div>
+                    </div>
+                  </td>
+
+                  <!-- 할인사유 -->
+                  <td>
+                    <div class="reson-wrap">
+                      <div class="reson-i"></div>
+                      <div class="reson-tip">할인 사유는 청구금액의 일부분을 할인 매월 10%이상 할앤 대상</div>
+                    </div>
+                  </td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+                </tr>
+
+
+                <!-- rowspan가진 tr 다음 마지막 tr 클래스 td-group last -->
+                <tr class="td-group last">
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p>분납</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td></td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+                </tr>
+
+                
+                <tr>
+                  <!-- No -->
+                  <td rowspan="3">1</td>
+                  <!-- 원생 -->
+                  <td rowspan="3"><span class="label absence">휴원생</span><span class="label discharge">퇴원생</span><span class="label nonregi">미등록생</span><br><b>홍길동</b>
+                  </td>
+                  <!-- 수강월/수강기간 -->
+                  <td rowspan="3">
+                    <p><b>2023.07</b></p>
+                    <p>2023.07.23~<br>2024.07.23</p>
+                  </td>
+                  <!-- 반명 -->
+                  <td rowspan="3">중등부 2학년 수학반</td>
+
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p class="opt-charge">완납</p>
+                      <p class="smallBox">다건</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td></td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+
+                </tr>
+
+                <tr class="td-group">
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p class="opt-charge">완납</p>
+                      <p class="smallBox">다건</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td></td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="td-group last">
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p>분납</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td></td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <!-- No -->
+                  <td>1</td>
+
+                  <!-- 원생 -->
+                  <td>
+                    <span class="label reserve">예비생</span><br><b>홍길동</b>
+                  </td>
+
+                  <!-- 수강월/수강기간 -->
+                  <td>
+                    <p><b>2023.07</b></p>
+                    <p>2023.07.23~<br>2024.07.23</p>
+                  </td>
+
+                  <!-- 반명 -->
+                  <td>중등부 2학년 수학반</td>
+
+                  <!-- 수납일자 -->
+                  <td>2025-08-23</td>
+
+                  <!-- 수납유형 -->
+                  <td>수강료</td>
+
+                  <!-- 대상금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 청구금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- 할인금액 -->
+                  <td class="txt-r"><b>100,000</b>원</td>
+
+                  <!-- (실)청구금액 -->
+                  <td class="txt-r black-b"><b>100,000</b>원</td>
+
+                  <!-- 수납 -->
+                  <td class="txt-r">
+                    창구수납
+                    <span class="grey"> / </span>
+                    현금
+                    <span class="grey"> / </span>
+                    <span><b>333</b>원</span>
+                  </td>
+
+                  <!-- 상태 -->
+                  <td>
+                    <div class="smallBox-set">
+                      <p class="opt-charge">완납</p>
+                      <p class="smallBox">다건</p>
+                    </div>
+                  </td>
+
+                  <!-- 수납처리자 -->
+                  <td>홍길동</td>
+
+                  <!-- 비고 -->
+                  <td>
+                    <div class="reson-wrap">
+                      <div class="reson-i"></div>
+                      <div class="reson-tip"> 분납 후 자동생성</div>
+                    </div>
+                  </td>
+
+                  <!-- 할인사유 -->
+                  <td></td>
+
+                  <!-- 관리버튼 -->
+                  <td>
+                    <div class="btn-set">
+                      <button type="button" class="t-button-xms t-button-grey4">환불</button>
+                      <button type="button" class="t-button-xms t-button-bora6">수정</button>
+                    </div>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+
+
+            <div class="t-pagination mt20" aria-disabled="false" role="navigation">
+              <div class="t-pagination-content"><button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="1" aria-current="false" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons notranslate" aria-hidden="true" role="img">keyboard_double_arrow_left</i></span></button> <button class="t-btn non-selectable disabled" tabindex="-1" type="button" aria-label="1" aria-current="false" aria-disabled="true"><span class="t-btn-content"><i class="t-icon material-icons notranslate" aria-hidden="true" role="img">keyboard_arrow_left</i></span></button>
+                <div class="h-pagination-middle flex justify-center"><button class="t-btn-outline t-btn non-selectable t-btn-actionable" tabindex="0" type="button" aria-label="1" aria-current="true"><span class="t-btn-content"><span class="block">1</span></span></button></div> <button class="t-btn non-selectable t-btn-actionable disabled" tabindex="0" type="button" aria-label="0" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons notranslate" aria-hidden="true" role="img">keyboard_arrow_right</i></span></button> <button class="t-btn non-selectable t-btn-actionable disabled" tabindex="-1" type="button" aria-label="1" aria-current="false"><span class="t-btn-content"><i class="t-icon material-icons notranslate" aria-hidden="true" role="img">keyboard_double_arrow_right</i></span></button>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+      <!-- 페이지 컨텐츠 끝 -->
+
+
+
+
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+</body>
+
+</html>
