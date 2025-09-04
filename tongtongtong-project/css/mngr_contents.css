@@ -2073,7 +2073,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .servStep .step { border-radius: 4px 0px; background: #35267D; color: #fff; font-size: 12px; font-weight: bold; padding: 6px 11px; position: absolute; top: 0; left: 0; } 
 
  .servBox .textBox02.complete { background: #FCFBFF; } 
- .servBox .textBox02.complete { background: #FCFBFF; } 
+ 
 
 
 
@@ -6037,7 +6037,7 @@ mobile
  .storageWrap .sec2 .textBox .arrowBtn { background:#5C61B7; border-radius: 10px; height:39px; line-height:14px; margin-top:20px; width:110px; } 
  .storageWrap .sec2 .imgCircle { width: 90px; height: 90px; background: #F4F0FF; } 
  .storageWrap .sec2 .gap30 { gap:32px; } 
- .storageWrap .sec2 .contText { color: #333333; } 
+ .storageWrap .sec2 + .contText { color: #333333; } 
  .storageWrap .t-bullet-01 li:after { top: 10px; background-color: #333; } 
  .storageWrap .tip { border-radius: 5px; top: -16px; position: absolute; background: #1D1D1D; border-bottom: 5px; font-size: 12px; font-weight: 600; color: #F7FF03; padding: 9px 12px; box-sizing: border-box; } 
  .storageWrap .tip:after { content: ''; position: absolute; left: 50%; bottom: -6px; margin-left: -6px; width: 0; height: 0; border-style: solid; border-width: 6px 6px 0px 6px; border-color: #1d1d1d transparent transparent transparent; } 
@@ -6046,10 +6046,22 @@ mobile
  .storageWrap .tit { margin: 0 auto; display: flex; align-items: center; gap: 8px; } 
  .storageWrap .button-wrap.new button { border-radius: 2px; font-weight:500; } 
  .storageWrap .button-wrap.new .t-button-bora6 { padding: 0 15px; background:#494F93!important; } 
- .storageWrap .button-wrap.new button + select + select { margin-left:7px;}
- .storageWrap .button-wrap.new button + select { margin-left:5px!important;}
+ .storageWrap .button-wrap.new button + select + select { margin-left:7px; } 
+ .storageWrap .button-wrap.new button + select { margin-left:5px!important; } 
  .storageWrap .btmBtnBox { justify-content: flex-end!important; margin-top:10px; } 
  .storageWrap .btmBtnBox .t-button-bora6 { background:#494F93!important; font-weight:bold; } 
  .storageWrap .photo { width: 60px; height: 60px; border: 1px solid #E0E6EF; border-radius: 6px; overflow: hidden; position: relative; margin: 0 auto; } 
  .storageWrap .photo img { width: 100%; height: 100%; object-fit: cover; } 
- .storageWrap .labels { margin-bottom:0;}
+ .storageWrap .labels { margin-bottom:0; } 
+
+ /* 웹스토리지 + 스토리지 용량관리 */
+ .storageWrap .storageVolume .sec2 .textBox { padding: 40px 30px; flex: 1; align-items: stretch; } 
+ .storageWrap .storageVolume .sec2 .textBox .blue { text-align: center; background-image: repeating-linear-gradient(to right, #C1C1C1 0 3px, transparent 5px 10px); background-position: bottom; margin-bottom:20px; background-size: 100% 1px; background-repeat: repeat-x; color:#0044FF; font-weight: 800; font-size:30px; padding-bottom:20px; } 
+ .storageWrap .storageVolume .pc-orange3 { letter-spacing: -0.65px; text-align: center; } 
+ .storageWrap .storageVolume .pc-orange3 span { letter-spacing: -0.35px; color: #000000; font-weight:500 } 
+ .storageWrap .storageVolume .sec2 .textBox .arrowBtn { width: 160px; height: 46px; margin: 30px auto 0; } 
+ .storageWrap .storageVolume .sec2 .textBox .arrowBtn.t-button-grey2 { background:#C7CBD1!important;}
+ .storageWrap .storageVolume .status { position: absolute; left: 15px; top: 15px; } 
+ .storageWrap .storageVolume .sec2 .textBox:has(.status:not(.prep,.exempt)) { background: #FFFDE2; border-color: #FFAA00; } 
+ .storageWrap .storageVolume .v-use { width: 160px; border-radius: 10px; height: 46px; line-height: 46px; background: #E8E4B6; font-size: 14px; font-weight: bold; color: #fff; text-align: center; margin: 30px auto 0; } 
+ .storageWrap .storageVolume .contText { border-bottom: 1px solid #D9DCE5; }
