@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>자동출석처리 설정</title>
+  <link rel="stylesheet" href="../../css/font.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/mngr_component.css">
+  <link rel="stylesheet" href="../../css/mngr_contents.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+</head>
+
+<body>
+
+  <!-- PC 전체 Wrap -->
+  <div class="academy-mngr-Wrap">
+
+
+
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 시작 ●●●●●●●●●●● -->
+    <div class="container">
+
+
+
+      <!-- 페이지 컨텐츠 시작 -->
+      <div class="content sub">
+
+        <div class="main-cont">
+
+
+          
+
+              <!-- 자동 출석처리 설정 -->
+              <div class="layout-wrap attend-set">
+
+                <div class="tit-wrap justify-start mt15 mb15">
+                  <p class="main-tit">자동 출석처리 설정</p>
+                </div>
+
+
+                <!-- A) 일괄 출결 -->
+                <div class="textBox mb30">
+                  <div class="item-box">
+                    <div class="flex flex-center">
+                      <div class="mr25"><img src="/images/attend_all.svg" alt=""></div>
+                      <div class="textTitWrap">
+                        <p class="textTit">일괄 출결 적용</p>
+                        <p class="textSubTit">(출결 처리시 수업일 기준)</p>
+                      </div>
+                    </div>
+                    <div class="flexBox">
+                      <div class="flex flex-column justify-center">
+                        <div class="flex flex-center mb15">
+                          <div class="t-radio-01">
+                            <input type="radio" id="radio01" name="radio01"> 
+                            <label for="radio01">
+                              <span class="rchk"></span>
+                              <span class="ml5 textTit MainText">출결앱에서 출결 처리시 기준입니다.</span>
+                            </label> 
+                          </div>
+                        </div>
+                        <ul class="t-bullet-01 contText pl32">
+                          <li>당일 수업일로 설정된 모든 반이 동시 출결 처리 됩니다.</li>
+                          <li>수업일을 설정하지 않은 반도 동시 출결 처리 됩니다.</li>
+                          <li>등원 / 하원 문자는 1회만 발송 됩니다.</li>
+                        </ul>
+                      </div> 
+                      <div class="h-txt-r">
+                        <p class="sub-txt">반 시간표 자동출석 적용</p>
+
+                        <!-- 반 시간표 자동출석 적용 -->
+                        <!-- 1) 반별 출결 적용 선택시에 t-switch 해당 인풋 disabled 필요 -->
+                        <!-- 2) 체크시 "미사용" -> "사용"으로 문구 변경 필요 -->
+                        <div class="t-switch">
+                          <input type="checkbox" id="test" name="test"> 
+                          <span class="t-switchTxt">미사용</span> 
+                          <label for="test" class="t-switchBtn-box">
+                            <span class="t-switchBtn"></span>
+                          </label>
+                        </div>
+                        <!-- /반 시간표 자동출석 적용 -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /A)일괄 출결 -->
+
+
+
+                <!-- B) 반별 출결 -->
+                <div class="textBox mb30">
+
+
+                  <!-- 반별 출결 사용중 시 -->
+                  <div class="item-box">
+                    <div class="flex flex-center">
+                      <div class="mr25"><img src="/images/attend_i.svg" alt=""></div>
+                      <div class="textTitWrap">
+                        <p class="textTit">반별 출결 적용</p>
+                        <p class="textSubTit">(출결 처리시 수업일 기준)</p>
+                      </div>
+                    </div>
+                    <div class="flexBox">
+                      <div class="flex flex-column justify-center">
+                        <div class="flex flex-center mb15">
+                          <div class="t-radio-01">
+                            <input type="radio" id="radio02" name="radio01"> 
+                            <label for="radio02">
+                              <span class="rchk"></span>
+                              <span class="ml5 textTit MainText">출결앱에서 출결 처리시 기준입니다.</span>
+                            </label> 
+                          </div>
+                        </div>
+                        <ul class="t-bullet-01 contText pl32">
+                          <li>당일 수업일로 설정된 반들 중 출결 처리할 반을 선택하여 출결 처리 합니다.</li>
+                          <li>수업일을 설정하지 않은 반도 반 선택 시 같이 선택 하실 수 있습니다.</li>
+                          <li>등원 / 하원 문자는 반별 등원 / 하원 시 마다 발송 됩니다.</li>
+                        </ul>
+                      </div> 
+                      
+                      <div class="h-txt-r">
+                        <p class="sub-txt">반 시간표 자동출석 적용</p>
+
+                        <!-- 반 시간표 자동출석 적용 -->
+                        <!-- 1) 일괄 출결 적용 선택시에 t-switch 해당 인풋 disabled 필요 -->
+                        <!-- 2) 체크시 "미사용" -> "사용"으로 문구 변경 필요 -->
+                        <div class="t-switch">
+                          <input type="checkbox" id="test2" name="test2" disabled=""> 
+                          <span class="t-switchTxt">미사용</span> 
+                          <label for="test2" class="t-switchBtn-box">
+                            <span class="t-switchBtn"></span>
+                          </label>
+                        </div>
+                        <!-- /반 시간표 자동출석 적용 -->
+
+                      </div>
+                    </div>
+                  </div> 
+                  <!-- /반별 출결 사용중 시 -->
+                
+
+                  <!-- 반별 출결 미사용 시 여기에 class="on" 추가 해주세여 -->
+                  <div class="item-box de-act">
+                    <div class="flex">
+                      <div class="mr25"><img src="/images/attend_i.svg" alt=""></div>
+                      <div>
+                        <div class="textTit MainText"><span class="bluePoint">반별</span>로 출결 할 수 있는<b
+                            class="pc-bora1 ml5">부가서비스</b>를 이용해 보세요.
+                        </div>
+                        <ul class="t-bullet-01 contText t-line-hgt20">
+                          <li>서비스를 이용하시면 출결앱 출결시 반별로 출결 처리를 할 수 있습니다.</li>
+                        </ul>
+                      </div>
+                    </div> 
+                    <button type="button" class="t-button-m t-button-orange2 more-arrow2">
+                      <i class="more-arrow"></i><span class="">반별 출결 서비스 신청</span> 
+                    </button>
+                  </div> 
+                  <!-- /반별 출결 미사용 시 -->
+
+
+                </div>
+                <!-- / B)반별 출결 -->
+
+
+                <div class="btn-set btmBtnBox mb20">
+                  <button type="button" class="t-button-xs t-button-grey1 t-button-tong">출석처리 설정 저장</button>
+                </div>
+
+              </div>
+              <!-- /자동 출석처리 설정 -->
+
+
+
+
+        </div>
+
+
+
+      </div>
+      <!-- 페이지 컨텐츠 끝 -->
+
+
+
+
+
+
+
+    </div>
+    <!-- ●●●●●●●●●●● container 페이지 반복틀(공통영역) 끝 ●●●●●●●●●●● -->
+
+
+
+  </div>
+  <!-- PC 전체 Wrap 끝 -->
+
+
+
+</body>
+
+</html>
