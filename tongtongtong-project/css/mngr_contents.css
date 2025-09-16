@@ -3484,10 +3484,18 @@ button:has(.i-cancel) { width:112px; }
   .desktop .p-autocomplete-list-container { max-width:200px;  }
   .p-autocomplete-list { max-height: 108px; overflow: auto;}
   .mobile .p-autocomplete-list { max-height: 138px; }
+
+  @media only screen and (max-width: 780px) {
+  .p-autocomplete-list-container { max-width:unset!important;  }
+  }
+
   @media(hover:none) {
     .p-autocomplete-list { max-height: 138px; }
+    .p-autocomplete-list-container { max-width:unset!important;  }
   }
+
   .p-autocomplete-list li { padding: 6px 38px 6px 10px; color: #333333!important; font-size: 14px; overflow: visible; white-space: normal;}
+  .p-autocomplete-list li div>div { display:inline-block;}
   .p-autocomplete-list .p-autocomplete-option:not(.p-autocomplete-option-selected):not(.p-disabled).p-focus { background-color:#EFEDFC;}
   .p-autocomplete-list .p-autocomplete-option:after { content:''; width:8px; height:8px; position:absolute; right:15px; background: transparent url(/images/c-arrow.svg) no-repeat center / 100%;   }
   .p-autocomplete-list-container *::-webkit-scrollbar-thumb { background-color: #D4D4D4; -webkit-transition: .3s; transition: .3s;}
