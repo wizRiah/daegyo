@@ -2108,7 +2108,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .pop-cont.validator .infoList li { justify-content: flex-start; display: flex; align-items: center; gap:30px; } 
  .pop-cont.validator .infoList li input { color:#333; } 
  .pop-cont.validator .infoList li + li { margin-top:10px; } 
- .pop-cont.validator .infoList li span:not(.t-necessary) { flex-shrink: 0; min-width:91px; } 
+ .pop-cont.validator .infoList li>span:not(.t-necessary) { flex-shrink: 0; min-width:91px; } 
  .pop-cont.validator .infoList li input::placeholder { font-weight:400; font-size:13px; color:#C2BCBC; } 
  .pop-cont.validator .infoList li select { color:#333; } 
  .pop-cont.validator .btn-set .t-button-bora6 { background:#35267D!important; } 
@@ -6219,6 +6219,21 @@ mobile
  .academy-mngr-Wrap .pop-cont.serviceStop .t-text-field_slot textarea::-webkit-scrollbar { background-color:#fff; width: 10px !important; height:10px !important; } 
  .academy-mngr-Wrap .pop-cont.serviceStop .t-text-field_slot textarea::-webkit-scrollbar-thumb { border-top: 2px solid #fff; border-right: 2px solid #fff; background-color:#E1E1E1; } 
  .pop-cont.serviceStop .flex-start .pc-grey82 { line-height:36px; } 
+ .academy-mngr-Wrap .pop-cont.serviceStop .infoList .datePicker { width:150px;}
+ .academy-mngr-Wrap .pop-cont.serviceStop .mt12 { margin-top:12px; }
+
+ /* input 입력시 안내 텍스트 */
+ .pop-cont.serviceStop .alert-column { display: flex; align-items: center; font-size: 12px; }
+ .pop-cont.serviceStop .alert-column.good { color: #61A6FF; }
+ .pop-cont.serviceStop .alert-column.bad { color: #FF5656; }
+ .pop-cont.serviceStop .alert-column.bang { position: relative; }
+ .pop-cont.serviceStop .alert-column .btn-bang { width: 20px; height: 20px; margin-right: 7px; }
+ .pop-cont.serviceStop .alert-column.security-good { padding: 0 0 0 27px; background: url(/images/icon_security_good.png) no-repeat 0 50%; font-size: 13px; line-height: 20px; color: #61A6FF; text-decoration: underline; }
+ .pop-cont.serviceStop .alert-column.security-bad { padding: 0 0 0 27px; background: url(/images/icon_security_bad.png) no-repeat 0 50%; font-size: 13px; line-height: 20px; color: #FF5656; text-decoration: underline; }
+ .pop-cont.serviceStop .include_txt { font-size: 12px; color: #FF5656; }
+
+
+
 
  /* 모바일 - 웹스토리지 부족 알림 팝업,앨범 서비스 종료 알림 */
  .m-academy-mngr-Wrap .pop-cont.storage { padding: 20px 20px 30px; } 
