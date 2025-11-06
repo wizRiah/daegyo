@@ -6381,7 +6381,7 @@ mobile
  .rateAmount { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; margin-bottom:30px; } 
  .num-txt { font-size: 24px; font-weight: 900; letter-spacing: -0.84px; color: #151515; } 
  .num-lt { color: #333333; font-size: 14px; } 
- .num-txt.orange-txt { color: #F56318!important; } 
+ .num-txt.orange-txt { color: #F56318!important; line-height: 22px; } 
  .line-txt { position:relative; } 
  .line-txt:after { content: ''; width: 100%; position: absolute; left: 0; top: 15px; height: 2px; background: #F56317; } 
  .percent { background: #B103FA; padding: 7px 12px; box-sizing: border-box; border-radius: 50px; } 
@@ -6440,8 +6440,8 @@ mobile
  .smart .servOptionList>li { padding: 40px 30px 30px !important; height: 195px; flex: auto !important; } 
  .smart .servOptionList>li .t-button-m { width:120px!important; height:44px!important; } 
  .smart .picto { display: flex; position: absolute; right: 20px; top: 20px; width: 42px; height: 42px; background: #F6F5FB; border-radius: 100%; align-items: center; justify-content: center; } 
- .smart .b-section { display: flex; justify-content: space-between; align-items: flex-end; } 
- .smart .b-section .text-medium { text-align: right; }
+ .smart .b-section { display: flex; justify-content: space-between; align-items: flex-end; position: absolute; bottom: 30px; left: 30px; width: calc(100% - 60px); } 
+ .smart .b-section .text-medium { text-align: right; } 
  .smart .num-lt.fs24 { font-size: 24px; } 
  .smart-banner { border: 1px solid #E2E2E2; border-radius: 10px; background: #F1F8FC; padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; } 
  .smart-banner .smart-txt { line-height: 32px; } 
@@ -6453,9 +6453,12 @@ mobile
  .smart .pt-color.fs16 { letter-spacing: -0.4px; } 
  .smart .optionList { display: flex; gap: 30px; width: 100%; } 
  .smart .optionList>li { flex:1; } 
- .smart .num-line {display: flex; align-items: baseline; }
- .pt-color2 {color:#E65616; }
- .pt-color3 {color:#AB00FF; line-height: 24px; }
+ .smart .num-line { display: flex; align-items: baseline; } 
+ .smart .pt-color2 { color:#E65616; } 
+ .smart .pt-color3 { color:#AB00FF; line-height: 24px; } 
+ .smart .pt-color2 .t-button-sm { border-radius: 5px; font-size: 14px; font-weight: bold; width:80px; background-color: #E65616; } 
+ .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400;
+}
 
 
  /* 스마트 옵션 신청 팝업 */
