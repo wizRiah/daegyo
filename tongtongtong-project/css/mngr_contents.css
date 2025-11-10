@@ -778,6 +778,7 @@ location
 
  /* 모바일 */
  .m-academy-mngr-Wrap .usage .graph-bar { height: 20px; } 
+ 
 
 
  /* 금일 원생 출결 현황 */
@@ -1449,7 +1450,7 @@ location
 
  /* 다건 */
  .smallBox-set .smallBox { background: #27B75C; padding:0; border-radius: 3px; font-weight: 500; box-sizing: border-box; height: 17px; width: 26px; text-align: center; margin-right: 5px; } 
- .smallBox-set { display: inline-flex; height: 17px; vertical-align: top; } 
+ .smallBox-set { float: none !important; display: inline-flex!important; height: 17px; vertical-align: top; } 
 
 
 /* 직원 */
@@ -1695,7 +1696,7 @@ location
 .academy-mngr-Wrap .t-popup>.pop-body>.pop-container>.t-sms-wrap { overflow-x: auto; /* padding: 25px 0 0; */ } 
 .academy-mngr-Wrap .t-popup>.pop-body>.pop-container>.t-sms-wrap>.layout-wrap { flex-wrap: nowrap !important; padding: 0 0 0 8px !important; } 
 .academy-mngr-Wrap .t-popup>.pop-body>.pop-container>.t-sms-wrap>.layout-wrap>.box-bg { margin-bottom: 0; } 
-.academy-mngr-Wrap .t-popup>.pop-body>.pop-container>.t-sms-wrap .sms_charge { margin-bottom: 50px; }
+.academy-mngr-Wrap .t-popup>.pop-body>.pop-container>.t-sms-wrap .sms_charge { margin-bottom: 50px; } 
 
 
 /* 발송대상 버튼 영역 조정 */
@@ -3289,6 +3290,8 @@ button:has(.i-cancel) { width:112px; }
  .m-pay .pay-view.opt-charge { color:#5D39FF!important; } 
  /* 분납,전체환불,면제 */
  .m-pay .pay-view.opt-etc { color:#A58554!important; } 
+ /* 예정 */
+ .m-pay .pay-view.opt-set { color:#000!important; } 
 
 .m-pay .amout-num { text-align: right; word-break: break-all; } 
 .m-pay .pay-detail .innerUL li.black-b * { color:#5D39FF!important; } 
@@ -6387,7 +6390,7 @@ mobile
  .line-txt:after { content: ''; width: 100%; position: absolute; left: 0; top: 15px; height: 2px; background: #F56317; } 
  .percent { background: #B103FA; padding: 7px 12px; box-sizing: border-box; border-radius: 50px; display: flex; gap: 2px; } 
  .percent-num { color: #FFEE00; font-size: 13px; font-weight: 800; } 
- .percent-num b { font-weight: bold;}
+ .percent-num b { font-weight: bold; } 
  .percent-txt { color: #fff; font-weight: bold; font-size: 13px; } 
  .rate-plan .servOption { margin-top: 70px; } 
  .rate-plan .servOptionList { justify-content: center; } 
@@ -6459,8 +6462,7 @@ mobile
  .smart .pt-color2 { color:#E65616; } 
  .smart .pt-color3 { color:#AB00FF; line-height: 24px; } 
  .smart .pt-color2 .t-button-sm { border-radius: 5px; font-size: 14px; font-weight: bold; width:80px; background-color: #E65616; } 
- .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400;
-}
+ .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400; } 
 
 
  /* 스마트 옵션 신청 팝업 */
@@ -6472,32 +6474,84 @@ mobile
 
 
  /* 메시지 충전잔액 영역 개선 */
- .sms_charge { justify-content: center; padding: 22px 0; margin-bottom: 30px;}
- .sms_charge .money-i { width: 24px; }
- .sms_charge .more-arrow2 { width:auto; font-weight: bold; margin-left: 21px;}
- .sms_charge .more-arrow2 i { background-image: url(../images/add_arrow.png); width: 5px; height: 8px; }
- .sms_charge .more-arrow2 span { margin-right:15px;}
- .academy-mngr-Wrap .layout-wrap .sms_charge + .layout-wrap { padding: 30px 0 0 10px; }
- .academy-mngr-Wrap .layout-wrap>.sms_charge { margin-top:30px; }
- .academy-mngr-Wrap .t-popup .pop-container>.sms_charge + .layout-wrap { padding: 30px 0 0 10px; }
- .academy-mngr-Wrap .location-wrap + .tab-menu + .layout-wrap>.sms_charge { margin-top: 15px; }
+ .sms_charge { justify-content: center; padding: 22px 0; margin-bottom: 30px; } 
+ .sms_charge .money-i { width: 24px; } 
+ .sms_charge .more-arrow2 { width:auto; font-weight: bold; margin-left: 21px; } 
+ .sms_charge .more-arrow2 i { background-image: url(../images/add_arrow.png); width: 5px; height: 8px; } 
+ .sms_charge .more-arrow2 span { margin-right:15px; } 
+ .academy-mngr-Wrap .layout-wrap .sms_charge + .layout-wrap { padding: 30px 0 0 10px; } 
+ .academy-mngr-Wrap .layout-wrap>.sms_charge { margin-top:30px; } 
+ .academy-mngr-Wrap .t-popup .pop-container>.sms_charge + .layout-wrap { padding: 30px 0 0 10px; } 
+ .academy-mngr-Wrap .location-wrap + .tab-menu + .layout-wrap>.sms_charge { margin-top: 15px; } 
 
 
 
-  /* 청구서pc */
+ /* 청구서pc */
  .billWrap { padding: 30px; } 
  .billTit { font-size:26px; letter-spacing: -0.91px; } 
- .billTit .orange-txt { font-weight: 900;}
- .billWrap section { background: #9600DF; padding: 20px 20px 30px; border-radius: 10px; } 
- .bill-table th, .bill-table td { color:#fff; } 
- .bill-table th { background-color: rgb(255 255 255 / 15%); border-radius: 5px; padding: 10px; font-size: 12px; font-weight: bold; } 
- .bill-table td { line-height: 18px; color: #fff; padding: 3px 10px; font-size: 13px; } 
- .bill-table .total-row { font-weight: bold; background-color: #451b8f; } 
- .bill-table td.num-txt { font-size: 14px; letter-spacing: -0.49px; } 
- .bill-table tr:first-child td { padding-top:15px;}
- .bill-table tr td:first-child { opacity:0.8;}
- .bill-table tr td.h-txt-r:has(b) { font-size:14px; letter-spacing: -0.49px;}
- .bill-table td.h-txt-r b {font-weight: 900; }
- .bill-table .yellow { color:#FFFF00;}
- .plan + .package td { padding-top:15px; }
- .package + .option td { padding-top:15px; }
+ .billTit .orange-txt { font-weight: 900; } 
+ .billWrap section { background: #9600DF; padding: 20px 0 30px; border-radius: 10px; min-height: 175px; position:relative; } 
+ .billWrap .row { display: flex; margin-bottom: 5px; } 
+ .billWrap .row .title { color: rgb(255 255 255 / 80%); font-size: 13px; } 
+ .billWrap .row .title p { width: 190px; line-height: 18px; } 
+ .billWrap .row .price { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
+ .billWrap .row .price p { width:100px; } 
+ .billWrap .row .discount { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
+ .billWrap .row .discount p { width:170px; } 
+ .billWrap .row .amount { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
+ .billWrap .row .amount b { color: #FFFF00; } 
+ .billWrap .row .amount p { width:100px; } 
+ .billWrap .row>div { flex:1; color: #fff; padding: 0 30px; } 
+
+ /* 점선 효과 */
+ .billWrap .th>div:not(:last-child)::after { content: ""; position: absolute; top: 20px; height: calc(100% - 40px); bottom: 0; width: 1px; background-image: repeating-linear-gradient(to top, rgb(255 255 255 / 50%) 0, rgb(255 255 255 / 50%) 5px, transparent 5px, transparent 10px); background-size: 1px 100%; background-repeat: repeat-y; } 
+
+ .billWrap section .th .th-div:has(.title-wd):after { left:250px; } 
+ .billWrap section .th .th-div:has(.price-wd):after { left:410px; } 
+ .billWrap section .th .th-div:has(.discount-wd):after { left:640px; } 
+
+ @media only screen and (max-width: 1279px){
+ .billWrap section .th .th-div:has(.title-wd):after { left: 25%; } 
+ .billWrap section .th .th-div:has(.price-wd):after { left:50%; } 
+ .billWrap section .th .th-div:has(.discount-wd):after { left:75%; } 
+ }
+
+ .billWrap section .th { font-weight: bold; color: #fff; text-align: center; } 
+ .billWrap section .th .th-div { padding: 0 20px; } 
+ .billWrap section .th .th-div p { background-color: rgb(255 255 255 / 15%); padding: 10px; border-radius: 5px; box-sizing: border-box; font-size: 12px; } 
+ .billWrap .title-wd { width: 210px; } 
+ .billWrap .price-wd { width: 120px; } 
+ .billWrap .discount-wd { width: 190px; } 
+ .billWrap .amount-wd { width:120px; } 
+ .billWrap section .th + .row div { padding-top: 10px; } 
+ .billWrap .plan + .package div { padding-top:10px; } 
+ .billWrap .package + .option div { padding-top:10px; } 
+ .billWrap section .row:last-child { margin-bottom:0; } 
+
+
+ @media only screen and (max-width: 1279px){
+ .billWrap section .th .th-div p { width:auto; } 
+ .billWrap .row>div>p { width:auto!important; } 
+ }
+
+ .billWrap .cont-bg { border: 1px solid #E2E2E2; background-color: #FFFFFF; margin-top:15px; border-radius: 10px; padding: 18px 30px; display: flex; justify-content: space-between; align-items: baseline; border-color: #E2E2E2; } 
+ .billWrap .cont-bg .bora-pt { color:#9601DF; font-size:14px; letter-spacing: -0.49px; text-align: right; position: relative; } 
+ .billWrap .cont-bg .num-t { font-size: 20px; letter-spacing: -0.7px; font-weight: 900; } 
+ .billWrap .amountSet { display: none; gap: 5px; flex-direction: column; margin-top:15px; } 
+ .billWrap .amountSet li { display: flex; align-items: center; gap: 40px; justify-content: space-between; } 
+ .billWrap .p-label { color: #666666; font-size: 13px; text-align: right; min-width: 92px; } 
+ .billWrap .amountSet li p.p-txt { color: #333; letter-spacing: -0.49px; font-size: 14px; } 
+ .billWrap .cont-bg .p-txt .num-t { color: #000000; font-size: 16px; letter-spacing: -0.56px; } 
+ .billWrap .cont-bg .amount-hide { display: flex; flex-direction: column; align-items: flex-end; } 
+ .billWrap .cont-bg .amount-hide .bora-pt { padding-left:30px; } 
+ .billWrap .cont-bg .bora-pt:hover { cursor: pointer; } 
+ .billWrap .cont-bg .amount-hide .bora-pt.active + .amountSet { display:flex; } 
+ .billWrap .cont-bg .amount-hide .bora-pt.active:after { transform: rotate(0deg); } 
+ .billWrap .cont-bg .amount-hide:has(.amountSet) .bora-pt:after { content: ''; transition: all .3s; position: absolute; width: 18px; height: 18px; transform: rotate(180deg); background: url(../images/amount_arrow.svg) no-repeat center / 100%; top: 3px; left: 0; } 
+ .billWrap .cont-bg.sum { background:#F6F3FE; } 
+ .billWrap .cont-bg.sum .num-t { color: #F56318; } 
+ .billWrap .payInfo { display: flex; justify-content: space-between; gap: 20px; margin-top: 12px; } 
+ .billWrap .payInfo .amountSet li { gap:30px; } 
+ .billWrap .payInfo .p-label { text-align: left; } 
+ .billWrap .payInfo .amountSet { display: flex; margin-top: 0; width: 290px; background: #F5F7FA; border-radius: 15px; padding: 25px; box-sizing: border-box; gap: 0; line-height: 26px; } 
+ .billWrap .payInfo p.p-txt { font-size:13px; font-weight: 500; } 
