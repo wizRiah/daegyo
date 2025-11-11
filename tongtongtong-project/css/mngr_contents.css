@@ -6403,7 +6403,9 @@ mobile
  .rate-plan .dashed { background:repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); height:1px; margin-top: 30px; margin-bottom: 30px; } 
  .rate-plan .servOption .contText { margin-top:12px; } 
  .rate-plan .textTitWrap { margin-right: 25px; } 
- .status-badge { position: absolute; top: -5px; } 
+ .status-badge { position: absolute; top: -5px; color: #fff; padding: 8px 15px; border-radius: 0 0 5px 5px; font-size: 12px; font-weight: bold; } 
+ .status-badge:after { content: ''; width: 0; top:0;height: 0;border-style: solid;border-width: 5px 0px 0px 5px;border-color: transparent transparent transparent #1C1C1C; position: absolute; right: -5px; } 
+ .status-badge:before { content: ''; top: 0px; position: absolute; left: -5px; width: 0; height: 0; border-style: solid; border-width: 0px 0px 5px 5px; border-color: transparent transparent #1c1c1c transparent; } 
  .rate-plan .servOptionList>li:has(.use) { border-color:#BA08F3; } 
  .rate-plan .servOptionList>li:has(.use,.usebe) .t-button-m { background: #62666B; font-weight: 400; } 
  .rate-plan .servOption .contText.fs12 { color:#828282; line-height: 20px; } 
@@ -6417,6 +6419,15 @@ mobile
  .rate-plan .servOption .servOptionList { height: 100%; } 
  .rate-plan .tipTxt { color: #828282; padding-left: 22px; position: relative; } 
  .rate-plan .tipTxt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 14px; height: 14px; position: absolute; left: 0; } 
+
+ /* 사용중 */
+ .status-badge.use { background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
+ /* 해지접수 */
+ .status-badge.stop { background: transparent linear-gradient(263deg, #cb470b 0%, #e45515 100%) 0% 0% no-repeat padding-box;} 
+ /* 면제 */
+ .status-badge.exempt { background: transparent linear-gradient(263deg, #0648ff 0%, #4b79ff 100%) 0% 0% no-repeat padding-box; }
+ /* 사용예정 */
+ .status-badge.usebe { background: transparent linear-gradient(263deg, #00a8a2 0%, #00c4bd 100%) 0% 0% no-repeat padding-box;}
 
 
  /* 스마트패키지 상세 */
@@ -6562,7 +6573,7 @@ mobile
 
  /* 청구서 모바일 */
  .t-bill { height: 100vh; display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden; } 
- .t-bill header {  flex-shrink: 0; display: flex; align-items: center; padding: 0 20px; height: 50px; margin: 0 auto; background: #fff; width: 100%; box-sizing: border-box; } 
+ .t-bill header { flex-shrink: 0; display: flex; align-items: center; padding: 0 20px; height: 50px; margin: 0 auto; background: #fff; width: 100%; box-sizing: border-box; } 
  .t-bill .container { display: flex; flex-direction: column; flex-grow: 4; } 
  .t-bill .billWrap { padding: 0; } 
  .t-bill .billWrap section { border-radius: 0; padding: 30px; } 
@@ -6573,10 +6584,10 @@ mobile
  .t-bill .cont-bg .sum-txt { font-size: 14px; position: relative; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex: 1; gap: 20px; padding-bottom: 20px; } 
  .t-bill .cont-bg .sum-txt:after { content: ""; position: absolute; bottom: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
  .t-bill .billWrap .p-label { flex-shrink: 0; text-align: left; min-width: unset; } 
- .t-bill .billWrap .amountSet { display: flex; margin-top: 0;} 
- .t-bill .billWrap section .amountSet { gap:10px;}
+ .t-bill .billWrap .amountSet { display: flex; margin-top: 0; } 
+ .t-bill .billWrap section .amountSet { gap:10px; } 
  .t-bill .billWrap .amountSet li { gap:10px; font-size: 14px; } 
- .t-bill .billWrap .amountSet li:has(.fs12) { align-items: flex-start !important;}
+ .t-bill .billWrap .amountSet li:has(.fs12) { align-items: flex-start !important; } 
  .t-bill .sub-tit.white { color:#fff; } 
  .t-bill .info-wrap { border-radius: 15px; color: #fff; padding: 30px; margin-top: 12px; background: rgb(255 255 255 / 15%); } 
  .t-bill .amount { text-align: right; font-size: 14px; } 
@@ -6587,10 +6598,10 @@ mobile
  .t-bill .info-wrap>li + li:after { content: ""; position: absolute; top: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, rgb(255 255 255 / 50%) 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
  .t-bill .info-wrap .amountSet * { color:#fff; } 
  .t-bill .info-wrap .amountSet .p-label { color: rgb(255 255 255 / 80%); } 
- .t-bill .info-wrap .amountSet.detail {  margin-top:12px; } 
+ .t-bill .info-wrap .amountSet.detail { margin-top:12px; } 
  .t-bill .info-wrap .amountSet.detail .amount b { font-size: 16px; letter-spacing: -0.56px; font-weight: 800; } 
  .t-bill .billWrap .payInfo { flex-direction: column; padding: 0 30px 50px; gap:0; } 
- .t-bill .billWrap .payInfo .amountSet { margin-top:12px;}
- .t-bill .billWrap .payInfo .contText { margin-top:20px;}
- .t-bill .billWrap .payInfo .contText li:after { background-color: #666; top: 10px;} 
+ .t-bill .billWrap .payInfo .amountSet { margin-top:12px; } 
+ .t-bill .billWrap .payInfo .contText { margin-top:20px; } 
+ .t-bill .billWrap .payInfo .contText li:after { background-color: #666; top: 10px; } 
  
