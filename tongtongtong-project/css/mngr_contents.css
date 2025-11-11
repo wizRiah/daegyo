@@ -6501,7 +6501,7 @@ mobile
  .billWrap { padding: 30px; } 
  .billTit { font-size:26px; letter-spacing: -0.91px; } 
  .billTit .orange-txt { font-weight: 900; } 
- .billWrap section { background: #9600DF; padding: 20px 0 30px; border-radius: 10px; min-height: 175px; position:relative; } 
+ .billWrap section { background: #9600DF; padding: 20px 0; border-radius: 10px; min-height: 175px; position:relative; box-sizing: border-box; } 
  .billWrap .row { display: flex; margin-bottom: 5px; } 
  .billWrap .row .title { color: rgb(255 255 255 / 80%); font-size: 13px; } 
  .billWrap .row .title p { width: 190px; line-height: 18px; } 
@@ -6558,12 +6558,12 @@ mobile
  .billWrap .cont-bg .amount-hide .bora-pt { padding-left:30px; color: #333333; } 
  .billWrap .cont-bg .bora-pt:hover { cursor: pointer; } 
  .billWrap .cont-bg .amount-hide .bora-pt.active + .amountSet { display:flex; } 
- .billWrap .cont-bg .amount-hide .bora-pt.active:after { transform: rotate(0deg); } 
+ .billWrap .cont-bg .amount-hide .bora-pt.active:after { transform: rotate(0deg)!important; } 
  .billWrap .cont-bg .amount-hide .bora-pt .num-t { color:#9601DF; } 
  .billWrap .cont-bg .amount-hide:has(.amountSet) .bora-pt:after { content: ''; transition: all .3s; position: absolute; width: 18px; height: 18px; transform: rotate(180deg); background: url(../images/amount_arrow.svg) no-repeat center / 100%; top: 3px; left: 0; } 
  .billWrap .cont-bg.sum { background:#F6F3FE; } 
  .billWrap .cont-bg.sum .num-t { color: #F56318; } 
- .billWrap .payInfo { display: flex; justify-content: space-between; gap: 20px; margin-top: 12px; } 
+ .billWrap .payInfo { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-top: 12px; } 
  .billWrap .payInfo .amountSet li { gap:30px; } 
  .billWrap .payInfo .p-label { text-align: left; } 
  .billWrap .payInfo .amountSet { display: flex; margin-top: 0; width: 290px; background: #F5F7FA; border-radius: 15px; padding: 25px; box-sizing: border-box; gap: 0; line-height: 26px; } 
@@ -6583,9 +6583,10 @@ mobile
  .t-bill .cont-bg .num-t { letter-spacing: -0.84px; font-size: 24px; } 
  .t-bill .cont-bg .sum-txt { font-size: 14px; position: relative; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex: 1; gap: 20px; padding-bottom: 20px; } 
  .t-bill .cont-bg .sum-txt:after { content: ""; position: absolute; bottom: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
+ .t-bill .cont-bg .amountSet { gap:10px!important;}
  .t-bill .billWrap .p-label { flex-shrink: 0; text-align: left; min-width: unset; } 
  .t-bill .billWrap .amountSet { display: flex; margin-top: 0; } 
- .t-bill .billWrap section .amountSet { gap:10px; } 
+ .t-bill .billWrap section .amountSet { gap:7px; } 
  .t-bill .billWrap .amountSet li { gap:10px; font-size: 14px; } 
  .t-bill .billWrap .amountSet li:has(.fs12) { align-items: flex-start !important; } 
  .t-bill .sub-tit.white { color:#fff; } 
@@ -6598,10 +6599,11 @@ mobile
  .t-bill .info-wrap>li + li:after { content: ""; position: absolute; top: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, rgb(255 255 255 / 50%) 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
  .t-bill .info-wrap .amountSet * { color:#fff; } 
  .t-bill .info-wrap .amountSet .p-label { color: rgb(255 255 255 / 80%); } 
- .t-bill .info-wrap .amountSet.detail { margin-top:12px; } 
+ .t-bill .info-wrap .amountSet.detail { margin-top:10px; } 
  .t-bill .info-wrap .amountSet.detail .amount b { font-size: 16px; letter-spacing: -0.56px; font-weight: 800; } 
  .t-bill .billWrap .payInfo { flex-direction: column; padding: 0 30px 50px; gap:0; } 
  .t-bill .billWrap .payInfo .amountSet { margin-top:12px; } 
  .t-bill .billWrap .payInfo .contText { margin-top:20px; } 
  .t-bill .billWrap .payInfo .contText li:after { background-color: #666; top: 10px; } 
+ .t-bill .billWrap .payInfo p.p-txt { letter-spacing: 0px;}
  
