@@ -6497,13 +6497,13 @@ mobile
  .billWrap .row .price { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
  .billWrap .row .price p { width:100px; } 
  .billWrap .row .discount { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
- .billWrap .row .discount b { color:#FFC400;}
+ .billWrap .row .discount b { color:#FFC400; } 
  .billWrap .row .discount p { width:170px; } 
- .billWrap .row .discount span { opacity:0.8; letter-spacing: 0px;}
+ .billWrap .row .discount span { opacity:0.8; letter-spacing: 0px; } 
  .billWrap .row .amount { text-align: right; font-size: 14px; letter-spacing: -0.49px; } 
  .billWrap .row .amount b { color: #FFFF00; } 
  .billWrap .row>div { flex:1; color: #fff; padding: 0 30px; } 
- .billWrap .row>div b { font-weight: 900; }
+ .billWrap .row>div b { font-weight: 900; } 
 
  /* 점선 효과 */
  .billWrap .th>div:not(:last-child)::after { content: ""; position: absolute; top: 20px; height: calc(100% - 40px); bottom: 0; width: 1px; background-image: repeating-linear-gradient(to top, rgb(255 255 255 / 50%) 0, rgb(255 255 255 / 50%) 5px, transparent 5px, transparent 10px); background-size: 1px 100%; background-repeat: repeat-y; } 
@@ -6548,7 +6548,7 @@ mobile
  .billWrap .cont-bg .bora-pt:hover { cursor: pointer; } 
  .billWrap .cont-bg .amount-hide .bora-pt.active + .amountSet { display:flex; } 
  .billWrap .cont-bg .amount-hide .bora-pt.active:after { transform: rotate(0deg); } 
- .billWrap .cont-bg .amount-hide .bora-pt .num-t {color:#9601DF;}
+ .billWrap .cont-bg .amount-hide .bora-pt .num-t { color:#9601DF; } 
  .billWrap .cont-bg .amount-hide:has(.amountSet) .bora-pt:after { content: ''; transition: all .3s; position: absolute; width: 18px; height: 18px; transform: rotate(180deg); background: url(../images/amount_arrow.svg) no-repeat center / 100%; top: 3px; left: 0; } 
  .billWrap .cont-bg.sum { background:#F6F3FE; } 
  .billWrap .cont-bg.sum .num-t { color: #F56318; } 
@@ -6556,4 +6556,41 @@ mobile
  .billWrap .payInfo .amountSet li { gap:30px; } 
  .billWrap .payInfo .p-label { text-align: left; } 
  .billWrap .payInfo .amountSet { display: flex; margin-top: 0; width: 290px; background: #F5F7FA; border-radius: 15px; padding: 25px; box-sizing: border-box; gap: 0; line-height: 26px; } 
- .billWrap .payInfo p.p-txt { font-size:13px; font-weight: 500; } 
+ .billWrap .payInfo p.p-txt { font-size:13px!important; font-weight: 500; } 
+
+
+
+ /* 청구서 모바일 */
+ .t-bill { height: 100vh; display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden; } 
+ .t-bill header {  flex-shrink: 0; display: flex; align-items: center; padding: 0 20px; height: 50px; margin: 0 auto; background: #fff; width: 100%; box-sizing: border-box; } 
+ .t-bill .container { display: flex; flex-direction: column; flex-grow: 4; } 
+ .t-bill .billWrap { padding: 0; } 
+ .t-bill .billWrap section { border-radius: 0; padding: 30px; } 
+ .t-bill .t-bill-tit { font-size: 24px; font-weight: bold; color: #fff; text-align: center; } 
+ .t-bill .cont-bg { flex-direction: column; align-items: stretch; border: 0; background: #fff!important; border-radius: 15px; padding: 25px 30px 30px; margin-top: 20px; } 
+ .t-bill .cont-bg .bora-pt { letter-spacing: 0px; } 
+ .t-bill .cont-bg .num-t { letter-spacing: -0.84px; font-size: 24px; } 
+ .t-bill .cont-bg .sum-txt { font-size: 14px; position: relative; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex: 1; gap: 20px; padding-bottom: 20px; } 
+ .t-bill .cont-bg .sum-txt:after { content: ""; position: absolute; bottom: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
+ .t-bill .billWrap .p-label { flex-shrink: 0; text-align: left; min-width: unset; } 
+ .t-bill .billWrap .amountSet { display: flex; margin-top: 0;} 
+ .t-bill .billWrap section .amountSet { gap:10px;}
+ .t-bill .billWrap .amountSet li { gap:10px; font-size: 14px; } 
+ .t-bill .billWrap .amountSet li:has(.fs12) { align-items: flex-start !important;}
+ .t-bill .sub-tit.white { color:#fff; } 
+ .t-bill .info-wrap { border-radius: 15px; color: #fff; padding: 30px; margin-top: 12px; background: rgb(255 255 255 / 15%); } 
+ .t-bill .amount { text-align: right; font-size: 14px; } 
+ .t-bill .yellow { color: #FFFF00!important; font-size: 20px!important; letter-spacing: -0.7px; font-weight: 900; } 
+ .t-bill .info-wrap>li { position:relative; padding-bottom:20px; } 
+ .t-bill .info-wrap>li:last-child { padding-bottom:0; } 
+ .t-bill .info-wrap>li + li { padding-top: 20px; } 
+ .t-bill .info-wrap>li + li:after { content: ""; position: absolute; top: 0; height: 1px; width: 100%; background-repeat: repeat-x; background-image: repeating-linear-gradient(to right, rgb(255 255 255 / 50%) 0 5px, transparent 5px 10px); background-position: bottom; background-size: 100% 1px; } 
+ .t-bill .info-wrap .amountSet * { color:#fff; } 
+ .t-bill .info-wrap .amountSet .p-label { color: rgb(255 255 255 / 80%); } 
+ .t-bill .info-wrap .amountSet.detail {  margin-top:12px; } 
+ .t-bill .info-wrap .amountSet.detail .amount b { font-size: 16px; letter-spacing: -0.56px; font-weight: 800; } 
+ .t-bill .billWrap .payInfo { flex-direction: column; padding: 0 30px 50px; gap:0; } 
+ .t-bill .billWrap .payInfo .amountSet { margin-top:12px;}
+ .t-bill .billWrap .payInfo .contText { margin-top:20px;}
+ .t-bill .billWrap .payInfo .contText li:after { background-color: #666; top: 10px;} 
+ 
