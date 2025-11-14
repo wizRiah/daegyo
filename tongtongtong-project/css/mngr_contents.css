@@ -1604,9 +1604,15 @@ location
  .reson-tip { text-align: left; width: max-content; display: none; position: absolute; top: 24px; box-shadow: 0px 5px 15px #00000026; border: 1px solid #776DA7; border-radius: 10px; background: #FFFFFF; padding: 12px; box-sizing: border-box; max-width: 200px; z-index: 1; left: 50%; transform: translateX(-50%); color: #333333; font-size: 12px; line-height: 18px; } 
  .reson-i:hover { cursor:pointer; } 
  .reson-i:hover + .reson-tip { display:block; } 
+ .detail-i { background: url(../images/detail-i.svg) no-repeat center / 100%; margin: 0 auto; width: 16px; height: 16px; } 
 
-
-
+    /* 상세보기 팝업 */
+    .pop-cont.condition .reson-i { width: 20px; height: 16px;}
+    .t-popup:has(.pop-cont.condition) .pop-title { display: flex; align-items: center; }
+    .t-popup:has(.pop-cont.condition) .pop-title .labels { margin-bottom:0; margin-right: 10px; }
+    .t-popup:has(.pop-cont.condition) .barTxt  {display: flex; align-items: center; gap: 24px; }
+    .t-popup:has(.pop-cont.condition) .barTxt li { position:relative; }
+    .t-popup:has(.pop-cont.condition) .barTxt li:not(:last-child):after { content: ''; position: absolute; right: -12px; top: 2px; width: 1px; height: 17px; background: #AAA1D8;}
 
 
 
