@@ -2163,7 +2163,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .m-academy-mngr-Wrap .pop-cont.validator .serviceSelect .dropdown { width: calc(100% - 49px); } 
  .m-academy-mngr-Wrap .pop-cont.validator .input-btn-wrap input:read-only::placeholder { color:#BCBCBC; font-size:13px; } 
  .m-academy-mngr-Wrap .pop-cont.validator .serBoxSet + .serBoxSet { margin-top:20px; } 
- .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator) .bt-btnbox button { background:#62666B; font-size: 16px; height: 55px; line-height: 55px; } 
+ .m-academy-mngr-Wrap .t-popup:has(.pop-cont.validator):not(.rate) .bt-btnbox button { background:#62666B; font-size: 16px; height: 55px; line-height: 55px; } 
  .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText { color: #666666; } 
  .m-academy-mngr-Wrap .pop-cont.validator .box-bg .t-bullet-01.contText li:after { background:#666666; } 
  .m-academy-mngr-Wrap .pop-cont.validator.pay .contText li:after { background:#666666; } 
@@ -2271,8 +2271,8 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
 
  /* 요금제 변경 안내 팝업 */
  .t-popup:has(.ratePlan) { border-radius: 15px; box-shadow: none; } 
- .t-popup:has(.ratePlan) .pop-title { display:none; } 
- .t-popup:has(.ratePlan) .pop-header { display: none; } 
+ .t-popup:has(.ratePlan):not(.popup-goback) .pop-title { display:none; } 
+ .t-popup:has(.ratePlan):not(.popup-goback) .pop-header { display: none; } 
  .t-popup:has(.ratePlan) .pop-container { border: 0; } 
  .t-popup:has(.ratePlan) button.close { height: 53px; width: 53px; } 
  .t-popup:has(.ratePlan) .p-close { width: 13px; height: 13px; background: url(../images/m-btn-close.png) no-repeat center / 100%; } 
@@ -6384,105 +6384,194 @@ mobile
 
 
 /* 통통통 요금제 */
- /* 통통통 서비스 - 통통통 요금제 */
- .rate-plan { padding: 50px 20px 30px; } 
- .rateTitle { color:#333333; font-size:36px; font-weight: 800; } 
- .rate-plan .fs22 { color: #333; font-size: 22px; } 
- .rateAmount { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; margin-bottom:30px; } 
- .num-txt { font-size: 24px; font-weight: 900; letter-spacing: -0.84px; color: #151515; } 
- .num-lt { color: #333333; font-size: 14px; } 
- .num-txt.orange-txt { color: #F56318!important; line-height: 22px; } 
- .line-txt { position:relative; } 
- .line-txt:after { content: ''; width: 100%; position: absolute; left: 0; top: 15px; height: 2px; background: #F56317; } 
- .percent { background: #B103FA; padding: 7px 12px; box-sizing: border-box; border-radius: 50px; display: flex; gap: 2px; } 
- .percent-num { color: #FFEE00; font-size: 13px; font-weight: 800; } 
- .percent-num b { font-weight: bold; } 
- .percent-txt { color: #fff; font-weight: bold; font-size: 13px; } 
- .rate-plan .servOption { margin-top: 70px; } 
- .rate-plan .servOptionList { justify-content: center; } 
- .rate-plan .servOptionList>li { max-width: 453px; padding: 50px 35px 40px !important; display: flex; flex-direction: column; justify-content: space-between; } 
- .rate-plan .servOptionList .contBox { min-height: 130px; box-sizing: border-box; background: #F5F7FA; border-radius: 10px; display: flex; padding: 20px 30px; flex-direction: column; justify-content: space-between; } 
- .txtList { width:100%; } 
- .txtList>li { color: #333333; font-size: 14px; line-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 10px; } 
- .rate-plan .servOption .servOptionList>li .t-button-m { height: 55px; border-radius: 5px; background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
- .rate-plan .servOption .servOptionList>li .sub-txt { color: #B103FA; font-size: 12px; line-height: 20px; } 
- .rate-plan .dashed { background:repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); height:1px; margin-top: 30px; margin-bottom: 30px; } 
- .rate-plan .servOption .contText { margin-top:12px; } 
- .rate-plan .textTitWrap { margin-right: 25px; } 
- .status-badge { position: absolute; top: -5px; color: #fff; padding: 8px 15px; border-radius: 0 0 5px 5px; font-size: 12px; font-weight: bold; } 
- .status-badge:after { content: ''; width: 0; top:0;height: 0;border-style: solid;border-width: 5px 0px 0px 5px;border-color: transparent transparent transparent #1C1C1C; position: absolute; right: -5px; } 
- .status-badge:before { content: ''; top: 0px; position: absolute; left: -5px; width: 0; height: 0; border-style: solid; border-width: 0px 0px 5px 5px; border-color: transparent transparent #1c1c1c transparent; } 
- .rate-plan .servOptionList>li:has(.use) { border-color:#BA08F3; } 
- .rate-plan .servOptionList>li:has(.use,.usebe) .t-button-m { background: #62666B; font-weight: 400; } 
- .rate-plan .servOption .contText.fs12 { color:#828282; line-height: 20px; } 
- .rate-plan .servOption .contText.fs12 li:after { background-color: #828282; top: 8px; } 
- .rate-plan .servOption .t-button-m + .contText.fs12 { margin-top:15px; } 
- .rate-plan .servOptionList>li:has(.stop) .t-button-m { background: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616; font-weight: 400; } 
- .rate-plan .servOption .contText.fs12.pc-red2 li:after { background-color: #FF0000; } 
- .rate-plan .pt-color .fs22 { color: #6F55EB!important; } 
- .planOption { display: flex; gap: 30px; justify-content: center; } 
- .planOption>li { display: flex; flex-direction: column; } 
- .rate-plan .servOption .servOptionList { height: 100%; } 
- .rate-plan .tipTxt { color: #828282; padding-left: 22px; position: relative; } 
- .rate-plan .tipTxt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 14px; height: 14px; position: absolute; left: 0; } 
+    /* 통통통 서비스 - 통통통 요금제 */
+    .rate-plan { padding: 50px 20px 30px; } 
+    .rateTitle { color:#333333; font-size:36px; font-weight: 800; } 
+    .rate-plan .fs22 { color: #333; font-size: 22px; } 
+    .rateAmount { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; margin-bottom:30px; } 
+    .num-txt { font-size: 24px; font-weight: 900; letter-spacing: -0.84px; color: #151515; } 
+    .num-lt { color: #333333; font-size: 14px; } 
+    .num-txt.orange-txt { color: #F56318!important; line-height: 22px; } 
+    .line-txt { position:relative; } 
+    .line-txt:after { content: ''; width: 100%; position: absolute; left: 0; top: 15px; height: 2px; background: #F56317; } 
+    .percent { background: #B103FA; padding: 7px 12px; box-sizing: border-box; border-radius: 50px; display: flex; gap: 2px; } 
+    .percent-num { color: #FFEE00; font-size: 13px; font-weight: 800; } 
+    .percent-num b { font-weight: bold; } 
+    .percent-txt { color: #fff; font-weight: bold; font-size: 13px; } 
+    .rate-plan .servOption { margin-top: 70px; } 
+    .rate-plan .servOptionList { justify-content: center; } 
+    .rate-plan .servOptionList>li { max-width: 453px; padding: 50px 35px 40px !important; display: flex; flex-direction: column; justify-content: space-between; } 
+    .rate-plan .servOptionList .contBox { min-height: 130px; box-sizing: border-box; background: #F5F7FA; border-radius: 10px; display: flex; padding: 20px 30px; flex-direction: column; justify-content: space-between; } 
+    .txtList { width:100%; } 
+    .txtList>li { color: #333333; font-size: 14px; line-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 10px; } 
+    .rate-plan .servOption .servOptionList>li .t-button-m { height: 55px; border-radius: 5px; background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
+    .rate-plan .servOption .servOptionList>li .sub-txt { color: #B103FA; font-size: 12px; line-height: 20px; } 
+    .rate-plan .dashed { background:repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); height:1px; margin-top: 30px; margin-bottom: 30px; } 
+    .rate-plan .servOption .contText { margin-top:12px;} 
+    .rate-plan .textTitWrap { margin-right: 25px; } 
+    .status-badge { position: absolute; top: -5px; color: #fff; padding: 8px 15px; border-radius: 0 0 5px 5px; font-size: 12px; font-weight: bold; } 
+    .status-badge:after { content: ''; width: 0; top:0;height: 0;border-style: solid;border-width: 5px 0px 0px 5px;border-color: transparent transparent transparent #1C1C1C; position: absolute; right: -5px; } 
+    .status-badge:before { content: ''; top: 0px; position: absolute; left: -5px; width: 0; height: 0; border-style: solid; border-width: 0px 0px 5px 5px; border-color: transparent transparent #1c1c1c transparent; } 
+    .rate-plan .servOptionList>li:has(.use) { border-color:#BA08F3; } 
+    .rate-plan .servOptionList>li:has(.use,.usebe) .t-button-m { background: #62666B; font-weight: 400; } 
+    .rate-plan .servOption .contText.fs12 { color:#828282; line-height: 20px; } 
+    .rate-plan .servOption .contText.fs12 li:after { background-color: #828282; top: 8px; } 
+    .rate-plan .servOption .t-button-m + .contText.fs12 { margin-top:15px; } 
+    .rate-plan .servOptionList>li:has(.stop) .t-button-m { background: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616; font-weight: 400; } 
+    .rate-plan .servOption .contText.fs12.pc-red2 li:after { background-color: #FF0000; } 
+    .rate-plan .pt-color .fs22 { color: #6F55EB!important; } 
+    .planOption { display: flex; gap: 30px; justify-content: center; } 
+    .planOption>li { display: flex; flex-direction: column; } 
+    .rate-plan .servOption .servOptionList { height: 100%; } 
+    .rate-plan .tipTxt { color: #828282; padding-left: 22px; position: relative; } 
+    .rate-plan .tipTxt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 14px; height: 14px; position: absolute; left: 0; } 
 
- /* 사용중 */
- .status-badge.use { background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
- /* 해지접수 */
- .status-badge.stop { background: transparent linear-gradient(263deg, #cb470b 0%, #e45515 100%) 0% 0% no-repeat padding-box;} 
- /* 면제 */
- .status-badge.exempt { background: transparent linear-gradient(263deg, #0648ff 0%, #4b79ff 100%) 0% 0% no-repeat padding-box; }
- /* 사용예정 */
- .status-badge.usebe { background: transparent linear-gradient(263deg, #00a8a2 0%, #00c4bd 100%) 0% 0% no-repeat padding-box;}
-
-
+    /* 사용중 */
+    .status-badge.use { background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
+    /* 해지접수 */
+    .status-badge.stop { background: transparent linear-gradient(263deg, #cb470b 0%, #e45515 100%) 0% 0% no-repeat padding-box;} 
+    /* 면제 */
+    .status-badge.exempt { background: transparent linear-gradient(263deg, #0648ff 0%, #4b79ff 100%) 0% 0% no-repeat padding-box; }
+    /* 사용예정 */
+    .status-badge.usebe { background: transparent linear-gradient(263deg, #00a8a2 0%, #00c4bd 100%) 0% 0% no-repeat padding-box;}
 
 
 
- /* 요금제 팝업 */
- .rate .t-button-bora1 { background-color: #6F55EB!important; } 
- .rate .t-button-grey2 { background-color: #C7CBD1!important; font-weight: 400!important; } 
- .pop-cont.rate .btn-set button { margin:0 5px; min-width: 80px!important; } 
- .pop-cont.rate .sub-txt { color:#666666; line-height: 20px; } 
- .pop-cont.rate .contText { line-height: 22px!important; color: #333 !important; } 
- .pop-cont.rate .box-bg .contText.t-bullet-01 li:after { top: 10px; } 
- .pop-cont.rate .box-bg .contText li + li { margin-top:0; } 
- .pop-cont.rate .box-bg .more-arrow2 { width:auto; height: 36px; } 
- .pop-cont.rate .t-button-grey1 { width:95px; } 
- .pop-cont.rate .contText.t-bullet-01 li:has(.pt-color):after { background:#6F55EB; } 
+    /* 통통통 요금제 모바일 */
+        /* tab menu 1 */
+        .m-academy-mngr-Wrap .m-list-help .tab-06 {flex-flow: row wrap; width: 100%; display: flex; align-items: center; padding: 15px; box-sizing: border-box;}
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li:first-child { margin-left:0; }
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li { margin-left: 5px; background: #fff; border: 1px solid #D6D7ED; text-align: center; border-radius: 50px; box-sizing: border-box; transition: all ease 0.3s;}
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li a { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; box-sizing: border-box; transition: all ease 0.3s; padding: 9px 16px;}
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li a > * { transition:all ease 0.3s; }
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li a .status { font-size: 13px; color: #5661B9; }
+
+        /* active */
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li.active { background-color: #5948B0; border-color: #5948B0; }
+        .m-academy-mngr-Wrap .m-list-help .tab-06 li.active a > * { color:#fff; font-weight: bold;}
+
+    .m-academy-mngr-Wrap .rate-plan.serviceIn { padding: 15px 15px 30px;}
+    .m-academy-mngr-Wrap .rate-plan.serviceIn .servOption { padding:0;}
+    .m-academy-mngr-Wrap .m-list-help:has(.rate-plan) { background:#fff;}
+    .m-academy-mngr-Wrap .rate-plan .logo { width:106px;}
+    .m-academy-mngr-Wrap .rate-plan p.fs18 { color:#333;}
+    .m-academy-mngr-Wrap .rate-plan.serviceIn .servOptionList>li { border-radius: 20px; max-width: unset; padding: 40px 20px 20px !important;}
+    .m-academy-mngr-Wrap .rateTitle { font-size:30px;}
+    .m-academy-mngr-Wrap .rateAmount:not(:last-child) { margin-bottom:12px;}
+    .m-academy-mngr-Wrap .rateAmount:last-child { margin-bottom:0;}
+    .m-academy-mngr-Wrap .percent { display:inline-flex; }
+    .m-academy-mngr-Wrap .rate-plan .servOption .servOptionList>li .t-button-m { height:55px;}
+    .m-academy-mngr-Wrap .rate-plan .servOptionList .contBox { padding:20px; min-height:unset;}
+    .m-academy-mngr-Wrap .rate-plan .txtList>li { font-size:13px; line-height: 26px;}
+    .m-academy-mngr-Wrap .m-list-help:has(.rate-plan) .btm-FixBtnbox.on .sub-txt { margin-top:0;}
+    .m-academy-mngr-Wrap .m-list-help:has(.rate-plan) .btm-FixBtnbox .mySelect-Wrap .t-button-m { height: 40px; line-height: 40px;}
+    .m-academy-mngr-Wrap .rate-plan .servOption .contText { margin-top:12px;} 
+    .m-academy-mngr-Wrap .rate-plan .servOption .contText.fs12 { line-height: 18px;}
+    .m-academy-mngr-Wrap .rate-plan .servOption .contText.fs12 li { font-size:12px;}
+    .m-academy-mngr-Wrap .rate-plan.serviceIn .servOptionList>li .status-badge.exempt + .h-txt-c.mb30 { margin-bottom:0;}
+    .m-academy-mngr-Wrap .rate-plan .tipTxt { line-height: 18px; padding-left: 21px; }
+    .m-academy-mngr-Wrap .rate-plan .tipTxt:before { top: 1px; }
 
 
 
- /* 스마트옵션 */
- .smart .rateSub { color:#333333; font-size:30px; font-weight: bold; margin-bottom:25px; } 
- .smart .fs12.grey { color:#7E7E7E; margin-top:7px; } 
- .smart .servOptionList { flex-direction: column; height: auto!important; gap:20px; } 
- .smart .servOptionList>li { padding: 40px 30px 30px !important; height: 195px; flex: auto !important; } 
- .smart .servOptionList>li .t-button-m { width:120px!important; height:44px!important; } 
- .smart .picto { display: flex; position: absolute; right: 20px; top: 20px; width: 42px; height: 42px; background: #F6F5FB; border-radius: 100%; align-items: center; justify-content: center; } 
- .smart .b-section { display: flex; justify-content: space-between; align-items: flex-end; position: absolute; bottom: 30px; left: 30px; width: calc(100% - 60px); } 
- .smart .b-section .text-medium { text-align: right; } 
- .smart .num-lt.fs24 { font-size: 24px; } 
- .smart-banner { border: 1px solid #E2E2E2; border-radius: 10px; background: #F1F8FC; padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; } 
- .smart-banner .smart-txt { line-height: 32px; } 
- .smart-txt01 { color: #666666; } 
- .smart-txt02 { color: #414141; } 
- .smart-txt02 b { color: #7860F5; } 
- .smart .t-button-l { font-size:16px; border-radius: 5px; width:172px; background-color: #5C61B7; } 
- .smart.mb100 { margin-bottom:100px; } 
- .smart .pt-color.fs16 { letter-spacing: -0.4px; } 
- .smart .optionList { display: flex; gap: 30px; width: 100%; } 
- .smart .optionList>li { flex:1; } 
- .smart .num-line { display: flex; align-items: baseline; } 
- .smart .pt-color2 { color:#E65616; } 
- .smart .pt-color3 { color:#AB00FF; line-height: 24px; } 
- .smart .pt-color2 .t-button-sm { border-radius: 5px; font-size: 14px; width: 80px; background-color: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616;} 
- .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400; } 
+    /* 요금제 팝업 */
+    .rate .t-button-bora1 { background-color: #6F55EB!important; } 
+    .rate .t-button-grey2 { background-color: #C7CBD1!important; font-weight: 400!important; } 
+    .pop-cont.rate .btn-set button { margin:0 5px; min-width: 80px!important; } 
+    .pop-cont.rate .sub-txt { color:#666666; line-height: 20px; } 
+    .pop-cont.rate .contText { line-height: 22px!important; color: #333 !important; } 
+    .pop-cont.rate .box-bg .contText.t-bullet-01 li:after { top: 10px; } 
+    .pop-cont.rate .box-bg .contText li + li { margin-top:0; } 
+    .pop-cont.rate .box-bg .more-arrow2 { width:auto; height: 36px; } 
+    .pop-cont.rate .t-button-grey1 { width:95px; } 
+    .pop-cont.rate .contText.t-bullet-01 li:has(.pt-color):after { background:#6F55EB; } 
+
+           /* 모바일 */
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.validator {padding: 30px 20px 90px !important;}
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate .rateTit {letter-spacing: -0.6px; font-size: 24px; margin-bottom:20px;}
+           .m-academy-mngr-Wrap .t-popup:has(.rate) .bt-btnbox button { font-size: 14px!important;}
+           .m-academy-mngr-Wrap .t-popup:has(.rate) .bt-btnbox button.registbtn { background:#6F55EB!important;}
+           .m-academy-mngr-Wrap .t-popup:has(.rate) .bt-btnbox button.canclebtn { background:#C7CBD1!important; color:#FFFFFF; font-weight: 400;}
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate .box-bg { padding:20px;}
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate .contText.fs12 li { color:#666666; font-size: 12px;}
+           /* 해지신청 팝업 */
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.ratePop { padding: 30px 20px !important; }
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.ratePop .box-bg { padding:15px;}
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.ratePop .rateTit { margin-bottom:12px; line-height: 32px;}
+           .contText.t-bullet-01.color3 li:after{ background:#333!important;}
+           .contText.t-bullet-01.color3.contText { color:#333!important;}
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.ratePop .btn-set button { width:auto; border-radius: 4px; padding:0 20px;}
+
+           /* 스마트 옵션 신청팝업 */
+           .m-academy-mngr-Wrap .t-popup .pop-cont.rate.ratePop .btn-set.p30 button { padding:0 30px;}
+           /* 스마트 옵션 해지접수 팝업 */
+           .m-academy-mngr-Wrap .pop-cont.rate .sub-txt { line-height: 18px;}
 
 
- /* 스마트 옵션 신청 팝업 */
- .pop-cont.rate .tipTxt { color:#F56318; padding-left: 20px; position: relative; font-size: 13px; font-weight: bold; margin-bottom:7px; } 
- .pop-cont.rate .tipTxt:before { content: ''; background: transparent url(../images/orange-i.svg) no-repeat center / 100%; width: 15px; height: 15px; position: absolute; left: 0; } 
+
+
+
+    /* 스마트옵션 */
+    .smart .rateSub { color:#333333; font-size:30px; font-weight: bold; margin-bottom:25px; } 
+    .smart .fs12.grey { color:#7E7E7E; margin-top:7px; } 
+    .smart .servOptionList { flex-direction: column; height: auto!important; gap:20px; } 
+    .smart .servOptionList>li { padding: 40px 30px 30px !important; height: 195px; flex: auto !important; } 
+    .smart .servOptionList>li .t-button-m { width:120px!important; height:44px!important; } 
+    .smart .picto { display: flex; position: absolute; right: 20px; top: 20px; width: 42px; height: 42px; background: #F6F5FB; border-radius: 100%; align-items: center; justify-content: center; } 
+    .smart .b-section { display: flex; justify-content: space-between; align-items: flex-end; position: absolute; bottom: 30px; left: 30px; width: calc(100% - 60px); } 
+    .smart .b-section .text-medium { text-align: right; } 
+    .smart .num-lt.fs24 { font-size: 24px; } 
+    .smart-banner { border: 1px solid #E2E2E2; border-radius: 10px; background: #F1F8FC; padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; } 
+    .smart-banner .smart-txt { line-height: 32px; } 
+    .smart-txt01 { color: #666666; } 
+    .smart-txt02 { color: #414141; } 
+    .smart-txt02 b { color: #7860F5; } 
+    .smart .t-button-l { font-size:16px; border-radius: 5px; width:172px; background-color: #5C61B7; } 
+    .smart.mb100 { margin-bottom:100px; } 
+    .smart .pt-color.fs16 { letter-spacing: -0.4px; } 
+    .smart .optionList { display: flex; gap: 30px; width: 100%; } 
+    .smart .optionList>li { flex:1; } 
+    .num-line { display: flex; align-items: baseline; } 
+    .smart .pt-color2 { color:#E65616; } 
+    .smart .pt-color3 { color:#AB00FF; line-height: 24px; } 
+    .smart .pt-color2 .t-button-sm { border-radius: 5px; font-size: 14px; width: 80px; background-color: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616;} 
+    .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400; } 
+
+
+    /* 스마트 옵션 신청 팝업 */
+    .pop-cont.rate .tipTxt { color:#F56318; padding-left: 20px; position: relative; font-size: 13px; font-weight: bold; margin-bottom:7px; } 
+    .pop-cont.rate .tipTxt:before { content: ''; background: transparent url(../images/orange-i.svg) no-repeat center / 100%; width: 15px; height: 15px; position: absolute; left: 0; } 
+
+
+        /* 스마트옵션 모바일 */
+        .m-academy-mngr-Wrap .smart .optionList {flex-direction: column;}
+        .m-academy-mngr-Wrap .smart .rateSub { margin-bottom:15px; font-size:22px;}
+        .m-academy-mngr-Wrap .smart .servOptionList { gap:15px!important; }
+        .m-academy-mngr-Wrap .rate-plan.serviceIn .smart .servOptionList>li {padding: 35px 25px 25px !important; min-height: 171px; height:auto; flex: 1 !important;}
+        .m-academy-mngr-Wrap .rate-plan .fs22 { font-size: 20px; color:#292E41; }
+        .m-academy-mngr-Wrap .rate-plan.serviceIn .smart .servOptionList>li .pc-text-1.mt10 { margin-top:7px!important;}
+        .m-academy-mngr-Wrap .smart .servOptionList>li .t-button-m { width: 88px !important; height: 40px !important; font-size: 14px; }
+        .m-academy-mngr-Wrap .smart .picto { width:44px; height:44px;}
+        .m-academy-mngr-Wrap .smart .b-section { position: relative; width: 100%; left: 0; bottom: 0; }
+        .m-academy-mngr-Wrap .smart .b-section:has(.pt-color2){ margin-top: 15px;}
+        .m-academy-mngr-Wrap .smart .b-section:has(.pt-color) { margin-top:3px;}
+        .m-academy-mngr-Wrap .smart .b-section .text-medium { font-size:14px!important;}
+        .m-academy-mngr-Wrap .smart .pt-color2.fs12 { letter-spacing: -0.3px;}
+        .m-academy-mngr-Wrap .smart .pt-color3 { line-height: 20px;}
+        .m-academy-mngr-Wrap .smart .servOptionList>li:has(.b-section .pt-color3) { min-height: 175px;}
+
+
+
+
+
+
+
+    
+
+     
+
+
+
 
 
 
