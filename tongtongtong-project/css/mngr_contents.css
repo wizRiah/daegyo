@@ -6419,8 +6419,10 @@ mobile
     .txtList>li { color: #333333; font-size: 14px; line-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 10px; } 
     .rate-plan .servOption .servOptionList>li .t-button-m { height: 55px; border-radius: 5px; background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
     .rate-plan .servOption .servOptionList>li .sub-txt { color: #B103FA; font-size: 12px; line-height: 20px; } 
+    .academy-mngr-Wrap .rate-plan .servOption .servOptionList>li .sub-txt { word-break: keep-all; }
     .rate-plan .dashed { background:repeating-linear-gradient(to right, #BFBFBF 0 5px, transparent 5px 10px); height:1px; margin-top: 30px; margin-bottom: 30px; } 
     .rate-plan .servOption .contText { margin-top:12px;} 
+    .academy-mngr-Wrap .rate-plan .servOption .t-bullet-01 li { word-break: keep-all; }
     .rate-plan .textTitWrap { margin-right: 25px; } 
     .status-badge { position: absolute; top: -5px; color: #fff; padding: 8px 15px; border-radius: 0 0 5px 5px; font-size: 12px; font-weight: bold; } 
     .status-badge:after { content: ''; width: 0; top:0;height: 0;border-style: solid;border-width: 5px 0px 0px 5px;border-color: transparent transparent transparent #1C1C1C; position: absolute; right: -5px; } 
@@ -6432,24 +6434,33 @@ mobile
     .rate-plan .servOption .contText.fs12 { color:#828282; line-height: 20px; } 
     .rate-plan .servOption .contText.fs12 li:after { background-color: #828282; top: 8px; } 
     .rate-plan .servOption .t-button-m + .contText.fs12 { margin-top:15px; } 
-    .rate-plan .servOptionList>li:has(.stop) .t-button-m { background: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616; font-weight: 400; } 
+    .rate-plan .servOptionList>li:has(.stop,.exempt,.usebe) .t-button-m { background: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616; font-weight: 400; } 
     .rate-plan .servOption .contText.fs12.pc-red2 li:after { background-color: #FF0000; } 
     .rate-plan .pt-color .fs22 { color: #6F55EB!important; } 
     .planOption { display: flex; gap: 30px; justify-content: center; } 
     .planOption>li { display: flex; flex-direction: column; } 
     .rate-plan .servOption .servOptionList { height: 100%; } 
-    .rate-plan .tipTxt { color: #828282; padding-left: 22px; position: relative; } 
+    .rate-plan .tipTxt { color: #B103FA; padding-left: 21px; position: relative; } 
     .rate-plan .tipTxt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 14px; height: 14px; position: absolute; left: 0; } 
-    .rate-plan .Txt { color:#B103FA; }
+    .rate-plan .Txt { color:#B103FA!important; }
+    .rate-plan .Txt li::after { background:#B103FA!important;}
+    .rate-plan .Txt::after { background:#B103FA!important;}
+    .rate-plan .h100px { height:100px;}
+    
 
     /* 사용중 */
-    .status-badge.use { background: transparent linear-gradient(263deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
+    .status-badge.use { background: transparent linear-gradient(258deg, #AB00FF 0%, #FF2BC0 100%) 0% 0% no-repeat padding-box; } 
     /* 해지접수 */
     .status-badge.stop { background: transparent linear-gradient(263deg, #cb470b 0%, #e45515 100%) 0% 0% no-repeat padding-box;} 
     /* 면제 */
     .status-badge.exempt { background: transparent linear-gradient(263deg, #0648ff 0%, #4b79ff 100%) 0% 0% no-repeat padding-box; }
-    /* 사용예정 */
-    .status-badge.usebe { background: transparent linear-gradient(263deg, #00a8a2 0%, #00c4bd 100%) 0% 0% no-repeat padding-box;}
+    /* 사용대기 */
+    .status-badge.usebe { background:#2AAF6B;}
+    /* 신청접수 */
+    .status-badge.apply { background:#F8951E;}
+
+        /* 스마트옵션에서 신청접수 */
+        .smart .status-badge.usebe { background: transparent linear-gradient(251deg, #00A7A1 0%, #00C6BF 100%) 0% 0% no-repeat padding-box;}
 
 
 
@@ -6497,6 +6508,7 @@ mobile
     .pop-cont.rate .sub-txt { color:#666666; line-height: 20px; } 
     .pop-cont.rate .contText { line-height: 22px!important; color: #333 !important; } 
     .pop-cont.rate .box-bg .contText.t-bullet-01 li:after { top: 10px; } 
+    .pop-cont.rate .box-bg .contText.t-bullet-01 .pc-red2::after { background:#FF0000!important;}
     .pop-cont.rate .box-bg .contText li + li { margin-top:0; } 
     .pop-cont.rate .box-bg .more-arrow2 { width:auto; height: 36px; } 
     .pop-cont.rate .t-button-grey1 { width:95px; } 
@@ -6554,6 +6566,7 @@ mobile
     .smart .servOptionList>li:has(.exempt) .t-button-m { background: #62666B; font-weight: 400; } 
     .rate-plan .smart b.fs22 { color:#292E41;}
     .rate-plan .smart b.fs22 .fs16 { font-weight: 400; margin-left: 3px;}
+  
 
     /* 스마트 옵션 신청 팝업 */
     .pop-cont.rate .tipTxt { color:#F56318; padding-left: 20px; position: relative; font-size: 13px; font-weight: bold; margin-bottom:7px; } 
