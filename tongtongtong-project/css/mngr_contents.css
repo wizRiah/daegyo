@@ -1594,20 +1594,21 @@ location
 
 
 
-/* 조건별수납조회 */
-.academy-mngr-Wrap .conditionPay .mt18 { margin-top:18px!important } 
-.academy-mngr-Wrap .conditionPay .t-basic-1.test.grey>thead>tr>th { height: 60px !important; } 
+    /* 조건별수납조회 */
+    .academy-mngr-Wrap .conditionPay .mt18 { margin-top:18px!important }
+    .academy-mngr-Wrap .conditionPay .t-basic-1.test.grey>thead>tr>th { height: 60px !important; }
 
- .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group>td { border:0; padding: 4px 5px; } 
- .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group:first-child td { padding-top:10px; } 
- .academy-mngr-Wrap .t-basic-1.test>tbody>tr:has(td[rowspan]) td { padding:10px 5px 4px; } 
- .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group.last td { padding-bottom:10px; } 
- .reson-i { background: url(../images/reason_icon.svg) no-repeat center / 100%; width: 20px; height: 16px; }
- .reson-wrap { position:relative;display: flex; align-items: center; justify-content: center; gap: 10px;}
- .reson-tip { text-align: left; width: max-content; display: none; position: absolute; top: 24px; box-shadow: 0px 5px 15px #00000026; border: 1px solid #776DA7; border-radius: 10px; background: #FFFFFF; padding: 12px; box-sizing: border-box; max-width: 200px; z-index: 1; left: 50%; transform: translateX(-50%); color: #333333; font-size: 12px; line-height: 18px; } 
- .reson-i:hover { cursor:pointer; } 
- .reson-i:hover + .reson-tip { display:block; } 
- .detail-i { background: url(../images/detail-i.svg) no-repeat center / 100%; margin: 0 auto; width: 16px; height: 16px; } 
+    .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group>td { border:0; padding: 4px 5px; }
+    .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group:first-child td { padding-top:10px; }
+    .academy-mngr-Wrap .t-basic-1.test>tbody>tr:has(td[rowspan]) td { padding:10px 5px 4px; }
+    .academy-mngr-Wrap .t-basic-1.test>tbody>tr.td-group.last td { padding-bottom:10px; }
+    .reson-i { background: url(/images/reason_icon.svg) no-repeat center / 100%; width: 20px; height: 16px; }
+    .reson-wrap { position:relative;display: flex; align-items: center; justify-content: center; gap: 10px;}
+    .reson-tip { text-align: left; width: max-content; display: none; position: absolute; top: 24px; box-shadow: 0px 5px 15px #00000026; border: 1px solid #776DA7; border-radius: 10px; background: #FFFFFF; padding: 12px; box-sizing: border-box; max-width: 200px; z-index: 1; left: 50%; transform: translateX(-50%); color: #333333; font-size: 12px; line-height: 18px; }
+    .reson-i:hover { cursor:pointer;}
+    .academy-mngr-Wrap .t-basic-1.test.grey>tbody>tr>td>.reson-wrap>.reson-i:hover + .reson-tip { display:block; }
+    .detail-i { background: url(/images/detail-i.svg) no-repeat center / 100%; margin: 0 auto; width: 16px; height: 16px; }
+
 
     /* 상세보기 팝업 */
     .pop-cont.condition .reson-i { width: 20px; height: 16px;}
@@ -1616,6 +1617,9 @@ location
     .t-popup:has(.pop-cont.condition) .barTxt  {display: flex; align-items: center; gap: 24px; }
     .t-popup:has(.pop-cont.condition) .barTxt li { position:relative; }
     .t-popup:has(.pop-cont.condition) .barTxt li:not(:last-child):after { content: ''; position: absolute; right: -12px; top: 2px; width: 1px; height: 17px; background: #AAA1D8;}
+    .t-popup-wrap .t-popup:has(.pop-cont.condition) .reson-tip { left: auto; transform: none; right: 0; }
+    .t-popup-wrap .t-popup:has(.pop-cont.condition) .reson-i.active:hover + .reson-tip {display:block; }
+
 
 
 
@@ -6200,6 +6204,7 @@ mobile
  .storageWrap .t-bullet-01 li:after { top: 10px; background-color: #333; } 
  .storageWrap .tip { border-radius: 5px; top: -16px; position: absolute; background: #1D1D1D; font-size: 12px; font-weight: 600; color: #F7FF03; padding: 9px 12px; box-sizing: border-box; } 
  .storageWrap .tip:after { content: ''; position: absolute; left: 50%; bottom: -6px; margin-left: -6px; width: 0; height: 0; border-style: solid; border-width: 6px 6px 0px 6px; border-color: #1d1d1d transparent transparent transparent; } 
+ .academy-mngr-Wrap .storageWrap .graphWrap {height: 256px; width: 100%;}
 
  /* 웹스토리지 - 원생 - 기타,사진 */
  .storageWrap .tit { margin: 0 auto; display: flex; align-items: center; gap: 8px; } 
