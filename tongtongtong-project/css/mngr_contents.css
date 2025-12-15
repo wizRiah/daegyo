@@ -6422,8 +6422,8 @@ mobile
     .line-txt { position:relative; } 
     .line-txt:after { content: ''; width: calc(100% - 25px); position: absolute; left: 0; top: 15px; height: 2px; background: #F56317; } 
     .num-line .line-txt:after {width:100%;  }
-    .percent { background: #B103FA; padding: 7px 12px; box-sizing: border-box; border-radius: 50px; display: flex; gap: 2px; } 
-    .percent-num { color: #FFEE00; font-size: 13px; font-weight: 800; } 
+    .percent { background: #B103FA; padding: 7px 11px; box-sizing: border-box; border-radius: 50px; display: flex; gap: 2px; } 
+    .percent-num { color: #FFEE00; font-size: 13px; font-weight:bold; }
     .percent-num b { font-weight: bold; } 
     .percent-txt { color: #fff; font-weight: bold; font-size: 13px; } 
     .rate-plan .servOption { margin-top: 70px; } 
@@ -6461,6 +6461,33 @@ mobile
     .rate-plan .Txt li::after { background:#B103FA!important;}
     .rate-plan .Txt::after { background:#B103FA!important;}
     .rate-plan .h100px { height:100px;}
+
+    
+    /* 디자인 변경 25.12.12 */
+    .rateVer02 .rateTitle { margin-bottom: 20px; }
+    .academy-mngr-Wrap .rateVer02 .servOptionList>li { padding: 45px 35px 40px !important; }
+    .rateVer02 .line-txt { display: flex; }
+    .rateVer02 .num-line { color: #A1A1A1; font-size: 14px; }
+    .rateVer02 .num-line .line-txt:after {top: 8px; height: 1px; }
+    .rateVer02 .num-line .numTxt {font-weight: bold; letter-spacing: -0.49px; }
+    .rateVer02 .rateAmount {margin-top: 2px; justify-content: flex-start;}
+    .rateVer02 .num-txt { font-size:30px; letter-spacing: -1.05px; }
+    .rateVer02 .rateAmount .num-lt { font-size:16px;}
+    .t-slash { color:#E2E2E2;}
+    .rateVer02 .bluePoint {color:#0062F6; font-weight: 900;}
+    .rateVer02 .servOptionList .contBox { padding:20px; min-height:128px;}
+    .rateVer02 .servOptionList .contBox .contText { margin-top:0!important; font-weight: 500; }
+    .rateVer02 .servOptionList .contBox .contText span { color:#666666; font-weight: 400;}
+    .rateVer02 .text-wrap:has(br) { line-height: 28px!important; }
+    .academy-mngr-Wrap .rateVer02 .text-wrap { min-height: 52px; line-height: 52px;}
+    .rateVer02 .rateAmount p { display: flex; align-items: flex-end; gap: 3px;}
+
+      /* 모바일 */
+      .m-academy-mngr-Wrap .rateVer02 .num-txt { font-size: 26px;letter-spacing: -0.91px;}
+      .m-academy-mngr-Wrap .rateVer02 .text-wrap:has(br) { line-height: 26px;}
+
+
+
     
 
     /* 사용중 */
@@ -6526,6 +6553,7 @@ mobile
         .m-academy-mngr-Wrap .rate-plan.serviceIn .servOptionList>li .status-badge.exempt + .h-txt-c.mb30 + .dashed { margin-top:0;}
         .m-academy-mngr-Wrap .rate-plan .tipTxt { line-height: 18px; padding-left: 21px; }
         .m-academy-mngr-Wrap .rate-plan .tipTxt:before { top: 1px; }
+        .m-academy-mngr-Wrap .rate-plan.serviceIn .servOptionList>li:has(.h-txt-c.mb20 + .dashed) .h-txt-c.mb20 { margin-bottom:0!important;}
 
         /* 스마트옵션 유료 */
         .m-academy-mngr-Wrap .rate-plan .smart .servOptionList>li:has(.optionN) .dashed { margin-top:15px;}
@@ -6552,6 +6580,10 @@ mobile
     .pop-cont.rate .box-bg .more-arrow2 { width:auto; height: 36px; } 
     .pop-cont.rate .t-button-grey1 { width:95px; } 
     .pop-cont.rate .contText.t-bullet-01 li:has(.pt-color):after { background:#6F55EB; top:10px; }
+    .academy-mngr-Wrap .t-popup:has(.nextPlan) { width: 475px!important;}
+    .span-state{ background: #B103FA; vertical-align: middle; margin-left: 5px; border-radius: 50px; box-sizing: border-box; color: #fff; font-size: 10px; font-weight: 500; height: 17px; display: inline-block; width: 45px; line-height: 17px; text-align: center; }
+    .pop-cont.rate .contText:has(.span-state) li + li { margin-top:3px;}
+
 
 
            /* 모바일 */
