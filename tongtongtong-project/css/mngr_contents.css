@@ -2291,7 +2291,7 @@ tr.active-td:not(.t-no-data):hover td { background: #FBFCF1 !important; }
  .pop-cont.ratePlan .infoList { margin-top:12px; } 
  .pop-cont.ratePlan .infoList li { justify-content: space-between; } 
  .pop-cont.ratePlan.btn-set button:not(.t-button-orange) { min-width:95px; } 
- .pop-cont.ratePlan .box-bg .contText { margin-top:12px; color:#333333; line-height: 16px; } 
+ .pop-cont.ratePlan .box-bg .contText { margin-top:10px; color:#333333; line-height: 16px; } 
  .pop-cont.ratePlan .box-bg .contText li + li { margin-top:10px; } 
  .pop-cont.ratePlan .box-bg .contText.t-bullet-01 li:after { top: 7px; background-color: #333!important; } 
  .pop-cont.ratePlan .box-bg .more-arrow2 { padding: 0 20px; background: #35267D !important; font-size: 12px; font-weight: 600; height: 40px; width: 100%; display: flex; justify-content: space-between; } 
@@ -6429,7 +6429,6 @@ mobile
     .rate-plan .servOption { margin-top: 70px; } 
     .rate-plan .servOptionList { justify-content: center; } 
     .rate-plan .servOptionList>li { max-width: 453px; padding: 50px 35px 40px !important; display: flex; flex-direction: column; justify-content: space-between; } 
-    .academy-mngr-Wrap .rate-plan .servOptionList>li {width: 453px;}
     .rate-plan .servOptionList .contBox { min-height: 130px; box-sizing: border-box; background: #F5F7FA; border-radius: 10px; display: flex; padding: 20px 30px; flex-direction: column; justify-content: space-between; } 
     .txtList { width:100%; } 
     .txtList>li { color: #333333; font-size: 14px; line-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 10px; } 
@@ -6453,8 +6452,8 @@ mobile
     .rate-plan .servOptionList>li:has(.stop,.exempt,.usebe) .t-button-m { background: #FCF5EE; border: 1px solid #FFC2A7; color: #E65616; font-weight: 400; } 
     .rate-plan .servOption .contText.fs12.pc-red2 li:after { background-color: #FF0000; } 
     .rate-plan .pt-color .fs22 { color: #6F55EB!important; } 
-    .planOption { display: flex; gap: 30px; justify-content: center; } 
-    .planOption>li { display: flex; flex-direction: column; } 
+    .planOption { width: 100%; display: flex; gap: 30px; justify-content: center;}
+    .planOption>li { display: flex; flex-direction: column; flex: 1; max-width: 453px; min-width: 0; }
     .rate-plan .servOption .servOptionList { height: 100%; } 
     .rate-plan .tipTxt { color: #B103FA; padding-left: 21px; position: relative; } 
     .rate-plan .tipTxt:before { content: ''; background: transparent url(../images/tip_icon.png) no-repeat center / 100%; width: 14px; height: 14px; position: absolute; left: 0; } 
@@ -6462,6 +6461,9 @@ mobile
     .rate-plan .Txt li::after { background:#B103FA!important;}
     .rate-plan .Txt::after { background:#B103FA!important;}
     .rate-plan .h100px { height:100px;}
+
+    /* 스마트패키지 */
+    .rate-plan .servOption.pay .contBox { min-height: 121px;}
 
     
     /* 디자인 변경 25.12.12 */
@@ -6477,17 +6479,20 @@ mobile
     .rateVer02 .rateAmount .num-lt { font-size:16px;}
     .t-slash { color:#E2E2E2;}
     .rateVer02 .bluePoint {color:#0062F6; font-weight: 900;}
-    .rateVer02 .servOptionList .contBox { padding:20px; min-height:128px;}
+    .rateVer02 .servOptionList .contBox { padding: 17px 20px; min-height: 100px;}
     .rateVer02 .servOptionList .contBox .contText { margin-top:0!important; font-weight: 500; }
     .rateVer02 .servOptionList .contBox .contText span { color:#666666; font-weight: 400;}
     .rateVer02 .text-wrap:has(br) { line-height: 28px!important; }
     .academy-mngr-Wrap .rateVer02 .text-wrap { min-height: 52px; line-height: 52px;}
     .rateVer02 .rateAmount p { display: flex; align-items: flex-end; gap: 3px;}
+    .rateVer02 .fs15.im { font-size:15px!important;}
+
 
       /* 모바일 */
       .m-academy-mngr-Wrap .rateVer02 .num-txt { font-size: 26px;letter-spacing: -0.91px;}
       .m-academy-mngr-Wrap .rateVer02 .text-wrap:has(br) { line-height: 26px;}
       .m-academy-mngr-Wrap .rateVer02 .rateAmount { margin-top:4px;}
+      .m-academy-mngr-Wrap .rateVer02 .servOptionList .contBox { min-height: unset; }
 
 
     
@@ -6545,7 +6550,6 @@ mobile
         .m-academy-mngr-Wrap .percent { display:inline-flex; }
         .m-academy-mngr-Wrap .rate-plan .servOption .servOptionList { gap: 15px;}
         .m-academy-mngr-Wrap .rate-plan .servOption .servOptionList>li .t-button-m { height:55px;}
-        .m-academy-mngr-Wrap .rate-plan .servOptionList .contBox { padding:20px; min-height:unset;}
         .m-academy-mngr-Wrap .rate-plan .txtList>li { font-size:13px; line-height: 26px;}
         .m-academy-mngr-Wrap .m-list-help:has(.rate-plan) .btm-FixBtnbox.on .sub-txt { margin-top:0;}
         /* .m-academy-mngr-Wrap .m-list-help:has(.rate-plan) .btm-FixBtnbox .mySelect-Wrap .t-button-m { height: 40px; line-height: 40px;} */
